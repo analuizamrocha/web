@@ -18,10 +18,11 @@ export function AboutSection() {
         <Image
           width={1366}
           height={768}
-          src="/images/hero-01.png"
+          src="/images/sobre-mim.png"
           alt="Dra. Ana Luiza - Formação e qualificações profissionais em coloproctologia"
+          sizes="100vw"
+          quality={100}
           className="w-full h-auto object-cover"
-          priority
         />
       </div>
     </div>

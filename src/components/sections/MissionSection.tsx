@@ -6,9 +6,7 @@ export function MissionSection() {
       {/* Title Section - Responsive */}
       <div className="py-20 sm:py-28 lg:py-36">
         <div className="mx-auto max-w-container px-6 sm:px-8 lg:px-10 xl:px-12">
-          <h2 className="text-center text-3xl text-secondary sm:text-4xl md:text-5xl lg:text-6xl">
-            Missão
-          </h2>
+          <h2 className="text-center text-secondary">Missão</h2>
         </div>
       </div>
 
@@ -17,8 +15,10 @@ export function MissionSection() {
         <Image
           width={824}
           height={764}
-          src="/images/hero-02.png"
+          src="/images/missao.png"
           alt="Dra. Ana Luiza - Missão e valores em coloproctologia"
+          sizes="100vw"
+          quality={100}
           className="w-full h-auto object-cover"
         />
       </div>

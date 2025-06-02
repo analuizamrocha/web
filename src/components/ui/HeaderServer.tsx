@@ -18,7 +18,9 @@ export function HeaderServer() {
             <span className="font-serif text-base sm:text-lg text-primary">
               Dra Ana Luiza M. Rocha
             </span>
-            <p className="text-xs text-accent">Coloproctologista</p>
+            <p className="text-xs text-accent text-secondary text-center">
+              Coloproctologista
+            </p>
           </Link>
         </div>
 

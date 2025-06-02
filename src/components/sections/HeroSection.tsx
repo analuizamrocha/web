@@ -15,9 +15,11 @@ export function HeroSection() {
         {/* Mobile Text Section */}
         <div className="px-6 pt-32 pb-12 text-center">
           <h1 className="text-3xl font-serif tracking-tight text-secondary sm:text-4xl">
-            Transformando tabus em cuidado
+            Cada paciente uma história,
+            <br />
+            cada história um cuidado único
           </h1>
-          <h2 className="mt-4 text-lg font-serif text-secondary sm:text-xl">
+          <h2 className="my-10 text-lg font-serif text-secondary sm:text-xl">
             Cuidado Clínico e Cirúrgico do
             <br />
             Intestino, Reto e Ânus
@@ -39,10 +41,12 @@ export function HeroSection() {
         {/* Mobile Full-Width Image */}
         <div className="w-full">
           <Image
-            src="/images/hero-00.png"
+            src="/images/hero.png"
             alt="Dra Ana Luiza em seu consultório"
             width={1080}
             height={1080}
+            sizes="100vw"
+            quality={95}
             className="w-full h-auto object-cover"
             priority
           />
@@ -52,12 +56,14 @@ export function HeroSection() {
       {/* Desktop Layout */}
       <div className="hidden lg:block">
         <div className="mx-auto max-w-container px-6 pt-10 sm:px-8 lg:px-10 lg:pt-24 xl:px-12">
-          <div className="flex items-center">
+          <div className="flex">
             <div className="flex-shrink-0 max-w-xl">
-              <h2 className="text-4xl text-secondary sm:text-6xl">
-                Transformando tabus em cuidado
+              <h2 className="text-4xl text-secondary sm:text-6xl mt-24">
+                Cada paciente uma história,
+                <br />
+                cada história um cuidado único
               </h2>
-              <h3 className="mt-6 text-2xl text-secondary">
+              <h3 className="mt-10 text-2xl text-secondary">
                 Cuidado Clínico e Cirúrgico do
                 <br />
                 Intestino, Reto e Ânus
@@ -77,10 +83,12 @@ export function HeroSection() {
             </div>
             <div className="flex-1 flex justify-end ml-8">
               <Image
-                src="/images/hero-00.png"
+                src="/images/hero.png"
                 alt="Dra Ana Luiza em seu consultório"
                 width={1080}
                 height={1080}
+                sizes="(max-width: 1024px) 100vw, 40rem"
+                quality={95}
                 className="w-[40rem] h-auto rounded-md bg-neutral/5 object-cover"
                 priority
               />

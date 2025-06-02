@@ -40,7 +40,9 @@ export function HeaderClient() {
               <span className="font-serif text-base sm:text-lg text-primary">
                 Dra Ana Luiza M. Rocha
               </span>
-              <p className="text-xs text-accent">Coloproctologista</p>
+              <p className="text-xs text-accent text-secondary justify-center">
+                Coloproctologista
+              </p>
             </Link>
           </div>
 
@@ -162,7 +164,7 @@ export function HeaderClient() {
 
                 {/* CRM info */}
                 <div className="pt-2">
-                  <p className="text-xs text-accent">
+                  <p className="text-xs text-accent text-secondary justify-center">
                     CRM-PR 45351 | RQE 36221
                   </p>
                 </div>
