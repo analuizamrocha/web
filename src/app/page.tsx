@@ -12,7 +12,6 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <MissionSection />
-      {/* TODO: Entire big image, also we need to update assets to better quality */}
       <TreatmentsSection />
       <LocationsSection />
     </main>

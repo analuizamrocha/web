@@ -18,10 +18,6 @@ const config: Config = {
         container: '1432px',
       },
     },
-    colors: {
-      // TODO: Set primary, secondary, text colors, etc..
-      // add stuff to our theme so it matches our design
-    },
   },
   plugins: [],
 }
