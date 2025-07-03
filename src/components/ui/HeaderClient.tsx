@@ -2,9 +2,10 @@
 
 import { WPP_FORMATTED_NUMBER, WPP_NUMBER } from '@/lib/constants'
 import Link from 'next/link'
-import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { useActiveSection } from '@/hooks/useActiveSection'
+import { useMobileMenu } from '@/hooks/useMobileMenu'
 
 const navigation = [
   { name: 'Home', href: '#hero', id: 'hero' },
@@ -14,231 +15,34 @@ const navigation = [
 ]
 
 export function HeaderClient() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('hero')
-  const mobileMenuRef = useRef<HTMLDivElement>(null)
-  const firstFocusableElementRef = useRef<HTMLButtonElement>(null)
   const pathname = usePathname()
   const isRootPage = pathname === '/'
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen)
-  }
+  // Custom hooks
+  const { activeSection, scrollToSection } = useActiveSection(isRootPage)
+  const {
+    mobileMenuOpen,
+    setMobileMenuOpen,
+    toggleMobileMenu,
+    mobileMenuRef,
+    firstFocusableElementRef,
+  } = useMobileMenu()
 
-  // Smooth scroll function with offset
-  const scrollToSection = (href: string) => {
-    if (href.startsWith('#')) {
-      const element = document.getElementById(href.slice(1))
-      if (element) {
-        const headerHeight = 80 // Fixed header height
-        const elementPosition =
-          element.getBoundingClientRect().top + window.pageYOffset
-        const offsetPosition = elementPosition - headerHeight
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        })
-
-        // Clear focus from the clicked button to allow intersection observer to take over
-        if (document.activeElement instanceof HTMLElement) {
-          document.activeElement.blur()
-        }
-      }
-    }
+  const handleNavClick = (href: string) => {
+    scrollToSection(href)
     setMobileMenuOpen(false)
   }
 
-  // Enhanced active section detection - only on root page
-  useEffect(() => {
-    if (!isRootPage) return
-
-    const sections = navigation.map((nav) => nav.id)
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '-100px 0px -40% 0px',
-      threshold: [0.1, 0.3, 0.5],
+  const handleMobileNavClick = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    href: string
+  ) => {
+    handleNavClick(href)
+    // Clear focus from the clicked button to allow intersection observer to take over
+    if (e.target instanceof HTMLElement) {
+      e.target.blur()
     }
-
-    const observer = new IntersectionObserver((entries) => {
-      const sortedEntries = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
-
-      if (sortedEntries.length > 0) {
-        setActiveSection(sortedEntries[0].target.id)
-      }
-    }, observerOptions)
-
-    sections.forEach((sectionId) => {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        observer.observe(element)
-      }
-    })
-
-    return () => {
-      sections.forEach((sectionId) => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-          observer.unobserve(element)
-        }
-      })
-    }
-  }, [isRootPage])
-
-  // Handle body scroll and focus trapping when mobile menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden'
-
-      // Focus the first focusable element in the menu
-      if (firstFocusableElementRef.current) {
-        firstFocusableElementRef.current.focus()
-      }
-
-      // Add inert attribute to main content and other elements to prevent tab navigation
-      const mainContent = document.getElementById('main')
-      const header = document.querySelector('header')
-      const skipToContent = document.getElementById('skip-to-content')
-
-      // More specific targeting of focusable elements
-      const allButtons = document.querySelectorAll('main button, main a[href]')
-      const heroSection = document.getElementById('hero')
-      const locationSection = document.getElementById('atendimento')
-
-      if (mainContent) {
-        mainContent.setAttribute('inert', '')
-      }
-
-      // Also set inert on specific sections to ensure proper focus trapping
-      if (heroSection) {
-        heroSection.setAttribute('inert', '')
-      }
-      if (locationSection) {
-        locationSection.setAttribute('inert', '')
-      }
-
-      // Set inert on all buttons and links in main as backup
-      allButtons.forEach((element) => {
-        element.setAttribute('inert', '')
-      })
-
-      if (header) {
-        const desktopNav = header.querySelector('.hidden.md\\:flex')
-        const logoLink = header.querySelector('a[href="/"]')
-        if (desktopNav) {
-          desktopNav.setAttribute('inert', '')
-        }
-        if (logoLink) {
-          logoLink.setAttribute('inert', '')
-        }
-      }
-      if (skipToContent) {
-        skipToContent.setAttribute('inert', '')
-      }
-    } else {
-      document.body.style.overflow = 'unset'
-
-      // Remove inert attribute to restore tab navigation
-      const mainContent = document.getElementById('main')
-      const header = document.querySelector('header')
-      const skipToContent = document.getElementById('skip-to-content')
-
-      // Remove inert from specific elements
-      const allButtons = document.querySelectorAll('main button, main a[href]')
-      const heroSection = document.getElementById('hero')
-      const locationSection = document.getElementById('atendimento')
-
-      if (mainContent) {
-        mainContent.removeAttribute('inert')
-      }
-
-      // Remove inert from specific sections
-      if (heroSection) {
-        heroSection.removeAttribute('inert')
-      }
-      if (locationSection) {
-        locationSection.removeAttribute('inert')
-      }
-
-      // Remove inert from all buttons and links
-      allButtons.forEach((element) => {
-        element.removeAttribute('inert')
-      })
-
-      if (header) {
-        const desktopNav = header.querySelector('.hidden.md\\:flex')
-        const logoLink = header.querySelector('a[href="/"]')
-        if (desktopNav) {
-          desktopNav.removeAttribute('inert')
-        }
-        if (logoLink) {
-          logoLink.removeAttribute('inert')
-        }
-      }
-      if (skipToContent) {
-        skipToContent.removeAttribute('inert')
-      }
-    }
-
-    return () => {
-      document.body.style.overflow = 'unset'
-      // Cleanup inert attributes
-      const mainContent = document.getElementById('main')
-      const header = document.querySelector('header')
-      const skipToContent = document.getElementById('skip-to-content')
-
-      // Cleanup specific elements
-      const allButtons = document.querySelectorAll('main button, main a[href]')
-      const heroSection = document.getElementById('hero')
-      const locationSection = document.getElementById('atendimento')
-
-      if (mainContent) {
-        mainContent.removeAttribute('inert')
-      }
-
-      // Cleanup specific sections
-      if (heroSection) {
-        heroSection.removeAttribute('inert')
-      }
-      if (locationSection) {
-        locationSection.removeAttribute('inert')
-      }
-
-      // Cleanup all buttons and links
-      allButtons.forEach((element) => {
-        element.removeAttribute('inert')
-      })
-
-      if (header) {
-        const desktopNav = header.querySelector('.hidden.md\\:flex')
-        const logoLink = header.querySelector('a[href="/"]')
-        if (desktopNav) {
-          desktopNav.removeAttribute('inert')
-        }
-        if (logoLink) {
-          logoLink.removeAttribute('inert')
-        }
-      }
-      if (skipToContent) {
-        skipToContent.removeAttribute('inert')
-      }
-    }
-  }, [mobileMenuOpen])
-
-  // Handle escape key to close mobile menu
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && mobileMenuOpen) {
-        setMobileMenuOpen(false)
-      }
-    }
-
-    document.addEventListener('keydown', handleEscape)
-    return () => document.removeEventListener('keydown', handleEscape)
-  }, [mobileMenuOpen])
+  }
 
   return (
     <>
@@ -265,7 +69,7 @@ export function HeaderClient() {
                 {navigation.map((item) => (
                   <button
                     key={item.name}
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => handleNavClick(item.href)}
                     data-header-nav
                     className={cn(
                       'text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer',
@@ -356,13 +160,7 @@ export function HeaderClient() {
                     <button
                       key={item.name}
                       ref={index === 0 ? firstFocusableElementRef : null}
-                      onClick={(e) => {
-                        scrollToSection(item.href)
-                        // Clear focus from the clicked button to allow intersection observer to take over
-                        if (e.target instanceof HTMLElement) {
-                          e.target.blur()
-                        }
-                      }}
+                      onClick={(e) => handleMobileNavClick(e, item.href)}
                       className={cn(
                         'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
                         activeSection === item.id
