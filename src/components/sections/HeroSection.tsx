@@ -47,7 +47,9 @@ export function HeroSection() {
             {/* Elegant CTA Section */}
             <div className="mt-8">
               <LinkButton
-                href={`tel:${WPP_NUMBER}`}
+                href={`https://wa.me/${WPP_NUMBER}`}
+                external
+                newTab
                 variant="primary"
                 size="xl"
                 className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
