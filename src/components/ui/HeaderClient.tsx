@@ -39,6 +39,11 @@ export function HeaderClient() {
           top: offsetPosition,
           behavior: 'smooth',
         })
+
+        // Clear focus from the clicked button to allow intersection observer to take over
+        if (document.activeElement instanceof HTMLElement) {
+          document.activeElement.blur()
+        }
       }
     }
     setMobileMenuOpen(false)
@@ -98,9 +103,28 @@ export function HeaderClient() {
       const header = document.querySelector('header')
       const skipToContent = document.getElementById('skip-to-content')
 
+      // More specific targeting of focusable elements
+      const allButtons = document.querySelectorAll('main button, main a[href]')
+      const heroSection = document.getElementById('hero')
+      const locationSection = document.getElementById('atendimento')
+
       if (mainContent) {
         mainContent.setAttribute('inert', '')
       }
+
+      // Also set inert on specific sections to ensure proper focus trapping
+      if (heroSection) {
+        heroSection.setAttribute('inert', '')
+      }
+      if (locationSection) {
+        locationSection.setAttribute('inert', '')
+      }
+
+      // Set inert on all buttons and links in main as backup
+      allButtons.forEach((element) => {
+        element.setAttribute('inert', '')
+      })
+
       if (header) {
         const desktopNav = header.querySelector('.hidden.md\\:flex')
         const logoLink = header.querySelector('a[href="/"]')
@@ -122,9 +146,28 @@ export function HeaderClient() {
       const header = document.querySelector('header')
       const skipToContent = document.getElementById('skip-to-content')
 
+      // Remove inert from specific elements
+      const allButtons = document.querySelectorAll('main button, main a[href]')
+      const heroSection = document.getElementById('hero')
+      const locationSection = document.getElementById('atendimento')
+
       if (mainContent) {
         mainContent.removeAttribute('inert')
       }
+
+      // Remove inert from specific sections
+      if (heroSection) {
+        heroSection.removeAttribute('inert')
+      }
+      if (locationSection) {
+        locationSection.removeAttribute('inert')
+      }
+
+      // Remove inert from all buttons and links
+      allButtons.forEach((element) => {
+        element.removeAttribute('inert')
+      })
+
       if (header) {
         const desktopNav = header.querySelector('.hidden.md\\:flex')
         const logoLink = header.querySelector('a[href="/"]')
@@ -147,9 +190,28 @@ export function HeaderClient() {
       const header = document.querySelector('header')
       const skipToContent = document.getElementById('skip-to-content')
 
+      // Cleanup specific elements
+      const allButtons = document.querySelectorAll('main button, main a[href]')
+      const heroSection = document.getElementById('hero')
+      const locationSection = document.getElementById('atendimento')
+
       if (mainContent) {
         mainContent.removeAttribute('inert')
       }
+
+      // Cleanup specific sections
+      if (heroSection) {
+        heroSection.removeAttribute('inert')
+      }
+      if (locationSection) {
+        locationSection.removeAttribute('inert')
+      }
+
+      // Cleanup all buttons and links
+      allButtons.forEach((element) => {
+        element.removeAttribute('inert')
+      })
+
       if (header) {
         const desktopNav = header.querySelector('.hidden.md\\:flex')
         const logoLink = header.querySelector('a[href="/"]')
@@ -180,16 +242,6 @@ export function HeaderClient() {
 
   return (
     <>
-      {/* Skip to content link for accessibility */}
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 z-[100] bg-primary text-background px-4 py-2 rounded-md font-medium transition-all duration-200"
-        onFocus={(e) => e.target.classList.remove('sr-only')}
-        onBlur={(e) => e.target.classList.add('sr-only')}
-      >
-        Pular para o conteúdo principal
-      </a>
-
       <header className="fixed top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-primary/10 shadow-sm">
         <div className="w-full">
           <nav className="mx-auto flex max-w-[1760px] items-center justify-between px-6 py-3 sm:px-8 lg:px-10 xl:px-12">
@@ -221,7 +273,7 @@ export function HeaderClient() {
                       'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300',
                       activeSection === item.id
                         ? 'text-primary after:w-full'
-                        : 'text-secondary after:w-0 hover:after:w-full focus:after:w-full'
+                        : 'text-secondary after:w-0 hover:after:w-full'
                     )}
                   >
                     {item.name}
@@ -235,7 +287,7 @@ export function HeaderClient() {
               <div className="md:hidden">
                 <button
                   type="button"
-                  className="relative p-2 text-secondary hover:text-primary transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background rounded-md"
+                  className="relative p-2 text-secondary hover:text-primary focus:text-primary transition-colors duration-200 cursor-pointer focus:outline-none"
                   onClick={toggleMobileMenu}
                   aria-label={
                     mobileMenuOpen ? 'Fechar menu' : 'Abrir menu de navegação'
@@ -291,7 +343,8 @@ export function HeaderClient() {
             role="dialog"
             aria-labelledby="mobile-menu-title"
             aria-modal="true"
-            className={`fixed top-[72px] inset-x-0 bottom-0 bg-background/95 backdrop-blur-md border-t border-primary/10 shadow-lg transform transition-transform duration-300 ease-out ${
+            inert={!mobileMenuOpen}
+            className={`fixed top-[67.5px] inset-x-0 bottom-0 bg-background/95 backdrop-blur-md border-t border-primary/10 shadow-lg transform transition-transform duration-300 ease-out ${
               mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
             }`}
           >
@@ -303,12 +356,18 @@ export function HeaderClient() {
                     <button
                       key={item.name}
                       ref={index === 0 ? firstFocusableElementRef : null}
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={(e) => {
+                        scrollToSection(item.href)
+                        // Clear focus from the clicked button to allow intersection observer to take over
+                        if (e.target instanceof HTMLElement) {
+                          e.target.blur()
+                        }
+                      }}
                       className={cn(
-                        'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer',
+                        'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
                         activeSection === item.id
                           ? 'text-primary bg-primary/10'
-                          : 'text-secondary hover:text-primary hover:bg-primary/5'
+                          : 'text-secondary hover:text-primary focus:text-primary hover:bg-primary/5'
                       )}
                     >
                       {item.name}

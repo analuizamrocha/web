@@ -16,15 +16,6 @@ export function HeaderServer() {
 
   return (
     <>
-      {/* Skip to content link for accessibility - will be disabled by client component when mobile menu is open */}
-      <a
-        href="#main"
-        id="skip-to-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 z-[100] bg-primary text-background px-4 py-2 rounded-md font-medium transition-all duration-200"
-      >
-        Pular para o conteúdo principal
-      </a>
-
       <header className="fixed top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-primary/10 shadow-sm">
         <div className="w-full">
           <nav
