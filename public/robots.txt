@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://analuizarocha.com.br/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Allow all images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Medical content - ensure proper indexing
+User-agent: Googlebot
+Allow: /
+Allow: /images/
