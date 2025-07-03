@@ -5,13 +5,14 @@ import { Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-import { Header } from '@/components/ui/Header'
+import { HeaderClient } from '@/components/ui/HeaderClient'
 import { Footer } from '@/components/ui/Footer'
 import { DR_NAME } from '@/lib/constants'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://analuizarocha.com.br'),
   title: {
     default: `${DR_NAME} - Coloproctologista em Curitiba`,
     template: `%s | ${DR_NAME}`,
@@ -89,7 +90,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={montserrat.className}>
-        <Header />
+        <HeaderClient />
         {children}
         <Footer />
         <Analytics />

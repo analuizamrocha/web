@@ -26,58 +26,50 @@ const treatments = [
     name: 'Cirurgia de cisto pilonidal',
   },
   {
-    name: 'Anuscopia de alta resolução',
+    name: 'Síndrome do intestino irritável',
   },
 ]
 
 export function TreatmentsSection() {
   return (
-    <div id="tratamentos" className="bg-background py-12 sm:py-16">
-      {/* Mobile Layout */}
-      <div className="block lg:hidden px-6 sm:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-secondary">Tratamentos</h2>
-          <p className="mt-6 text-lg leading-8 text-accent text-primary">
-            Nossa consulta é individualizada e detalhada e busca um entendimento
-            completo sobre você e seu problema. Para nós, diagnosticar e tratar
-            não é o suficiente. Precisamos adequar os melhores tratamentos a
-            quem você é e seu estilo de vida.
-          </p>
+    <section id="tratamentos" className="section bg-background">
+      {/* Beautiful Responsive Layout */}
+      <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
+        {/* Header Section - Enhanced Typography */}
+        <div className="mx-auto max-w-4xl text-center mb-16 lg:mb-20 animate-fade-in">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
+            Tratamentos
+          </h2>
+          <div className="text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
+            <p>
+              Nossa consulta é individualizada e detalhada e busca um
+              entendimento completo sobre você e seu problema.
+            </p>
+            <p>Para nós, diagnosticar e tratar não é o suficiente.</p>
+            <p>
+              Precisamos adequar os melhores tratamentos ao seu estilo de vida.
+            </p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
-          {treatments.map((treatment) => (
+
+        {/* Smart Responsive Grid - Hides last item for even columns */}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-8 xl:gap-10">
+          {treatments.map((treatment, index) => (
             <Card
               key={treatment.name}
               title={treatment.name}
               variant="treatment"
+              className={`
+                ${
+                  index === treatments.length - 1
+                    ? 'flex sm:hidden lg:flex'
+                    : ''
+                }
+              `}
             />
           ))}
         </div>
       </div>
-
-      {/* Desktop Layout */}
-      <div className="hidden lg:block">
-        <div className="mx-auto max-w-container px-6 sm:px-8 lg:px-10 xl:px-12">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-secondary">Tratamentos</h2>
-            <p className="mt-6 text-lg leading-8 text-accent text-primary">
-              Nossa consulta é individualizada e detalhada e busca um
-              entendimento completo sobre você e seu problema. Para nós,
-              diagnosticar e tratar não é o suficiente. Precisamos adequar os
-              melhores tratamentos a quem você é e seu estilo de vida.
-            </p>
-          </div>
-          <div className="mx-auto mt-16 grid max-w-none grid-cols-3 gap-6 sm:mt-20">
-            {treatments.map((treatment) => (
-              <Card
-                key={treatment.name}
-                title={treatment.name}
-                variant="treatment"
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   )
 }
