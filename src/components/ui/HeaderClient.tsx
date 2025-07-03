@@ -2,9 +2,10 @@
 
 import { WPP_FORMATTED_NUMBER, WPP_NUMBER } from '@/lib/constants'
 import Link from 'next/link'
-import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { useActiveSection } from '@/hooks/useActiveSection'
+import { useMobileMenu } from '@/hooks/useMobileMenu'
 
 const navigation = [
   { name: 'Home', href: '#hero', id: 'hero' },
@@ -14,182 +15,37 @@ const navigation = [
 ]
 
 export function HeaderClient() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('hero')
-  const mobileMenuRef = useRef<HTMLDivElement>(null)
-  const firstFocusableElementRef = useRef<HTMLButtonElement>(null)
   const pathname = usePathname()
   const isRootPage = pathname === '/'
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen)
-  }
+  // Custom hooks
+  const { activeSection, scrollToSection } = useActiveSection(isRootPage)
+  const {
+    mobileMenuOpen,
+    setMobileMenuOpen,
+    toggleMobileMenu,
+    mobileMenuRef,
+    firstFocusableElementRef,
+  } = useMobileMenu()
 
-  // Smooth scroll function with offset
-  const scrollToSection = (href: string) => {
-    if (href.startsWith('#')) {
-      const element = document.getElementById(href.slice(1))
-      if (element) {
-        const headerHeight = 80 // Fixed header height
-        const elementPosition =
-          element.getBoundingClientRect().top + window.pageYOffset
-        const offsetPosition = elementPosition - headerHeight
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        })
-      }
-    }
+  const handleNavClick = (href: string) => {
+    scrollToSection(href)
     setMobileMenuOpen(false)
   }
 
-  // Enhanced active section detection - only on root page
-  useEffect(() => {
-    if (!isRootPage) return
-
-    const sections = navigation.map((nav) => nav.id)
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '-100px 0px -40% 0px',
-      threshold: [0.1, 0.3, 0.5],
+  const handleMobileNavClick = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    href: string
+  ) => {
+    handleNavClick(href)
+    // Clear focus from the clicked button to allow intersection observer to take over
+    if (e.target instanceof HTMLElement) {
+      e.target.blur()
     }
-
-    const observer = new IntersectionObserver((entries) => {
-      const sortedEntries = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
-
-      if (sortedEntries.length > 0) {
-        setActiveSection(sortedEntries[0].target.id)
-      }
-    }, observerOptions)
-
-    sections.forEach((sectionId) => {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        observer.observe(element)
-      }
-    })
-
-    return () => {
-      sections.forEach((sectionId) => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-          observer.unobserve(element)
-        }
-      })
-    }
-  }, [isRootPage])
-
-  // Handle body scroll and focus trapping when mobile menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden'
-
-      // Focus the first focusable element in the menu
-      if (firstFocusableElementRef.current) {
-        firstFocusableElementRef.current.focus()
-      }
-
-      // Add inert attribute to main content and other elements to prevent tab navigation
-      const mainContent = document.getElementById('main')
-      const header = document.querySelector('header')
-      const skipToContent = document.getElementById('skip-to-content')
-
-      if (mainContent) {
-        mainContent.setAttribute('inert', '')
-      }
-      if (header) {
-        const desktopNav = header.querySelector('.hidden.md\\:flex')
-        const logoLink = header.querySelector('a[href="/"]')
-        if (desktopNav) {
-          desktopNav.setAttribute('inert', '')
-        }
-        if (logoLink) {
-          logoLink.setAttribute('inert', '')
-        }
-      }
-      if (skipToContent) {
-        skipToContent.setAttribute('inert', '')
-      }
-    } else {
-      document.body.style.overflow = 'unset'
-
-      // Remove inert attribute to restore tab navigation
-      const mainContent = document.getElementById('main')
-      const header = document.querySelector('header')
-      const skipToContent = document.getElementById('skip-to-content')
-
-      if (mainContent) {
-        mainContent.removeAttribute('inert')
-      }
-      if (header) {
-        const desktopNav = header.querySelector('.hidden.md\\:flex')
-        const logoLink = header.querySelector('a[href="/"]')
-        if (desktopNav) {
-          desktopNav.removeAttribute('inert')
-        }
-        if (logoLink) {
-          logoLink.removeAttribute('inert')
-        }
-      }
-      if (skipToContent) {
-        skipToContent.removeAttribute('inert')
-      }
-    }
-
-    return () => {
-      document.body.style.overflow = 'unset'
-      // Cleanup inert attributes
-      const mainContent = document.getElementById('main')
-      const header = document.querySelector('header')
-      const skipToContent = document.getElementById('skip-to-content')
-
-      if (mainContent) {
-        mainContent.removeAttribute('inert')
-      }
-      if (header) {
-        const desktopNav = header.querySelector('.hidden.md\\:flex')
-        const logoLink = header.querySelector('a[href="/"]')
-        if (desktopNav) {
-          desktopNav.removeAttribute('inert')
-        }
-        if (logoLink) {
-          logoLink.removeAttribute('inert')
-        }
-      }
-      if (skipToContent) {
-        skipToContent.removeAttribute('inert')
-      }
-    }
-  }, [mobileMenuOpen])
-
-  // Handle escape key to close mobile menu
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && mobileMenuOpen) {
-        setMobileMenuOpen(false)
-      }
-    }
-
-    document.addEventListener('keydown', handleEscape)
-    return () => document.removeEventListener('keydown', handleEscape)
-  }, [mobileMenuOpen])
+  }
 
   return (
     <>
-      {/* Skip to content link for accessibility */}
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 z-[100] bg-primary text-background px-4 py-2 rounded-md font-medium transition-all duration-200"
-        onFocus={(e) => e.target.classList.remove('sr-only')}
-        onBlur={(e) => e.target.classList.add('sr-only')}
-      >
-        Pular para o conteúdo principal
-      </a>
-
       <header className="fixed top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-primary/10 shadow-sm">
         <div className="w-full">
           <nav className="mx-auto flex max-w-[1760px] items-center justify-between px-6 py-3 sm:px-8 lg:px-10 xl:px-12">
@@ -213,7 +69,7 @@ export function HeaderClient() {
                 {navigation.map((item) => (
                   <button
                     key={item.name}
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => handleNavClick(item.href)}
                     data-header-nav
                     className={cn(
                       'text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer',
@@ -221,7 +77,7 @@ export function HeaderClient() {
                       'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300',
                       activeSection === item.id
                         ? 'text-primary after:w-full'
-                        : 'text-secondary after:w-0 hover:after:w-full focus:after:w-full'
+                        : 'text-secondary after:w-0 hover:after:w-full'
                     )}
                   >
                     {item.name}
@@ -235,7 +91,7 @@ export function HeaderClient() {
               <div className="md:hidden">
                 <button
                   type="button"
-                  className="relative p-2 text-secondary hover:text-primary transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background rounded-md"
+                  className="relative p-2 text-secondary hover:text-primary focus:text-primary transition-colors duration-200 cursor-pointer focus:outline-none"
                   onClick={toggleMobileMenu}
                   aria-label={
                     mobileMenuOpen ? 'Fechar menu' : 'Abrir menu de navegação'
@@ -291,7 +147,8 @@ export function HeaderClient() {
             role="dialog"
             aria-labelledby="mobile-menu-title"
             aria-modal="true"
-            className={`fixed top-[72px] inset-x-0 bottom-0 bg-background/95 backdrop-blur-md border-t border-primary/10 shadow-lg transform transition-transform duration-300 ease-out ${
+            inert={!mobileMenuOpen}
+            className={`fixed top-[67.5px] inset-x-0 bottom-0 bg-background/95 backdrop-blur-md border-t border-primary/10 shadow-lg transform transition-transform duration-300 ease-out ${
               mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
             }`}
           >
@@ -303,12 +160,12 @@ export function HeaderClient() {
                     <button
                       key={item.name}
                       ref={index === 0 ? firstFocusableElementRef : null}
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={(e) => handleMobileNavClick(e, item.href)}
                       className={cn(
-                        'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer',
+                        'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
                         activeSection === item.id
                           ? 'text-primary bg-primary/10'
-                          : 'text-secondary hover:text-primary hover:bg-primary/5'
+                          : 'text-secondary hover:text-primary focus:text-primary hover:bg-primary/5'
                       )}
                     >
                       {item.name}

@@ -35,7 +35,9 @@ export default function NotFound() {
           </LinkButton>
 
           <LinkButton
-            href={`tel:${WPP_NUMBER}`}
+            href={`https://wa.me/${WPP_NUMBER}`}
+            external
+            newTab
             variant="outline"
             size="xl"
             className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300"

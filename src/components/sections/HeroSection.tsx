@@ -31,7 +31,7 @@ export function HeroSection() {
 
           {/* Text Content - Beautifully spaced */}
           <div className="order-2 lg:order-1 flex-shrink-0 text-center lg:text-left lg:flex-1 animate-fade-in px-6 pt-16 lg:pt-24 sm:px-8 lg:px-10 xl:px-12">
-            <h1 className="text-hero text-secondary animate-slide-up mb-6">
+            <h1 className="text-hero text-secondary animate-slide-up mb-6 lg:max-w-xl">
               Cada paciente uma história,
               <br />
               cada história um cuidado único
@@ -39,17 +39,17 @@ export function HeroSection() {
 
             {/* Enhanced Subtitle - Bigger and Better */}
             <div className="mt-8 mb-12 space-y-4">
-              <p className="text-2xl lg:text-3xl xl:text-4xl font-serif font-medium text-secondary leading-relaxed">
-                Cuidado Clínico e Cirúrgico do
-                <br />
-                Intestino, Reto e Ânus
+              <p className="text-2xl lg:text-3xl xl:text-4xl font-serif font-medium text-secondary leading-relaxed lg:max-w-xl">
+                Cuidado Clínico e Cirúrgico do Intestino, Reto e Ânus
               </p>
             </div>
 
             {/* Elegant CTA Section */}
             <div className="mt-8">
               <LinkButton
-                href={`tel:${WPP_NUMBER}`}
+                href={`https://wa.me/${WPP_NUMBER}`}
+                external
+                newTab
                 variant="primary"
                 size="xl"
                 className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
