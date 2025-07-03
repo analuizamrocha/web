@@ -68,7 +68,9 @@ export function LocationsSection() {
               href={`https://wa.me/${WPP_NUMBER}`}
               external
               newTab
-              className="bg-primary hover:bg-primary/90 text-background inline-flex items-center gap-4 px-10 py-6 text-md lg:text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300  text-nowrap"
+              variant="primary"
+              size="xl"
+              className="inline-flex items-center gap-4 px-10 py-6 text-md lg:text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-nowrap"
             >
               <Calendar className="size-0 sm:size-6" />
               Agende sua consulta agora

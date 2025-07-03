@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Heart, Shield, Users, Stethoscope } from 'lucide-react'
 
 const missionValues = [
@@ -58,17 +57,52 @@ export function MissionSection() {
           </div>
         </div>
 
-        {/* Mobile: Image Only */}
-        <div className="lg:hidden w-full">
-          <Image
-            width={824}
-            height={764}
-            src="/images/missao.png"
-            alt="Infográfico sobre a missão da Dra. Ana Luiza: 'Transformar tabus em cuidado humanizado através de atendimento médico especializado em coloproctologia com empatia e excelência técnica'"
-            sizes="(max-width: 1024px) 100vw, 0px"
-            quality={100}
-            className="w-full h-auto object-cover rounded-3xl shadow-lg"
-          />
+        {/* Mobile: Simplified Timeline */}
+        <div className="lg:hidden max-w-[350px] mx-auto">
+          <div className="relative">
+            {/* Mobile Connecting Line */}
+            <div
+              className="absolute left-6 w-0.5 bg-gradient-to-b from-primary via-brand-primary to-secondary z-0"
+              style={{ top: '1.5rem', bottom: '1.5rem' }}
+            ></div>
+
+            {/* Mobile Mission Values */}
+            <div className="space-y-8">
+              {missionValues.map((value, index) => {
+                const Icon = value.icon
+                const isFirst = index === 0
+
+                return (
+                  <div
+                    key={index}
+                    className={`relative flex items-start gap-4 ${
+                      isFirst ? '' : ''
+                    }`}
+                  >
+                    {/* Icon */}
+                    <div className="relative z-10 flex-shrink-0">
+                      <div
+                        className={`${value.bgColor} ${value.borderColor} border-2 rounded-full p-3 shadow-sm`}
+                        style={{ backgroundColor: 'var(--color-background)' }}
+                      >
+                        <Icon className={`size-5 ${value.color}`} />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 pb-2">
+                      <h3 className="text-lg font-serif font-bold text-primary mb-2">
+                        {value.title}
+                      </h3>
+                      <p className="text-sm text-secondary font-medium leading-relaxed">
+                        {value.description}
+                      </p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
 
         {/* Desktop: Beautiful Timeline/Steps Design */}

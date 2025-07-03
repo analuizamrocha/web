@@ -12,7 +12,7 @@ export function HeroSection() {
     >
       {/* Beautiful Hero Layout - Connected to header and edges */}
       <div className="mx-auto max-w-container">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:min-h-[calc(100vh-5rem)]">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:min-h-[calc(80vh-5rem)] xl:min-h-[calc(100vh-10rem)]">
           {/* Image First on Mobile, Second on Desktop - Edge to edge */}
           <div className="order-1 lg:order-2 lg:flex-1 w-full">
             <div className="lg:ml-8 xl:ml-12">

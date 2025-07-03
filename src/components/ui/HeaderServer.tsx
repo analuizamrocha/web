@@ -1,17 +1,25 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const navigation = [
-  { name: 'Home', href: '#hero', id: 'hero' },
-  { name: 'Tratamentos', href: '#tratamentos', id: 'tratamentos' },
-  { name: 'Locais de atendimento', href: '#atendimento', id: 'atendimento' },
+  { name: 'Home', href: '/', id: 'hero' },
+  { name: 'Missão', href: '/#missao', id: 'missao' },
+  { name: 'Tratamentos', href: '/#tratamentos', id: 'tratamentos' },
+  { name: 'Locais de atendimento', href: '/#atendimento', id: 'atendimento' },
 ]
 
 export function HeaderServer() {
+  const pathname = usePathname()
+  const isRootPage = pathname === '/'
+
   return (
     <>
-      {/* Skip to content link for accessibility */}
+      {/* Skip to content link for accessibility - will be disabled by client component when mobile menu is open */}
       <a
         href="#main"
+        id="skip-to-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 z-[100] bg-primary text-background px-4 py-2 rounded-md font-medium transition-all duration-200"
       >
         Pular para o conteúdo principal
@@ -26,36 +34,49 @@ export function HeaderServer() {
             <div className="flex lg:flex-1">
               <Link
                 href="/"
-                className="-m-1.5 p-1.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-md"
+                className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-md cursor-pointer"
               >
-                <span className="font-serif text-base sm:text-lg text-primary">
+                <span className="font-serif text-base sm:text-lg text-primary font-bold">
                   Dra Ana Luiza M. Rocha
                 </span>
-                <p className="text-xs text-accent text-secondary justify-center mb-0">
+                <p className="text-xs text-secondary font-medium mb-0">
                   Coloproctologista
                 </p>
               </Link>
             </div>
 
-            {/* Desktop navigation - enhanced styling */}
-            <div className="hidden md:flex gap-x-8 lg:gap-x-12">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  data-header-nav
-                  className="text-sm font-semibold leading-6 transition-all duration-200 relative py-2 text-secondary hover:text-primary focus:text-primary focus:outline-none after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 after:w-0 hover:after:w-full focus:after:w-full"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-
-            {/* Mobile menu placeholder - will be handled by client component */}
-            <div className="md:hidden">
-              <div className="w-10 h-10 flex items-center justify-center">
-                {/* Placeholder for mobile menu button */}
+            {/* Desktop navigation - show only on root page */}
+            {isRootPage && (
+              <div className="hidden md:flex gap-x-8 lg:gap-x-12">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    data-header-nav
+                    className="text-sm font-semibold leading-6 transition-all duration-200 relative py-2 text-secondary hover:text-primary focus:text-primary focus:outline-none after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 after:w-0 hover:after:w-full focus:after:w-full cursor-pointer"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
+            )}
+
+            {/* Mobile menu placeholder - PROPERLY HIDDEN from desktop tab navigation */}
+            <div className="md:hidden">
+              <button
+                type="button"
+                className="relative p-2 text-secondary hover:text-primary transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background rounded-md"
+                aria-label="Menu de navegação móvel"
+                tabIndex={-1}
+                style={{ pointerEvents: 'none' }}
+              >
+                {/* Static hamburger icon */}
+                <div className="w-6 h-6 flex flex-col justify-center items-center">
+                  <span className="block h-0.5 w-6 bg-current" />
+                  <span className="block h-0.5 w-6 bg-current mt-1" />
+                  <span className="block h-0.5 w-6 bg-current mt-1" />
+                </div>
+              </button>
             </div>
           </nav>
         </div>
