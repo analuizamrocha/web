@@ -1,6 +1,9 @@
 'use client'
 
-import { WPP_FORMATTED_NUMBER, WPP_NUMBER } from '@/lib/constants'
+import {
+  WHATSAPP_BUSINESS_NUMBER,
+  WHATSAPP_BUSINESS_NUMBER_FORMATTED,
+} from '@/lib/constants'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
@@ -10,6 +13,7 @@ import { useMobileMenu } from '@/hooks/useMobileMenu'
 const navigation = [
   { name: 'Home', href: '#hero', id: 'hero' },
   { name: 'Missão', href: '#missao', id: 'missao' },
+  { name: 'Serviços', href: '#servicos', id: 'servicos' },
   { name: 'Tratamentos', href: '#tratamentos', id: 'tratamentos' },
   { name: 'Locais de atendimento', href: '#atendimento', id: 'atendimento' },
 ]
@@ -180,15 +184,15 @@ export function HeaderClient() {
                   {/* Contact info - smaller and cleaner */}
                   <div>
                     <p className="text-sm font-medium text-secondary mb-1">
-                      Contato
+                      WhatsApp
                     </p>
                     <Link
-                      href={`https://wa.me/${WPP_NUMBER}`}
+                      href={`https://wa.me/${WHATSAPP_BUSINESS_NUMBER}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-primary font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-sm cursor-pointer"
                     >
-                      {WPP_FORMATTED_NUMBER}
+                      {WHATSAPP_BUSINESS_NUMBER_FORMATTED}
                     </Link>
                   </div>
 

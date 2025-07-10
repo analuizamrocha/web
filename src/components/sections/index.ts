@@ -1,4 +1,5 @@
 export { AboutSection } from './AboutSection'
+export { ServicesSection } from './ServicesSection'
 export { TreatmentsSection } from './TreatmentsSection'
 export { LocationsSection } from './LocationsSection'
 export { MissionSection } from './MissionSection'

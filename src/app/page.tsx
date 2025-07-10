@@ -1,5 +1,6 @@
 import {
   HeroSection,
+  ServicesSection,
   TreatmentsSection,
   LocationsSection,
   MissionSection,
@@ -20,6 +21,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <MissionSection />
+        <ServicesSection />
         <TreatmentsSection />
         <LocationsSection />
       </main>

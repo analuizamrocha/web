@@ -2,7 +2,7 @@ import { Card } from '@/components/ui/Card'
 
 const treatments = [
   {
-    name: 'Cirurgias à laser',
+    name: 'Cirurgias a laser',
   },
   {
     name: 'Botox para fissura anal',

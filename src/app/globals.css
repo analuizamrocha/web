@@ -41,6 +41,7 @@
   body {
     @apply min-h-screen font-sans bg-background;
     overscroll-behavior: none;
+    font-family: var(--font-montserrat), Montserrat, sans-serif;
   }
 
   main {
@@ -50,6 +51,7 @@
   /* Standardized heading styles - responsive and reusable */
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-medium;
+    font-family: var(--font-unna), 'Unna', serif;
   }
 
   h1 {
@@ -96,14 +98,17 @@
   /* Typography scale for better hierarchy */
   .text-hero {
     @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold leading-tight;
+    font-family: var(--font-pt-serif), 'PT Serif', serif;
   }
 
   .text-section-title {
     @apply text-2xl sm:text-3xl lg:text-4xl font-serif font-semibold leading-tight;
+    font-family: var(--font-pt-serif), 'PT Serif', serif;
   }
 
   .text-subsection-title {
     @apply text-xl sm:text-2xl lg:text-3xl font-serif font-medium leading-tight;
+    font-family: var(--font-pt-serif), 'PT Serif', serif;
   }
 
   .text-body-lg {

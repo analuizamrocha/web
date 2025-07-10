@@ -1,20 +1,30 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Montserrat, Literata } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { HeaderServer } from '@/components/ui/HeaderServer'
 import { HeaderClient } from '@/components/ui/HeaderClient'
 import { Footer } from '@/components/ui/Footer'
-import { DR_NAME, CLINICA_NASSIF_UPDATED } from '@/lib/constants'
+import { DR_NAME, CLINICA_NASSIF_UPDATED, WEBSITE_URL } from '@/lib/constants'
 import { getStructuredData } from '@/lib/structured-data'
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-montserrat',
+})
+
+const literata = Literata({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-pt-serif',
+})
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://analuizarocha.com.br'),
+  metadataBase: new URL(WEBSITE_URL),
   title: {
     default: `${DR_NAME} - Coloproctologista em Curitiba | Especialista em Intestino, Reto e Ânus`,
     template: `%s | ${DR_NAME} - Coloproctologista`,
@@ -58,28 +68,28 @@ export const metadata: Metadata = {
     // google: 'your-google-verification-code',
   },
   alternates: {
-    canonical: 'https://analuizarocha.com.br',
+    canonical: WEBSITE_URL,
   },
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://analuizarocha.com.br',
+    url: WEBSITE_URL,
     title: `${DR_NAME} - Coloproctologista em Curitiba | Especialista em Intestino, Reto e Ânus`,
     description:
       'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico humanizado para tratamento de hemorróidas, fissuras anais, HPV e doenças inflamatórias intestinais.',
     siteName: `${DR_NAME} - Coloproctologia`,
     images: [
       {
-        url: '/images/hero.png',
-        width: 1080,
-        height: 1080,
+        url: `${WEBSITE_URL}/images/og.png`,
+        width: 547,
+        height: 684,
         alt: `${DR_NAME} - Coloproctologista em Curitiba - Especialista em cuidado clínico e cirúrgico do intestino, reto e ânus`,
         type: 'image/png',
       },
       {
-        url: '/images/sobre-mim.png',
-        width: 1366,
-        height: 768,
+        url: `${WEBSITE_URL}/images/sobre-mim.png`,
+        width: 1080,
+        height: 1350,
         alt: `${DR_NAME} - Formação e qualificações profissionais em coloproctologia`,
         type: 'image/png',
       },
@@ -92,7 +102,7 @@ export const metadata: Metadata = {
       'Especialista em Coloproctologia oferecendo cuidado clínico e cirúrgico humanizado do intestino, reto e ânus em Curitiba.',
     images: [
       {
-        url: '/images/hero.png',
+        url: `${WEBSITE_URL}/images/og.png`,
         alt: `${DR_NAME} - Coloproctologista em Curitiba`,
       },
     ],
@@ -135,7 +145,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={montserrat.className}>
+      <body className={`${montserrat.variable} ${literata.variable} font-sans`}>
         <HeaderServer />
         <HeaderClient />
         {children}
