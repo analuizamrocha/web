@@ -1,5 +1,9 @@
 import { Calendar, MapPin } from 'lucide-react'
-import { CLINICA_NASSIF, WPP_NUMBER } from '@/lib/constants'
+import {
+  CLINICA_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WPP_NUMBER_NASSIF,
+} from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 
 export function LocationsSection() {
@@ -65,7 +69,7 @@ export function LocationsSection() {
           {/* CTA Button */}
           <div className="flex justify-center lg:justify-center">
             <LinkButton
-              href={`https://wa.me/${WPP_NUMBER}`}
+              href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
               external
               newTab
               variant="primary"

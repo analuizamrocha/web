@@ -4,10 +4,15 @@ export const URL_INSTRAGRAM = 'https://www.instagram.com/analuiza.mrocha/'
 export const TAG_INSTAGRAM = '@analuiza.mrocha'
 export const WHATSAPP_BUSINESS_NUMBER = '+554130739732'
 export const WHATSAPP_BUSINESS_NUMBER_FORMATTED = '(41) 3073-9732'
+export const WHATSAPP_MSG_TEXT =
+  'Olá! Gostaria de agendar uma consulta com a Dra. Ana Luiza  Rocha. '
+export const WHATSAPP_MSG_TEXT_ENCODED =
+  'Ol%C3%A1%21%0A%0AGostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Ana%20Luiza%20Rocha.%20'
+
 export const WEBSITE_URL = 'https://analuizarocha.com.br'
 
 // WhatsApp - Nassif
-export const WPP_NUMBER = '+5541988645800'
+export const WPP_NUMBER_NASSIF = '+5541988645800'
 export const WPP_FORMATTED_NUMBER = '(41) 98864-5800'
 export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/GaXVRG6Et7rKJJtcA'
 

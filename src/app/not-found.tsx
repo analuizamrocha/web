@@ -3,7 +3,8 @@ import { LinkButton } from '@/components/ui/LinkButton'
 import {
   WHATSAPP_BUSINESS_NUMBER,
   WHATSAPP_BUSINESS_NUMBER_FORMATTED,
-  WPP_NUMBER,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WPP_NUMBER_NASSIF,
 } from '@/lib/constants'
 
 export default function NotFound() {
@@ -39,7 +40,7 @@ export default function NotFound() {
           </LinkButton>
 
           <LinkButton
-            href={`https://wa.me/${WPP_NUMBER}`}
+            href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
             external
             newTab
             variant="outline"
@@ -59,7 +60,7 @@ export default function NotFound() {
           <div className="space-y-4">
             {/* WhatsApp link - footer style */}
             <Link
-              href={`https://wa.me/${WHATSAPP_BUSINESS_NUMBER}`}
+              href={`https://wa.me/${WHATSAPP_BUSINESS_NUMBER}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-secondary hover:text-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-md px-2 py-1"

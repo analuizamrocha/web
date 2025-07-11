@@ -3,6 +3,7 @@
 import {
   WHATSAPP_BUSINESS_NUMBER,
   WHATSAPP_BUSINESS_NUMBER_FORMATTED,
+  WHATSAPP_MSG_TEXT_ENCODED,
 } from '@/lib/constants'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -187,7 +188,7 @@ export function HeaderClient() {
                       WhatsApp
                     </p>
                     <Link
-                      href={`https://wa.me/${WHATSAPP_BUSINESS_NUMBER}`}
+                      href={`https://wa.me/${WHATSAPP_BUSINESS_NUMBER}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-primary font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-sm cursor-pointer"
