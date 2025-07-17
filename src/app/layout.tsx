@@ -4,9 +4,9 @@ import type { Metadata } from 'next'
 import { Montserrat, Literata } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
-import { HeaderServer } from '@/components/ui/HeaderServer'
-import { HeaderClient } from '@/components/ui/HeaderClient'
+import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import { DR_NAME, CLINICA_NASSIF_UPDATED, WEBSITE_URL } from '@/lib/constants'
 import { getStructuredData } from '@/lib/structured-data'
@@ -146,13 +146,14 @@ export default function RootLayout({
         />
       </head>
       <body className={`${montserrat.variable} ${literata.variable} font-sans`}>
-        <HeaderServer />
-        <HeaderClient />
+        <Header />
         {children}
         <Footer />
         <Analytics />
         <SpeedInsights />
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
     </html>
   )
 }
