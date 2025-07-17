@@ -10,16 +10,9 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useMobileMenu } from '@/hooks/useMobileMenu'
+import { navigationWithHashes } from '@/lib/navigation'
 
-const navigation = [
-  { name: 'Home', href: '#hero', id: 'hero' },
-  { name: 'Missão', href: '#missao', id: 'missao' },
-  { name: 'Serviços', href: '#servicos', id: 'servicos' },
-  { name: 'Tratamentos', href: '#tratamentos', id: 'tratamentos' },
-  { name: 'Locais de atendimento', href: '#atendimento', id: 'atendimento' },
-]
-
-export function HeaderClient() {
+export function Header() {
   const pathname = usePathname()
   const isRootPage = pathname === '/'
 
@@ -53,7 +46,10 @@ export function HeaderClient() {
     <>
       <header className="fixed top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-primary/10 shadow-sm">
         <div className="w-full">
-          <nav className="mx-auto flex max-w-[1760px] items-center justify-between px-6 py-3 sm:px-8 lg:px-10 xl:px-12">
+          <nav
+            className="mx-auto flex max-w-[1760px] items-center justify-between px-6 py-3 sm:px-8 lg:px-10 xl:px-12"
+            aria-label="Navegação principal"
+          >
             <div className="flex lg:flex-1">
               <Link
                 href="/"
@@ -71,7 +67,7 @@ export function HeaderClient() {
             {/* Desktop navigation with active section detection - only on root page */}
             {isRootPage && (
               <div className="hidden md:flex gap-x-8 lg:gap-x-12">
-                {navigation.map((item) => (
+                {navigationWithHashes.map((item) => (
                   <button
                     key={item.name}
                     onClick={() => handleNavClick(item.href)}
@@ -126,6 +122,27 @@ export function HeaderClient() {
                 </button>
               </div>
             )}
+
+            {/* Mobile menu placeholder - CURRENTLY HIDDEN from tab navigation when not on root page */}
+            {!isRootPage && (
+              <>
+                {/* <div className="hidden">
+                  <button
+                    type="button"
+                    className="relative p-2 text-secondary hover:text-primary transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background rounded-md"
+                    aria-label="Menu de navegação móvel"
+                    tabIndex={-1}
+                    style={{ pointerEvents: 'none' }}
+                  >
+                    <div className="w-6 h-6 flex flex-col justify-center items-center">
+                      <span className="block h-0.5 w-6 bg-current" />
+                      <span className="block h-0.5 w-6 bg-current mt-1" />
+                      <span className="block h-0.5 w-6 bg-current mt-1" />
+                    </div>
+                  </button>
+                </div> */}
+              </>
+            )}
           </nav>
         </div>
       </header>
@@ -161,7 +178,7 @@ export function HeaderClient() {
               {/* Clean navigation links */}
               <div className="flex-1 px-6 py-8">
                 <nav className="space-y-2">
-                  {navigation.map((item, index) => (
+                  {navigationWithHashes.map((item, index) => (
                     <button
                       key={item.name}
                       ref={index === 0 ? firstFocusableElementRef : null}

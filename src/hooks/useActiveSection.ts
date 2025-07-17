@@ -1,13 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-
-const navigation = [
-  { name: 'Home', href: '#hero', id: 'hero' },
-  { name: 'Missão', href: '#missao', id: 'missao' },
-  { name: 'Tratamentos', href: '#tratamentos', id: 'tratamentos' },
-  { name: 'Locais de atendimento', href: '#atendimento', id: 'atendimento' },
-]
+import { navigationWithHashes } from '@/lib/navigation'
 
 export function useActiveSection(isRootPage: boolean) {
   const [activeSection, setActiveSection] = useState('hero')
@@ -15,7 +9,7 @@ export function useActiveSection(isRootPage: boolean) {
   useEffect(() => {
     if (!isRootPage) return
 
-    const sections = navigation.map((nav) => nav.id)
+    const sections = navigationWithHashes.map((nav) => nav.id)
 
     const observerOptions = {
       root: null,
