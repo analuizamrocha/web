@@ -2,10 +2,10 @@ import { Card } from '@/components/ui/Card'
 
 const treatments = [
   {
-    name: 'Cirurgias a laser',
+    name: 'Cirurgias à laser',
   },
   {
-    name: 'Botox para fissura anal',
+    name: 'Toxina botulínica para fissura anal e dores crônicas',
   },
   {
     name: 'Cirurgias para fístulas anorretais',
