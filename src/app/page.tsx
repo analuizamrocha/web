@@ -1,6 +1,7 @@
 import {
   HeroSection,
   ServicesSection,
+  PhotoSection,
   TreatmentsSection,
   LocationsSection,
   MissionSection,
@@ -22,6 +23,7 @@ export default function Home() {
         <AboutSection />
         <MissionSection />
         <ServicesSection />
+        <PhotoSection />
         <TreatmentsSection />
         <LocationsSection />
       </main>
