@@ -30,12 +30,14 @@ export function Footer() {
             href={URL_INSTRAGRAM}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-start gap-x-3 hover:opacity-90 transition-all duration-200 w-fit focus:outline-none focus:ring-2 focus:ring-background focus:ring-offset-2 focus:ring-offset-primary rounded-md p-2 -m-2 group"
+            className="flex items-start gap-x-3 w-fit p-2 -m-2 group transition-all duration-300 ease-out hover:drop-shadow-[0_0_4px_rgba(255,249,243,0.15)] active:drop-shadow-[0_0_6px_rgba(255,249,243,0.25)] focus:outline-none focus:drop-shadow-[0_0_4px_rgba(255,249,243,0.2)]"
           >
-            <span className="text-background/90 text-base font-medium">
+            <span className="text-background/90 text-base font-medium group-hover:text-background group-active:text-background transition-all duration-300 group-hover:drop-shadow-[0_0_2px_rgba(255,249,243,0.15)]">
               {TAG_INSTAGRAM}
             </span>
-            <Instagram fill="#fff9f3" />
+            <div className="group-hover:scale-105 group-active:scale-95 transition-all duration-300 group-hover:drop-shadow-[0_0_3px_rgba(255,249,243,0.2)]">
+              <Instagram fill="#fff9f3" />
+            </div>
           </Link>
         </div>
       </div>

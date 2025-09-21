@@ -95,6 +95,122 @@
     @apply max-w-[50ch]; /* For smaller text */
   }
 
+  /* Override base heading styles within prose content */
+  .prose h1,
+  .prose h2, 
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    font-family: var(--font-pt-serif), 'PT Serif', serif !important;
+    color: var(--color-primary) !important;
+    font-weight: 700 !important;
+  }
+
+  .prose h1 {
+    font-size: 2.25rem !important;
+    margin-top: 3rem !important;
+    margin-bottom: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .prose h2 {
+    font-size: 1.875rem !important;
+    margin-top: 3rem !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .prose h3 {
+    font-size: 1.5rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+  }
+
+  .prose h4 {
+    font-size: 1.25rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+  }
+
+  .prose p {
+    color: var(--color-secondary) !important;
+    font-size: 1.125rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1.5rem !important;
+    max-width: none !important;
+  }
+
+  .prose strong {
+    color: var(--color-primary) !important;
+    font-weight: 600 !important;
+  }
+
+  .prose ul,
+  .prose ol {
+    color: var(--color-secondary) !important;
+    font-size: 1.125rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .prose a {
+    color: var(--color-primary) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .prose a:hover {
+    text-decoration: underline !important;
+  }
+
+  .prose blockquote {
+    border-left: 4px solid rgba(102, 58, 37, 0.3) !important;
+    padding-left: 1.5rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    background-color: rgba(212, 183, 162, 0.05) !important;
+    border-radius: 0 0.5rem 0.5rem 0 !important;
+    color: var(--color-secondary) !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+    margin: 2rem 0 !important;
+  }
+
+  @media (min-width: 1024px) {
+    .prose h1 {
+      font-size: 3rem !important;
+    }
+
+    .prose h2 {
+      font-size: 2.25rem !important;
+    }
+
+    .prose h3 {
+      font-size: 1.875rem !important;
+    }
+
+    .prose h4 {
+      font-size: 1.5rem !important;
+    }
+
+    .prose p,
+    .prose ul,
+    .prose ol {
+      font-size: 1.25rem !important;
+    }
+  }
+
   /* Typography scale for better hierarchy */
   .text-hero {
     @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold leading-tight;
