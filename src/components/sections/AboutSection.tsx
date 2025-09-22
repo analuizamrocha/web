@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const credentials = [
   {
@@ -80,6 +81,18 @@ export function AboutSection() {
           quality={100}
           className="w-full h-auto object-cover"
         />
+      </div>
+
+      {/* TODO: Add a link to the /sobre page */}
+      {/* Simple, "saiba mais" link */}
+      {/* It should be aligned to the bottom of the grid, right */}
+      <div className="text-center">
+        <Link
+          href="/sobre"
+          className="text-primary hover:text-primary/80 font-medium transition-colors text-lg"
+        >
+          Saiba mais
+        </Link>
       </div>
     </section>
   )

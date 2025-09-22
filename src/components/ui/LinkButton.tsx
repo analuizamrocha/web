@@ -6,6 +6,8 @@ import { VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from './Button'
 
+// FIXME: We should add different variants for the LinkButton, like primary, secondary, outline, etc...
+// FIXME: Then we could reuse this component in new pages like blog, posts, treatments, etc...
 interface LinkButtonProps extends VariantProps<typeof buttonVariants> {
   href: string
   children: React.ReactNode
@@ -34,6 +36,7 @@ const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
       ...props,
     }
 
+    // FIXME: Why here we using a simple a tag instead of a Link component?
     if (external || newTab) {
       return (
         <a

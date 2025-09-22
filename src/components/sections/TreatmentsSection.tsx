@@ -1,4 +1,5 @@
 import { Card } from '@/components/ui/Card'
+import Link from 'next/link'
 
 const treatments = [
   {
@@ -69,6 +70,16 @@ export function TreatmentsSection() {
             />
           ))}
         </div>
+      </div>
+      {/* TODO: Add a link to the /tratamentos page */}
+      {/* right aligned, "saiba mais" link */}
+      <div className="text-center">
+        <Link
+          href="/tratamentos"
+          className="text-primary hover:text-primary/80 font-medium transition-colors text-lg"
+        >
+          Saiba mais
+        </Link>
       </div>
     </section>
   )

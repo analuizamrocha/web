@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 import {
   getAllPosts,
   getTargetAudienceLabel,
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
   ],
 }
 
+// TODO: Thinking here if the card itself should be a link to the post or not
 export default function BlogPage() {
   const posts = getAllPosts()
 
@@ -32,7 +34,9 @@ export default function BlogPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
               <p>
-                Aqui compartilho conhecimentos, dicas práticas e orientações sobre coloproctologia para ajudar você a entender melhor sua saúde intestinal
+                Aqui compartilho conhecimentos, dicas práticas e orientações
+                sobre coloproctologia para ajudar você a entender melhor sua
+                saúde intestinal
               </p>
             </div>
           </div>
@@ -40,7 +44,8 @@ export default function BlogPage() {
           {posts.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-lg lg:text-xl text-secondary">
-                Em breve estarei compartilhando artigos e dicas valiosas sobre saúde intestinal.
+                Em breve estarei compartilhando artigos e dicas valiosas sobre
+                saúde intestinal.
               </p>
             </div>
           ) : (
@@ -64,9 +69,9 @@ export default function BlogPage() {
                       <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </h2>
 
-                    <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
-                      {post.excerpt}
-                    </p>
+                    <div className="text-lg lg:text-xl text-secondary leading-relaxed mb-6 prose prose-lg max-w-none prose-p:text-secondary prose-p:text-lg lg:prose-p:text-xl prose-p:leading-relaxed prose-p:mb-0 prose-strong:text-primary prose-strong:font-semibold">
+                      <MDXRemote source={post.excerpt} />
+                    </div>
 
                     <div className="flex items-center justify-between">
                       <div className="flex flex-wrap gap-2">

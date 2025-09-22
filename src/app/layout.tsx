@@ -5,6 +5,7 @@ import { Montserrat, Literata } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import CookieConsent from '@/components/layout/CookieConsent'
 
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
@@ -149,9 +150,28 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <CookieConsent />
         <Analytics />
         <SpeedInsights />
+        
+        {/* LGPD-compliant analytics initialization */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.gtag = window.gtag || function(){dataLayer.push(arguments);};
+              window.dataLayer = window.dataLayer || [];
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'personalization_storage': 'denied'
+              });
+              gtag('js', new Date());
+            `,
+          }}
+        />
       </body>
+      
+      {/* Conditional analytics loading based on LGPD consent */}
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
     </html>
