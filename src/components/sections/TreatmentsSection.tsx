@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/Card'
-import Link from 'next/link'
+import { LinkButton } from '@/components/ui/LinkButton'
 
 const treatments = [
   {
@@ -70,16 +70,13 @@ export function TreatmentsSection() {
             />
           ))}
         </div>
-      </div>
-      {/* TODO: Add a link to the /tratamentos page */}
-      {/* right aligned, "saiba mais" link */}
-      <div className="text-center">
-        <Link
-          href="/tratamentos"
-          className="text-primary hover:text-primary/80 font-medium transition-colors text-lg"
-        >
-          Saiba mais
-        </Link>
+
+        {/* Link Button - Aligned with content */}
+        <div className="text-right mt-4">
+          <LinkButton href="/tratamentos" variant="outline" size="lg">
+            Ver todos os tratamentos
+          </LinkButton>
+        </div>
       </div>
     </section>
   )

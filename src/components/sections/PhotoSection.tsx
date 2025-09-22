@@ -24,15 +24,21 @@ export function PhotoSection() {
           {/* Side Image - Always visible */}
           <div className="relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 group">
             <div className="aspect-[3/4] lg:aspect-[4/5] relative">
-              <Image
-                src="/images/side.jpg"
-                alt={`${DR_NAME} - Perfil profissional em consultório médico especializado em coloproctologia`}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={95}
-                priority
-              />
+              <picture>
+                <source
+                  srcSet="/images/side.webp"
+                  type="image/webp"
+                />
+                <Image
+                  src="/images/side-optimized.jpg"
+                  alt={`${DR_NAME} - Perfil profissional em consultório médico especializado em coloproctologia`}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
+                  loading="lazy"
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </div>
@@ -40,14 +46,21 @@ export function PhotoSection() {
           {/* Front Image - Hidden on mobile, visible on desktop */}
           <div className="hidden lg:block relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 group">
             <div className="aspect-[4/5] relative">
-              <Image
-                src="/images/front.jpg"
-                alt={`${DR_NAME} - Atendimento profissional e humanizado em coloproctologia`}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="50vw"
-                quality={95}
-              />
+              <picture>
+                <source
+                  srcSet="/images/front.webp"
+                  type="image/webp"
+                />
+                <Image
+                  src="/images/front-optimized.jpg"
+                  alt={`${DR_NAME} - Atendimento profissional e humanizado em coloproctologia`}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="50vw"
+                  quality={90}
+                  loading="lazy"
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </div>
@@ -56,7 +69,7 @@ export function PhotoSection() {
         {/* Bottom Content */}
         <div className="mt-8 lg:mt-12 text-center">
           <div className="mx-auto max-w-3xl">
-            <p className="text-lg lg:text-xl text-secondary/80 font-medium leading-relaxed">
+            <p className="text-lg lg:text-xl text-secondary font-medium leading-relaxed">
               &ldquo;A medicina vai além da técnica. É sobre criar conexões,
               oferecer esperança e cuidar de cada pessoa com a atenção que ela
               merece.&rdquo;

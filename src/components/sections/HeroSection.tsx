@@ -16,16 +16,32 @@ export function HeroSection() {
           {/* Image First on Mobile, Second on Desktop - Edge to edge */}
           <div className="order-1 lg:order-2 lg:flex-1 w-full">
             <div className="lg:ml-8 xl:ml-12">
-              <Image
-                src="/images/hero.png"
-                alt="Dra. Ana Luiza Moraes Rocha, coloproctologista, em seu consultório médico moderno, sorrindo profissionalmente para pacientes"
-                width={1080}
-                height={1080}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={95}
-                className="w-full h-auto object-cover lg:shadow-2xl"
-                priority
-              />
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcSet="/images/hero-mobile.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcSet="/images/hero.webp"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcSet="/images/hero-mobile-optimized.jpg"
+                />
+                <Image
+                  src="/images/hero-optimized.jpg"
+                  alt="Dra. Ana Luiza Moraes Rocha, coloproctologista, em seu consultório médico moderno, sorrindo profissionalmente para pacientes"
+                  width={1200}
+                  height={1200}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                  quality={90}
+                  className="w-full h-auto object-cover lg:shadow-2xl"
+                  priority
+                  fetchPriority="high"
+                />
+              </picture>
             </div>
           </div>
 

@@ -18,9 +18,12 @@ export const metadata: Metadata = {
     'tratamento hemorróidas',
     'prevenção câncer colorretal',
   ],
+  alternates: {
+    canonical: 'https://analuizarocha.com.br/blog'
+  }
 }
 
-// TODO: Thinking here if the card itself should be a link to the post or not
+// DECISION: Keep title as main link for better accessibility and UX clarity
 export default function BlogPage() {
   const posts = getAllPosts()
 

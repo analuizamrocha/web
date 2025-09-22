@@ -116,25 +116,25 @@ Procedimento de emergência para infecção aguda:
 
 #### Vantagens da técnica laser
 
-##### Precisão Terapêutica**
+##### Precisão Terapêutica
 
 - Atuação específica no trajeto cístico
 - Preservação máxima dos tecidos saudáveis
 - Menor área de trauma cirúrgico
 
-##### Recuperação Acelerada**
+##### Recuperação Acelerada
 
 - Retorno às atividades em 3-7 dias
 - Menor necessidade de curativos
 - Cicatrização mais rápida
 
-##### Menos Desconforto**
+##### Menos Desconforto
 
 - Significativa redução da dor pós-operatória
 - Menor necessidade de analgésicos
 - Procedimento ambulatorial
 
-##### Menor Recidiva**
+##### Menor Recidiva
 
 - Cauterização completa do trajeto
 - Eliminação eficaz dos focos de reinfecção

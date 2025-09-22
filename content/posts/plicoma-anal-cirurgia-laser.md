@@ -57,25 +57,25 @@ Indica-se remoção quando há **dificuldade de higiene** (com infecções/odor)
 
 #### Vantagens da tecnologia laser
 
-##### Precisão Cirúrgica**
+##### Precisão Cirúrgica
 
 - Corte extremamente preciso
 - Preservação dos tecidos saudáveis
 - Menor trauma operatório
 
-##### Hemostasia Eficaz**
+##### Hemostasia Eficaz
 
 - Cauterização simultânea dos vasos
 - Redução significativa do sangramento
 - Campo cirúrgico mais limpo
 
-##### Recuperação Acelerada**
+##### Recuperação Acelerada
 
 - Menor inflamação pós-operatória
 - Retorno mais rápido às atividades
 - Menos tempo de afastamento
 
-##### Menos Desconforto**
+##### Menos Desconforto
 
 - Redução da dor pós-operatória
 - Menor necessidade de medicações

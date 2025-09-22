@@ -16,12 +16,14 @@ const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-montserrat',
+  display: 'swap',
 })
 
 const literata = Literata({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-pt-serif',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -65,8 +67,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   verification: {
-    // TODO: Add Google Search Console verification when available
-    // google: 'your-google-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,
   },
   alternates: {
     canonical: WEBSITE_URL,
@@ -139,6 +140,27 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        {/* Preload critical fonts */}
+        <link
+          rel="preload"
+          href="/fonts/montserrat-v26-latin-regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/montserrat-v26-latin-600.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -154,7 +176,7 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         
-        {/* LGPD-compliant analytics initialization */}
+        {/* LGPD-compliant analytics initialization - deferred */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -166,14 +188,21 @@ export default function RootLayout({
                 'personalization_storage': 'denied'
               });
               gtag('js', new Date());
+              
+              // Defer analytics loading until after page load
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  // Load analytics only after critical resources
+                  const script = document.createElement('script');
+                  script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}';
+                  script.async = true;
+                  document.head.appendChild(script);
+                }, 1000);
+              });
             `,
           }}
         />
       </body>
-      
-      {/* Conditional analytics loading based on LGPD consent */}
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
     </html>
   )
 }

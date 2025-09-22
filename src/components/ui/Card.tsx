@@ -49,7 +49,7 @@ export function Card({
             variant === 'treatment'
               ? 'text-sm sm:text-base text-accent'
               : variant === 'service'
-              ? 'text-sm sm:text-base text-secondary/80'
+              ? 'text-sm sm:text-base text-secondary'
               : 'text-sm sm:text-base text-accent'
           )}
         >

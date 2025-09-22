@@ -3,7 +3,11 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-// TODO: Production test this component, its state being saved to cookies, etc...
+// PRODUCTION TEST REQUIRED:
+// 1. Verify localStorage persistence across browser sessions
+// 2. Test analytics consent flow with GTM/GA
+// 3. Confirm page reload after acceptance initializes tracking
+// 4. Test rejection flow prevents analytics loading
 export default function CookieConsent() {
   const [showConsent, setShowConsent] = useState(false)
 

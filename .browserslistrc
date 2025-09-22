@@ -1,0 +1,7 @@
+# Very modern browsers only - aggressive polyfill reduction
+Chrome >= 95
+Firefox >= 95
+Safari >= 15
+Edge >= 95
+not dead
+not op_mini all

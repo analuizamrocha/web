@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { LinkButton } from '@/components/ui/LinkButton'
 
 const credentials = [
   {
@@ -68,6 +68,13 @@ export function AboutSection() {
             ))}
           </div>
         </div>
+
+        {/* Link Button - Aligned with content */}
+        <div className="text-right mb-8 lg:mb-4 lg:mt-4">
+          <LinkButton href="/sobre" variant="outline" size="lg">
+            Conheça minha trajetória
+          </LinkButton>
+        </div>
       </div>
 
       {/* Mobile: Full-Width Image - Edge to Edge */}
@@ -81,18 +88,6 @@ export function AboutSection() {
           quality={100}
           className="w-full h-auto object-cover"
         />
-      </div>
-
-      {/* TODO: Add a link to the /sobre page */}
-      {/* Simple, "saiba mais" link */}
-      {/* It should be aligned to the bottom of the grid, right */}
-      <div className="text-center">
-        <Link
-          href="/sobre"
-          className="text-primary hover:text-primary/80 font-medium transition-colors text-lg"
-        >
-          Saiba mais
-        </Link>
       </div>
     </section>
   )

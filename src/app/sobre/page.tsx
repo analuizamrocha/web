@@ -222,6 +222,44 @@ export default function SobrePage() {
 
             </div>
 
+            {/* Insurance Information */}
+            <div className="bg-primary/5 rounded-3xl p-8 lg:p-10 border border-primary/20 mb-8">
+              <h2 className="text-xl lg:text-2xl font-serif font-bold text-primary mb-6">
+                Convênios e Formas de Atendimento
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h3 className="font-semibold text-primary mb-3">Convênios Aceitos</h3>
+                  <ul className="space-y-2 text-secondary">
+                    <li>• Unimed Curitiba</li>
+                    <li>• Bradesco Saúde</li>
+                    <li>• SulAmérica Saúde</li>
+                    <li>• Amil</li>
+                    <li>• Notre Dame Intermédica</li>
+                    <li>• Golden Cross</li>
+                    <li>• Outros convênios - consulte</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-primary mb-3">Modalidades</h3>
+                  <ul className="space-y-2 text-secondary">
+                    <li>• Consultas por convênio</li>
+                    <li>• Atendimento particular</li>
+                    <li>• Consultas de segunda opinião</li>
+                    <li>• Procedimentos ambulatoriais</li>
+                    <li>• Cirurgias</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <p className="text-sm text-secondary">
+                <strong>Importante:</strong> Consulte a disponibilidade do seu convênio antes do agendamento. 
+                Alguns procedimentos podem necessitar autorização prévia.
+              </p>
+            </div>
+
             {/* Contact CTA */}
             <div className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 mb-8 text-center">
               <h2 className="text-xl lg:text-2xl font-serif font-bold text-primary mb-4">
@@ -239,10 +277,10 @@ export default function SobrePage() {
                   Agendar Consulta
                 </Link>
                 <Link
-                  href="/servicos"
+                  href="/tratamentos"
                   className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-2xl hover:bg-primary hover:text-background transition-all duration-300"
                 >
-                  Conhecer Serviços
+                  Conhecer Tratamentos
                 </Link>
               </div>
             </div>

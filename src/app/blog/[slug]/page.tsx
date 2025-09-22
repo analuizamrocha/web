@@ -162,11 +162,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </header>
 
-          {/* TODO: How can we style the MDXRemote content? */}
-          {/* Our current colors are tiring to the eyes */}
-          {/* It probabbly also is bad for colorblind people */}
-          {/* bold being a different color is also disorienting */}
-          {/* ... */}
 
           {/* Article Content */}
           <div className="mx-auto max-w-4xl">
