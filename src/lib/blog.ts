@@ -56,7 +56,9 @@ export function getContentIntentLabel(intent: ContentIntent): string {
   return CONTENT_INTENT_TRANSLATIONS[intent]
 }
 
-// Interface for blog post frontmatter
+/**
+ * Blog post frontmatter metadata interface
+ */
 export interface BlogPostMeta {
   title: string
   metaDescription: string
@@ -71,14 +73,21 @@ export interface BlogPostMeta {
   featured?: boolean
 }
 
+/**
+ * Complete blog post with content and excerpt
+ */
 export interface BlogPost extends BlogPostMeta {
   content: string
   excerpt: string
 }
 
+/** Posts directory path */
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
-// Get all blog posts
+/**
+ * Get all blog posts sorted by publish date (newest first)
+ * @returns Array of blog posts
+ */
 export function getAllPosts(): BlogPost[] {
   // Create directory if it doesn't exist
   if (!fs.existsSync(postsDirectory)) {
@@ -105,7 +114,94 @@ export function getAllPosts(): BlogPost[] {
   })
 }
 
-// Get post by slug
+/**
+ * Calculates reading time based on word count
+ * @param content - The markdown content
+ * @returns Reading time in minutes (average 200 words per minute)
+ */
+function calculateReadingTime(content: string): number {
+  const wordCount = content.split(/\s+/).length
+  return Math.ceil(wordCount / 200)
+}
+
+/**
+ * Extracts the first non-heading paragraph from markdown content
+ * @param content - The markdown content
+ * @returns The first paragraph text
+ */
+function getFirstParagraph(content: string): string {
+  const paragraphs = content.replace(/^#.*$/gm, '').trim().split('\n\n')
+  return paragraphs.find(p => p.trim().length > 0) || ''
+}
+
+/**
+ * Truncates text at word boundaries to avoid cutting words mid-sentence
+ * @param text - The text to truncate
+ * @param maxLength - Maximum character length
+ * @returns Truncated text
+ */
+function truncateAtWordBoundary(text: string, maxLength: number): string {
+  const words = text.split(' ')
+  let result = ''
+  
+  for (const word of words) {
+    const testLength = result ? result.length + 1 + word.length : word.length
+    if (testLength > maxLength) break
+    result += (result ? ' ' : '') + word
+  }
+  
+  return result
+}
+
+/**
+ * Creates a smart excerpt from content, prioritizing natural sentence breaks
+ * @param content - The markdown content
+ * @returns A well-formed excerpt with ellipsis if truncated
+ */
+function createExcerpt(content: string): string {
+  const firstParagraph = getFirstParagraph(content)
+  if (!firstParagraph) return ''
+  
+  // Strategy 1: Use first two complete sentences
+  const sentences = firstParagraph.split('. ')
+  if (sentences.length >= 2) {
+    return sentences[0] + '. ' + sentences[1] + '.'
+  }
+  
+  // Strategy 2: If single long sentence, truncate at word boundary
+  if (sentences.length === 1 && firstParagraph.length > 200) {
+    const truncated = truncateAtWordBoundary(firstParagraph, 180)
+    return truncated + '...'
+  }
+  
+  // Strategy 3: Use full paragraph if short enough
+  return firstParagraph
+}
+
+/**
+ * Ensures excerpt ends with ellipsis if it was truncated from original content
+ * @param excerpt - The generated excerpt
+ * @param originalParagraph - The original paragraph text
+ * @returns Excerpt with proper ellipsis ending
+ */
+function addEllipsisIfTruncated(excerpt: string, originalParagraph: string): string {
+  const wasTruncated = excerpt !== originalParagraph
+  const alreadyHasEllipsis = excerpt.endsWith('...')
+  
+  if (wasTruncated && !alreadyHasEllipsis) {
+    // Remove any trailing periods before adding ellipsis to avoid multiple dots
+    const cleanExcerpt = excerpt.replace(/\.+$/, '')
+    return cleanExcerpt + '...'
+  }
+  
+  return excerpt
+}
+
+/**
+ * Get a single blog post by its slug
+ * @param slug - The post slug (filename without .md extension)
+ * @returns Blog post data or null if not found
+ */
 export function getPostBySlug(slug: string): BlogPost | null {
   try {
     const fullPath = path.join(postsDirectory, `${slug}.md`)
@@ -116,17 +212,15 @@ export function getPostBySlug(slug: string): BlogPost | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
-    // Calculate reading time (average 200 words per minute)
-    const wordCount = content.split(/\s+/).length
-    const readingTime = Math.ceil(wordCount / 200)
-
-    // Create excerpt from content (first 160 characters)
-    const excerpt = content.replace(/^#.*$/gm, '').trim().slice(0, 160) + '...'
+    const readingTime = calculateReadingTime(content)
+    const firstParagraph = getFirstParagraph(content)
+    const excerpt = createExcerpt(content)
+    const finalExcerpt = addEllipsisIfTruncated(excerpt, firstParagraph)
 
     return {
       slug,
       content,
-      excerpt,
+      excerpt: finalExcerpt,
       readingTime,
       ...data,
     } as BlogPost
@@ -136,7 +230,10 @@ export function getPostBySlug(slug: string): BlogPost | null {
   }
 }
 
-// Get all slugs for static generation
+/**
+ * Get all post slugs for static generation
+ * @returns Array of post slugs
+ */
 export function getAllPostSlugs(): string[] {
   if (!fs.existsSync(postsDirectory)) {
     return []
@@ -148,7 +245,11 @@ export function getAllPostSlugs(): string[] {
     .map((fileName) => fileName.replace(/\.md$/, ''))
 }
 
-// Generate medical schema markup for blog posts
+/**
+ * Generate medical schema markup for blog posts (Schema.org structured data)
+ * @param post - The blog post to generate schema for
+ * @returns Schema.org structured data object
+ */
 export function generateBlogPostSchema(post: BlogPost) {
   return {
     '@context': 'https://schema.org',

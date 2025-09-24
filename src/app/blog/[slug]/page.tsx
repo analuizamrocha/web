@@ -170,7 +170,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           {/* Article Footer */}
-          <footer className="mx-auto max-w-4xl mt-16 pt-8 border-t border-secondary/20">
+          <footer className="mx-auto max-w-4xl pt-8">
             <div className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 mb-8">
               <h3 className="text-xl lg:text-2xl font-serif font-bold text-primary mb-4">
                 Precisa de acompanhamento especializado?

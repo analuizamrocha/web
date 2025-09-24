@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 import {
   getAllPosts,
   getTargetAudienceLabel,
@@ -64,9 +65,9 @@ export default function BlogPage() {
                       <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </h2>
 
-                    <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
-                      {post.excerpt}
-                    </p>
+                    <div className="prose prose-lg max-w-none mb-6">
+                      <MDXRemote source={post.excerpt} />
+                    </div>
 
                     <div className="flex items-center justify-between">
                       <div className="flex flex-wrap gap-2">
