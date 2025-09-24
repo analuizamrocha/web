@@ -36,9 +36,9 @@ Alguns sinais não devem ser ignorados:
 
 Esses sintomas podem ter diversas causas, desde condições simples até doenças que exigem tratamento imediato. O maior erro é acreditar que vai passar sozinho.
 
-**Dica prática:** se você se reconheceu em algum desses sinais, já é motivo suficiente para procurar um **coloproctologista em Curitiba**. Quanto antes for feita a avaliação, maiores as chances de um tratamento rápido, menos invasivo e com melhores resultados.
+**Dica prática:** se você se reconheceu em algum desses sinais, já é motivo suficiente para procurar um **coloproctologista em Curitiba**. A avaliação médica precoce é fundamental para o diagnóstico correto e o início do tratamento adequado quando necessário.
 
-Agende sua consulta preventiva aqui e dê o primeiro passo para cuidar da sua saúde intestinal com segurança.
+A consulta preventiva permite esclarecer dúvidas e iniciar os cuidados apropriados para sua saúde intestinal.
 
 ## Sintomas que Não Devem Ser Ignorados
 
@@ -98,4 +98,13 @@ Pensando em rastreio e prevenção de câncer colorretal, para pessoas sem fator
 
 Leve exames anteriores (mesmo que antigos), lista de medicamentos em uso e histórico familiar de doenças intestinais. Também é importante anotar seus sintomas e dúvidas para aproveitar ao máximo a consulta.
 
-Se alguma dessas dúvidas também é sua, não adie mais. Marque sua consulta e cuide da sua saúde intestinal com tranquilidade e confiança.
+Se alguma dessas dúvidas também é sua, procure um médico coloproctologista de sua confiança para uma avaliação adequada e esclarecimentos personalizados.
+
+---
+
+**Dra. Ana Luiza Moraes Rocha**  
+Médica Coloproctologista  
+CRM-PR 45351 | RQE 36221  
+Especialista em Coloproctologia  
+
+> *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*
