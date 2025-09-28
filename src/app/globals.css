@@ -3,7 +3,7 @@
 @theme {
   --color-background: #fff9f3;
   --color-primary: #663a25;
-  --color-secondary: #d4b7a2;
+  --color-secondary: #8b5a3c; /* Darker brown for better contrast */
   --color-tertiary: #b08771;
   --color-brand-primary: #c27e5c;
   --color-accent-neutral: #7a8b68;  
@@ -138,7 +138,7 @@
   }
 
   .prose p {
-    color: var(--color-secondary) !important;
+    color: rgb(55, 65, 81) !important; /* Improved contrast - gray-700 */
     font-size: 1.125rem !important;
     line-height: 1.7 !important;
     margin-bottom: 1.5rem !important;
@@ -146,13 +146,13 @@
   }
 
   .prose strong {
-    color: var(--color-primary) !important;
+    color: rgb(17, 24, 39) !important; /* Better contrast - gray-900 instead of switching colors */
     font-weight: 600 !important;
   }
 
   .prose ul,
   .prose ol {
-    color: var(--color-secondary) !important;
+    color: rgb(55, 65, 81) !important; /* Consistent with paragraph text */
     font-size: 1.125rem !important;
     line-height: 1.7 !important;
     margin-bottom: 1.5rem !important;
@@ -170,6 +170,7 @@
   .prose li {
     margin-bottom: 0.5rem !important;
     line-height: 1.7 !important;
+    color: rgb(55, 65, 81) !important; /* Ensure list items match */
   }
 
   .prose a {
@@ -184,13 +185,13 @@
   }
 
   .prose blockquote {
-    border-left: 4px solid rgba(102, 58, 37, 0.3) !important;
+    border-left: 4px solid rgb(75, 85, 99) !important; /* Better contrast */
     padding-left: 1.5rem !important;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
-    background-color: rgba(212, 183, 162, 0.05) !important;
+    background-color: rgb(249, 250, 251) !important; /* Subtle gray background */
     border-radius: 0 0.5rem 0.5rem 0 !important;
-    color: var(--color-secondary) !important;
+    color: rgb(55, 65, 81) !important; /* Consistent with body text */
     font-style: italic !important;
     font-weight: 500 !important;
     margin: 2rem 0 !important;
