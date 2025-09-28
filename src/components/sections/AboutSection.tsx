@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { LinkButton } from '@/components/ui/LinkButton'
 
 const credentials = [
   {
@@ -66,6 +67,13 @@ export function AboutSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Link Button - Aligned with content */}
+        <div className="text-right mb-8 lg:mb-4 lg:mt-4">
+          <LinkButton href="/sobre" variant="outline" size="lg">
+            Conheça minha trajetória
+          </LinkButton>
         </div>
       </div>
 
