@@ -1,4 +1,5 @@
 import { Card } from '@/components/ui/Card'
+import { LinkButton } from '@/components/ui/LinkButton'
 
 const treatments = [
   {
@@ -68,6 +69,13 @@ export function TreatmentsSection() {
               `}
             />
           ))}
+        </div>
+
+        {/* Link Button - Aligned with content */}
+        <div className="text-right mt-4">
+          <LinkButton href="/tratamentos" variant="outline" size="lg">
+            Ver todos os tratamentos
+          </LinkButton>
         </div>
       </div>
     </section>
