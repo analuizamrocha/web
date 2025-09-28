@@ -162,6 +162,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </header>
 
+
           {/* Article Content */}
           <div className="mx-auto max-w-4xl">
             <div className="prose prose-lg max-w-none">
