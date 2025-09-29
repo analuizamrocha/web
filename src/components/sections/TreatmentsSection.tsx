@@ -45,9 +45,9 @@ export function TreatmentsSection() {
               Nossa consulta é individualizada e detalhada e busca um
               entendimento completo sobre você e seu problema.
             </p>
-            <p>Para nós, diagnosticar e tratar não é o suficiente.</p>
             <p>
-              Precisamos adequar os melhores tratamentos ao seu estilo de vida.
+              Para nós, cuidar vai além do diagnóstico. Adaptamos cada
+              tratamento ao seu estilo de vida.
             </p>
           </div>
         </div>

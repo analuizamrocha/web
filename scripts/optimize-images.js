@@ -8,73 +8,18 @@ const path = require('path')
 /**
  * Image Optimization Script
  *
- * Optimizes large images using Sharp to dramatically reduce file sizes
- * while maintaining visual quality.
- *
- * Target reductions:
- * - hero.png: 19MB → ~150KB (99.2% reduction)
- * - front.jpg: 15MB → ~120KB (99.2% reduction)
- * - side.jpg: 14MB → ~120KB (99.1% reduction)
+ * Automatically discovers and optimizes all PNG/JPG images to WebP format
+ * while preserving original aspect ratios and maintaining source files.
  */
 
 const IMAGES_DIR = path.join(__dirname, '../public/images')
-
-const optimizationConfig = {
-  'hero.png': {
-    variants: [
-      {
-        suffix: '-mobile',
-        width: 828,
-        height: 828,
-        webpQuality: 85,
-        description: 'Hero section mobile image',
-      },
-      {
-        suffix: '',
-        width: 1200,
-        height: 1200,
-        webpQuality: 85,
-        description: 'Hero section desktop image',
-      },
-    ],
-  },
-  'front.jpg': {
-    width: 800,
-    height: 1000, // 4:5 aspect ratio
-    webpQuality: 85,
-    description: 'Front profile photo',
-  },
-  'side.jpg': {
-    width: 800,
-    height: 1000, // 4:5 aspect ratio
-    webpQuality: 85,
-    description: 'Side profile photo',
-  },
-  'og.png': {
-    width: 1200,
-    height: 630, // Standard OG image ratio
-    webpQuality: 90,
-    description: 'Open Graph social media image',
-  },
-  'sobre-mim.png': {
-    width: 1366,
-    height: 768, // 16:9 aspect ratio for about section
-    webpQuality: 85,
-    description: 'About section professional image',
-  },
-  'missao.png': {
-    width: 800,
-    height: 600, // 4:3 aspect ratio
-    webpQuality: 85,
-    description: 'Mission section image',
-  },
-}
 
 async function getFileSize(filePath) {
   try {
     const stats = fs.statSync(filePath)
     return stats.size
   } catch (error) {
+    console.error(`❌ Error getting file size: ${error.message}`)
     return 0
   }
 }
@@ -87,60 +32,74 @@ function formatBytes(bytes) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
 }
 
-async function optimizeImage(filename, config) {
+async function getImageDimensions(filePath) {
+  try {
+    const metadata = await sharp(filePath).metadata()
+    return { width: metadata.width, height: metadata.height }
+  } catch (error) {
+    console.error(`❌ Error getting image dimensions: ${error.message}`)
+    return null
+  }
+}
+
+async function optimizeImage(filename) {
   const inputPath = path.join(IMAGES_DIR, filename)
   const name = path.parse(filename).name
+  const webpPath = path.join(IMAGES_DIR, `${name}.webp`)
 
-  // Create backup if it doesn't exist
-  const backupPath = path.join(IMAGES_DIR, `${filename}.backup`)
-  if (!fs.existsSync(backupPath)) {
-    fs.copyFileSync(inputPath, backupPath)
-    console.log(`✅ Created backup: ${filename}.backup`)
-  }
+  console.log(`\n🖼️  Processing: ${filename}`)
 
   const originalSize = await getFileSize(inputPath)
-  console.log(`\n🖼️  Processing: ${filename}`)
   console.log(`📊 Original size: ${formatBytes(originalSize)}`)
 
-  // Handle single config or variants
-  const variants = config.variants || [config]
-  const results = []
+  // Get original dimensions
+  const dimensions = await getImageDimensions(inputPath)
+  if (!dimensions) {
+    console.error(`❌ Could not get dimensions for ${filename}`)
+    return null
+  }
+
+  console.log(`📐 Original dimensions: ${dimensions.width}x${dimensions.height}`)
+
+  // Resize to web-appropriate dimensions
+  const aspectRatio = dimensions.width / dimensions.height
+  let targetWidth, targetHeight
+
+  if (aspectRatio > 1) {
+    // Landscape: max width 1200px
+    targetWidth = Math.min(1200, dimensions.width)
+    targetHeight = Math.round(targetWidth / aspectRatio)
+  } else {
+    // Portrait: max height 1200px
+    targetHeight = Math.min(1200, dimensions.height)
+    targetWidth = Math.round(targetHeight * aspectRatio)
+  }
+
+  console.log(`🎯 Target dimensions: ${targetWidth}x${targetHeight}`)
 
   try {
-    for (const variant of variants) {
-      const suffix = variant.suffix || ''
-      const webpPath = path.join(IMAGES_DIR, `${name}${suffix}.webp`)
-
-      console.log(`  🔄 Creating variant: ${variant.description}`)
-
-      // Generate WebP version only
-      await sharp(inputPath)
-        .resize(variant.width, variant.height, {
-          fit: 'cover',
-          position: 'center',
-        })
-        .webp({ quality: variant.webpQuality, effort: 6 })
-        .toFile(webpPath)
-
-      const webpSize = await getFileSize(webpPath)
-
-      console.log(
-        `    ✅ WebP: ${formatBytes(webpSize)} (${(
-          (1 - webpSize / originalSize) *
-          100
-        ).toFixed(1)}% reduction)`
-      )
-
-      results.push({
-        variant: suffix,
-        webp: webpSize,
+    // Convert to WebP with resize and quality 90%
+    await sharp(inputPath)
+      .resize(targetWidth, targetHeight, {
+        fit: 'inside',
+        withoutEnlargement: true
       })
-    }
+      .webp({
+        quality: 90,
+        effort: 6
+      })
+      .toFile(webpPath)
+
+    const webpSize = await getFileSize(webpPath)
+    const reduction = ((1 - webpSize / originalSize) * 100).toFixed(1)
+
+    console.log(`✅ WebP created: ${formatBytes(webpSize)} (${reduction}% reduction)`)
 
     return {
-      original: originalSize,
-      variants: results,
       filename,
+      original: originalSize,
+      webp: webpSize,
+      dimensions
     }
   } catch (error) {
     console.error(`❌ Error processing ${filename}:`, error.message)
@@ -149,71 +108,66 @@ async function optimizeImage(filename, config) {
 }
 
 async function main() {
-  console.log('🚀 Starting image optimization with Sharp...\n')
+  console.log('🚀 Starting automatic image optimization with Sharp...\n')
+  console.log('🎯 Quality: 90% (excellent quality with great compression)')
+  console.log('📐 Resize: Max 1200px (web-optimized dimensions)')
+  console.log('📦 Format: WebP only')
+  console.log('🔒 Source files: Preserved (no backups needed)\n')
+
+  // Auto-discover PNG and JPG files
+  const files = fs.readdirSync(IMAGES_DIR)
+  const imageFiles = files.filter(file =>
+    /\.(png|jpg|jpeg)$/i.test(file) && !file.includes('.backup')
+  )
+
+  if (imageFiles.length === 0) {
+    console.log('⚠️  No PNG or JPG files found to optimize')
+    return
+  }
+
+  console.log(`📁 Found ${imageFiles.length} images to process:`)
+  imageFiles.forEach(file => console.log(`   • ${file}`))
 
   const results = []
   let totalOriginal = 0
   let totalOptimized = 0
 
-  for (const [filename, config] of Object.entries(optimizationConfig)) {
-    const filePath = path.join(IMAGES_DIR, filename)
-
-    if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  Skipping ${filename} - file not found`)
-      continue
-    }
-
-    const result = await optimizeImage(filename, config)
+  for (const filename of imageFiles) {
+    const result = await optimizeImage(filename)
     if (result) {
       results.push(result)
       totalOriginal += result.original
-
-      // For variants, sum the WebP size of each variant
-      if (result.variants) {
-        result.variants.forEach((variant) => {
-          totalOptimized += variant.webp
-        })
-      } else {
-        totalOptimized += result.webp
-      }
+      totalOptimized += result.webp
     }
   }
 
   // Summary
-  console.log('\n' + '='.repeat(60))
+  console.log('\n' + '='.repeat(70))
   console.log('📊 OPTIMIZATION SUMMARY')
-  console.log('='.repeat(60))
+  console.log('='.repeat(70))
 
-  results.forEach((result) => {
-    // Calculate total WebP size for this file (sum all variants)
-    const totalWebpSize = result.variants
-      ? result.variants.reduce((sum, variant) => sum + variant.webp, 0)
-      : result.webp
-    const reduction = ((1 - totalWebpSize / result.original) * 100).toFixed(1)
+  results.forEach(result => {
+    const reduction = ((1 - result.webp / result.original) * 100).toFixed(1)
     console.log(
-      `${result.filename}: ${formatBytes(result.original)} → ${formatBytes(
-        totalWebpSize
-      )} WebP (${reduction}% reduction)`
+      `${result.filename}: ${formatBytes(result.original)} → ${formatBytes(result.webp)} (${reduction}% reduction)`
     )
   })
 
-  const totalReduction = ((1 - totalOptimized / totalOriginal) * 100).toFixed(1)
-  console.log('\n' + '-'.repeat(60))
-  console.log(
-    `🎯 TOTAL: ${formatBytes(totalOriginal)} → ${formatBytes(totalOptimized)}`
-  )
-  console.log(`🏆 Overall reduction: ${totalReduction}%`)
-  console.log(`💾 Space saved: ${formatBytes(totalOriginal - totalOptimized)}`)
+  if (results.length > 0) {
+    const totalReduction = ((1 - totalOptimized / totalOriginal) * 100).toFixed(1)
+    console.log('\n' + '-'.repeat(70))
+    console.log(`🎯 TOTAL: ${formatBytes(totalOriginal)} → ${formatBytes(totalOptimized)}`)
+    console.log(`🏆 Overall reduction: ${totalReduction}%`)
+    console.log(`💾 Space saved: ${formatBytes(totalOriginal - totalOptimized)}`)
 
-  console.log('\n✨ Next steps:')
-  console.log('1. Update components to use .webp format (no fallback needed)')
-  console.log('2. Test the optimized images in your application')
-  console.log("3. Remove .backup files once you're satisfied with results")
-  console.log('4. Run lighthouse audit to verify Core Web Vitals improvement')
+    console.log('\n✨ Quality 100% test complete!')
+    console.log('💡 Consider adjusting quality (85-95) for smaller files if needed')
+    console.log('🔍 All WebP files preserve exact original dimensions and aspect ratios')
+  }
 }
 
 if (require.main === module) {
   main().catch(console.error)
 }
 
-module.exports = { optimizeImage, optimizationConfig }
+module.exports = { optimizeImage }

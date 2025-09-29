@@ -80,11 +80,11 @@ export const metadata: Metadata = {
     siteName: `${DR_NAME} - Coloproctologia`,
     images: [
       {
-        url: `${WEBSITE_URL}/images/og.webp`,
+        url: `${WEBSITE_URL}/images/og.png`,
         width: 547,
         height: 684,
         alt: `${DR_NAME} - Coloproctologista em Curitiba - Especialista em cuidado clínico e cirúrgico do intestino, reto e ânus`,
-        type: 'image/webp',
+        type: 'image/png',
       },
       {
         url: `${WEBSITE_URL}/images/sobre-mim.webp`,

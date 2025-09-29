@@ -30,7 +30,7 @@ export function PhotoSection() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={95}
+                quality={100}
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -46,7 +46,7 @@ export function PhotoSection() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="50vw"
-                quality={95}
+                quality={100}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
@@ -56,11 +56,13 @@ export function PhotoSection() {
         {/* Bottom Content */}
         <div className="mt-8 lg:mt-12 text-center">
           <div className="mx-auto max-w-3xl">
-            <p className="text-lg lg:text-xl text-secondary/80 font-medium leading-relaxed">
-              &ldquo;A medicina vai além da técnica. É sobre criar conexões,
-              oferecer esperança e cuidar de cada pessoa com a atenção que ela
-              merece.&rdquo;
-            </p>
+            <blockquote className="text-lg lg:text-xl text-secondary font-medium leading-relaxed italic border-l-4 border-primary/30 pl-6 pt-4 pb-4 bg-primary/5 rounded-r-xl">
+              <p className="text-start">
+                &ldquo;A medicina vai além da técnica. É sobre criar conexões,
+                oferecer esperança e cuidar de cada pessoa com a atenção que ela
+                merece.&rdquo;
+              </p>
+            </blockquote>
           </div>
         </div>
       </div>
