@@ -80,18 +80,18 @@ export const metadata: Metadata = {
     siteName: `${DR_NAME} - Coloproctologia`,
     images: [
       {
-        url: `${WEBSITE_URL}/images/og.png`,
+        url: `${WEBSITE_URL}/images/og.webp`,
         width: 547,
         height: 684,
         alt: `${DR_NAME} - Coloproctologista em Curitiba - Especialista em cuidado clínico e cirúrgico do intestino, reto e ânus`,
-        type: 'image/png',
+        type: 'image/webp',
       },
       {
-        url: `${WEBSITE_URL}/images/sobre-mim.png`,
+        url: `${WEBSITE_URL}/images/sobre-mim.webp`,
         width: 1080,
         height: 1350,
         alt: `${DR_NAME} - Formação e qualificações profissionais em coloproctologia`,
-        type: 'image/png',
+        type: 'image/webp',
       },
     ],
   },
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
       'Especialista em Coloproctologia oferecendo cuidado clínico e cirúrgico humanizado do intestino, reto e ânus em Curitiba.',
     images: [
       {
-        url: `${WEBSITE_URL}/images/og.png`,
+        url: `${WEBSITE_URL}/images/og.webp`,
         alt: `${DR_NAME} - Coloproctologista em Curitiba`,
       },
     ],

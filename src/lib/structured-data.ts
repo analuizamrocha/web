@@ -13,7 +13,7 @@ export const structuredData = {
       '@id': 'https://analuizarocha.com.br/#organization',
       name: `${DR_NAME} - Coloproctologia`,
       url: 'https://analuizarocha.com.br',
-      logo: 'https://analuizarocha.com.br/images/og.png',
+      logo: 'https://analuizarocha.com.br/images/og.webp',
       description:
         'Especialista em Coloproctologia oferecendo cuidado clínico e cirúrgico do intestino, reto e ânus em Curitiba.',
       address: {
@@ -62,7 +62,7 @@ export const structuredData = {
       jobTitle: 'Coloproctologista',
       description:
         'Especialista em Coloproctologia com formação internacional, dedicada ao cuidado integral e humanizado de cada paciente.',
-      image: 'https://analuizarocha.com.br/images/og.png',
+      image: 'https://analuizarocha.com.br/images/og.webp',
       url: 'https://analuizarocha.com.br',
       sameAs: ['https://www.instagram.com/analuiza.mrocha/'],
       alumniOf: [
@@ -191,7 +191,7 @@ export const structuredData = {
       },
       telephone: WPP_FORMATTED_NUMBER,
       url: 'https://analuizarocha.com.br',
-      image: 'https://analuizarocha.com.br/images/og.png',
+      image: 'https://analuizarocha.com.br/images/og.webp',
       priceRange: '$$',
       openingHours: CLINICA_NASSIF_UPDATED.openingHours,
       hasMap: `https://maps.google.com/?q=${CLINICA_NASSIF_UPDATED.coordinates.latitude},${CLINICA_NASSIF_UPDATED.coordinates.longitude}`,

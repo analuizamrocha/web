@@ -25,7 +25,7 @@ export function PhotoSection() {
           <div className="relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 group">
             <div className="aspect-[3/4] lg:aspect-[4/5] relative">
               <Image
-                src="/images/side.jpg"
+                src="/images/side.webp"
                 alt={`${DR_NAME} - Perfil profissional em consultório médico especializado em coloproctologia`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -41,7 +41,7 @@ export function PhotoSection() {
           <div className="hidden lg:block relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 group">
             <div className="aspect-[4/5] relative">
               <Image
-                src="/images/front.jpg"
+                src="/images/front.webp"
                 alt={`${DR_NAME} - Atendimento profissional e humanizado em coloproctologia`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -17,7 +17,7 @@ export function HeroSection() {
           <div className="order-1 lg:order-2 lg:flex-1 w-full">
             <div className="lg:ml-8 xl:ml-12">
               <Image
-                src="/images/hero.png"
+                src="/images/hero.webp"
                 alt="Dra. Ana Luiza Moraes Rocha, coloproctologista, em seu consultório médico moderno, sorrindo profissionalmente para pacientes"
                 width={1080}
                 height={1080}
