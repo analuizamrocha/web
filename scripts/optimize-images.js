@@ -59,7 +59,9 @@ async function optimizeImage(filename) {
     return null
   }
 
-  console.log(`📐 Original dimensions: ${dimensions.width}x${dimensions.height}`)
+  console.log(
+    `📐 Original dimensions: ${dimensions.width}x${dimensions.height}`
+  )
 
   // Resize to web-appropriate dimensions
   const aspectRatio = dimensions.width / dimensions.height
@@ -82,24 +84,26 @@ async function optimizeImage(filename) {
     await sharp(inputPath)
       .resize(targetWidth, targetHeight, {
         fit: 'inside',
-        withoutEnlargement: true
+        withoutEnlargement: true,
       })
       .webp({
         quality: 90,
-        effort: 6
+        effort: 6,
       })
       .toFile(webpPath)
 
     const webpSize = await getFileSize(webpPath)
     const reduction = ((1 - webpSize / originalSize) * 100).toFixed(1)
 
-    console.log(`✅ WebP created: ${formatBytes(webpSize)} (${reduction}% reduction)`)
+    console.log(
+      `✅ WebP created: ${formatBytes(webpSize)} (${reduction}% reduction)`
+    )
 
     return {
       filename,
       original: originalSize,
       webp: webpSize,
-      dimensions
+      dimensions,
     }
   } catch (error) {
     console.error(`❌ Error processing ${filename}:`, error.message)
@@ -116,8 +120,8 @@ async function main() {
 
   // Auto-discover PNG and JPG files
   const files = fs.readdirSync(IMAGES_DIR)
-  const imageFiles = files.filter(file =>
-    /\.(png|jpg|jpeg)$/i.test(file) && !file.includes('.backup')
+  const imageFiles = files.filter(
+    (file) => /\.(png|jpg|jpeg)$/i.test(file) && !file.includes('.backup')
   )
 
   if (imageFiles.length === 0) {
@@ -126,7 +130,7 @@ async function main() {
   }
 
   console.log(`📁 Found ${imageFiles.length} images to process:`)
-  imageFiles.forEach(file => console.log(`   • ${file}`))
+  imageFiles.forEach((file) => console.log(`   • ${file}`))
 
   const results = []
   let totalOriginal = 0
@@ -146,23 +150,35 @@ async function main() {
   console.log('📊 OPTIMIZATION SUMMARY')
   console.log('='.repeat(70))
 
-  results.forEach(result => {
+  results.forEach((result) => {
     const reduction = ((1 - result.webp / result.original) * 100).toFixed(1)
     console.log(
-      `${result.filename}: ${formatBytes(result.original)} → ${formatBytes(result.webp)} (${reduction}% reduction)`
+      `${result.filename}: ${formatBytes(result.original)} → ${formatBytes(
+        result.webp
+      )} (${reduction}% reduction)`
     )
   })
 
   if (results.length > 0) {
-    const totalReduction = ((1 - totalOptimized / totalOriginal) * 100).toFixed(1)
+    const totalReduction = ((1 - totalOptimized / totalOriginal) * 100).toFixed(
+      1
+    )
     console.log('\n' + '-'.repeat(70))
-    console.log(`🎯 TOTAL: ${formatBytes(totalOriginal)} → ${formatBytes(totalOptimized)}`)
+    console.log(
+      `🎯 TOTAL: ${formatBytes(totalOriginal)} → ${formatBytes(totalOptimized)}`
+    )
     console.log(`🏆 Overall reduction: ${totalReduction}%`)
-    console.log(`💾 Space saved: ${formatBytes(totalOriginal - totalOptimized)}`)
+    console.log(
+      `💾 Space saved: ${formatBytes(totalOriginal - totalOptimized)}`
+    )
 
     console.log('\n✨ Quality 100% test complete!')
-    console.log('💡 Consider adjusting quality (85-95) for smaller files if needed')
-    console.log('🔍 All WebP files preserve exact original dimensions and aspect ratios')
+    console.log(
+      '💡 Consider adjusting quality (85-95) for smaller files if needed'
+    )
+    console.log(
+      '🔍 All WebP files preserve exact original dimensions and aspect ratios'
+    )
   }
 }
 
