@@ -10,10 +10,10 @@ import { usePathname, useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useMobileMenu } from '@/hooks/useMobileMenu'
-import { 
-  getLandingPageNavigation, 
-  getHashNavigation, 
-  globalNavigation
+import {
+  getLandingPageNavigation,
+  getHashNavigation,
+  globalNavigation,
 } from '@/lib/navigation'
 import { Divider } from './Divider'
 
@@ -67,7 +67,7 @@ export function Header() {
                 href="/"
                 className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-md cursor-pointer"
               >
-                <span className="font-serif text-base sm:text-lg text-primary font-bold">
+                <span className="text-nowrap font-serif text-base sm:text-lg text-primary font-bold">
                   Dra Ana Luiza M. Rocha
                 </span>
                 <p className="text-xs text-secondary font-medium mb-0">
@@ -77,7 +77,7 @@ export function Header() {
             </div>
 
             {/* Desktop navigation */}
-            <div className="hidden md:flex items-center gap-x-8 lg:gap-x-12">
+            <div className="hidden lg:flex items-center gap-x-8 lg:gap-x-12">
               {isRootPage ? (
                 // Homepage: sections + divider + routes
                 <>
@@ -88,7 +88,7 @@ export function Header() {
                       onClick={() => handleNavClick(item.href)}
                       data-header-nav
                       className={cn(
-                        'text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer',
+                        'text-nowrap text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer',
                         'hover:text-primary focus:text-primary focus:outline-none',
                         'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300',
                         activeSection === item.id
@@ -99,10 +99,10 @@ export function Header() {
                       {item.name}
                     </button>
                   ))}
-                  
+
                   {/* Divider */}
                   <Divider orientation="vertical" size="sm" className="h-4" />
-                  
+
                   {/* External routes */}
                   {getLandingPageNavigation().routes.map((item) => (
                     <Link
@@ -146,7 +146,7 @@ export function Header() {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 type="button"
                 className="relative p-2 text-secondary hover:text-primary focus:text-primary transition-colors duration-200 cursor-pointer focus:outline-none"
@@ -184,7 +184,7 @@ export function Header() {
 
       {/* Mobile menu overlay - Clean and minimal with focus trapping */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
           mobileMenuOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
@@ -231,12 +231,12 @@ export function Header() {
                         {item.name}
                       </button>
                     ))}
-                    
+
                     {/* Horizontal divider for mobile */}
                     <div className="py-2">
                       <Divider orientation="horizontal" size="sm" />
                     </div>
-                    
+
                     {/* External routes */}
                     {getLandingPageNavigation().routes.map((item) => (
                       <Link
@@ -282,14 +282,14 @@ export function Header() {
               <div className="space-y-3">
                 {/* Contact info - smaller and cleaner */}
                 <div>
-                  <p className="text-sm font-medium text-secondary mb-1">
+                  <p className="text-sm font-medium text-primary mb-1">
                     WhatsApp
                   </p>
                   <Link
                     href={`https://wa.me/${WHATSAPP_BUSINESS_NUMBER}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-primary font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-sm cursor-pointer"
+                    className="text-sm text-secondary font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-sm cursor-pointer"
                   >
                     {WHATSAPP_BUSINESS_NUMBER_FORMATTED}
                   </Link>
