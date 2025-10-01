@@ -87,11 +87,11 @@ export const metadata: Metadata = {
         type: 'image/png',
       },
       {
-        url: `${WEBSITE_URL}/images/sobre-mim.png`,
+        url: `${WEBSITE_URL}/images/sobre-mim.webp`,
         width: 1080,
         height: 1350,
         alt: `${DR_NAME} - Formação e qualificações profissionais em coloproctologia`,
-        type: 'image/png',
+        type: 'image/webp',
       },
     ],
   },
