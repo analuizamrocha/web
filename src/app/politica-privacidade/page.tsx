@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Política de Privacidade | Dra. Ana Luiza Moraes Rocha',
-  description: 'Política de Privacidade e Proteção de Dados conforme LGPD - Consultório de Coloproctologia',
+  description:
+    'Política de Privacidade e Proteção de Dados conforme LGPD - Consultório de Coloproctologia',
   robots: 'noindex, nofollow', // Privacy policies shouldn't be indexed
 }
 
@@ -16,106 +17,207 @@ export default function PoliticaPrivacidadePage() {
               Política de Privacidade
             </h1>
             <p className="text-lg text-secondary leading-relaxed">
-              Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações pessoais, 
-              em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018).
+              Esta Política de Privacidade estabelece como são tratados os dados
+              pessoais coletados neste site, em conformidade com a&nbsp;
+              <strong className="text-primary">
+                Lei Geral de Proteção de Dados Pessoais – LGPD (Lei nº
+                13.709/2018)
+              </strong>
+              , demais normas aplicáveis à proteção de dados e às diretrizes
+              éticas do{' '}
+              <strong className="text-primary">
+                Conselho Federal de Medicina (CFM)
+              </strong>
+              .
+            </p>
+            <p className="text-base text-secondary leading-relaxed">
+              Ao utilizar este site, o usuário declara ciência e concordância
+              com as condições aqui descritas.
             </p>
           </header>
 
           <div className="prose prose-lg max-w-none">
-            <h2>1. Responsável pelo Tratamento dos Dados</h2>
+            <h2>1. Controlador dos dados</h2>
             <p>
-              <strong>Controladora:</strong> Dra. Ana Luiza Moraes Rocha<br/>
-              <strong>CRM-PR:</strong> 45351<br/>
-              <strong>E-mail para contato:</strong> contato@analuizarocha.com.br<br/>
-              <strong>Endereço:</strong> Curitiba, Paraná
+              O tratamento dos dados pessoais é realizado sob responsabilidade
+              da:
+            </p>
+            <p>
+              <strong>Dra. Ana Luiza Moraes Rocha</strong>
+              <br />
+              CRM: 45351 | RQE: 36221
+              <br />
+              E-mail: analuizarochaprocto@gmail.com
             </p>
 
-            <h2>2. Dados Pessoais Coletados</h2>
-            <p>Coletamos os seguintes tipos de dados pessoais:</p>
-            <ul>
-              <li><strong>Dados de Contato:</strong> Nome, telefone, e-mail, endereço</li>
-              <li><strong>Dados de Navegação:</strong> Cookies, endereço IP, páginas visitadas (apenas com consentimento)</li>
-              <li><strong>Dados de Saúde:</strong> Informações médicas fornecidas durante consultas (tratamento baseado em consentimento e interesse legítimo médico)</li>
-            </ul>
+            <h2>2. Dados coletados</h2>
+            <p>Podemos coletar dados pessoais de duas formas:</p>
 
-            <h2>3. Finalidades do Tratamento</h2>
-            <p>Utilizamos seus dados pessoais para:</p>
-            <ul>
-              <li>Prestação de serviços médicos especializados em coloproctologia</li>
-              <li>Agendamento e gestão de consultas</li>
-              <li>Comunicação sobre tratamentos e cuidados médicos</li>
-              <li>Cumprimento de obrigações legais e regulamentares do CFM</li>
-              <li>Melhoria da experiência no site (apenas com consentimento para cookies)</li>
-            </ul>
-
-            <h2>4. Base Legal</h2>
-            <p>O tratamento dos seus dados pessoais baseia-se em:</p>
-            <ul>
-              <li><strong>Consentimento:</strong> Para cookies e comunicações de marketing</li>
-              <li><strong>Execução de contrato:</strong> Para prestação de serviços médicos</li>
-              <li><strong>Interesse legítimo:</strong> Para melhorias do atendimento médico</li>
-              <li><strong>Cumprimento de obrigação legal:</strong> Prontuários médicos (CFM)</li>
-            </ul>
-
-            <h2>5. Compartilhamento de Dados</h2>
             <p>
-              Não compartilhamos seus dados pessoais com terceiros, exceto:
+              <strong>a) Informações fornecidas pelo usuário:</strong>
             </p>
             <ul>
-              <li>Quando necessário para prestação do serviço médico (laboratórios, hospitais)</li>
-              <li>Por determinação legal ou ordem judicial</li>
-              <li>Com seu consentimento expresso</li>
+              <li>
+                Nome, e-mail e telefone, quando inseridos em formulários de
+                contato ou agendamento.
+              </li>
             </ul>
 
-            <h2>6. Retenção de Dados</h2>
-            <ul>
-              <li><strong>Prontuários médicos:</strong> 20 anos (conforme Resolução CFM)</li>
-              <li><strong>Dados de contato:</strong> Enquanto houver relacionamento médico</li>
-              <li><strong>Cookies:</strong> Conforme política de cookies específica</li>
-            </ul>
-
-            <h2>7. Seus Direitos (LGPD)</h2>
-            <p>Você tem direito a:</p>
-            <ul>
-              <li>Confirmação da existência de tratamento</li>
-              <li>Acesso aos dados</li>
-              <li>Correção de dados incompletos, inexatos ou desatualizados</li>
-              <li>Anonimização, bloqueio ou eliminação (quando aplicável)</li>
-              <li>Portabilidade dos dados</li>
-              <li>Eliminação dos dados tratados com consentimento</li>
-              <li>Revogação do consentimento</li>
-            </ul>
-
-            <h2>8. Segurança</h2>
             <p>
-              Implementamos medidas técnicas e organizacionais adequadas para proteger 
-              seus dados pessoais contra acesso não autorizado, alteração, divulgação ou destruição.
+              <strong>b) Informações coletadas automaticamente:</strong>
+            </p>
+            <ul>
+              <li>
+                Endereço IP, navegador utilizado, páginas acessadas e tempo de
+                navegação.
+              </li>
+              <li>
+                Cookies e tecnologias similares, para estatísticas e melhoria da
+                experiência de navegação.
+              </li>
+            </ul>
+
+            <h2>3. Finalidades do tratamento</h2>
+            <p>
+              Os dados pessoais são tratados com base nas hipóteses legais
+              previstas no art. 7º da LGPD, em especial:
+            </p>
+            <ul>
+              <li>
+                <strong>
+                  Execução de contrato ou de procedimentos preliminares (art.
+                  7º, V):
+                </strong>
+                &nbsp; para atendimento de solicitações de contato e agendamento
+                de consultas.
+              </li>
+              <li>
+                <strong>
+                  Cumprimento de obrigação legal ou regulatória (art. 7º, II):
+                </strong>
+                &nbsp; quando necessário para obrigações médicas, fiscais ou
+                regulatórias.
+              </li>
+              <li>
+                <strong>Legítimo interesse (art. 7º, IX):</strong> para
+                aperfeiçoar a navegação, personalizar a experiência e manter a
+                segurança do site.
+              </li>
+              <li>
+                <strong>Consentimento do titular (art. 7º, I):</strong> para
+                envio de comunicações informativas, quando autorizado.
+              </li>
+            </ul>
+
+            <h2>4. Compartilhamento de dados</h2>
+            <p>
+              Os dados pessoais&nbsp;
+              <strong>não são vendidos ou repassados a terceiros</strong>. O
+              compartilhamento poderá ocorrer apenas em hipóteses restritas:
+            </p>
+            <ul>
+              <li>Cumprimento de obrigação legal, regulatória ou judicial.</li>
+              <li>
+                Atendimentos realizados em hospitais ou clínicas parceiras,
+                quando necessário para prestação do serviço médico.
+              </li>
+              <li>
+                Contratação de fornecedores de tecnologia (ex.: hospedagem de
+                site, provedores de e-mail), que atuam como operadores de dados,
+                sempre mediante cláusulas contratuais de proteção de dados.
+              </li>
+            </ul>
+
+            <h2>5. Armazenamento e segurança</h2>
+            <p>
+              Adotamos medidas técnicas e administrativas aptas a proteger os
+              dados pessoais contra acessos não autorizados, perda, alteração ou
+              destruição.
+            </p>
+            <p>
+              Os dados são armazenados apenas pelo período necessário às
+              finalidades declaradas ou conforme prazos legais aplicáveis, sendo
+              posteriormente eliminados de forma segura.
             </p>
 
-            <h2>9. Cookies e Tecnologias</h2>
+            <h2>6. Cookies e tecnologias similares</h2>
+            <p>Este site utiliza cookies para:</p>
+            <ul>
+              <li>
+                <strong>Cookies essenciais:</strong> funcionamento básico do
+                site.
+              </li>
+              <li>
+                <strong>Cookies de desempenho:</strong> análise de tráfego e
+                interação com as páginas.
+              </li>
+              <li>
+                <strong>Cookies de funcionalidade:</strong> lembrar preferências
+                do usuário.
+              </li>
+            </ul>
             <p>
-              Utilizamos cookies apenas mediante seu consentimento expresso. 
-              Você pode gerenciar suas preferências através do banner de cookies ou 
-              configurações do seu navegador.
+              O usuário pode configurar seu navegador para bloquear cookies,
+              ciente de que certas funcionalidades podem ser afetadas.
+            </p>
+
+            <h2>7. Direitos do titular</h2>
+            <p>
+              Nos termos do art. 18 da LGPD, o titular dos dados tem direito a:
+            </p>
+            <ul>
+              <li>Confirmar a existência de tratamento.</li>
+              <li>Acessar, corrigir e atualizar seus dados pessoais.</li>
+              <li>
+                Solicitar anonimização, bloqueio ou eliminação de dados
+                desnecessários.
+              </li>
+              <li>Revogar o consentimento previamente dado.</li>
+              <li>Solicitar portabilidade a outro prestador de serviços.</li>
+            </ul>
+            <p>
+              As solicitações podem ser feitas pelo e-mail:&nbsp;
+              <strong>analuizarochaprocto@gmail.com</strong>.
+            </p>
+
+            <h2>8. Conteúdo médico e ética profissional</h2>
+            <ul>
+              <li>
+                As informações disponibilizadas neste site têm caráter&nbsp;
+                <strong>educativo e informativo</strong>, não substituindo a
+                consulta médica presencial.
+              </li>
+              <li>
+                O conteúdo está em conformidade com as&nbsp;
+                <strong>normas do CFM</strong>, não contendo autopromoção,
+                sensacionalismo ou promessa de resultado.
+              </li>
+              <li>
+                Recomenda-se que qualquer decisão relacionada à saúde seja
+                tomada somente após avaliação médica individualizada.
+              </li>
+            </ul>
+
+            <h2>9. Alterações da Política</h2>
+            <p>
+              Esta Política de Privacidade poderá ser atualizada a qualquer
+              tempo. A versão vigente será sempre disponibilizada nesta página,
+              com indicação da data da última atualização.
             </p>
 
             <h2>10. Contato</h2>
             <p>
-              Para exercer seus direitos ou esclarecer dúvidas sobre esta política:
+              Para dúvidas ou solicitações relacionadas ao tratamento de dados
+              pessoais, entre em contato:
             </p>
-            <ul>
-              <li><strong>E-mail:</strong> contato@analuizarocha.com.br</li>
-              <li><strong>Telefone:</strong> Disponível no site</li>
-            </ul>
-
-            <h2>11. Alterações</h2>
             <p>
-              Esta política pode ser atualizada periodicamente. A versão mais recente 
-              estará sempre disponível nesta página.
+              <strong>Dra. Ana Luiza Moraes Rocha</strong>
+              <br />
+              E-mail: analuizarochaprocto@gmail.com
             </p>
 
             <p className="text-sm text-secondary mt-8">
-              <strong>Última atualização:</strong> {new Date().toLocaleDateString('pt-BR')}
+              <strong>Última atualização:</strong> Outubro de 2025
             </p>
           </div>
         </div>

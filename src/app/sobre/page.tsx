@@ -1,52 +1,59 @@
 import Link from 'next/link'
 import { Card } from '@/components/ui/Card'
+import { CallToActionCard } from '@/components/ui/CallToActionCard'
+import { Badge } from '@/components/ui/Badge'
 import type { Metadata } from 'next'
+import { Breadcrumb } from '@/components/ui/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Sobre Dra. Ana Luiza Moraes Rocha | Coloproctologista Curitiba',
-  description: 'Conheça a trajetória da Dra. Ana Luiza Moraes Rocha, especialista em Coloproctologia com formação internacional e experiência em cirurgias minimamente invasivas.',
+  description:
+    'Conheça a trajetória da Dra. Ana Luiza Moraes Rocha, especialista em Coloproctologia com formação internacional e experiência em cirurgias minimamente invasivas.',
   keywords: [
     'coloproctologista curitiba',
     'dra ana luiza moraes rocha',
     'crm pr 45351',
     'proctologista curitiba',
     'medica coloproctologista',
-    'cirurgia colorretal curitiba'
+    'cirurgia colorretal curitiba',
   ],
   alternates: {
-    canonical: 'https://analuizarocha.com.br/sobre'
-  }
+    canonical: 'https://analuizarocha.com.br/sobre',
+  },
 }
 
 const credentials = [
   {
     title: 'Graduação em Medicina',
-    institution: 'PUC-PR',
-    description: 'Formação médica com excelência acadêmica na Pontifícia Universidade Católica do Paraná.'
+    institution: 'Pontifícia Universidade Católica do Paraná (PUC-PR)',
+    description:
+      'Formação médica sólida e base fundamental para toda trajetória profissional.',
   },
   {
-    title: 'Especialização em Cirurgia Geral',
+    title: 'Residência em Cirurgia Geral',
     institution: 'Hospital Santa Casa de Curitiba',
-    description: 'Residência médica em Cirurgia Geral, base fundamental para a especialização em Coloproctologia.'
+    description: 'Formação especializada em técnicas cirúrgicas fundamentais.',
   },
   {
-    title: 'Especialização em Coloproctologia',
+    title: 'Residência em Coloproctologia',
     institution: 'Hospital Universitário Evangélico Mackenzie',
-    description: 'Formação especializada em diagnóstico e tratamento de doenças coloproctológicas.'
+    description: 'Especialização focada em doenças do intestino, reto e ânus.',
   },
   {
     title: 'Fellow em Cirurgia Colorretal',
-    institution: 'Hospital Clinic Barcelona',
-    description: 'Experiência internacional em técnicas avançadas de cirurgia colorretal e oncologia.'
-  }
+    institution: 'Hospital Clinic de Barcelona',
+    description:
+      'Experiência em oncologia, doenças inflamatórias intestinais e cirurgias orificiais minimamente invasivas.',
+  },
+  {
+    title: 'Cursos de Anuscopia de Alta Resolução',
+    institution: 'International Anal Neoplasia Society (IANS)',
+    description:
+      'Capacitação em técnicas avançadas de diagnóstico e prevenção.',
+  },
 ]
 
-const memberships = [
-  'International Anal Neoplasia Society (IANS)',
-  'Sociedade Brasileira de Coloproctologia (SBCP)',
-  'Colégio Brasileiro de Cirurgiões (CBC)',
-  'Associação Médica Brasileira (AMB)'
-]
+const memberships = ['International Anal Neoplasia Society (IANS)']
 
 export default function SobrePage() {
   return (
@@ -56,50 +63,53 @@ export default function SobrePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "@id": "https://analuizarocha.com.br/#physician",
-            "name": "Dra. Ana Luiza Moraes Rocha",
-            "jobTitle": "Médica Coloproctologista",
-            "description": "Especialista em Coloproctologia com formação internacional, dedicada ao cuidado integral e humanizado de cada paciente",
-            "hasCredential": [
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            '@id': 'https://analuizarocha.com.br/#physician',
+            name: 'Dra. Ana Luiza Moraes Rocha',
+            jobTitle: 'Médica Coloproctologista',
+            description:
+              'Especialista em Coloproctologia com formação internacional, dedicada ao cuidado integral e humanizado de cada paciente',
+            hasCredential: [
               {
-                "@type": "EducationalOccupationalCredential",
-                "identifier": "CRM-PR 45351",
-                "credentialCategory": "Registro Profissional"
+                '@type': 'EducationalOccupationalCredential',
+                identifier: 'CRM-PR 45351',
+                credentialCategory: 'Registro Profissional',
               },
               {
-                "@type": "EducationalOccupationalCredential", 
-                "identifier": "RQE 36221",
-                "credentialCategory": "Qualificação de Especialista"
-              }
+                '@type': 'EducationalOccupationalCredential',
+                identifier: 'RQE 36221',
+                credentialCategory: 'Qualificação de Especialista',
+              },
             ],
-            "alumniOf": credentials.map(cred => ({
-              "@type": "EducationalOrganization",
-              "name": cred.institution,
-              "description": cred.title
+            alumniOf: credentials.map((cred) => ({
+              '@type': 'EducationalOrganization',
+              name: cred.institution,
+              description: cred.title,
             })),
-            "memberOf": memberships.map(org => ({
-              "@type": "Organization",
-              "name": org
+            memberOf: memberships.map((org) => ({
+              '@type': 'Organization',
+              name: org,
             })),
-            "url": "https://analuizarocha.com.br",
-            "sameAs": ["https://www.instagram.com/analuiza.mrocha/"],
-            "workLocation": {
-              "@type": "MedicalClinic",
-              "addressLocality": "Curitiba",
-              "addressRegion": "Paraná",
-              "addressCountry": "BR"
-            }
-          })
+            url: 'https://analuizarocha.com.br',
+            sameAs: ['https://www.instagram.com/analuiza.mrocha/'],
+            workLocation: {
+              '@type': 'MedicalClinic',
+              addressLocality: 'Curitiba',
+              addressRegion: 'Paraná',
+              addressCountry: 'BR',
+            },
+          }),
         }}
       />
 
       <section className="section bg-background pt-24 md:pt-28 animate-fade-in">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          
           {/* Breadcrumb */}
-          <nav className="mb-8 text-sm text-secondary">
+          <Breadcrumb
+            items={[{ label: 'Início', href: '/' }, { label: 'Sobre' }]}
+          />
+          {/* <nav className="mb-8 text-sm text-secondary">
             <Link href="/" className="hover:text-primary transition-colors">
               Início
             </Link>
@@ -110,166 +120,153 @@ export default function SobrePage() {
           <div className="mx-auto max-w-4xl">
             
             {/* Header */}
-            <header className="mb-12 text-center">
-              <div className="flex flex-wrap gap-2 mb-6 justify-center">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">
-                  CRM-PR 45351
-                </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary/20 text-secondary">
-                  RQE 36221
-                </span>
-              </div>
-              
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
-                Dra. Ana Luiza Moraes Rocha
-              </h1>
-              
-              <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
-                Especialista em Coloproctologia com formação internacional, 
-                dedicada ao cuidado integral e humanizado de cada paciente.
-              </p>
-            </header>
-
-            {/* Main Content */}
-            <div className="prose prose-lg max-w-none mb-12">
-              
-              <h2>Minha Trajetória Profissional</h2>
-              <p>
-                Minha jornada na medicina começou com a certeza de que queria cuidar de pessoas 
-                de forma integral. Durante a graduação na PUC-PR, descobri minha vocação para 
-                a cirurgia e, posteriormente, para a coloproctologia - uma especialidade que 
-                une conhecimento técnico avançado com o cuidado humanizado que sempre busquei 
-                oferecer aos meus pacientes.
-              </p>
-
-              <p>
-                A experiência internacional no Hospital Clinic de Barcelona foi transformadora, 
-                permitindo-me aprender técnicas avançadas em cirurgia colorretal e oncologia. 
-                Essa vivência enriqueceu minha prática clínica e reforçou meu compromisso com 
-                a excelência no atendimento.
-              </p>
-
-              <h2>Formação e Especialização</h2>
+          <header className="mb-12 text-center">
+            <div className="flex flex-wrap gap-2 mb-6 justify-center">
+              <Badge variant="primary" size="lg">
+                CRM-PR 45351
+              </Badge>
+              <Badge variant="secondary" size="lg">
+                RQE 36221
+              </Badge>
             </div>
 
-            {/* Credentials Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {credentials.map((credential, index) => (
-                <Card
-                  key={index}
-                  title={credential.title}
-                  description={credential.description}
-                  variant="service"
-                >
-                  <div className="mt-4">
-                    <span className="text-sm font-medium text-primary">
-                      {credential.institution}
-                    </span>
-                  </div>
-                </Card>
-              ))}
-            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
+              Dra. Ana Luiza Moraes Rocha
+            </h1>
 
-            <div className="prose prose-lg max-w-none mb-12">
-              
-              <h2>Filosofia de Atendimento</h2>
-              <p>
-                Acredito que cada paciente é único e merece atenção individualizada. 
-                Minha consulta é sempre detalhada e busca um entendimento completo 
-                sobre você e seu problema. Para mim, diagnosticar e tratar não é o suficiente - 
-                é fundamental adequar os melhores tratamentos ao seu estilo de vida.
-              </p>
+            <h2 className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium w-full flex flex-col items-center justify-center">
+              Especialista em Coloproctologia com formação internacional,
+              dedicada ao cuidado integral e humanizado de cada paciente.
+            </h2>
+          </header>
 
-              <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20 my-8">
-                <h3 className="text-primary font-bold mb-4">Meus Princípios:</h3>
-                <ul className="space-y-2 mb-0">
-                  <li><strong>Humanização:</strong> Cada paciente recebe atenção integral e respeitosa</li>
-                  <li><strong>Excelência Técnica:</strong> Uso das mais modernas técnicas e tecnologias</li>
-                  <li><strong>Comunicação Clara:</strong> Explicações detalhadas sobre diagnósticos e tratamentos</li>
-                  <li><strong>Cuidado Continuado:</strong> Acompanhamento próximo em todo o processo</li>
-                </ul>
-              </div>
+          {/* Main Content */}
+          <div className="prose prose-lg max-w-none mb-12">
+            <h2>Minha Trajetória Profissional</h2>
+            <p>
+              Minha jornada na medicina começou com a certeza de que queria
+              cuidar de pessoas de forma integral. Durante a graduação em
+              Medicina na <strong>PUC-PR</strong>, desenvolvi a base sólida da
+              minha formação. Foi durante a{' '}
+              <strong>
+                residência em Cirurgia Geral, no Hospital Santa Casa de Curitiba
+              </strong>
+              , que descobri meu amor pela <strong>coloproctologia</strong> —
+              especialidade que une conhecimento técnico avançado com o cuidado
+              humanizado que sempre busquei oferecer aos meus pacientes.
+            </p>
 
-              <h2>Associações e Membros</h2>
-              <p>
-                Mantenho-me sempre atualizada através da participação ativa em sociedades médicas 
-                nacionais e internacionais:
-              </p>
-            </div>
+            <p>
+              A experiência internacional no{' '}
+              <strong>Hospital Clinic de Barcelona</strong> foi transformadora.
+              Lá tive contato com técnicas avançadas em{' '}
+              <strong>
+                cirurgia colorretal na área oncológica e de doenças
+                inflamatórias intestinais
+              </strong>
+              , além de experiência prática em{' '}
+              <strong>
+                cirurgias orificiais com abordagem minimamente invasiva
+              </strong>
+              . Essa vivência ampliou minha visão da especialidade e reforçou
+              meu compromisso em oferecer tratamentos modernos, seguros e
+              individualizados aos pacientes.
+            </p>
 
-            {/* Memberships */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-              {memberships.map((membership, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center p-4 bg-secondary/10 rounded-xl border border-secondary/20"
-                >
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3 shrink-0"></div>
-                  <span className="text-secondary font-medium">{membership}</span>
+            <h2>Formação e Especialização</h2>
+          </div>
+
+          {/* Credentials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            {credentials.map((credential, index) => (
+              <Card
+                key={index}
+                title={credential.title}
+                description={credential.description}
+                variant="service"
+              >
+                <div className="mt-4">
+                  <span className="text-sm font-medium text-primary">
+                    {credential.institution}
+                  </span>
                 </div>
-              ))}
+              </Card>
+            ))}
+          </div>
+
+          <div className="prose prose-lg max-w-none mb-12">
+            <h2>Filosofia de Atendimento</h2>
+            <p>
+              Acredito que cada paciente é único e merece atenção
+              individualizada. Minhas consultas são detalhadas, buscando
+              compreender a história, os sintomas e o estilo de vida de cada
+              pessoa. Para mim, diagnosticar e tratar não é suficiente — é
+              fundamental{' '}
+              <strong>
+                adequar o tratamento às necessidades reais do paciente
+              </strong>
+              , garantindo segurança e qualidade de vida.
+            </p>
+
+            <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20 my-8">
+              <h3 className="text-primary font-bold mb-4">
+                Meus princípios de atuação:
+              </h3>
+              <ul className="space-y-2 mb-0">
+                <li>
+                  <strong>Humanização:</strong> cada paciente recebe atenção
+                  integral e respeitosa.
+                </li>
+                <li>
+                  <strong>Excelência Técnica:</strong> utilização de técnicas
+                  atualizadas e seguras.
+                </li>
+                <li>
+                  <strong>Comunicação Clara:</strong> explicações detalhadas
+                  sobre diagnósticos e tratamentos.
+                </li>
+                <li>
+                  <strong>Cuidado Continuado:</strong> acompanhamento próximo em
+                  todo o processo de tratamento.
+                </li>
+              </ul>
             </div>
 
-            <div className="prose prose-lg max-w-none mb-12">
-              
-              <h2>Compromisso com a Educação</h2>
+            <h2>Participações Profissionais</h2>
+            <p>
+              Sou membro da{' '}
+              <strong>International Anal Neoplasia Society (IANS)</strong>, o
+              que me permite estar sempre atualizada sobre as mais recentes
+              pesquisas e práticas internacionais em prevenção, diagnóstico e
+              tratamento de doenças anorretais.
+            </p>
+          </div>
+
+          <div className="prose prose-lg max-w-none mb-12">
+            <h2>Compromisso com a Educação</h2>
+            <p>
+              Além da prática clínica, dedico parte do meu tempo à{' '}
+              <strong>educação médica continuada</strong> e à{' '}
+              <strong>
+                divulgação de informações confiáveis sobre saúde
+                coloproctológica
+              </strong>
+              . Acredito que o conhecimento compartilhado é uma ferramenta
+              poderosa na prevenção e no tratamento precoce de doenças.
+            </p>
+          </div>
+
+          {/* Contact CTA */}
+          <CallToActionCard
+            title="Vamos cuidar da sua saúde juntos?"
+            body={
               <p>
-                Além da prática clínica, dedico parte do meu tempo à educação médica continuada 
-                e à divulgação de informações confiáveis sobre saúde coloproctológica. 
-                Acredito que o conhecimento compartilhado é uma ferramenta poderosa na 
-                prevenção e no tratamento precoce de doenças.
+                Estou aqui para oferecer o cuidado especializado que você
+                merece, com atenção humanizada e a mais alta qualidade técnica.
               </p>
-
-            </div>
-
-            {/* Insurance Information */}
-            <div className="bg-primary/5 rounded-3xl p-8 lg:p-10 border border-primary/20 mb-8">
-              <h2 className="text-xl lg:text-2xl font-serif font-bold text-primary mb-6">
-                Convênios e Formas de Atendimento
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h3 className="font-semibold text-primary mb-3">Convênios Aceitos</h3>
-                  <ul className="space-y-2 text-secondary">
-                    <li>• Unimed Curitiba</li>
-                    <li>• Bradesco Saúde</li>
-                    <li>• SulAmérica Saúde</li>
-                    <li>• Amil</li>
-                    <li>• Notre Dame Intermédica</li>
-                    <li>• Golden Cross</li>
-                    <li>• Outros convênios - consulte</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="font-semibold text-primary mb-3">Modalidades</h3>
-                  <ul className="space-y-2 text-secondary">
-                    <li>• Consultas por convênio</li>
-                    <li>• Atendimento particular</li>
-                    <li>• Consultas de segunda opinião</li>
-                    <li>• Procedimentos ambulatoriais</li>
-                    <li>• Cirurgias</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <p className="text-sm text-secondary">
-                <strong>Importante:</strong> Consulte a disponibilidade do seu convênio antes do agendamento. 
-                Alguns procedimentos podem necessitar autorização prévia.
-              </p>
-            </div>
-
-            {/* Contact CTA */}
-            <div className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 mb-8 text-center">
-              <h2 className="text-xl lg:text-2xl font-serif font-bold text-primary mb-4">
-                Vamos cuidar da sua saúde juntos?
-              </h2>
-              <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
-                Estou aqui para oferecer o cuidado especializado que você merece, 
-                com atenção humanizada e a mais alta qualidade técnica.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            }
+            actions={
+              <>
                 <Link
                   href="/#contato"
                   className="inline-flex items-center justify-center px-8 py-4 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -282,18 +279,19 @@ export default function SobrePage() {
                 >
                   Conhecer Tratamentos
                 </Link>
-              </div>
-            </div>
+              </>
+            }
+            variant="secondary"
+          />
 
-            {/* Navigation */}
-            <div className="text-center">
-              <Link
-                href="/"
-                className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg"
-              >
-                ← Voltar ao início
-              </Link>
-            </div>
+          {/* Navigation */}
+          <div className="text-center">
+            <Link
+              href="/"
+              className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg"
+            >
+              ← Voltar ao início
+            </Link>
           </div>
         </div>
       </section>

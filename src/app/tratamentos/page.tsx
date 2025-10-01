@@ -25,21 +25,21 @@ const treatments = [
     title: 'Cirurgias à Laser',
     description:
       'Procedimentos minimamente invasivos com tecnologia laser para tratamento de hemorróidas e fissuras anais.',
-    slug: 'cirurgias-laser',
+    slug: 'cx-laser',
     category: 'Cirúrgico',
   },
   {
     title: 'Tratamento de Hemorróidas',
     description:
       'Ligadura elástica, escleroterapia e outros procedimentos para alívio definitivo das hemorróidas.',
-    slug: 'tratamento-hemorroidas',
+    slug: 'hemorroidas',
     category: 'Clínico/Cirúrgico',
   },
   {
     title: 'Cirurgias para Fístulas Anorretais',
     description:
       'Tratamento cirúrgico especializado para fístulas complexas com preservação da continência.',
-    slug: 'cirurgia-fistulas',
+    slug: 'cx-fistulas-anorretais',
     category: 'Cirúrgico',
   },
   {
@@ -60,28 +60,28 @@ const treatments = [
     title: 'Tratamento de HPV Anal',
     description:
       'Diagnóstico e tratamento de condilomas acuminados (verrugas) na região anal.',
-    slug: 'tratamento-hpv',
+    slug: 'hpv-anal',
     category: 'Clínico',
   },
   {
     title: 'Cirurgia de Cisto Pilonidal',
     description:
       'Remoção cirúrgica de cistos pilonidais com técnicas modernas e baixa recidiva.',
-    slug: 'cirurgia-cisto-pilonidal',
+    slug: 'cx-cisto-pilonidal',
     category: 'Cirúrgico',
   },
   {
     title: 'Doenças Inflamatórias Intestinais',
     description:
       'Acompanhamento especializado de Doença de Crohn e Retocolite Ulcerativa.',
-    slug: 'doencas-inflamatorias',
+    slug: 'doencas-inflamatorias-intestinais',
     category: 'Clínico',
   },
   {
     title: 'Síndrome do Intestino Irritável',
     description:
       'Diagnóstico e tratamento personalizado para controle dos sintomas intestinais.',
-    slug: 'intestino-irritavel',
+    slug: 'sindrome-intestino-irritavel',
     category: 'Clínico',
   },
 ]

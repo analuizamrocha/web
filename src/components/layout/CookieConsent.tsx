@@ -87,7 +87,7 @@ export default function CookieConsent() {
               </div>
               <p className="text-sm text-secondary leading-relaxed">
                 Usamos cookies para melhorar sua experiência. Os dados são
-                usados apenas para estatísticas, conforme nossa{' '}
+                usados apenas para estatísticas, conforme nossa&nbsp;
                 <Link
                   href="/politica-privacidade"
                   className="text-primary hover:underline font-medium"

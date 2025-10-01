@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import { Badge } from '@/components/ui/Badge'
 import {
   getAllPosts,
   getTargetAudienceLabel,
@@ -33,7 +34,9 @@ export default function BlogPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
               <p>
-                Aqui compartilho conhecimentos, dicas práticas e orientações sobre coloproctologia para ajudar você a entender melhor sua saúde intestinal
+                Aqui compartilho conhecimentos, dicas práticas e orientações
+                sobre coloproctologia para ajudar você a entender melhor sua
+                saúde intestinal
               </p>
             </div>
           </div>
@@ -41,7 +44,8 @@ export default function BlogPage() {
           {posts.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-lg lg:text-xl text-secondary">
-                Em breve estarei compartilhando artigos e dicas valiosas sobre saúde intestinal.
+                Em breve estarei compartilhando artigos e dicas valiosas sobre
+                saúde intestinal.
               </p>
             </div>
           ) : (
@@ -70,18 +74,18 @@ export default function BlogPage() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <div className="flex flex-wrap gap-2">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                      <div className="flex flex-wrap gap-2 mr-4">
+                        <Badge variant="primary">
                           {getContentIntentLabel(post.intent)}
-                        </span>
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary/20 text-secondary">
+                        </Badge>
+                        <Badge variant="secondary">
                           {getTargetAudienceLabel(post.targetAudience)}
-                        </span>
+                        </Badge>
                       </div>
 
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="text-primary hover:text-primary/80 font-medium transition-colors text-lg"
+                        className="text-primary hover:text-primary/80 font-medium transition-colors text-lg text-nowrap ms-4 ps-4 pl-4"
                       >
                         Ler artigo →
                       </Link>
