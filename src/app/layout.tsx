@@ -102,7 +102,7 @@ export const metadata: Metadata = {
       'Especialista em Coloproctologia oferecendo cuidado clínico e cirúrgico humanizado do intestino, reto e ânus em Curitiba.',
     images: [
       {
-        url: `${WEBSITE_URL}/images/og.webp`,
+        url: `${WEBSITE_URL}/images/og.png`,
         alt: `${DR_NAME} - Coloproctologista em Curitiba`,
       },
     ],
