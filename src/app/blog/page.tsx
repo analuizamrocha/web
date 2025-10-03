@@ -88,7 +88,7 @@ export default function BlogPage() {
 
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="text-primary hover:text-primary/80 font-medium transition-colors text-lg"
+                        className="text-primary hover:text-primary/80 font-medium transition-colors text-lg text-nowrap"
                       >
                         Ler artigo →
                       </Link>

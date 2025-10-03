@@ -71,6 +71,7 @@ export interface BlogPostMeta {
   intent: ContentIntent
   readingTime?: number
   featured?: boolean
+  order?: number
 }
 
 /**
@@ -85,7 +86,7 @@ export interface BlogPost extends BlogPostMeta {
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
 /**
- * Get all blog posts sorted by publish date (newest first)
+ * Get all blog posts sorted by custom order (if specified) then publish date (newest first)
  * @returns Array of blog posts
  */
 export function getAllPosts(): BlogPost[] {
@@ -104,8 +105,22 @@ export function getAllPosts(): BlogPost[] {
     })
     .filter((post): post is BlogPost => post !== null)
 
-  // Sort posts by date
+  // Sort posts by custom order (if specified) then by date
   return allPostsData.sort((a, b) => {
+    // If both posts have order field, sort by order (ascending)
+    if (a.order !== undefined && b.order !== undefined) {
+      return a.order - b.order
+    }
+
+    // If only one has order, prioritize the one with order
+    if (a.order !== undefined && b.order === undefined) {
+      return -1
+    }
+    if (a.order === undefined && b.order !== undefined) {
+      return 1
+    }
+
+    // If neither has order, sort by date (newest first)
     if (a.publishDate < b.publishDate) {
       return 1
     } else {
