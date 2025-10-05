@@ -5,7 +5,7 @@ slug: "quando-procurar-coloproctologista-curitiba"
 publishDate: "2025-01-20"
 lastModified: "2025-01-20"
 primaryKeyword: "quando procurar coloproctologista"
-secondaryKeywords: 
+secondaryKeywords:
   - "coloproctologista Curitiba"
   - "sintomas coloproctologia"
   - "proctologista Curitiba"
@@ -16,6 +16,7 @@ secondaryKeywords:
 targetAudience: "patients"
 intent: "awareness"
 featured: true
+order: 1
 ---
 
 A saúde intestinal é fundamental para nosso bem-estar geral, mas muitas pessoas ficam em dúvida sobre **quando procurar coloproctologista**. Encontrar o especialista adequado pode fazer toda a diferença no diagnóstico precoce e tratamento eficaz de problemas que afetam o intestino grosso, reto e ânus.

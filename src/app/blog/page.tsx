@@ -18,8 +18,12 @@ export const metadata: Metadata = {
     'tratamento hemorróidas',
     'prevenção câncer colorretal',
   ],
+  alternates: {
+    canonical: 'https://analuizarocha.com.br/blog',
+  },
 }
 
+// DECISION: Keep title as main link for better accessibility and UX clarity
 export default function BlogPage() {
   const posts = getAllPosts()
 
@@ -33,7 +37,9 @@ export default function BlogPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
               <p>
-                Aqui compartilho conhecimentos, dicas práticas e orientações sobre coloproctologia para ajudar você a entender melhor sua saúde intestinal
+                Aqui compartilho conhecimentos, dicas práticas e orientações
+                sobre coloproctologia para ajudar você a entender melhor sua
+                saúde intestinal
               </p>
             </div>
           </div>
@@ -41,7 +47,8 @@ export default function BlogPage() {
           {posts.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-lg lg:text-xl text-secondary">
-                Em breve estarei compartilhando artigos e dicas valiosas sobre saúde intestinal.
+                Em breve estarei compartilhando artigos e dicas valiosas sobre
+                saúde intestinal.
               </p>
             </div>
           ) : (
@@ -81,7 +88,7 @@ export default function BlogPage() {
 
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="text-primary hover:text-primary/80 font-medium transition-colors text-lg"
+                        className="text-primary hover:text-primary/80 font-medium transition-colors text-lg text-nowrap"
                       >
                         Ler artigo →
                       </Link>
