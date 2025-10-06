@@ -36,26 +36,55 @@ export async function generateMetadata({
   }
 
   return {
-    title: post.title,
+    title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
     description: post.metaDescription,
     keywords: [post.primaryKeyword, ...post.secondaryKeywords],
     openGraph: {
-      title: post.title,
+      title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
       description: post.metaDescription,
       type: 'article',
+      locale: 'pt_BR',
+      siteName: 'Dra. Ana Luiza Moraes Rocha - Coloproctologia',
       publishedTime: post.publishDate,
       modifiedTime: post.lastModified,
       authors: ['Dra. Ana Luiza Moraes Rocha'],
       url: `https://analuizarocha.com.br/blog/${post.slug}`,
+      images: [
+        {
+          url: 'https://analuizarocha.com.br/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: `${post.title} - Dra. Ana Luiza Moraes Rocha`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
       description: post.metaDescription,
       creator: '@analuiza.mrocha',
+      site: '@analuiza.mrocha',
+      images: ['https://analuizarocha.com.br/og-image.jpg'],
     },
     alternates: {
       canonical: `https://analuizarocha.com.br/blog/${post.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    other: {
+      'article:author': 'Dra. Ana Luiza Moraes Rocha',
+      'article:publisher': 'https://analuizarocha.com.br',
+      'article:section': 'Coloproctologia',
+      'article:tag': post.primaryKeyword,
     },
   }
 }
@@ -162,7 +191,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </header>
 
-
           {/* Article Content */}
           <div className="mx-auto max-w-4xl">
             <div className="prose prose-lg max-w-none">
@@ -188,16 +216,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </Link>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-4 sm:mt-8 gap-2">
               <Link
                 href="/blog"
-                className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg"
+                className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg text-nowrap"
               >
                 ← Voltar para o blog
               </Link>
-
               <div className="text-sm text-secondary">
-                Última atualização:{' '}
+                Última atualização:&nbsp;
                 {new Date(post.lastModified).toLocaleDateString('pt-BR')}
               </div>
             </div>

@@ -2,8 +2,8 @@
 title: "Cisto Pilonidal: o que é, por que acontece e quando é a melhor hora de operar"
 metaDescription: "Descubra quando operar cisto pilonidal e as vantagens da cirurgia a laser: menos dor, recuperação rápida e menor recidiva. Tire suas dúvidas aqui."
 slug: "cisto-pilonidal-cirurgia-laser-quando-operar"
-publishDate: "2025-01-22"
-lastModified: "2025-01-22"
+publishDate: "2025-10-05"
+lastModified: "2025-10-06"
 primaryKeyword: "cisto pilonidal"
 secondaryKeywords:
   - "cirurgia a laser cisto pilonidal"
@@ -14,6 +14,15 @@ targetAudience: "patients"
 intent: "consideration"
 featured: false
 order: 2
+faqs:
+  - question: "O cisto pilonidal some sozinho?"
+    answer: "Não. Pode melhorar após drenagem, mas costuma recidivar. A cirurgia é o tratamento definitivo."
+  - question: "A cirurgia a laser dói?"
+    answer: "O pós-operatório costuma ser menos doloroso do que na técnica convencional, com retorno rápido às atividades."
+  - question: "Preciso operar mesmo sem sintomas agora?"
+    answer: "Sim, pois a doença tende a inflamar novamente. A melhor hora é quando a crise passou, garantindo cirurgia mais segura e recuperação tranquila."
+  - question: "Quanto tempo para recuperar?"
+    answer: "Em geral, retorno a atividades leves em poucos dias, com cicatrização mais rápida quando comparada à técnica convencional."
 ---
 
 *Você sabia que o cisto pilonidal pode recidivar se não tratado adequadamente? Descubra tudo sobre esta condição e como a tecnologia laser está revolucionando o tratamento.*
