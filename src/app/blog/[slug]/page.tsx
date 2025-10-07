@@ -9,6 +9,8 @@ import {
   getContentIntentLabel,
 } from '@/lib/blog'
 import type { Metadata } from 'next'
+import { WHATSAPP_MSG_TEXT_ENCODED, WPP_NUMBER_NASSIF } from '@/lib/constants'
+import { LinkButton } from '@/components/ui/LinkButton'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -208,12 +210,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 Agende uma consulta com a Dra. Ana Luiza Moraes Rocha para
                 receber cuidado especializado em coloproctologia.
               </p>
-              <Link
-                href="/#contato"
-                className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              <LinkButton
+                href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                external
+                newTab
+                variant="primary"
+                size="xl"
+                className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
               >
-                Agendar Consulta
-              </Link>
+                Agendar consulta
+              </LinkButton>
             </div>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-4 sm:mt-8 gap-2">
