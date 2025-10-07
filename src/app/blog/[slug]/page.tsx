@@ -11,6 +11,8 @@ import {
 } from '@/lib/blog'
 import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { WHATSAPP_MSG_TEXT_ENCODED, WPP_NUMBER_NASSIF } from '@/lib/constants'
+import { LinkButton } from '@/components/ui/LinkButton'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -38,26 +40,55 @@ export async function generateMetadata({
   }
 
   return {
-    title: post.title,
+    title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
     description: post.metaDescription,
     keywords: [post.primaryKeyword, ...post.secondaryKeywords],
     openGraph: {
-      title: post.title,
+      title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
       description: post.metaDescription,
       type: 'article',
+      locale: 'pt_BR',
+      siteName: 'Dra. Ana Luiza Moraes Rocha - Coloproctologia',
       publishedTime: post.publishDate,
       modifiedTime: post.lastModified,
       authors: ['Dra. Ana Luiza Moraes Rocha'],
       url: `https://analuizarocha.com.br/blog/${post.slug}`,
+      images: [
+        {
+          url: 'https://analuizarocha.com.br/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: `${post.title} - Dra. Ana Luiza Moraes Rocha`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
       description: post.metaDescription,
       creator: '@analuiza.mrocha',
+      site: '@analuiza.mrocha',
+      images: ['https://analuizarocha.com.br/og-image.jpg'],
     },
     alternates: {
       canonical: `https://analuizarocha.com.br/blog/${post.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    other: {
+      'article:author': 'Dra. Ana Luiza Moraes Rocha',
+      'article:publisher': 'https://analuizarocha.com.br',
+      'article:section': 'Coloproctologia',
+      'article:tag': post.primaryKeyword,
     },
   }
 }
@@ -190,24 +221,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </p>
               }
               actions={
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
+                  Agendar consulta
+                </LinkButton>
               }
               variant="secondary"
             />
 
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-4 sm:mt-8 gap-2">
               <Link
                 href="/blog"
-                className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg"
+                className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg text-nowrap"
               >
                 ← Voltar para o blog
               </Link>
-
               <div className="text-sm text-secondary">
                 Última atualização:&nbsp;
                 {new Date(post.lastModified).toLocaleDateString('pt-BR')}

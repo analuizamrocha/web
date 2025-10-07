@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { WPP_NUMBER_NASSIF } from '@/lib/constants'
@@ -24,6 +22,7 @@ export function HeroSection() {
               quality={100}
               className="w-full h-auto object-contain lg:shadow-2xl"
               priority
+              fetchPriority="high"
             />
           </div>
 
@@ -51,7 +50,7 @@ export function HeroSection() {
                 variant="primary"
                 size="xl"
                 className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-                aria-label="Ligar agora para Dra. Ana Luiza"
+                aria-label="Agendar consulta com Dra. Ana Luiza Moraes Rocha por WhatsApp"
               >
                 Agende sua consulta agora
               </LinkButton>

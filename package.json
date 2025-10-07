@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=20.13.1",
-    "npm": ">=10.5.2"
+    "node": ">=22.0.0",
+    "bun": ">=1.2.0"
   },
   "scripts": {
     "dev": "next dev --turbopack",
@@ -14,16 +14,17 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "analyze": "ANALYZE=true npm run build",
+    "lighthouse": "lighthouse http://localhost:3000 --output=json,html --output-path=./lighthouse-results --view",
+    "lighthouse:prod": "lighthouse https://analuizarocha.com.br --output=json,html --output-path=./lighthouse-results --view",
+    "lighthouse:ci": "lighthouse http://localhost:3000 --output=json --quiet --chrome-flags='--headless --no-sandbox'"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.1.1",
-    "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^15.5.3",
     "@next/third-parties": "^15.4.1",
-    "@types/mdx": "^2.0.13",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
+    "caniuse-lite": "^1.0.30001748",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
@@ -38,10 +39,12 @@
     "@axe-core/cli": "^4.10.2",
     "@axe-core/playwright": "^4.10.2",
     "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.5.4",
     "@tailwindcss/postcss": "^4.1.4",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
+    "@types/mdx": "^2.0.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -54,7 +57,8 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
     "jsdom": "^25.0.1",
-    "lighthouse": "^12.7.0",
+    "lighthouse": "^12.8.2",
+    "schema-dts": "^1.1.5",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^2.1.8"

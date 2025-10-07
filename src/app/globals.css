@@ -145,8 +145,9 @@
     max-width: none !important;
   }
 
-  .prose strong {
-    color: var(--color-primary) !important;
+  .prose strong,
+  .prose-lg strong {
+    color: var(--color-secondary) !important;
     font-weight: 600 !important;
   }
 

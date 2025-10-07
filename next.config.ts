@@ -1,17 +1,18 @@
 import type { NextConfig } from "next";
+import bundleAnalyzer from '@next/bundle-analyzer'
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', '@vercel/analytics', '@next/third-parties'],
     webVitalsAttribution: ['CLS', 'LCP'],
   },
-  // Target modern browsers to reduce bundle size
-  transpilePackages: [],
-  // Enable production optimizations
+  // Production optimizations
   compress: true,
   poweredByHeader: false,
-  // Enable source maps for debugging
-  productionBrowserSourceMaps: true,
   // Security headers and caching
   headers: async () => [
     {
@@ -35,7 +36,7 @@ const nextConfig: NextConfig = {
         },
         {
           key: 'Cache-Control',
-          value: 'public, max-age=0, must-revalidate'
+          value: 'public, s-maxage=0, must-revalidate'
         }
       ]
     },
@@ -65,11 +66,6 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  // Turbopack configuration for Next.js 15+
-  turbopack: {
-    // Turbopack handles bundle optimization automatically
-    // No need for manual webpack splitChunks configuration
-  },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

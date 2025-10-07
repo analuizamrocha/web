@@ -87,6 +87,7 @@ export function AboutSection() {
           sizes="(max-width: 1024px) 100vw, 0px"
           quality={100}
           className="w-full h-auto object-cover"
+          loading="lazy"
         />
       </div>
     </section>
