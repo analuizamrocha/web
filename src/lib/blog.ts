@@ -150,79 +150,33 @@ function calculateReadingTime(content: string): number {
 }
 
 /**
- * Extracts the first non-heading paragraph from markdown content
+ * Extracts the italic hook text from markdown content to use as excerpt
  * @param content - The markdown content
- * @returns The first paragraph text
+ * @returns The italic hook text without markdown formatting
  */
-function getFirstParagraph(content: string): string {
-  const paragraphs = content.replace(/^#.*$/gm, '').trim().split('\n\n')
-  return paragraphs.find((p) => p.trim().length > 0) || ''
-}
+function extractItalicHook(content: string): string {
+  // Look for italic text pattern: *text content*
+  const italicMatch = content.match(/^\*(.+?)\*$/m)
 
-/**
- * Truncates text at word boundaries to avoid cutting words mid-sentence
- * @param text - The text to truncate
- * @param maxLength - Maximum character length
- * @returns Truncated text
- */
-function truncateAtWordBoundary(text: string, maxLength: number): string {
-  const words = text.split(' ')
-  let result = ''
-
-  for (const word of words) {
-    const testLength = result ? result.length + 1 + word.length : word.length
-    if (testLength > maxLength) break
-    result += (result ? ' ' : '') + word
+  if (italicMatch && italicMatch[1]) {
+    return italicMatch[1].trim()
   }
 
-  return result
+  // Fallback: extract first non-heading paragraph
+  const paragraphs = content.replace(/^#.*$/gm, '').trim().split('\n\n')
+  const firstParagraph = paragraphs.find((p) => p.trim().length > 0) || ''
+
+  // Remove any markdown formatting from fallback
+  return firstParagraph.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*(.*?)\*/g, '$1')
 }
 
 /**
- * Creates a smart excerpt from content, prioritizing natural sentence breaks
+ * Creates excerpt from content, prioritizing italic hook text
  * @param content - The markdown content
- * @returns A well-formed excerpt with ellipsis if truncated
+ * @returns The excerpt text ready for display
  */
 function createExcerpt(content: string): string {
-  const firstParagraph = getFirstParagraph(content)
-  if (!firstParagraph) return ''
-
-  // Strategy 1: Use first two complete sentences
-  const sentences = firstParagraph.split('. ')
-  if (sentences.length >= 2) {
-    return sentences[0] + '. ' + sentences[1] + '.'
-  }
-
-  // Strategy 2: If single long sentence, truncate at word boundary
-  if (sentences.length === 1 && firstParagraph.length > 200) {
-    const truncated = truncateAtWordBoundary(firstParagraph, 180)
-    return truncated + '...'
-  }
-
-  // Strategy 3: Use full paragraph if short enough
-  return firstParagraph
-}
-
-/**
- * Ensures excerpt ends with ellipsis if it was truncated from original content
- * @param excerpt - The generated excerpt
- * @param originalParagraph - The original paragraph text
- * @returns Excerpt with proper ellipsis ending
- */
-function addEllipsisIfTruncated(
-  excerpt: string,
-  originalParagraph: string
-): string {
-  const wasTruncated = excerpt !== originalParagraph
-  const alreadyHasEllipsis = excerpt.endsWith('...')
-
-  if (wasTruncated && !alreadyHasEllipsis) {
-    // Remove any trailing periods before adding ellipsis to avoid multiple dots
-    const cleanExcerpt = excerpt.replace(/\.+$/, '')
-    return cleanExcerpt + '...'
-  }
-
-  return excerpt
+  return extractItalicHook(content)
 }
 
 /**
@@ -241,14 +195,12 @@ export function getPostBySlug(slug: string): BlogPost | null {
     const { data, content } = matter(fileContents)
 
     const readingTime = calculateReadingTime(content)
-    const firstParagraph = getFirstParagraph(content)
     const excerpt = createExcerpt(content)
-    const finalExcerpt = addEllipsisIfTruncated(excerpt, firstParagraph)
 
     return {
       slug,
       content,
-      excerpt: finalExcerpt,
+      excerpt,
       readingTime,
       ...data,
     } as BlogPost

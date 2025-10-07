@@ -1,5 +1,5 @@
 ---
-title: "Quando Procurar um Coloproctologista: Guia Completo"
+title: "Quando procurar um coloproctologista: guia completo"
 metaDescription: "Descubra quando procurar coloproctologista. Sintomas, sinais de alerta e como escolher o especialista certo para sua saúde intestinal."
 slug: "quando-procurar-coloproctologista-curitiba"
 publishDate: "2025-09-24"
@@ -29,6 +29,8 @@ faqs:
   - question: "O que devo levar para minha primeira consulta?"
     answer: "Leve exames anteriores (mesmo que antigos), lista de medicamentos em uso e histórico familiar de doenças intestinais. Também é importante anotar seus sintomas e dúvidas para aproveitar ao máximo a consulta."
 ---
+
+*Sangramento ao evacuar, dor abdominal ou mudanças no hábito intestinal podem ser sinais importantes. Descubra quando esses sintomas exigem avaliação especializada e não devem ser ignorados.*
 
 A saúde intestinal é fundamental para nosso bem-estar geral, mas muitas pessoas ficam em dúvida sobre **quando procurar coloproctologista**. Encontrar o especialista adequado pode fazer toda a diferença no diagnóstico precoce e tratamento eficaz de problemas que afetam o intestino grosso, reto e ânus.
 

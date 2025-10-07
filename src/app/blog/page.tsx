@@ -139,7 +139,7 @@ export default function BlogPage() {
             </div>
           )}
 
-          <div className="mt-12 sm:mt-16 text-center">
+          <div className="pt-8 lg:pt-12 text-center">
             <Link
               href="/"
               className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg"
