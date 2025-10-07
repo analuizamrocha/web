@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { WPP_NUMBER_NASSIF } from '@/lib/constants'
@@ -24,6 +22,7 @@ export function HeroSection() {
               quality={100}
               className="w-full h-auto object-contain lg:shadow-2xl"
               priority
+              fetchPriority="high"
             />
           </div>
 
