@@ -1,14 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import type {
-  WithContext,
-  Graph,
-  FAQPage,
-  Question,
-  Answer,
-  Thing,
-} from 'schema-dts'
+import type { FAQPage, Question, Answer, Thing } from 'schema-dts'
 
 /**
  * Target audience enum for blog posts
