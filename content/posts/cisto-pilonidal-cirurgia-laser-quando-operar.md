@@ -1,5 +1,5 @@
 ---
-title: "Cisto Pilonidal: o que é, por que acontece e quando é a melhor hora de operar"
+title: "Cisto pilonidal: o que é, por que acontece e quando é a melhor hora de operar"
 metaDescription: "Descubra quando operar cisto pilonidal e as vantagens da cirurgia a laser: menos dor, recuperação rápida e menor recidiva. Tire suas dúvidas aqui."
 slug: "cisto-pilonidal-cirurgia-laser-quando-operar"
 publishDate: "2025-10-05"
