@@ -8,18 +8,58 @@ import {
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog | Dra. Ana Luiza Moraes Rocha - Coloproctologista',
+  title: 'Blog | Dra. Ana Luiza Moraes Rocha - Coloproctologista Curitiba',
   description:
-    'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal em Curitiba.',
+    'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
   keywords: [
     'blog coloproctologia',
     'artigos coloproctologista curitiba',
     'saúde intestinal',
     'tratamento hemorróidas',
     'prevenção câncer colorretal',
+    'cirurgia laser coloproctologia',
+    'cisto pilonidal',
+    'plicoma anal',
   ],
+  openGraph: {
+    title: 'Blog | Dra. Ana Luiza Moraes Rocha - Coloproctologista Curitiba',
+    description:
+      'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://analuizarocha.com.br/blog',
+    siteName: 'Dra. Ana Luiza Moraes Rocha - Coloproctologia',
+    images: [
+      {
+        url: 'https://analuizarocha.com.br/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Blog de Coloproctologia - Dra. Ana Luiza Moraes Rocha',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog | Dra. Ana Luiza Moraes Rocha - Coloproctologista Curitiba',
+    description:
+      'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
+    creator: '@analuiza.mrocha',
+    site: '@analuiza.mrocha',
+    images: ['https://analuizarocha.com.br/og-image.jpg'],
+  },
   alternates: {
     canonical: 'https://analuizarocha.com.br/blog',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
@@ -99,7 +139,7 @@ export default function BlogPage() {
             </div>
           )}
 
-          <div className="mt-16 text-center">
+          <div className="mt-12 sm:mt-16 text-center">
             <Link
               href="/"
               className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg"
