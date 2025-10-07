@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { CRM_RQE_TEXT, TAG_INSTAGRAM, URL_INSTRAGRAM } from '@/lib/constants'
 import Instagram from '../icons/instagram'

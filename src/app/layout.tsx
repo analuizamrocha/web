@@ -15,12 +15,14 @@ const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-montserrat',
+  display: 'swap',
 })
 
 const literata = Literata({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-pt-serif',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -138,6 +140,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        {/* Preconnect to critical third-party origins for performance */}
+        <link rel="preconnect" href="https://va.vercel-scripts.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -149,9 +155,10 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <Analytics />
-        <SpeedInsights />
       </body>
+      {/* Load analytics asynchronously after page content */}
+      <Analytics />
+      <SpeedInsights />
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
     </html>

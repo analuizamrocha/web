@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { forwardRef } from 'react'
 import { VariantProps } from 'class-variance-authority'
