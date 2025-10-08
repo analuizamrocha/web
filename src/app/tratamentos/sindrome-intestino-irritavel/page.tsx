@@ -127,34 +127,14 @@ export default function SindromeIntestinoIrritavelPage() {
                 <li>Muco nas fezes.</li>
               </ul>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-8">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <svg
-                      className="h-5 w-5 text-yellow-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm text-yellow-700">
-                      ⚠️ É importante ressaltar que sintomas como&nbsp;
-                      <strong>
-                        sangramento intestinal, febre ou perda de peso não
-                        explicada
-                      </strong>
-                      &nbsp; não são típicos da SII e devem sempre ser
-                      investigados pelo coloproctologista.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  É importante ressaltar que sintomas como sangramento
+                  intestinal, febre ou perda de peso não explicada não são
+                  típicos da SII e devem sempre ser investigados pelo
+                  coloproctologista.
+                </p>
+              </blockquote>
 
               <h2>Diagnóstico da Síndrome do Intestino Irritável</h2>
               <p>
@@ -259,55 +239,55 @@ export default function SindromeIntestinoIrritavelPage() {
                 de vida.
               </p>
 
-              <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20 my-8">
-                <p className="text-primary mb-0">
-                  👉 Se você sofre com sintomas de SII, agende sua avaliação em
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  Se você sofre com sintomas de SII, agende sua avaliação em
                   coloproctologia e descubra as melhores estratégias para o seu
                   caso.
                 </p>
-              </div>
+              </blockquote>
 
-              <h2>Perguntas Frequentes (FAQ)</h2>
+              <h2>Perguntas frequentes (FAQ)</h2>
 
-              <div className="space-y-6">
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    1. A Síndrome do Intestino Irritável tem cura?
+              <div className="space-y-8 my-12">
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    A Síndrome do Intestino Irritável tem cura?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Não existe cura definitiva, mas com tratamento adequado os
                     sintomas podem ser controlados, proporcionando qualidade de
                     vida.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    2. Preciso fazer colonoscopia para diagnosticar SII?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Preciso fazer colonoscopia para diagnosticar SII?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Nem sempre. A colonoscopia pode ser indicada para excluir
                     outras doenças, especialmente em pacientes acima de 45 anos
                     ou com sintomas de alarme.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    3. Quais alimentos pioram a SII?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Quais alimentos pioram a SII?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Os gatilhos variam, mas alimentos ricos em gordura, cafeína,
                     lactose e dietas com excesso de FODMAPs podem intensificar
                     os sintomas.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    4. Quando procurar um coloproctologista em Curitiba?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Quando procurar um coloproctologista em Curitiba?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Se você apresenta dor abdominal recorrente, diarreia ou
                     constipação frequentes, ou suspeita de Síndrome do Intestino
                     Irritável, é indicado buscar avaliação com um especialista.
@@ -349,13 +329,6 @@ export default function SindromeIntestinoIrritavelPage() {
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
               >
                 ← Todos os Tratamentos
-              </Link>
-
-              <Link
-                href="/tratamentos"
-                className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
-              >
-                Ver Todos os Tratamentos →
               </Link>
             </div>
           </div>

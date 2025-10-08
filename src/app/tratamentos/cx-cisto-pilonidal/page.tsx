@@ -208,60 +208,58 @@ export default function CistoPilonidalPage() {
                 de acompanhamento médico e cuidados locais após o tratamento.
               </p>
 
-              <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20 my-8">
-                <p className="text-primary mb-0">
-                  👉 Cada caso deve ser avaliado individualmente, garantindo
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  Cada caso deve ser avaliado individualmente, garantindo
                   segurança e qualidade de vida para o paciente.
                 </p>
-              </div>
+              </blockquote>
 
-              <h2>Perguntas Frequentes (FAQ)</h2>
+              <h2>Perguntas frequentes (FAQ)</h2>
 
-              <div className="space-y-6">
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    1. O cisto pilonidal pode voltar após a cirurgia?
+              <div className="space-y-8 my-12">
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    O cisto pilonidal pode voltar após a cirurgia?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Sim. Tanto na cirurgia convencional quanto no laser existe
                     risco de recidiva, embora o laser possa reduzir esse risco
                     em alguns casos.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    2. Qual é a diferença na recuperação entre as técnicas?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Qual é a diferença na recuperação entre as técnicas?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     A cirurgia convencional exige curativos diários e
                     recuperação mais longa, enquanto o laser costuma permitir
                     retorno precoce às atividades.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    3. Toda pessoa com cisto pilonidal precisa operar?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Toda pessoa com cisto pilonidal precisa operar?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Não. Em fase aguda, é feita drenagem do abscesso. A cirurgia
                     definitiva é indicada quando o quadro está controlado, para
                     prevenir recidivas.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    4. O laser é indicado em todos os casos?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    O laser é indicado em todos os casos?
                   </h3>
-                  <p className="text-secondary mb-0">
-                    Sim. Hoje se sabe que&nbsp;
-                    <strong>
-                      todo cisto pilonidal pode responder ao tratamento a laser
-                    </strong>
-                    , mas é importante entender que, assim como na cirurgia
-                    convencional, ainda existe risco de recidiva.
+                  <p className="text-secondary leading-relaxed">
+                    Sim. Hoje se sabe que todo cisto pilonidal pode responder ao
+                    tratamento a laser, mas é importante entender que, assim
+                    como na cirurgia convencional, ainda existe risco de
+                    recidiva.
                   </p>
                 </div>
               </div>

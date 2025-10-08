@@ -183,55 +183,55 @@ export default function ToxinaBotulínicaPage() {
                 histórico do paciente e o risco de complicações.
               </p>
 
-              <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20 my-8">
-                <p className="text-primary mb-0">
-                  👉 Cada paciente é único, e o tratamento deve ser
-                  personalizado para alcançar o equilíbrio entre alívio da dor e
-                  preservação da função anal.
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  Cada paciente é único, e o tratamento deve ser personalizado
+                  para alcançar o equilíbrio entre alívio da dor e preservação
+                  da função anal.
                 </p>
-              </div>
+              </blockquote>
 
-              <h2>Perguntas Frequentes (FAQ)</h2>
+              <h2>Perguntas frequentes (FAQ)</h2>
 
-              <div className="space-y-6">
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    1. A aplicação de toxina botulínica é dolorosa?
+              <div className="space-y-8 my-12">
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    A aplicação de toxina botulínica é dolorosa?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     O procedimento pode causar desconforto leve durante a
                     aplicação, mas é geralmente bem tolerado. Pode ser realizado
                     com anestesia local se necessário.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    2. Quanto tempo demora para fazer efeito?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Quanto tempo demora para fazer efeito?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Os primeiros sinais de melhora da dor costumam aparecer nos
                     primeiros dias após a aplicação, com efeito máximo em 1-2
                     semanas.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    3. Posso ter incontinência após a aplicação?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Posso ter incontinência após a aplicação?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Em raros casos pode ocorrer dificuldade leve e transitória
                     para controlar gases. A incontinência fecal é muito rara
                     quando a aplicação é feita adequadamente.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    4. Quantas aplicações posso fazer?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Quantas aplicações posso fazer?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     O procedimento pode ser repetido conforme necessário,
                     respeitando intervalos adequados entre as aplicações, sempre
                     com avaliação médica.
@@ -279,7 +279,7 @@ export default function ToxinaBotulínicaPage() {
                 href="/tratamentos/rastreio-cancer-anal"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
               >
-                Próximo: Rastreio do Câncer →
+                Próximo →
               </Link>
             </div>
           </div>

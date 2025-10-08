@@ -72,7 +72,7 @@ Nem todo plicoma precisa ser retirado. A avaliação médica é fundamental para
 
 ---
 
-## Perguntas frequentes
+## Perguntas frequentes (FAQ)
 
 ### 1. O plicoma pode virar câncer?
 

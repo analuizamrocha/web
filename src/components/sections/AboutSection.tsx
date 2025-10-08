@@ -38,7 +38,7 @@ export function AboutSection() {
     >
       {/* Header Section - Enhanced Typography */}
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-        <div className="mx-auto max-w-4xl text-center mb-16 lg:mb-20 animate-fade-in">
+        <div className="mx-auto max-w-4xl text-center mb-12 lg:mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
             Quem é Dra. Ana Luiza?
           </h2>
@@ -70,7 +70,7 @@ export function AboutSection() {
         </div>
 
         {/* Link Button - Aligned with content */}
-        <div className="text-right mb-8 lg:mb-4 lg:mt-4">
+        <div className="text-center mb-8 lg:mb-4 mt-4 lg:mt-8">
           <LinkButton href="/sobre" variant="outline" size="lg">
             Conheça minha trajetória
           </LinkButton>

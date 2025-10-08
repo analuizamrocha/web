@@ -7,9 +7,9 @@ import { LinkButton } from '@/components/ui/LinkButton'
 import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Cirurgias à Laser em Coloproctologia | Dra. Ana Luiza Moraes Rocha',
+  title: 'Cirurgias a Laser em Coloproctologia | Dra. Ana Luiza Moraes Rocha',
   description:
-    'Cirurgias à laser para hemorróidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.',
+    'Cirurgias a laser para hemorróidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.',
   keywords: [
     'cirurgia laser hemorroidas curitiba',
     'fissura anal laser curitiba',
@@ -33,7 +33,7 @@ export default function CirurgiasLaserPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
             '@id': 'https://analuizarocha.com.br/tratamentos/cx-laser',
-            name: 'Cirurgias à Laser em Coloproctologia',
+            name: 'Cirurgias a Laser em Coloproctologia',
             description:
               'Procedimentos cirúrgicos minimamente invasivos utilizando tecnologia laser para tratamento de hemorróidas e fissuras anais',
             procedureType: 'Laser Surgery',
@@ -65,7 +65,7 @@ export default function CirurgiasLaserPage() {
             items={[
               { label: 'Início', href: '/' },
               { label: 'Tratamentos', href: '/tratamentos' },
-              { label: 'Cirurgias à Laser' },
+              { label: 'Cirurgias a Laser' },
             ]}
           />
 
@@ -78,7 +78,7 @@ export default function CirurgiasLaserPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
-                Cirurgias à Laser em Coloproctologia
+                Cirurgias a Laser em Coloproctologia
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
@@ -91,7 +91,7 @@ export default function CirurgiasLaserPage() {
 
             {/* Main Content */}
             <div className="prose prose-lg max-w-none mb-12">
-              <h2>Principais Indicações</h2>
+              <h2>Principais indicações</h2>
               <p>
                 Na coloproctologia, o laser pode ser utilizado em diferentes
                 situações:
@@ -119,33 +119,16 @@ export default function CirurgiasLaserPage() {
                 </li>
               </ul>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-8">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <svg
-                      className="h-5 w-5 text-yellow-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm text-yellow-700">
-                      <strong>Importante:</strong> A indicação do laser depende
-                      sempre da avaliação individual de cada paciente. Nem todos
-                      os casos se beneficiam dessa tecnologia, e a decisão deve
-                      ser tomada em conjunto com o coloproctologista.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  <strong>Importante:</strong> A indicação do laser depende
+                  sempre da avaliação individual de cada paciente. Nem todos os
+                  casos se beneficiam dessa tecnologia, e a decisão deve ser
+                  tomada em conjunto com o coloproctologista.
+                </p>
+              </blockquote>
 
-              <h2>Benefícios do uso do Laser</h2>
+              <h2>Benefícios do uso do laser</h2>
               <ul>
                 <li>
                   Procedimentos <strong>menos invasivos</strong>.
@@ -180,7 +163,7 @@ export default function CirurgiasLaserPage() {
                 <li>Em alguns casos, menor chance de recidiva.</li>
               </ul>
 
-              <h2>Considerações Importantes</h2>
+              <h2>Considerações importantes</h2>
               <p>
                 Apesar dos avanços, a cirurgia a laser&nbsp;
                 <strong>
@@ -195,46 +178,45 @@ export default function CirurgiasLaserPage() {
                 casos bem selecionados.
               </p>
 
-              <h2>Perguntas Frequentes (FAQ)</h2>
+              <h2>Perguntas frequentes (FAQ)</h2>
 
-              <div className="space-y-6">
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    1. Todas as doenças anorretais podem ser tratadas com laser?
+              <div className="space-y-8 my-12">
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Todas as doenças anorretais podem ser tratadas com laser?
                   </h3>
-                  <p className="text-secondary">
+                  <p className="text-secondary leading-relaxed">
                     O laser é útil em casos selecionados e a indicação depende
                     sempre da avaliação médica.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    2. A cirurgia a laser é menos dolorosa que a convencional?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    A cirurgia a laser é menos dolorosa que a convencional?
                   </h3>
-                  <p className="text-secondary">
+                  <p className="text-secondary leading-relaxed">
                     Em muitos casos, sim. O laser pode reduzir o trauma nos
                     tecidos e, consequentemente, a dor no pós-operatório. Mas a
                     resposta varia conforme o paciente e o tipo de doença.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    3. O laser substitui totalmente a cirurgia convencional?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    O laser substitui totalmente a cirurgia convencional?
                   </h3>
-                  <p className="text-secondary">
+                  <p className="text-secondary leading-relaxed">
                     Não. O laser é uma ferramenta moderna, mas não elimina a
                     necessidade de técnicas tradicionais em determinados casos.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    4. Quanto tempo leva para se recuperar de uma cirurgia a
-                    laser?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Quanto tempo leva para se recuperar de uma cirurgia a laser?
                   </h3>
-                  <p className="text-secondary">
+                  <p className="text-secondary leading-relaxed">
                     A recuperação costuma ser mais rápida do que na cirurgia
                     convencional, permitindo retorno precoce às atividades
                     leves. O tempo exato varia conforme o procedimento
@@ -246,7 +228,7 @@ export default function CirurgiasLaserPage() {
 
             {/* Call to Action */}
             <CallToActionCard
-              title="Quer saber se a cirurgia à laser é adequada para o seu caso?"
+              title="Quer saber se a cirurgia a laser é adequada para o seu caso?"
               body={
                 <p>
                   Agende uma consulta para avaliarmos juntos a melhor opção de
@@ -283,7 +265,7 @@ export default function CirurgiasLaserPage() {
                 href="/tratamentos/hemorroidas"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
               >
-                Próximo: Hemorróidas →
+                Próximo →
               </Link>
             </div>
           </div>

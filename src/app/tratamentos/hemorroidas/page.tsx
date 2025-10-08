@@ -99,7 +99,7 @@ export default function TratamentoHemorroidasPage() {
                 utilizadas:
               </p>
 
-              <h2>Ligadura Elástica</h2>
+              <h2>Ligadura elástica</h2>
               <p>
                 A ligadura elástica é um&nbsp;
                 <strong>procedimento ambulatorial</strong>.
@@ -119,12 +119,12 @@ export default function TratamentoHemorroidasPage() {
                 </li>
               </ul>
 
-              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-                <p className="text-blue-700 mb-0">
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-6 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
                   Pode haver desconforto leve após o procedimento, e em alguns
                   casos são necessárias mais de uma sessão.
                 </p>
-              </div>
+              </blockquote>
 
               <h2>Escleroterapia</h2>
               <p>
@@ -143,14 +143,14 @@ export default function TratamentoHemorroidasPage() {
                 </li>
               </ul>
 
-              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-                <p className="text-blue-700 mb-0">
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-6 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
                   É um procedimento ambulatorial, minimamente invasivo e de
                   recuperação rápida.
                 </p>
-              </div>
+              </blockquote>
 
-              <h2>Cirurgia Convencional</h2>
+              <h2>Cirurgia convencional</h2>
               <p>
                 A cirurgia convencional (hemorroidectomia) é indicada para casos
                 mais avançados ou quando outros métodos não foram eficazes.
@@ -173,14 +173,14 @@ export default function TratamentoHemorroidasPage() {
                 </li>
               </ul>
 
-              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-                <p className="text-blue-700 mb-0">
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-6 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
                   Apesar disso, continua sendo uma técnica eficaz para casos
                   selecionados.
                 </p>
-              </div>
+              </blockquote>
 
-              <h2>Cirurgia a Laser</h2>
+              <h2>Cirurgia a laser</h2>
               <p>
                 O laser é uma tecnologia que pode ser utilizada de diferentes
                 formas no tratamento das hemorroidas.
@@ -243,14 +243,14 @@ export default function TratamentoHemorroidasPage() {
                 </li>
               </ul>
 
-              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-                <p className="text-blue-700 mb-0">
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-6 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
                   A escolha dessa técnica depende da avaliação médica e da
                   disponibilidade do método.
                 </p>
-              </div>
+              </blockquote>
 
-              <h2>Considerações Finais</h2>
+              <h2>Considerações finais</h2>
               <p>
                 O tratamento ideal das hemorroidas deve ser definido após
                 avaliação médica, levando em conta o&nbsp;
@@ -266,47 +266,47 @@ export default function TratamentoHemorroidasPage() {
                 objetivo de oferecer segurança e qualidade de vida ao paciente.
               </p>
 
-              <h2>Perguntas Frequentes (FAQ)</h2>
+              <h2>Perguntas frequentes (FAQ)</h2>
 
-              <div className="space-y-6">
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    1. Toda hemorroida precisa de cirurgia?
+              <div className="space-y-8 my-12">
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Toda hemorroida precisa de cirurgia?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Não. Muitos casos melhoram com mudanças de hábitos, uso de
                     fibras e tratamentos ambulatoriais, como ligadura elástica
                     ou escleroterapia.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    2. A ligadura elástica dói?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    A ligadura elástica dói?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Pode causar desconforto leve nos primeiros dias, mas
                     geralmente é bem tolerada e permite retorno rápido às
                     atividades.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    3. Qual é a diferença entre cirurgia convencional e a laser?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Qual é a diferença entre cirurgia convencional e a laser?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     A convencional usa bisturi ou eletrocautério, já a laser
                     pode causar menor trauma e recuperação mais confortável, em
                     casos selecionados.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    4. Existe risco de a hemorroida voltar após o tratamento?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Existe risco de a hemorroida voltar após o tratamento?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Sim. Mesmo após cirurgia, hábitos como prisão de ventre,
                     esforço evacuatório e dieta pobre em fibras podem favorecer
                     a recidiva.
@@ -354,7 +354,7 @@ export default function TratamentoHemorroidasPage() {
                 href="/tratamentos/cx-fistulas-anorretais"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
               >
-                Próximo: Fístulas →
+                Próximo →
               </Link>
             </div>
           </div>

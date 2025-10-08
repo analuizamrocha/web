@@ -131,30 +131,12 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                 <li>Urgência para evacuar.</li>
               </ul>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-8">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <svg
-                      className="h-5 w-5 text-yellow-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm text-yellow-700">
-                      ⚠️ Em alguns casos, também podem ocorrer manifestações
-                      fora do intestino, como alterações na pele, olhos e
-                      articulações.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  Em alguns casos, também podem ocorrer manifestações fora do
+                  intestino, como alterações na pele, olhos e articulações.
+                </p>
+              </blockquote>
 
               <h2>Doença de Crohn x Retocolite Ulcerativa</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
@@ -265,56 +247,55 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                 para reduzir sintomas e melhorar a qualidade de vida.
               </p>
 
-              <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20 my-8">
-                <p className="text-primary mb-0">
-                  👉 Se você apresenta sintomas sugestivos de Doença de Crohn ou
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  Se você apresenta sintomas sugestivos de Doença de Crohn ou
                   Retocolite Ulcerativa, agende sua avaliação em
                   coloproctologia.
                 </p>
-              </div>
+              </blockquote>
 
-              <h2>Perguntas Frequentes (FAQ)</h2>
+              <h2>Perguntas frequentes (FAQ)</h2>
 
-              <div className="space-y-6">
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    1. Doença de Crohn e retocolite ulcerativa são a mesma
-                    coisa?
+              <div className="space-y-8 my-12">
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Doença de Crohn e retocolite ulcerativa são a mesma coisa?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Não. Ambas são Doenças Inflamatórias Intestinais, mas têm
                     características diferentes. O diagnóstico correto é feito
                     pelo coloproctologista.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    2. Existe cura para as Doenças Inflamatórias Intestinais?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Existe cura para as Doenças Inflamatórias Intestinais?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Atualmente, não existe cura definitiva. Com tratamento
                     adequado, é possível controlar os sintomas e viver com
                     qualidade.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    3. Preciso de acompanhamento contínuo mesmo sem sintomas?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Preciso de acompanhamento contínuo mesmo sem sintomas?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Sim. Mesmo em períodos de remissão, é essencial o
                     acompanhamento com coloproctologia para prevenir
                     complicações e ajustar o tratamento.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    4. Quando devo procurar um coloproctologista em Curitiba?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Quando devo procurar um coloproctologista em Curitiba?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Se você apresenta dor abdominal frequente, diarreia
                     persistente, sangramento nas fezes ou perda de peso sem
                     causa aparente, deve procurar avaliação com um especialista
@@ -363,7 +344,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                 href="/tratamentos/sindrome-intestino-irritavel"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
               >
-                Próximo: Sindrome do Intestino Irritavel →
+                Próximo →
               </Link>
             </div>
           </div>

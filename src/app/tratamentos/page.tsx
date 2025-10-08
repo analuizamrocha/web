@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import { Card } from '@/components/ui/Card'
 import type { Metadata } from 'next'
-import { LinkButton } from '@/components/ui/LinkButton'
 import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 import { Badge } from '@/components/ui/Badge'
-import { ArrowRight, ChevronRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+import { LinkButton } from '@/components/ui/LinkButton'
 
 export const metadata: Metadata = {
   title: 'Tratamentos de Coloproctologia | Dra. Ana Luiza Moraes Rocha',
   description:
-    'Tratamentos especializados em coloproctologia: cirurgias à laser, tratamento de hemorróidas, fístulas anorretais e muito mais em Curitiba.',
+    'Tratamentos especializados em coloproctologia: cirurgias a laser, tratamento de hemorróidas, fístulas anorretais e muito mais em Curitiba.',
   keywords: [
     'coloproctologia curitiba',
     'cirurgia hemorroidas curitiba',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 const treatments = [
   {
-    title: 'Cirurgias à Laser',
+    title: 'Cirurgias a Laser',
     description:
       'Procedimentos minimamente invasivos com tecnologia laser para tratamento de hemorróidas e fissuras anais.',
     slug: 'cx-laser',
@@ -148,14 +148,10 @@ export default function ServicosPage() {
                 >
                   <div className="flex mt-auto pt-4 justify-between">
                     <Badge variant="primary">{treatment.category}</Badge>
-                    <LinkButton
-                      href={`/tratamentos/${treatment.slug}`}
-                      variant="link"
-                      size="sm"
-                    >
+                    <span className="inline-flex items-center justify-center text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-300">
                       Saiba mais&nbsp;
                       <ArrowRight size={14} className="ml-1" />
-                    </LinkButton>
+                    </span>
                   </div>
                 </Card>
               </Link>

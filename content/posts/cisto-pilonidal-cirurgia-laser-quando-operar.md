@@ -47,7 +47,7 @@ O **cisto pilonidal** ocorre na região **sacrococcígea** (perto do cóccix) qu
 
 O ideal é **após controlar a inflamação aguda**. Na fase infecciosa, realiza-se geralmente **drenagem do abscesso**; a cirurgia definitiva vem **quando a inflamação acalma**, reduzindo riscos e melhorando resultados. O cisto raramente se resolve sozinho e tende a recidivar sem tratamento definitivo.
 
-## Perguntas frequentes
+## Perguntas frequentes (FAQ)
 
 ### 1. O cisto pilonidal some sozinho?
 

@@ -175,31 +175,13 @@ export default function TratamentoHpvAnalPage() {
                 </li>
               </ul>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-8">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <svg
-                      className="h-5 w-5 text-yellow-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm text-yellow-700">
-                      ⚠️ Esses tratamentos devem ser sempre&nbsp;
-                      <strong>prescritos e acompanhados por médico</strong>,
-                      pois o uso inadequado pode causar queimaduras e irritações
-                      na pele ao redor.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  Esses tratamentos devem ser sempre prescritos e acompanhados
+                  por médico, pois o uso inadequado pode causar queimaduras e
+                  irritações na pele ao redor.
+                </p>
+              </blockquote>
 
               <h2>Importante Saber</h2>
               <ul>
@@ -234,47 +216,47 @@ export default function TratamentoHpvAnalPage() {
                 no tratamento e reduzir o risco de recidivas.
               </p>
 
-              <h2>Perguntas Frequentes (FAQ)</h2>
+              <h2>Perguntas frequentes (FAQ)</h2>
 
-              <div className="space-y-6">
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    1. O HPV anal sempre precisa de tratamento?
+              <div className="space-y-8 my-12">
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    O HPV anal sempre precisa de tratamento?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Sim. Mesmo que as verrugas sejam pequenas, o tratamento é
                     indicado para evitar crescimento, sintomas e transmissão a
                     parceiros.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    2. O laser é melhor que a eletrocauterização?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    O laser é melhor que a eletrocauterização?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     O laser oferece maior precisão e pode reduzir recidivas
                     locais, mas a eletrocauterização também é eficaz. A escolha
                     depende do tipo de lesão e da avaliação médica.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    3. As pomadas eliminam o vírus HPV?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    As pomadas eliminam o vírus HPV?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Não. Podofilina, imiquimode e ATA tratam as lesões, mas não
                     eliminam o vírus. É necessário acompanhamento médico e
                     seguimento periódico.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    4. O HPV tratado pode voltar?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    O HPV tratado pode voltar?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Sim. As lesões podem recidivar em qualquer tratamento, por
                     isso o acompanhamento médico é essencial.
                   </p>
@@ -321,7 +303,7 @@ export default function TratamentoHpvAnalPage() {
                 href="/tratamentos/cx-cisto-pilonidal"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
               >
-                Próximo: Cisto Pilonidal →
+                Próximo →
               </Link>
             </div>
           </div>

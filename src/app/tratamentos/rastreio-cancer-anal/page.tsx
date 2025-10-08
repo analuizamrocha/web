@@ -210,17 +210,16 @@ export default function RastreioCancerAnalPage() {
                 adoção de hábitos de vida saudáveis.
               </p>
 
-              <div className="bg-blue-50 border-l-4 border-blue-400 p-6 my-8">
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
                 <div className="space-y-4">
-                  <p className="text-blue-700 mb-0">
-                    📌 Um dos maiores estudos já publicados sobre o tema,
-                    o&nbsp;
+                  <p className="text-secondary italic mb-0">
+                    Um dos maiores estudos já publicados sobre o tema, o{' '}
                     <strong>
                       <a
                         href="https://www.anchorstudy.org"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 underline"
+                        className="text-primary hover:text-primary/80 underline"
                       >
                         ANCHOR Study
                       </a>
@@ -229,14 +228,14 @@ export default function RastreioCancerAnalPage() {
                     vivendo com HIV reduziu significativamente a progressão para
                     câncer anal.
                   </p>
-                  <p className="text-blue-700 mb-0">
-                    📌 Para mais informações, acesse também a&nbsp;
+                  <p className="text-secondary italic mb-0">
+                    Para mais informações, acesse também a{' '}
                     <strong>
                       <a
                         href="https://iansoc.org/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 underline"
+                        className="text-primary hover:text-primary/80 underline"
                       >
                         International Anal Neoplasia Society (IANS)
                       </a>
@@ -244,35 +243,35 @@ export default function RastreioCancerAnalPage() {
                     , referência mundial em prevenção e rastreio do câncer anal.
                   </p>
                 </div>
-              </div>
+              </blockquote>
 
-              <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20 my-8">
-                <p className="text-primary mb-0">
-                  👉 Se você faz parte de um grupo de risco ou tem dúvidas,
-                  procure avaliação com um <strong>coloproctologista</strong>
-                  &nbsp; para definir a melhor estratégia de acompanhamento.
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  Se você faz parte de um grupo de risco ou tem dúvidas, procure
+                  avaliação com um coloproctologista para definir a melhor
+                  estratégia de acompanhamento.
                 </p>
-              </div>
+              </blockquote>
 
-              <h2>Perguntas Frequentes (FAQ)</h2>
+              <h2>Perguntas frequentes (FAQ)</h2>
 
-              <div className="space-y-6">
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    1. O câncer de canal anal é comum?
+              <div className="space-y-8 my-12">
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    O câncer de canal anal é comum?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Não. É considerado um câncer raro, mas sua incidência tem
                     aumentado, principalmente em grupos de risco como pessoas
                     vivendo com HIV ou imunossuprimidos.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    2. Quem deve fazer rastreamento para câncer de canal anal?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Quem deve fazer rastreamento para câncer de canal anal?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     O rastreamento é indicado para grupos de risco, como pessoas
                     que praticam relação anal receptiva, pacientes HIV
                     positivos, imunossuprimidos e mulheres com lesão de colo de
@@ -280,22 +279,22 @@ export default function RastreioCancerAnalPage() {
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    3. Como é feito o rastreamento do câncer de canal anal?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Como é feito o rastreamento do câncer de canal anal?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Pode incluir exame proctológico, citologia anal (similar ao
                     Papanicolau) e anuscopia de alta resolução, que permite
                     biópsia de lesões suspeitas.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    4. A vacinação contra HPV ajuda na prevenção do câncer anal?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    A vacinação contra HPV ajuda na prevenção do câncer anal?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Sim. A vacina contra o HPV é uma das medidas mais eficazes
                     para reduzir o risco de câncer anal, além de proteger contra
                     outros cânceres relacionados ao vírus.
@@ -343,7 +342,7 @@ export default function RastreioCancerAnalPage() {
                 href="/tratamentos/hpv-anal"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
               >
-                Próximo: HPV Anal →
+                Próximo →
               </Link>
             </div>
           </div>

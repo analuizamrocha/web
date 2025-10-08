@@ -3,7 +3,7 @@ import { LinkButton } from '@/components/ui/LinkButton'
 
 const treatments = [
   {
-    name: 'Cirurgias à laser',
+    name: 'Cirurgias a laser',
   },
   {
     name: 'Toxina botulínica para fissura anal e dores crônicas',

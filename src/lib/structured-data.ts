@@ -142,7 +142,7 @@ export const structuredData = {
       description:
         'Tratamento especializado para doenças do intestino, reto e ânus',
       procedureType: [
-        'Cirurgias à laser',
+        'Cirurgias a laser',
         'Botox para fissura anal',
         'Cirurgias para fístulas anorretais',
         'Ligadura elástica para hemorróidas',

@@ -189,33 +189,13 @@ export default function CirurgiaFistulasPage() {
                 </li>
               </ul>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-8">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <svg
-                      className="h-5 w-5 text-yellow-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm text-yellow-700">
-                      <strong>Importante:</strong> no Brasil, o uso de PRF&nbsp;
-                      <strong>
-                        não possui aprovação da Anvisa para cirurgias
-                        coloproctológicas fora do âmbito da pesquisa científica
-                      </strong>
-                      .
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  <strong>Importante:</strong> no Brasil, o uso de PRF não
+                  possui aprovação da Anvisa para cirurgias coloproctológicas
+                  fora do âmbito da pesquisa científica.
+                </p>
+              </blockquote>
 
               <h2>Técnicas com Laser</h2>
               <ul>
@@ -280,65 +260,65 @@ export default function CirurgiaFistulasPage() {
                 <strong>qualidade de vida do paciente</strong>.
               </p>
 
-              <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20 my-8">
-                <p className="text-primary mb-0">
-                  👉 Procure sempre avaliação individualizada com um
+              <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
+                <p className="text-secondary italic mb-0">
+                  Procure sempre avaliação individualizada com um
                   coloproctologista para definição da melhor estratégia de
                   tratamento.
                 </p>
-              </div>
+              </blockquote>
 
-              <h2>Perguntas Frequentes (FAQ)</h2>
+              <h2>Perguntas frequentes (FAQ)</h2>
 
-              <div className="space-y-6">
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    1. A fístula anal pode fechar sozinha?
+              <div className="space-y-8 my-12">
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    A fístula anal pode fechar sozinha?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Não. Diferente de um abscesso, a fístula geralmente não
                     cicatriza espontaneamente e requer avaliação cirúrgica.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    2. Qual é o melhor tipo de cirurgia para fístula anal?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Qual é o melhor tipo de cirurgia para fístula anal?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Não existe uma única técnica ideal. A escolha depende do
                     tipo de fístula, sua relação com o esfíncter e o histórico
                     do paciente.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    3. Toda cirurgia de fístula anal causa incontinência?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    Toda cirurgia de fístula anal causa incontinência?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Não. Muitas técnicas modernas buscam preservar o esfíncter.
                     O risco de incontinência depende da complexidade da fístula
                     e do procedimento escolhido.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    4. O laser pode ser usado no tratamento da fístula?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    O laser pode ser usado no tratamento da fístula?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     Sim. Existem técnicas a laser que cauterizam o trajeto, com
                     menos dano tecidual. Contudo, o sucesso depende do tamanho e
                     da posição da fístula.
                   </p>
                 </div>
 
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    5. O que acontece se eu não operar uma fístula anal?
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                    O que acontece se eu não operar uma fístula anal?
                   </h3>
-                  <p className="text-secondary mb-0">
+                  <p className="text-secondary leading-relaxed">
                     A fístula pode causar infecções recorrentes, dor, secreção
                     crônica e formar novos trajetos, tornando o tratamento mais
                     complexo no futuro.
@@ -386,7 +366,7 @@ export default function CirurgiaFistulasPage() {
                 href="/tratamentos/toxina-botulinica"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
               >
-                Próximo: Toxina Botulínica →
+                Próximo →
               </Link>
             </div>
           </div>
