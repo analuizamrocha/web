@@ -15,7 +15,7 @@ export function HeroSection() {
           <div className="order-1 lg:order-2 lg:flex-1 w-full">
             <Image
               src="/images/hero.webp"
-              alt="Dra. Ana Luiza Moraes Rocha, coloproctologista, em seu consultório médico moderno, sorrindo profissionalmente para pacientes"
+              alt="Dra. Ana Luiza Moraes Rocha, coloproctologista em Curitiba CRM-PR 45351, especialista em cirurgia colorretal e tratamentos proctológicos minimamente invasivos"
               width={960}
               height={1200}
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"

@@ -83,7 +83,7 @@ export function AboutSection() {
           width={1366}
           height={768}
           src="/images/sobre-mim.webp"
-          alt="Dra. Ana Luiza - Formação e qualificações profissionais em coloproctologia"
+          alt="Dra. Ana Luiza Moraes Rocha CRM-PR 45351, formação internacional em coloproctologia, Hospital Clinic Barcelona, especialista em cirurgia colorretal"
           sizes="(max-width: 1024px) 100vw, 0px"
           quality={100}
           className="w-full h-auto object-cover"

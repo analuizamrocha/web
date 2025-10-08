@@ -32,7 +32,8 @@ import {
   Users,
 } from 'lucide-react'
 
-const pageTitle = 'Sobre Dra. Ana Luiza Moraes Rocha | Coloproctologista Curitiba'
+const pageTitle =
+  'Sobre Dra. Ana Luiza Moraes Rocha | Coloproctologista Curitiba'
 const pageDescription =
   'Conheça a trajetória da Dra. Ana Luiza Moraes Rocha, especialista em Coloproctologia com formação internacional e experiência em cirurgias minimamente invasivas.'
 const pageUrl = `${WEBSITE_URL}/sobre`
@@ -288,8 +289,8 @@ export default function SobrePage() {
               <div className="relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 group">
                 <div className="aspect-[4/5] relative">
                   <Image
-                    src="/images/sobre-mim.webp"
-                    alt="Dra. Ana Luiza Moraes Rocha em seu consultório"
+                    src="/images/cx-group.webp"
+                    alt="Dra. Ana Luiza Moraes Rocha, coloproctologista em Curitiba, CRM-PR 45351, em seu consultório médico especializado"
                     fill
                     priority
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -304,8 +305,8 @@ export default function SobrePage() {
               <div className="hidden lg:block relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 group">
                 <div className="aspect-[4/5] relative">
                   <Image
-                    src="/images/side.webp"
-                    alt="Dra. Ana Luiza Moraes Rocha - atendimento humanizado"
+                    src="/images/cx-front.webp"
+                    alt="Dra. Ana Luiza Moraes Rocha, especialista em coloproctologia, atendimento humanizado em cirurgia colorretal, Curitiba-PR"
                     fill
                     loading="lazy"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
