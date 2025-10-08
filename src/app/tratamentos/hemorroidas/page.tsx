@@ -4,12 +4,28 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+} from '@/lib/constants'
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  type FAQItem,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
+
+const pageTitle = 'Tratamento de Hemorróidas | Dra. Ana Luiza Moraes Rocha'
+const pageDescription =
+  'Tratamentos especializados para hemorróidas: ligadura elástica, escleroterapia, cirurgia laser e THD em Curitiba. Procedimentos ambulatoriais e cirúrgicos.'
+const pageUrl = `${WEBSITE_URL}/tratamentos/hemorroidas`
 
 export const metadata: Metadata = {
-  title: 'Tratamento de Hemorróidas | Dra. Ana Luiza Moraes Rocha',
-  description:
-    'Tratamentos especializados para hemorróidas: ligadura elástica, escleroterapia, cirurgia laser e THD em Curitiba. Procedimentos ambulatoriais e cirúrgicos.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'tratamento hemorroidas curitiba',
     'ligadura elástica curitiba',
@@ -19,10 +35,50 @@ export const metadata: Metadata = {
     'hemorroidectomia curitiba',
   ],
   alternates: {
-    canonical:
-      'https://analuizarocha.com.br/tratamentos/tratamento-hemorroidas',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// FAQ data for schema
+const faqItems: FAQItem[] = [
+  {
+    question: 'Toda hemorroida precisa de cirurgia?',
+    answer:
+      'Não. Muitos casos melhoram com mudanças de hábitos, uso de fibras e tratamentos ambulatoriais, como ligadura elástica ou escleroterapia.',
+  },
+  {
+    question: 'A ligadura elástica dói?',
+    answer:
+      'Pode causar desconforto leve nos primeiros dias, mas geralmente é bem tolerada e permite retorno rápido às atividades.',
+  },
+  {
+    question: 'Qual é a diferença entre cirurgia convencional e a laser?',
+    answer:
+      'A convencional usa bisturi ou eletrocautério, já a laser pode causar menor trauma e recuperação mais confortável, em casos selecionados.',
+  },
+  {
+    question: 'Existe risco de a hemorroida voltar após o tratamento?',
+    answer:
+      'Sim. Mesmo após cirurgia, hábitos como prisão de ventre, esforço evacuatório e dieta pobre em fibras podem favorecer a recidiva.',
+  },
+]
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Tratamentos', href: '/tratamentos' },
+  { label: 'Tratamento de Hemorróidas' },
+]
 
 export default function TratamentoHemorroidasPage() {
   return (
@@ -58,6 +114,22 @@ export default function TratamentoHemorroidasPage() {
               'Avaliação médica detalhada, exames complementares quando necessário',
             followup: 'Acompanhamento médico conforme procedimento realizado',
           }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqItems)),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 

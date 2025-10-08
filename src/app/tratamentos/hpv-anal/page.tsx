@@ -4,13 +4,29 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+} from '@/lib/constants'
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  type FAQItem,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
+
+const pageTitle =
+  'Tratamento de HPV Anal: Condilomas e Verrugas | Dra. Ana Luiza Moraes Rocha'
+const pageDescription =
+  'Tratamento especializado de HPV anal: remoção de condilomas e verrugas com laser, eletrocauterização e terapias tópicas em Curitiba.'
+const pageUrl = `${WEBSITE_URL}/tratamentos/hpv-anal`
 
 export const metadata: Metadata = {
-  title:
-    'Tratamento de HPV Anal: Condilomas e Verrugas | Dra. Ana Luiza Moraes Rocha',
-  description:
-    'Tratamento especializado de HPV anal: remoção de condilomas e verrugas com laser, eletrocauterização e terapias tópicas em Curitiba.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'tratamento HPV anal curitiba',
     'condiloma anal curitiba',
@@ -20,9 +36,50 @@ export const metadata: Metadata = {
     'imiquimode condiloma',
   ],
   alternates: {
-    canonical: 'https://analuizarocha.com.br/tratamentos/tratamento-hpv-anal',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// FAQ data for schema
+const faqItems: FAQItem[] = [
+  {
+    question: 'O HPV anal sempre precisa de tratamento?',
+    answer:
+      'Sim. Mesmo que as verrugas sejam pequenas, o tratamento é indicado para evitar crescimento, sintomas e transmissão a parceiros.',
+  },
+  {
+    question: 'O laser é melhor que a eletrocauterização?',
+    answer:
+      'O laser oferece maior precisão e pode reduzir recidivas locais, mas a eletrocauterização também é eficaz. A escolha depende do tipo de lesão e da avaliação médica.',
+  },
+  {
+    question: 'As pomadas eliminam o vírus HPV?',
+    answer:
+      'Não. Podofilina, imiquimode e ATA tratam as lesões, mas não eliminam o vírus. É necessário acompanhamento médico e seguimento periódico.',
+  },
+  {
+    question: 'O HPV tratado pode voltar?',
+    answer:
+      'Sim. As lesões podem recidivar em qualquer tratamento, por isso o acompanhamento médico é essencial.',
+  },
+]
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Tratamentos', href: '/tratamentos' },
+  { label: 'Tratamento de HPV Anal' },
+]
 
 export default function TratamentoHpvAnalPage() {
   return (
@@ -59,6 +116,22 @@ export default function TratamentoHpvAnalPage() {
             followup:
               'Acompanhamento médico para monitoramento de recidivas e cicatrização',
           }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqItems)),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 

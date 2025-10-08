@@ -4,12 +4,29 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+} from '@/lib/constants'
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  type FAQItem,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
+
+const pageTitle =
+  'Cirurgias para Fístulas Anorretais | Dra. Ana Luiza Moraes Rocha'
+const pageDescription =
+  'Tratamentos cirúrgicos especializados para fístulas anorretais: fistulotomia, retalho mucoso, LIFT, laser e técnicas combinadas em Curitiba.'
+const pageUrl = `${WEBSITE_URL}/tratamentos/cx-fistulas-anorretais`
 
 export const metadata: Metadata = {
-  title: 'Cirurgias para Fístulas Anorretais | Dra. Ana Luiza Moraes Rocha',
-  description:
-    'Tratamentos cirúrgicos especializados para fístulas anorretais: fistulotomia, retalho mucoso, LIFT, laser e técnicas combinadas em Curitiba.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'cirurgia fistula anal curitiba',
     'fistulotomia curitiba',
@@ -19,10 +36,55 @@ export const metadata: Metadata = {
     'seton fistula anal curitiba',
   ],
   alternates: {
-    canonical:
-      'https://analuizarocha.com.br/tratamentos/cx-fistulas-anorretais',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// FAQ data for schema
+const faqItems: FAQItem[] = [
+  {
+    question: 'A fístula anal pode fechar sozinha?',
+    answer:
+      'Não. Diferente de um abscesso, a fístula geralmente não cicatriza espontaneamente e requer avaliação cirúrgica.',
+  },
+  {
+    question: 'Qual é o melhor tipo de cirurgia para fístula anal?',
+    answer:
+      'Não existe uma única técnica ideal. A escolha depende do tipo de fístula, sua relação com o esfíncter e o histórico do paciente.',
+  },
+  {
+    question: 'Toda cirurgia de fístula anal causa incontinência?',
+    answer:
+      'Não. Muitas técnicas modernas buscam preservar o esfíncter. O risco de incontinência depende da complexidade da fístula e do procedimento escolhido.',
+  },
+  {
+    question: 'O laser pode ser usado no tratamento da fístula?',
+    answer:
+      'Sim. Existem técnicas a laser que cauterizam o trajeto, com menos dano tecidual. Contudo, o sucesso depende do tamanho e da posição da fístula.',
+  },
+  {
+    question: 'O que acontece se eu não operar uma fístula anal?',
+    answer:
+      'A fístula pode causar infecções recorrentes, dor, secreção crônica e formar novos trajetos, tornando o tratamento mais complexo no futuro.',
+  },
+]
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Tratamentos', href: '/tratamentos' },
+  { label: 'Cirurgias para Fístulas Anorretais' },
+]
 
 export default function CirurgiaFistulasPage() {
   return (
@@ -59,6 +121,22 @@ export default function CirurgiaFistulasPage() {
             followup:
               'Acompanhamento médico especializado conforme técnica cirúrgica utilizada',
           }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqItems)),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 

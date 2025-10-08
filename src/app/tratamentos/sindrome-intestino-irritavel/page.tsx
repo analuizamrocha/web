@@ -4,12 +4,29 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+} from '@/lib/constants'
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  type FAQItem,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
+
+const pageTitle =
+  'Síndrome do Intestino Irritável (SII) | Dra. Ana Luiza Moraes Rocha'
+const pageDescription =
+  'Diagnóstico e tratamento personalizado da Síndrome do Intestino Irritável (SII). Acompanhamento especializado em coloproctologia em Curitiba.'
+const pageUrl = `${WEBSITE_URL}/tratamentos/sindrome-intestino-irritavel`
 
 export const metadata: Metadata = {
-  title: 'Síndrome do Intestino Irritável (SII) | Dra. Ana Luiza Moraes Rocha',
-  description:
-    'Diagnóstico e tratamento personalizado da Síndrome do Intestino Irritável (SII). Acompanhamento especializado em coloproctologia em Curitiba.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'sindrome intestino irritavel curitiba',
     'SII curitiba',
@@ -19,10 +36,50 @@ export const metadata: Metadata = {
     'disturbio funcional intestinal',
   ],
   alternates: {
-    canonical:
-      'https://analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// FAQ data for schema
+const faqItems: FAQItem[] = [
+  {
+    question: 'A Síndrome do Intestino Irritável tem cura?',
+    answer:
+      'Não existe cura definitiva, mas com tratamento adequado os sintomas podem ser controlados, proporcionando qualidade de vida.',
+  },
+  {
+    question: 'Preciso fazer colonoscopia para diagnosticar SII?',
+    answer:
+      'Nem sempre. A colonoscopia pode ser indicada para excluir outras doenças, especialmente em pacientes acima de 45 anos ou com sintomas de alarme.',
+  },
+  {
+    question: 'Quais alimentos pioram a SII?',
+    answer:
+      'Os gatilhos variam, mas alimentos ricos em gordura, cafeína, lactose e dietas com excesso de FODMAPs podem intensificar os sintomas.',
+  },
+  {
+    question: 'Quando procurar um coloproctologista em Curitiba?',
+    answer:
+      'Se você apresenta dor abdominal recorrente, diarreia ou constipação frequentes, ou suspeita de Síndrome do Intestino Irritável, é indicado buscar avaliação com um especialista.',
+  },
+]
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Tratamentos', href: '/tratamentos' },
+  { label: 'Síndrome do Intestino Irritável' },
+]
 
 export default function SindromeIntestinoIrritavelPage() {
   return (
@@ -66,6 +123,22 @@ export default function SindromeIntestinoIrritavelPage() {
               'Excesso de gases',
             ],
           }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqItems)),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 

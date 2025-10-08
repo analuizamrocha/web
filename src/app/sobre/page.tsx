@@ -5,7 +5,21 @@ import { Badge } from '@/components/ui/Badge'
 import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+  CLINICA_NASSIF_UPDATED,
+  WPP_FORMATTED_NUMBER,
+  DR_NAME,
+} from '@/lib/constants'
+import {
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  generateLocalBusinessSchema,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
 import {
   GraduationCap,
   Stethoscope,
@@ -18,10 +32,14 @@ import {
   Users,
 } from 'lucide-react'
 
+const pageTitle = 'Sobre Dra. Ana Luiza Moraes Rocha | Coloproctologista Curitiba'
+const pageDescription =
+  'Conheça a trajetória da Dra. Ana Luiza Moraes Rocha, especialista em Coloproctologia com formação internacional e experiência em cirurgias minimamente invasivas.'
+const pageUrl = `${WEBSITE_URL}/sobre`
+
 export const metadata: Metadata = {
-  title: 'Sobre Dra. Ana Luiza Moraes Rocha | Coloproctologista Curitiba',
-  description:
-    'Conheça a trajetória da Dra. Ana Luiza Moraes Rocha, especialista em Coloproctologia com formação internacional e experiência em cirurgias minimamente invasivas.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'coloproctologista curitiba',
     'dra ana luiza moraes rocha',
@@ -31,9 +49,25 @@ export const metadata: Metadata = {
     'cirurgia colorretal curitiba',
   ],
   alternates: {
-    canonical: 'https://analuizarocha.com.br/sobre',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Sobre' },
+]
 
 const credentials = [
   {
@@ -163,6 +197,44 @@ export default function SobrePage() {
               addressCountry: 'BR',
             },
           }),
+        }}
+      />
+
+      {/* LocalBusiness Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateLocalBusinessSchema({
+              name: `${DR_NAME} - Coloproctologia`,
+              description:
+                'Consultas de Coloproctologia com atendimento humanizado e especializado em Curitiba. Diagnóstico e tratamento de doenças do intestino, reto e ânus.',
+              address: {
+                streetAddress: CLINICA_NASSIF_UPDATED.address,
+                addressLocality: CLINICA_NASSIF_UPDATED.city,
+                addressRegion: CLINICA_NASSIF_UPDATED.state,
+                postalCode: CLINICA_NASSIF_UPDATED.cep,
+                addressCountry: 'BR',
+              },
+              geo: {
+                latitude: CLINICA_NASSIF_UPDATED.coordinates.latitude,
+                longitude: CLINICA_NASSIF_UPDATED.coordinates.longitude,
+              },
+              telephone: WPP_FORMATTED_NUMBER,
+              url: WEBSITE_URL,
+              image: `${WEBSITE_URL}/images/og.png`,
+              priceRange: '$$',
+              openingHours: CLINICA_NASSIF_UPDATED.openingHours,
+            })
+          ),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 

@@ -4,13 +4,29 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+} from '@/lib/constants'
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  type FAQItem,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
+
+const pageTitle =
+  'Doenças Inflamatórias Intestinais (DII) | Dra. Ana Luiza Moraes Rocha'
+const pageDescription =
+  'Diagnóstico e tratamento de Doenças Inflamatórias Intestinais: Doença de Crohn e Retocolite Ulcerativa. Acompanhamento especializado em Curitiba.'
+const pageUrl = `${WEBSITE_URL}/tratamentos/doencas-inflamatorias-intestinais`
 
 export const metadata: Metadata = {
-  title:
-    'Doenças Inflamatórias Intestinais (DII) | Dra. Ana Luiza Moraes Rocha',
-  description:
-    'Diagnóstico e tratamento de Doenças Inflamatórias Intestinais: Doença de Crohn e Retocolite Ulcerativa. Acompanhamento especializado em Curitiba.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'doenças inflamatórias intestinais curitiba',
     'doença de crohn curitiba',
@@ -20,10 +36,50 @@ export const metadata: Metadata = {
     'tratamento crohn curitiba',
   ],
   alternates: {
-    canonical:
-      'https://analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// FAQ data for schema
+const faqItems: FAQItem[] = [
+  {
+    question: 'Doença de Crohn e retocolite ulcerativa são a mesma coisa?',
+    answer:
+      'Não. Ambas são Doenças Inflamatórias Intestinais, mas têm características diferentes. O diagnóstico correto é feito pelo coloproctologista.',
+  },
+  {
+    question: 'Existe cura para as Doenças Inflamatórias Intestinais?',
+    answer:
+      'Atualmente, não existe cura definitiva. Com tratamento adequado, é possível controlar os sintomas e viver com qualidade.',
+  },
+  {
+    question: 'Preciso de acompanhamento contínuo mesmo sem sintomas?',
+    answer:
+      'Sim. Mesmo em períodos de remissão, é essencial o acompanhamento com coloproctologia para prevenir complicações e ajustar o tratamento.',
+  },
+  {
+    question: 'Quando devo procurar um coloproctologista em Curitiba?',
+    answer:
+      'Se você apresenta dor abdominal frequente, diarreia persistente, sangramento nas fezes ou perda de peso sem causa aparente, deve procurar avaliação com um especialista em coloproctologia.',
+  },
+]
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Tratamentos', href: '/tratamentos' },
+  { label: 'Doenças Inflamatórias Intestinais' },
+]
 
 export default function DoencasInflamatoriasIntestinaisPage() {
   return (
@@ -67,6 +123,22 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               'Fadiga',
             ],
           }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqItems)),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 

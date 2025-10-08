@@ -4,13 +4,29 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+} from '@/lib/constants'
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  type FAQItem,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
+
+const pageTitle =
+  'Rastreio e Prevenção do Câncer de Canal Anal | Dra. Ana Luiza Moraes Rocha'
+const pageDescription =
+  'Rastreamento e prevenção do câncer de canal anal: grupos de risco, citologia anal, anuscopia de alta resolução e vacinação HPV em Curitiba.'
+const pageUrl = `${WEBSITE_URL}/tratamentos/rastreio-cancer-anal`
 
 export const metadata: Metadata = {
-  title:
-    'Rastreio e Prevenção do Câncer de Canal Anal | Dra. Ana Luiza Moraes Rocha',
-  description:
-    'Rastreamento e prevenção do câncer de canal anal: grupos de risco, citologia anal, anuscopia de alta resolução e vacinação HPV em Curitiba.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'rastreio cancer anal curitiba',
     'prevenção cancer anal',
@@ -20,9 +36,50 @@ export const metadata: Metadata = {
     'IANS coloproctologia',
   ],
   alternates: {
-    canonical: 'https://analuizarocha.com.br/tratamentos/rastreio-cancer-anal',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// FAQ data for schema
+const faqItems: FAQItem[] = [
+  {
+    question: 'O câncer de canal anal é comum?',
+    answer:
+      'Não. É considerado um câncer raro, mas sua incidência tem aumentado, principalmente em grupos de risco como pessoas vivendo com HIV ou imunossuprimidos.',
+  },
+  {
+    question: 'Quem deve fazer rastreamento para câncer de canal anal?',
+    answer:
+      'O rastreamento é indicado para grupos de risco, como pessoas que praticam relação anal receptiva, pacientes HIV positivos, imunossuprimidos e mulheres com lesão de colo de útero associada ao HPV.',
+  },
+  {
+    question: 'Como é feito o rastreamento do câncer de canal anal?',
+    answer:
+      'Pode incluir exame proctológico, citologia anal (similar ao Papanicolau) e anuscopia de alta resolução, que permite biópsia de lesões suspeitas.',
+  },
+  {
+    question: 'A vacinação contra HPV ajuda na prevenção do câncer anal?',
+    answer:
+      'Sim. A vacina contra o HPV é uma das medidas mais eficazes para reduzir o risco de câncer anal, além de proteger contra outros cânceres relacionados ao vírus.',
+  },
+]
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Tratamentos', href: '/tratamentos' },
+  { label: 'Rastreio do Câncer de Canal Anal' },
+]
 
 export default function RastreioCancerAnalPage() {
   return (
@@ -58,6 +115,22 @@ export default function RastreioCancerAnalPage() {
             followup:
               'Acompanhamento conforme protocolo de rastreamento para grupos de risco',
           }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqItems)),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 

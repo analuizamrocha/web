@@ -4,12 +4,29 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+} from '@/lib/constants'
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  type FAQItem,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
+
+const pageTitle =
+  'Toxina Botulínica na Coloproctologia | Dra. Ana Luiza Moraes Rocha'
+const pageDescription =
+  'Aplicação de toxina botulínica para tratamento de fissura anal crônica e dores anais persistentes em Curitiba. Procedimento minimamente invasivo.'
+const pageUrl = `${WEBSITE_URL}/tratamentos/toxina-botulinica`
 
 export const metadata: Metadata = {
-  title: 'Toxina Botulínica na Coloproctologia | Dra. Ana Luiza Moraes Rocha',
-  description:
-    'Aplicação de toxina botulínica para tratamento de fissura anal crônica e dores anais persistentes em Curitiba. Procedimento minimamente invasivo.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'toxina botulinica anal curitiba',
     'botox fissura anal curitiba',
@@ -19,9 +36,50 @@ export const metadata: Metadata = {
     'procedimento minimamente invasivo',
   ],
   alternates: {
-    canonical: 'https://analuizarocha.com.br/tratamentos/toxina-botulinica',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// FAQ data for schema
+const faqItems: FAQItem[] = [
+  {
+    question: 'A aplicação de toxina botulínica é dolorosa?',
+    answer:
+      'O procedimento pode causar desconforto leve durante a aplicação, mas é geralmente bem tolerado. Pode ser realizado com anestesia local se necessário.',
+  },
+  {
+    question: 'Quanto tempo demora para fazer efeito?',
+    answer:
+      'Os primeiros sinais de melhora da dor costumam aparecer nos primeiros dias após a aplicação, com efeito máximo em 1-2 semanas.',
+  },
+  {
+    question: 'Posso ter incontinência após a aplicação?',
+    answer:
+      'Em raros casos pode ocorrer dificuldade leve e transitória para controlar gases. A incontinência fecal é muito rara quando a aplicação é feita adequadamente.',
+  },
+  {
+    question: 'Quantas aplicações posso fazer?',
+    answer:
+      'O procedimento pode ser repetido conforme necessário, respeitando intervalos adequados entre as aplicações, sempre com avaliação médica.',
+  },
+]
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Tratamentos', href: '/tratamentos' },
+  { label: 'Toxina Botulínica' },
+]
 
 export default function ToxinaBotulínicaPage() {
   return (
@@ -56,6 +114,22 @@ export default function ToxinaBotulínicaPage() {
               'Avaliação médica especializada, análise de indicações e contraindicações',
             followup: 'Acompanhamento para avaliação da resposta terapêutica',
           }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqItems)),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 

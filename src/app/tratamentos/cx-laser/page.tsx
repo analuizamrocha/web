@@ -4,12 +4,29 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+} from '@/lib/constants'
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  type FAQItem,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
+
+const pageTitle =
+  'Cirurgias a Laser em Coloproctologia | Dra. Ana Luiza Moraes Rocha'
+const pageDescription =
+  'Cirurgias a laser para hemorróidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.'
+const pageUrl = `${WEBSITE_URL}/tratamentos/cx-laser`
 
 export const metadata: Metadata = {
-  title: 'Cirurgias a Laser em Coloproctologia | Dra. Ana Luiza Moraes Rocha',
-  description:
-    'Cirurgias a laser para hemorróidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'cirurgia laser hemorroidas curitiba',
     'fissura anal laser curitiba',
@@ -18,9 +35,50 @@ export const metadata: Metadata = {
     'proctologista laser curitiba',
   ],
   alternates: {
-    canonical: 'https://analuizarocha.com.br/tratamentos/cx-laser',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// FAQ data for schema
+const faqItems: FAQItem[] = [
+  {
+    question: 'Todas as doenças anorretais podem ser tratadas com laser?',
+    answer:
+      'O laser é útil em casos selecionados e a indicação depende sempre da avaliação médica.',
+  },
+  {
+    question: 'A cirurgia a laser é menos dolorosa que a convencional?',
+    answer:
+      'Em muitos casos, sim. O laser pode reduzir o trauma nos tecidos e, consequentemente, a dor no pós-operatório. Mas a resposta varia conforme o paciente e o tipo de doença.',
+  },
+  {
+    question: 'O laser substitui totalmente a cirurgia convencional?',
+    answer:
+      'Não. O laser é uma ferramenta moderna, mas não elimina a necessidade de técnicas tradicionais em determinados casos.',
+  },
+  {
+    question: 'Quanto tempo leva para se recuperar de uma cirurgia a laser?',
+    answer:
+      'A recuperação costuma ser mais rápida do que na cirurgia convencional, permitindo retorno precoce às atividades leves. O tempo exato varia conforme o procedimento realizado.',
+  },
+]
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Tratamentos', href: '/tratamentos' },
+  { label: 'Cirurgias a Laser' },
+]
 
 export default function CirurgiasLaserPage() {
   return (
@@ -55,6 +113,22 @@ export default function CirurgiasLaserPage() {
             followup:
               'Consulta de retorno em 7 dias, orientações pós-operatórias detalhadas',
           }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqItems)),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 

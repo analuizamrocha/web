@@ -4,12 +4,28 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WEBSITE_URL,
+} from '@/lib/constants'
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateOpenGraphMetadata,
+  generateTwitterMetadata,
+  type FAQItem,
+  type BreadcrumbItem,
+} from '@/lib/seo-schemas'
+
+const pageTitle = 'Cirurgia para Cisto Pilonidal | Dra. Ana Luiza Moraes Rocha'
+const pageDescription =
+  'Cirurgia para cisto pilonidal: técnica convencional e laser. Tratamento definitivo com recuperação rápida e menor dor pós-operatória em Curitiba.'
+const pageUrl = `${WEBSITE_URL}/tratamentos/cx-cisto-pilonidal`
 
 export const metadata: Metadata = {
-  title: 'Cirurgia para Cisto Pilonidal | Dra. Ana Luiza Moraes Rocha',
-  description:
-    'Cirurgia para cisto pilonidal: técnica convencional e laser. Tratamento definitivo com recuperação rápida e menor dor pós-operatória em Curitiba.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'cirurgia cisto pilonidal curitiba',
     'cisto pilonidal laser curitiba',
@@ -19,9 +35,50 @@ export const metadata: Metadata = {
     'laser pilonidal',
   ],
   alternates: {
-    canonical: 'https://analuizarocha.com.br/tratamentos/cx-cisto-pilonidal',
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
+
+// FAQ data for schema
+const faqItems: FAQItem[] = [
+  {
+    question: 'O cisto pilonidal pode voltar após a cirurgia?',
+    answer:
+      'Sim. Tanto na cirurgia convencional quanto no laser existe risco de recidiva, embora o laser possa reduzir esse risco em alguns casos.',
+  },
+  {
+    question: 'Qual é a diferença na recuperação entre as técnicas?',
+    answer:
+      'A cirurgia convencional exige curativos diários e recuperação mais longa, enquanto o laser costuma permitir retorno precoce às atividades.',
+  },
+  {
+    question: 'Toda pessoa com cisto pilonidal precisa operar?',
+    answer:
+      'Não. Em fase aguda, é feita drenagem do abscesso. A cirurgia definitiva é indicada quando o quadro está controlado, para prevenir recidivas.',
+  },
+  {
+    question: 'O laser é indicado em todos os casos?',
+    answer:
+      'Sim. Hoje se sabe que todo cisto pilonidal pode responder ao tratamento a laser, mas é importante entender que, assim como na cirurgia convencional, ainda existe risco de recidiva.',
+  },
+]
+
+// Breadcrumb data for schema
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Tratamentos', href: '/tratamentos' },
+  { label: 'Cirurgia para Cisto Pilonidal' },
+]
 
 export default function CistoPilonidalPage() {
   return (
@@ -58,6 +115,22 @@ export default function CistoPilonidalPage() {
             followup:
               'Acompanhamento pós-operatório para monitoramento da cicatrização',
           }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqItems)),
+        }}
+      />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)),
         }}
       />
 
