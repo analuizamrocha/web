@@ -32,15 +32,15 @@ A **hemorroida** é uma das doenças mais comuns tratadas na coloproctologia, e 
 
 Na maioria dos casos, o tratamento é **clínico**, especialmente durante a fase de crise. A cirurgia só é indicada em situações específicas, após uma avaliação individualizada pelo coloproctologista.
 
-## O que é a Hemorroida?
+## O que é a hemorroida?
 
 As hemorroidas são **veias localizadas na região anal e do reto**, que fazem parte da anatomia normal e ajudam a manter a continência. Quando essas veias se dilatam ou inflamam, surgem sintomas como dor, sangramento, coceira e exteriorização das veias — caracterizando a **doença hemorroidária**.
 
 É importante destacar que **ter hemorroidas é normal**, mas quando elas se tornam sintomáticas, precisam de acompanhamento com coloproctologista.
 
-## Hemorroida Interna x Hemorroida Externa
+## Hemorroida interna x hemorroida externa
 
-### Hemorroida Interna
+### Hemorroida interna
 
 As **hemorroidas internas** estão localizadas dentro do canal anal e geralmente **não causam dor**, pois a região é pouco sensível à dor. Elas são classificadas em quatro graus, de acordo com o grau de prolapso (quando saem pelo ânus):
 
@@ -51,7 +51,7 @@ As **hemorroidas internas** estão localizadas dentro do canal anal e geralmente
 
 A classificação da hemorroida interna é fundamental para definir o tratamento mais adequado.
 
-### Hemorroida Externa
+### Hemorroida externa
 
 As **hemorroidas externas** ficam logo abaixo da pele do ânus e podem causar **dor, coceira, inchaço, dificuldade de higiene e desconforto local**.
 
@@ -59,7 +59,7 @@ Durante uma **crise hemorroidária**, quando há inflamação ou **trombose** (f
 
 Nessa fase, o tratamento deve ser **clínico**, com foco em **aliviar a dor, reduzir o edema e controlar a inflamação**, deixando a avaliação cirúrgica para um momento mais seguro, após a estabilização do quadro.
 
-## Durante a Crise: O Tratamento Deve Ser Clínico
+## Durante a crise: o tratamento deve ser clínico
 
 Na fase de crise, o tratamento tem como objetivo **aliviar a dor, reduzir a inflamação e facilitar a evacuação**. A conduta inclui:
 
@@ -70,11 +70,11 @@ Na fase de crise, o tratamento tem como objetivo **aliviar a dor, reduzir a infl
 
 Após a melhora da crise, o coloproctologista avalia o tratamento definitivo — seja com ligadura elástica ou cirurgia, conforme o tipo e o grau da doença.
 
-## Tratamentos para Hemorroidas Internas
+## Tratamentos para hemorroidas internas
 
 O tratamento das hemorroidas internas depende do grau e da resposta às medidas clínicas.
 
-### Ligadura Elástica
+### Ligadura elástica
 
 A **ligadura elástica** é uma excelente opção para **hemorroidas internas de graus I, II e III**. O procedimento é rápido, seguro e realizado em ambiente ambulatorial.
 
@@ -84,7 +84,7 @@ Durante a ligadura, pequenas borrachinhas são colocadas na base das hemorroidas
 - **Sensação durante o procedimento:** **não causa dor**, pois é feita **acima da linha pectínea**, região sem receptores de dor. O paciente pode sentir apenas **um leve desconforto ou sensação de peso**, semelhante à vontade de evacuar, que tende a desaparecer em poucas horas.
 - **Limitação:** não indicada para hemorroidas externas ou de grau IV.
 
-### Cirurgia Convencional ou a Laser
+### Cirurgia convencional ou a laser
 
 Nos **casos mais avançados** — especialmente **hemorroidas internas de grau IV** e **hemorroidas externas sintomáticas** que causam dor, coceira ou dificuldade de higiene — o **tratamento cirúrgico** pode ser indicado, sempre com base em uma avaliação individualizada do coloproctologista.
 
@@ -95,7 +95,7 @@ Existem diferentes técnicas, como:
 
 A escolha da técnica depende do tipo e grau da hemorroida, bem como das características e preferências do paciente.
 
-## Quando Procurar um Coloproctologista
+## Quando procurar um coloproctologista
 
 Procure avaliação com um coloproctologista se você apresenta:
 

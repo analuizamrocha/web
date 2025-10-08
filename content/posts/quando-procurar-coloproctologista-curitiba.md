@@ -36,7 +36,7 @@ A saúde intestinal é fundamental para nosso bem-estar geral, mas muitas pessoa
 
 Se você está experimentando desconfortos intestinais, alterações no hábito intestinal ou simplesmente quer entender melhor quando é hora de buscar ajuda especializada, este guia completo irá esclarecer suas dúvidas e orientar sobre os próximos passos.
 
-## Sinais de que Você Precisa Procurar um Coloproctologista
+## Sinais de que você precisa procurar um coloproctologista
 
 Você já sentiu que algo não estava certo com seu intestino, mas deixou para depois por achar que era "coisa passageira"? Essa é a realidade de muitos pacientes que chegam ao consultório.
 
@@ -54,7 +54,7 @@ Esses sintomas podem ter diversas causas, desde condições simples até doença
 
 A consulta preventiva permite esclarecer dúvidas e iniciar os cuidados apropriados para sua saúde intestinal.
 
-## Sintomas que Não Devem Ser Ignorados
+## Sintomas que não devem ser ignorados
 
 Alguns **sintomas na coloproctologia** exigem atenção imediata e não devem ser postergados. O sangramento retal, independentemente da quantidade, sempre merece investigação por profissional especializado. Muitas pessoas associam sangue nas fezes apenas a hemorroidas, mas esse sintoma pode indicar condições mais sérias.
 
@@ -64,7 +64,7 @@ Dor anal intensa, especialmente durante ou após a evacuação, pode indicar fis
 
 Sintomas sistêmicos como febre associada a alterações intestinais, perda de peso não intencional, fadiga inexplicada ou anemia podem indicar processos inflamatórios ou outras condições sérias que necessitam investigação detalhada.
 
-## Prevenção: Quando Fazer Consultas de Rotina
+## Prevenção: quando fazer consultas de rotina
 
 A prevenção é a melhor estratégia quando se trata de saúde intestinal. Para pessoas sem sintomas ou fatores de risco, recomenda-se iniciar o acompanhamento preventivo aos 45 anos, idade em que o rastreamento do câncer colorretal deve começar, com exame de colonoscopia.
 
@@ -76,7 +76,7 @@ Pessoas com síndrome metabólica, diabetes, obesidade ou que fazem uso de medic
 
 A consulta preventiva não é apenas sobre exames. É uma oportunidade para discutir hábitos alimentares, estilo de vida e receber orientações personalizadas para manter a saúde intestinal em dia.
 
-## Preparando-se para a Primeira Consulta
+## Preparando-se para a primeira consulta
 
 A primeira consulta com o coloproctologista é fundamental para estabelecer um diagnóstico correto e plano de tratamento adequado. Prepare-se levando todos os exames anteriores, lista de medicamentos em uso e histórico médico familiar detalhado.
 
@@ -90,7 +90,7 @@ Se for necessário realizar exames durante a consulta, o médico explicará os p
 
 Não é necessário realizar qualquer preparo intestinal antes de ir para a consulta ou tomar laxantes.
 
-## Perguntas Frequentes (FAQ)
+## Perguntas frequentes (FAQ)
 
 ### 1. Preciso mesmo procurar um coloproctologista se o sangramento for pequeno?
 

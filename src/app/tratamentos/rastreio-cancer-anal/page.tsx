@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/Badge'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title:
@@ -100,17 +102,17 @@ export default function RastreioCancerAnalPage() {
               </p>
               <ul>
                 <li>
-                  Infecção persistente pelo{' '}
+                  Infecção persistente pelo&nbsp;
                   <strong>HPV (Papilomavírus Humano)</strong>.
                 </li>
                 <li>
-                  História de{' '}
+                  História de&nbsp;
                   <strong>condilomas (verrugas genitais/anais)</strong>.
                 </li>
                 <li>
                   <strong>Imunossupressão</strong>, como em pessoas vivendo com
                   HIV, <strong>pós-transplantados de órgãos sólidos</strong> ou
-                  portadores de{' '}
+                  portadores de&nbsp;
                   <strong>
                     doenças autoimunes em uso de imunossupressores
                   </strong>
@@ -118,7 +120,7 @@ export default function RastreioCancerAnalPage() {
                 </li>
                 <li>Tabagismo.</li>
                 <li>
-                  Mulheres que tiveram diagnóstico de{' '}
+                  Mulheres que tiveram diagnóstico de&nbsp;
                   <strong>NIC (neoplasia intraepitelial cervical)</strong> ou
                   câncer de colo do útero associado ao HPV.
                 </li>
@@ -126,7 +128,7 @@ export default function RastreioCancerAnalPage() {
 
               <h2>Importância da Prevenção</h2>
               <p>
-                A prevenção do câncer anal passa principalmente pelo{' '}
+                A prevenção do câncer anal passa principalmente pelo&nbsp;
                 <strong>controle do HPV</strong>.
               </p>
               <ul>
@@ -196,9 +198,10 @@ export default function RastreioCancerAnalPage() {
 
               <h2>Considerações Finais</h2>
               <p>
-                O rastreamento do câncer de canal anal deve ser direcionado a{' '}
+                O rastreamento do câncer de canal anal deve ser direcionado
+                a&nbsp;
                 <strong>grupos de risco específicos</strong>, utilizando métodos
-                como{' '}
+                como&nbsp;
                 <strong>citologia anal e anuscopia de alta resolução</strong>.
               </p>
               <p>
@@ -210,7 +213,8 @@ export default function RastreioCancerAnalPage() {
               <div className="bg-blue-50 border-l-4 border-blue-400 p-6 my-8">
                 <div className="space-y-4">
                   <p className="text-blue-700 mb-0">
-                    📌 Um dos maiores estudos já publicados sobre o tema, o{' '}
+                    📌 Um dos maiores estudos já publicados sobre o tema,
+                    o&nbsp;
                     <strong>
                       <a
                         href="https://www.anchorstudy.org"
@@ -226,7 +230,7 @@ export default function RastreioCancerAnalPage() {
                     câncer anal.
                   </p>
                   <p className="text-blue-700 mb-0">
-                    📌 Para mais informações, acesse também a{' '}
+                    📌 Para mais informações, acesse também a&nbsp;
                     <strong>
                       <a
                         href="https://iansoc.org/"
@@ -245,8 +249,8 @@ export default function RastreioCancerAnalPage() {
               <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20 my-8">
                 <p className="text-primary mb-0">
                   👉 Se você faz parte de um grupo de risco ou tem dúvidas,
-                  procure avaliação com um <strong>coloproctologista</strong>{' '}
-                  para definir a melhor estratégia de acompanhamento.
+                  procure avaliação com um <strong>coloproctologista</strong>
+                  &nbsp; para definir a melhor estratégia de acompanhamento.
                 </p>
               </div>
 
@@ -311,12 +315,17 @@ export default function RastreioCancerAnalPage() {
                 </p>
               }
               actions={
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
+                  Agendar consulta
+                </LinkButton>
               }
               variant="secondary"
             />

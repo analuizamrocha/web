@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/Badge'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Cirurgias à Laser em Coloproctologia | Dra. Ana Luiza Moraes Rocha',
@@ -180,7 +182,7 @@ export default function CirurgiasLaserPage() {
 
               <h2>Considerações Importantes</h2>
               <p>
-                Apesar dos avanços, a cirurgia a laser{' '}
+                Apesar dos avanços, a cirurgia a laser&nbsp;
                 <strong>
                   não substitui todos os procedimentos tradicionais
                 </strong>
@@ -253,12 +255,17 @@ export default function CirurgiasLaserPage() {
                 </p>
               }
               actions={
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Avaliação
-                </Link>
+                  Agendar consulta
+                </LinkButton>
               }
               variant="secondary"
             />

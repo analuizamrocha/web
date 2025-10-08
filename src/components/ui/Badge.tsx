@@ -8,7 +8,7 @@ const badgeVariants = cva(
     variants: {
       variant: {
         primary: 'bg-primary/10 text-primary',
-        secondary: 'bg-secondary/20 text-secondary',
+        secondary: 'bg-secondary/30 text-primary',
         success: 'bg-green-100 text-green-800',
         warning: 'bg-yellow-100 text-yellow-800',
         error: 'bg-red-100 text-red-800',
@@ -33,9 +33,18 @@ export interface BadgeProps
   children: ReactNode
 }
 
-export function Badge({ className, variant, size, children, ...props }: BadgeProps) {
+export function Badge({
+  className,
+  variant,
+  size,
+  children,
+  ...props
+}: BadgeProps) {
   return (
-    <span className={cn(badgeVariants({ variant, size }), className)} {...props}>
+    <span
+      className={cn(badgeVariants({ variant, size }), className)}
+      {...props}
+    >
       {children}
     </span>
   )

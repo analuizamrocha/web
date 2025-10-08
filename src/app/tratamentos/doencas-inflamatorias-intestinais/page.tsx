@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/Badge'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title:
@@ -109,7 +111,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                 o bem-estar.
               </p>
               <p>
-                Se você busca tratamento de{' '}
+                Se você busca tratamento de&nbsp;
                 <strong>Doenças Inflamatórias Intestinais em Curitiba</strong>,
                 o coloproctologista é o especialista indicado para sua
                 avaliação.
@@ -178,7 +180,8 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               </div>
 
               <p>
-                Apesar de diferentes, ambas exigem acompanhamento contínuo com{' '}
+                Apesar de diferentes, ambas exigem acompanhamento contínuo
+                com&nbsp;
                 <strong>coloproctologista</strong>.
               </p>
 
@@ -234,7 +237,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               </ul>
 
               <p>
-                O objetivo principal é alcançar e manter a{' '}
+                O objetivo principal é alcançar e manter a&nbsp;
                 <strong>remissão</strong>, reduzindo crises e proporcionando
                 qualidade de vida.
               </p>
@@ -257,7 +260,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                 acompanhamento especializado.
               </p>
               <p>
-                O diagnóstico precoce e o tratamento individualizado com{' '}
+                O diagnóstico precoce e o tratamento individualizado com&nbsp;
                 <strong>coloproctologista em Curitiba</strong> são fundamentais
                 para reduzir sintomas e melhorar a qualidade de vida.
               </p>
@@ -332,12 +335,17 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                 </p>
               }
               actions={
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
+                  Agendar consulta
+                </LinkButton>
               }
               variant="secondary"
             />

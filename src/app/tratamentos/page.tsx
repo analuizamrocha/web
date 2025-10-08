@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import { Card } from '@/components/ui/Card'
 import type { Metadata } from 'next'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import { Badge } from '@/components/ui/Badge'
+import { ArrowRight, ChevronRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Tratamentos de Coloproctologia | Dra. Ana Luiza Moraes Rocha',
@@ -132,6 +136,7 @@ export default function ServicosPage() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-8 xl:gap-10 mb-16">
             {treatments.map((treatment) => (
               <Link
+                className="group"
                 key={treatment.slug}
                 href={`/tratamentos/${treatment.slug}`}
               >
@@ -139,12 +144,18 @@ export default function ServicosPage() {
                   title={treatment.title}
                   description={treatment.description}
                   variant="service"
-                  className="h-full hover:scale-105 transition-transform duration-300 cursor-pointer"
+                  className="h-full transition-transform duration-300 cursor-pointer"
                 >
-                  <div className="mt-auto pt-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
-                      {treatment.category}
-                    </span>
+                  <div className="flex mt-auto pt-4 justify-between">
+                    <Badge variant="primary">{treatment.category}</Badge>
+                    <LinkButton
+                      href={`/tratamentos/${treatment.slug}`}
+                      variant="link"
+                      size="sm"
+                    >
+                      Saiba mais&nbsp;
+                      <ArrowRight size={14} className="ml-1" />
+                    </LinkButton>
                   </div>
                 </Card>
               </Link>
@@ -159,28 +170,36 @@ export default function ServicosPage() {
               </h2>
               <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
                 Agende sua consulta e receba o cuidado especializado que você
-                merece. Atendimento humanizado com a mais alta qualidade
-                técnica.
+                merece.
+                <br />
+                Atendimento humanizado com a mais alta qualidade técnica.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
-                <Link
+                  Agendar consulta
+                </LinkButton>
+                <LinkButton
                   href="/blog"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-2xl hover:bg-primary hover:text-background transition-all duration-300"
+                  size="xl"
+                  variant="outline"
+                  className="text-lg px-8 py-4 font-semibold text-nowrap shadow-lg hover:shadow-xl transform  transition-all duration-300"
                 >
-                  Artigos Educativos
-                </Link>
+                  Artigos educativos
+                </LinkButton>
               </div>
             </div>
           </div>
 
           {/* Breadcrumb Navigation */}
-          <div className="mt-16 text-center">
+          <div className="mt-8 text-center">
             <Link
               href="/"
               className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg"

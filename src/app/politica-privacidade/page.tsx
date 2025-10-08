@@ -12,25 +12,24 @@ export default function PoliticaPrivacidadePage() {
     <section className="section bg-background pt-24 md:pt-28">
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
         <div className="mx-auto max-w-4xl">
-          <header className="mb-12">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
+          <header className="mb-12 max-w-none">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight ">
               Política de Privacidade
             </h1>
-            <p className="text-lg text-secondary leading-relaxed">
+            <p className="inline-block text-lg text-secondary leading-relaxed max-w-5xl">
               Esta Política de Privacidade estabelece como são tratados os dados
               pessoais coletados neste site, em conformidade com a&nbsp;
               <strong className="text-primary">
-                Lei Geral de Proteção de Dados Pessoais – LGPD (Lei nº
-                13.709/2018)
+                Lei Geral de Proteção de Dados Pessoais – LGPD
               </strong>
-              , demais normas aplicáveis à proteção de dados e às diretrizes
-              éticas do{' '}
+              &nbsp; (Lei nº 13.709/2018), demais normas aplicáveis à proteção
+              de dados e às diretrizes éticas do&nbsp;
               <strong className="text-primary">
                 Conselho Federal de Medicina (CFM)
               </strong>
               .
             </p>
-            <p className="text-base text-secondary leading-relaxed">
+            <p className="text-base text-secondary leading-relaxed max-w-none">
               Ao utilizar este site, o usuário declara ciência e concordância
               com as condições aqui descritas.
             </p>
@@ -144,16 +143,16 @@ export default function PoliticaPrivacidadePage() {
             <p>Este site utiliza cookies para:</p>
             <ul>
               <li>
-                <strong>Cookies essenciais:</strong> funcionamento básico do
-                site.
+                Funcionamento básico do site:&nbsp;
+                <strong>cookies essenciais</strong>.
               </li>
               <li>
-                <strong>Cookies de desempenho:</strong> análise de tráfego e
-                interação com as páginas.
+                Análise de tráfego e interação com as páginas:&nbsp;
+                <strong>cookies de desempenho</strong>.
               </li>
               <li>
-                <strong>Cookies de funcionalidade:</strong> lembrar preferências
-                do usuário.
+                Lembrar preferências do usuário:&nbsp;
+                <strong>cookies de funcionalidade</strong>.
               </li>
             </ul>
             <p>

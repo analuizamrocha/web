@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/Badge'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Tratamento de Hemorróidas | Dra. Ana Luiza Moraes Rocha',
@@ -99,7 +101,7 @@ export default function TratamentoHemorroidasPage() {
 
               <h2>Ligadura Elástica</h2>
               <p>
-                A ligadura elástica é um{' '}
+                A ligadura elástica é um&nbsp;
                 <strong>procedimento ambulatorial</strong>.
               </p>
               <ul>
@@ -108,7 +110,7 @@ export default function TratamentoHemorroidasPage() {
                   hemorroida, interrompendo seu suprimento de sangue.
                 </li>
                 <li>
-                  Indicado principalmente para{' '}
+                  Indicado principalmente para&nbsp;
                   <strong>hemorroidas internas de grau II e III</strong>.
                 </li>
                 <li>
@@ -155,14 +157,14 @@ export default function TratamentoHemorroidasPage() {
               </p>
               <ul>
                 <li>
-                  Consiste na remoção das hemorroidas com{' '}
+                  Consiste na remoção das hemorroidas com&nbsp;
                   <strong>
                     bisturi, eletrocautério ou grampeador cirúrgico
                   </strong>
                   .
                 </li>
                 <li>
-                  Geralmente indicada para{' '}
+                  Geralmente indicada para&nbsp;
                   <strong>hemorroidas de grau III volumosas ou grau IV</strong>.
                 </li>
                 <li>
@@ -218,9 +220,9 @@ export default function TratamentoHemorroidasPage() {
 
               <h2>THD – Desarterialização Hemorroidária Transanal</h2>
               <p>
-                A{' '}
-                <strong>THD (Transanal Hemorrhoidal Dearterialization)</strong>{' '}
-                é uma técnica minimamente invasiva.
+                A&nbsp;
+                <strong>THD (Transanal Hemorrhoidal Dearterialization)</strong>
+                &nbsp; é uma técnica minimamente invasiva.
               </p>
               <ul>
                 <li>
@@ -251,7 +253,7 @@ export default function TratamentoHemorroidasPage() {
               <h2>Considerações Finais</h2>
               <p>
                 O tratamento ideal das hemorroidas deve ser definido após
-                avaliação médica, levando em conta o{' '}
+                avaliação médica, levando em conta o&nbsp;
                 <strong>
                   grau da doença, sintomas, histórico clínico e expectativas do
                   paciente
@@ -324,12 +326,17 @@ export default function TratamentoHemorroidasPage() {
                 </p>
               }
               actions={
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
+                  Agendar consulta
+                </LinkButton>
               }
               variant="secondary"
             />

@@ -32,7 +32,7 @@ A **prisão de ventre**, também chamada de **constipação intestinal crônica*
 
 Neste artigo, você vai entender as **causas da constipação**, quais são as opções de **tratamento** e quando é a hora de procurar um coloproctologista.
 
-## O que é Constipação Intestinal Crônica?
+## O que é constipação intestinal crônica?
 
 Considera-se constipação intestinal quando o paciente apresenta:
 
@@ -43,7 +43,7 @@ Considera-se constipação intestinal quando o paciente apresenta:
 
 Quando esses sintomas persistem por mais de **3 meses**, chamamos de **constipação intestinal crônica**.
 
-## Principais Causas da Prisão de Ventre
+## Principais causas da prisão de ventre
 
 A constipação pode ter múltiplas causas, que variam de hábitos de vida a alterações no funcionamento do intestino:
 
@@ -54,7 +54,7 @@ A constipação pode ter múltiplas causas, que variam de hábitos de vida a alt
 - Problemas estruturais no ânus e reto, como **hemorroidas internas volumosas** ou **retocele**.
 - Doenças do cólon e reto, que devem ser investigadas em casos persistentes ou associados a sinais de alarme.
 
-## Sinais de Alerta: Quando Investigar
+## Sinais de alerta: quando investigar
 
 Embora muitas vezes seja causada por hábitos inadequados, a prisão de ventre pode ser sintoma de algo mais sério. Procure avaliação médica se houver:
 
@@ -66,7 +66,7 @@ Embora muitas vezes seja causada por hábitos inadequados, a prisão de ventre p
 
 Nesses casos, pode ser necessário realizar **colonoscopia** e outros exames para excluir doenças do intestino grosso.
 
-## Tratamento da Constipação Intestinal
+## Tratamento da constipação intestinal
 
 O tratamento é sempre **individualizado**, levando em conta o perfil de cada paciente. As principais estratégias incluem:
 
@@ -90,13 +90,13 @@ Em alguns casos, o coloproctologista pode prescrever:
 - **Biofeedback**: terapia que ajuda a corrigir disfunções no assoalho pélvico.
 - **Cirurgia**: indicada em casos raros e selecionados, quando a constipação está associada a alterações estruturais.
 
-## O Papel do Coloproctologista
+## O papel do coloproctologista
 
 O **coloproctologista** é o médico indicado para avaliar casos de prisão de ventre crônica. O paciente encontra acompanhamento especializado, com diagnóstico preciso, orientação nutricional em conjunto com equipe multidisciplinar e definição da melhor estratégia de tratamento.
 
 O objetivo não é apenas aliviar os sintomas, mas **melhorar a qualidade de vida** e prevenir complicações.
 
-## Quando Procurar Ajuda Especializada
+## Quando procurar ajuda especializada
 
 Procure avaliação com coloproctologista se você apresenta:
 

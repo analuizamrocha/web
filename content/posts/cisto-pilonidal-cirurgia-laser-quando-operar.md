@@ -35,11 +35,11 @@ O **cisto pilonidal** ocorre na região **sacrococcígea** (perto do cóccix) qu
 
 ## Tratamentos cirúrgicos: convencional x laser
 
-### Cirurgia Convencional
+### Cirurgia convencional
 
 **Convencional:** remoção completa da área afetada, com **recuperação mais longa**, curativos diários e maior desconforto no pós-operatório.
 
-### Cirurgia a Laser (Minimamente Invasiva)
+### Cirurgia a laser (minimamente invasiva)
 
 **Laser (minimamente invasivo):** pequena incisão e **cauterização interna** com energia de laser, com **menos dor**, retorno mais rápido às atividades, **menos curativos** e **menor risco de recidiva** por atuar no trajeto do cisto.
 
@@ -47,7 +47,7 @@ O **cisto pilonidal** ocorre na região **sacrococcígea** (perto do cóccix) qu
 
 O ideal é **após controlar a inflamação aguda**. Na fase infecciosa, realiza-se geralmente **drenagem do abscesso**; a cirurgia definitiva vem **quando a inflamação acalma**, reduzindo riscos e melhorando resultados. O cisto raramente se resolve sozinho e tende a recidivar sem tratamento definitivo.
 
-## Perguntas Frequentes
+## Perguntas frequentes
 
 ### 1. O cisto pilonidal some sozinho?
 

@@ -37,7 +37,7 @@ Neste artigo, você vai entender melhor:
 
 ---
 
-## O que é o Plicoma Anal?
+## O que é o plicoma anal?
 
 - É uma *pequena sobra de pele na borda anal*.
 - Pode surgir após crises de hemorroida, fissura anal ou inflamações locais.
@@ -55,15 +55,15 @@ Nem todo plicoma precisa ser retirado. A avaliação médica é fundamental para
 
 ---
 
-## Cirurgia Convencional x Cirurgia a Laser
+## Cirurgia convencional x cirurgia a laser
 
-### Cirurgia Convencional
+### Cirurgia convencional
 
 - Realizada com bisturi ou tesoura.
 - Pode estar associada a um pós-operatório mais doloroso.
 - Existe risco de recidiva (formação de novo plicoma).
 
-### Cirurgia a Laser
+### Cirurgia a laser
 
 - Pode proporcionar *menos dor* no pós-operatório.
 - Geralmente tem *recuperação mais rápida*, permitindo retorno precoce às atividades.
@@ -72,7 +72,7 @@ Nem todo plicoma precisa ser retirado. A avaliação médica é fundamental para
 
 ---
 
-## Perguntas Frequentes
+## Perguntas frequentes
 
 ### 1. O plicoma pode virar câncer?
 

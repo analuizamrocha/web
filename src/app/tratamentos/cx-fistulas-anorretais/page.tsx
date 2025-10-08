@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/Badge'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Cirurgias para Fístulas Anorretais | Dra. Ana Luiza Moraes Rocha',
@@ -204,7 +206,7 @@ export default function CirurgiaFistulasPage() {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-yellow-700">
-                      <strong>Importante:</strong> no Brasil, o uso de PRF{' '}
+                      <strong>Importante:</strong> no Brasil, o uso de PRF&nbsp;
                       <strong>
                         não possui aprovação da Anvisa para cirurgias
                         coloproctológicas fora do âmbito da pesquisa científica
@@ -235,12 +237,12 @@ export default function CirurgiaFistulasPage() {
               <h2>Técnicas Combinadas</h2>
               <ul>
                 <li>
-                  Algumas vezes, técnicas podem ser <strong>associadas</strong>{' '}
-                  para aumentar a chance de cicatrização e reduzir o risco de
-                  incontinência.
+                  Algumas vezes, técnicas podem ser <strong>associadas</strong>
+                  &nbsp; para aumentar a chance de cicatrização e reduzir o
+                  risco de incontinência.
                 </li>
                 <li>
-                  Exemplos: <strong>LIFT + laser</strong> ou{' '}
+                  Exemplos: <strong>LIFT + laser</strong> ou&nbsp;
                   <strong>retalho mucoso + laser</strong>.
                 </li>
                 <li>
@@ -251,7 +253,7 @@ export default function CirurgiaFistulasPage() {
 
               <h2>Importância do Seton em Fístulas Complexas</h2>
               <p>
-                Em casos de{' '}
+                Em casos de&nbsp;
                 <strong>
                   fístulas complexas, extensas ou com trajeto espesso, muitas
                   vezes a primeira etapa do tratamento é a colocação de um seton
@@ -272,9 +274,9 @@ export default function CirurgiaFistulasPage() {
                 Cada fístula é única e a decisão do tratamento também deve ser.
               </p>
               <p>
-                O objetivo sempre é equilibrar a{' '}
-                <strong>cura da fístula</strong> com a{' '}
-                <strong>preservação da função esfincteriana</strong> e a{' '}
+                O objetivo sempre é equilibrar a&nbsp;
+                <strong>cura da fístula</strong> com a&nbsp;
+                <strong>preservação da função esfincteriana</strong> e a&nbsp;
                 <strong>qualidade de vida do paciente</strong>.
               </p>
 
@@ -356,12 +358,17 @@ export default function CirurgiaFistulasPage() {
                 </p>
               }
               actions={
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
+                  Agendar consulta
+                </LinkButton>
               }
               variant="secondary"
             />

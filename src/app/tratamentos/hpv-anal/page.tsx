@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/Badge'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title:
@@ -101,7 +103,7 @@ export default function TratamentoHpvAnalPage() {
 
               <h2>Tratamento Cirúrgico</h2>
               <p>
-                O tratamento cirúrgico busca a{' '}
+                O tratamento cirúrgico busca a&nbsp;
                 <strong>remoção direta das lesões</strong>, sendo indicado em
                 condilomas maiores, múltiplos ou resistentes a terapias tópicas.
               </p>
@@ -110,7 +112,7 @@ export default function TratamentoHpvAnalPage() {
               <ul>
                 <li>
                   O laser demonstrou <strong>maior precisão cirúrgica</strong>,
-                  facilidade de manejo e{' '}
+                  facilidade de manejo e&nbsp;
                   <strong>
                     redução significativa da carga viral por célula após o
                     processo de cicatrização
@@ -119,14 +121,14 @@ export default function TratamentoHpvAnalPage() {
                   potencial redução de recidivas.
                 </li>
                 <li>
-                  No contexto de lesões genitais, o{' '}
+                  No contexto de lesões genitais, o&nbsp;
                   <strong>laser de diodo</strong> apresenta taxas de cura
                   elevadas e baixa recorrência, com excelente perfil de
                   segurança e mínima dor pós-operatória.
                 </li>
                 <li>
                   <strong>Limitação:</strong> embora seja altamente eficaz e
-                  seguro, a{' '}
+                  seguro, a&nbsp;
                   <strong>
                     superioridade absoluta sobre a eletrocauterização ainda não
                     está estabelecida
@@ -144,7 +146,7 @@ export default function TratamentoHpvAnalPage() {
                   disponível em centros médicos.
                 </li>
                 <li>
-                  <strong>Limitação</strong>:{' '}
+                  <strong>Limitação</strong>:&nbsp;
                   <strong>
                     não elimina o vírus, apenas as lesões visíveis
                   </strong>
@@ -190,7 +192,7 @@ export default function TratamentoHpvAnalPage() {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-yellow-700">
-                      ⚠️ Esses tratamentos devem ser sempre{' '}
+                      ⚠️ Esses tratamentos devem ser sempre&nbsp;
                       <strong>prescritos e acompanhados por médico</strong>,
                       pois o uso inadequado pode causar queimaduras e irritações
                       na pele ao redor.
@@ -202,7 +204,7 @@ export default function TratamentoHpvAnalPage() {
               <h2>Importante Saber</h2>
               <ul>
                 <li>
-                  O tratamento remove as lesões, mas{' '}
+                  O tratamento remove as lesões, mas&nbsp;
                   <strong>não elimina o HPV do organismo</strong>.
                 </li>
                 <li>
@@ -222,7 +224,7 @@ export default function TratamentoHpvAnalPage() {
 
               <h2>Considerações Finais</h2>
               <p>
-                O tratamento das lesões de HPV anal deve ser{' '}
+                O tratamento das lesões de HPV anal deve ser&nbsp;
                 <strong>individualizado</strong>, considerando o tamanho, a
                 localização e o número de condilomas.
               </p>
@@ -291,12 +293,17 @@ export default function TratamentoHpvAnalPage() {
                 </p>
               }
               actions={
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
+                  Agendar consulta
+                </LinkButton>
               }
               variant="secondary"
             />

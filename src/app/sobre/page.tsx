@@ -4,6 +4,8 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Badge } from '@/components/ui/Badge'
 import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Sobre Dra. Ana Luiza Moraes Rocha | Coloproctologista Curitiba',
@@ -105,21 +107,10 @@ export default function SobrePage() {
 
       <section className="section bg-background pt-24 md:pt-28 animate-fade-in">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          {/* Breadcrumb */}
           <Breadcrumb
             items={[{ label: 'Início', href: '/' }, { label: 'Sobre' }]}
           />
-          {/* <nav className="mb-8 text-sm text-secondary">
-            <Link href="/" className="hover:text-primary transition-colors">
-              Início
-            </Link>
-            <span className="mx-2">›</span>
-            <span className="text-primary">Sobre</span>
-          </nav>
 
-          <div className="mx-auto max-w-4xl">
-            
-            {/* Header */}
           <header className="mb-12 text-center">
             <div className="flex flex-wrap gap-2 mb-6 justify-center">
               <Badge variant="primary" size="lg">
@@ -134,7 +125,7 @@ export default function SobrePage() {
               Dra. Ana Luiza Moraes Rocha
             </h1>
 
-            <h2 className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium w-full flex flex-col items-center justify-center">
+            <h2 className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium w-full flex flex-col items-center justify-center max-w-3xl mx-auto">
               Especialista em Coloproctologia com formação internacional,
               dedicada ao cuidado integral e humanizado de cada paciente.
             </h2>
@@ -147,7 +138,7 @@ export default function SobrePage() {
               Minha jornada na medicina começou com a certeza de que queria
               cuidar de pessoas de forma integral. Durante a graduação em
               Medicina na <strong>PUC-PR</strong>, desenvolvi a base sólida da
-              minha formação. Foi durante a{' '}
+              minha formação. Foi durante a&nbsp;
               <strong>
                 residência em Cirurgia Geral, no Hospital Santa Casa de Curitiba
               </strong>
@@ -157,14 +148,14 @@ export default function SobrePage() {
             </p>
 
             <p>
-              A experiência internacional no{' '}
+              A experiência internacional no&nbsp;
               <strong>Hospital Clinic de Barcelona</strong> foi transformadora.
-              Lá tive contato com técnicas avançadas em{' '}
+              Lá tive contato com técnicas avançadas em&nbsp;
               <strong>
                 cirurgia colorretal na área oncológica e de doenças
                 inflamatórias intestinais
               </strong>
-              , além de experiência prática em{' '}
+              , além de experiência prática em&nbsp;
               <strong>
                 cirurgias orificiais com abordagem minimamente invasiva
               </strong>
@@ -201,7 +192,7 @@ export default function SobrePage() {
               individualizada. Minhas consultas são detalhadas, buscando
               compreender a história, os sintomas e o estilo de vida de cada
               pessoa. Para mim, diagnosticar e tratar não é suficiente — é
-              fundamental{' '}
+              fundamental&nbsp;
               <strong>
                 adequar o tratamento às necessidades reais do paciente
               </strong>
@@ -234,7 +225,7 @@ export default function SobrePage() {
 
             <h2>Participações Profissionais</h2>
             <p>
-              Sou membro da{' '}
+              Sou membro da&nbsp;
               <strong>International Anal Neoplasia Society (IANS)</strong>, o
               que me permite estar sempre atualizada sobre as mais recentes
               pesquisas e práticas internacionais em prevenção, diagnóstico e
@@ -245,8 +236,8 @@ export default function SobrePage() {
           <div className="prose prose-lg max-w-none mb-12">
             <h2>Compromisso com a Educação</h2>
             <p>
-              Além da prática clínica, dedico parte do meu tempo à{' '}
-              <strong>educação médica continuada</strong> e à{' '}
+              Além da prática clínica, dedico parte do meu tempo à&nbsp;
+              <strong>educação médica continuada</strong> e à&nbsp;
               <strong>
                 divulgação de informações confiáveis sobre saúde
                 coloproctológica
@@ -258,6 +249,7 @@ export default function SobrePage() {
 
           {/* Contact CTA */}
           <CallToActionCard
+            className="flex flex-col mx-auto w-fit items-center justify-center"
             title="Vamos cuidar da sua saúde juntos?"
             body={
               <p>
@@ -267,18 +259,25 @@ export default function SobrePage() {
             }
             actions={
               <>
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
-                <Link
+                  Agendar consulta
+                </LinkButton>
+                <LinkButton
                   href="/tratamentos"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-2xl hover:bg-primary hover:text-background transition-all duration-300"
+                  size="xl"
+                  variant="outline"
+                  className="text-lg px-8 py-4 font-semibold text-nowrap shadow-lg hover:shadow-xl transform  transition-all duration-300"
                 >
-                  Conhecer Tratamentos
-                </Link>
+                  Conhecer tratamentos
+                </LinkButton>
               </>
             }
             variant="secondary"

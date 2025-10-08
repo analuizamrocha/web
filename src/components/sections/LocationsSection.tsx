@@ -75,7 +75,7 @@ export function LocationsSection() {
               variant="primary"
               size="xl"
               className="inline-flex items-center gap-4 px-10 py-6 text-md lg:text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-nowrap"
-              aria-label="Agendar consulta com Dra. Ana Luiza Moraes Rocha por WhatsApp"
+              aria-label="Agende sua consulta agora com a Dra. Ana Luiza Moraes Rocha por WhatsApp"
             >
               <Calendar className="size-0 sm:size-6" />
               Agende sua consulta agora

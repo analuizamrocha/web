@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/Badge'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Cirurgia para Cisto Pilonidal | Dra. Ana Luiza Moraes Rocha',
@@ -94,8 +96,8 @@ export default function CistoPilonidalPage() {
             {/* Main Content */}
             <div className="prose prose-lg max-w-none mb-12">
               <p>
-                Existem duas abordagens principais: a técnica{' '}
-                <strong>convencional</strong> e a técnica{' '}
+                Existem duas abordagens principais: a técnica&nbsp;
+                <strong>convencional</strong> e a técnica&nbsp;
                 <strong>minimamente invasiva com laser</strong>.
               </p>
 
@@ -137,7 +139,7 @@ export default function CistoPilonidalPage() {
                 tratamento do cisto pilonidal.
               </p>
               <p>
-                Hoje se sabe que{' '}
+                Hoje se sabe que&nbsp;
                 <strong>
                   todo cisto pilonidal pode responder ao tratamento a laser
                 </strong>
@@ -169,18 +171,20 @@ export default function CistoPilonidalPage() {
               </ul>
 
               <p>
-                <strong>Limitação:</strong> assim como na técnica convencional,{' '}
+                <strong>Limitação:</strong> assim como na técnica
+                convencional,&nbsp;
                 <strong>também pode haver recidiva</strong>.
               </p>
 
               <h2>Quando Operar?</h2>
               <p>
-                O ideal é realizar a cirurgia{' '}
+                O ideal é realizar a cirurgia&nbsp;
                 <strong>quando a inflamação já estiver controlada</strong>.
               </p>
               <ul>
                 <li>
-                  Durante uma crise aguda com abscesso, o tratamento inicial é a{' '}
+                  Durante uma crise aguda com abscesso, o tratamento inicial é
+                  a&nbsp;
                   <strong>drenagem</strong>.
                 </li>
                 <li>
@@ -199,7 +203,7 @@ export default function CistoPilonidalPage() {
                 definitiva.
               </p>
               <p>
-                Tanto na cirurgia convencional quanto no laser,{' '}
+                Tanto na cirurgia convencional quanto no laser,&nbsp;
                 <strong>pode haver recidiva</strong>, reforçando a importância
                 de acompanhamento médico e cuidados locais após o tratamento.
               </p>
@@ -252,7 +256,7 @@ export default function CistoPilonidalPage() {
                     4. O laser é indicado em todos os casos?
                   </h3>
                   <p className="text-secondary mb-0">
-                    Sim. Hoje se sabe que{' '}
+                    Sim. Hoje se sabe que&nbsp;
                     <strong>
                       todo cisto pilonidal pode responder ao tratamento a laser
                     </strong>
@@ -274,12 +278,17 @@ export default function CistoPilonidalPage() {
                 </p>
               }
               actions={
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
+                  Agendar consulta
+                </LinkButton>
               }
               variant="secondary"
             />
@@ -297,7 +306,7 @@ export default function CistoPilonidalPage() {
                 href="/tratamentos/doencas-inflamatorias-intestinais"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
               >
-                Próximo: Doenças Inflamatórias Intestinais →
+                Próximo →
               </Link>
             </div>
           </div>

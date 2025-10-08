@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/Badge'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Síndrome do Intestino Irritável (SII) | Dra. Ana Luiza Moraes Rocha',
@@ -103,7 +105,7 @@ export default function SindromeIntestinoIrritavelPage() {
             {/* Main Content */}
             <div className="prose prose-lg max-w-none mb-12">
               <p>
-                O diagnóstico correto e o acompanhamento com{' '}
+                O diagnóstico correto e o acompanhamento com&nbsp;
                 <strong>coloproctologista</strong> são fundamentais para
                 diferenciar a SII de outras doenças intestinais e garantir um
                 tratamento eficaz.
@@ -142,13 +144,13 @@ export default function SindromeIntestinoIrritavelPage() {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-yellow-700">
-                      ⚠️ É importante ressaltar que sintomas como{' '}
+                      ⚠️ É importante ressaltar que sintomas como&nbsp;
                       <strong>
                         sangramento intestinal, febre ou perda de peso não
                         explicada
-                      </strong>{' '}
-                      não são típicos da SII e devem sempre ser investigados
-                      pelo coloproctologista.
+                      </strong>
+                      &nbsp; não são típicos da SII e devem sempre ser
+                      investigados pelo coloproctologista.
                     </p>
                   </div>
                 </div>
@@ -169,7 +171,8 @@ export default function SindromeIntestinoIrritavelPage() {
               </ul>
 
               <p>
-                O coloproctologista pode solicitar exames complementares, como{' '}
+                O coloproctologista pode solicitar exames complementares,
+                como&nbsp;
                 <strong>
                   colonoscopia, exames de sangue e testes de intolerância
                   alimentar
@@ -228,7 +231,7 @@ export default function SindromeIntestinoIrritavelPage() {
                 Cada paciente com SII apresenta sintomas e gatilhos diferentes.
               </p>
               <p>
-                Por isso, o acompanhamento deve ser{' '}
+                Por isso, o acompanhamento deve ser&nbsp;
                 <strong>personalizado</strong>, envolvendo:
               </p>
               <ul>
@@ -324,12 +327,17 @@ export default function SindromeIntestinoIrritavelPage() {
                 </p>
               }
               actions={
-                <Link
-                  href="/#contato"
-                  className="inline-flex items-center px-6 py-3 bg-primary text-background font-semibold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
-                  Agendar Consulta
-                </Link>
+                  Agendar consulta
+                </LinkButton>
               }
               variant="secondary"
             />
