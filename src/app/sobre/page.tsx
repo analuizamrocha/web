@@ -335,7 +335,7 @@ export default function SobrePage() {
             </p>
           </main>
 
-          <div className="prose prose-lg max-w-none mb-6">
+          <div className="prose prose-lg max-w-none mb-8 lg:mb-16">
             <h2 className="text-3xl font-serif font-bold text-primary text-center">
               Formação e especialização
             </h2>
@@ -559,7 +559,7 @@ export default function SobrePage() {
               <h2 className="text-3xl font-serif font-bold text-primary mb-6 text-center">
                 Participações profissionais
               </h2>
-              <p className="text-lg text-secondary leading-relaxed text-center max-w-xl mx-auto">
+              <p className="text-lg text-secondary leading-relaxed max-w-xl mx-auto text-start sm:text-center">
                 Sou membro da&nbsp;
                 <strong>International Anal Neoplasia Society (IANS)</strong>, o
                 que me permite estar sempre atualizada sobre as mais recentes
@@ -573,7 +573,7 @@ export default function SobrePage() {
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-primary mb-6 text-center">
               Compromisso com a educação
             </h2>
-            <p className="text-lg text-secondary leading-relaxed text-center max-w-4xl mx-auto">
+            <p className="text-lg text-secondary leading-relaxed text-start sm:text-center max-w-4xl mx-auto">
               Além da prática clínica, dedico parte do meu tempo à&nbsp;
               <strong>educação médica continuada</strong> e à&nbsp;
               <strong>
