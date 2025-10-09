@@ -137,7 +137,6 @@ export default function TratamentoHpvAnalPage() {
 
       <section className="section bg-background pt-24 md:pt-28">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          {/* Breadcrumb */}
           <Breadcrumb
             items={[
               { label: 'Início', href: '/' },
@@ -167,8 +166,7 @@ export default function TratamentoHpvAnalPage() {
               </p>
             </header>
 
-            {/* Main Content */}
-            <div className="prose prose-lg max-w-none mb-12">
+            <main className="prose prose-lg max-w-none mb-12">
               <p>
                 Essas lesões podem provocar desconforto, sangramento, coceira e,
                 em alguns casos, constrangimento estético.
@@ -335,9 +333,8 @@ export default function TratamentoHpvAnalPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </main>
 
-            {/* Call to Action */}
             <CallToActionCard
               title="Identificou lesões suspeitas na região anal?"
               body={
@@ -363,7 +360,6 @@ export default function TratamentoHpvAnalPage() {
               variant="secondary"
             />
 
-            {/* Navigation */}
             <div className="flex items-center justify-between text-lg">
               <Link
                 href="/tratamentos"

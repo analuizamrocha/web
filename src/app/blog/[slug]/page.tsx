@@ -114,7 +114,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <section className="section bg-background pt-24 md:pt-28">
         <article className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          {/* Breadcrumb */}
           <Breadcrumb
             items={[
               { label: 'Início', href: '/' },
@@ -122,18 +121,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               { label: post.title },
             ]}
           />
-
-          {/* <nav className="mb-8 text-sm text-secondary">
-            <Link href="/" className="hover:text-primary transition-colors">
-              Início
-            </Link>
-            <span className="mx-2">›</span>
-            <Link href="/blog" className="hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <span className="mx-2">›</span>
-            <span className="text-primary">{post.title}</span>
-          </nav> */}
 
           {/* Article Header */}
           <header className="mx-auto max-w-4xl mb-12 pb-8 border-b border-secondary/20 animate-fade-in">

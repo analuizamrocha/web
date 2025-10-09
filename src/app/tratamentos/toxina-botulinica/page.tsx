@@ -135,7 +135,6 @@ export default function ToxinaBotulínicaPage() {
 
       <section className="section bg-background pt-24 md:pt-28">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          {/* Breadcrumb */}
           <Breadcrumb
             items={[
               { label: 'Início', href: '/' },
@@ -163,8 +162,7 @@ export default function ToxinaBotulínicaPage() {
               </p>
             </header>
 
-            {/* Main Content */}
-            <div className="prose prose-lg max-w-none mb-12">
+            <main className="prose prose-lg max-w-none mb-12">
               <h2>Indicações Principais</h2>
 
               <h3>Fissura anal crônica</h3>
@@ -312,9 +310,8 @@ export default function ToxinaBotulínicaPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </main>
 
-            {/* Call to Action */}
             <CallToActionCard
               title="Sofre com dor anal persistente ou fissura crônica?"
               body={
@@ -340,7 +337,6 @@ export default function ToxinaBotulínicaPage() {
               variant="secondary"
             />
 
-            {/* Navigation */}
             <div className="flex items-center justify-between text-lg">
               <Link
                 href="/tratamentos"

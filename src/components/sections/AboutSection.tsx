@@ -36,7 +36,6 @@ export function AboutSection() {
       className="section bg-background"
       aria-labelledby="about-heading"
     >
-      {/* Header Section - Enhanced Typography */}
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
         <div className="mx-auto max-w-4xl text-center mb-12 lg:mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
@@ -69,7 +68,6 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* Link Button - Aligned with content */}
         <div className="text-center mb-8 lg:mb-4 mt-4 lg:mt-8">
           <LinkButton href="/sobre" variant="outline" size="lg">
             Conheça minha trajetória
@@ -77,7 +75,7 @@ export function AboutSection() {
         </div>
       </div>
 
-      {/* Mobile: Full-Width Image - Edge to Edge */}
+      {/* Mobile: Full-Width Image  */}
       <div className="lg:hidden w-full">
         <Image
           width={1366}

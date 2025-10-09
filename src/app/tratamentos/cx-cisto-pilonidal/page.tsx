@@ -136,7 +136,6 @@ export default function CistoPilonidalPage() {
 
       <section className="section bg-background pt-24 md:pt-28">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          {/* Breadcrumb */}
           <Breadcrumb
             items={[
               { label: 'Início', href: '/' },
@@ -166,8 +165,7 @@ export default function CistoPilonidalPage() {
               </p>
             </header>
 
-            {/* Main Content */}
-            <div className="prose prose-lg max-w-none mb-12">
+            <main className="prose prose-lg max-w-none mb-12">
               <p>
                 Existem duas abordagens principais: a técnica&nbsp;
                 <strong>convencional</strong> e a técnica&nbsp;
@@ -336,9 +334,8 @@ export default function CistoPilonidalPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </main>
 
-            {/* Call to Action */}
             <CallToActionCard
               title="Sofre com cisto pilonidal recorrente?"
               body={
@@ -364,7 +361,6 @@ export default function CistoPilonidalPage() {
               variant="secondary"
             />
 
-            {/* Navigation */}
             <div className="flex items-center justify-between text-lg">
               <Link
                 href="/tratamentos"

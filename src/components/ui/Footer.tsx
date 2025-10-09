@@ -23,7 +23,7 @@ export function Footer() {
               {CRM_RQE_TEXT}
             </div>
 
-            {/* Minimalistic navigation links */}
+            {/* Navigation links */}
             <nav className="flex flex-wrap gap-4 mt-2">
               <Link
                 href="/blog"

@@ -134,7 +134,6 @@ export default function CirurgiasLaserPage() {
 
       <section className="section bg-background pt-24 md:pt-28">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          {/* Breadcrumb */}
           <Breadcrumb
             items={[
               { label: 'Início', href: '/' },
@@ -163,8 +162,7 @@ export default function CirurgiasLaserPage() {
               </p>
             </header>
 
-            {/* Main Content */}
-            <div className="prose prose-lg max-w-none mb-12">
+            <main className="prose prose-lg max-w-none mb-12">
               <h2>Principais indicações</h2>
               <p>
                 Na coloproctologia, o laser pode ser utilizado em diferentes
@@ -298,9 +296,8 @@ export default function CirurgiasLaserPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </main>
 
-            {/* Call to Action */}
             <CallToActionCard
               title="Quer saber se a cirurgia a laser é adequada para o seu caso?"
               body={
@@ -326,7 +323,6 @@ export default function CirurgiasLaserPage() {
               variant="secondary"
             />
 
-            {/* Navigation */}
             <div className="flex items-center justify-between text-lg">
               <Link
                 href="/tratamentos"

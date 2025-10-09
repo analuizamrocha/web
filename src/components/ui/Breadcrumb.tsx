@@ -16,7 +16,10 @@ export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
       {items.map((item, index) => (
         <span key={index}>
           {item.href ? (
-            <Link href={item.href} className="hover:text-primary transition-colors">
+            <Link
+              href={item.href}
+              className="hover:text-primary transition-colors"
+            >
               {item.label}
             </Link>
           ) : (

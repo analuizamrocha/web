@@ -34,9 +34,7 @@ const treatments = [
 export function TreatmentsSection() {
   return (
     <section id="tratamentos" className="section bg-background">
-      {/* Beautiful Responsive Layout */}
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-        {/* Header Section - Enhanced Typography */}
         <div className="mx-auto max-w-4xl text-center mb-16 lg:mb-20 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
             Tratamentos
@@ -71,7 +69,6 @@ export function TreatmentsSection() {
           ))}
         </div>
 
-        {/* Link Button - Aligned with content */}
         <div className="text-right mt-4">
           <LinkButton href="/tratamentos" variant="outline" size="lg">
             Ver todos os tratamentos

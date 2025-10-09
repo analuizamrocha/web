@@ -144,7 +144,6 @@ export default function DoencasInflamatoriasIntestinaisPage() {
 
       <section className="section bg-background pt-24 md:pt-28">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          {/* Breadcrumb */}
           <Breadcrumb
             items={[
               { label: 'Início', href: '/' },
@@ -175,8 +174,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               </p>
             </header>
 
-            {/* Main Content */}
-            <div className="prose prose-lg max-w-none mb-12">
+            <main className="prose prose-lg max-w-none mb-12">
               <p>
                 Com acompanhamento adequado em <strong>coloproctologia</strong>,
                 é possível controlar os sintomas, prevenir complicações e manter
@@ -375,9 +373,8 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </main>
 
-            {/* Call to Action */}
             <CallToActionCard
               title="Suspeita de Doença Inflamatória Intestinal?"
               body={
@@ -403,7 +400,6 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               variant="secondary"
             />
 
-            {/* Navigation */}
             <div className="flex items-center justify-between text-lg">
               <Link
                 href="/tratamentos"

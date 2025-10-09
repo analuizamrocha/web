@@ -265,8 +265,7 @@ export default function SobrePage() {
             </h2>
           </div>
 
-          {/* Main Content */}
-          <div className="prose prose-lg max-w-none mb-8 lg:mb-16">
+          <main className="prose prose-lg max-w-none mb-8 lg:mb-16">
             <h2 className="text-3xl font-serif font-bold text-primary mb-6 text-center">
               Minha trajetória profissional
             </h2>
@@ -334,7 +333,7 @@ export default function SobrePage() {
               meu compromisso em oferecer tratamentos modernos, seguros e
               individualizados aos pacientes.
             </p>
-          </div>
+          </main>
 
           <div className="prose prose-lg max-w-none mb-6">
             <h2 className="text-3xl font-serif font-bold text-primary text-center">

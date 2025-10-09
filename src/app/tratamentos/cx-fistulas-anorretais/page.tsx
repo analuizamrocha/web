@@ -142,7 +142,6 @@ export default function CirurgiaFistulasPage() {
 
       <section className="section bg-background pt-24 md:pt-28">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          {/* Breadcrumb */}
           <Breadcrumb
             items={[
               { label: 'Início', href: '/' },
@@ -172,8 +171,7 @@ export default function CirurgiaFistulasPage() {
               </p>
             </header>
 
-            {/* Main Content */}
-            <div className="prose prose-lg max-w-none mb-12">
+            <main className="prose prose-lg max-w-none mb-12">
               <p>
                 Costumam surgir após abscessos anorretais e podem provocar
                 secreção, dor e desconforto.
@@ -403,9 +401,8 @@ export default function CirurgiaFistulasPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </main>
 
-            {/* Call to Action */}
             <CallToActionCard
               title="Precisa de avaliação para tratamento de fístula anorretal?"
               body={
@@ -431,7 +428,6 @@ export default function CirurgiaFistulasPage() {
               variant="secondary"
             />
 
-            {/* Navigation */}
             <div className="flex items-center justify-between text-lg">
               <Link
                 href="/tratamentos"
