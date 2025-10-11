@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { DR_NAME } from '@/lib/constants'
 
 export function PhotoSection() {
   return (
