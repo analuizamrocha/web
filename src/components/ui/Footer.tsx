@@ -22,6 +22,34 @@ export function Footer() {
             <div className="text-background/70 text-sm font-medium">
               {CRM_RQE_TEXT}
             </div>
+
+            {/* Navigation links */}
+            <nav className="flex flex-wrap gap-4 mt-2">
+              <Link
+                href="/blog"
+                className="text-background/70 hover:text-background text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-background/50 rounded-sm"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/politica-privacidade"
+                className="text-background/70 hover:text-background text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-background/50 rounded-sm"
+              >
+                Privacidade
+              </Link>
+              <Link
+                href="/sobre"
+                className="text-background/70 hover:text-background text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-background/50 rounded-sm"
+              >
+                Sobre
+              </Link>
+              <Link
+                href="/tratamentos"
+                className="text-background/70 hover:text-background text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-background/50 rounded-sm"
+              >
+                Tratamentos
+              </Link>
+            </nav>
           </div>
 
           <Link

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import { Badge } from '@/components/ui/Badge'
 import {
   getAllPosts,
   getTargetAudienceLabel,
@@ -117,13 +118,13 @@ export default function BlogPage() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <div className="flex flex-wrap gap-2">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                      <div className="flex flex-wrap gap-2 mr-4">
+                        <Badge variant="primary">
                           {getContentIntentLabel(post.intent)}
-                        </span>
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary/20 text-secondary">
+                        </Badge>
+                        <Badge variant="secondary">
                           {getTargetAudienceLabel(post.targetAudience)}
-                        </span>
+                        </Badge>
                       </div>
 
                       <Link

@@ -23,7 +23,7 @@ export const faqSchema = {
       name: 'Quais tratamentos são oferecidos?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Oferecemos cirurgias à laser, botox para fissura anal, ligadura elástica para hemorróidas, tratamento de HPV, cirurgia de cisto pilonidal, acompanhamento de doenças inflamatórias intestinais e tratamento da síndrome do intestino irritável.',
+        text: 'Oferecemos cirurgias a laser, botox para fissura anal, ligadura elástica para hemorróidas, tratamento de HPV, cirurgia de cisto pilonidal, acompanhamento de doenças inflamatórias intestinais e tratamento da síndrome do intestino irritável.',
       },
     },
     {

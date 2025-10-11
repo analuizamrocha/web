@@ -12,7 +12,7 @@ const path = require('path')
  * while preserving original aspect ratios and maintaining source files.
  */
 
-const IMAGES_DIR = path.join(__dirname, '../public/images')
+const IMAGES_DIR = path.join(__dirname, '../public/images/new')
 
 async function getFileSize(filePath) {
   try {

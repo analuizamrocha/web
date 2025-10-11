@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { LinkButton } from '@/components/ui/LinkButton'
 
 const credentials = [
   {
@@ -35,9 +36,8 @@ export function AboutSection() {
       className="section bg-background"
       aria-labelledby="about-heading"
     >
-      {/* Header Section - Enhanced Typography */}
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-        <div className="mx-auto max-w-4xl text-center mb-16 lg:mb-20 animate-fade-in">
+        <div className="mx-auto max-w-4xl text-center mb-12 lg:mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
             Quem é Dra. Ana Luiza?
           </h2>
@@ -67,15 +67,21 @@ export function AboutSection() {
             ))}
           </div>
         </div>
+
+        <div className="text-center mb-8 lg:mb-4 mt-4 lg:mt-8">
+          <LinkButton href="/sobre" variant="outline" size="lg">
+            Conheça minha trajetória
+          </LinkButton>
+        </div>
       </div>
 
-      {/* Mobile: Full-Width Image - Edge to Edge */}
+      {/* Mobile: Full-Width Image  */}
       <div className="lg:hidden w-full">
         <Image
           width={1366}
           height={768}
           src="/images/sobre-mim.webp"
-          alt="Dra. Ana Luiza - Formação e qualificações profissionais em coloproctologia"
+          alt="Dra. Ana Luiza Moraes Rocha CRM-PR 45351, formação internacional em coloproctologia, Hospital Clinic Barcelona, especialista em cirurgia colorretal"
           sizes="(max-width: 1024px) 100vw, 0px"
           quality={100}
           className="w-full h-auto object-cover"

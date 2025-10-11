@@ -114,7 +114,7 @@ Precisamos adequar os melhores tratamentos ao seu estilo de vida.
 
 ### Procedimentos Oferecidos
 
-- Cirurgias à laser
+- Cirurgias a laser
 - Cirurgias videoassistidas (VAAFT)
 - Botox para fissura anal e dores anais crônicas
 - Ligadura elástica para hemorróidas

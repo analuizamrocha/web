@@ -32,6 +32,7 @@ const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
       ...props,
     }
 
+    // Use <a> tag for external links and new tab behavior for proper browser handling
     if (external || newTab) {
       return (
         <a

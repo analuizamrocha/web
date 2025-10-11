@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import {
   getPostBySlug,
   getAllPostSlugs,
@@ -9,6 +10,7 @@ import {
   getContentIntentLabel,
 } from '@/lib/blog'
 import type { Metadata } from 'next'
+import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { WHATSAPP_MSG_TEXT_ENCODED, WPP_NUMBER_NASSIF } from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 
@@ -112,18 +114,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <section className="section bg-background pt-24 md:pt-28">
         <article className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          {/* Breadcrumb */}
-          <nav className="mb-8 text-sm text-secondary">
-            <Link href="/" className="hover:text-primary transition-colors">
-              Início
-            </Link>
-            <span className="mx-2">›</span>
-            <Link href="/blog" className="hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <span className="mx-2">›</span>
-            <span className="text-primary">{post.title}</span>
-          </nav>
+          <Breadcrumb
+            items={[
+              { label: 'Início', href: '/' },
+              { label: 'Blog', href: '/blog' },
+              { label: post.title },
+            ]}
+          />
 
           {/* Article Header */}
           <header className="mx-auto max-w-4xl mb-12 pb-8 border-b border-secondary/20 animate-fade-in">
@@ -202,26 +199,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Article Footer */}
           <footer className="mx-auto max-w-4xl pt-8">
-            <div className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 mb-8">
-              <h3 className="text-xl lg:text-2xl font-serif font-bold text-primary mb-4">
-                Precisa de acompanhamento especializado?
-              </h3>
-              <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
-                Agende uma consulta com a Dra. Ana Luiza Moraes Rocha para
-                receber cuidado especializado em coloproctologia.
-              </p>
-              <LinkButton
-                href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
-                external
-                newTab
-                variant="primary"
-                size="xl"
-                className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-                aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
-              >
-                Agendar consulta
-              </LinkButton>
-            </div>
+            <CallToActionCard
+              title="Precisa de acompanhamento especializado?"
+              body={
+                <p>
+                  Agende uma consulta com a Dra. Ana Luiza Moraes Rocha para
+                  receber cuidado especializado em coloproctologia.
+                </p>
+              }
+              actions={
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  external
+                  newTab
+                  variant="primary"
+                  size="xl"
+                  className="bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
+                >
+                  Agendar consulta
+                </LinkButton>
+              }
+              variant="secondary"
+            />
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-4 sm:mt-8 gap-2">
               <Link

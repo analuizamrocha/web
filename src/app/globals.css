@@ -79,7 +79,7 @@
   }
 
   p {
-    @apply mb-4 leading-relaxed max-w-prose;
+    @apply mb-2 leading-relaxed max-w-prose;
   }
 
   /* Improved readability with optimal line lengths */
@@ -141,7 +141,7 @@
     color: var(--color-secondary) !important;
     font-size: 1.125rem !important;
     line-height: 1.7 !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
     max-width: none !important;
   }
 

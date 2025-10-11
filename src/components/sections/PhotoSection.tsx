@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { DR_NAME } from '@/lib/constants'
 
 export function PhotoSection() {
   return (
@@ -26,7 +25,7 @@ export function PhotoSection() {
             <div className="aspect-[3/4] lg:aspect-[4/5] relative">
               <Image
                 src="/images/side.webp"
-                alt={`${DR_NAME} - Perfil profissional em consultório médico especializado em coloproctologia`}
+                alt="Dra. Ana Luiza Moraes Rocha, coloproctologista Curitiba, consultório médico especializado em cirurgia colorretal e proctologia"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -42,7 +41,7 @@ export function PhotoSection() {
             <div className="aspect-[4/5] relative">
               <Image
                 src="/images/front.webp"
-                alt={`${DR_NAME} - Atendimento profissional e humanizado em coloproctologia`}
+                alt="Dra. Ana Luiza Moraes Rocha, proctologista Curitiba, atendimento humanizado em tratamentos minimamente invasivos e cirurgia laser"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="50vw"
