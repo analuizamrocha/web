@@ -4,10 +4,10 @@ import type { Metadata } from 'next'
 import { Montserrat, Literata } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
+import CookieConsent from '@/components/layout/CookieConsent'
 import { DR_NAME, CLINICA_NASSIF_UPDATED, WEBSITE_URL } from '@/lib/constants'
 import { getStructuredData } from '@/lib/structured-data'
 
@@ -66,8 +66,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   verification: {
-    // TODO: Add Google Search Console verification when available
-    // google: 'your-google-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,
   },
   alternates: {
     canonical: WEBSITE_URL,
@@ -144,6 +143,45 @@ export default function RootLayout({
         <link rel="preconnect" href="https://va.vercel-scripts.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+        {/* LGPD-compliant analytics initialization - consent mode */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+
+              // Set default consent to 'denied' as a baseline (LGPD compliance)
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'personalization_storage': 'denied',
+                'wait_for_update': 500
+              });
+
+              gtag('js', new Date());
+
+              // Defer analytics loading until after page load for performance
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  // Check if user has already consented
+                  const consent = localStorage.getItem('lgpd-cookie-consent');
+                  if (consent === 'accepted') {
+                    // Load analytics only if previously accepted
+                    if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+                      const script = document.createElement('script');
+                      script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}';
+                      script.async = true;
+                      document.head.appendChild(script);
+                    }
+                  }
+                }, 1000);
+              });
+            `,
+          }}
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -155,12 +193,11 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <CookieConsent />
+        {/* Load analytics asynchronously after page content */}
+        <Analytics />
+        <SpeedInsights />
       </body>
-      {/* Load analytics asynchronously after page content */}
-      <Analytics />
-      <SpeedInsights />
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
     </html>
   )
 }

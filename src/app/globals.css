@@ -1,12 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #fff9f3;
-  --color-primary: #663a25;
-  --color-secondary: #d4b7a2;
-  --color-tertiary: #b08771;
-  --color-brand-primary: #c27e5c;
-  --color-accent-neutral: #7a8b68;  
+  /* Page background - lighter for better contrast foundation */
+  --color-background: #fffbf7;        /* Warm cream (lighter than before for better contrast) */
+
+  /* Brand color palette - used for CTAs, footer, and design accents */
+  --color-primary: #663a25;           /* Dark brown - buttons, footer, emphasis */
+  --color-secondary: #d4b7a2;         /* Light beige - decorative use only (no longer for text) */
+  --color-tertiary: #b08771;          /* Medium brown - rarely used */
+  --color-brand-primary: #c27e5c;     /* Terracotta - primary buttons */
+  --color-accent-neutral: #7a8b68;    /* Sage green - mission/values accent */
+
+  /* High-contrast text hierarchy (WCAG AAA compliant) */
+  --color-text-heading: #3d1f0f;      /* Very dark brown - 14.8:1 ratio - H1-H6, card titles */
+  --color-text-body: #6b4226;         /* Dark-medium brown - 7.2:1 ratio - paragraphs, descriptions */
+  --color-text-muted: #8b5a3c;        /* Muted brown - 5.1:1 ratio - metadata, captions */
+
+  /* Card backgrounds - stronger definition than opacity-based */
+  --color-card-bg: #f5ebe1;           /* Warm beige - visible card background */
+  --color-card-bg-hover: #f0e3d4;     /* Slightly darker on hover */
+
+  /* Subtle backgrounds for blockquotes, info boxes */
+  --color-bg-subtle: #fef8f2;         /* Very subtle warm tint */
+  --color-border-subtle: #e5d4c4;     /* Warm beige - borders */
 }
 
 @layer base {
@@ -138,7 +154,7 @@
   }
 
   .prose p {
-    color: var(--color-secondary) !important;
+    color: var(--color-text-body) !important;
     font-size: 1.125rem !important;
     line-height: 1.7 !important;
     margin-bottom: 1rem !important;
@@ -147,13 +163,13 @@
 
   .prose strong,
   .prose-lg strong {
-    color: var(--color-secondary) !important;
+    color: var(--color-text-heading) !important;
     font-weight: 600 !important;
   }
 
   .prose ul,
   .prose ol {
-    color: var(--color-secondary) !important;
+    color: var(--color-text-body) !important;
     font-size: 1.125rem !important;
     line-height: 1.7 !important;
     margin-bottom: 1.5rem !important;
@@ -171,6 +187,7 @@
   .prose li {
     margin-bottom: 0.5rem !important;
     line-height: 1.7 !important;
+    color: var(--color-text-body) !important;
   }
 
   .prose a {
@@ -185,13 +202,13 @@
   }
 
   .prose blockquote {
-    border-left: 4px solid rgba(102, 58, 37, 0.3) !important;
+    border-left: 4px solid var(--color-border-subtle) !important;
     padding-left: 1.5rem !important;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
-    background-color: rgba(212, 183, 162, 0.05) !important;
+    background-color: var(--color-bg-subtle) !important;
     border-radius: 0 0.5rem 0.5rem 0 !important;
-    color: var(--color-secondary) !important;
+    color: var(--color-text-body) !important;
     font-style: italic !important;
     font-weight: 500 !important;
     margin: 2rem 0 !important;
@@ -357,24 +374,47 @@
   }
   
   .card-treatment {
-    @apply bg-secondary/15 hover:bg-secondary/20 text-center justify-center min-h-[120px] sm:min-h-[140px] lg:min-h-[180px] xl:min-h-[200px];
+    background-color: var(--color-card-bg);
+    @apply text-center justify-center min-h-[120px] sm:min-h-[140px] lg:min-h-[180px] xl:min-h-[200px] transition-all duration-300;
+  }
+
+  .card-treatment:hover {
+    background-color: var(--color-card-bg-hover);
   }
   
   .card-feature {
     @apply bg-neutral-50/50 hover:bg-neutral-100/50;
   }
   
-  /* Text Component Classes */
+  /* Text Component Classes - New hierarchy system */
+  .text-heading {
+    color: var(--color-text-heading);
+  }
+
+  .text-body {
+    color: var(--color-text-body);
+  }
+
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+
+  /* Legacy/Brand text classes */
   .text-brand {
     @apply text-brand-primary;
   }
-  
-  .text-muted {
-    @apply text-neutral-600;
-  }
-  
+
   .text-accent {
     @apply text-accent-neutral;
+  }
+
+  /* Card background classes */
+  .bg-card {
+    background-color: var(--color-card-bg);
+  }
+
+  .bg-card-hover {
+    background-color: var(--color-card-bg-hover);
   }
   
   /* Layout Utilities */

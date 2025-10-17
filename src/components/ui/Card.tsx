@@ -21,11 +21,11 @@ export function Card({
       className={cn(
         'flex flex-col rounded-3xl transition-all duration-300 h-full shadow-sm hover:shadow-md',
         variant === 'treatment' &&
-          'bg-secondary/15 hover:bg-secondary/20 hover:shadow-lg text-center justify-center p-6 min-h-[140px] sm:min-h-[160px] lg:p-8 lg:min-h-[200px] xl:min-h-[220px] border border-secondary/20 hover:border-secondary/30',
+          'bg-card hover:bg-card-hover hover:shadow-lg text-center justify-center p-6 min-h-[140px] sm:min-h-[160px] lg:p-8 lg:min-h-[200px] xl:min-h-[220px] border border-secondary/20 hover:border-secondary/30',
         variant === 'default' &&
           'bg-neutral-50/50 hover:bg-neutral-100/50 p-6 sm:p-8 border border-neutral-200',
         variant === 'service' &&
-          'bg-secondary/15 hover:bg-secondary/20 hover:shadow-lg p-6 sm:p-8 border border-primary/10 hover:border-primary/20 backdrop-blur-sm',
+          'bg-card hover:bg-card-hover hover:shadow-lg p-6 sm:p-8 border border-primary/10 hover:border-primary/20 backdrop-blur-sm',
         className
       )}
     >
@@ -47,9 +47,9 @@ export function Card({
           className={cn(
             'mt-4 flex-1 leading-relaxed',
             variant === 'treatment'
-              ? 'text-sm sm:text-base text-accent'
+              ? 'text-sm sm:text-base text-body'
               : variant === 'service'
-              ? 'text-sm sm:text-base text-secondary/80'
+              ? 'text-sm sm:text-base text-body'
               : 'text-sm sm:text-base text-accent'
           )}
         >
