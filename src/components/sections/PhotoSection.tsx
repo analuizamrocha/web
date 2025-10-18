@@ -56,7 +56,7 @@ export function PhotoSection() {
         {/* Bottom Content */}
         <div className="mt-8 lg:mt-12 text-center">
           <div className="mx-auto max-w-3xl">
-            <blockquote className="text-lg lg:text-xl text-secondary font-medium leading-relaxed italic border-l-4 border-primary/30 pl-6 pt-4 pb-4 bg-primary/5 rounded-r-xl">
+            <blockquote className="text-lg lg:text-xl text-body font-medium leading-relaxed italic border-l-4 border-primary/30 pl-6 pt-4 pb-4 bg-primary/5 rounded-r-xl">
               <p className="text-start">
                 &ldquo;A medicina vai além da técnica. É sobre criar conexões,
                 oferecer esperança e cuidar de cada pessoa com a atenção que ela

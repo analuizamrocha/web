@@ -16,7 +16,7 @@ export default function PoliticaPrivacidadePage() {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight ">
               Política de Privacidade
             </h1>
-            <p className="inline-block text-lg text-secondary leading-relaxed max-w-5xl">
+            <p className="inline-block text-lg text-body leading-relaxed max-w-5xl">
               Esta Política de Privacidade estabelece como são tratados os dados
               pessoais coletados neste site, em conformidade com a&nbsp;
               <strong className="text-primary">
@@ -29,7 +29,7 @@ export default function PoliticaPrivacidadePage() {
               </strong>
               .
             </p>
-            <p className="text-base text-secondary leading-relaxed max-w-none">
+            <p className="text-base text-body leading-relaxed max-w-none">
               Ao utilizar este site, o usuário declara ciência e concordância
               com as condições aqui descritas.
             </p>

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* Page background - lighter for better contrast foundation */
-  --color-background: #fffbf7;        /* Warm cream (lighter than before for better contrast) */
+  /* Page background */
+  --color-background: #fffbf7;        /* Warm cream */
 
   /* Brand color palette - used for CTAs, footer, and design accents */
   --color-primary: #663a25;           /* Dark brown - buttons, footer, emphasis */

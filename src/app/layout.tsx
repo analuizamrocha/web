@@ -2,7 +2,7 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Montserrat, Literata } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Header } from '@/components/ui/Header'
@@ -155,11 +155,9 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-
-        {/* Client-only components (preserve SSR) */}
         <CookieConsent />
         <AnalyticsProvider />
-        <Analytics />
+        <VercelAnalytics />
         <SpeedInsights />
       </body>
     </html>

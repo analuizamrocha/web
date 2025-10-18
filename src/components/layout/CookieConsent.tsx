@@ -57,7 +57,7 @@ export default function CookieConsent() {
           {/* X button - dismisses without saving preference */}
           <button
             onClick={dismissBanner}
-            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-muted hover:text-primary transition-colors rounded-full hover:bg-primary/5 z-10 cursor-pointer"
+            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-muted hover:text-primary transition-colors rounded-full hover:bg-primary/5 z-10 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             aria-label="Fechar (será exibido novamente)"
             title="Fechar banner (você verá novamente)"
           >
@@ -100,10 +100,11 @@ export default function CookieConsent() {
                 </h3>
                 <p className="text-sm text-body leading-relaxed">
                   Usamos cookies para melhorar sua experiência e entender como
-                  você usa nosso site.&nbsp;
+                  você usa nosso site.
+                  <br />
                   <Link
                     href="/politica-privacidade"
-                    className="text-primary hover:underline font-medium inline-flex items-center gap-0.5"
+                    className="text-primary hover:underline font-medium inline-flex items-center gap-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm mt-2"
                   >
                     Saiba mais
                     <svg
@@ -140,7 +141,7 @@ export default function CookieConsent() {
                 <div className="mx-auto w-full flex justify-center items-center mt-3">
                   <button
                     onClick={() => setShowRejectOption(true)}
-                    className="w-fit px-4 py-2 text-xs text-muted hover:text-primary transition-colors underline-offset-2 hover:underline cursor-pointer"
+                    className="w-fit px-4 py-2 text-xs text-muted hover:text-primary transition-colors underline-offset-2 hover:underline cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
                   >
                     Gerenciar preferências
                   </button>
@@ -153,7 +154,7 @@ export default function CookieConsent() {
                   <Button
                     onClick={rejectCookies}
                     variant="link"
-                    className="w-fit mx-auto px-0 py-0"
+                    className="w-fit mx-auto px-0 py-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
                   >
                     Recusar cookies
                   </Button>

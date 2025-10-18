@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Get all blog posts
   const posts = getAllPosts()
 
-  // Blog post entries - High priority for educational content
+  // Blog post entries
   const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.lastModified),
