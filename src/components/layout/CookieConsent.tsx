@@ -21,12 +21,15 @@ import { Button } from '@/components/ui/Button'
 export default function CookieConsent() {
   const [showConsent, setShowConsent] = useState(false)
   const [showRejectOption, setShowRejectOption] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     // Only show if user hasn't made a decision yet
     const consent = localStorage.getItem('lgpd-cookie-consent')
     if (!consent) {
       setShowConsent(true)
+      // Trigger animation after mount
+      setTimeout(() => setIsVisible(true), 1200)
     }
   }, [])
 
@@ -52,7 +55,17 @@ export default function CookieConsent() {
   return (
     <div className="fixed inset-0 pointer-events-none z-50">
       {/* Desktop: bottom-right card | Mobile: bottom sheet */}
-      <div className="absolute sm:bottom-6 sm:right-6 bottom-0 left-0 right-0 sm:left-auto pointer-events-auto animate-in slide-in-from-bottom-4 sm:slide-in-from-right-4 duration-500 w-full sm:max-w-sm">
+      <div
+        className="absolute sm:bottom-6 sm:right-6 bottom-0 left-0 right-0 sm:left-auto pointer-events-auto w-full sm:max-w-sm transition-all duration-700 ease-out"
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible
+            ? 'translate(0, 0)'
+            : window.innerWidth >= 640
+            ? 'translate(24px, 0)' // Desktop: slide from right
+            : 'translate(0, 24px)', // Mobile: slide from bottom
+        }}
+      >
         <div className="bg-background sm:border sm:border-primary/10 rounded-t-3xl sm:rounded-2xl overflow-hidden relative shadow-[0_-4px_20px_rgba(102,58,37,0.15)] sm:shadow-[0_8px_30px_rgba(102,58,37,0.2)]">
           {/* X button - dismisses without saving preference */}
           <button
