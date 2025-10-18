@@ -33,19 +33,19 @@ export const metadata: Metadata = {
     template: `%s | ${DR_NAME} - Coloproctologista`,
   },
   description:
-    'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico do intestino, reto e ânus. Tratamento de hemorróidas, fissuras anais, HPV e doenças inflamatórias intestinais. Consultas humanizadas na Clínica Nassif - Batel.',
+    'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico do intestino, reto e ânus. Tratamento de hemorroidas, fissuras anais, HPV e doenças inflamatórias intestinais. Consultas humanizadas na Clínica Nassif - Batel.',
   keywords: [
     'coloproctologista curitiba',
     'coloproctologia curitiba',
     'ana luiza rocha',
-    'cirurgia hemorróidas curitiba',
+    'cirurgia hemorroidas curitiba',
     'tratamento fissura anal',
     'proctologista curitiba',
     'médica intestino curitiba',
     'cirurgia ânus curitiba',
     'HPV anal tratamento',
     'botox fissura anal',
-    'ligadura elástica hemorróidas',
+    'ligadura elástica hemorroidas',
     'colonoscopia curitiba',
     'síndrome intestino irritável',
     'doenças inflamatórias intestinais',
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     url: WEBSITE_URL,
     title: `${DR_NAME} - Coloproctologista em Curitiba | Especialista em Intestino, Reto e Ânus`,
     description:
-      'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico humanizado para tratamento de hemorróidas, fissuras anais, HPV e doenças inflamatórias intestinais.',
+      'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico humanizado para tratamento de hemorroidas, fissuras anais, HPV e doenças inflamatórias intestinais.',
     siteName: `${DR_NAME} - Coloproctologia`,
     images: [
       {

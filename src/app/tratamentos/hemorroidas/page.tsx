@@ -18,9 +18,9 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Tratamento de Hemorróidas | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Tratamento de Hemorroidas | Dra. Ana Luiza Moraes Rocha'
 const pageDescription =
-  'Tratamentos especializados para hemorróidas: ligadura elástica, escleroterapia, cirurgia laser e THD em Curitiba. Procedimentos ambulatoriais e cirúrgicos.'
+  'Tratamentos especializados para hemorroidas: ligadura elástica, escleroterapia, cirurgia laser e THD em Curitiba. Procedimentos ambulatoriais e cirúrgicos.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/hemorroidas`
 
 export const metadata: Metadata = {
@@ -77,7 +77,7 @@ const faqItems: FAQItem[] = [
 const breadcrumbItems: BreadcrumbItem[] = [
   { label: 'Início', href: '/' },
   { label: 'Tratamentos', href: '/tratamentos' },
-  { label: 'Tratamento de Hemorróidas' },
+  { label: 'Tratamento de Hemorroidas' },
 ]
 
 export default function TratamentoHemorroidasPage() {
@@ -92,9 +92,9 @@ export default function TratamentoHemorroidasPage() {
             '@type': 'MedicalProcedure',
             '@id':
               'https://analuizarocha.com.br/tratamentos/tratamento-hemorroidas',
-            name: 'Tratamento de Hemorróidas',
+            name: 'Tratamento de Hemorroidas',
             description:
-              'Tratamentos especializados para hemorróidas incluindo ligadura elástica, escleroterapia, cirurgia laser e THD',
+              'Tratamentos especializados para hemorroidas incluindo ligadura elástica, escleroterapia, cirurgia laser e THD',
             procedureType: 'Proctological Treatment',
             bodyLocation: {
               '@type': 'AnatomicalStructure',
@@ -139,7 +139,7 @@ export default function TratamentoHemorroidasPage() {
             items={[
               { label: 'Início', href: '/' },
               { label: 'Tratamentos', href: '/tratamentos' },
-              { label: 'Tratamento de Hemorróidas' },
+              { label: 'Tratamento de Hemorroidas' },
             ]}
           />
 
@@ -152,11 +152,11 @@ export default function TratamentoHemorroidasPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
-                Tratamento de Hemorróidas
+                Tratamento de Hemorroidas
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
-                As hemorróidas são dilatações das veias do reto e ânus que podem
+                As hemorroidas são dilatações das veias do reto e ânus que podem
                 causar sintomas como sangramento, dor, coceira e desconforto. O
                 tratamento varia de acordo com o grau da doença, a intensidade
                 dos sintomas e a resposta às medidas clínicas iniciais.
@@ -386,7 +386,7 @@ export default function TratamentoHemorroidasPage() {
             </main>
 
             <CallToActionCard
-              title="Precisa de avaliação para tratamento de hemorróidas?"
+              title="Precisa de avaliação para tratamento de hemorroidas?"
               body={
                 <p>
                   Agende uma consulta para avaliarmos o melhor tratamento para o

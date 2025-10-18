@@ -164,7 +164,7 @@ export const structuredData = {
         'Cirurgias a laser',
         'Botox para fissura anal',
         'Cirurgias para fístulas anorretais',
-        'Ligadura elástica para hemorróidas',
+        'Ligadura elástica para hemorroidas',
         'Tratamento de HPV',
         'Cirurgia de cisto pilonidal',
         'Acompanhamento de doenças inflamatórias intestinais',

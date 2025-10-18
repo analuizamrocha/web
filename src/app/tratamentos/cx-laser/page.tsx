@@ -21,7 +21,7 @@ import {
 const pageTitle =
   'Cirurgias a Laser em Coloproctologia | Dra. Ana Luiza Moraes Rocha'
 const pageDescription =
-  'Cirurgias a laser para hemorróidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.'
+  'Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/cx-laser`
 
 export const metadata: Metadata = {
@@ -93,7 +93,7 @@ export default function CirurgiasLaserPage() {
             '@id': 'https://analuizarocha.com.br/tratamentos/cx-laser',
             name: 'Cirurgias a Laser em Coloproctologia',
             description:
-              'Procedimentos cirúrgicos minimamente invasivos utilizando tecnologia laser para tratamento de hemorróidas e fissuras anais',
+              'Procedimentos cirúrgicos minimamente invasivos utilizando tecnologia laser para tratamento de hemorroidas e fissuras anais',
             procedureType: 'Laser Surgery',
             bodyLocation: {
               '@type': 'AnatomicalStructure',
@@ -170,7 +170,7 @@ export default function CirurgiasLaserPage() {
               </p>
               <ul>
                 <li>
-                  <strong>Hemorróidas</strong> – tratamento minimamente invasivo
+                  <strong>Hemorroidas</strong> – tratamento minimamente invasivo
                   em casos selecionados.
                 </li>
                 <li>

@@ -15,7 +15,7 @@ export const faqSchema = {
       name: 'Quando devo procurar um coloproctologista?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Você deve procurar um coloproctologista se apresentar sintomas como sangramento anal, dor na região do ânus, alterações no hábito intestinal, hemorróidas, fissuras anais, ou para prevenção do câncer colorretal.',
+        text: 'Você deve procurar um coloproctologista se apresentar sintomas como sangramento anal, dor na região do ânus, alterações no hábito intestinal, hemorroidas, fissuras anais, ou para prevenção do câncer colorretal.',
       },
     },
     {
@@ -23,7 +23,7 @@ export const faqSchema = {
       name: 'Quais tratamentos são oferecidos?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Oferecemos cirurgias a laser, botox para fissura anal, ligadura elástica para hemorróidas, tratamento de HPV, cirurgia de cisto pilonidal, acompanhamento de doenças inflamatórias intestinais e tratamento da síndrome do intestino irritável.',
+        text: 'Oferecemos cirurgias a laser, botox para fissura anal, ligadura elástica para hemorroidas, tratamento de HPV, cirurgia de cisto pilonidal, acompanhamento de doenças inflamatórias intestinais e tratamento da síndrome do intestino irritável.',
       },
     },
     {

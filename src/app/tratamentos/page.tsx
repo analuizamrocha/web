@@ -9,7 +9,7 @@ import { LinkButton } from '@/components/ui/LinkButton'
 export const metadata: Metadata = {
   title: 'Tratamentos de Coloproctologia | Dra. Ana Luiza Moraes Rocha',
   description:
-    'Tratamentos especializados em coloproctologia: cirurgias a laser, tratamento de hemorróidas, fístulas anorretais e muito mais em Curitiba.',
+    'Tratamentos especializados em coloproctologia: cirurgias a laser, tratamento de hemorroidas, fístulas anorretais e muito mais em Curitiba.',
   keywords: [
     'coloproctologia curitiba',
     'cirurgia hemorroidas curitiba',
@@ -28,14 +28,14 @@ const treatments = [
   {
     title: 'Cirurgias a Laser',
     description:
-      'Procedimentos minimamente invasivos com tecnologia laser para tratamento de hemorróidas e fissuras anais.',
+      'Procedimentos minimamente invasivos com tecnologia laser para tratamento de hemorroidas e fissuras anais.',
     slug: 'cx-laser',
     category: 'Cirúrgico',
   },
   {
-    title: 'Tratamento de Hemorróidas',
+    title: 'Tratamento de Hemorroidas',
     description:
-      'Ligadura elástica, escleroterapia e outros procedimentos para alívio definitivo das hemorróidas.',
+      'Ligadura elástica, escleroterapia e outros procedimentos para alívio definitivo das hemorroidas.',
     slug: 'hemorroidas',
     category: 'Clínico/Cirúrgico',
   },

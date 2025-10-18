@@ -55,7 +55,7 @@ Lembrar que a gente não vence nada sozinho - a jornada da saúde é compartilha
 
 ## Quando procurar um coloproctologista? (Serviços)
 
-### Hemorróidas
+### Hemorroidas
 
 Quando há dor, sangramento, coceira ou incômodo ao evacuar, é possível que se trate de hemorroidas. Felizmente, hoje existem alternativas modernas e menos invasivas para aliviar esses sintomas com segurança.
 
@@ -117,7 +117,7 @@ Precisamos adequar os melhores tratamentos ao seu estilo de vida.
 - Cirurgias a laser
 - Cirurgias videoassistidas (VAAFT)
 - Botox para fissura anal e dores anais crônicas
-- Ligadura elástica para hemorróidas
+- Ligadura elástica para hemorroidas
 - Cirurgias para fístulas anorretais
 - Cirurgia de cisto pilonidal
 - Tratamento de HPV
