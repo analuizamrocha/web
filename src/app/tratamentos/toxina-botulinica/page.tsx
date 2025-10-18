@@ -193,7 +193,7 @@ export default function ToxinaBotulínicaPage() {
               <h2>Como Funciona</h2>
               <ul>
                 <li>
-                  A toxina botulínica é aplicada diretamente no{' '}
+                  A toxina botulínica é aplicada diretamente no&nbsp;
                   <strong>esfíncter anal interno</strong>, em pequenas doses.
                 </li>
                 <li>
@@ -245,7 +245,7 @@ export default function ToxinaBotulínicaPage() {
               <p>
                 A aplicação de toxina botulínica representa uma ferramenta
                 importante na coloproctologia moderna, principalmente no manejo
-                de <strong>fissuras anais crônicas</strong> e{' '}
+                de <strong>fissuras anais crônicas</strong> e&nbsp;
                 <strong>dores anais persistentes</strong>.
               </p>
               <p>

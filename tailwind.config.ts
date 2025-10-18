@@ -69,7 +69,9 @@ const config: Config = {
         '9xl': '1500px',
         container: '1432px',
       },
+      // Breakpoints
       screens: {
+        xs: '450px',
         '2xl': '1536px',
         '3xl': '1920px',
       },

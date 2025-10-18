@@ -284,7 +284,7 @@ export default function RastreioCancerAnalPage() {
               <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
                 <div className="space-y-4">
                   <p className="text-secondary italic mb-0">
-                    Um dos maiores estudos já publicados sobre o tema, o{' '}
+                    Um dos maiores estudos já publicados sobre o tema, o&nbsp;
                     <strong>
                       <a
                         href="https://www.anchorstudy.org"
@@ -300,7 +300,7 @@ export default function RastreioCancerAnalPage() {
                     câncer anal.
                   </p>
                   <p className="text-secondary italic mb-0">
-                    Para mais informações, acesse também a{' '}
+                    Para mais informações, acesse também a&nbsp;
                     <strong>
                       <a
                         href="https://iansoc.org/"

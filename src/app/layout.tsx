@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import CookieConsent from '@/components/layout/CookieConsent'
+import { AnalyticsProvider } from '@/components/analytics'
 import { DR_NAME, CLINICA_NASSIF_UPDATED, WEBSITE_URL } from '@/lib/constants'
 import { getStructuredData } from '@/lib/structured-data'
 
@@ -139,49 +140,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* Preconnect to critical third-party origins for performance */}
+        {/* Preconnect only to Vercel Analytics (first-party) */}
         <link rel="preconnect" href="https://va.vercel-scripts.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
 
-        {/* LGPD-compliant analytics initialization - consent mode */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              window.gtag = gtag;
-
-              // Set default consent to 'denied' as a baseline (LGPD compliance)
-              gtag('consent', 'default', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied',
-                'personalization_storage': 'denied',
-                'wait_for_update': 500
-              });
-
-              gtag('js', new Date());
-
-              // Defer analytics loading until after page load for performance
-              window.addEventListener('load', function() {
-                setTimeout(function() {
-                  // Check if user has already consented
-                  const consent = localStorage.getItem('lgpd-cookie-consent');
-                  if (consent === 'accepted') {
-                    // Load analytics only if previously accepted
-                    if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
-                      const script = document.createElement('script');
-                      script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}';
-                      script.async = true;
-                      document.head.appendChild(script);
-                    }
-                  }
-                }, 1000);
-              });
-            `,
-          }}
-        />
-
+        {/* Structured data for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -193,8 +155,10 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+
+        {/* Client-only components (preserve SSR) */}
         <CookieConsent />
-        {/* Load analytics asynchronously after page content */}
+        <AnalyticsProvider />
         <Analytics />
         <SpeedInsights />
       </body>
