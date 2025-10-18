@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'blog coloproctologia',
     'artigos coloproctologista curitiba',
     'saúde intestinal',
-    'tratamento hemorróidas',
+    'tratamento hemorroidas',
     'prevenção câncer colorretal',
     'cirurgia laser coloproctologia',
     'cisto pilonidal',

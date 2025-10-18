@@ -2,12 +2,13 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Montserrat, Literata } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
+import CookieConsent from '@/components/layout/CookieConsent'
+import { AnalyticsProvider } from '@/components/analytics'
 import { DR_NAME, CLINICA_NASSIF_UPDATED, WEBSITE_URL } from '@/lib/constants'
 import { getStructuredData } from '@/lib/structured-data'
 
@@ -32,19 +33,19 @@ export const metadata: Metadata = {
     template: `%s | ${DR_NAME} - Coloproctologista`,
   },
   description:
-    'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico do intestino, reto e ânus. Tratamento de hemorróidas, fissuras anais, HPV e doenças inflamatórias intestinais. Consultas humanizadas na Clínica Nassif - Batel.',
+    'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico do intestino, reto e ânus. Tratamento de hemorroidas, fissuras anais, HPV e doenças inflamatórias intestinais. Consultas humanizadas na Clínica Nassif - Batel.',
   keywords: [
     'coloproctologista curitiba',
     'coloproctologia curitiba',
     'ana luiza rocha',
-    'cirurgia hemorróidas curitiba',
+    'cirurgia hemorroidas curitiba',
     'tratamento fissura anal',
     'proctologista curitiba',
     'médica intestino curitiba',
     'cirurgia ânus curitiba',
     'HPV anal tratamento',
     'botox fissura anal',
-    'ligadura elástica hemorróidas',
+    'ligadura elástica hemorroidas',
     'colonoscopia curitiba',
     'síndrome intestino irritável',
     'doenças inflamatórias intestinais',
@@ -66,8 +67,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   verification: {
-    // TODO: Add Google Search Console verification when available
-    // google: 'your-google-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,
   },
   alternates: {
     canonical: WEBSITE_URL,
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     url: WEBSITE_URL,
     title: `${DR_NAME} - Coloproctologista em Curitiba | Especialista em Intestino, Reto e Ânus`,
     description:
-      'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico humanizado para tratamento de hemorróidas, fissuras anais, HPV e doenças inflamatórias intestinais.',
+      'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico humanizado para tratamento de hemorroidas, fissuras anais, HPV e doenças inflamatórias intestinais.',
     siteName: `${DR_NAME} - Coloproctologia`,
     images: [
       {
@@ -140,10 +140,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* Preconnect to critical third-party origins for performance */}
+        {/* Preconnect only to Vercel Analytics (first-party) */}
         <link rel="preconnect" href="https://va.vercel-scripts.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+        {/* Structured data for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -155,12 +155,11 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <CookieConsent />
+        <AnalyticsProvider />
+        <VercelAnalytics />
+        <SpeedInsights />
       </body>
-      {/* Load analytics asynchronously after page content */}
-      <Analytics />
-      <SpeedInsights />
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
     </html>
   )
 }

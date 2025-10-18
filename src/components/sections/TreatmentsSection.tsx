@@ -12,7 +12,7 @@ const treatments = [
     name: 'Cirurgias para fístulas anorretais',
   },
   {
-    name: 'Ligadura elástica para hemorróidas',
+    name: 'Ligadura elástica para hemorroidas',
   },
   {
     name: 'Rastreio e prevenção do câncer de canal anal',

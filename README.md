@@ -162,7 +162,7 @@ Blog posts automatically:
 
 - "coloproctologista Curitiba"
 - "cirurgia laser coloproctologia"
-- "tratamento hemorróidas"
+- "tratamento hemorroidas"
 - "quando procurar proctologista"
 
 ### Content Strategy

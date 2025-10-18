@@ -167,7 +167,9 @@ function extractItalicHook(content: string): string {
   const firstParagraph = paragraphs.find((p) => p.trim().length > 0) || ''
 
   // Remove any markdown formatting from fallback
-  return firstParagraph.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*(.*?)\*/g, '$1')
+  return firstParagraph
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
 }
 
 /**
@@ -303,7 +305,7 @@ export function generateBlogPostSchema(post: BlogPost): {
             'Coloproctologia',
             'Cirurgia Colorretal',
             'Endoscopia Digestiva',
-            'Hemorróidas',
+            'Hemorroidas',
             'Câncer Colorretal',
           ],
           hasCredential: {

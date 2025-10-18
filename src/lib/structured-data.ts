@@ -97,16 +97,35 @@ export const structuredData = {
         {
           '@type': 'EducationalOccupationalCredential',
           credentialCategory: 'Registro Profissional',
-          recognizedBy: 'Conselho Regional de Medicina do Paraná',
           identifier: 'CRM-PR 45351',
+          recognizedBy: {
+            '@type': 'Organization',
+            name: 'Conselho Regional de Medicina do Paraná',
+            alternateName: 'CRM-PR',
+            url: 'https://www.crmpr.org.br',
+          },
         },
         {
           '@type': 'EducationalOccupationalCredential',
           credentialCategory: 'Qualificação de Especialista',
-          recognizedBy: 'Conselho Regional de Medicina do Paraná',
           identifier: 'RQE 36221',
+          name: 'Especialização em Coloproctologia',
+          recognizedBy: {
+            '@type': 'Organization',
+            name: 'Conselho Regional de Medicina do Paraná',
+            alternateName: 'CRM-PR',
+            url: 'https://www.crmpr.org.br',
+          },
         },
       ],
+      // Brazilian payment methods and currency
+      paymentAccepted: [
+        'Dinheiro',
+        'Cartão de Crédito',
+        'Cartão de Débito',
+        'PIX',
+      ],
+      currenciesAccepted: 'BRL',
       worksFor: {
         '@id': 'https://analuizarocha.com.br/#organization',
       },
@@ -145,7 +164,7 @@ export const structuredData = {
         'Cirurgias a laser',
         'Botox para fissura anal',
         'Cirurgias para fístulas anorretais',
-        'Ligadura elástica para hemorróidas',
+        'Ligadura elástica para hemorroidas',
         'Tratamento de HPV',
         'Cirurgia de cisto pilonidal',
         'Acompanhamento de doenças inflamatórias intestinais',

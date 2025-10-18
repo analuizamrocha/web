@@ -2,7 +2,7 @@ import { Card } from '@/components/ui/Card'
 
 const services = [
   {
-    name: 'Hemorróidas',
+    name: 'Hemorroidas',
     description:
       'Quando há dor, sangramento, coceira ou incômodo ao evacuar, é possível que se trate de hemorroidas. Felizmente, hoje existem alternativas modernas e menos invasivas para aliviar esses sintomas com segurança.',
   },
