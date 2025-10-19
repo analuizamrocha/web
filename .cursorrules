@@ -31,9 +31,46 @@ The user asks questions about the following coding languages:
 
 Follow these rules when you write code:
 
+### General Patterns
+
 - Use early returns whenever possible to make the code more readable.
-- Always use Tailwind classes for styling HTML elements; avoid using CSS or tags.
-- Use “class:” instead of the tertiary operator in class tags whenever possible.
-- Use descriptive variable and function/const names. Also, event functions should be named with a “handle” prefix, like “handleClick” for onClick and “handleKeyDown” for onKeyDown.
-- Implement accessibility features on elements. For example, a tag should have a tabindex=“0”, aria-label, on:click, and on:keydown, and similar attributes.
-- Use consts instead of functions, for example, “const toggle = () =>”. Also, define a type if possible.
+- Always use Tailwind classes for styling HTML elements; avoid using CSS or `<style>` tags.
+- Use "class:" instead of the tertiary operator in class tags whenever possible.
+- Use descriptive variable and function/const names. Also, event functions should be named with a "handle" prefix, like "handleClick" for onClick and "handleKeyDown" for onKeyDown.
+- Implement accessibility features on elements. For example, a tag should have a tabindex="0", aria-label, on:click, and on:keydown, and similar attributes.
+- Use consts instead of functions, for example, "const toggle = () =>". Also, define a type if possible.
+
+### Design System & Colors
+
+- Use CSS variables for text hierarchy: `text-heading`, `text-body`, `text-muted` classes (not direct color values)
+- Maintain WCAG AAA contrast ratios (7.2:1 for body text, 14.8:1 for headings)
+- Use warm brown/beige palette throughout - avoid cool grays or blue tints
+- For card backgrounds, use `bg-card` and `bg-card-hover` utility classes
+
+### Component Standards
+
+- Button component has 8 variants: default, primary, secondary, subtle, outline, ghost, link, destructive
+- All interactive elements must have `cursor-pointer` class
+- Use focus-visible ring styles: `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2`
+- For subtle buttons or secondary actions, use `variant="subtle"` (light brown bg-primary/5)
+
+### Animations
+
+- For complex entrance animations, use CSS transitions with inline styles (not Tailwind's animate-in utilities)
+- Pattern: useState for visibility + setTimeout trigger + transition-all duration-700 ease-out
+- Mobile vs desktop animations should be responsive (check window.innerWidth in style prop)
+
+### Cookie Consent & Analytics
+
+- Analytics (GA/GTM) only load after user consent via AnalyticsProvider
+- CookieConsent uses progressive disclosure (hide reject option initially)
+- localStorage key: 'lgpd-cookie-consent' with values 'accepted' | 'rejected'
+- X button dismisses without saving (nudge pattern to increase acceptance)
+- Mobile: bottom sheet layout, Desktop: bottom-right card
+
+### Accessibility
+
+- All links and buttons need brown focus rings (not default blue)
+- Use `rounded-sm` with focus-visible rings for proper visual feedback
+- Maintain keyboard navigation support (tab order, enter/space activation)
+- Include aria-label and title attributes for icon-only buttons
