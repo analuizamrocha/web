@@ -25,7 +25,7 @@ export function Card({
         variant === 'default' &&
           'bg-neutral-50/50 hover:bg-neutral-100/50 p-6 sm:p-8 border border-neutral-200',
         variant === 'service' &&
-          'bg-card hover:bg-card-hover hover:shadow-lg p-6 sm:p-8 border border-primary/10 hover:border-primary/20 backdrop-blur-sm',
+          'bg-secondary/10 hover:bg-card-hover hover:shadow-lg p-6 sm:p-8 border border-primary/10 hover:border-primary/20 backdrop-blur-sm',
         className
       )}
     >
