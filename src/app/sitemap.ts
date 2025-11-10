@@ -38,6 +38,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   )
 
+  const specialtyPages = [
+    '/especialidades/hemorroidas-tratamento-laser',
+    '/especialidades/cisto-pilonidal-cirurgia',
+    '/especialidades/fissura-anal-toxina-botulinica',
+    '/especialidades/endometriose-intestinal',
+    '/procedimentos/cirurgia-minimamente-invasiva',
+    '/procedimentos/laser-coloproctologia',
+  ]
+
+  const specialtyEntries: MetadataRoute.Sitemap = specialtyPages.map(
+    (path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    })
+  )
+
   return [
     // Homepage - Highest priority
     {
@@ -46,15 +64,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
-    // Treatments index - Very high priority
+    // Treatments index + Proctologia - Very high priority
     {
       url: `${baseUrl}/tratamentos`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.95,
     },
+    {
+      url: `${baseUrl}/proctologia`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.95,
+    },
     // Individual treatment pages - Very high priority
     ...treatmentEntries,
+    // Specialty + procedure landing pages
+    ...specialtyEntries,
     // About page - Important for trust/authority
     {
       url: `${baseUrl}/sobre`,

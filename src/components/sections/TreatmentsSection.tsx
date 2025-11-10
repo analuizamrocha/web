@@ -1,35 +1,35 @@
-import { Card } from '@/components/ui/Card'
-import { LinkButton } from '@/components/ui/LinkButton'
+import { Card } from "@/components/ui/Card";
+import { LinkButton } from "@/components/ui/LinkButton";
 
 const treatments = [
   {
-    name: 'Cirurgias a laser',
+    name: "Cirurgias a laser",
   },
   {
-    name: 'Toxina botulínica para fissura anal e dores crônicas',
+    name: "Toxina botulínica para fissura anal e dores crônicas",
   },
   {
-    name: 'Cirurgias para fístulas anorretais',
+    name: "Cirurgias para fístulas anorretais",
   },
   {
-    name: 'Ligadura elástica para hemorroidas',
+    name: "Ligadura elástica para hemorroidas",
   },
   {
-    name: 'Rastreio e prevenção do câncer de canal anal',
+    name: "Rastreio e prevenção do câncer de canal anal",
   },
   {
-    name: 'Acompanhamento de doenças inflamatórias intestinais',
+    name: "Acompanhamento de doenças inflamatórias intestinais",
   },
   {
-    name: 'Tratamento de HPV',
+    name: "Tratamento de HPV",
   },
   {
-    name: 'Cirurgia de cisto pilonidal',
+    name: "Cirurgia de cisto pilonidal",
   },
   {
-    name: 'Síndrome do intestino irritável',
+    name: "Síndrome do intestino irritável",
   },
-]
+];
 
 export function TreatmentsSection() {
   return (
@@ -61,8 +61,8 @@ export function TreatmentsSection() {
               className={`
                 ${
                   index === treatments.length - 1
-                    ? 'flex sm:hidden lg:flex'
-                    : ''
+                    ? "flex sm:hidden lg:flex"
+                    : ""
                 }
               `}
             />
@@ -76,5 +76,5 @@ export function TreatmentsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

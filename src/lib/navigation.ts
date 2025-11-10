@@ -35,6 +35,7 @@ const homepageSections: NavigationItem[] = [
  */
 const externalRoutes: NavigationItem[] = [
   { name: "Blog", href: "/blog", id: "blog", type: "route" },
+  { name: "Proctologia", href: "/proctologia", id: "proctologia", type: "route" },
   {
     name: "Tratamentos",
     href: "/tratamentos",
@@ -50,6 +51,7 @@ const externalRoutes: NavigationItem[] = [
 export const globalNavigation: NavigationItem[] = [
   { name: "Início", href: "/", id: "home", type: "route" },
   { name: "Blog", href: "/blog", id: "blog", type: "route" },
+  { name: "Proctologia", href: "/proctologia", id: "proctologia", type: "route" },
   {
     name: "Tratamentos",
     href: "/tratamentos",
