@@ -14,9 +14,12 @@ import { getStructuredData } from '@/lib/structured-data'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-montserrat',
   display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
 })
 
 const literata = Literata({
@@ -24,6 +27,9 @@ const literata = Literata({
   weight: ['400', '700'],
   variable: '--font-pt-serif',
   display: 'swap',
+  preload: true,
+  fallback: ['Georgia', 'serif'],
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
@@ -140,7 +146,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* Preconnect only to Vercel Analytics (first-party) */}
+        {/* Preconnect to optimize font and analytics loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://va.vercel-scripts.com" />
 
         {/* Structured data for SEO */}

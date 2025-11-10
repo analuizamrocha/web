@@ -1,70 +1,70 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { navigationWithHashes } from '@/lib/navigation'
+import { useState, useEffect } from "react";
+import { hashNavigation } from "@/lib/navigation";
 
 export function useActiveSection(isRootPage: boolean) {
-  const [activeSection, setActiveSection] = useState('hero')
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    if (!isRootPage) return
+    if (!isRootPage) return;
 
-    const sections = navigationWithHashes.map((nav) => nav.id)
+    const sections = hashNavigation.map((nav) => nav.id);
 
     const observerOptions = {
       root: null,
-      rootMargin: '-100px 0px -40% 0px',
+      rootMargin: "-100px 0px -40% 0px",
       threshold: [0.1, 0.3, 0.5],
-    }
+    };
 
     const observer = new IntersectionObserver((entries) => {
       const sortedEntries = entries
         .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
       if (sortedEntries.length > 0) {
-        setActiveSection(sortedEntries[0].target.id)
+        setActiveSection(sortedEntries[0].target.id);
       }
-    }, observerOptions)
+    }, observerOptions);
 
     sections.forEach((sectionId) => {
-      const element = document.getElementById(sectionId)
+      const element = document.getElementById(sectionId);
       if (element) {
-        observer.observe(element)
+        observer.observe(element);
       }
-    })
+    });
 
     return () => {
       sections.forEach((sectionId) => {
-        const element = document.getElementById(sectionId)
+        const element = document.getElementById(sectionId);
         if (element) {
-          observer.unobserve(element)
+          observer.unobserve(element);
         }
-      })
-    }
-  }, [isRootPage])
+      });
+    };
+  }, [isRootPage]);
 
   const scrollToSection = (href: string) => {
-    if (href.startsWith('#')) {
-      const element = document.getElementById(href.slice(1))
+    if (href.startsWith("#")) {
+      const element = document.getElementById(href.slice(1));
       if (element) {
-        const headerHeight = 80 // Fixed header height
+        const headerHeight = 80; // Fixed header height
         const elementPosition =
-          element.getBoundingClientRect().top + window.pageYOffset
-        const offsetPosition = elementPosition - headerHeight
+          element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth',
-        })
+          behavior: "smooth",
+        });
 
         // Clear focus from the clicked button to allow intersection observer to take over
         if (document.activeElement instanceof HTMLElement) {
-          document.activeElement.blur()
+          document.activeElement.blur();
         }
       }
     }
-  }
+  };
 
-  return { activeSection, scrollToSection }
+  return { activeSection, scrollToSection };
 }

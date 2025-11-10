@@ -1,94 +1,94 @@
-import Link from 'next/link'
-import { Card } from '@/components/ui/Card'
-import type { Metadata } from 'next'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
-import { Badge } from '@/components/ui/Badge'
-import { ArrowRight } from 'lucide-react'
-import { LinkButton } from '@/components/ui/LinkButton'
+import Link from "next/link";
+import { Card } from "@/components/ui/Card";
+import type { Metadata } from "next";
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from "@/lib/constants";
+import { Badge } from "@/components/ui/Badge";
+import { ArrowRight } from "lucide-react";
+import { LinkButton } from "@/components/ui/LinkButton";
 
 export const metadata: Metadata = {
-  title: 'Tratamentos de Coloproctologia | Dra. Ana Luiza Moraes Rocha',
+  title: "Tratamentos de Coloproctologia | Dra. Ana Luiza Moraes Rocha",
   description:
-    'Tratamentos especializados em coloproctologia: cirurgias a laser, tratamento de hemorroidas, fístulas anorretais e muito mais em Curitiba.',
+    "Tratamentos especializados em coloproctologia: cirurgias a laser, tratamento de hemorroidas, fístulas anorretais e muito mais em Curitiba.",
   keywords: [
-    'coloproctologia curitiba',
-    'cirurgia hemorroidas curitiba',
-    'tratamento fissura anal',
-    'proctologista curitiba',
-    'cirurgia laser curitiba',
-    'HPV anal curitiba',
-    'cisto pilonidal curitiba',
+    "coloproctologia curitiba",
+    "cirurgia hemorroidas curitiba",
+    "tratamento fissura anal",
+    "proctologista curitiba",
+    "cirurgia laser curitiba",
+    "HPV anal curitiba",
+    "cisto pilonidal curitiba",
   ],
   alternates: {
-    canonical: 'https://analuizarocha.com.br/tratamentos',
+    canonical: "https://analuizarocha.com.br/tratamentos",
   },
-}
+};
 
 const treatments = [
   {
-    title: 'Cirurgias a Laser',
+    title: "Cirurgias a Laser",
     description:
-      'Procedimentos minimamente invasivos com tecnologia laser para tratamento de hemorroidas e fissuras anais.',
-    slug: 'cx-laser',
-    category: 'Cirúrgico',
+      "Procedimentos minimamente invasivos com tecnologia laser para tratamento de hemorroidas e fissuras anais.",
+    slug: "cx-laser",
+    category: "Cirúrgico",
   },
   {
-    title: 'Tratamento de Hemorroidas',
+    title: "Tratamento de Hemorroidas",
     description:
-      'Ligadura elástica, escleroterapia e outros procedimentos para alívio definitivo das hemorroidas.',
-    slug: 'hemorroidas',
-    category: 'Clínico/Cirúrgico',
+      "Ligadura elástica, escleroterapia e outros procedimentos para alívio definitivo das hemorroidas.",
+    slug: "hemorroidas",
+    category: "Clínico/Cirúrgico",
   },
   {
-    title: 'Cirurgias para Fístulas Anorretais',
+    title: "Cirurgias para Fístulas Anorretais",
     description:
-      'Tratamento cirúrgico especializado para fístulas complexas com preservação da continência.',
-    slug: 'cx-fistulas-anorretais',
-    category: 'Cirúrgico',
+      "Tratamento cirúrgico especializado para fístulas complexas com preservação da continência.",
+    slug: "cx-fistulas-anorretais",
+    category: "Cirúrgico",
   },
   {
-    title: 'Toxina Botulínica',
+    title: "Toxina Botulínica",
     description:
-      'Aplicação de botox para tratamento de fissura anal e dores crônicas na região anorretal.',
-    slug: 'toxina-botulinica',
-    category: 'Clínico',
+      "Aplicação de botox para tratamento de fissura anal e dores crônicas na região anorretal.",
+    slug: "toxina-botulinica",
+    category: "Clínico",
   },
   {
-    title: 'Rastreio do Câncer de Canal Anal',
+    title: "Rastreio do Câncer de Canal Anal",
     description:
-      'Prevenção e detecção precoce de lesões pré-cancerosas e câncer anal.',
-    slug: 'rastreio-cancer-anal',
-    category: 'Preventivo',
+      "Prevenção e detecção precoce de lesões pré-cancerosas e câncer anal.",
+    slug: "rastreio-cancer-anal",
+    category: "Preventivo",
   },
   {
-    title: 'Tratamento de HPV Anal',
+    title: "Tratamento de HPV Anal",
     description:
-      'Diagnóstico e tratamento de condilomas acuminados (verrugas) na região anal.',
-    slug: 'hpv-anal',
-    category: 'Clínico',
+      "Diagnóstico e tratamento de condilomas acuminados (verrugas) na região anal.",
+    slug: "hpv-anal",
+    category: "Clínico",
   },
   {
-    title: 'Cirurgia de Cisto Pilonidal',
+    title: "Cirurgia de Cisto Pilonidal",
     description:
-      'Remoção cirúrgica de cistos pilonidais com técnicas modernas e baixa recidiva.',
-    slug: 'cx-cisto-pilonidal',
-    category: 'Cirúrgico',
+      "Remoção cirúrgica de cistos pilonidais com técnicas modernas e baixa recidiva.",
+    slug: "cx-cisto-pilonidal",
+    category: "Cirúrgico",
   },
   {
-    title: 'Doenças Inflamatórias Intestinais',
+    title: "Doenças Inflamatórias Intestinais",
     description:
-      'Acompanhamento especializado de Doença de Crohn e Retocolite Ulcerativa.',
-    slug: 'doencas-inflamatorias-intestinais',
-    category: 'Clínico',
+      "Acompanhamento especializado de Doença de Crohn e Retocolite Ulcerativa.",
+    slug: "doencas-inflamatorias-intestinais",
+    category: "Clínico",
   },
   {
-    title: 'Síndrome do Intestino Irritável',
+    title: "Síndrome do Intestino Irritável",
     description:
-      'Diagnóstico e tratamento personalizado para controle dos sintomas intestinais.',
-    slug: 'sindrome-intestino-irritavel',
-    category: 'Clínico',
+      "Diagnóstico e tratamento personalizado para controle dos sintomas intestinais.",
+    slug: "sindrome-intestino-irritavel",
+    category: "Clínico",
   },
-]
+];
 
 export default function ServicosPage() {
   return (
@@ -98,12 +98,12 @@ export default function ServicosPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'MedicalOrganization',
-            '@id': 'https://analuizarocha.com.br/#organization',
-            medicalSpecialty: ['Coloproctologia', 'Proctologia'],
+            "@context": "https://schema.org",
+            "@type": "MedicalOrganization",
+            "@id": "https://analuizarocha.com.br/#organization",
+            medicalSpecialty: ["Coloproctologia", "Proctologia"],
             availableService: treatments.map((treatment) => ({
-              '@type': 'MedicalProcedure',
+              "@type": "MedicalProcedure",
               name: treatment.title,
               description: treatment.description,
               procedureType: treatment.category,
@@ -188,7 +188,7 @@ export default function ServicosPage() {
                   variant="outline"
                   className="text-lg px-8 py-4 font-semibold text-nowrap shadow-lg hover:shadow-xl transform  transition-all duration-300"
                 >
-                  Artigos educativos
+                  Confira meus artigos
                 </LinkButton>
               </div>
             </div>
@@ -205,5 +205,5 @@ export default function ServicosPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

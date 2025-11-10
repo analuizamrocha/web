@@ -1,58 +1,58 @@
-'use client'
+"use client";
 
 import {
   WHATSAPP_BUSINESS_NUMBER,
   WHATSAPP_BUSINESS_NUMBER_FORMATTED,
   WHATSAPP_MSG_TEXT_ENCODED,
-} from '@/lib/constants'
-import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
-import { cn } from '@/lib/utils'
-import { useActiveSection } from '@/hooks/useActiveSection'
-import { useMobileMenu } from '@/hooks/useMobileMenu'
+} from "@/lib/constants";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { useActiveSection } from "@/hooks/useActiveSection";
+import { useMobileMenu } from "@/hooks/useMobileMenu";
 import {
-  getLandingPageNavigation,
+  getPageNavigation,
   getHashNavigation,
   globalNavigation,
-} from '@/lib/navigation'
-import { Divider } from './Divider'
+} from "@/lib/navigation";
+import { Divider } from "./Divider";
 
 export function Header() {
-  const pathname = usePathname()
-  const router = useRouter()
-  const isRootPage = pathname === '/'
+  const pathname = usePathname();
+  const router = useRouter();
+  const isRootPage = pathname === "/";
 
   // Custom hooks
-  const { activeSection, scrollToSection } = useActiveSection(isRootPage)
+  const { activeSection, scrollToSection } = useActiveSection(isRootPage);
   const {
     mobileMenuOpen,
     setMobileMenuOpen,
     toggleMobileMenu,
     mobileMenuRef,
     firstFocusableElementRef,
-  } = useMobileMenu()
+  } = useMobileMenu();
 
   const handleNavClick = (href: string) => {
     // Only use scroll navigation for hash fragments on homepage
-    if (isRootPage && href.startsWith('#')) {
-      scrollToSection(href)
+    if (isRootPage && href.startsWith("#")) {
+      scrollToSection(href);
     } else {
       // For external routes, use Next.js router
-      router.push(href)
+      router.push(href);
     }
-    setMobileMenuOpen(false)
-  }
+    setMobileMenuOpen(false);
+  };
 
   const handleMobileNavClick = (
     e: React.MouseEvent<HTMLButtonElement>,
     href: string
   ) => {
-    handleNavClick(href)
+    handleNavClick(href);
     // Clear focus from the clicked button to allow intersection observer to take over
     if (e.target instanceof HTMLElement) {
-      e.target.blur()
+      e.target.blur();
     }
-  }
+  };
 
   return (
     <>
@@ -88,12 +88,12 @@ export function Header() {
                       onClick={() => handleNavClick(item.href)}
                       data-header-nav
                       className={cn(
-                        'text-nowrap text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer',
-                        'hover:text-primary focus:text-primary focus:outline-none',
-                        'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300',
+                        "text-nowrap text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer",
+                        "hover:text-primary focus:text-primary focus:outline-none",
+                        "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300",
                         activeSection === item.id
-                          ? 'text-primary after:w-full'
-                          : 'text-secondary after:w-0 hover:after:w-full'
+                          ? "text-primary after:w-full"
+                          : "text-secondary after:w-0 hover:after:w-full"
                       )}
                     >
                       {item.name}
@@ -101,21 +101,21 @@ export function Header() {
                   ))}
 
                   {/* Divider */}
-                  <Divider orientation="vertical" size="sm" className="h-4" />
+                  {/* <Divider orientation="vertical" size="sm" className="h-4" /> */}
 
                   {/* External routes */}
-                  {getLandingPageNavigation().routes.map((item) => (
+                  {getPageNavigation().routes.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        'text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer',
-                        'hover:text-primary focus:text-primary focus:outline-none',
-                        'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300',
-                        pathname.startsWith(item.href) && item.href !== '/'
-                          ? 'text-primary after:w-full'
-                          : 'text-secondary after:w-0 hover:after:w-full'
+                        "text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer",
+                        "hover:text-primary focus:text-primary focus:outline-none",
+                        "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300",
+                        pathname.startsWith(item.href) && item.href !== "/"
+                          ? "text-primary after:w-full"
+                          : "text-secondary after:w-0 hover:after:w-full"
                       )}
                     >
                       {item.name}
@@ -130,12 +130,12 @@ export function Header() {
                       key={item.name}
                       href={item.href}
                       className={cn(
-                        'text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer',
-                        'hover:text-primary focus:text-primary focus:outline-none',
-                        'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300',
+                        "text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer",
+                        "hover:text-primary focus:text-primary focus:outline-none",
+                        "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300",
                         pathname === item.href
-                          ? 'text-primary after:w-full'
-                          : 'text-secondary after:w-0 hover:after:w-full'
+                          ? "text-primary after:w-full"
+                          : "text-secondary after:w-0 hover:after:w-full"
                       )}
                     >
                       {item.name}
@@ -152,7 +152,7 @@ export function Header() {
                 className="relative p-2 text-secondary hover:text-primary focus:text-primary transition-colors duration-200 cursor-pointer focus:outline-none"
                 onClick={toggleMobileMenu}
                 aria-label={
-                  mobileMenuOpen ? 'Fechar menu' : 'Abrir menu de navegação'
+                  mobileMenuOpen ? "Fechar menu" : "Abrir menu de navegação"
                 }
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu"
@@ -162,17 +162,17 @@ export function Header() {
                 <div className="w-6 h-6 flex flex-col justify-center items-center">
                   <span
                     className={`block h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                      mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+                      mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
                     }`}
                   />
                   <span
                     className={`block h-0.5 w-6 bg-current mt-1 transform transition-all duration-300 ease-in-out ${
-                      mobileMenuOpen ? 'opacity-0' : ''
+                      mobileMenuOpen ? "opacity-0" : ""
                     }`}
                   />
                   <span
                     className={`block h-0.5 w-6 bg-current mt-1 transform transition-all duration-300 ease-in-out ${
-                      mobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+                      mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
                     }`}
                   />
                 </div>
@@ -186,8 +186,8 @@ export function Header() {
       <div
         className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
           mobileMenuOpen
-            ? 'opacity-100 pointer-events-auto'
-            : 'opacity-0 pointer-events-none'
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
         {/* Clean backdrop */}
@@ -205,7 +205,7 @@ export function Header() {
           aria-modal="true"
           inert={!mobileMenuOpen}
           className={`fixed top-[67.5px] inset-x-0 bottom-0 bg-background/95 backdrop-blur-md border-t border-primary/10 shadow-lg transform transition-transform duration-300 ease-out ${
-            mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+            mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
           <div className="flex flex-col h-full">
@@ -222,10 +222,10 @@ export function Header() {
                         ref={index === 0 ? firstFocusableElementRef : null}
                         onClick={(e) => handleMobileNavClick(e, item.href)}
                         className={cn(
-                          'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
+                          "block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer",
                           activeSection === item.id
-                            ? 'text-primary bg-primary/10'
-                            : 'text-secondary hover:text-primary focus:text-primary hover:bg-primary/5'
+                            ? "text-primary bg-primary/10"
+                            : "text-secondary hover:text-primary focus:text-primary hover:bg-primary/5"
                         )}
                       >
                         {item.name}
@@ -238,16 +238,16 @@ export function Header() {
                     </div>
 
                     {/* External routes */}
-                    {getLandingPageNavigation().routes.map((item) => (
+                    {getPageNavigation().routes.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={cn(
-                          'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
-                          pathname.startsWith(item.href) && item.href !== '/'
-                            ? 'text-primary bg-primary/10'
-                            : 'text-secondary hover:text-primary focus:text-primary hover:bg-primary/5'
+                          "block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer",
+                          pathname.startsWith(item.href) && item.href !== "/"
+                            ? "text-primary bg-primary/10"
+                            : "text-secondary hover:text-primary focus:text-primary hover:bg-primary/5"
                         )}
                       >
                         {item.name}
@@ -263,10 +263,10 @@ export function Header() {
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={cn(
-                          'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
+                          "block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer",
                           pathname === item.href
-                            ? 'text-primary bg-primary/10'
-                            : 'text-secondary hover:text-primary focus:text-primary hover:bg-primary/5'
+                            ? "text-primary bg-primary/10"
+                            : "text-secondary hover:text-primary focus:text-primary hover:bg-primary/5"
                         )}
                       >
                         {item.name}
@@ -327,5 +327,5 @@ export function Header() {
         </div>
       </div>
     </>
-  )
+  );
 }
