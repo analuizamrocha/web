@@ -10,8 +10,8 @@ import {
   WHATSAPP_MSG_TEXT_ENCODED,
   WEBSITE_URL,
   CLINICA_NASSIF_UPDATED,
-  WPP_FORMATTED_NUMBER,
   DR_NAME,
+  WPP_NUMBER_NASSIF_FORMATTED,
 } from '@/lib/constants'
 import {
   generateBreadcrumbSchema,
@@ -32,8 +32,7 @@ import {
   Users,
 } from 'lucide-react'
 
-const pageTitle =
-  'Sobre Dra. Ana Luiza Moraes Rocha | Coloproctologista Curitiba'
+const pageTitle = 'Sobre Dra. Ana Luiza Moraes Rocha | Coloproctologista Curitiba'
 const pageDescription =
   'Conheça a trajetória da Dra. Ana Luiza Moraes Rocha, especialista em Coloproctologia com formação internacional e experiência em cirurgias minimamente invasivas.'
 const pageUrl = `${WEBSITE_URL}/sobre`
@@ -65,17 +64,13 @@ export const metadata: Metadata = {
 }
 
 // Breadcrumb data for schema
-const breadcrumbItems: BreadcrumbItem[] = [
-  { label: 'Início', href: '/' },
-  { label: 'Sobre' },
-]
+const breadcrumbItems: BreadcrumbItem[] = [{ label: 'Início', href: '/' }, { label: 'Sobre' }]
 
 const credentials = [
   {
     title: 'Graduação em Medicina',
     institution: 'Pontifícia Universidade Católica do Paraná (PUC-PR)',
-    description:
-      'Formação médica sólida e base fundamental para toda trajetória profissional.',
+    description: 'Formação médica sólida e base fundamental para toda trajetória profissional.',
     icon: GraduationCap,
     colorStart: '#663a25',
     colorEnd: '#7d4a30',
@@ -108,8 +103,7 @@ const credentials = [
   {
     title: 'Anuscopia de Alta Resolução',
     institution: 'International Anal Neoplasia Society (IANS)',
-    description:
-      'Capacitação em técnicas avançadas de diagnóstico e prevenção.',
+    description: 'Capacitação em técnicas avançadas de diagnóstico e prevenção.',
     icon: BookOpen,
     colorStart: '#5a4f47',
     colorEnd: '#6a5f57',
@@ -221,7 +215,7 @@ export default function SobrePage() {
                 latitude: CLINICA_NASSIF_UPDATED.coordinates.latitude,
                 longitude: CLINICA_NASSIF_UPDATED.coordinates.longitude,
               },
-              telephone: WPP_FORMATTED_NUMBER,
+              telephone: WPP_NUMBER_NASSIF_FORMATTED,
               url: WEBSITE_URL,
               image: `${WEBSITE_URL}/images/og.png`,
               priceRange: '$$',
@@ -241,9 +235,7 @@ export default function SobrePage() {
 
       <section className="section bg-background pt-24 md:pt-28 animate-fade-in">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          <Breadcrumb
-            items={[{ label: 'Início', href: '/' }, { label: 'Sobre' }]}
-          />
+          <Breadcrumb items={[{ label: 'Início', href: '/' }, { label: 'Sobre' }]} />
 
           <div className="mb-12 text-center">
             <div className="flex flex-wrap gap-2 mb-6 justify-center">
@@ -260,8 +252,8 @@ export default function SobrePage() {
             </h1>
 
             <h2 className="text-start sm:text-center text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium w-full flex flex-col items-center justify-center max-w-3xl mx-auto">
-              Especialista em Coloproctologia com formação internacional,
-              dedicada ao cuidado integral e humanizado de cada paciente.
+              Especialista em Coloproctologia com formação internacional, dedicada ao cuidado
+              integral e humanizado de cada paciente.
             </h2>
           </div>
 
@@ -270,16 +262,13 @@ export default function SobrePage() {
               Minha trajetória profissional
             </h2>
             <p className="text-lg text-secondary leading-relaxed mb-4">
-              Minha jornada na medicina começou com a certeza de que queria
-              cuidar de pessoas de forma integral. Durante a graduação em
-              Medicina na <strong>PUC-PR</strong>, desenvolvi a base sólida da
-              minha formação. Foi durante a&nbsp;
-              <strong>
-                residência em Cirurgia Geral, no Hospital Santa Casa de Curitiba
-              </strong>
-              , que descobri meu amor pela <strong>coloproctologia</strong> —
-              especialidade que une conhecimento técnico avançado com o cuidado
-              humanizado que sempre busquei oferecer aos meus pacientes.
+              Minha jornada na medicina começou com a certeza de que queria cuidar de pessoas de
+              forma integral. Durante a graduação em Medicina na <strong>PUC-PR</strong>, desenvolvi
+              a base sólida da minha formação. Foi durante a&nbsp;
+              <strong>residência em Cirurgia Geral, no Hospital Santa Casa de Curitiba</strong>, que
+              descobri meu amor pela <strong>coloproctologia</strong> — especialidade que une
+              conhecimento técnico avançado com o cuidado humanizado que sempre busquei oferecer aos
+              meus pacientes.
             </p>
 
             {/* Professional Images Grid */}
@@ -319,19 +308,15 @@ export default function SobrePage() {
 
             <p className="text-lg text-secondary leading-relaxed">
               A experiência internacional no&nbsp;
-              <strong>Hospital Clinic de Barcelona</strong> foi transformadora.
-              Lá tive contato com técnicas avançadas em&nbsp;
+              <strong>Hospital Clinic de Barcelona</strong> foi transformadora. Lá tive contato com
+              técnicas avançadas em&nbsp;
               <strong>
-                cirurgia colorretal na área oncológica e de doenças
-                inflamatórias intestinais
+                cirurgia colorretal na área oncológica e de doenças inflamatórias intestinais
               </strong>
               , além de experiência prática em&nbsp;
-              <strong>
-                cirurgias orificiais com abordagem minimamente invasiva
-              </strong>
-              . Essa vivência ampliou minha visão da especialidade e reforçou
-              meu compromisso em oferecer tratamentos modernos, seguros e
-              individualizados aos pacientes.
+              <strong>cirurgias orificiais com abordagem minimamente invasiva</strong>. Essa
+              vivência ampliou minha visão da especialidade e reforçou meu compromisso em oferecer
+              tratamentos modernos, seguros e individualizados aos pacientes.
             </p>
           </main>
 
@@ -366,9 +351,7 @@ export default function SobrePage() {
                     return (
                       <div
                         key={index}
-                        className={`relative flex items-start gap-6 w-full ${
-                          isFirst ? '' : ''
-                        }`}
+                        className={`relative flex items-start gap-6 w-full ${isFirst ? '' : ''}`}
                       >
                         {/* Icon */}
                         <div className="relative z-10 flex-shrink-0">
@@ -432,9 +415,7 @@ export default function SobrePage() {
                         {/* Content Left of Line */}
                         <div
                           className={`w-1/2 ${
-                            isLeft
-                              ? 'text-right'
-                              : 'opacity-0 pointer-events-none'
+                            isLeft ? 'text-right' : 'opacity-0 pointer-events-none'
                           }`}
                         >
                           {isLeft && (
@@ -467,9 +448,7 @@ export default function SobrePage() {
                         {/* Content Right of Line */}
                         <div
                           className={`w-1/2 ${
-                            !isLeft
-                              ? 'text-left'
-                              : 'opacity-0 pointer-events-none'
+                            !isLeft ? 'text-left' : 'opacity-0 pointer-events-none'
                           }`}
                         >
                           {!isLeft && (
@@ -500,15 +479,12 @@ export default function SobrePage() {
                 Filosofia de atendimento
               </h2>
               <p className="text-lg text-secondary leading-relaxed mb-8 text-pretty sm:text-center max-w-4xl mx-auto">
-                Acredito que cada paciente é único e merece atenção
-                individualizada. Minhas consultas são detalhadas, buscando
-                compreender a história, os sintomas e o estilo de vida de cada
-                pessoa. Para mim, diagnosticar e tratar não é suficiente — é
+                Acredito que cada paciente é único e merece atenção individualizada. Minhas
+                consultas são detalhadas, buscando compreender a história, os sintomas e o estilo de
+                vida de cada pessoa. Para mim, diagnosticar e tratar não é suficiente — é
                 fundamental&nbsp;
-                <strong>
-                  adequar o tratamento às necessidades reais do paciente
-                </strong>
-                , garantindo segurança e qualidade de vida.
+                <strong>adequar o tratamento às necessidades reais do paciente</strong>, garantindo
+                segurança e qualidade de vida.
               </p>
             </div>
 
@@ -561,10 +537,9 @@ export default function SobrePage() {
               </h2>
               <p className="text-lg text-secondary leading-relaxed max-w-xl mx-auto text-pretty sm:text-center">
                 Faço parte da&nbsp;
-                <strong>International Anal Neoplasia Society (IANS)</strong>, o
-                que me permite estar sempre atualizada sobre as mais recentes
-                pesquisas e práticas internacionais em prevenção, diagnóstico e
-                tratamento de doenças anorretais.
+                <strong>International Anal Neoplasia Society (IANS)</strong>, o que me permite estar
+                sempre atualizada sobre as mais recentes pesquisas e práticas internacionais em
+                prevenção, diagnóstico e tratamento de doenças anorretais.
               </p>
             </div>
           </div>
@@ -576,12 +551,9 @@ export default function SobrePage() {
             <p className="text-lg text-secondary leading-relaxed text-pretty sm:text-center max-w-4xl mx-auto">
               Além da prática clínica, dedico parte do meu tempo à&nbsp;
               <strong>educação médica continuada</strong> e à&nbsp;
-              <strong>
-                divulgação de informações confiáveis sobre saúde
-                coloproctológica
-              </strong>
-              . Acredito que o conhecimento compartilhado é uma ferramenta
-              poderosa na prevenção e no tratamento precoce de doenças.
+              <strong>divulgação de informações confiáveis sobre saúde coloproctológica</strong>.
+              Acredito que o conhecimento compartilhado é uma ferramenta poderosa na prevenção e no
+              tratamento precoce de doenças.
             </p>
           </div>
 
@@ -591,8 +563,8 @@ export default function SobrePage() {
             title="Vamos cuidar da sua saúde juntos?"
             body={
               <p>
-                Estou aqui para oferecer o cuidado especializado que você
-                merece, com atenção humanizada e a mais alta qualidade técnica.
+                Estou aqui para oferecer o cuidado especializado que você merece, com atenção
+                humanizada e a mais alta qualidade técnica.
               </p>
             }
             actions={

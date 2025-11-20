@@ -1,8 +1,4 @@
-import {
-  DR_NAME,
-  WPP_FORMATTED_NUMBER,
-  CLINICA_NASSIF_UPDATED,
-} from './constants'
+import { DR_NAME, CLINICA_NASSIF_UPDATED, WPP_NUMBER_NASSIF_FORMATTED } from './constants'
 
 export const structuredData = {
   '@context': 'https://schema.org',
@@ -29,7 +25,7 @@ export const structuredData = {
         latitude: CLINICA_NASSIF_UPDATED.coordinates.latitude,
         longitude: CLINICA_NASSIF_UPDATED.coordinates.longitude,
       },
-      telephone: WPP_FORMATTED_NUMBER,
+      telephone: WPP_NUMBER_NASSIF_FORMATTED,
       priceRange: '$$',
       openingHours: CLINICA_NASSIF_UPDATED.openingHours,
       areaServed: {
@@ -119,12 +115,7 @@ export const structuredData = {
         },
       ],
       // Brazilian payment methods and currency
-      paymentAccepted: [
-        'Dinheiro',
-        'Cartão de Crédito',
-        'Cartão de Débito',
-        'PIX',
-      ],
+      paymentAccepted: ['Dinheiro', 'Cartão de Crédito', 'Cartão de Débito', 'PIX'],
       currenciesAccepted: 'BRL',
       worksFor: {
         '@id': 'https://analuizarocha.com.br/#organization',
@@ -158,8 +149,7 @@ export const structuredData = {
       '@type': 'MedicalProcedure',
       '@id': 'https://analuizarocha.com.br/#services',
       name: 'Serviços de Coloproctologia',
-      description:
-        'Tratamento especializado para doenças do intestino, reto e ânus',
+      description: 'Tratamento especializado para doenças do intestino, reto e ânus',
       procedureType: [
         'Cirurgias a laser',
         'Botox para fissura anal',
@@ -208,7 +198,7 @@ export const structuredData = {
         latitude: CLINICA_NASSIF_UPDATED.coordinates.latitude,
         longitude: CLINICA_NASSIF_UPDATED.coordinates.longitude,
       },
-      telephone: WPP_FORMATTED_NUMBER,
+      telephone: WPP_NUMBER_NASSIF_FORMATTED,
       url: 'https://analuizarocha.com.br',
       image: 'https://analuizarocha.com.br/images/og.png',
       priceRange: '$$',
