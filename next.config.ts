@@ -10,9 +10,20 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react', '@vercel/analytics', '@next/third-parties'],
     webVitalsAttribution: ['CLS', 'LCP'],
   },
+  // Modularize imports to enable tree-shaking
+  modularizeImports: {
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
+    },
+  },
   // Production optimizations
   compress: true,
   poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
+  },
   // Security headers and caching
   headers: async () => [
     {
