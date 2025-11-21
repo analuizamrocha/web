@@ -384,7 +384,7 @@ export default function SindromeIntestinoIrritavelPage() {
                   variant="primary"
                   size="xl"
                   className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
+                  aria-label="Agendar consulta para tratamento de síndrome do intestino irritável com coloproctologista em Curitiba - Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
                   Agendar consulta
                 </LinkButton>

@@ -8,6 +8,7 @@ import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
   WEBSITE_URL,
+  CRM_NUMBER,
 } from '@/lib/constants'
 import {
   generateFAQSchema,
@@ -107,7 +108,7 @@ export default function RastreioCancerAnalPage() {
               hasCredential: [
                 {
                   '@type': 'EducationalOccupationalCredential',
-                  identifier: 'CRM-PR 45351',
+                  identifier: CRM_NUMBER,
                 },
               ],
             },
@@ -391,7 +392,7 @@ export default function RastreioCancerAnalPage() {
                   variant="primary"
                   size="xl"
                   className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
+                  aria-label="Agendar consulta para rastreio de câncer anal com coloproctologista em Curitiba - Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
                   Agendar consulta
                 </LinkButton>

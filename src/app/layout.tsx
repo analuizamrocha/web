@@ -9,7 +9,7 @@ import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import CookieConsent from '@/components/layout/CookieConsent'
 import { AnalyticsProvider } from '@/components/analytics'
-import { DR_NAME, CLINICA_NASSIF, WEBSITE_URL } from '@/lib/constants'
+import { DR_NAME, CLINICA_NASSIF, WEBSITE_URL, TAG_INSTAGRAM } from '@/lib/constants'
 import { getStructuredData } from '@/lib/structured-data'
 
 const montserrat = Montserrat({
@@ -114,8 +114,8 @@ export const metadata: Metadata = {
         alt: `${DR_NAME} - Coloproctologista em Curitiba`,
       },
     ],
-    creator: '@analuiza.mrocha',
-    site: '@analuiza.mrocha',
+    creator: TAG_INSTAGRAM,
+    site: TAG_INSTAGRAM,
   },
   robots: {
     index: true,

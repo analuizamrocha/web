@@ -7,7 +7,7 @@ import {
   getContentIntentLabel,
 } from '@/lib/blog'
 import type { Metadata } from 'next'
-import { WEBSITE_URL, SITE_NAME } from '@/lib/constants'
+import { WEBSITE_URL, SITE_NAME, TAG_INSTAGRAM } from '@/lib/constants'
 
 
 export const metadata: Metadata = {
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     title: 'Blog | Dra. Ana Luiza Moraes Rocha - Coloproctologista Curitiba',
     description:
       'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
-    creator: '@analuiza.mrocha',
-    site: '@analuiza.mrocha',
+    creator: TAG_INSTAGRAM,
+    site: TAG_INSTAGRAM,
     images: [`${WEBSITE_URL}/og-image.jpg`],
   },
   alternates: {
