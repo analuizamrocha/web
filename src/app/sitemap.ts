@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
+import { WEBSITE_URL } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://analuizarocha.com.br'
   const currentDate = new Date()
 
   // Get all blog posts
@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog post entries
   const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: `${WEBSITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.lastModified),
     changeFrequency: 'monthly' as const,
     priority: 0.8, // High priority - educational content drives authority
@@ -29,26 +29,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'toxina-botulinica',
   ]
 
-  const treatmentEntries: MetadataRoute.Sitemap = treatmentPages.map(
-    (slug) => ({
-      url: `${baseUrl}/tratamentos/${slug}`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9, // Very high priority - core service pages
-    })
-  )
+  const treatmentEntries: MetadataRoute.Sitemap = treatmentPages.map((slug) => ({
+    url: `${WEBSITE_URL}/tratamentos/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.9, // Very high priority - core service pages
+  }))
 
   return [
     // Homepage - Highest priority
     {
-      url: baseUrl,
+      url: WEBSITE_URL,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     // Treatments index - Very high priority
     {
-      url: `${baseUrl}/tratamentos`,
+      url: `${WEBSITE_URL}/tratamentos`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.95,
@@ -57,14 +55,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...treatmentEntries,
     // About page - Important for trust/authority
     {
-      url: `${baseUrl}/sobre`,
+      url: `${WEBSITE_URL}/sobre`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     // Blog index - High priority for content hub
     {
-      url: `${baseUrl}/blog`,
+      url: `${WEBSITE_URL}/blog`,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.85,
@@ -73,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogEntries,
     // Privacy policy - Required but lower priority
     {
-      url: `${baseUrl}/politica-privacidade`,
+      url: `${WEBSITE_URL}/politica-privacidade`,
       lastModified: currentDate,
       changeFrequency: 'yearly' as const,
       priority: 0.3,

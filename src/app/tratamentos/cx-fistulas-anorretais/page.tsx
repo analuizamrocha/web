@@ -97,7 +97,7 @@ export default function CirurgiaFistulasPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
             '@id':
-              'https://analuizarocha.com.br/tratamentos/cx-fistulas-anorretais',
+              `${WEBSITE_URL}/tratamentos/cx-fistulas-anorretais`,
             name: 'Cirurgias para Fístulas Anorretais',
             description:
               'Tratamentos cirúrgicos especializados para fístulas anorretais incluindo fistulotomia, retalho mucoso, LIFT e técnicas a laser',

@@ -9,9 +9,10 @@ import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
   WEBSITE_URL,
-  CLINICA_NASSIF_UPDATED,
+  CLINICA_NASSIF,
   DR_NAME,
   WPP_NUMBER_NASSIF_FORMATTED,
+  URL_INSTAGRAM,
 } from '@/lib/constants'
 import {
   generateBreadcrumbSchema,
@@ -157,7 +158,7 @@ export default function SobrePage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
-            '@id': 'https://analuizarocha.com.br/#physician',
+            '@id': `${WEBSITE_URL}/#physician`,
             name: 'Dra. Ana Luiza Moraes Rocha',
             jobTitle: 'Médica Coloproctologista',
             description:
@@ -183,8 +184,8 @@ export default function SobrePage() {
               '@type': 'Organization',
               name: org,
             })),
-            url: 'https://analuizarocha.com.br',
-            sameAs: ['https://www.instagram.com/analuiza.mrocha/'],
+            url: WEBSITE_URL,
+            sameAs: [URL_INSTAGRAM],
             workLocation: {
               '@type': 'MedicalClinic',
               addressLocality: 'Curitiba',
@@ -205,21 +206,21 @@ export default function SobrePage() {
               description:
                 'Consultas de Coloproctologia com atendimento humanizado e especializado em Curitiba. Diagnóstico e tratamento de doenças do intestino, reto e ânus.',
               address: {
-                streetAddress: CLINICA_NASSIF_UPDATED.address,
-                addressLocality: CLINICA_NASSIF_UPDATED.city,
-                addressRegion: CLINICA_NASSIF_UPDATED.state,
-                postalCode: CLINICA_NASSIF_UPDATED.cep,
+                streetAddress: CLINICA_NASSIF.address,
+                addressLocality: CLINICA_NASSIF.city,
+                addressRegion: CLINICA_NASSIF.state,
+                postalCode: CLINICA_NASSIF.cep,
                 addressCountry: 'BR',
               },
               geo: {
-                latitude: CLINICA_NASSIF_UPDATED.coordinates.latitude,
-                longitude: CLINICA_NASSIF_UPDATED.coordinates.longitude,
+                latitude: CLINICA_NASSIF.coordinates.latitude,
+                longitude: CLINICA_NASSIF.coordinates.longitude,
               },
               telephone: WPP_NUMBER_NASSIF_FORMATTED,
               url: WEBSITE_URL,
               image: `${WEBSITE_URL}/images/og.png`,
               priceRange: '$$',
-              openingHours: CLINICA_NASSIF_UPDATED.openingHours,
+              openingHours: CLINICA_NASSIF.openingHours,
             })
           ),
         }}

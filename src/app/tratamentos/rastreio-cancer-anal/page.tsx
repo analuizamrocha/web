@@ -92,7 +92,7 @@ export default function RastreioCancerAnalPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
             '@id':
-              'https://analuizarocha.com.br/tratamentos/rastreio-cancer-anal',
+              `${WEBSITE_URL}/tratamentos/rastreio-cancer-anal`,
             name: 'Rastreio e Prevenção do Câncer de Canal Anal',
             description:
               'Rastreamento especializado para detecção precoce do câncer de canal anal em grupos de risco',

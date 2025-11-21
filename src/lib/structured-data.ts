@@ -1,4 +1,15 @@
-import { DR_NAME, CLINICA_NASSIF_UPDATED, WPP_NUMBER_NASSIF_FORMATTED } from './constants'
+import {
+  DR_NAME,
+  CLINICA_NASSIF,
+  WPP_NUMBER_NASSIF_FORMATTED,
+  WEBSITE_URL,
+  URL_INSTAGRAM,
+  ORG_DESCRIPTION,
+  PHYSICIAN_DESCRIPTION,
+  SERVICES_DESCRIPTION,
+  WEBSITE_DESCRIPTION,
+  BUSINESS_DESCRIPTION,
+} from './constants'
 
 export const structuredData = {
   '@context': 'https://schema.org',
@@ -6,28 +17,27 @@ export const structuredData = {
     // Medical Organization
     {
       '@type': 'MedicalOrganization',
-      '@id': 'https://analuizarocha.com.br/#organization',
+      '@id': `${WEBSITE_URL}/#organization`,
       name: `${DR_NAME} - Coloproctologia`,
-      url: 'https://analuizarocha.com.br',
-      logo: 'https://analuizarocha.com.br/images/og.png',
-      description:
-        'Especialista em Coloproctologia oferecendo cuidado clínico e cirúrgico do intestino, reto e ânus em Curitiba.',
+      url: WEBSITE_URL,
+      logo: `${WEBSITE_URL}/images/og.png`,
+      description: ORG_DESCRIPTION,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: CLINICA_NASSIF_UPDATED.address,
-        addressLocality: CLINICA_NASSIF_UPDATED.city,
-        addressRegion: CLINICA_NASSIF_UPDATED.state,
+        streetAddress: CLINICA_NASSIF.address,
+        addressLocality: CLINICA_NASSIF.city,
+        addressRegion: CLINICA_NASSIF.state,
         addressCountry: 'BR',
-        postalCode: CLINICA_NASSIF_UPDATED.cep,
+        postalCode: CLINICA_NASSIF.cep,
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: CLINICA_NASSIF_UPDATED.coordinates.latitude,
-        longitude: CLINICA_NASSIF_UPDATED.coordinates.longitude,
+        latitude: CLINICA_NASSIF.coordinates.latitude,
+        longitude: CLINICA_NASSIF.coordinates.longitude,
       },
       telephone: WPP_NUMBER_NASSIF_FORMATTED,
       priceRange: '$$',
-      openingHours: CLINICA_NASSIF_UPDATED.openingHours,
+      openingHours: CLINICA_NASSIF.openingHours,
       areaServed: {
         '@type': 'City',
         name: 'Curitiba',
@@ -37,30 +47,29 @@ export const structuredData = {
       // Reference to the clinic where she works
       containedInPlace: {
         '@type': 'MedicalClinic',
-        name: CLINICA_NASSIF_UPDATED.name,
-        url: CLINICA_NASSIF_UPDATED.website,
-        telephone: CLINICA_NASSIF_UPDATED.phoneFormatted,
+        name: CLINICA_NASSIF.name,
+        url: CLINICA_NASSIF.website,
+        telephone: CLINICA_NASSIF.phoneFormatted,
         address: {
           '@type': 'PostalAddress',
-          streetAddress: CLINICA_NASSIF_UPDATED.address,
-          addressLocality: CLINICA_NASSIF_UPDATED.city,
-          addressRegion: CLINICA_NASSIF_UPDATED.state,
+          streetAddress: CLINICA_NASSIF.address,
+          addressLocality: CLINICA_NASSIF.city,
+          addressRegion: CLINICA_NASSIF.state,
           addressCountry: 'BR',
-          postalCode: CLINICA_NASSIF_UPDATED.cep,
+          postalCode: CLINICA_NASSIF.cep,
         },
       },
     },
     // Medical Professional
     {
       '@type': 'Physician',
-      '@id': 'https://analuizarocha.com.br/#physician',
+      '@id': `${WEBSITE_URL}/#physician`,
       name: DR_NAME,
       jobTitle: 'Coloproctologista',
-      description:
-        'Especialista em Coloproctologia com formação internacional, dedicada ao cuidado integral e humanizado de cada paciente.',
-      image: 'https://analuizarocha.com.br/images/og.png',
-      url: 'https://analuizarocha.com.br',
-      sameAs: ['https://www.instagram.com/analuiza.mrocha/'],
+      description: PHYSICIAN_DESCRIPTION,
+      image: `${WEBSITE_URL}/images/og.png`,
+      url: WEBSITE_URL,
+      sameAs: [URL_INSTAGRAM],
       alumniOf: [
         {
           '@type': 'EducationalOrganization',
@@ -118,23 +127,23 @@ export const structuredData = {
       paymentAccepted: ['Dinheiro', 'Cartão de Crédito', 'Cartão de Débito', 'PIX'],
       currenciesAccepted: 'BRL',
       worksFor: {
-        '@id': 'https://analuizarocha.com.br/#organization',
+        '@id': `${WEBSITE_URL}/#organization`,
       },
       workLocation: {
         '@type': 'MedicalClinic',
-        name: CLINICA_NASSIF_UPDATED.name,
+        name: CLINICA_NASSIF.name,
         address: {
           '@type': 'PostalAddress',
-          streetAddress: CLINICA_NASSIF_UPDATED.address,
-          addressLocality: CLINICA_NASSIF_UPDATED.city,
-          addressRegion: CLINICA_NASSIF_UPDATED.state,
+          streetAddress: CLINICA_NASSIF.address,
+          addressLocality: CLINICA_NASSIF.city,
+          addressRegion: CLINICA_NASSIF.state,
           addressCountry: 'BR',
-          postalCode: CLINICA_NASSIF_UPDATED.cep,
+          postalCode: CLINICA_NASSIF.cep,
         },
         geo: {
           '@type': 'GeoCoordinates',
-          latitude: CLINICA_NASSIF_UPDATED.coordinates.latitude,
-          longitude: CLINICA_NASSIF_UPDATED.coordinates.longitude,
+          latitude: CLINICA_NASSIF.coordinates.latitude,
+          longitude: CLINICA_NASSIF.coordinates.longitude,
         },
       },
       medicalSpecialty: [
@@ -147,9 +156,9 @@ export const structuredData = {
     // Medical Services
     {
       '@type': 'MedicalProcedure',
-      '@id': 'https://analuizarocha.com.br/#services',
+      '@id': `${WEBSITE_URL}/#services`,
       name: 'Serviços de Coloproctologia',
-      description: 'Tratamento especializado para doenças do intestino, reto e ânus',
+      description: SERVICES_DESCRIPTION,
       procedureType: [
         'Cirurgias a laser',
         'Botox para fissura anal',
@@ -162,48 +171,46 @@ export const structuredData = {
         'Rastreio e prevenção do câncer de canal anal',
       ],
       performer: {
-        '@id': 'https://analuizarocha.com.br/#physician',
+        '@id': `${WEBSITE_URL}/#physician`,
       },
     },
     // Website
     {
       '@type': 'WebSite',
-      '@id': 'https://analuizarocha.com.br/#website',
-      url: 'https://analuizarocha.com.br',
+      '@id': `${WEBSITE_URL}/#website`,
+      url: WEBSITE_URL,
       name: `${DR_NAME} - Coloproctologista`,
-      description:
-        'Site oficial da Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba.',
+      description: WEBSITE_DESCRIPTION,
       publisher: {
-        '@id': 'https://analuizarocha.com.br/#organization',
+        '@id': `${WEBSITE_URL}/#organization`,
       },
       inLanguage: 'pt-BR',
     },
     // Local Business
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://analuizarocha.com.br/#localbusiness',
+      '@id': `${WEBSITE_URL}/#localbusiness`,
       name: `${DR_NAME} - Coloproctologia`,
-      description:
-        'Consultas de Coloproctologia em ambiente acolhedor e moderno no Batel, Curitiba.',
+      description: BUSINESS_DESCRIPTION,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: CLINICA_NASSIF_UPDATED.address,
-        addressLocality: CLINICA_NASSIF_UPDATED.city,
-        addressRegion: CLINICA_NASSIF_UPDATED.state,
+        streetAddress: CLINICA_NASSIF.address,
+        addressLocality: CLINICA_NASSIF.city,
+        addressRegion: CLINICA_NASSIF.state,
         addressCountry: 'BR',
-        postalCode: CLINICA_NASSIF_UPDATED.cep,
+        postalCode: CLINICA_NASSIF.cep,
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: CLINICA_NASSIF_UPDATED.coordinates.latitude,
-        longitude: CLINICA_NASSIF_UPDATED.coordinates.longitude,
+        latitude: CLINICA_NASSIF.coordinates.latitude,
+        longitude: CLINICA_NASSIF.coordinates.longitude,
       },
       telephone: WPP_NUMBER_NASSIF_FORMATTED,
-      url: 'https://analuizarocha.com.br',
-      image: 'https://analuizarocha.com.br/images/og.png',
+      url: WEBSITE_URL,
+      image: `${WEBSITE_URL}/images/og.png`,
       priceRange: '$$',
-      openingHours: CLINICA_NASSIF_UPDATED.openingHours,
-      hasMap: `https://maps.google.com/?q=${CLINICA_NASSIF_UPDATED.coordinates.latitude},${CLINICA_NASSIF_UPDATED.coordinates.longitude}`,
+      openingHours: CLINICA_NASSIF.openingHours,
+      hasMap: `https://maps.google.com/?q=${CLINICA_NASSIF.coordinates.latitude},${CLINICA_NASSIF.coordinates.longitude}`,
     },
   ],
 }

@@ -7,6 +7,8 @@ import {
   getContentIntentLabel,
 } from '@/lib/blog'
 import type { Metadata } from 'next'
+import { WEBSITE_URL, SITE_NAME } from '@/lib/constants'
+
 
 export const metadata: Metadata = {
   title: 'Blog | Dra. Ana Luiza Moraes Rocha - Coloproctologista Curitiba',
@@ -28,11 +30,11 @@ export const metadata: Metadata = {
       'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://analuizarocha.com.br/blog',
-    siteName: 'Dra. Ana Luiza Moraes Rocha - Coloproctologia',
+    url: `${WEBSITE_URL}/blog`,
+    siteName: SITE_NAME,
     images: [
       {
-        url: 'https://analuizarocha.com.br/og-image.jpg',
+        url: `${WEBSITE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: 'Blog de Coloproctologia - Dra. Ana Luiza Moraes Rocha',
@@ -46,10 +48,10 @@ export const metadata: Metadata = {
       'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
     creator: '@analuiza.mrocha',
     site: '@analuiza.mrocha',
-    images: ['https://analuizarocha.com.br/og-image.jpg'],
+    images: [`${WEBSITE_URL}/og-image.jpg`],
   },
   alternates: {
-    canonical: 'https://analuizarocha.com.br/blog',
+    canonical: `${WEBSITE_URL}/blog`,
   },
   robots: {
     index: true,
