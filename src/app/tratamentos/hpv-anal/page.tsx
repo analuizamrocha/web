@@ -92,7 +92,7 @@ export default function TratamentoHpvAnalPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
             '@id':
-              'https://analuizarocha.com.br/tratamentos/tratamento-hpv-anal',
+              `${WEBSITE_URL}/tratamentos/tratamento-hpv-anal`,
             name: 'Tratamento de HPV Anal: Condilomas e Verrugas',
             description:
               'Tratamento especializado de lesões de HPV anal incluindo condilomas e verrugas com técnicas cirúrgicas e tópicas',

@@ -92,7 +92,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalCondition',
             '@id':
-              'https://analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais',
+              `${WEBSITE_URL}/tratamentos/doencas-inflamatorias-intestinais`,
             name: 'Doenças Inflamatórias Intestinais',
             alternateName: ['DII', 'Doença de Crohn', 'Retocolite Ulcerativa'],
             description:

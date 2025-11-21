@@ -91,7 +91,7 @@ export default function CistoPilonidalPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
             '@id':
-              'https://analuizarocha.com.br/tratamentos/cx-cisto-pilonidal',
+              `${WEBSITE_URL}/tratamentos/cx-cisto-pilonidal`,
             name: 'Cirurgia para Cisto Pilonidal',
             description:
               'Tratamento cirúrgico do cisto pilonidal com técnicas convencionais e laser para resolução definitiva',

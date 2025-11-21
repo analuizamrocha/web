@@ -91,7 +91,7 @@ export default function TratamentoHemorroidasPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
             '@id':
-              'https://analuizarocha.com.br/tratamentos/tratamento-hemorroidas',
+              `${WEBSITE_URL}/tratamentos/tratamento-hemorroidas`,
             name: 'Tratamento de Hemorroidas',
             description:
               'Tratamentos especializados para hemorroidas incluindo ligadura elástica, escleroterapia, cirurgia laser e THD',

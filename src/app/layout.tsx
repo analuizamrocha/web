@@ -9,7 +9,7 @@ import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import CookieConsent from '@/components/layout/CookieConsent'
 import { AnalyticsProvider } from '@/components/analytics'
-import { DR_NAME, CLINICA_NASSIF_UPDATED, WEBSITE_URL } from '@/lib/constants'
+import { DR_NAME, CLINICA_NASSIF, WEBSITE_URL } from '@/lib/constants'
 import { getStructuredData } from '@/lib/structured-data'
 
 const montserrat = Montserrat({
@@ -133,8 +133,8 @@ export const metadata: Metadata = {
   other: {
     'geo.region': 'BR-PR',
     'geo.placename': 'Curitiba',
-    'geo.position': `${CLINICA_NASSIF_UPDATED.coordinates.latitude};${CLINICA_NASSIF_UPDATED.coordinates.longitude}`,
-    ICBM: `${CLINICA_NASSIF_UPDATED.coordinates.latitude}, ${CLINICA_NASSIF_UPDATED.coordinates.longitude}`,
+    'geo.position': `${CLINICA_NASSIF.coordinates.latitude};${CLINICA_NASSIF.coordinates.longitude}`,
+    ICBM: `${CLINICA_NASSIF.coordinates.latitude}, ${CLINICA_NASSIF.coordinates.longitude}`,
   },
 }
 

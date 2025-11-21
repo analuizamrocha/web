@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { CRM_RQE_TEXT, TAG_INSTAGRAM, URL_INSTRAGRAM } from '@/lib/constants'
+import { CRM_RQE_TEXT, TAG_INSTAGRAM, URL_INSTAGRAM } from '@/lib/constants'
 import Instagram from '../icons/instagram'
 
 export function Footer() {
@@ -53,7 +53,7 @@ export function Footer() {
           </div>
 
           <Link
-            href={URL_INSTRAGRAM}
+            href={URL_INSTAGRAM}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-start gap-x-3 w-fit p-2 -m-2 group transition-all duration-300 ease-out hover:drop-shadow-[0_0_4px_rgba(255,249,243,0.15)] active:drop-shadow-[0_0_6px_rgba(255,249,243,0.25)] focus:outline-none focus:drop-shadow-[0_0_4px_rgba(255,249,243,0.2)]"

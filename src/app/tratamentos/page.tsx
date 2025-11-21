@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Card } from '@/components/ui/Card'
 import type { Metadata } from 'next'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED, WEBSITE_URL } from '@/lib/constants'
 import { Badge } from '@/components/ui/Badge'
 import { ArrowRight } from 'lucide-react'
 import { LinkButton } from '@/components/ui/LinkButton'
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'cisto pilonidal curitiba',
   ],
   alternates: {
-    canonical: 'https://analuizarocha.com.br/tratamentos',
+    canonical: `${WEBSITE_URL}/tratamentos`,
   },
 }
 
@@ -55,36 +55,31 @@ const treatments = [
   },
   {
     title: 'Rastreio do Câncer de Canal Anal',
-    description:
-      'Prevenção e detecção precoce de lesões pré-cancerosas e câncer anal.',
+    description: 'Prevenção e detecção precoce de lesões pré-cancerosas e câncer anal.',
     slug: 'rastreio-cancer-anal',
     category: 'Preventivo',
   },
   {
     title: 'Tratamento de HPV Anal',
-    description:
-      'Diagnóstico e tratamento de condilomas acuminados (verrugas) na região anal.',
+    description: 'Diagnóstico e tratamento de condilomas acuminados (verrugas) na região anal.',
     slug: 'hpv-anal',
     category: 'Clínico',
   },
   {
     title: 'Cirurgia de Cisto Pilonidal',
-    description:
-      'Remoção cirúrgica de cistos pilonidais com técnicas modernas e baixa recidiva.',
+    description: 'Remoção cirúrgica de cistos pilonidais com técnicas modernas e baixa recidiva.',
     slug: 'cx-cisto-pilonidal',
     category: 'Cirúrgico',
   },
   {
     title: 'Doenças Inflamatórias Intestinais',
-    description:
-      'Acompanhamento especializado de Doença de Crohn e Retocolite Ulcerativa.',
+    description: 'Acompanhamento especializado de Doença de Crohn e Retocolite Ulcerativa.',
     slug: 'doencas-inflamatorias-intestinais',
     category: 'Clínico',
   },
   {
     title: 'Síndrome do Intestino Irritável',
-    description:
-      'Diagnóstico e tratamento personalizado para controle dos sintomas intestinais.',
+    description: 'Diagnóstico e tratamento personalizado para controle dos sintomas intestinais.',
     slug: 'sindrome-intestino-irritavel',
     category: 'Clínico',
   },
@@ -100,14 +95,14 @@ export default function ServicosPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalOrganization',
-            '@id': 'https://analuizarocha.com.br/#organization',
+            '@id': `${WEBSITE_URL}/#organization`,
             medicalSpecialty: ['Coloproctologia', 'Proctologia'],
             availableService: treatments.map((treatment) => ({
               '@type': 'MedicalProcedure',
               name: treatment.title,
               description: treatment.description,
               procedureType: treatment.category,
-              url: `https://analuizarocha.com.br/tratamentos/${treatment.slug}`,
+              url: `${WEBSITE_URL}/tratamentos/${treatment.slug}`,
             })),
           }),
         }}
@@ -122,12 +117,12 @@ export default function ServicosPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
               <p>
-                Oferecemos tratamentos especializados com tecnologia avançada e
-                cuidado humanizado para todas as condições coloproctológicas.
+                Oferecemos tratamentos especializados com tecnologia avançada e cuidado humanizado
+                para todas as condições coloproctológicas.
               </p>
               <p>
-                Nossa abordagem é sempre individualizada, buscando o melhor
-                resultado com o menor desconforto possível.
+                Nossa abordagem é sempre individualizada, buscando o melhor resultado com o menor
+                desconforto possível.
               </p>
             </div>
           </div>
@@ -135,11 +130,7 @@ export default function ServicosPage() {
           {/* Treatments Grid */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-8 xl:gap-10 mb-16">
             {treatments.map((treatment) => (
-              <Link
-                className="group"
-                key={treatment.slug}
-                href={`/tratamentos/${treatment.slug}`}
-              >
+              <Link className="group" key={treatment.slug} href={`/tratamentos/${treatment.slug}`}>
                 <Card
                   title={treatment.title}
                   description={treatment.description}
@@ -165,8 +156,7 @@ export default function ServicosPage() {
                 Precisa de um diagnóstico especializado?
               </h2>
               <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
-                Agende sua consulta e receba o cuidado especializado que você
-                merece.
+                Agende sua consulta e receba o cuidado especializado que você merece.
                 <br />
                 Atendimento humanizado com a mais alta qualidade técnica.
               </p>

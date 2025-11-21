@@ -11,7 +11,7 @@ import {
 } from '@/lib/blog'
 import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import { WHATSAPP_MSG_TEXT_ENCODED, WPP_NUMBER_NASSIF } from '@/lib/constants'
+import { WHATSAPP_MSG_TEXT_ENCODED, WPP_NUMBER_NASSIF, WEBSITE_URL, SITE_NAME } from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 
 interface BlogPostPageProps {
@@ -27,9 +27,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({
-  params,
-}: BlogPostPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
 
@@ -48,14 +46,14 @@ export async function generateMetadata({
       description: post.metaDescription,
       type: 'article',
       locale: 'pt_BR',
-      siteName: 'Dra. Ana Luiza Moraes Rocha - Coloproctologia',
+      siteName: SITE_NAME,
       publishedTime: post.publishDate,
       modifiedTime: post.lastModified,
       authors: ['Dra. Ana Luiza Moraes Rocha'],
-      url: `https://analuizarocha.com.br/blog/${post.slug}`,
+      url: `${WEBSITE_URL}/blog/${post.slug}`,
       images: [
         {
-          url: 'https://analuizarocha.com.br/og-image.jpg',
+          url: `${WEBSITE_URL}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: `${post.title} - Dra. Ana Luiza Moraes Rocha`,
@@ -68,10 +66,10 @@ export async function generateMetadata({
       description: post.metaDescription,
       creator: '@analuiza.mrocha',
       site: '@analuiza.mrocha',
-      images: ['https://analuizarocha.com.br/og-image.jpg'],
+      images: [`${WEBSITE_URL}/og-image.jpg`],
     },
     alternates: {
-      canonical: `https://analuizarocha.com.br/blog/${post.slug}`,
+      canonical: `${WEBSITE_URL}/blog/${post.slug}`,
     },
     robots: {
       index: true,
@@ -86,7 +84,7 @@ export async function generateMetadata({
     },
     other: {
       'article:author': 'Dra. Ana Luiza Moraes Rocha',
-      'article:publisher': 'https://analuizarocha.com.br',
+      'article:publisher': WEBSITE_URL,
       'article:section': 'Coloproctologia',
       'article:tag': post.primaryKeyword,
     },
@@ -144,15 +142,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-sm text-secondary">
               <div className="flex items-center gap-2">
                 <span>Por</span>
-                <span className="font-medium text-primary">
-                  Dra. Ana Luiza Moraes Rocha
-                </span>
+                <span className="font-medium text-primary">Dra. Ana Luiza Moraes Rocha</span>
               </div>
               <div className="flex items-center gap-4 sm:gap-6">
-                <time
-                  dateTime={post.publishDate}
-                  className="flex items-center gap-1"
-                >
+                <time dateTime={post.publishDate} className="flex items-center gap-1">
                   <svg
                     className="w-4 h-4 text-secondary/60"
                     fill="none"
@@ -203,8 +196,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               title="Precisa de acompanhamento especializado?"
               body={
                 <p>
-                  Agende uma consulta com a Dra. Ana Luiza Moraes Rocha para
-                  receber cuidado especializado em coloproctologia.
+                  Agende uma consulta com a Dra. Ana Luiza Moraes Rocha para receber cuidado
+                  especializado em coloproctologia.
                 </p>
               }
               actions={

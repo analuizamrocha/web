@@ -92,7 +92,7 @@ export default function SindromeIntestinoIrritavelPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalCondition',
             '@id':
-              'https://analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel',
+              `${WEBSITE_URL}/tratamentos/sindrome-intestino-irritavel`,
             name: 'Síndrome do Intestino Irritável',
             alternateName: ['SII', 'Intestino Irritável', 'IBS'],
             description:
