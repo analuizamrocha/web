@@ -4,11 +4,7 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import {
-  WPP_NUMBER_NASSIF,
-  WHATSAPP_MSG_TEXT_ENCODED,
-  WEBSITE_URL,
-} from '@/lib/constants'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED, WEBSITE_URL } from '@/lib/constants'
 import {
   generateFAQSchema,
   generateBreadcrumbSchema,
@@ -18,8 +14,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle =
-  'Síndrome do Intestino Irritável (SII) | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Síndrome do Intestino Irritável (SII) | Dra. Ana Luiza Moraes Rocha'
 const pageDescription =
   'Diagnóstico e tratamento personalizado da Síndrome do Intestino Irritável (SII). Acompanhamento especializado em coloproctologia em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/sindrome-intestino-irritavel`
@@ -91,8 +86,7 @@ export default function SindromeIntestinoIrritavelPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalCondition',
-            '@id':
-              `${WEBSITE_URL}/tratamentos/sindrome-intestino-irritavel`,
+            '@id': `${WEBSITE_URL}/tratamentos/sindrome-intestino-irritavel`,
             name: 'Síndrome do Intestino Irritável',
             alternateName: ['SII', 'Intestino Irritável', 'IBS'],
             description:
@@ -161,15 +155,13 @@ export default function SindromeIntestinoIrritavelPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
-                Síndrome do Intestino Irritável (SII): Diagnóstico e Tratamento
-                Personalizado
+                Síndrome do Intestino Irritável (SII): Diagnóstico e Tratamento Personalizado
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
-                A Síndrome do Intestino Irritável (SII) é um distúrbio funcional
-                do intestino que afeta milhões de pessoas em todo o mundo.
-                Embora não seja uma doença grave, pode causar grande impacto na
-                qualidade de vida, com sintomas que variam de desconforto
+                A Síndrome do Intestino Irritável (SII) é um distúrbio funcional do intestino que
+                afeta milhões de pessoas em todo o mundo. Embora não seja uma doença grave, pode
+                causar grande impacto na qualidade de vida, com sintomas que variam de desconforto
                 abdominal a alterações importantes no hábito intestinal.
               </p>
             </header>
@@ -177,21 +169,18 @@ export default function SindromeIntestinoIrritavelPage() {
             <main className="prose prose-lg max-w-none mb-12">
               <p>
                 O diagnóstico correto e o acompanhamento com&nbsp;
-                <strong>coloproctologista</strong> são fundamentais para
-                diferenciar a SII de outras doenças intestinais e garantir um
-                tratamento eficaz.
+                <strong>coloproctologista</strong> são fundamentais para diferenciar a SII de outras
+                doenças intestinais e garantir um tratamento eficaz.
               </p>
 
-              <h2>Principais Sintomas da Síndrome do Intestino Irritável</h2>
+              <h2>Principais sintomas da Síndrome do Intestino Irritável</h2>
               <p>
-                Os sintomas da SII podem variar de pessoa para pessoa, mas os
-                mais comuns incluem:
+                Os sintomas da SII podem variar de pessoa para pessoa, mas os mais comuns incluem:
               </p>
               <ul>
                 <li>Dor ou desconforto abdominal recorrente.</li>
                 <li>
-                  Alterações no hábito intestinal: diarreia, constipação ou
-                  alternância entre ambos.
+                  Alterações no hábito intestinal: diarreia, constipação ou alternância entre ambos.
                 </li>
                 <li>Sensação de evacuação incompleta.</li>
                 <li>Inchaço abdominal e excesso de gases.</li>
@@ -200,121 +189,99 @@ export default function SindromeIntestinoIrritavelPage() {
 
               <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
                 <p className="text-secondary italic mb-0">
-                  É importante ressaltar que sintomas como sangramento
-                  intestinal, febre ou perda de peso não explicada não são
-                  típicos da SII e devem sempre ser investigados pelo
+                  É importante ressaltar que sintomas como sangramento intestinal, febre ou perda de
+                  peso não explicada não são típicos da SII e devem sempre ser investigados pelo
                   coloproctologista.
                 </p>
               </blockquote>
 
               <h2>Diagnóstico da Síndrome do Intestino Irritável</h2>
               <p>
-                O diagnóstico é clínico, baseado nos sintomas e na exclusão de
-                outras doenças, como:
+                O diagnóstico é clínico, baseado nos sintomas e na exclusão de outras doenças, como:
               </p>
               <ul>
                 <li>
-                  Doenças Inflamatórias Intestinais (Doença de Crohn e
-                  Retocolite Ulcerativa).
+                  Doenças Inflamatórias Intestinais (Doença de Crohn e Retocolite Ulcerativa).
                 </li>
                 <li>Intolerâncias alimentares.</li>
                 <li>Neoplasias do cólon e reto.</li>
               </ul>
 
               <p>
-                O coloproctologista pode solicitar exames complementares,
-                como&nbsp;
-                <strong>
-                  colonoscopia, exames de sangue e testes de intolerância
-                  alimentar
-                </strong>
-                , para confirmar o diagnóstico e afastar condições mais graves.
+                O coloproctologista pode solicitar exames complementares, como&nbsp;
+                <strong>colonoscopia, exames de sangue e testes de intolerância alimentar</strong>,
+                para confirmar o diagnóstico e afastar condições mais graves.
               </p>
 
               <h2>Tratamento da Síndrome do Intestino Irritável</h2>
               <p>
-                O tratamento da SII é <strong>individualizado</strong>, adaptado
-                à gravidade dos sintomas e ao perfil de cada paciente. Entre as
-                abordagens estão:
+                O tratamento da SII é <strong>individualizado</strong>, adaptado à gravidade dos
+                sintomas e ao perfil de cada paciente. Entre as abordagens estão:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    Mudanças Alimentares
-                  </h3>
+                  <h3 className="text-primary font-bold mb-3">Mudanças alimentares</h3>
                   <p className="text-secondary">
-                    Ajuste na dieta, aumento de fibras (quando indicado) ou
-                    redução de alimentos que desencadeiam sintomas.
+                    Ajuste na dieta, aumento de fibras (quando indicado) ou redução de alimentos que
+                    desencadeiam sintomas.
                   </p>
                 </div>
 
                 <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
                   <h3 className="text-primary font-bold mb-3">Medicamentos</h3>
                   <p className="text-secondary">
-                    Podem ser usados para controle da dor abdominal, diarreia ou
-                    constipação, de acordo com a necessidade.
+                    Podem ser usados para controle da dor abdominal, diarreia ou constipação, de
+                    acordo com a necessidade.
                   </p>
                 </div>
 
                 <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20">
                   <h3 className="text-primary font-bold mb-3">Probióticos</h3>
                   <p className="text-secondary">
-                    Em alguns casos, auxiliam na melhora dos sintomas e
-                    equilíbrio da flora intestinal.
+                    Em alguns casos, auxiliam na melhora dos sintomas e equilíbrio da flora
+                    intestinal.
                   </p>
                 </div>
 
                 <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    Acompanhamento Psicológico
-                  </h3>
+                  <h3 className="text-primary font-bold mb-3">Acompanhamento psicológico</h3>
                   <p className="text-secondary">
-                    Técnicas de manejo do estresse e ansiedade podem ser
-                    recomendadas, já que fatores emocionais influenciam os
-                    sintomas da SII.
+                    Técnicas de manejo do estresse e ansiedade podem ser recomendadas, já que
+                    fatores emocionais influenciam os sintomas da SII.
                   </p>
                 </div>
               </div>
 
-              <h2>Acompanhamento Personalizado</h2>
-              <p>
-                Cada paciente com SII apresenta sintomas e gatilhos diferentes.
-              </p>
+              <h2>Acompanhamento personalizado</h2>
+              <p>Cada paciente com SII apresenta sintomas e gatilhos diferentes.</p>
               <p>
                 Por isso, o acompanhamento deve ser&nbsp;
                 <strong>personalizado</strong>, envolvendo:
               </p>
               <ul>
                 <li>Consulta detalhada em coloproctologia.</li>
+                <li>Planejamento de tratamento adaptado ao estilo de vida do paciente.</li>
                 <li>
-                  Planejamento de tratamento adaptado ao estilo de vida do
-                  paciente.
-                </li>
-                <li>
-                  Monitoramento contínuo para ajustes nas condutas, conforme a
-                  evolução clínica.
+                  Monitoramento contínuo para ajustes nas condutas, conforme a evolução clínica.
                 </li>
               </ul>
 
-              <h2>Considerações Finais</h2>
+              <h2>Considerações finais</h2>
               <p>
-                A <strong>Síndrome do Intestino Irritável</strong> exige
-                acompanhamento contínuo e um plano de tratamento adaptado às
-                necessidades de cada paciente.
+                A <strong>Síndrome do Intestino Irritável</strong> exige acompanhamento contínuo e
+                um plano de tratamento adaptado às necessidades de cada paciente.
               </p>
               <p>
-                O <strong>coloproctologista em Curitiba</strong> é o
-                profissional indicado para diagnóstico, acompanhamento e
-                tratamento personalizado, sempre visando melhorar sua qualidade
-                de vida.
+                O <strong>coloproctologista em Curitiba</strong> é o profissional indicado para
+                diagnóstico, acompanhamento e tratamento personalizado, sempre visando melhorar sua
+                qualidade de vida.
               </p>
 
               <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
                 <p className="text-secondary italic mb-0">
-                  Se você sofre com sintomas de SII, agende sua avaliação em
-                  coloproctologia e descubra as melhores estratégias para o seu
-                  caso.
+                  Se você sofre com sintomas de SII, agende sua avaliação em coloproctologia e
+                  descubra as melhores estratégias para o seu caso.
                 </p>
               </blockquote>
 
@@ -326,9 +293,8 @@ export default function SindromeIntestinoIrritavelPage() {
                     A Síndrome do Intestino Irritável tem cura?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Não existe cura definitiva, mas com tratamento adequado os
-                    sintomas podem ser controlados, proporcionando qualidade de
-                    vida.
+                    Não existe cura definitiva, mas com tratamento adequado os sintomas podem ser
+                    controlados, proporcionando qualidade de vida.
                   </p>
                 </div>
 
@@ -337,9 +303,8 @@ export default function SindromeIntestinoIrritavelPage() {
                     Preciso fazer colonoscopia para diagnosticar SII?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Nem sempre. A colonoscopia pode ser indicada para excluir
-                    outras doenças, especialmente em pacientes acima de 45 anos
-                    ou com sintomas de alarme.
+                    Nem sempre. A colonoscopia pode ser indicada para excluir outras doenças,
+                    especialmente em pacientes acima de 45 anos ou com sintomas de alarme.
                   </p>
                 </div>
 
@@ -348,9 +313,8 @@ export default function SindromeIntestinoIrritavelPage() {
                     Quais alimentos pioram a SII?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Os gatilhos variam, mas alimentos ricos em gordura, cafeína,
-                    lactose e dietas com excesso de FODMAPs podem intensificar
-                    os sintomas.
+                    Os gatilhos variam, mas alimentos ricos em gordura, cafeína, lactose e dietas
+                    com excesso de FODMAPs podem intensificar os sintomas.
                   </p>
                 </div>
 
@@ -359,9 +323,9 @@ export default function SindromeIntestinoIrritavelPage() {
                     Quando procurar um coloproctologista em Curitiba?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Se você apresenta dor abdominal recorrente, diarreia ou
-                    constipação frequentes, ou suspeita de Síndrome do Intestino
-                    Irritável, é indicado buscar avaliação com um especialista.
+                    Se você apresenta dor abdominal recorrente, diarreia ou constipação frequentes,
+                    ou suspeita de Síndrome do Intestino Irritável, é indicado buscar avaliação com
+                    um especialista.
                   </p>
                 </div>
               </div>
@@ -371,9 +335,8 @@ export default function SindromeIntestinoIrritavelPage() {
               title="Sofre com sintomas de Intestino Irritável?"
               body={
                 <p>
-                  Agende uma consulta para avaliação especializada e
-                  desenvolvimento de um plano de tratamento personalizado. Cada
-                  caso é único e merece atenção individualizada.
+                  Agende uma consulta para avaliação especializada e desenvolvimento de um plano de
+                  tratamento personalizado. Cada caso é único e merece atenção individualizada.
                 </p>
               }
               actions={

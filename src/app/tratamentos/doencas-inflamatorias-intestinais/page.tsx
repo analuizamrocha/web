@@ -4,11 +4,7 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
-import {
-  WPP_NUMBER_NASSIF,
-  WHATSAPP_MSG_TEXT_ENCODED,
-  WEBSITE_URL,
-} from '@/lib/constants'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED, WEBSITE_URL } from '@/lib/constants'
 import {
   generateFAQSchema,
   generateBreadcrumbSchema,
@@ -18,8 +14,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle =
-  'Doenças Inflamatórias Intestinais (DII) | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Doenças Inflamatórias Intestinais (DII) | Dra. Ana Luiza Moraes Rocha'
 const pageDescription =
   'Diagnóstico e tratamento de Doenças Inflamatórias Intestinais: Doença de Crohn e Retocolite Ulcerativa. Acompanhamento especializado em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/doencas-inflamatorias-intestinais`
@@ -91,8 +86,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalCondition',
-            '@id':
-              `${WEBSITE_URL}/tratamentos/doencas-inflamatorias-intestinais`,
+            '@id': `${WEBSITE_URL}/tratamentos/doencas-inflamatorias-intestinais`,
             name: 'Doenças Inflamatórias Intestinais',
             alternateName: ['DII', 'Doença de Crohn', 'Retocolite Ulcerativa'],
             description:
@@ -161,36 +155,31 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
-                Doenças Inflamatórias Intestinais (DII): Diagnóstico e
-                Tratamento
+                Doenças Inflamatórias Intestinais (DII): Diagnóstico e Tratamento
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
-                As Doenças Inflamatórias Intestinais (DII) englobam
-                principalmente a Doença de Crohn e a Retocolite Ulcerativa. São
-                doenças crônicas que afetam o trato gastrointestinal, provocando
-                inflamação persistente e impactando a qualidade de vida dos
-                pacientes.
+                As Doenças Inflamatórias Intestinais (DII) englobam principalmente a Doença de Crohn
+                e a Retocolite Ulcerativa. São doenças crônicas que afetam o trato gastrointestinal,
+                provocando inflamação persistente e impactando a qualidade de vida dos pacientes.
               </p>
             </header>
 
             <main className="prose prose-lg max-w-none mb-12">
               <p>
-                Com acompanhamento adequado em <strong>coloproctologia</strong>,
-                é possível controlar os sintomas, prevenir complicações e manter
-                o bem-estar.
+                Com acompanhamento adequado em <strong>coloproctologia</strong>, é possível
+                controlar os sintomas, prevenir complicações e manter o bem-estar.
               </p>
               <p>
                 Se você busca tratamento de&nbsp;
-                <strong>Doenças Inflamatórias Intestinais em Curitiba</strong>,
-                o coloproctologista é o especialista indicado para sua
-                avaliação.
+                <strong>Doenças Inflamatórias Intestinais em Curitiba</strong>, o coloproctologista
+                é o especialista indicado para sua avaliação.
               </p>
 
-              <h2>Sintomas das Doenças Inflamatórias Intestinais</h2>
+              <h2>Sintomas das doenças inflamatórias intestinais</h2>
               <p>
-                Os sintomas variam conforme o tipo e a gravidade da doença, mas
-                os mais comuns incluem:
+                Os sintomas variam conforme o tipo e a gravidade da doença, mas os mais comuns
+                incluem:
               </p>
               <ul>
                 <li>Dor ou cólicas abdominais.</li>
@@ -203,125 +192,105 @@ export default function DoencasInflamatoriasIntestinaisPage() {
 
               <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
                 <p className="text-secondary italic mb-0">
-                  Em alguns casos, também podem ocorrer manifestações fora do
-                  intestino, como alterações na pele, olhos e articulações.
+                  Em alguns casos, também podem ocorrer manifestações fora do intestino, como
+                  alterações na pele, olhos e articulações.
                 </p>
               </blockquote>
 
               <h2>Doença de Crohn x Retocolite Ulcerativa</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    Doença de Crohn
-                  </h3>
+                  <h3 className="text-primary font-bold mb-3">Doença de Crohn</h3>
                   <p className="text-secondary">
-                    Pode afetar qualquer parte do tubo digestivo, da boca ao
-                    ânus, atingindo todas as camadas da parede intestinal.
+                    Pode afetar qualquer parte do tubo digestivo, da boca ao ânus, atingindo todas
+                    as camadas da parede intestinal.
                   </p>
                 </div>
 
                 <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <h3 className="text-primary font-bold mb-3">
-                    Retocolite Ulcerativa
-                  </h3>
+                  <h3 className="text-primary font-bold mb-3">Retocolite Ulcerativa</h3>
                   <p className="text-secondary">
-                    Afeta apenas o intestino grosso (cólon e reto), com
-                    inflamação restrita à camada interna da mucosa.
+                    Afeta apenas o intestino grosso (cólon e reto), com inflamação restrita à camada
+                    interna da mucosa.
                   </p>
                 </div>
               </div>
 
               <p>
-                Apesar de diferentes, ambas exigem acompanhamento contínuo
-                com&nbsp;
+                Apesar de diferentes, ambas exigem acompanhamento contínuo com&nbsp;
                 <strong>coloproctologista</strong>.
               </p>
 
               <h2>Diagnóstico</h2>
-              <p>
-                O diagnóstico das Doenças Inflamatórias Intestinais envolve:
-              </p>
+              <p>O diagnóstico das Doenças Inflamatórias Intestinais envolve:</p>
               <ul>
                 <li>Avaliação clínica detalhada.</li>
+                <li>Exames laboratoriais (anemia, inflamação, deficiências nutricionais).</li>
                 <li>
-                  Exames laboratoriais (anemia, inflamação, deficiências
-                  nutricionais).
+                  <strong>Colonoscopia com biópsia</strong>: exame fundamental para confirmar o
+                  diagnóstico e diferenciar Crohn de retocolite.
                 </li>
-                <li>
-                  <strong>Colonoscopia com biópsia</strong>: exame fundamental
-                  para confirmar o diagnóstico e diferenciar Crohn de
-                  retocolite.
-                </li>
-                <li>
-                  Exames de imagem (ressonância magnética, tomografia) em casos
-                  selecionados.
-                </li>
+                <li>Exames de imagem (ressonância magnética, tomografia) em casos selecionados.</li>
               </ul>
 
-              <h2>Tratamento das Doenças Inflamatórias Intestinais</h2>
+              <h2>Tratamento das doenças inflamatórias intestinais</h2>
               <p>
-                O tratamento é <strong>individualizado</strong>, dependendo do
-                tipo, extensão e gravidade da doença.
+                O tratamento é <strong>individualizado</strong>, dependendo do tipo, extensão e
+                gravidade da doença.
               </p>
               <p>Entre as opções estão:</p>
               <ul>
                 <li>
-                  <strong>Corticoides</strong>: usados em fases de crise para
-                  reduzir inflamação.
+                  <strong>Corticoides</strong>: usados em fases de crise para reduzir inflamação.
                 </li>
                 <li>
-                  <strong>Imunossupressores</strong>: ajudam a controlar a
-                  resposta inflamatória.
+                  <strong>Imunossupressores</strong>: ajudam a controlar a resposta inflamatória.
                 </li>
                 <li>
-                  <strong>Terapias biológicas (imunobiológicos)</strong>:
-                  indicadas em casos moderados a graves, bloqueiam mecanismos
-                  específicos da inflamação.
+                  <strong>Terapias biológicas (imunobiológicos)</strong>: indicadas em casos
+                  moderados a graves, bloqueiam mecanismos específicos da inflamação.
                 </li>
                 <li>
-                  <strong>Acompanhamento nutricional</strong>: essencial para
-                  corrigir deficiências e melhorar a resposta ao tratamento.
+                  <strong>Acompanhamento nutricional</strong>: essencial para corrigir deficiências
+                  e melhorar a resposta ao tratamento.
                 </li>
                 <li>
-                  <strong>Cirurgia</strong>: pode ser necessária em complicações
-                  como estenoses, fístulas ou sangramentos importantes.
+                  <strong>Cirurgia</strong>: pode ser necessária em complicações como estenoses,
+                  fístulas ou sangramentos importantes.
                 </li>
               </ul>
 
               <p>
                 O objetivo principal é alcançar e manter a&nbsp;
-                <strong>remissão</strong>, reduzindo crises e proporcionando
-                qualidade de vida.
+                <strong>remissão</strong>, reduzindo crises e proporcionando qualidade de vida.
               </p>
 
-              <h2>Importância do Coloproctologista</h2>
+              <h2>Importância do coloproctologista</h2>
               <p>
-                O <strong>coloproctologista</strong> tem papel fundamental no
-                diagnóstico e acompanhamento das Doenças Inflamatórias
-                Intestinais.
+                O <strong>coloproctologista</strong> tem papel fundamental no diagnóstico e
+                acompanhamento das Doenças Inflamatórias Intestinais.
               </p>
               <p>
-                Em <strong>Curitiba</strong>, há centros de referência em
-                coloproctologia que permitem integrar diagnóstico, tratamento
-                clínico e, quando necessário, opções cirúrgicas.
+                Em <strong>Curitiba</strong>, há centros de referência em coloproctologia que
+                permitem integrar diagnóstico, tratamento clínico e, quando necessário, opções
+                cirúrgicas.
               </p>
 
-              <h2>Considerações Finais</h2>
+              <h2>Considerações finais</h2>
               <p>
-                As Doenças Inflamatórias Intestinais exigem cuidado contínuo e
-                acompanhamento especializado.
+                As Doenças Inflamatórias Intestinais exigem cuidado contínuo e acompanhamento
+                especializado.
               </p>
               <p>
                 O diagnóstico precoce e o tratamento individualizado com&nbsp;
-                <strong>coloproctologista em Curitiba</strong> são fundamentais
-                para reduzir sintomas e melhorar a qualidade de vida.
+                <strong>coloproctologista em Curitiba</strong> são fundamentais para reduzir
+                sintomas e melhorar a qualidade de vida.
               </p>
 
               <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
                 <p className="text-secondary italic mb-0">
-                  Se você apresenta sintomas sugestivos de Doença de Crohn ou
-                  Retocolite Ulcerativa, agende sua avaliação em
-                  coloproctologia.
+                  Se você apresenta sintomas sugestivos de Doença de Crohn ou Retocolite Ulcerativa,
+                  agende sua avaliação em coloproctologia.
                 </p>
               </blockquote>
 
@@ -333,9 +302,8 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                     Doença de Crohn e retocolite ulcerativa são a mesma coisa?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Não. Ambas são Doenças Inflamatórias Intestinais, mas têm
-                    características diferentes. O diagnóstico correto é feito
-                    pelo coloproctologista.
+                    Não. Ambas são Doenças Inflamatórias Intestinais, mas têm características
+                    diferentes. O diagnóstico correto é feito pelo coloproctologista.
                   </p>
                 </div>
 
@@ -344,9 +312,8 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                     Existe cura para as Doenças Inflamatórias Intestinais?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Atualmente, não existe cura definitiva. Com tratamento
-                    adequado, é possível controlar os sintomas e viver com
-                    qualidade.
+                    Atualmente, não existe cura definitiva. Com tratamento adequado, é possível
+                    controlar os sintomas e viver com qualidade.
                   </p>
                 </div>
 
@@ -355,9 +322,8 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                     Preciso de acompanhamento contínuo mesmo sem sintomas?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Sim. Mesmo em períodos de remissão, é essencial o
-                    acompanhamento com coloproctologia para prevenir
-                    complicações e ajustar o tratamento.
+                    Sim. Mesmo em períodos de remissão, é essencial o acompanhamento com
+                    coloproctologia para prevenir complicações e ajustar o tratamento.
                   </p>
                 </div>
 
@@ -366,10 +332,9 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                     Quando devo procurar um coloproctologista em Curitiba?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Se você apresenta dor abdominal frequente, diarreia
-                    persistente, sangramento nas fezes ou perda de peso sem
-                    causa aparente, deve procurar avaliação com um especialista
-                    em coloproctologia.
+                    Se você apresenta dor abdominal frequente, diarreia persistente, sangramento nas
+                    fezes ou perda de peso sem causa aparente, deve procurar avaliação com um
+                    especialista em coloproctologia.
                   </p>
                 </div>
               </div>
@@ -379,9 +344,9 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               title="Suspeita de Doença Inflamatória Intestinal?"
               body={
                 <p>
-                  Agende uma consulta para avaliação especializada e diagnóstico
-                  preciso. O acompanhamento adequado é fundamental para
-                  controlar os sintomas e manter sua qualidade de vida.
+                  Agende uma consulta para avaliação especializada e diagnóstico preciso. O
+                  acompanhamento adequado é fundamental para controlar os sintomas e manter sua
+                  qualidade de vida.
                 </p>
               }
               actions={

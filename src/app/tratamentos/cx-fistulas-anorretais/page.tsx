@@ -19,8 +19,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle =
-  'Cirurgias para Fístulas Anorretais | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Cirurgias para Fístulas Anorretais | Dra. Ana Luiza Moraes Rocha'
 const pageDescription =
   'Tratamentos cirúrgicos especializados para fístulas anorretais: fistulotomia, retalho mucoso, LIFT, laser e técnicas combinadas em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/cx-fistulas-anorretais`
@@ -97,8 +96,7 @@ export default function CirurgiaFistulasPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
-            '@id':
-              `${WEBSITE_URL}/tratamentos/cx-fistulas-anorretais`,
+            '@id': `${WEBSITE_URL}/tratamentos/cx-fistulas-anorretais`,
             name: 'Cirurgias para Fístulas Anorretais',
             description:
               'Tratamentos cirúrgicos especializados para fístulas anorretais incluindo fistulotomia, retalho mucoso, LIFT e técnicas a laser',
@@ -117,10 +115,8 @@ export default function CirurgiaFistulasPage() {
                 },
               ],
             },
-            preparation:
-              'Avaliação pré-operatória detalhada, exames de imagem quando necessário',
-            followup:
-              'Acompanhamento médico especializado conforme técnica cirúrgica utilizada',
+            preparation: 'Avaliação pré-operatória detalhada, exames de imagem quando necessário',
+            followup: 'Acompanhamento médico especializado conforme técnica cirúrgica utilizada',
           }),
         }}
       />
@@ -164,55 +160,50 @@ export default function CirurgiaFistulasPage() {
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
-                As fístulas anorretais são comunicações anormais entre o canal
-                anal e a pele ao redor do ânus. O tratamento geralmente é
-                cirúrgico, e a escolha da técnica depende do trajeto da fístula,
-                da sua relação com o esfíncter anal e das características
+                As fístulas anorretais são comunicações anormais entre o canal anal e a pele ao
+                redor do ânus. O tratamento geralmente é cirúrgico, e a escolha da técnica depende
+                do trajeto da fístula, da sua relação com o esfíncter anal e das características
                 individuais de cada paciente.
               </p>
             </header>
 
             <main className="prose prose-lg max-w-none mb-12">
               <p>
-                Costumam surgir após abscessos anorretais e podem provocar
-                secreção, dor e desconforto.
+                Costumam surgir após abscessos anorretais e podem provocar secreção, dor e
+                desconforto.
               </p>
 
               <h2>Fistulotomia</h2>
               <ul>
+                <li>Técnica mais tradicional e eficaz em fístulas simples, de baixo trajeto.</li>
                 <li>
-                  Técnica mais tradicional e eficaz em fístulas simples, de
-                  baixo trajeto.
-                </li>
-                <li>
-                  Consiste em abrir o trajeto fistuloso, permitindo cicatrização
-                  de dentro para fora.
+                  Consiste em abrir o trajeto fistuloso, permitindo cicatrização de dentro para
+                  fora.
                 </li>
                 <li>
                   <strong>Vantagem:</strong> altas taxas de cura.
                 </li>
                 <li>
-                  <strong>Limitação:</strong> risco de incontinência em fístulas
-                  que envolvem parte significativa do esfíncter.
+                  <strong>Limitação:</strong> risco de incontinência em fístulas que envolvem parte
+                  significativa do esfíncter.
                 </li>
               </ul>
 
-              <h2>Retalho Mucoso de Avanço</h2>
+              <h2>Retalho mucoso de avanço</h2>
               <ul>
                 <li>
-                  Indicado para fístulas complexas, especialmente as que
-                  comprometem grande parte do esfíncter.
+                  Indicado para fístulas complexas, especialmente as que comprometem grande parte do
+                  esfíncter.
                 </li>
                 <li>
-                  Consiste em fechar o orifício interno com um retalho de tecido
-                  da própria mucosa.
+                  Consiste em fechar o orifício interno com um retalho de tecido da própria mucosa.
                 </li>
                 <li>
                   <strong>Vantagem:</strong> preserva a continência anal.
                 </li>
                 <li>
-                  <strong>Limitação:</strong> pode ter taxas de recidiva e
-                  requer maior experiência cirúrgica.
+                  <strong>Limitação:</strong> pode ter taxas de recidiva e requer maior experiência
+                  cirúrgica.
                 </li>
               </ul>
 
@@ -220,116 +211,98 @@ export default function CirurgiaFistulasPage() {
               <ul>
                 <li>Fio cirúrgico ou dreno colocado no trajeto da fístula.</li>
                 <li>
-                  Pode ser <strong>frouxo</strong>, para manter a drenagem e
-                  evitar abscessos, ou <strong>cortante</strong>, usado de forma
-                  progressiva em alguns casos.
+                  Pode ser <strong>frouxo</strong>, para manter a drenagem e evitar abscessos, ou{' '}
+                  <strong>cortante</strong>, usado de forma progressiva em alguns casos.
                 </li>
                 <li>
-                  <strong>Vantagem:</strong> útil em fístulas complexas e em
-                  casos de infecção ativa.
+                  <strong>Vantagem:</strong> útil em fístulas complexas e em casos de infecção
+                  ativa.
                 </li>
                 <li>
-                  <strong>Limitação:</strong> pode ser desconfortável e exigir
-                  múltiplos procedimentos.
+                  <strong>Limitação:</strong> pode ser desconfortável e exigir múltiplos
+                  procedimentos.
                 </li>
               </ul>
 
               <h2>LIFT (Ligation of Intersphincteric Fistula Tract)</h2>
               <ul>
+                <li>Técnica minimamente invasiva para fístulas transesfincterianas.</li>
+                <li>O trajeto é identificado no espaço interesfincteriano e ligado/cortado.</li>
                 <li>
-                  Técnica minimamente invasiva para fístulas
-                  transesfincterianas.
+                  <strong>Vantagem:</strong> preserva o esfíncter, com menor risco de incontinência.
                 </li>
                 <li>
-                  O trajeto é identificado no espaço interesfincteriano e
-                  ligado/cortado.
-                </li>
-                <li>
-                  <strong>Vantagem:</strong> preserva o esfíncter, com menor
-                  risco de incontinência.
-                </li>
-                <li>
-                  <strong>Limitação:</strong> não indicada para todos os tipos
-                  de fístula.
+                  <strong>Limitação:</strong> não indicada para todos os tipos de fístula.
                 </li>
               </ul>
 
-              <h2>Aplicação de Fibrina ou PRF</h2>
+              <h2>Aplicação de fibrina ou PRF</h2>
               <ul>
                 <li>
-                  Consiste no preenchimento do trajeto fistuloso com colas
-                  biológicas ou derivados de sangue autólogo.
+                  Consiste no preenchimento do trajeto fistuloso com colas biológicas ou derivados
+                  de sangue autólogo.
                 </li>
                 <li>
-                  O <strong>PRF (Plasma Rico em Fibrina)</strong> utiliza
-                  fatores de crescimento para estimular a cicatrização.
+                  O <strong>PRF (Plasma Rico em Fibrina)</strong> utiliza fatores de crescimento
+                  para estimular a cicatrização.
                 </li>
               </ul>
 
               <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
                 <p className="text-secondary italic mb-0">
-                  <strong>Importante:</strong> no Brasil, o uso de PRF não
-                  possui aprovação da Anvisa para cirurgias coloproctológicas
-                  fora do âmbito da pesquisa científica.
+                  <strong>Importante:</strong> no Brasil, o uso de PRF não possui aprovação da
+                  Anvisa para cirurgias coloproctológicas fora do âmbito da pesquisa científica.
                 </p>
               </blockquote>
 
-              <h2>Técnicas com Laser</h2>
+              <h2>Técnicas com laser</h2>
               <ul>
                 <li>
-                  O laser pode ser utilizado para cauterizar o trajeto fistuloso
-                  (FiLaC – Fistula-tract Laser Closure).
+                  O laser pode ser utilizado para cauterizar o trajeto fistuloso (FiLaC –
+                  Fistula-tract Laser Closure).
                 </li>
                 <li>
-                  <strong>Vantagem:</strong> técnica minimamente invasiva,
-                  preserva o esfíncter.
+                  <strong>Vantagem:</strong> técnica minimamente invasiva, preserva o esfíncter.
                 </li>
                 <li>
-                  <strong>Limitação:</strong> a taxa de sucesso varia de acordo
-                  com o tamanho e a espessura do trajeto, bem como a relação do
-                  trajeto com a musculatura.
+                  <strong>Limitação:</strong> a taxa de sucesso varia de acordo com o tamanho e a
+                  espessura do trajeto, bem como a relação do trajeto com a musculatura.
                 </li>
               </ul>
 
-              <h2>Técnicas Combinadas</h2>
+              <h2>Técnicas combinadas</h2>
               <ul>
                 <li>
                   Algumas vezes, técnicas podem ser <strong>associadas</strong>
-                  &nbsp; para aumentar a chance de cicatrização e reduzir o
-                  risco de incontinência.
+                  &nbsp; para aumentar a chance de cicatrização e reduzir o risco de incontinência.
                 </li>
                 <li>
                   Exemplos: <strong>LIFT + laser</strong> ou&nbsp;
                   <strong>retalho mucoso + laser</strong>.
                 </li>
                 <li>
-                  A escolha depende das características da fístula e da
-                  experiência do cirurgião.
+                  A escolha depende das características da fístula e da experiência do cirurgião.
                 </li>
               </ul>
 
-              <h2>Importância do Seton em Fístulas Complexas</h2>
+              <h2>Importância do Seton em fístulas complexas</h2>
               <p>
                 Em casos de&nbsp;
                 <strong>
-                  fístulas complexas, extensas ou com trajeto espesso, muitas
-                  vezes a primeira etapa do tratamento é a colocação de um seton
-                  (sedenho)
+                  fístulas complexas, extensas ou com trajeto espesso, muitas vezes a primeira etapa
+                  do tratamento é a colocação de um seton (sedenho)
                 </strong>
                 .
               </p>
               <ul>
                 <li>
-                  Essa estratégia permite manter a fístula drenada, reduzir a
-                  inflamação local e preparar o trajeto para uma cirurgia
-                  definitiva em segundo tempo.
+                  Essa estratégia permite manter a fístula drenada, reduzir a inflamação local e
+                  preparar o trajeto para uma cirurgia definitiva em segundo tempo.
                 </li>
               </ul>
 
-              <h2>Considerações Finais</h2>
-              <p>
-                Cada fístula é única e a decisão do tratamento também deve ser.
-              </p>
+              <h2>Considerações finais</h2>
+              <p>Cada fístula é única e a decisão do tratamento também deve ser.</p>
               <p>
                 O objetivo sempre é equilibrar a&nbsp;
                 <strong>cura da fístula</strong> com a&nbsp;
@@ -339,9 +312,8 @@ export default function CirurgiaFistulasPage() {
 
               <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
                 <p className="text-secondary italic mb-0">
-                  Procure sempre avaliação individualizada com um
-                  coloproctologista para definição da melhor estratégia de
-                  tratamento.
+                  Procure sempre avaliação individualizada com um coloproctologista para definição
+                  da melhor estratégia de tratamento.
                 </p>
               </blockquote>
 
@@ -353,8 +325,8 @@ export default function CirurgiaFistulasPage() {
                     A fístula anal pode fechar sozinha?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Não. Diferente de um abscesso, a fístula geralmente não
-                    cicatriza espontaneamente e requer avaliação cirúrgica.
+                    Não. Diferente de um abscesso, a fístula geralmente não cicatriza
+                    espontaneamente e requer avaliação cirúrgica.
                   </p>
                 </div>
 
@@ -363,9 +335,8 @@ export default function CirurgiaFistulasPage() {
                     Qual é o melhor tipo de cirurgia para fístula anal?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Não existe uma única técnica ideal. A escolha depende do
-                    tipo de fístula, sua relação com o esfíncter e o histórico
-                    do paciente.
+                    Não existe uma única técnica ideal. A escolha depende do tipo de fístula, sua
+                    relação com o esfíncter e o histórico do paciente.
                   </p>
                 </div>
 
@@ -374,9 +345,8 @@ export default function CirurgiaFistulasPage() {
                     Toda cirurgia de fístula anal causa incontinência?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Não. Muitas técnicas modernas buscam preservar o esfíncter.
-                    O risco de incontinência depende da complexidade da fístula
-                    e do procedimento escolhido.
+                    Não. Muitas técnicas modernas buscam preservar o esfíncter. O risco de
+                    incontinência depende da complexidade da fístula e do procedimento escolhido.
                   </p>
                 </div>
 
@@ -385,9 +355,8 @@ export default function CirurgiaFistulasPage() {
                     O laser pode ser usado no tratamento da fístula?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Sim. Existem técnicas a laser que cauterizam o trajeto, com
-                    menos dano tecidual. Contudo, o sucesso depende do tamanho e
-                    da posição da fístula.
+                    Sim. Existem técnicas a laser que cauterizam o trajeto, com menos dano tecidual.
+                    Contudo, o sucesso depende do tamanho e da posição da fístula.
                   </p>
                 </div>
 
@@ -396,9 +365,8 @@ export default function CirurgiaFistulasPage() {
                     O que acontece se eu não operar uma fístula anal?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    A fístula pode causar infecções recorrentes, dor, secreção
-                    crônica e formar novos trajetos, tornando o tratamento mais
-                    complexo no futuro.
+                    A fístula pode causar infecções recorrentes, dor, secreção crônica e formar
+                    novos trajetos, tornando o tratamento mais complexo no futuro.
                   </p>
                 </div>
               </div>
@@ -408,9 +376,8 @@ export default function CirurgiaFistulasPage() {
               title="Precisa de avaliação para tratamento de fístula anorretal?"
               body={
                 <p>
-                  Agende uma consulta para avaliarmos a melhor estratégia
-                  cirúrgica para o seu caso. Cada fístula é única e requer
-                  atenção especializada.
+                  Agende uma consulta para avaliarmos a melhor estratégia cirúrgica para o seu caso.
+                  Cada fístula é única e requer atenção especializada.
                 </p>
               }
               actions={

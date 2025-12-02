@@ -108,6 +108,28 @@ export function getHashNavigation(): NavigationItem[] {
   return convertToHashNavigation(getLandingPageSections())
 }
 
+/**
+ * Checks if a navigation item should be highlighted based on current pathname
+ * Supports exact matches and parent route matching (e.g., /blog matches /blog/slug)
+ * @param itemHref - The href of the navigation item
+ * @param currentPathname - The current pathname from usePathname()
+ * @returns true if the nav item should be highlighted
+ */
+export function isNavItemActive(itemHref: string, currentPathname: string): boolean {
+  // Exact match
+  if (currentPathname === itemHref) {
+    return true
+  }
+
+  // Parent route matching (e.g., /blog for /blog/slug, /tratamentos for /tratamentos/hemorroidas)
+  // Don't match root path '/' to everything
+  if (itemHref !== '/' && currentPathname.startsWith(itemHref + '/')) {
+    return true
+  }
+
+  return false
+}
+
 // Legacy exports for backward compatibility
 export const navigation = getLandingPageNavigation().all
 export const homepageNavigation = getLandingPageNavigation().all

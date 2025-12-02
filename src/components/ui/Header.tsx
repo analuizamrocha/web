@@ -13,13 +13,14 @@ import { usePathname, useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useMobileMenu } from '@/hooks/useMobileMenu'
-import { getLandingPageNavigation, getHashNavigation, globalNavigation } from '@/lib/navigation'
+import { getLandingPageNavigation, getHashNavigation, globalNavigation, isNavItemActive } from '@/lib/navigation'
 import { Divider } from './Divider'
 
 export function Header() {
   const pathname = usePathname()
   const router = useRouter()
   const isRootPage = pathname === '/'
+
 
   // Custom hooks
   const { activeSection, scrollToSection } = useActiveSection(isRootPage)
@@ -123,11 +124,12 @@ export function Header() {
                     <Link
                       key={item.name}
                       href={item.href}
+                      suppressHydrationWarning
                       className={cn(
                         'text-sm font-semibold leading-6 transition-all duration-200 relative py-2 cursor-pointer',
                         'hover:text-primary focus:text-primary focus:outline-none',
                         'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300',
-                        pathname === item.href
+                        isNavItemActive(item.href, pathname)
                           ? 'text-primary after:w-full'
                           : 'text-secondary after:w-0 hover:after:w-full'
                       )}
@@ -252,9 +254,10 @@ export function Header() {
                         key={item.name}
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
+                        suppressHydrationWarning
                         className={cn(
                           'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
-                          pathname === item.href
+                          isNavItemActive(item.href, pathname)
                             ? 'text-primary bg-primary/10'
                             : 'text-secondary hover:text-primary focus:text-primary hover:bg-primary/5'
                         )}

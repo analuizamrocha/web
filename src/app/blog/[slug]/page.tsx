@@ -11,7 +11,13 @@ import {
 } from '@/lib/blog'
 import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import { WHATSAPP_MSG_TEXT_ENCODED, WPP_NUMBER_NASSIF, WEBSITE_URL, SITE_NAME, TAG_INSTAGRAM } from '@/lib/constants'
+import {
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WPP_NUMBER_NASSIF,
+  WEBSITE_URL,
+  SITE_NAME,
+  TAG_INSTAGRAM,
+} from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 
 interface BlogPostPageProps {
@@ -221,7 +227,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 href="/blog"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg text-nowrap"
               >
-                ← Voltar para o blog
+                ← Voltar
               </Link>
               <div className="text-sm text-secondary">
                 Última atualização:&nbsp;
