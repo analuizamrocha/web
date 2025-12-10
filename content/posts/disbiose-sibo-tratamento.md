@@ -87,18 +87,18 @@ Os sintomas podem se confundir entre as duas condições, por isso o **diagnóst
 
 A avaliação clínica detalhada é fundamental, mas o diagnóstico pode incluir exames específicos:
 
-### 🔸 **1. Teste do Hidrogênio Expirado (Breath Test)**
+### **1. Teste do Hidrogênio Expirado (Breath Test)**
 
 É o exame mais utilizado para diagnóstico de SIBO.
 O paciente ingere uma substância (geralmente glicose ou lactulose), e a quantidade de **hidrogênio e metano exalados** no ar expirado é medida ao longo de algumas horas.
 
 A presença precoce desses gases indica fermentação bacteriana no intestino delgado.
 
-### 🔸 **2. Exames laboratoriais e de fezes**
+### **2. Exames laboratoriais e de fezes**
 
 Podem avaliar a presença de inflamação, má absorção e alterações na microbiota.
 
-### 🔸 **3. Colonoscopia e biópsia intestinal**
+### **3. Colonoscopia e biópsia intestinal**
 
 Indicadas apenas quando há suspeita de doenças estruturais, inflamatórias ou neoplásicas.
 
@@ -160,13 +160,13 @@ Um **coloproctologista em Curitiba** poderá investigar a causa, solicitar exame
 A **disbiose** e o **SIBO** são condições complexas, mas tratáveis.
 Com diagnóstico preciso, ajuste alimentar e acompanhamento médico adequado, é possível restaurar o equilíbrio intestinal e aliviar os sintomas de forma duradoura.
 
- 👉 Se você sofre com **inchaço abdominal, gases ou desconforto digestivo**, agende uma consulta com a **Dra. Ana Luiza**, coloproctologista em Curitiba, e descubra a causa do seu problema com segurança e cuidado especializado.
+Se você sofre com **inchaço abdominal, gases ou desconforto digestivo**, agende uma consulta com a **Dra. Ana Luiza**, proctologista em Curitiba, e descubra a causa do seu problema com segurança e cuidado especializado.
 
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
+Especialista em Coloproctologia
 
-> *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*
+> _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

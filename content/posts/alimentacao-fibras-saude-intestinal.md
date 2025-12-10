@@ -81,24 +81,23 @@ Um consumo exagerado de fibras sem água suficiente pode **piorar a constipaçã
 
 ---
 
-## Alimentos ricos e pobres em fibras
+## Teor de fibras em diferentes alimentos
 
-| **Ricos em fibras**        | **Teor médio (g por porção)** |
-| -------------------------- | ----------------------------- |
-| Aveia (2 colheres de sopa) | 3,0 g                         |
-| Maçã com casca             | 3,5 g                         |
-| Mamão                      | 2,0 g                         |
-| Feijão cozido (1 concha)   | 6,0 g                         |
-| Linhaça (1 colher de sopa) | 2,5 g                         |
-| Brócolis cozido (1 xícara) | 5,0 g                         |
-| Pão integral (1 fatia)     | 2,0 g                         |
-
-| **Pobres em fibras**                   | **Teor médio (g por porção)** |
-| -------------------------------------- | ----------------------------- |
-| Arroz branco                           | 0,5 g                         |
-| Pão branco                             | 0,7 g                         |
-| Refrigerantes e sucos industrializados | 0 g                           |
-| Doces e ultraprocessados               | 0 g                           |
+| **Alimento**                           | **Fibras (g)** |
+| -------------------------------------- | -------------- |
+| **Ricos em fibras**                    |                |
+| Aveia (2 colheres de sopa)             | 3,0            |
+| Maçã com casca                         | 3,5            |
+| Mamão                                  | 2,0            |
+| Feijão cozido (1 concha)               | 6,0            |
+| Linhaça (1 colher de sopa)             | 2,5            |
+| Brócolis cozido (1 xícara)             | 5,0            |
+| Pão integral (1 fatia)                 | 2,0            |
+| **Pobres em fibras**                   |                |
+| Arroz branco                           | 0,5            |
+| Pão branco                             | 0,7            |
+| Refrigerantes e sucos industrializados | 0              |
+| Doces e ultraprocessados               | 0              |
 
 ---
 
@@ -114,31 +113,18 @@ Além disso:
 
 ---
 
-## Quando procurar um coloproctologista em Curitiba
-
-Procure avaliação médica se você apresenta:
-
-- Constipação ou diarreia frequente;
-- Dor ao evacuar ou sangramento anal;
-- Mudanças no formato ou consistência das fezes;
-- Inchaço, gases ou sensação de evacuação incompleta.
-
-Um **coloproctologista em Curitiba** poderá identificar se os sintomas têm relação com a dieta, hábitos intestinais ou doenças orificiais, e orientar o consumo ideal de fibras para o seu caso.
-
----
-
 ## Conclusão
 
 As **fibras alimentares** são aliadas fundamentais da **saúde intestinal** e desempenham papel essencial na **prevenção de hemorroidas, fissuras e constipação**.
 O segredo está no equilíbrio: combinar alimentos ricos em fibras com **ingestão adequada de água** e uma **alimentação natural e variada**.
 
- 👉 **Agende uma avaliação com a Dra. Ana Luiza**, coloproctologista em Curitiba, e receba orientações personalizadas para cuidar do seu intestino com segurança e eficiência.
+**Agende uma avaliação com a Dra. Ana Luiza**, e receba orientações personalizadas para cuidar do seu intestino com segurança e eficiência.
 
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
+Especialista em Coloproctologia
 
-> *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*
+> _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

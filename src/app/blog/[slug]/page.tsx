@@ -1,6 +1,8 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import {
   getPostBySlug,
@@ -9,7 +11,6 @@ import {
   getTargetAudienceLabel,
   getContentIntentLabel,
 } from '@/lib/blog'
-import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import {
   WHATSAPP_MSG_TEXT_ENCODED,
@@ -192,7 +193,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Article Content */}
           <div className="mx-auto max-w-4xl">
             <div className="prose prose-lg max-w-none">
-              <MDXRemote source={post.content} />
+              <MDXRemote
+                source={post.content}
+                options={{
+                  mdxOptions: {
+                    remarkPlugins: [remarkGfm],
+                  },
+                }}
+              />
             </div>
           </div>
 
@@ -203,7 +211,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               body={
                 <p>
                   Agende uma consulta com a Dra. Ana Luiza Moraes Rocha para receber cuidado
-                  especializado em coloproctologia.
+                  especializado em proctologia.
                 </p>
               }
               actions={

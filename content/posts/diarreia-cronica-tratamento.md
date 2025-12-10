@@ -1,6 +1,6 @@
 ---
 title: 'Diarreia crônica: causas, diagnóstico e tratamentos'
-metaDescription: 'Diarreia crônica ou intestino solto persistente pode indicar SII, intolerâncias ou doenças inflamatórias. Saiba quando procurar coloproctologista em Curitiba.'
+metaDescription: 'Diarreia crônica ou intestino solto persistente pode indicar SII, intolerâncias ou doenças inflamatórias. Saiba quando procurar por proctologista em Curitiba.'
 slug: 'diarreia-cronica-tratamento'
 publishDate: '2025-12-02'
 lastModified: '2025-12-02'
@@ -126,7 +126,7 @@ O tratamento da diarreia crônica depende da causa identificada:
 - **Intolerâncias alimentares:** exclusão dos alimentos desencadeantes e orientação nutricional.
 - **Doenças inflamatórias intestinais:** uso de anti-inflamatórios intestinais, imunomoduladores ou biológicos sob acompanhamento médico.
 - **Infecções:** tratamento antiparasitário ou antibiótico conforme o agente causador.
-- **Distúrbios da microbiota:** uso de probióticos e reeducação alimentar.
+- **Distúrbios da microbiota:** suplementação intestinal e acompanhamento nutricional.
 
 Além disso, a **hidratação adequada** e o **monitoramento contínuo** são essenciais para evitar complicações e manter a saúde intestinal.
 
@@ -147,15 +147,15 @@ Além disso, a **hidratação adequada** e o **monitoramento contínuo** são es
 A **diarreia crônica** não deve ser ignorada.
 Embora possa ter causas simples, ela também pode estar relacionada a doenças intestinais que exigem tratamento contínuo.
 
- Se você sente que seu **intestino está sempre solto** ou apresenta sintomas persistentes, agende uma consulta com a **Dra. Ana Luiza**, **coloproctologista em Curitiba**, para um diagnóstico preciso e acompanhamento personalizado.
+Se você sente que seu **intestino está sempre solto** ou apresenta sintomas persistentes, agende uma consulta com a **Dra. Ana Luiza**, **coloproctologista em Curitiba**, para um diagnóstico preciso e acompanhamento personalizado.
 
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
+Especialista em Coloproctologia
 
-> *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*
+> _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._
 
 Cuidar da saúde intestinal é o primeiro passo para recuperar seu bem-estar e qualidade de vida.

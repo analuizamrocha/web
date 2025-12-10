@@ -100,13 +100,13 @@ O diagnóstico precoce aumenta as chances de tratamento menos invasivo e recuper
 A **fissura anal** é uma condição comum, mas que não deve ser ignorada.
 O tratamento varia desde medidas clínicas até procedimentos mais avançados, como aplicação de toxina botulínica e cirurgia.
 
- 👉 Se você sofre com **dor ao evacuar** ou suspeita de fissura anal, agende sua avaliação em **coloproctologia em Curitiba** e descubra a melhor forma de tratamento para o seu caso.
+Se você sofre com **dor ao evacuar** ou suspeita de fissura anal, agende sua avaliação em **proctologista em Curitiba** e descubra a melhor forma de tratamento para o seu caso.
 
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
+Especialista em Coloproctologia
 
-> *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*
+> _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

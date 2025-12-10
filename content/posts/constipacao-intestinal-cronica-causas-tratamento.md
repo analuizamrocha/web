@@ -1,32 +1,32 @@
 ---
-title: "Constipação intestinal crônica: causas, tratamentos e quando procurar especialista"
-metaDescription: "Constipação intestinal crônica tem tratamento. Descubra as causas da prisão de ventre, sinais de alerta e quando procurar coloproctologista."
-slug: "constipacao-intestinal-cronica-causas-tratamento"
-publishDate: "2025-10-06"
-lastModified: "2025-10-06"
-primaryKeyword: "constipação intestinal crônica"
+title: 'Constipação intestinal crônica: causas, tratamentos e quando procurar especialista'
+metaDescription: 'Constipação intestinal crônica tem tratamento. Descubra as causas da prisão de ventre, sinais de alerta e quando procurar um coloproctologista.'
+slug: 'constipacao-intestinal-cronica-causas-tratamento'
+publishDate: '2025-10-06'
+lastModified: '2025-10-06'
+primaryKeyword: 'constipação intestinal crônica'
 secondaryKeywords:
-  - "prisão de ventre tratamento"
-  - "causas constipação intestinal"
-  - "coloproctologista Curitiba"
-  - "sintomas prisão de ventre"
-  - "tratamento intestino preso"
-targetAudience: "patients"
-intent: "awareness"
+  - 'prisão de ventre tratamento'
+  - 'causas constipação intestinal'
+  - 'coloproctologista Curitiba'
+  - 'sintomas prisão de ventre'
+  - 'tratamento intestino preso'
+targetAudience: 'patients'
+intent: 'awareness'
 featured: false
 order: 5
 faqs:
-  - question: "Prisão de ventre é sempre causada por má alimentação?"
-    answer: "Não. Embora a dieta pobre em fibras seja uma das causas principais, existem condições médicas e alterações estruturais que também podem provocar constipação."
-  - question: "Posso usar laxantes por conta própria?"
-    answer: "O uso indiscriminado de laxantes pode causar dependência e prejudicar o funcionamento natural do intestino. O ideal é utilizá-los somente com orientação médica."
-  - question: "A prisão de ventre pode causar hemorroidas?"
-    answer: "Sim. O esforço excessivo para evacuar aumenta a pressão nas veias anais, favorecendo o surgimento ou agravamento das hemorroidas."
-  - question: "Quando devo procurar um coloproctologista?"
-    answer: "Se você sofre com prisão de ventre há mais de 3 meses ou apresenta sinais de alerta (sangue, dor intensa, emagrecimento sem causa), deve procurar avaliação médica especializada."
+  - question: 'Prisão de ventre é sempre causada por má alimentação?'
+    answer: 'Não. Embora a dieta pobre em fibras seja uma das causas principais, existem condições médicas e alterações estruturais que também podem provocar constipação.'
+  - question: 'Posso usar laxantes por conta própria?'
+    answer: 'O uso indiscriminado de laxantes pode causar dependência e prejudicar o funcionamento natural do intestino. O ideal é utilizá-los somente com orientação médica.'
+  - question: 'A prisão de ventre pode causar hemorroidas?'
+    answer: 'Sim. O esforço excessivo para evacuar aumenta a pressão nas veias anais, favorecendo o surgimento ou agravamento das hemorroidas.'
+  - question: 'Quando devo procurar um coloproctologista?'
+    answer: 'Se você sofre com prisão de ventre há mais de 3 meses ou apresenta sinais de alerta (sangue, dor intensa, emagrecimento sem causa), deve procurar avaliação médica especializada.'
 ---
 
-*A prisão de ventre crônica é mais comum do que imaginamos. Muitas pessoas convivem com dificuldade para evacuar sem procurar ajuda. Descubra as causas, tratamentos e quando buscar especialista.*
+_A prisão de ventre crônica é mais comum do que imaginamos. Muitas pessoas convivem com dificuldade para evacuar sem procurar ajuda. Descubra as causas, tratamentos e quando buscar especialista._
 
 A **prisão de ventre**, também chamada de **constipação intestinal crônica**, é um dos sintomas mais comuns no consultório de coloproctologia. Muitas pessoas convivem com dificuldade para evacuar sem procurar ajuda, acreditando que seja "normal". No entanto, quando persistente, a constipação pode impactar a qualidade de vida e até estar relacionada a outras doenças do intestino.
 
@@ -118,6 +118,6 @@ Se você convive com prisão de ventre frequente, procure avaliação especializ
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
+Especialista em Coloproctologia
 
-> *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*
+> _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

@@ -214,6 +214,97 @@
     margin: 2rem 0 !important;
   }
 
+  /* Table styling for markdown tables */
+  .prose table {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 2rem auto !important;
+    font-size: 1rem !important;
+    border-radius: 0.75rem !important;
+    border: 2px solid var(--color-border-subtle) !important;
+    box-shadow: 0 1px 3px rgba(102, 58, 37, 0.08) !important;
+  }
+
+  /* Table wrapper for responsive overflow */
+  @supports (display: grid) {
+    .prose table {
+      display: table !important;
+    }
+  }
+
+  .prose thead {
+    background: linear-gradient(to bottom, var(--color-card-bg), var(--color-card-bg-hover)) !important;
+  }
+
+  .prose thead th {
+    padding: 1.125rem 1.25rem !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+    color: var(--color-text-heading) !important;
+    font-size: 0.875rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    border-bottom: 2px solid var(--color-border-subtle) !important;
+  }
+
+  .prose thead th:last-child {
+    text-align: right !important;
+  }
+
+  .prose tbody tr {
+    border-bottom: 1px solid rgba(229, 212, 196, 0.4) !important;
+    transition: background-color 0.15s ease !important;
+  }
+
+  .prose tbody tr:last-child {
+    border-bottom: none !important;
+  }
+
+  .prose tbody tr:hover:not(:has(td:last-child:empty)) {
+    background-color: var(--color-bg-subtle) !important;
+  }
+
+  .prose tbody td {
+    padding: 1rem 1.25rem !important;
+    color: var(--color-text-body) !important;
+    line-height: 1.5 !important;
+  }
+
+  .prose tbody td:first-child {
+    font-weight: 500 !important;
+    color: var(--color-text-heading) !important;
+  }
+
+  .prose tbody td:last-child {
+    text-align: right !important;
+    font-variant-numeric: tabular-nums !important;
+    color: var(--color-text-body) !important;
+  }
+
+  /* Style for category separator rows (bold rows with empty second column) */
+  .prose tbody tr:has(td:last-child:empty) {
+    background: linear-gradient(to right, var(--color-card-bg), var(--color-card-bg-hover)) !important;
+  }
+
+  .prose tbody tr:has(td:last-child:empty):hover {
+    background: linear-gradient(to right, var(--color-card-bg), var(--color-card-bg-hover)) !important;
+  }
+
+  .prose tbody tr:has(td:last-child:empty) td {
+    padding: 0.875rem 1.25rem !important;
+    font-weight: 700 !important;
+    color: var(--color-text-heading) !important;
+    font-size: 0.9375rem !important;
+    letter-spacing: 0.02em !important;
+    border-top: 2px solid var(--color-border-subtle) !important;
+    border-bottom: 2px solid var(--color-border-subtle) !important;
+  }
+
+  .prose tbody tr:has(td:last-child:empty):first-child td {
+    border-top: none !important;
+  }
+
   /* Horizontal rule styling for markdown dividers (---) */
   .prose hr {
     border: 0 !important;
@@ -244,6 +335,24 @@
     .prose ul,
     .prose ol {
       font-size: 1.25rem !important;
+    }
+
+    .prose table {
+      font-size: 1.0625rem !important;
+    }
+
+    .prose thead th {
+      padding: 1.25rem 1.5rem !important;
+      font-size: 0.9375rem !important;
+    }
+
+    .prose tbody td {
+      padding: 1.125rem 1.5rem !important;
+    }
+
+    .prose tbody tr:has(td:last-child:empty) td {
+      padding: 1rem 1.5rem !important;
+      font-size: 1rem !important;
     }
 
     .prose hr {
