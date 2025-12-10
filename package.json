@@ -21,7 +21,7 @@
     "lighthouse:ci": "lighthouse http://localhost:3000 --output=json --quiet --chrome-flags='--headless --no-sandbox'"
   },
   "dependencies": {
-    "@next/third-parties": "^15.5.6",
+    "@next/third-parties": "^15.3.6",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "caniuse-lite": "^1.0.30001748",
@@ -29,7 +29,7 @@
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.503.0",
-    "next": "15.3.1",
+    "next": "15.3.6",
     "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
