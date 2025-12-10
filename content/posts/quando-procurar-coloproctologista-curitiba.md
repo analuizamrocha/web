@@ -1,36 +1,36 @@
 ---
-title: "Quando procurar um coloproctologista: guia completo"
-metaDescription: "Descubra quando procurar coloproctologista. Sintomas, sinais de alerta e como escolher o especialista certo para sua saúde intestinal."
-slug: "quando-procurar-coloproctologista-curitiba"
-publishDate: "2025-09-24"
-lastModified: "2025-10-06"
-primaryKeyword: "quando procurar coloproctologista"
+title: 'Quando procurar um coloproctologista: guia completo'
+metaDescription: 'Descubra quando procurar um coloproctologista. Sintomas, sinais de alerta e como escolher o especialista certo para sua saúde intestinal.'
+slug: 'quando-procurar-coloproctologista-curitiba'
+publishDate: '2025-09-24'
+lastModified: '2025-10-06'
+primaryKeyword: 'quando procurar coloproctologista'
 secondaryKeywords:
-  - "coloproctologista Curitiba"
-  - "sintomas coloproctologia"
-  - "proctologista Curitiba"
-  - "problemas intestinais"
-  - "quando ir ao proctologista"
-  - "especialista cólon reto"
-  - "médico intestino Curitiba"
-targetAudience: "patients"
-intent: "awareness"
+  - 'coloproctologista Curitiba'
+  - 'sintomas coloproctologia'
+  - 'proctologista Curitiba'
+  - 'problemas intestinais'
+  - 'quando ir ao proctologista'
+  - 'especialista cólon reto'
+  - 'médico intestino Curitiba'
+targetAudience: 'patients'
+intent: 'awareness'
 featured: true
 order: 1
 faqs:
-  - question: "Preciso mesmo procurar um coloproctologista se o sangramento for pequeno?"
-    answer: "Sim. Mesmo pequenas quantidades de sangue podem indicar desde problemas simples, como hemorroidas, até condições mais sérias, como pólipos ou câncer colorretal. Só o especialista pode investigar com segurança."
-  - question: "O exame proctológico dói?"
-    answer: "Não. Exames básicos, como o toque retal e a anuscopia, podem causar apenas um leve desconforto, mas não dor. Lembrando sempre que por se tratar de um exame físico íntimo, é sempre discutido com o paciente sobre como funciona e se há dor, nesses casos o exame é interrompido."
-  - question: "Tenho vergonha de falar sobre meus sintomas. O que fazer?"
-    answer: "Esse é um sentimento comum, mas vale lembrar: o coloproctologista está acostumado a lidar com esses casos todos os dias, sempre com sigilo, profissionalismo e respeito. A vergonha não pode ser um obstáculo para sua saúde."
-  - question: "Com que idade devo começar consultas de rotina?"
-    answer: "Pensando em rastreio e prevenção de câncer colorretal, para pessoas sem fatores de risco, a recomendação é iniciar aos 45 anos. Se houver histórico familiar de câncer colorretal ou doenças inflamatórias intestinais, a prevenção deve começar mais cedo. Lembrando que não existe idade para procurar um coloproctologista, se você tem qualquer sintoma intestinal ou orificial já tem indicação de procurar ajuda."
-  - question: "O que devo levar para minha primeira consulta?"
-    answer: "Leve exames anteriores (mesmo que antigos), lista de medicamentos em uso e histórico familiar de doenças intestinais. Também é importante anotar seus sintomas e dúvidas para aproveitar ao máximo a consulta."
+  - question: 'Preciso mesmo procurar um coloproctologista se o sangramento for pequeno?'
+    answer: 'Sim. Mesmo pequenas quantidades de sangue podem indicar desde problemas simples, como hemorroidas, até condições mais sérias, como pólipos ou câncer colorretal. Só o especialista pode investigar com segurança.'
+  - question: 'O exame proctológico dói?'
+    answer: 'Não. Exames básicos, como o toque retal e a anuscopia, podem causar apenas um leve desconforto, mas não dor. Lembrando sempre que por se tratar de um exame físico íntimo, é sempre discutido com o paciente sobre como funciona e se há dor, nesses casos o exame é interrompido.'
+  - question: 'Tenho vergonha de falar sobre meus sintomas. O que fazer?'
+    answer: 'Esse é um sentimento comum, mas vale lembrar: o coloproctologista está acostumado a lidar com esses casos todos os dias, sempre com sigilo, profissionalismo e respeito. A vergonha não pode ser um obstáculo para sua saúde.'
+  - question: 'Com que idade devo começar consultas de rotina?'
+    answer: 'Pensando em rastreio e prevenção de câncer colorretal, para pessoas sem fatores de risco, a recomendação é iniciar aos 45 anos. Se houver histórico familiar de câncer colorretal ou doenças inflamatórias intestinais, a prevenção deve começar mais cedo. Lembrando que não existe idade para procurar um coloproctologista, se você tem qualquer sintoma intestinal ou orificial já tem indicação de procurar ajuda.'
+  - question: 'O que devo levar para minha primeira consulta?'
+    answer: 'Leve exames anteriores (mesmo que antigos), lista de medicamentos em uso e histórico familiar de doenças intestinais. Também é importante anotar seus sintomas e dúvidas para aproveitar ao máximo a consulta.'
 ---
 
-*Sangramento ao evacuar, dor abdominal ou mudanças no hábito intestinal podem ser sinais importantes. Descubra quando esses sintomas exigem avaliação especializada e não devem ser ignorados.*
+_Sangramento ao evacuar, dor abdominal ou mudanças no hábito intestinal podem ser sinais importantes. Descubra quando esses sintomas exigem avaliação especializada e não devem ser ignorados._
 
 A saúde intestinal é fundamental para nosso bem-estar geral, mas muitas pessoas ficam em dúvida sobre **quando procurar coloproctologista**. Encontrar o especialista adequado pode fazer toda a diferença no diagnóstico precoce e tratamento eficaz de problemas que afetam o intestino grosso, reto e ânus.
 
@@ -119,6 +119,6 @@ Se alguma dessas dúvidas também é sua, procure um médico coloproctologista d
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
+Especialista em Coloproctologia
 
-> *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*
+> _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

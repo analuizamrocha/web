@@ -8,6 +8,7 @@ import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
   WEBSITE_URL,
+  CRM_NUMBER,
 } from '@/lib/constants'
 import {
   generateFAQSchema,
@@ -90,8 +91,7 @@ export default function CistoPilonidalPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
-            '@id':
-              `${WEBSITE_URL}/tratamentos/cx-cisto-pilonidal`,
+            '@id': `${WEBSITE_URL}/tratamentos/cx-cisto-pilonidal`,
             name: 'Cirurgia para Cisto Pilonidal',
             description:
               'Tratamento cirúrgico do cisto pilonidal com técnicas convencionais e laser para resolução definitiva',
@@ -106,14 +106,12 @@ export default function CistoPilonidalPage() {
               hasCredential: [
                 {
                   '@type': 'EducationalOccupationalCredential',
-                  identifier: 'CRM-PR 45351',
+                  identifier: CRM_NUMBER,
                 },
               ],
             },
-            preparation:
-              'Controle de inflamação aguda, avaliação pré-operatória',
-            followup:
-              'Acompanhamento pós-operatório para monitoramento da cicatrização',
+            preparation: 'Controle de inflamação aguda, avaliação pré-operatória',
+            followup: 'Acompanhamento pós-operatório para monitoramento da cicatrização',
           }),
         }}
       />
@@ -157,10 +155,9 @@ export default function CistoPilonidalPage() {
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
-                O cisto pilonidal é uma inflamação que ocorre na região do
-                cóccix, geralmente relacionada à penetração de pelos na pele.
-                Pode causar dor, inchaço, saída de secreção e formar abscessos
-                recorrentes. Em muitos casos, a cirurgia é o tratamento
+                O cisto pilonidal é uma inflamação que ocorre na região do cóccix, geralmente
+                relacionada à penetração de pelos na pele. Pode causar dor, inchaço, saída de
+                secreção e formar abscessos recorrentes. Em muitos casos, a cirurgia é o tratamento
                 definitivo.
               </p>
             </header>
@@ -172,22 +169,21 @@ export default function CistoPilonidalPage() {
                 <strong>minimamente invasiva com laser</strong>.
               </p>
 
-              <h2>Cirurgia Convencional</h2>
+              <h2>Cirurgia convencional</h2>
               <p>
-                A cirurgia convencional é a técnica mais tradicional no
-                tratamento do cisto pilonidal.
+                A cirurgia convencional é a técnica mais tradicional no tratamento do cisto
+                pilonidal.
               </p>
 
               <ul>
                 <li>
-                  <strong>Como é feita:</strong> retirada completa do trajeto
-                  fistuloso e do tecido inflamado, podendo ser com fechamento
-                  primário (pontos) ou deixando a ferida aberta para cicatrizar
-                  por segunda intenção.
+                  <strong>Como é feita:</strong> retirada completa do trajeto fistuloso e do tecido
+                  inflamado, podendo ser com fechamento primário (pontos) ou deixando a ferida
+                  aberta para cicatrizar por segunda intenção.
                 </li>
                 <li>
-                  <strong>Vantagens:</strong> tratamento consolidado, com ampla
-                  experiência na literatura médica.
+                  <strong>Vantagens:</strong> tratamento consolidado, com ampla experiência na
+                  literatura médica.
                 </li>
               </ul>
 
@@ -204,24 +200,21 @@ export default function CistoPilonidalPage() {
                 </li>
               </ul>
 
-              <h2>Cirurgia a Laser</h2>
+              <h2>Cirurgia a laser</h2>
               <p>
-                O laser é uma alternativa moderna e menos invasiva para o
-                tratamento do cisto pilonidal.
+                O laser é uma alternativa moderna e menos invasiva para o tratamento do cisto
+                pilonidal.
               </p>
               <p>
                 Hoje se sabe que&nbsp;
-                <strong>
-                  todo cisto pilonidal pode responder ao tratamento a laser
-                </strong>
-                , sendo válida a tentativa em praticamente todos os casos.
+                <strong>todo cisto pilonidal pode responder ao tratamento a laser</strong>, sendo
+                válida a tentativa em praticamente todos os casos.
               </p>
 
               <ul>
                 <li>
-                  <strong>Como é feita:</strong> pequena incisão seguida da
-                  introdução da fibra de laser, que cauteriza internamente o
-                  trajeto do cisto.
+                  <strong>Como é feita:</strong> pequena incisão seguida da introdução da fibra de
+                  laser, que cauteriza internamente o trajeto do cisto.
                 </li>
               </ul>
 
@@ -231,58 +224,51 @@ export default function CistoPilonidalPage() {
               <ul>
                 <li>Procedimento menos invasivo.</li>
                 <li>Menor dor no pós-operatório.</li>
-                <li>
-                  Recuperação mais rápida, com retorno precoce às atividades.
-                </li>
+                <li>Recuperação mais rápida, com retorno precoce às atividades.</li>
                 <li>Menor necessidade de curativos extensos.</li>
                 <li>
-                  Potencial para menor risco de recidiva, ao destruir
-                  seletivamente o trajeto do cisto.
+                  Potencial para menor risco de recidiva, ao destruir seletivamente o trajeto do
+                  cisto.
                 </li>
               </ul>
 
               <p>
-                <strong>Limitação:</strong> assim como na técnica
-                convencional,&nbsp;
+                <strong>Limitação:</strong> assim como na técnica convencional,&nbsp;
                 <strong>também pode haver recidiva</strong>.
               </p>
 
-              <h2>Quando Operar?</h2>
+              <h2>Quando operar?</h2>
               <p>
                 O ideal é realizar a cirurgia&nbsp;
                 <strong>quando a inflamação já estiver controlada</strong>.
               </p>
               <ul>
                 <li>
-                  Durante uma crise aguda com abscesso, o tratamento inicial é
-                  a&nbsp;
+                  Durante uma crise aguda com abscesso, o tratamento inicial é a&nbsp;
                   <strong>drenagem</strong>.
                 </li>
                 <li>
-                  Após a melhora do quadro inflamatório, indica-se a cirurgia
-                  definitiva, reduzindo riscos e aumentando a chance de sucesso.
+                  Após a melhora do quadro inflamatório, indica-se a cirurgia definitiva, reduzindo
+                  riscos e aumentando a chance de sucesso.
                 </li>
               </ul>
 
-              <h2>Considerações Finais</h2>
+              <h2>Considerações finais</h2>
               <p>
-                A escolha entre cirurgia convencional e laser deve ser feita
-                junto ao coloproctologista.
+                A escolha entre cirurgia convencional e laser deve ser feita junto ao
+                coloproctologista.
               </p>
-              <p>
-                Ambas as técnicas são eficazes, mas nenhuma garante 100% de cura
-                definitiva.
-              </p>
+              <p>Ambas as técnicas são eficazes, mas nenhuma garante 100% de cura definitiva.</p>
               <p>
                 Tanto na cirurgia convencional quanto no laser,&nbsp;
-                <strong>pode haver recidiva</strong>, reforçando a importância
-                de acompanhamento médico e cuidados locais após o tratamento.
+                <strong>pode haver recidiva</strong>, reforçando a importância de acompanhamento
+                médico e cuidados locais após o tratamento.
               </p>
 
               <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-8 bg-primary/5 rounded-r-xl">
                 <p className="text-secondary italic mb-0">
-                  Cada caso deve ser avaliado individualmente, garantindo
-                  segurança e qualidade de vida para o paciente.
+                  Cada caso deve ser avaliado individualmente, garantindo segurança e qualidade de
+                  vida para o paciente.
                 </p>
               </blockquote>
 
@@ -294,9 +280,8 @@ export default function CistoPilonidalPage() {
                     O cisto pilonidal pode voltar após a cirurgia?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Sim. Tanto na cirurgia convencional quanto no laser existe
-                    risco de recidiva, embora o laser possa reduzir esse risco
-                    em alguns casos.
+                    Sim. Tanto na cirurgia convencional quanto no laser existe risco de recidiva,
+                    embora o laser possa reduzir esse risco em alguns casos.
                   </p>
                 </div>
 
@@ -305,9 +290,8 @@ export default function CistoPilonidalPage() {
                     Qual é a diferença na recuperação entre as técnicas?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    A cirurgia convencional exige curativos diários e
-                    recuperação mais longa, enquanto o laser costuma permitir
-                    retorno precoce às atividades.
+                    A cirurgia convencional exige curativos diários e recuperação mais longa,
+                    enquanto o laser costuma permitir retorno precoce às atividades.
                   </p>
                 </div>
 
@@ -316,9 +300,8 @@ export default function CistoPilonidalPage() {
                     Toda pessoa com cisto pilonidal precisa operar?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Não. Em fase aguda, é feita drenagem do abscesso. A cirurgia
-                    definitiva é indicada quando o quadro está controlado, para
-                    prevenir recidivas.
+                    Não. Em fase aguda, é feita drenagem do abscesso. A cirurgia definitiva é
+                    indicada quando o quadro está controlado, para prevenir recidivas.
                   </p>
                 </div>
 
@@ -327,10 +310,9 @@ export default function CistoPilonidalPage() {
                     O laser é indicado em todos os casos?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Sim. Hoje se sabe que todo cisto pilonidal pode responder ao
-                    tratamento a laser, mas é importante entender que, assim
-                    como na cirurgia convencional, ainda existe risco de
-                    recidiva.
+                    Sim. Hoje se sabe que todo cisto pilonidal pode responder ao tratamento a laser,
+                    mas é importante entender que, assim como na cirurgia convencional, ainda existe
+                    risco de recidiva.
                   </p>
                 </div>
               </div>
@@ -340,9 +322,8 @@ export default function CistoPilonidalPage() {
               title="Sofre com cisto pilonidal recorrente?"
               body={
                 <p>
-                  Agende uma consulta para avaliação especializada e definição
-                  da melhor técnica cirúrgica. Tratamento definitivo com
-                  recuperação rápida e menor dor.
+                  Agende uma consulta para avaliação especializada e definição da melhor técnica
+                  cirúrgica. Tratamento definitivo com recuperação rápida e menor dor.
                 </p>
               }
               actions={
@@ -353,7 +334,7 @@ export default function CistoPilonidalPage() {
                   variant="primary"
                   size="xl"
                   className="bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
+                  aria-label="Agendar consulta para tratamento de cisto pilonidal com coloproctologista em Curitiba - Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
                   Agendar consulta
                 </LinkButton>

@@ -1,19 +1,25 @@
 import React from 'react'
 import Image from 'next/image'
 import { LinkButton } from '@/components/ui/LinkButton'
+import {
+  PUC_PR,
+  HOSPITAL_SANTA_CASA,
+  HOSPITAL_MACKENZIE,
+  HOSPITAL_CLINIC_BARCELONA,
+} from '@/lib/constants'
 
 const credentials = [
   {
     title: 'Graduada em Medicina',
-    institution: 'PUC-PR',
+    institution: PUC_PR,
   },
   {
     title: 'Cirurgia Geral',
-    institution: 'Hospital Santa Casa de Curitiba',
+    institution: HOSPITAL_SANTA_CASA,
   },
   {
     title: 'Coloproctologista',
-    institution: 'Hospital Universitário Evangélico Mackenzie',
+    institution: HOSPITAL_MACKENZIE,
   },
   {
     title: 'Mestranda UFPR',
@@ -25,7 +31,7 @@ const credentials = [
   },
   {
     title: 'Fellow Cirurgia Colorretal',
-    institution: 'Hospital Clinic Barcelona - Espanha',
+    institution: `${HOSPITAL_CLINIC_BARCELONA} - Espanha`,
   },
 ]
 

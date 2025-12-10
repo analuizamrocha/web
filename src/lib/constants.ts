@@ -10,6 +10,12 @@
 /** Doctor's full professional name */
 export const DR_NAME = 'Dra. Ana Luiza Moraes Rocha'
 
+/** Doctor's abbreviated name (used in headers/footers) */
+export const DR_NAME_ABBREVIATED = 'Dra Ana Luiza M. Rocha'
+
+/** Doctor's short name (informal contexts) */
+export const DR_NAME_SHORT = 'Dra. Ana Luiza'
+
 /** Site name / Organization name (Doctor + Specialty) */
 export const SITE_NAME = `${DR_NAME} - Coloproctologia`
 
@@ -40,6 +46,22 @@ export const WEBSITE_DESCRIPTION =
 /** Local business description */
 export const BUSINESS_DESCRIPTION =
   'Consultas de Coloproctologia em ambiente acolhedor e moderno no Batel, Curitiba.'
+
+// =============================================================================
+// Educational Institutions
+// =============================================================================
+
+/** Medical school */
+export const PUC_PR = 'PUC-PR'
+
+/** General surgery residency hospital */
+export const HOSPITAL_SANTA_CASA = 'Hospital Santa Casa de Curitiba'
+
+/** Coloproctology residency hospital */
+export const HOSPITAL_MACKENZIE = 'Hospital Universitário Evangélico Mackenzie'
+
+/** Fellowship hospital in Barcelona */
+export const HOSPITAL_CLINIC_BARCELONA = 'Hospital Clinic Barcelona'
 
 // =============================================================================
 // Website & Social Media

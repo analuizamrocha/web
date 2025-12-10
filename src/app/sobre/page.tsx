@@ -13,6 +13,11 @@ import {
   DR_NAME,
   WPP_NUMBER_NASSIF_FORMATTED,
   URL_INSTAGRAM,
+  CRM_NUMBER,
+  RQE_NUMBER,
+  PUC_PR,
+  HOSPITAL_SANTA_CASA,
+  HOSPITAL_MACKENZIE,
 } from '@/lib/constants'
 import {
   generateBreadcrumbSchema,
@@ -78,7 +83,7 @@ const credentials = [
   },
   {
     title: 'Residência em Cirurgia Geral',
-    institution: 'Hospital Santa Casa de Curitiba',
+    institution: HOSPITAL_SANTA_CASA,
     description: 'Formação especializada em técnicas cirúrgicas fundamentais.',
     icon: Stethoscope,
     colorStart: '#c27e5c',
@@ -86,7 +91,7 @@ const credentials = [
   },
   {
     title: 'Residência em Coloproctologia',
-    institution: 'Hospital Universitário Evangélico Mackenzie',
+    institution: HOSPITAL_MACKENZIE,
     description: 'Especialização focada em doenças do intestino, reto e ânus.',
     icon: Award,
     colorStart: '#b08771',
@@ -166,12 +171,12 @@ export default function SobrePage() {
             hasCredential: [
               {
                 '@type': 'EducationalOccupationalCredential',
-                identifier: 'CRM-PR 45351',
+                identifier: CRM_NUMBER,
                 credentialCategory: 'Registro Profissional',
               },
               {
                 '@type': 'EducationalOccupationalCredential',
-                identifier: 'RQE 36221',
+                identifier: RQE_NUMBER,
                 credentialCategory: 'Qualificação de Especialista',
               },
             ],
@@ -241,10 +246,10 @@ export default function SobrePage() {
           <div className="mb-12 text-center">
             <div className="flex flex-wrap gap-2 mb-6 justify-center">
               <Badge variant="primary" size="lg">
-                CRM-PR 45351
+                {CRM_NUMBER}
               </Badge>
               <Badge variant="secondary" size="lg">
-                RQE 36221
+                {RQE_NUMBER}
               </Badge>
             </div>
 
@@ -264,9 +269,9 @@ export default function SobrePage() {
             </h2>
             <p className="text-lg text-secondary leading-relaxed mb-4">
               Minha jornada na medicina começou com a certeza de que queria cuidar de pessoas de
-              forma integral. Durante a graduação em Medicina na <strong>PUC-PR</strong>, desenvolvi
+              forma integral. Durante a graduação em Medicina na <strong>{PUC_PR}</strong>, desenvolvi
               a base sólida da minha formação. Foi durante a&nbsp;
-              <strong>residência em Cirurgia Geral, no Hospital Santa Casa de Curitiba</strong>, que
+              <strong>residência em Cirurgia Geral, no {HOSPITAL_SANTA_CASA}</strong>, que
               descobri meu amor pela <strong>coloproctologia</strong> — especialidade que une
               conhecimento técnico avançado com o cuidado humanizado que sempre busquei oferecer aos
               meus pacientes.
@@ -279,7 +284,7 @@ export default function SobrePage() {
                 <div className="aspect-[4/5] relative">
                   <Image
                     src="/images/cx-group.webp"
-                    alt="Dra. Ana Luiza Moraes Rocha, coloproctologista em Curitiba, CRM-PR 45351, em seu consultório médico especializado"
+                    alt={`Dra. Ana Luiza Moraes Rocha, coloproctologista em Curitiba, ${CRM_NUMBER}, em seu consultório médico especializado`}
                     fill
                     priority
                     className="object-cover transition-transform duration-700 group-hover:scale-105"

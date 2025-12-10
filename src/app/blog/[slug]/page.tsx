@@ -1,6 +1,8 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import {
   getPostBySlug,
@@ -9,9 +11,14 @@ import {
   getTargetAudienceLabel,
   getContentIntentLabel,
 } from '@/lib/blog'
-import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import { WHATSAPP_MSG_TEXT_ENCODED, WPP_NUMBER_NASSIF, WEBSITE_URL, SITE_NAME } from '@/lib/constants'
+import {
+  WHATSAPP_MSG_TEXT_ENCODED,
+  WPP_NUMBER_NASSIF,
+  WEBSITE_URL,
+  SITE_NAME,
+  TAG_INSTAGRAM,
+} from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 
 interface BlogPostPageProps {
@@ -64,8 +71,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       card: 'summary_large_image',
       title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
       description: post.metaDescription,
-      creator: '@analuiza.mrocha',
-      site: '@analuiza.mrocha',
+      creator: TAG_INSTAGRAM,
+      site: TAG_INSTAGRAM,
       images: [`${WEBSITE_URL}/og-image.jpg`],
     },
     alternates: {
@@ -186,7 +193,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Article Content */}
           <div className="mx-auto max-w-4xl">
             <div className="prose prose-lg max-w-none">
-              <MDXRemote source={post.content} />
+              <MDXRemote
+                source={post.content}
+                options={{
+                  mdxOptions: {
+                    remarkPlugins: [remarkGfm],
+                  },
+                }}
+              />
             </div>
           </div>
 
@@ -197,7 +211,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               body={
                 <p>
                   Agende uma consulta com a Dra. Ana Luiza Moraes Rocha para receber cuidado
-                  especializado em coloproctologia.
+                  especializado em proctologia.
                 </p>
               }
               actions={
@@ -208,7 +222,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   variant="primary"
                   size="xl"
                   className="bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
+                  aria-label="Agendar consulta com coloproctologista em Curitiba - Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
                   Agendar consulta
                 </LinkButton>
@@ -221,7 +235,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 href="/blog"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg text-nowrap"
               >
-                ← Voltar para o blog
+                ← Voltar
               </Link>
               <div className="text-sm text-secondary">
                 Última atualização:&nbsp;

@@ -1,4 +1,4 @@
-import { WEBSITE_URL } from './constants'
+import { WEBSITE_URL, SITE_NAME } from './constants'
 
 /**
  * FAQ item interface for FAQPage schema
@@ -123,7 +123,7 @@ export const generateOpenGraphMetadata = (data: OpenGraphData) => {
     title: data.title,
     description: data.description,
     url: data.url,
-    siteName: 'Dra. Ana Luiza Moraes Rocha - Coloproctologista',
+    siteName: SITE_NAME,
     images: [
       {
         url: data.image || `${WEBSITE_URL}/images/og.png`,

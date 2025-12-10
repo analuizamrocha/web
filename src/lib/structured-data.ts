@@ -9,6 +9,12 @@ import {
   SERVICES_DESCRIPTION,
   WEBSITE_DESCRIPTION,
   BUSINESS_DESCRIPTION,
+  CRM_NUMBER,
+  RQE_NUMBER,
+  PUC_PR,
+  HOSPITAL_SANTA_CASA,
+  HOSPITAL_MACKENZIE,
+  HOSPITAL_CLINIC_BARCELONA,
 } from './constants'
 
 export const structuredData = {
@@ -73,22 +79,22 @@ export const structuredData = {
       alumniOf: [
         {
           '@type': 'EducationalOrganization',
-          name: 'PUC-PR',
+          name: PUC_PR,
           description: 'Graduação em Medicina',
         },
         {
           '@type': 'EducationalOrganization',
-          name: 'Hospital Santa Casa de Curitiba',
+          name: HOSPITAL_SANTA_CASA,
           description: 'Especialização em Cirurgia Geral',
         },
         {
           '@type': 'EducationalOrganization',
-          name: 'Hospital Universitário Evangélico Mackenzie',
+          name: HOSPITAL_MACKENZIE,
           description: 'Especialização em Coloproctologia',
         },
         {
           '@type': 'EducationalOrganization',
-          name: 'Hospital Clinic Barcelona',
+          name: HOSPITAL_CLINIC_BARCELONA,
           description: 'Fellow em Cirurgia Colorretal',
         },
       ],
@@ -102,7 +108,7 @@ export const structuredData = {
         {
           '@type': 'EducationalOccupationalCredential',
           credentialCategory: 'Registro Profissional',
-          identifier: 'CRM-PR 45351',
+          identifier: CRM_NUMBER,
           recognizedBy: {
             '@type': 'Organization',
             name: 'Conselho Regional de Medicina do Paraná',
@@ -113,7 +119,7 @@ export const structuredData = {
         {
           '@type': 'EducationalOccupationalCredential',
           credentialCategory: 'Qualificação de Especialista',
-          identifier: 'RQE 36221',
+          identifier: RQE_NUMBER,
           name: 'Especialização em Coloproctologia',
           recognizedBy: {
             '@type': 'Organization',

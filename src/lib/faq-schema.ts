@@ -1,3 +1,5 @@
+import { WPP_NUMBER_NASSIF_FORMATTED, CLINICA_NASSIF } from './constants'
+
 export const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -31,7 +33,7 @@ export const faqSchema = {
       name: 'Onde fica o consultório em Curitiba?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'O consultório fica na Clínica Nassif, localizada na Rua Bruno Filgueira, 489, no bairro Batel, em Curitiba - PR.',
+        text: `O consultório fica na ${CLINICA_NASSIF.name}, localizada na ${CLINICA_NASSIF.address}, no bairro ${CLINICA_NASSIF.neighborhood}, em ${CLINICA_NASSIF.city} - ${CLINICA_NASSIF.state}.`,
       },
     },
     {
@@ -39,7 +41,7 @@ export const faqSchema = {
       name: 'Como agendar uma consulta?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Você pode agendar uma consulta através do WhatsApp (41) 98864-5800 ou pelo telefone da Clínica Nassif (41) 3342-5060.',
+        text: `Você pode agendar uma consulta através do WhatsApp ${WPP_NUMBER_NASSIF_FORMATTED} ou pelo telefone da ${CLINICA_NASSIF.name} ${CLINICA_NASSIF.phone}.`,
       },
     },
   ],
