@@ -15,7 +15,6 @@ export interface NavigationItem {
 const homepageSections: NavigationItem[] = [
   { name: 'Início', href: '/', id: 'hero', type: 'section' },
   { name: 'Missão', href: '/#missao', id: 'missao', type: 'section' },
-  { name: 'Serviços', href: '/#servicos', id: 'servicos', type: 'section' },
   {
     name: 'Tratamentos',
     href: '/#tratamentos',
@@ -28,6 +27,7 @@ const homepageSections: NavigationItem[] = [
     id: 'atendimento',
     type: 'section',
   },
+  { name: 'Serviços', href: '/#servicos', id: 'servicos', type: 'section' },
 ]
 
 /**
@@ -86,17 +86,10 @@ export function getLandingPageNavigation() {
  * @param items - Array of navigation items to convert
  * @returns Array of navigation items with hash-only hrefs
  */
-export function convertToHashNavigation(
-  items: NavigationItem[]
-): NavigationItem[] {
+export function convertToHashNavigation(items: NavigationItem[]): NavigationItem[] {
   return items.map((item) => ({
     ...item,
-    href:
-      item.href === '/'
-        ? '#hero'
-        : item.href.startsWith('/#')
-        ? item.href.slice(1)
-        : item.href,
+    href: item.href === '/' ? '#hero' : item.href.startsWith('/#') ? item.href.slice(1) : item.href,
   }))
 }
 

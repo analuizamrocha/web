@@ -22,10 +22,10 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <MissionSection />
-        <ServicesSection />
-        <PhotoSection />
         <TreatmentsSection />
         <LocationsSection />
+        <ServicesSection />
+        <PhotoSection />
       </main>
     </>
   )

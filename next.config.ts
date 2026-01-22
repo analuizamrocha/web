@@ -75,8 +75,25 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 768, 1024, 1280, 1600],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  redirects: async () => [
+    {
+      source: '/servicos',
+      destination: '/tratamentos',
+      permanent: true,
+    },
+    {
+      source: '/servicos/:path*',
+      destination: '/tratamentos/:path*',
+      permanent: true,
+    },
+    {
+      source: '/quando-procurar-procto',
+      destination: '/tratamentos',
+      permanent: true,
+    },
+  ],
 };
 
 export default withBundleAnalyzer(nextConfig);
