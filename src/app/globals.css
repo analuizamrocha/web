@@ -248,10 +248,6 @@
     border-bottom: 2px solid var(--color-border-subtle) !important;
   }
 
-  .prose thead th:last-child {
-    text-align: right !important;
-  }
-
   .prose tbody tr {
     border-bottom: 1px solid rgba(229, 212, 196, 0.4) !important;
     transition: background-color 0.15s ease !important;
@@ -269,17 +265,12 @@
     padding: 1rem 1.25rem !important;
     color: var(--color-text-body) !important;
     line-height: 1.5 !important;
+    text-align: left !important;
   }
 
   .prose tbody td:first-child {
     font-weight: 500 !important;
     color: var(--color-text-heading) !important;
-  }
-
-  .prose tbody td:last-child {
-    text-align: right !important;
-    font-variant-numeric: tabular-nums !important;
-    color: var(--color-text-body) !important;
   }
 
   /* Style for category separator rows (bold rows with empty second column) */
