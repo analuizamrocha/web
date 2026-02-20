@@ -6,7 +6,12 @@ publishDate: '2025-12-02'
 lastModified: '2026-02-14'
 primaryKeyword: 'fissura anal'
 secondaryKeywords:
-  ['dor ao evacuar', 'toxina botulínica fissura', 'esfincterotomia', 'sangramento anal']
+  - 'fissura anal curitiba'
+  - 'dor anal curitiba'
+  - 'dor ao evacuar'
+  - 'toxina botulínica fissura'
+  - 'esfincterotomia'
+  - 'sangramento anal curitiba'
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
