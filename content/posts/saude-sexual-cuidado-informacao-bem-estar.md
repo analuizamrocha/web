@@ -37,6 +37,8 @@ A **saúde sexual** vai muito além do diagnóstico e tratamento de infecções 
 
 Neste espaço, a **Dra. Ana Luiza**, coloproctologista em Curitiba, propõe um olhar acolhedor e técnico para a saúde sexual, ajudando cada paciente a compreender seu corpo e viver sua sexualidade com mais tranquilidade e bem-estar.
 
+![Pilares da saúde sexual: conforto, segurança, informação e acolhimento](/images/posts/saude-sexual/pilares-saude-sexual.png)
+
 ## O que é saúde sexual?
 
 A saúde sexual é um estado de **bem-estar físico, emocional e social** relacionado à sexualidade.

@@ -38,6 +38,8 @@ A infecção por **HPV anal** e o aparecimento de **condilomas (verrugas anais)*
 
 Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que é o HPV anal, sua história natural, os riscos associados, as opções de tratamento, a importância da vacina e do rastreio adequado.
 
+![Ilustração de condilomas anais associados ao HPV](/images/posts/hpv-anal/condilomas-hpv.png)
+
 ## O que é HPV anal?
 
 O **HPV (Papilomavírus Humano)** é um vírus muito comum, transmitido principalmente por contato sexual.
@@ -91,6 +93,8 @@ O risco é maior em:
 - mulheres com histórico de lesões no colo do útero associadas ao HPV.
 
 Por isso, **rastreio e acompanhamento** são fundamentais.
+
+![Diferença entre subtipos de HPV de baixo e alto risco oncogênico](/images/posts/hpv-anal/hpv-alto-risco-baixo-risco.png)
 
 ## Importância do rastreio do HPV anal
 

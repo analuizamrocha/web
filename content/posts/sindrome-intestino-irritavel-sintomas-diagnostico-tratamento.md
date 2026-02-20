@@ -39,6 +39,8 @@ Quando bem diagnosticada e acompanhada, é possível controlar os sintomas e rec
 
 Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que é a SII, seus sintomas, como é feito o diagnóstico e quais são as opções de tratamento e acompanhamento personalizado.
 
+![Ilustração dos principais sintomas da síndrome do intestino irritável](/images/posts/sindrome-intestino-irritavel/sindrome-intestino-irritavel.png)
+
 ## O que é a Síndrome do Intestino Irritável (SII)?
 
 A SII é um **distúrbio funcional do intestino**, ou seja, o intestino não apresenta lesões visíveis, mas **não funciona adequadamente**.
@@ -46,6 +48,8 @@ A SII é um **distúrbio funcional do intestino**, ou seja, o intestino não apr
 Ela está relacionada a uma alteração na comunicação entre o intestino e o sistema nervoso, conhecida como **eixo intestino-cérebro**.
 
 Isso não significa que os sintomas “estão na cabeça”, eles são reais e podem ser intensos.
+
+![Representação do eixo intestino-cérebro e sua influência nos sintomas](/images/posts/eixo-intestino-cerebro/eixo-intestino-cerebro.png)
 
 ## Principais sintomas da SII
 

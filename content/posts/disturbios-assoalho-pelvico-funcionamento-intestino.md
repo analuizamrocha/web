@@ -36,6 +36,8 @@ Esses sintomas são mais comuns do que se imagina e, muitas vezes, estão relaci
 
 Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que são os distúrbios do assoalho pélvico, quais sintomas eles podem causar, como é feito o diagnóstico e quais são as opções de tratamento.
 
+![Ilustração da musculatura do assoalho pélvico e sua função intestinal](/images/posts/disturbios-assoalho-pelvico/musculo-assoalho-pelvico.png)
+
 ## O que é o assoalho pélvico?
 
 O **assoalho pélvico** é um conjunto de músculos e ligamentos localizado na base da pelve.
