@@ -3,7 +3,7 @@ title: "Coceira anal: quando é normal e quando procurar um coloproctologista em
 metaDescription: "Coceira anal pode ter diversas causas, desde higiene inadequada até doenças orificiais. Descubra quando procurar ajuda especializada em Curitiba."
 slug: "coceira-anal-quando-procurar-coloproctologista-curitiba"
 publishDate: "2025-10-21"
-lastModified: "2025-10-21"
+lastModified: "2026-02-14"
 primaryKeyword: "coceira anal"
 secondaryKeywords:
   - "prurido anal"
@@ -33,6 +33,8 @@ A **coceira anal** (ou **prurido anal**) é um sintoma mais comum do que se imag
 Esse desconforto pode afetar pessoas de todas as idades e costuma gerar **constrangimento**, o que faz com que muitos pacientes adiem a busca por ajuda especializada.
 
 Neste artigo, você vai entender as **principais causas da coceira anal**, quando o sintoma merece investigação e quais cuidados ajudam a aliviar e prevenir o problema.
+
+![Ilustração de coceira anal e desconforto na região perianal](/images/posts/coceira-anal-quando-procurar-coloproctologista-curitiba/coceira-anal.png)
 
 ## Causas comuns da coceira anal
 
@@ -64,6 +66,8 @@ Verminoses, como **oxiúros**, são uma causa importante de coceira anal noturna
 ### Doenças de pele e outras causas
 
 Condições como **psoríase**, **eczema**, **diabetes**, **suor excessivo** e até **uso prolongado de antibióticos** podem favorecer a irritação local.
+
+![Resumo visual das principais causas de coceira anal](/images/posts/coceira-anal-quando-procurar-coloproctologista-curitiba/principais-causas-coceira-anal.png)
 
 ## Quando a coceira anal pode indicar doença orificial
 

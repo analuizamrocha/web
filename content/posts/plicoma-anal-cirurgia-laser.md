@@ -3,7 +3,7 @@ title: "Plicoma anal: o que é e como a cirurgia a laser pode auxiliar na recupe
 metaDescription: "Plicoma anal pode causar desconforto e dificuldade de higiene. Entenda quando remover e como a cirurgia a laser oferece melhor recuperação."
 slug: "plicoma-anal-cirurgia-laser"
 publishDate: "2025-10-05"
-lastModified: "2025-10-06"
+lastModified: "2026-02-14"
 primaryKeyword: "plicoma anal"
 secondaryKeywords:
   - "cirurgia a laser plicoma"
@@ -34,6 +34,8 @@ Neste artigo, você vai entender melhor:
 - O que é o plicoma anal.
 - Quando considerar a remoção.
 - Diferenças entre cirurgia convencional e cirurgia a laser.
+
+![Ilustração de plicoma anal na borda do ânus](/images/posts/plicoma-anal-cirurgia-laser/plicoma.png)
 
 ---
 

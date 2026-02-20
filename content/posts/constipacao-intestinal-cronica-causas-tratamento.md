@@ -3,7 +3,7 @@ title: 'Constipação intestinal crônica: causas, tratamentos e quando procurar
 metaDescription: 'Constipação intestinal crônica tem tratamento. Descubra as causas da prisão de ventre, sinais de alerta e quando procurar um coloproctologista.'
 slug: 'constipacao-intestinal-cronica-causas-tratamento'
 publishDate: '2025-10-06'
-lastModified: '2025-10-06'
+lastModified: '2026-02-14'
 primaryKeyword: 'constipação intestinal crônica'
 secondaryKeywords:
   - 'prisão de ventre tratamento'
@@ -31,6 +31,8 @@ _A prisão de ventre crônica é mais comum do que imaginamos. Muitas pessoas co
 A **prisão de ventre**, também chamada de **constipação intestinal crônica**, é um dos sintomas mais comuns no consultório de coloproctologia. Muitas pessoas convivem com dificuldade para evacuar sem procurar ajuda, acreditando que seja "normal". No entanto, quando persistente, a constipação pode impactar a qualidade de vida e até estar relacionada a outras doenças do intestino.
 
 Neste artigo, você vai entender as **causas da constipação**, quais são as opções de **tratamento** e quando é a hora de procurar um coloproctologista.
+
+![Sinais mais comuns da constipação intestinal crônica](/images/posts/constipacao-intestinal-cronica-causas-tratamento/sinais-constipacao-intestinal-cronica.png)
 
 ## O que é constipação intestinal crônica?
 

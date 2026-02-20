@@ -1,149 +1,178 @@
-# Dra Ana Luiza M. Rocha
+# Contexto do Website - Dra. Ana Luiza M. Rocha
 
-## Coloproctologista
+Última alteração (data explícita): **2026-02-14**
+Workspace: `/Users/diegovfeder/workspace/jobs/analu-procto`
+Branch atual: `df/revised-posts++`
 
-**Contato:** +55 41 3073-9732
+## 1) Objetivo do projeto
 
----
+Site institucional + aquisição orgânica (SEO) para coloproctologia, com dois eixos:
 
-## Cada paciente uma história, cada história um cuidado único
+- **Conversão direta**: consulta via WhatsApp.
+- **Educação + autoridade**: blog e páginas de tratamentos para captar busca orgânica.
 
-### Cuidado Clínico e Cirúrgico do Intestino, Reto e Ânus
+## 2) Stack e arquitetura atual
 
-### Agende sua consulta
+- **Framework**: Next.js 15 (App Router), React 19, TypeScript.
+- **Estilo**: Tailwind CSS v4 com tokens em `src/app/globals.css`.
+- **Conteúdo editorial**: markdown em `content/posts/*.md`, carregado por `src/lib/blog.ts`.
+- **SEO técnico**:
+  - Metadata por rota.
+  - JSON-LD para blog e tratamentos.
+  - Sitemap dinâmico em `src/app/sitemap.ts`.
 
----
+Principais entradas:
 
-## Quem é Dra. Ana Luiza?
+- Home: `src/app/page.tsx`
+- Blog listagem: `src/app/blog/page.tsx`
+- Blog detalhe: `src/app/blog/[slug]/page.tsx`
+- Tratamentos index: `src/app/tratamentos/page.tsx`
+- Tratamentos detalhe: `src/app/tratamentos/*/page.tsx`
 
-Especialista em coloproctologia com formação internacional.
-Dedicada ao cuidado integral e humanizado de cada paciente.
+## 3) Estrutura de rotas (estado real)
 
-### Formação
+- `/` (landing com seções e cards)
+- `/blog`
+- `/blog/[slug]` (12 posts atualmente)
+- `/tratamentos`
+- `/tratamentos/cx-laser`
+- `/tratamentos/hemorroidas`
+- `/tratamentos/toxina-botulinica`
+- `/tratamentos/cx-fistulas-anorretais`
+- `/tratamentos/rastreio-cancer-anal`
+- `/tratamentos/hpv-anal`
+- `/tratamentos/cx-cisto-pilonidal`
+- `/tratamentos/doencas-inflamatorias-intestinais`
+- `/tratamentos/sindrome-intestino-irritavel`
+- `/sobre`
+- `/politica-privacidade`
 
-- **Médica** - Pontifícia Universidade Católica do Paraná
-- **Cirurgia Geral** - Hospital Santa Casa de Curitiba
-- **Coloproctologista** - Hospital Universitário Evangélico Mackenzie
-- **Mestranda UFPR** - Programa de Clínica Cirúrgica
-- **Fellow Cirurgia Colorretal** - Hospital Clinic Barcelona - Espanha
-- **Membro IANS** - Internacional Anal Neoplasia Society
+## 4) Inventário de conteúdo (2026-02-14)
 
----
+- **Posts no blog**: 12 (`content/posts`).
+- **Páginas de tratamentos**: 9 detalhadas + 1 índice.
+- **Imagens em `public/images/posts`**: 27 arquivos.
+- **Imagens de blog**: 24 arquivos, organizados por slug/tema em `public/images/posts/<slug-ou-tema>/`.
 
-## Nossa Missão
+Observação editorial:
 
-Transformar tabus em cuidado humanizado através de atendimento médico especializado.
-Coloproctologia com empatia e excelência técnica.
+- Já existe evolução com imagens dentro de posts (ex.: `disbiose-sibo-tratamento`, `diarreia-cronica-tratamento`, `alimentacao-e-saude-intestinal`).
+- Ainda há oportunidades para padronizar cobertura visual no blog inteiro.
 
-### Cuidar vai além de tratar
+## 5) Estado dos cards da landing (ponto crítico do PR)
 
-É ouvir, acolher e valorizar cada queixa do paciente. Um diagnóstico preciso começa com uma escuta atenta.
+Objetivo declarado: cada card da landing deve levar para conteúdo profundo (blog ou tratamento), não apenas WhatsApp.
 
-### Prevenir é a melhor escolha
+### 5.1 Cards de Serviços (`#servicos`)
 
-A prevenção é sempre o caminho mais eficaz para manter a saúde e evitar complicações futuras.
+| Serviço | Link atual | Conteúdo profundo já existe? | Status |
+|---|---|---|---|
+| Hemorroidas | `/blog/hemorroida-sempre-cirurgica-tratamento` | Sim (blog + tratamento) | OK |
+| Fissura Anal | `/blog/fissura-anal-tratamento` | Sim (blog + tratamento) | OK |
+| Fístula Anal | WhatsApp externo | Sim (`/tratamentos/cx-fistulas-anorretais`) | Ajustar link |
+| Coceira Anal | `/blog/coceira-anal-quando-procurar-coloproctologista-curitiba` | Sim (blog) | OK |
+| HPV Anal | WhatsApp externo | Sim (`/tratamentos/hpv-anal`) | Ajustar link |
+| Cisto Pilonidal | `/blog/cisto-pilonidal-cirurgia-laser-quando-operar` | Sim (blog + tratamento) | OK |
+| Constipação Intestinal | `/blog/constipacao-intestinal-cronica-causas-tratamento` | Sim (blog) | OK |
+| Diarreia Crônica | `/blog/diarreia-cronica-tratamento` | Sim (blog) | OK |
+| Síndrome do Intestino Irritável | WhatsApp externo | Sim (`/tratamentos/sindrome-intestino-irritavel`) | Ajustar link |
+| Doenças Inflamatórias Intestinais | WhatsApp externo | Sim (`/tratamentos/doencas-inflamatorias-intestinais`) | Ajustar link |
+| Saúde Sexual | WhatsApp externo | **Não** | Criar conteúdo profundo |
+| Distúrbios do Assoalho Pélvico | WhatsApp externo | **Não** | Criar conteúdo profundo |
 
-### Qualidade de vida em primeiro lugar
+Resumo:
 
-Ter uma doença crônica não significa abrir mão da qualidade de vida. Cada paciente merece viver plenamente.
+- Cobertura interna atual na UX dos cards de serviços: **6/12**.
+- Cobertura possível imediata sem criar nova página: **10/12**.
+- Gaps reais de conteúdo: **2/12** (Saúde Sexual, Assoalho Pélvico).
 
-### Jornada compartilhada
+### 5.2 Cards de Tratamentos (`#tratamentos`)
 
-Lembrar que a gente não vence nada sozinho - a jornada da saúde é compartilhada entre médico e paciente.
+- Todos os 9 cards já apontam para páginas internas de tratamento.
+- Status: **9/9 OK**.
 
----
+## 6) O que este PR já melhorou
 
-## Quando procurar um coloproctologista? (Serviços)
+Arquivos com melhoria clara:
 
-### Hemorroidas
+- `src/components/ui/Card.tsx`
+  - Card passou a aceitar `href`, `external` e `ctaLabel`.
+  - Card pode funcionar como link interno (`Link`) ou externo (`a`).
+- `src/components/sections/ServicesSection.tsx`
+  - Cards de serviços agora têm destino clicável.
+  - Parte já foi conectada para blog.
+- `src/components/sections/TreatmentsSection.tsx`
+  - Cards de tratamentos passaram a navegar para rotas detalhadas.
 
-Quando há dor, sangramento, coceira ou incômodo ao evacuar, é possível que se trate de hemorroidas. Felizmente, hoje existem alternativas modernas e menos invasivas para aliviar esses sintomas com segurança.
+Conteúdo em progresso:
 
-### Fissura Anal
+- Novo post: `content/posts/alimentacao-e-saude-intestinal.md` (não commitado ainda).
+- Banco de imagens reorganizado por slug/tema em `public/images/posts/*/`.
 
-Trata-se de uma pequena lesão na borda anal que costuma causar dor intensa durante e após as evacuações. O tratamento precoce pode evitar sofrimento prolongado.
+## 7) Gaps técnicos e de SEO ainda abertos
 
-### Fístula Anal
+1. **Cards de serviço ainda externos em 6 casos**
+- Não atende totalmente o objetivo de navegação profunda por tema.
 
-Presença de secreção, dor ou abertura próxima ao ânus pode indicar uma fístula. Essa condição exige avaliação especializada, e há diferentes formas de abordagem.
+2. **Falta de ponte Tratamento -> Blog relacionado**
+- Páginas de tratamento estão boas em profundidade, mas quase não conectam com artigos educativos.
 
-### Coceira Anal (Prurido)
+3. **Inconsistência de `@id` schema em 2 páginas de tratamento**
+- `src/app/tratamentos/hemorroidas/page.tsx` usa `.../tratamentos/tratamento-hemorroidas`.
+- `src/app/tratamentos/hpv-anal/page.tsx` usa `.../tratamentos/tratamento-hpv-anal`.
+- Rota canônica é sem prefixo `tratamento-`, então vale alinhar.
 
-A coceira na região anal pode parecer algo simples, mas quando é persistente, deve ser investigada. Pode ter diversas causas e merece atenção cuidadosa.
+4. **Fonte de verdade duplicada**
+- Lista de temas existe em múltiplos lugares (serviços, tratamentos, blog), facilitando divergência.
 
-### HPV Anal
+## 8) Próximos passos recomendados (prioridade)
 
-Lesões causadas pelo papilomavírus humano podem afetar a região anal, tanto interna quanto externamente. O acompanhamento é essencial para tratamento e prevenção de complicações.
+### P0 (fechar objetivo principal deste PR)
 
-### Cisto Pilonidal
+1. Trocar 4 links de WhatsApp por páginas internas já existentes:
+- Fístula Anal -> `/tratamentos/cx-fistulas-anorretais`
+- HPV Anal -> `/tratamentos/hpv-anal`
+- SII -> `/tratamentos/sindrome-intestino-irritavel`
+- DII -> `/tratamentos/doencas-inflamatorias-intestinais`
 
-Se você nota dor ou secreção recorrente na parte inferior da coluna (perto do cóccix), pode ser um cisto pilonidal. Existem opções modernas de tratamento com recuperação mais rápida.
+2. Manter WhatsApp como CTA secundário dentro das páginas de destino.
 
-### Constipação Intestinal
+### P1 (fechar cobertura 12/12)
 
-Ficar muitos dias sem evacuar, ter fezes ressecadas ou fazer muito esforço para evacuar não é normal. Essas queixas precisam ser ouvidas e tratadas com cuidado.
+1. Criar conteúdo profundo para:
+- Saúde Sexual (ideal: post educativo + possível página de tratamento se fizer sentido clínico).
+- Distúrbios do Assoalho Pélvico (ideal: post educativo inicial).
 
-### Diarreia Crônica
+2. Ligar esses dois cards para os novos conteúdos.
 
-Evacuar com frequência excessiva e com fezes líquidas por semanas pode indicar algo mais sério. Investigar é essencial para recuperar a saúde intestinal.
+### P1.5 (melhorar ligação entre hubs)
 
-### Síndrome do Intestino Irritável (SII)
+1. Adicionar bloco "Conteúdos relacionados" em páginas de tratamento (1-3 links de blog por tema).
+2. Adicionar bloco "Tratamento relacionado" em posts com intenção de consideração/decisão.
 
-Sintomas como dor abdominal, gases, inchaço e alterações no ritmo intestinal podem fazer parte da SII. Com acompanhamento adequado, é possível controlar e melhorar muito a qualidade de vida.
+### P2 (organização para escala)
 
-### Doenças Inflamatórias Intestinais
+1. Criar um mapa central em `src/lib/content-map.ts` com:
+- `serviceCard -> { primaryRoute, secondaryCta }`
+- `treatmentRoute -> relatedBlogSlugs`
+- `blogSlug -> relatedTreatmentRoute`
 
-Retocolite Ulcerativa e Doença de Crohn são doenças crônicas que exigem acompanhamento contínuo. O foco é manter a doença sob controle e preservar a qualidade de vida do paciente.
+2. Renderizar `ServicesSection`, `TreatmentsSection` e blocos relacionados a partir desse mapa.
 
-### Saúde Sexual
+## 9) Definição de pronto para esta linha de melhoria
 
-Aqui, o foco vai além do diagnóstico e tratamento de infecções sexualmente transmissíveis — a proposta é acolher, orientar e ajudar cada paciente a viver sua sexualidade com segurança, conforto e bem-estar.
+- [ ] 12/12 cards de serviços com destino para conteúdo profundo interno.
+- [ ] 9/9 cards de tratamentos com navegação interna.
+- [ ] Saúde Sexual e Assoalho Pélvico com conteúdo profundo publicado.
+- [ ] Schema `@id` alinhado com URLs canônicas.
+- [ ] Sem links quebrados em home/blog/tratamentos.
+- [ ] Build e lint passando.
 
-### Distúrbios do Assoalho Pélvico
+## 10) Referências rápidas no código
 
-Condições como incontinência fecal, dificuldade para evacuar ou sensação de evacuação incompleta podem estar relacionadas à musculatura pélvica.
-
----
-
-## Tratamentos
-
-Nossa consulta é individualizada e detalhada e busca um entendimento completo sobre você e seu problema.
-
-Para nós, diagnosticar e tratar não é o suficiente.
-Precisamos adequar os melhores tratamentos ao seu estilo de vida.
-
-### Procedimentos Oferecidos
-
-- Cirurgias a laser
-- Cirurgias videoassistidas (VAAFT)
-- Botox para fissura anal e dores anais crônicas
-- Ligadura elástica para hemorroidas
-- Cirurgias para fístulas anorretais
-- Cirurgia de cisto pilonidal
-- Tratamento de HPV
-- Rastreio e prevenção do câncer de canal anal
-- Acompanhamento de doenças inflamatórias intestinais
-- Acompanhamento de síndrome do intestino irritável
-
----
-
-## Locais de Atendimento
-
-Atendimento personalizado em ambiente acolhedor e moderno.
-
-### Clínica Nassif
-
-**Endereço:** Rua Bruno Filgueira, 489  
-Batel, Curitiba - PR
-
-**Telefone:** (41) 3244-1022  
-**WhatsApp:** (41) 98864-5800
-
----
-
-## Contato
-
-**Dra Ana Luiza M. Rocha**  
-Coloproctologista  
-CRM-PR 45351 | RQE 36221  
-Instagram: @analuiza.mrocha
+- Home e seções: `src/app/page.tsx`
+- Serviços (cards da landing): `src/components/sections/ServicesSection.tsx`
+- Tratamentos (cards da landing): `src/components/sections/TreatmentsSection.tsx`
+- Componente base de card: `src/components/ui/Card.tsx`
+- Pipeline do blog: `src/lib/blog.ts`
+- Sitemap: `src/app/sitemap.ts`

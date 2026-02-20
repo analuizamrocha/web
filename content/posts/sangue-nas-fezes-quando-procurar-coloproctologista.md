@@ -3,7 +3,7 @@ title: "Sangue nas fezes: quando se preocupar e buscar ajuda especializada"
 metaDescription: "Sangue nas fezes pode indicar desde hemorroidas até condições sérias. Descubra as causas, sinais de alerta e quando procurar um coloproctologista."
 slug: "sangue-nas-fezes-quando-procurar-coloproctologista"
 publishDate: "2025-10-21"
-lastModified: "2025-10-21"
+lastModified: "2026-02-14"
 primaryKeyword: "sangue nas fezes"
 secondaryKeywords:
   - "sangramento anal"
@@ -31,6 +31,8 @@ faqs:
 Perceber **sangue nas fezes** é sempre um sinal que causa preocupação, e com razão. Embora em muitos casos o sangramento anal esteja relacionado a **condições benignas**, como **hemorroidas** ou **fissuras anais**, ele também pode ser o primeiro sintoma de **doenças mais sérias**, que exigem diagnóstico precoce.
 
 Neste artigo, você vai entender as **principais causas de sangue nas fezes**, quando é preciso se preocupar e por que a avaliação médica é essencial para garantir sua saúde intestinal.
+
+![Ilustração de sangue nas fezes e sinal de alerta intestinal](/images/posts/sangue-nas-fezes-quando-procurar-coloproctologista/sangue-nas-fezes.png)
 
 ## O que significa ter sangue nas fezes?
 
@@ -67,6 +69,8 @@ Inclui a **doença de Crohn** e a **retocolite ulcerativa**, que provocam inflam
 ### Câncer colorretal
 
 Pode causar sangramento oculto ou visível nas fezes. O diagnóstico precoce aumenta significativamente as chances de cura.
+
+![Principais causas de sangue nas fezes em resumo visual](/images/posts/sangue-nas-fezes-quando-procurar-coloproctologista/principais-causas-sangue-nas-fezes.png)
 
 ## Quando se preocupar com sangue nas fezes
 

@@ -1,33 +1,42 @@
-import { Card } from '@/components/ui/Card'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentCard } from '@/components/ui/TreatmentCard'
 
 const treatments = [
   {
     name: 'Cirurgias a laser',
+    slug: 'cx-laser',
   },
   {
     name: 'Toxina botulínica para fissura anal e dores crônicas',
+    slug: 'toxina-botulinica',
   },
   {
     name: 'Cirurgias para fístulas anorretais',
+    slug: 'cx-fistulas-anorretais',
   },
   {
     name: 'Ligadura elástica para hemorroidas',
+    slug: 'hemorroidas',
   },
   {
     name: 'Rastreio e prevenção do câncer de canal anal',
+    slug: 'rastreio-cancer-anal',
   },
   {
     name: 'Acompanhamento de doenças inflamatórias intestinais',
+    slug: 'doencas-inflamatorias-intestinais',
   },
   {
     name: 'Tratamento de HPV',
+    slug: 'hpv-anal',
   },
   {
     name: 'Cirurgia de cisto pilonidal',
+    slug: 'cx-cisto-pilonidal',
   },
   {
     name: 'Síndrome do intestino irritável',
+    slug: 'sindrome-intestino-irritavel',
   },
 ]
 
@@ -51,22 +60,22 @@ export function TreatmentsSection() {
           </div>
         </div>
 
-        {/* Smart Responsive Grid - Hides last item for even columns */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-8 xl:gap-10">
-          {treatments.map((treatment, index) => (
-            <Card
-              key={treatment.name}
-              title={treatment.name}
-              variant="treatment"
-              className={`
-                ${
-                  index === treatments.length - 1
-                    ? 'flex sm:hidden lg:flex'
-                    : ''
-                }
-              `}
-            />
-          ))}
+        <div className="relative">
+          <div className="pointer-events-none absolute -left-8 -top-8 hidden h-28 w-28 rounded-full bg-secondary/30 blur-2xl lg:block" />
+          <div className="pointer-events-none absolute -right-8 bottom-0 hidden h-24 w-24 rounded-full bg-secondary/25 blur-2xl lg:block" />
+
+          {/* Smart Responsive Grid - Hides last item for even columns */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 xl:gap-7">
+            {treatments.map((treatment, index) => (
+              <TreatmentCard
+                key={treatment.slug}
+                title={treatment.name}
+                href={`/tratamentos/${treatment.slug}`}
+                variant="compact"
+                className={index === treatments.length - 1 ? 'sm:hidden lg:flex' : undefined}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="text-right mt-4">

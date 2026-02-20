@@ -68,7 +68,7 @@ export const HOSPITAL_CLINIC_BARCELONA = 'Hospital Clinic Barcelona'
 // =============================================================================
 
 /** Primary website URL */
-export const WEBSITE_URL = 'https://analuizarocha.com.br'
+export const WEBSITE_URL = 'https://www.analuizarocha.com.br'
 
 /** Instagram profile URL */
 export const URL_INSTAGRAM = 'https://www.instagram.com/analuiza.mrocha/'

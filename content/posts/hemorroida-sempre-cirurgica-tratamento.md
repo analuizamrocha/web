@@ -3,7 +3,7 @@ title: "Hemorroida é sempre cirúrgica? Entenda quando operar e opções de tra
 metaDescription: "Hemorroida nem sempre precisa de cirurgia. Descubra quando é indicada a ligadura elástica, cirurgia a laser e tratamentos clínicos para hemorroidas."
 slug: "hemorroida-sempre-cirurgica-tratamento"
 publishDate: "2025-10-06"
-lastModified: "2025-10-06"
+lastModified: "2026-02-14"
 primaryKeyword: "hemorroida é cirúrgica"
 secondaryKeywords:
   - "tratamento hemorroida"
@@ -38,6 +38,8 @@ As hemorroidas são **veias localizadas na região anal e do reto**, que fazem p
 
 É importante destacar que **ter hemorroidas é normal**, mas quando elas se tornam sintomáticas, precisam de acompanhamento com coloproctologista.
 
+![Representação de hemorroidas internas e externas](/images/posts/hemorroida-sempre-cirurgica-tratamento/hemorroidas-internas-externas.png)
+
 ## Hemorroida interna x hemorroida externa
 
 ### Hemorroida interna
@@ -58,6 +60,8 @@ As **hemorroidas externas** ficam logo abaixo da pele do ânus e podem causar **
 Durante uma **crise hemorroidária**, quando há inflamação ou **trombose** (formação de coágulo), a conduta cirúrgica é **avaliada com cautela**. Embora ainda exista alguma controvérsia, na prática **não é o momento ideal para operar**, pois o inchaço local pode levar à **remoção excessiva de pele** e aumentar o risco de **complicações como estenose anal**.
 
 Nessa fase, o tratamento deve ser **clínico**, com foco em **aliviar a dor, reduzir o edema e controlar a inflamação**, deixando a avaliação cirúrgica para um momento mais seguro, após a estabilização do quadro.
+
+![Comparativo entre hemorroidas internas e externas por sintomas e localização](/images/posts/hemorroida-sempre-cirurgica-tratamento/diferenca-hemorroidas-internas-externas.png)
 
 ## Durante a crise: o tratamento deve ser clínico
 
