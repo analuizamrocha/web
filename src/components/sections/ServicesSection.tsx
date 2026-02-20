@@ -1,10 +1,4 @@
 import { Card } from '@/components/ui/Card'
-import { WPP_NUMBER_NASSIF } from '@/lib/constants'
-
-const buildWhatsAppLink = (serviceName: string) =>
-  `https://wa.me/${WPP_NUMBER_NASSIF}/?text=${encodeURIComponent(
-    `Olá! Gostaria de saber mais sobre ${serviceName.toLowerCase()} e agendar uma consulta.`
-  )}`
 
 const services = [
   {
@@ -23,9 +17,7 @@ const services = [
     name: 'Fístula Anal',
     description:
       'Presença de secreção, dor ou abertura próxima ao ânus pode indicar uma fístula. Essa condição exige avaliação especializada, e há diferentes formas de abordagem.',
-    href: buildWhatsAppLink('Fístula Anal'),
-    external: true,
-    ctaLabel: 'Agendar pelo WhatsApp',
+    href: '/blog/tratamento-fistulas-anorretais',
   },
   {
     name: 'Coceira Anal (Prurido)',
@@ -67,9 +59,7 @@ const services = [
     name: 'Doenças Inflamatórias Intestinais',
     description:
       'Retocolite Ulcerativa e Doença de Crohn são doenças crônicas que exigem acompanhamento contínuo. O foco é manter a doença sob controle e preservar a qualidade de vida do paciente.',
-    href: buildWhatsAppLink('Doenças Inflamatórias Intestinais'),
-    external: true,
-    ctaLabel: 'Agendar pelo WhatsApp',
+    href: '/blog/doencas-inflamatorias-intestinais-acompanhamento',
   },
   {
     name: 'Saúde Sexual',
@@ -97,9 +87,8 @@ export function ServicesSection() {
           </h2>
           <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
             <p>
-              Reconhecer os sinais e sintomas é fundamental para buscar ajuda no
-              momento adequado. Cada queixa merece atenção especializada e
-              cuidadosa.
+              Reconhecer os sinais e sintomas é fundamental para buscar ajuda no momento adequado.
+              Cada queixa merece atenção especializada e cuidadosa.
             </p>
           </div>
         </div>

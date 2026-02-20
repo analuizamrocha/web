@@ -13,6 +13,28 @@ interface CardProps {
   external?: boolean
 }
 
+interface CardActionLinkProps {
+  href: string
+  external: boolean
+  className?: string
+  ariaLabel: string
+  children?: ReactNode
+}
+
+function CardActionLink({ href, external, className, ariaLabel, children }: CardActionLinkProps) {
+  return (
+    <Link
+      href={href}
+      className={className}
+      aria-label={ariaLabel}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noreferrer' : undefined}
+    >
+      {children}
+    </Link>
+  )
+}
+
 export function Card({
   title,
   description,
@@ -23,6 +45,9 @@ export function Card({
   ctaLabel = 'Saiba mais',
   external = false,
 }: CardProps) {
+  const isServiceSelectiveMobileLink = variant === 'service' && Boolean(href)
+  const cardAriaLabel = `${title} - ${ctaLabel}`
+
   const content = (
     <div className="flex h-full flex-col">
       <h3
@@ -35,7 +60,21 @@ export function Card({
             : 'text-lg sm:text-xl text-secondary font-bold'
         )}
       >
-        {title}
+        {isServiceSelectiveMobileLink ? (
+          <>
+            <CardActionLink
+              href={href!}
+              external={external}
+              className="inline sm:hidden focus-visible:outline-none focus-visible:underline"
+              ariaLabel={cardAriaLabel}
+            >
+              {title}
+            </CardActionLink>
+            <span className="hidden sm:inline">{title}</span>
+          </>
+        ) : (
+          title
+        )}
       </h3>
 
       {description && (
@@ -58,29 +97,47 @@ export function Card({
       {href && (
         <div
           className={cn(
-            variant === 'service'
-              ? 'mt-auto pt-3 border-t border-primary/10'
-              : 'mt-6'
+            variant === 'service' ? 'mt-auto pt-3 border-t border-primary/10' : 'mt-6'
           )}
         >
-          <span
-            className={cn(
-              'inline-flex items-center gap-1 text-primary font-semibold text-sm lg:text-base',
-              variant === 'service' &&
-                'transition-transform duration-300 group-hover:translate-x-0.5'
-            )}
-          >
-            <span>{ctaLabel}</span>
-            <span aria-hidden="true">→</span>
-          </span>
+          {isServiceSelectiveMobileLink ? (
+            <>
+              <CardActionLink
+                href={href!}
+                external={external}
+                className="inline-flex items-center gap-1 text-primary font-semibold text-sm lg:text-base sm:hidden focus-visible:outline-none focus-visible:underline"
+                ariaLabel={cardAriaLabel}
+              >
+                <span>{ctaLabel}</span>
+                <span aria-hidden="true">→</span>
+              </CardActionLink>
+              <span className="hidden sm:inline-flex items-center gap-1 text-primary font-semibold text-sm lg:text-base transition-transform duration-300 group-hover:translate-x-0.5">
+                <span>{ctaLabel}</span>
+                <span aria-hidden="true">→</span>
+              </span>
+            </>
+          ) : (
+            <span
+              className={cn(
+                'inline-flex items-center gap-1 text-primary font-semibold text-sm lg:text-base',
+                variant === 'service' && 'transition-transform duration-300 group-hover:translate-x-0.5'
+              )}
+            >
+              <span>{ctaLabel}</span>
+              <span aria-hidden="true">→</span>
+            </span>
+          )}
         </div>
       )}
     </div>
   )
 
   const baseClasses = cn(
-    'group flex flex-col rounded-3xl transition-all duration-300 h-full shadow-sm hover:shadow-md block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary',
-    href && 'cursor-pointer transform hover:-translate-y-[2px] hover:shadow-lg',
+    'group relative isolate flex flex-col rounded-3xl transition-all duration-300 h-full shadow-sm hover:shadow-md block focus-within:outline focus-within:outline-2 focus-within:outline-offset-4 focus-within:outline-primary',
+    href &&
+      (variant === 'service'
+        ? 'sm:cursor-pointer transform hover:-translate-y-[2px] hover:shadow-lg'
+        : 'cursor-pointer transform hover:-translate-y-[2px] hover:shadow-lg'),
     variant === 'treatment' &&
       'bg-card hover:bg-card-hover text-center justify-center p-6 min-h-[140px] sm:min-h-[160px] lg:p-8 lg:min-h-[200px] xl:min-h-[220px] border border-secondary/20 hover:border-secondary/30',
     variant === 'default' &&
@@ -90,21 +147,30 @@ export function Card({
     className
   )
 
+  if (href && variant === 'service') {
+    return (
+      <div className={baseClasses}>
+        <CardActionLink
+          href={href}
+          external={external}
+          className="absolute inset-0 z-30 hidden rounded-3xl sm:block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          ariaLabel={cardAriaLabel}
+        />
+        <div className="relative z-20 h-full">{content}</div>
+      </div>
+    )
+  }
+
   if (href) {
-    return external ? (
-      <a
+    return (
+      <CardActionLink
         href={href}
-        target="_blank"
-        rel="noreferrer"
+        external={external}
         className={baseClasses}
-        aria-label={`${title} - ${ctaLabel}`}
+        ariaLabel={cardAriaLabel}
       >
         {content}
-      </a>
-    ) : (
-      <Link href={href} className={baseClasses} aria-label={`${title} - ${ctaLabel}`}>
-        {content}
-      </Link>
+      </CardActionLink>
     )
   }
 
