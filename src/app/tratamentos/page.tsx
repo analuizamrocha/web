@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import { Card } from '@/components/ui/Card'
 import type { Metadata } from 'next'
 import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED, WEBSITE_URL } from '@/lib/constants'
-import { Badge } from '@/components/ui/Badge'
-import { ArrowRight } from 'lucide-react'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentCard } from '@/components/ui/TreatmentCard'
 
 export const metadata: Metadata = {
   title: 'Tratamentos de Coloproctologia | Dra. Ana Luiza Moraes Rocha',
@@ -127,26 +125,23 @@ export default function ServicosPage() {
             </div>
           </div>
 
-          {/* Treatments Grid */}
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-8 xl:gap-10 mb-16">
-            {treatments.map((treatment) => (
-              <Link className="group" key={treatment.slug} href={`/tratamentos/${treatment.slug}`}>
-                <Card
+          <div className="relative mb-16">
+            <div className="pointer-events-none absolute -left-10 top-8 hidden h-32 w-32 rounded-full bg-secondary/25 blur-3xl lg:block" />
+            <div className="pointer-events-none absolute -right-10 bottom-6 hidden h-28 w-28 rounded-full bg-secondary/20 blur-3xl lg:block" />
+
+            {/* Treatments Grid */}
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 xl:gap-8">
+              {treatments.map((treatment) => (
+                <TreatmentCard
+                  key={treatment.slug}
                   title={treatment.title}
                   description={treatment.description}
-                  variant="service"
-                  className="h-full transition-transform duration-300 cursor-pointer"
-                >
-                  <div className="flex mt-auto pt-4 justify-between">
-                    <Badge variant="primary">{treatment.category}</Badge>
-                    <span className="inline-flex items-center justify-center text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-300">
-                      Saiba mais&nbsp;
-                      <ArrowRight size={14} className="ml-1" />
-                    </span>
-                  </div>
-                </Card>
-              </Link>
-            ))}
+                  category={treatment.category}
+                  href={`/tratamentos/${treatment.slug}`}
+                  variant="detailed"
+                />
+              ))}
+            </div>
           </div>
 
           {/* Call to Action Section */}

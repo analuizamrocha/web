@@ -3,7 +3,7 @@ title: 'Fissura anal: sintomas, tratamentos e como a coloproctologia pode ajudar
 metaDescription: 'Fissura anal causa dor intensa ao evacuar. Conheça sintomas, tratamentos clínicos, botox e cirurgia com coloproctologista em Curitiba.'
 slug: 'fissura-anal-tratamento'
 publishDate: '2025-12-02'
-lastModified: '2025-12-02'
+lastModified: '2026-02-14'
 primaryKeyword: 'fissura anal'
 secondaryKeywords:
   ['dor ao evacuar', 'toxina botulínica fissura', 'esfincterotomia', 'sangramento anal']
@@ -28,6 +28,8 @@ A **fissura anal** é uma pequena ferida na região do ânus que pode causar dor
 Apesar de simples, esse problema é muito comum em coloproctologia e pode trazer grande impacto na qualidade de vida do paciente.
 
 Neste artigo, você vai entender **o que é a fissura anal**, quais são os principais **sintomas e tratamentos disponíveis**, e quando procurar um **coloproctologista em Curitiba**.
+
+![Ilustração de fissura anal e região acometida](/images/posts/fissura-anal-tratamento/fissura-anal.png)
 
 ---
 
