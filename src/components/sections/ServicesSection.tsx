@@ -103,8 +103,6 @@ export function ServicesSection() {
               variant="service"
               className="animate-fade-in"
               href={service.href}
-              external={service.external}
-              ctaLabel={service.ctaLabel}
             />
           ))}
         </div>
