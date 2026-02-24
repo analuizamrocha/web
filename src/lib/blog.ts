@@ -156,19 +156,34 @@ function calculateReadingTime(content: string): number {
  * @returns The italic hook text without markdown formatting
  */
 function extractItalicHook(content: string): string {
-  // Look for italic text pattern: *text content*
-  const italicMatch = content.match(/^\*(.+?)\*$/m)
+  // Prefer the first non-heading paragraph as the excerpt source.
+  // This avoids accidentally capturing emphasized text from the footer.
+  const paragraphs = content.trim().split('\n\n')
+  const firstParagraph = paragraphs.find((p) => {
+    const trimmed = p.trim()
+    return trimmed.length > 0 && !trimmed.startsWith('#')
+  }) || ''
 
-  if (italicMatch && italicMatch[1]) {
-    return italicMatch[1].trim()
+  const trimmedParagraph = firstParagraph.trim()
+
+  // Match standalone italic hooks in either markdown form:
+  // *text* or _text_ (but not bold **text** / __text__)
+  const asteriskItalic = trimmedParagraph.match(/^\*(?!\*)(.+?)\*$/)
+  if (asteriskItalic && asteriskItalic[1]) {
+    return asteriskItalic[1].trim()
   }
 
-  // Fallback: extract first non-heading paragraph
-  const paragraphs = content.replace(/^#.*$/gm, '').trim().split('\n\n')
-  const firstParagraph = paragraphs.find((p) => p.trim().length > 0) || ''
+  const underscoreItalic = trimmedParagraph.match(/^_(?!_)(.+?)_$/)
+  if (underscoreItalic && underscoreItalic[1]) {
+    return underscoreItalic[1].trim()
+  }
 
-  // Remove any markdown formatting from fallback
-  return firstParagraph.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*(.*?)\*/g, '$1')
+  // Fallback: return first paragraph with basic markdown emphasis removed
+  return trimmedParagraph
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/__(.*?)__/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
+    .replace(/_(.*?)_/g, '$1')
 }
 
 /**

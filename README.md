@@ -156,6 +156,11 @@ Blog posts automatically:
 - Create SEO meta tags
 - Support static generation
 
+For project-specific authoring rules (subtitle extraction, metadata contract, checklist), see:
+
+- [AGENTS.md](./AGENTS.md)
+- [docs/blog-content-playbook.md](./docs/blog-content-playbook.md)
+
 ## 🎯 SEO Strategy
 
 ### Target Keywords (Portuguese/Brazilian Market)
