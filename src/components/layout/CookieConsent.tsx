@@ -27,9 +27,13 @@ export default function CookieConsent() {
     // Only show if user hasn't made a decision yet
     const consent = localStorage.getItem('lgpd-cookie-consent')
     if (!consent) {
-      setShowConsent(true)
-      // Trigger animation after mount
-      setTimeout(() => setIsVisible(true), 1200)
+      // Defer state updates to avoid synchronous setState in effect.
+      const showTimer = setTimeout(() => setShowConsent(true), 0)
+      const visibleTimer = setTimeout(() => setIsVisible(true), 1200)
+      return () => {
+        clearTimeout(showTimer)
+        clearTimeout(visibleTimer)
+      }
     }
   }, [])
 

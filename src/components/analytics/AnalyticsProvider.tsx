@@ -24,7 +24,9 @@ export function AnalyticsProvider() {
     const consent = localStorage.getItem('lgpd-cookie-consent')
 
     if (consent === 'accepted') {
-      setHasConsent(true)
+      // Defer state update to avoid synchronous setState in effect.
+      const timer = setTimeout(() => setHasConsent(true), 0)
+      return () => clearTimeout(timer)
     }
     // If consent is 'rejected' or not set, stay false (no analytics rendered)
   }, [])
