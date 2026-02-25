@@ -39,7 +39,7 @@ export function AboutSection() {
   return (
     <section
       id="quem-sou-eu"
-      className="section bg-background"
+      className="section section-deferred bg-background"
       aria-labelledby="about-heading"
     >
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
@@ -89,7 +89,6 @@ export function AboutSection() {
           src="/images/sobre-mim.webp"
           alt="Dra. Ana Luiza Moraes Rocha CRM-PR 45351, formação internacional em coloproctologia, Hospital Clinic Barcelona, especialista em cirurgia colorretal"
           sizes="(max-width: 1024px) 100vw, 0px"
-          quality={100}
           className="w-full h-auto object-cover"
           loading="lazy"
         />

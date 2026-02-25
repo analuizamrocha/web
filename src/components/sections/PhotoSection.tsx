@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function PhotoSection() {
   return (
-    <section className="section bg-gradient-to-b from-muted/20 to-background">
+    <section className="section section-deferred bg-gradient-to-b from-muted/20 to-background">
       {/* Beautiful Responsive Layout */}
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
         {/* Header Section - Enhanced Typography */}
@@ -29,7 +29,6 @@ export function PhotoSection() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={100}
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -45,7 +44,6 @@ export function PhotoSection() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="50vw"
-                quality={100}
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

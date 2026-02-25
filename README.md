@@ -1,17 +1,17 @@
 # Ana Luiza M. Rocha - Coloproctologista
 
-A modern, SEO-optimized medical practice website built with Next.js 15, featuring a comprehensive blog system for patient education and healthcare content.
+A modern, SEO-optimized medical practice website built with Next.js 16, featuring a comprehensive blog system for patient education and healthcare content.
 
 ## 🚀 Tech Stack
 
-- **Framework**: [Next.js 15](https://nextjs.org) with App Router
+- **Framework**: [Next.js 16](https://nextjs.org) with App Router
 - **Runtime**: React 19
 - **Language**: TypeScript
 - **Styling**: TailwindCSS v4
 - **Package Manager**: Bun
 - **Content**: Markdown with MDX support via `next-mdx-remote`
 - **Analytics**: Vercel Analytics, Google Analytics, Google Tag Manager
-- **Testing**: Vitest + React Testing Library
+- **Testing**: Vitest + React Testing Library + Playwright E2E
 - **Performance**: Turbopack for fast development builds
 
 ## 📋 Features
@@ -69,6 +69,20 @@ bun run dev
 # Open http://localhost:3000
 ```
 
+### Analytics configuration (consent-gated)
+
+Optional environment variable:
+
+```bash
+# ga (default) | gtm | both | none
+NEXT_PUBLIC_ANALYTICS_PROVIDER=ga
+```
+
+Notes:
+
+- Analytics scripts are only loaded after explicit cookie consent.
+- When both GA and GTM IDs exist, default behavior is `ga` to reduce third-party overhead.
+
 ### Building
 
 ```bash
@@ -94,6 +108,8 @@ bun run analyze
 | `bun test` | Run tests with Vitest |
 | `bun run test:ui` | Run tests with UI |
 | `bun run test:coverage` | Generate coverage report |
+| `bun run e2e` | Run Playwright E2E smoke tests |
+| `bun run e2e:ui` | Run Playwright tests with UI |
 | `bun run lighthouse` | Run Lighthouse audit locally |
 | `bun run lighthouse:prod` | Run Lighthouse audit on production |
 

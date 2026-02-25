@@ -8,6 +8,7 @@ export function useActiveSection(isRootPage: boolean) {
 
   useEffect(() => {
     if (!isRootPage) return
+    if (!window.matchMedia('(min-width: 1024px)').matches) return
 
     const sections = navigationWithHashes.map((nav) => nav.id)
 

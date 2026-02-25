@@ -4,50 +4,106 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 
+const CONSENT_KEY = 'lgpd-cookie-consent'
+const CONSENT_EVENT = 'lgpd-consent-updated'
+
 /**
  * Cookie Consent Banner - LGPD/GDPR Compliance
  *
  * Works with AnalyticsProvider:
  * - Shows banner only if no consent decision exists
- * - On accept: Sets localStorage and reloads (AnalyticsProvider loads GA)
- * - On reject: Sets localStorage, no analytics loaded
+ * - On accept/reject: Sets localStorage and notifies listeners
+ * - Keeps a persistent preferences entry point for consent revocation/updates
  *
  * Architecture:
  * - Isolated client component
  * - No direct analytics logic (delegated to AnalyticsProvider)
  * - Uses Button component for consistent styling
- * - Progressive disclosure for reject option
  */
 export default function CookieConsent() {
   const [showConsent, setShowConsent] = useState(false)
-  const [showRejectOption, setShowRejectOption] = useState(false)
+  const [hasStoredChoice, setHasStoredChoice] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    // Only show if user hasn't made a decision yet
-    const consent = localStorage.getItem('lgpd-cookie-consent')
-    if (!consent) {
-      setShowConsent(true)
-      // Trigger animation after mount
-      setTimeout(() => setIsVisible(true), 1200)
+    let showTimer: number | undefined
+    let visibleTimer: number | undefined
+    let syncTimer: number | undefined
+
+    const clearTimers = () => {
+      if (showTimer !== undefined) clearTimeout(showTimer)
+      if (visibleTimer !== undefined) clearTimeout(visibleTimer)
+      if (syncTimer !== undefined) clearTimeout(syncTimer)
+      showTimer = undefined
+      visibleTimer = undefined
+      syncTimer = undefined
+    }
+
+    const syncConsentBanner = () => {
+      clearTimers()
+
+      const consent = localStorage.getItem(CONSENT_KEY)
+      const hasDecision = consent === 'accepted' || consent === 'rejected'
+      setHasStoredChoice(hasDecision)
+
+      if (hasDecision) {
+        setShowConsent(false)
+        setIsVisible(false)
+        return
+      }
+
+      // Defer state updates to avoid synchronous setState in effect.
+      showTimer = window.setTimeout(() => setShowConsent(true), 0)
+      // Keep the banner non-blocking for initial hero paint on slow devices.
+      visibleTimer = window.setTimeout(() => setIsVisible(true), 2200)
+    }
+
+    syncTimer = window.setTimeout(syncConsentBanner, 0)
+    window.addEventListener('storage', syncConsentBanner)
+    window.addEventListener(CONSENT_EVENT, syncConsentBanner as EventListener)
+
+    return () => {
+      clearTimers()
+      window.removeEventListener('storage', syncConsentBanner)
+      window.removeEventListener(
+        CONSENT_EVENT,
+        syncConsentBanner as EventListener
+      )
     }
   }, [])
 
-  const acceptCookies = () => {
-    localStorage.setItem('lgpd-cookie-consent', 'accepted')
+  const updateConsent = (decision: 'accepted' | 'rejected') => {
+    localStorage.setItem(CONSENT_KEY, decision)
+    window.dispatchEvent(new Event(CONSENT_EVENT))
+    setHasStoredChoice(true)
     setShowConsent(false)
-    window.location.reload()
-  }
-
-  const rejectCookies = () => {
-    localStorage.setItem('lgpd-cookie-consent', 'rejected')
-    setShowConsent(false)
+    setIsVisible(false)
   }
 
   const dismissBanner = () => {
     // Just close the banner without saving preference
-    // User will see it again on next visit (nudge to accept)
+    // User will see it again if no decision is stored.
     setShowConsent(false)
+    setIsVisible(false)
+  }
+
+  const openPreferences = () => {
+    setShowConsent(true)
+    setIsVisible(true)
+  }
+
+  if (!showConsent && hasStoredChoice) {
+    return (
+      <Button
+        onClick={openPreferences}
+        variant="outline"
+        size="sm"
+        className="fixed bottom-4 left-4 z-40 bg-background/95 backdrop-blur-sm border-primary/20 shadow-md hover:shadow-lg"
+        aria-label="Gerenciar preferências de cookies"
+      >
+        Gerenciar cookies
+      </Button>
+    )
   }
 
   if (!showConsent) return null
@@ -139,40 +195,29 @@ export default function CookieConsent() {
             </div>
 
             <div className="mx-auto w-full flex flex-col">
-              {/* Primary CTA - Accept Button using Button component */}
-              <Button
-                onClick={acceptCookies}
-                variant="primary"
-                size="default"
-                className="w-full max-w-md mx-auto font-semibold shadow-lg hover:shadow-xl"
-              >
-                Aceitar e continuar
-              </Button>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
+                <Button
+                  onClick={() => updateConsent('accepted')}
+                  variant="primary"
+                  size="default"
+                  className="w-full font-semibold shadow-lg hover:shadow-xl"
+                >
+                  Aceitar cookies
+                </Button>
+                <Button
+                  onClick={() => updateConsent('rejected')}
+                  variant="outline"
+                  size="default"
+                  className="w-full font-semibold"
+                >
+                  Recusar cookies
+                </Button>
+              </div>
 
-              {/* Secondary action - Manage preferences */}
-              {!showRejectOption ? (
-                <div className="mx-auto w-full flex justify-center items-center mt-3">
-                  <button
-                    onClick={() => setShowRejectOption(true)}
-                    className="w-fit px-4 py-2 text-xs text-muted hover:text-primary transition-colors underline-offset-2 hover:underline cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
-                  >
-                    Gerenciar preferências
-                  </button>
-                </div>
-              ) : (
-                <div className="mt-4 pt-4 border-t border-primary/10 space-y-3 animate-in fade-in slide-in-from-top-3 duration-500 mx-auto w-full flex flex-col justify-center items-center">
-                  <p className="text-xs text-muted">
-                    Ao recusar, não coletaremos dados de uso.
-                  </p>
-                  <Button
-                    onClick={rejectCookies}
-                    variant="link"
-                    className="w-fit mx-auto px-0 py-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
-                  >
-                    Recusar cookies
-                  </Button>
-                </div>
-              )}
+              <p className="text-xs text-muted mt-3 text-center">
+                Você pode alterar sua escolha a qualquer momento em
+                &quot;Gerenciar cookies&quot;.
+              </p>
             </div>
           </div>
 
