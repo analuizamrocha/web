@@ -15,6 +15,33 @@
   - CLS: 0
   - SI: 1.7s
 
+## Latest re-audit (after optimization batch)
+
+- Audit date: 2026-02-25
+- Local URL: `http://127.0.0.1:3000`
+- Performance: 95
+- Accessibility: 96
+- Best Practices: 100
+- SEO: 100
+- Core metrics:
+  - FCP: 0.9s
+  - LCP: 3.0s
+  - TBT: 24ms
+  - CLS: 0
+  - SI: 0.9s
+- Confirmed deltas vs current baseline:
+  - Performance: +6
+  - Best Practices: +4
+  - LCP: -0.7s
+  - TBT: -66ms
+  - SI: -0.8s
+
+### What changed in this batch
+
+1. Deferred non-critical client islands by introducing `ClientProviders` and rendering cookie/analytics logic client-side only after initial render.
+2. Gated `@vercel/analytics` and `@vercel/speed-insights` to Vercel runtime, removing local 404/script MIME errors and lifting Best Practices.
+3. Optimized `useMobileMenu` to avoid expensive DOM querying/inert cleanup during initial load when menu is closed.
+
 ## Priority 1: Keep Best Practices high in production
 
 1. Audit GTM container tags and remove non-essential ad/remarketing tags.

@@ -1,15 +1,13 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import Script from "next/script";
 import { Montserrat, Literata } from 'next/font/google'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
-import CookieConsent from '@/components/layout/CookieConsent'
-import { AnalyticsProvider } from '@/components/analytics'
+import { ClientProviders } from '@/components/layout/ClientProviders'
 import { DR_NAME, CLINICA_NASSIF, WEBSITE_URL, TAG_INSTAGRAM } from '@/lib/constants'
 import { getStructuredData } from '@/lib/structured-data'
 
@@ -140,21 +138,13 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const isVercelRuntime = Boolean(
+    process.env.VERCEL || process.env.NEXT_PUBLIC_VERCEL_ENV
+  )
+
   return (
     <html lang="pt-BR">
       <head>
-        {process.env.NODE_ENV === "development" && (
-          <Script
-            src="//unpkg.com/react-grab/dist/index.global.js"
-            crossOrigin="anonymous"
-            strategy="beforeInteractive"
-          />
-        )}
-        {/* Preconnect to optimize font and analytics loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://va.vercel-scripts.com" />
-
         {/* Structured data for SEO */}
         <script
           type="application/ld+json"
@@ -167,10 +157,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
-        <CookieConsent />
-        <AnalyticsProvider />
-        <VercelAnalytics />
-        <SpeedInsights />
+        <ClientProviders />
+        {isVercelRuntime && (
+          <>
+            <VercelAnalytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   )
