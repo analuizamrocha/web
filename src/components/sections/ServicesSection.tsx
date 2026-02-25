@@ -77,7 +77,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="servicos" className="section bg-muted/30">
+    <section id="servicos" className="section section-deferred bg-muted/30">
       {/* Beautiful Responsive Layout */}
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
         {/* Header Section - Enhanced Typography */}

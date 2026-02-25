@@ -2,8 +2,6 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Montserrat, Literata } from 'next/font/google'
-import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
@@ -138,9 +136,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const isVercelRuntime = Boolean(
-    process.env.VERCEL || process.env.NEXT_PUBLIC_VERCEL_ENV
-  )
+  const isVercelRuntime = Boolean(process.env.VERCEL)
 
   return (
     <html lang="pt-BR">
@@ -157,13 +153,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
-        <ClientProviders />
-        {isVercelRuntime && (
-          <>
-            <VercelAnalytics />
-            <SpeedInsights />
-          </>
-        )}
+        <ClientProviders enableVercelSignals={isVercelRuntime} />
       </body>
     </html>
   )

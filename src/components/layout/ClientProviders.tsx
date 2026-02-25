@@ -14,11 +14,15 @@ const AnalyticsProvider = dynamic(
   { ssr: false }
 )
 
-export function ClientProviders() {
+export function ClientProviders({
+  enableVercelSignals = false,
+}: {
+  enableVercelSignals?: boolean
+}) {
   return (
     <>
       <CookieConsent />
-      <AnalyticsProvider />
+      <AnalyticsProvider enableVercelSignals={enableVercelSignals} />
     </>
   )
 }

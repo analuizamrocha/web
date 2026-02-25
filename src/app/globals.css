@@ -467,6 +467,15 @@
   .section {
     @apply pb-16 pt-8;
   }
+
+  /*
+   * Defer below-the-fold section rendering so the hero can paint earlier.
+   * Browsers without support ignore this and fall back safely.
+   */
+  .section-deferred {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 900px;
+  }
   
   /* Card Component Classes */
   .card {

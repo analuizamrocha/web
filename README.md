@@ -69,6 +69,20 @@ bun run dev
 # Open http://localhost:3000
 ```
 
+### Analytics configuration (consent-gated)
+
+Optional environment variable:
+
+```bash
+# ga (default) | gtm | both | none
+NEXT_PUBLIC_ANALYTICS_PROVIDER=ga
+```
+
+Notes:
+
+- Analytics scripts are only loaded after explicit cookie consent.
+- When both GA and GTM IDs exist, default behavior is `ga` to reduce third-party overhead.
+
 ### Building
 
 ```bash

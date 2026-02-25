@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function PhotoSection() {
   return (
-    <section className="section bg-gradient-to-b from-muted/20 to-background">
+    <section className="section section-deferred bg-gradient-to-b from-muted/20 to-background">
       {/* Beautiful Responsive Layout */}
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
         {/* Header Section - Enhanced Typography */}

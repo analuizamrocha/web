@@ -39,7 +39,7 @@ export function AboutSection() {
   return (
     <section
       id="quem-sou-eu"
-      className="section bg-background"
+      className="section section-deferred bg-background"
       aria-labelledby="about-heading"
     >
       <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">

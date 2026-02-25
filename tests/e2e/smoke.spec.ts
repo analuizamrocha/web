@@ -24,7 +24,9 @@ test('cookie consent stores accepted decision', async ({ page }) => {
     timeout: 10_000,
   })
 
-  await page.getByRole('button', { name: 'Aceitar e continuar' }).click()
+  await page
+    .getByRole('button', { name: /Aceitar cookies|Aceitar e continuar/i })
+    .click()
   await page.waitForLoadState('domcontentloaded')
 
   await expect
