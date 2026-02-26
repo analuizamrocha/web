@@ -21,10 +21,11 @@
     "e2e:ui": "playwright test --ui",
     "e2e:headed": "playwright test --headed",
     "e2e:install": "playwright install",
+    "clean:reports": "rm -rf reports lighthouse-results playwright-report test-results",
     "analyze": "ANALYZE=true npm run build",
-    "lighthouse": "lighthouse http://localhost:3000 --output=json,html --output-path=./lighthouse-results --view",
-    "lighthouse:prod": "lighthouse https://analuizarocha.com.br --output=json,html --output-path=./lighthouse-results --view",
-    "lighthouse:ci": "lighthouse http://localhost:3000 --output=json --quiet --chrome-flags='--headless --no-sandbox'"
+    "lighthouse": "mkdir -p reports/lighthouse && lighthouse http://localhost:3000 --output=json,html --output-path=./reports/lighthouse/local --view",
+    "lighthouse:prod": "mkdir -p reports/lighthouse && lighthouse https://analuizarocha.com.br --output=json,html --output-path=./reports/lighthouse/prod --view",
+    "lighthouse:ci": "mkdir -p reports/lighthouse && lighthouse http://localhost:3000 --output=json --output-path=./reports/lighthouse/ci --quiet --chrome-flags='--headless --no-sandbox'"
   },
   "dependencies": {
     "@next/third-parties": "16.1.6",

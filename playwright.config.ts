@@ -1,6 +1,8 @@
 import { defineConfig, devices } from '@playwright/test'
 
 const baseURL = process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000'
+const playwrightHtmlReportDir = 'reports/playwright/html'
+const playwrightArtifactsDir = 'reports/playwright/artifacts'
 
 export default defineConfig({
   testDir: './tests/e2e',
@@ -8,7 +10,8 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: [['list'], ['html', { open: 'never' }]],
+  reporter: [['list'], ['html', { open: 'never', outputFolder: playwrightHtmlReportDir }]],
+  outputDir: playwrightArtifactsDir,
   timeout: 30_000,
   expect: {
     timeout: 8_000,
