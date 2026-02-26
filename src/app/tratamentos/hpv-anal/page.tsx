@@ -19,7 +19,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Tratamento de HPV Anal: Condilomas e Verrugas | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'HPV Anal: Condilomas e Tratamento'
 const pageDescription =
   'Tratamento especializado de HPV anal: remoção de condilomas e verrugas com laser, eletrocauterização e terapias tópicas em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/hpv-anal`

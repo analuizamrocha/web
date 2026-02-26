@@ -19,7 +19,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Cirurgias para Fístulas Anorretais | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Fístula Anal: Cirurgia Especializada'
 const pageDescription =
   'Tratamentos cirúrgicos especializados para fístulas anorretais: fistulotomia, retalho mucoso, LIFT, laser e técnicas combinadas em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/cx-fistulas-anorretais`

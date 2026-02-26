@@ -19,7 +19,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Toxina Botulínica na Coloproctologia | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Toxina Botulínica para Fissura Anal'
 const pageDescription =
   'Aplicação de toxina botulínica para tratamento de fissura anal crônica e dores anais persistentes em Curitiba. Procedimento minimamente invasivo.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/toxina-botulinica`

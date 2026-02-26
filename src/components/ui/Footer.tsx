@@ -1,5 +1,10 @@
 import Link from 'next/link'
-import { CRM_RQE_TEXT, TAG_INSTAGRAM, URL_INSTAGRAM } from '@/lib/constants'
+import {
+  CRM_RQE_TEXT,
+  TAG_INSTAGRAM,
+  URL_INSTAGRAM,
+  DR_NAME_ABBREVIATED,
+} from '@/lib/constants'
 import Instagram from '../icons/instagram'
 
 export function Footer() {
@@ -13,7 +18,7 @@ export function Footer() {
               className="inline-block w-fit focus:outline-none focus:ring-2 focus:ring-background focus:ring-offset-2 focus:ring-offset-primary rounded-md p-1 -m-1"
             >
               <span className="font-serif text-xl text-background font-medium">
-                Dra Ana Luiza M. Rocha
+                {DR_NAME_ABBREVIATED}
               </span>
               <p className="text-background/80 text-sm mt-1 mb-0">
                 Coloproctologista

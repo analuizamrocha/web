@@ -11,7 +11,7 @@
 export const DR_NAME = 'Dra. Ana Luiza Moraes Rocha'
 
 /** Doctor's abbreviated name (used in headers/footers) */
-export const DR_NAME_ABBREVIATED = 'Dra Ana Luiza M. Rocha'
+export const DR_NAME_ABBREVIATED = 'Dra. Ana Luiza M. Rocha'
 
 /** Doctor's short name (informal contexts) */
 export const DR_NAME_SHORT = 'Dra. Ana Luiza'

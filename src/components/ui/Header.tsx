@@ -7,6 +7,7 @@ import {
   TAG_INSTAGRAM,
   URL_INSTAGRAM,
   CRM_RQE_TEXT,
+  DR_NAME_ABBREVIATED,
 } from '@/lib/constants'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -65,7 +66,7 @@ export function Header() {
                 className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-md cursor-pointer"
               >
                 <span className="text-nowrap font-serif text-base sm:text-lg text-primary font-bold">
-                  Dra Ana Luiza M. Rocha
+                  {DR_NAME_ABBREVIATED}
                 </span>
                 <p className="text-xs text-secondary font-medium mb-0">Coloproctologista</p>
               </Link>

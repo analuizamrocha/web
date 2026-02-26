@@ -19,7 +19,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Rastreio e Prevenção do Câncer de Canal Anal | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Rastreio de Câncer Anal e HPV'
 const pageDescription =
   'Rastreamento e prevenção do câncer de canal anal: grupos de risco, citologia anal, anuscopia de alta resolução e vacinação HPV em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/rastreio-cancer-anal`

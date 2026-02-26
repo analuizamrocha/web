@@ -9,9 +9,10 @@ import {
 import type { Metadata } from 'next'
 import { WEBSITE_URL, SITE_NAME, TAG_INSTAGRAM } from '@/lib/constants'
 
+const BLOG_PAGE_TITLE = 'Blog de Coloproctologia e Saúde Intestinal'
 
 export const metadata: Metadata = {
-  title: 'Blog | Dra. Ana Luiza Moraes Rocha - Coloproctologista Curitiba',
+  title: BLOG_PAGE_TITLE,
   description:
     'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
   keywords: [
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     'plicoma anal',
   ],
   openGraph: {
-    title: 'Blog | Dra. Ana Luiza Moraes Rocha - Coloproctologista Curitiba',
+    title: BLOG_PAGE_TITLE,
     description:
       'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
     type: 'website',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog | Dra. Ana Luiza Moraes Rocha - Coloproctologista Curitiba',
+    title: BLOG_PAGE_TITLE,
     description:
       'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
     creator: TAG_INSTAGRAM,

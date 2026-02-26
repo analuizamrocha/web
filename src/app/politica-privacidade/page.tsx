@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Política de Privacidade | Dra. Ana Luiza Moraes Rocha',
+  title: 'Política de Privacidade',
   description:
     'Política de Privacidade e Proteção de Dados conforme LGPD - Consultório de Coloproctologia',
   robots: 'noindex, nofollow', // Privacy policies shouldn't be indexed

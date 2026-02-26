@@ -5,7 +5,7 @@ import { LinkButton } from '@/components/ui/LinkButton'
 import { TreatmentCard } from '@/components/ui/TreatmentCard'
 
 export const metadata: Metadata = {
-  title: 'Tratamentos de Coloproctologia | Dra. Ana Luiza Moraes Rocha',
+  title: 'Tratamentos de Coloproctologia em Curitiba',
   description:
     'Tratamentos especializados em coloproctologia: cirurgias a laser, tratamento de hemorroidas, fístulas anorretais e muito mais em Curitiba.',
   keywords: [

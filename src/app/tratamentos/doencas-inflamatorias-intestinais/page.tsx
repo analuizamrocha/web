@@ -14,7 +14,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Doenças Inflamatórias Intestinais (DII) | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'DII: Crohn e Retocolite'
 const pageDescription =
   'Diagnóstico e tratamento de Doenças Inflamatórias Intestinais: Doença de Crohn e Retocolite Ulcerativa. Acompanhamento especializado em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/doencas-inflamatorias-intestinais`

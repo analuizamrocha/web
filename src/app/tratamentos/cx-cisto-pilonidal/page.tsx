@@ -19,7 +19,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Cirurgia para Cisto Pilonidal | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Cisto Pilonidal: Cirurgia e Recuperação'
 const pageDescription =
   'Cirurgia para cisto pilonidal: técnica convencional e laser. Tratamento definitivo com recuperação rápida e menor dor pós-operatória em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/cx-cisto-pilonidal`

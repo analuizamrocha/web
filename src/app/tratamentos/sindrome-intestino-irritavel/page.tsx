@@ -14,7 +14,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Síndrome do Intestino Irritável (SII) | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Síndrome do Intestino Irritável (SII)'
 const pageDescription =
   'Diagnóstico e tratamento personalizado da Síndrome do Intestino Irritável (SII). Acompanhamento especializado em coloproctologia em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/sindrome-intestino-irritavel`
