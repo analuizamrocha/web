@@ -44,12 +44,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   }
 
+  const blogPostTitle = post.title
+
   return {
-    title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
+    title: blogPostTitle,
     description: post.metaDescription,
     keywords: [post.primaryKeyword, ...post.secondaryKeywords],
     openGraph: {
-      title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
+      title: blogPostTitle,
       description: post.metaDescription,
       type: 'article',
       locale: 'pt_BR',
@@ -69,7 +71,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${post.title} | Dra. Ana Luiza - Coloproctologista Curitiba`,
+      title: blogPostTitle,
       description: post.metaDescription,
       creator: TAG_INSTAGRAM,
       site: TAG_INSTAGRAM,

@@ -19,7 +19,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Tratamento de Hemorroidas | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Hemorroidas: Tratamento em Curitiba'
 const pageDescription =
   'Tratamentos especializados para hemorroidas: ligadura elástica, escleroterapia, cirurgia laser e THD em Curitiba. Procedimentos ambulatoriais e cirúrgicos.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/hemorroidas`

@@ -2,10 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
+import { cn } from '@/lib/utils'
 
 const CONSENT_KEY = 'lgpd-cookie-consent'
 const CONSENT_EVENT = 'lgpd-consent-updated'
+const BANNER_TRANSITION_MS = 260
+const TRIGGER_TO_BANNER_DELAY_MS = 140
 
 /**
  * Cookie Consent Banner - LGPD/GDPR Compliance
@@ -21,9 +25,11 @@ const CONSENT_EVENT = 'lgpd-consent-updated'
  * - Uses Button component for consistent styling
  */
 export default function CookieConsent() {
+  const router = useRouter()
   const [showConsent, setShowConsent] = useState(false)
   const [hasStoredChoice, setHasStoredChoice] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const [isOpeningFromTrigger, setIsOpeningFromTrigger] = useState(false)
 
   useEffect(() => {
     let showTimer: number | undefined
@@ -76,20 +82,38 @@ export default function CookieConsent() {
     localStorage.setItem(CONSENT_KEY, decision)
     window.dispatchEvent(new Event(CONSENT_EVENT))
     setHasStoredChoice(true)
-    setShowConsent(false)
     setIsVisible(false)
+    window.setTimeout(() => {
+      setShowConsent(false)
+    }, BANNER_TRANSITION_MS)
   }
 
   const dismissBanner = () => {
     // Just close the banner without saving preference
     // User will see it again if no decision is stored.
-    setShowConsent(false)
     setIsVisible(false)
+    window.setTimeout(() => {
+      setShowConsent(false)
+    }, BANNER_TRANSITION_MS)
   }
 
   const openPreferences = () => {
-    setShowConsent(true)
-    setIsVisible(true)
+    setIsOpeningFromTrigger(true)
+    window.setTimeout(() => {
+      setShowConsent(true)
+      setIsVisible(false)
+      window.requestAnimationFrame(() => setIsVisible(true))
+      setIsOpeningFromTrigger(false)
+    }, TRIGGER_TO_BANNER_DELAY_MS)
+  }
+
+  const openPrivacyPolicy = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
+    setIsVisible(false)
+    window.setTimeout(() => {
+      setShowConsent(false)
+      router.push('/politica-privacidade')
+    }, BANNER_TRANSITION_MS)
   }
 
   if (!showConsent && hasStoredChoice) {
@@ -97,11 +121,32 @@ export default function CookieConsent() {
       <Button
         onClick={openPreferences}
         variant="outline"
-        size="sm"
-        className="fixed bottom-4 left-4 z-40 bg-background/95 backdrop-blur-sm border-primary/20 shadow-md hover:shadow-lg"
+        size="icon"
+        disabled={isOpeningFromTrigger}
+        className={cn(
+          'fixed right-3 sm:right-4 bottom-4 sm:bottom-5 z-40 h-11 w-11 bg-background/95 backdrop-blur-sm border-primary/20 shadow-md hover:shadow-lg transition-all duration-200',
+          isOpeningFromTrigger && 'opacity-0 scale-90 translate-x-2'
+        )}
         aria-label="Gerenciar preferências de cookies"
+        title="Gerenciar cookies"
       >
-        Gerenciar cookies
+        <svg
+          className="h-5 w-5 text-current"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M20 12.5a8.5 8.5 0 11-8.5-8.5 4 4 0 004 4 4.5 4.5 0 004.5 4.5z"
+          />
+          <circle cx="8.5" cy="12.5" r="1" fill="currentColor" stroke="none" />
+          <circle cx="11.5" cy="15.5" r="1" fill="currentColor" stroke="none" />
+          <circle cx="14.5" cy="12.5" r="1" fill="currentColor" stroke="none" />
+        </svg>
       </Button>
     )
   }
@@ -112,15 +157,12 @@ export default function CookieConsent() {
     <div className="fixed inset-0 pointer-events-none z-50">
       {/* Desktop: bottom-right card | Mobile: bottom sheet */}
       <div
-        className="absolute sm:bottom-6 sm:right-6 bottom-0 left-0 right-0 sm:left-auto pointer-events-auto w-full sm:max-w-sm transition-all duration-700 ease-out"
-        style={{
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible
-            ? 'translate(0, 0)'
-            : window.innerWidth >= 640
-            ? 'translate(24px, 0)' // Desktop: slide from right
-            : 'translate(0, 24px)', // Mobile: slide from bottom
-        }}
+        className={cn(
+          'absolute bottom-0 left-0 right-0 sm:left-auto sm:bottom-6 sm:right-6 pointer-events-auto w-full sm:max-w-sm transition-[opacity,transform] duration-300 ease-out',
+          isVisible
+            ? 'opacity-100 translate-y-0 sm:translate-x-0'
+            : 'opacity-0 translate-x-4'
+        )}
       >
         <div className="bg-background sm:border sm:border-primary/10 rounded-t-3xl sm:rounded-2xl overflow-hidden relative shadow-[0_-4px_20px_rgba(102,58,37,0.15)] sm:shadow-[0_8px_30px_rgba(102,58,37,0.2)]">
           {/* X button - dismisses without saving preference */}
@@ -173,6 +215,7 @@ export default function CookieConsent() {
                   <br />
                   <Link
                     href="/politica-privacidade"
+                    onClick={openPrivacyPolicy}
                     className="text-primary hover:underline font-medium inline-flex items-center gap-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm mt-2"
                   >
                     Saiba mais
@@ -210,13 +253,13 @@ export default function CookieConsent() {
                   size="default"
                   className="w-full font-semibold"
                 >
-                  Recusar cookies
+                  Recusar
                 </Button>
               </div>
 
               <p className="text-xs text-muted mt-3 text-center">
-                Você pode alterar sua escolha a qualquer momento em
-                &quot;Gerenciar cookies&quot;.
+                Você pode revisar e alterar seu consentimento de cookies a
+                qualquer momento.
               </p>
             </div>
           </div>

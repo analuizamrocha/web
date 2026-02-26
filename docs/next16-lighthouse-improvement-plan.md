@@ -79,5 +79,5 @@
    - `npm run build`
    - `npm run start -- --port 3000 --hostname 127.0.0.1`
 2. Run Lighthouse:
-   - `npx lighthouse http://127.0.0.1:3000 --output=json --output-path=./lighthouse-results-next16.json --chrome-flags='--headless --no-sandbox'`
+   - `mkdir -p reports/lighthouse && npx lighthouse http://127.0.0.1:3000 --output=json --output-path=./reports/lighthouse/next16 --chrome-flags='--headless --no-sandbox'`
 3. Repeat after each optimization batch and track trend in a single report table.

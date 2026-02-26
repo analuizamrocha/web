@@ -19,8 +19,7 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle =
-  'Cirurgias a Laser em Coloproctologia | Dra. Ana Luiza Moraes Rocha'
+const pageTitle = 'Cirurgia a Laser Proctológica'
 const pageDescription =
   'Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/cx-laser`

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
 import {
   WPP_NUMBER_NASSIF,
@@ -8,6 +9,14 @@ import {
   URL_INSTAGRAM,
   CRM_RQE_TEXT,
 } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: 'Página não encontrada',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 export default function NotFound() {
   return (

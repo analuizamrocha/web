@@ -38,13 +38,15 @@ import {
   Users,
 } from 'lucide-react'
 
-const pageTitle = 'Sobre Dra. Ana Luiza Moraes Rocha | Coloproctologista Curitiba'
+const pageTitle = 'Sobre a Dra. Ana Luiza M. Rocha | Especialista em Coloproctologia'
 const pageDescription =
   'Conheça a trajetória da Dra. Ana Luiza Moraes Rocha, especialista em Coloproctologia com formação internacional e experiência em cirurgias minimamente invasivas.'
 const pageUrl = `${WEBSITE_URL}/sobre`
 
 export const metadata: Metadata = {
-  title: pageTitle,
+  title: {
+    absolute: pageTitle,
+  },
   description: pageDescription,
   keywords: [
     'coloproctologista curitiba',
