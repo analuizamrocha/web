@@ -1,17 +1,33 @@
+# Global crawl policy
 User-agent: *
 Allow: /
 
-# Sitemap
+# Canonical sitemap
 Sitemap: https://www.analuizarocha.com.br/sitemap.xml
 
-# Crawl delay for polite crawling
-Crawl-delay: 1
-
-# Allow all images
-User-agent: Googlebot-Image
-Allow: /images/
-
-# Medical content - ensure proper indexing
-User-agent: Googlebot
+# OpenAI crawlers
+User-agent: OAI-SearchBot
 Allow: /
-Allow: /images/
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic crawlers
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity crawlers
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /

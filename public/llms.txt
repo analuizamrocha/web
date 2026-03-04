@@ -1,0 +1,28 @@
+# Dra. Ana Luiza M. Rocha - Coloproctologia
+
+> Official website for educational content about colorectal health, prevention, diagnosis, and treatment options.
+
+This content is educational and intended for patients, referring doctors, and the general public.
+
+## Primary pages
+- [Home](https://www.analuizarocha.com.br/): Main entry point and overview.
+- [Treatments](https://www.analuizarocha.com.br/tratamentos): Core service and treatment index.
+- [Blog](https://www.analuizarocha.com.br/blog): Educational articles and FAQs.
+- [About](https://www.analuizarocha.com.br/sobre): Physician credentials and clinic context.
+
+## High-value treatment pages
+- [Hemorroidas](https://www.analuizarocha.com.br/tratamentos/hemorroidas): Symptoms, diagnosis, and treatment options.
+- [Cirurgia a laser](https://www.analuizarocha.com.br/tratamentos/cx-laser): Laser-based proctologic procedures.
+- [Fistulas anorretais](https://www.analuizarocha.com.br/tratamentos/cx-fistulas-anorretais): Evaluation and surgical management.
+- [Cisto pilonidal](https://www.analuizarocha.com.br/tratamentos/cx-cisto-pilonidal): Treatment pathways and recovery guidance.
+- [Doencas inflamatorias intestinais](https://www.analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais): Clinical overview and care options.
+- [HPV anal](https://www.analuizarocha.com.br/tratamentos/hpv-anal): Detection, monitoring, and treatment.
+- [Rastreio de cancer anal](https://www.analuizarocha.com.br/tratamentos/rastreio-cancer-anal): Risk factors and prevention.
+- [Sindrome do intestino irritavel](https://www.analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel): Symptoms and multidisciplinary treatment.
+- [Toxina botulinica](https://www.analuizarocha.com.br/tratamentos/toxina-botulinica): Indications and expected outcomes.
+
+## Technical sources
+- [Sitemap](https://www.analuizarocha.com.br/sitemap.xml): Canonical URL inventory.
+
+## Optional
+- [Privacy policy](https://www.analuizarocha.com.br/politica-privacidade): Legal and privacy information.
