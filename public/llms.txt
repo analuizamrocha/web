@@ -1,0 +1,28 @@
+# Dra. Ana Luiza M. Rocha - Coloproctologia em Curitiba (PR)
+
+> Site oficial com conteúdo educativo sobre saúde intestinal, prevenção, diagnóstico e opções de tratamento em coloproctologia.
+
+Conteúdo voltado principalmente para pacientes de Curitiba e região metropolitana, além de médicos encaminhadores.
+
+## Páginas principais
+- [Início](https://www.analuizarocha.com.br/): Visão geral do atendimento em coloproctologia em Curitiba.
+- [Tratamentos](https://www.analuizarocha.com.br/tratamentos): Hub principal dos tratamentos e procedimentos.
+- [Blog](https://www.analuizarocha.com.br/blog): Artigos educativos com foco em dúvidas frequentes.
+- [Sobre](https://www.analuizarocha.com.br/sobre): Credenciais médicas, formação e contexto clínico.
+
+## Tratamentos prioritários
+- [Hemorroidas](https://www.analuizarocha.com.br/tratamentos/hemorroidas): Sintomas, diagnóstico e opções de tratamento.
+- [Cirurgia a laser](https://www.analuizarocha.com.br/tratamentos/cx-laser): Procedimentos proctológicos com tecnologia a laser.
+- [Fístulas anorretais](https://www.analuizarocha.com.br/tratamentos/cx-fistulas-anorretais): Avaliação e manejo cirúrgico especializado.
+- [Cisto pilonidal](https://www.analuizarocha.com.br/tratamentos/cx-cisto-pilonidal): Abordagens terapêuticas e recuperação.
+- [Doenças inflamatórias intestinais](https://www.analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais): Diagnóstico e acompanhamento clínico.
+- [HPV anal](https://www.analuizarocha.com.br/tratamentos/hpv-anal): Rastreio, monitoramento e tratamento.
+- [Rastreio de câncer anal](https://www.analuizarocha.com.br/tratamentos/rastreio-cancer-anal): Fatores de risco e prevenção.
+- [Síndrome do intestino irritável](https://www.analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel): Sintomas e tratamento multidisciplinar.
+- [Toxina botulínica](https://www.analuizarocha.com.br/tratamentos/toxina-botulinica): Indicações e expectativas de resultado.
+
+## Fontes técnicas
+- [Sitemap](https://www.analuizarocha.com.br/sitemap.xml): Inventário canônico de URLs para descoberta de conteúdo.
+
+## Opcional
+- [Política de privacidade](https://www.analuizarocha.com.br/politica-privacidade): Informações legais e de proteção de dados.
