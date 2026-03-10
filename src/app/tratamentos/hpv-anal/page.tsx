@@ -4,6 +4,8 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
+import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
@@ -162,6 +164,9 @@ export default function TratamentoHpvAnalPage() {
               </p>
             </header>
 
+            <TreatmentHeroImage slug="hpv-anal" />
+
+
             <main className="prose prose-lg max-w-none mb-12">
               <p>
                 Essas lesões podem provocar desconforto, sangramento, coceira e, em alguns casos,
@@ -271,6 +276,8 @@ export default function TratamentoHpvAnalPage() {
                 a melhor estratégia, garantir segurança no tratamento e reduzir o risco de
                 recidivas.
               </p>
+
+              <RelatedBlogCard treatmentSlug="hpv-anal" />
 
               <h2>Perguntas frequentes (FAQ)</h2>
 

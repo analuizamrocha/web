@@ -1,358 +1,79 @@
 # SEO Keywords Tracking Guide
 **Website:** https://www.analuizarocha.com.br/
-**Last Updated:** 2025-11-20
-**Purpose:** 50 core keywords for tracking in GSC, Ahrefs, SEMrush
+**Last Updated:** 2026-03-10
+**Purpose:** Mapa de keywords extraído do conteúdo atual do site para rastreamento contínuo.
 
----
+## Source Of Truth
+- `docs/seo-keywords-tracking.csv`
+- Fontes incluídas no dataset:
+- `content/posts/*.md`
+- `src/app/blog/page.tsx`
+- `src/app/tratamentos/page.tsx`
+- `src/app/tratamentos/**/page.tsx`
+- `src/app/layout.tsx`
+- `src/app/sobre/page.tsx`
+- `src/components/sections/AboutSection.tsx`
+- `src/components/sections/ServicesSection.tsx`
+- `src/components/sections/MissionSection.tsx`
+- `src/components/sections/PhotoSection.tsx`
+- `src/components/sections/TreatmentsSection.tsx`
+- `src/components/sections/LocationsSection.tsx`
+- Copy adicional da landing enviada pelo time
 
-## Quick Copy-Paste: 50 Keywords for SEO Tools
+## Snapshot Atual
+- 365 linhas de keyword + URL
+- 328 keywords únicas
+- Distribuição por prioridade:
+- `P1`: 68
+- `P2`: 118
+- `P3`: 179
+- Distribuição por tipo de conteúdo:
+- `blog-post`: 228
+- `blog-hub`: 8
+- `treatment-page`: 62
+- `treatment-hub`: 7
+- `landing-page`: 40
+- `doctor-profile`: 20
 
-```
-coloproctologista curitiba, proctologista curitiba, dra ana luiza moraes rocha, coloproctologista em curitiba, proctologista em curitiba, médica coloproctologista curitiba, cirurgia colorretal curitiba, coloproctologista batel curitiba, consulta coloproctologista curitiba, agendar coloproctologista curitiba, tratamento hemorroidas curitiba, cirurgia hemorroidas curitiba, fissura anal curitiba, cisto pilonidal curitiba, plicoma anal curitiba, fistula anal curitiba, hpv anal curitiba, sangue nas fezes curitiba, coceira anal curitiba, dor ao evacuar curitiba, cirurgia laser curitiba, ligadura elástica curitiba, THD curitiba, toxina botulínica fissura anal, laser hemorroidas curitiba, laser fístula anal curitiba, cirurgia minimamente invasiva curitiba, anuscopia alta resolução curitiba, hemorroidoplastia laser curitiba, LIFT fístula curitiba, quando procurar coloproctologista, sintomas coloproctologia, o que é plicoma anal, hemorroida precisa cirurgia, sangramento anal é grave, fissura anal tratamento, cisto pilonidal tratamento, constipação intestinal crônica, doenças inflamatórias intestinais, síndrome intestino irritável, melhor coloproctologista curitiba, coloproctologista que aceita convenio curitiba, quanto custa cirurgia hemorroida curitiba, hemorroida externa inflamada tratamento, fissura anal crônica sem cirurgia, cisto pilonidal inflamado o que fazer, coloproctologista feminina curitiba, médica proctologista curitiba, emergência proctológica curitiba, rastreio câncer anal curitiba
-```
+## Novos Grupos Adicionados
+- `landing-page` com `target_url` `/`
+- `doctor-profile` com `target_url` `/sobre`
 
----
+## Quick Copy-Paste: Landing + Marca (P1)
 
-## Keywords by Priority Level
-
-### Priority 1: High Commercial Intent (Track Weekly)
-
-**Local + Specialty:**
-- coloproctologista curitiba
-- proctologista curitiba
-- coloproctologista em curitiba
-- proctologista em curitiba
-- médica coloproctologista curitiba
-- cirurgia colorretal curitiba
-- coloproctologista batel curitiba
-- consulta coloproctologista curitiba
-- agendar coloproctologista curitiba
-
-**Why these matter:** Direct conversion intent. People searching these terms are looking to book an appointment.
-
-**Current Status:**
-- ✅ Homepage optimized for "coloproctologista curitiba"
-- 🎯 Need to add "consulta" and "agendar" variations
-
----
-
-### Priority 2: Condition + Location (Track Weekly)
-
-**Treatment-Focused:**
-- tratamento hemorroidas curitiba
-- cirurgia hemorroidas curitiba
-- fissura anal curitiba
-- cisto pilonidal curitiba
-- plicoma anal curitiba
-- fistula anal curitiba
-- hpv anal curitiba
-- sangue nas fezes curitiba
-- coceira anal curitiba
-- dor ao evacuar curitiba
-
-**Why these matter:** High buying intent. Patients with specific conditions actively seeking treatment.
-
-**Current Status:**
-- ✅ Treatment pages exist for most conditions
-- 🎯 Need blog posts for each to build topical authority
-
----
-
-### Priority 3: Procedure Keywords (Track Biweekly)
-
-**Specific Treatments:**
-- cirurgia laser curitiba
-- ligadura elástica curitiba
-- THD curitiba
-- toxina botulínica fissura anal
-- laser hemorroidas curitiba
-- laser fístula anal curitiba
-- cirurgia minimamente invasiva curitiba
-- anuscopia alta resolução curitiba
-- hemorroidoplastia laser curitiba
-- LIFT fístula curitiba
-
-**Why these matter:** Educated patients researching specific procedures before booking.
-
-**Current Status:**
-- ✅ Treatment pages cover most procedures
-- 🎯 Add procedure-focused blog posts (e.g., "Toxina Botulínica para Fissura: Como Funciona")
-
----
-
-### Priority 4: Informational (Track Monthly)
-
-**Awareness Stage:**
-- quando procurar coloproctologista
-- sintomas coloproctologia
-- o que é plicoma anal
-- hemorroida precisa cirurgia
-- sangramento anal é grave
-- fissura anal tratamento
-- cisto pilonidal tratamento
-- constipação intestinal crônica
-- doenças inflamatórias intestinais
-- síndrome intestino irritável
-
-**Why these matter:** Top of funnel. High volume, lower conversion, but builds authority and captures early-stage patients.
-
-**Current Status:**
-- ✅ Some blog posts published
-- 🎯 Need 30+ more educational posts
-
----
-
-### Priority 5: Long-Tail Conversions (Track Monthly)
-
-**High Intent, Low Volume:**
-- melhor coloproctologista curitiba
-- coloproctologista que aceita convenio curitiba
-- quanto custa cirurgia hemorroida curitiba
-- hemorroida externa inflamada tratamento
-- fissura anal crônica sem cirurgia
-- cisto pilonidal inflamado o que fazer
-- coloproctologista feminina curitiba
-- médica proctologista curitiba
-- emergência proctológica curitiba
-- rastreio câncer anal curitiba
-
-**Why these matter:** Super targeted. Low competition, high conversion rate.
-
-**Current Status:**
-- 🎯 Most missing from content
-- 🎯 Add to blog posts and FAQs
-
----
-
-## Keywords by Page (Current Implementation)
-
-### Homepage (/)
-**Primary Keywords:**
-- coloproctologista curitiba ✅
-- proctologista curitiba ✅
-- cirurgia colorretal curitiba ✅
-
-**Missing Keywords to Add:**
-- consulta coloproctologista curitiba 🎯
-- agendar coloproctologista curitiba 🎯
-- médica coloproctologista curitiba 🎯
-
----
-
-### Blog Listing (/blog)
-**Primary Keywords:**
-- blog coloproctologia ✅
-- artigos coloproctologista curitiba ✅
-- saúde intestinal ✅
-
----
-
-### Treatment Pages
-
-#### /tratamentos/hemorroidas
-**Primary Keywords:**
-- tratamento hemorroidas curitiba ✅
-- cirurgia hemorroidas curitiba ✅
-- ligadura elástica curitiba ✅
-- THD curitiba ✅
-
-#### /tratamentos/cx-fistulas-anorretais
-**Primary Keywords:**
-- cirurgia fistula anal curitiba ✅
-- fistulotomia curitiba ✅
-- LIFT cirurgia curitiba ✅
-
-#### /tratamentos/toxina-botulinica
-**Primary Keywords:**
-- toxina botulínica fissura anal ✅
-- botox fissura anal curitiba ✅
-
-#### /tratamentos/cx-cisto-pilonidal
-**Primary Keywords:**
-- cirurgia cisto pilonidal curitiba ✅
-- cisto pilonidal laser curitiba ✅
-
-#### /tratamentos/hpv-anal
-**Primary Keywords:**
-- hpv anal tratamento curitiba ✅
-- condiloma anal curitiba ✅
-
----
-
-## Missing High-Value Keywords to Add
-
-### 1. Consultation/Booking Keywords (High Priority)
-```
-consulta coloproctologista curitiba
-agendar coloproctologista curitiba
-coloproctologista particular curitiba
-marcar consulta proctologista curitiba
+```txt
+consulta coloproctologista curitiba, agendar consulta coloproctologista curitiba, coloproctologista curitiba batel, proctologista curitiba batel, cirurgia colorretal curitiba, proctologia curitiba, consultório médico coloproctologia curitiba, clínica nassif batel curitiba, cirurgias a laser proctologia curitiba, ligadura elástica para hemorroidas curitiba, toxina botulínica para fissura anal curitiba, rastreio câncer de canal anal curitiba, tratamento de hpv curitiba, dra ana luiza moraes rocha coloproctologista curitiba, dra ana luiza moraes rocha proctologista curitiba, crm-pr 45351, rqe 36221
 ```
 
-**Where to add:**
-- Homepage CTA buttons
-- Header navigation
-- Footer contact section
-- Blog post CTAs
+## Quick Copy-Paste: Doctor Profile Keywords
 
----
-
-### 2. Insurance/Payment Keywords (Medium Priority)
-```
-coloproctologista que aceita unimed curitiba
-coloproctologista convenio curitiba
-valor consulta coloproctologista curitiba
-quanto custa cirurgia hemorroida curitiba
+```txt
+dra ana luiza moraes rocha, dra ana luiza m rocha, ana luiza moraes rocha, ana luiza rocha coloproctologista, proctologista dra ana luiza curitiba, médica coloproctologista curitiba, crm pr 45351, rqe 36221 coloproctologia, crm pr 45351 rqe 36221, puc-pr medicina, hospital santa casa de curitiba cirurgia geral, hospital universitário evangélico mackenzie coloproctologia, mestranda ufpr clínica cirúrgica, international anal neoplasia society, membro ians coloproctologia, fellow cirurgia colorretal barcelona, hospital clinic barcelona cirurgia colorretal, anuscopia de alta resolução curitiba
 ```
 
-**Where to add:**
-- FAQ section on treatment pages
-- Dedicated "Convênios" page
-- Blog post about costs/insurance
+## Como Rastrear O Que Os Usuários Estão Trazendo (Queries Reais)
+1. Abrir Google Search Console em `Performance > Search results`.
+2. Aplicar filtro de página `Page: exactly https://www.analuizarocha.com.br/` para landing.
+3. Aplicar filtro de página `Page: exactly https://www.analuizarocha.com.br/sobre` para perfil médico.
+4. Ir na aba `Queries` e exportar últimos 28 dias e 3 meses.
+5. Cruzar com `docs/seo-keywords-tracking.csv` usando `keyword` e `target_url`.
+6. Priorizar queries com alta impressão e CTR baixo para otimização de título/meta.
 
----
+## Segmentos Recomendados De Query (Regex)
+- Marca médica: `ana luiza|dra ana|moraes rocha|crm|rqe`
+- Local/intenção de consulta: `curitiba|batel|consulta|agendar|proctologista|coloproctologista`
+- Condição/sintoma: `hemorroid|fissura|fístula|coceira|hpv|cisto|constipa|diarreia|intestino irritável|crohn|retocolite`
 
-### 3. Demographic Keywords (Medium Priority)
-```
-coloproctologista feminina curitiba
-médica proctologista curitiba
-coloproctologista mulher curitiba
-```
+## Colunas Do CSV
+- `keyword`: termo rastreado
+- `cluster`: tema central
+- `content_type`: `blog-post`, `blog-hub`, `treatment-page`, `treatment-hub`, `landing-page`, `doctor-profile`
+- `source`: origem do termo
+- `intent`: `awareness`, `consideration`, `decision`
+- `audience`: público-alvo
+- `target_url`: URL recomendada para ranquear
+- `priority`: `P1`, `P2`, `P3`
 
-**Where to add:**
-- About page H2/H3 headings
-- Homepage "Sobre a Dra. Ana Luiza" section
-- Meta descriptions
-
----
-
-### 4. Exam/Procedure Detail Keywords (Low Priority)
-```
-anuscopia de alta resolução curitiba
-exame proctológico curitiba
-retossigmoidoscopia curitiba
-colonoscopia curitiba
-```
-
-**Where to add:**
-- Blog posts about each exam type
-- Treatment pages (diagnostic section)
-
----
-
-## Keyword Tracking Setup
-
-### Google Search Console
-1. Go to Performance report
-2. Filter by query
-3. Create custom reports for each priority group
-4. Export data monthly
-
-**Metrics to Track:**
-- Average position
-- Total clicks
-- Total impressions
-- CTR
-
-**Goal:**
-- 80% of Priority 1-2 keywords in top 20 within 6 months
-- 50% of Priority 1 keywords in top 10 within 12 months
-
----
-
-### Ahrefs/SEMrush Setup
-1. Add website to project
-2. Create keyword lists for each priority group
-3. Set up rank tracking for all 50 keywords
-4. Enable email alerts for ranking changes (±3 positions)
-
-**Refresh frequency:**
-- Priority 1-2: Daily
-- Priority 3-4: Weekly
-- Priority 5: Monthly
-
----
-
-## Monthly KPI Targets
-
-### Month 1-3 (Foundation)
-- **Rankings:** 20 keywords in top 50
-- **Traffic:** 500+ organic sessions/month
-- **Conversions:** 10+ form submissions or WhatsApp clicks
-
-### Month 4-6 (Growth)
-- **Rankings:** 30 keywords in top 30, 10 in top 10
-- **Traffic:** 1,000+ organic sessions/month
-- **Conversions:** 25+ form submissions or WhatsApp clicks
-
-### Month 7-12 (Dominance)
-- **Rankings:** 40 keywords in top 20, 20 in top 10, 5 in top 3
-- **Traffic:** 2,500+ organic sessions/month
-- **Conversions:** 50+ form submissions or WhatsApp clicks
-
----
-
-## Competitor Benchmark Keywords
-
-Track these to monitor competitive positioning:
-
-```
-coloproctologista em curitiba avaliação
-melhor proctologista de curitiba
-coloproctologista curitiba preço
-cirurgia hemorroidas curitiba preço
-coloproctologista 24 horas curitiba
-pronto atendimento proctológico curitiba
-```
-
-**Competitive Analysis (Quarterly):**
-1. Identify top 3 competitors in GSC
-2. Compare keyword overlap
-3. Find gaps where they rank and you don't
-4. Create content to fill gaps
-
----
-
-## How to Use This Document
-
-### Weekly Review:
-- Check Priority 1-2 keyword rankings
-- Identify any major position drops (>5 positions)
-- Review top-performing pages and optimize similar content
-
-### Monthly Review:
-- Export GSC data for all 50 keywords
-- Track progress toward KPI targets
-- Update content plan based on ranking gaps
-- Rewrite meta descriptions for low-CTR pages
-
-### Quarterly Review:
-- Full competitor analysis
-- Refresh keyword list (add new opportunities)
-- Audit content performance (update underperforming posts)
-- Review backlink profile
-
----
-
-## Quick Reference: Keyword Integration Checklist
-
-For every new page/post:
-
-- [ ] Primary keyword in H1
-- [ ] Primary keyword in first 100 words
-- [ ] Primary keyword in URL slug
-- [ ] Primary keyword in meta title
-- [ ] Primary keyword + "Curitiba" in meta description
-- [ ] 2-3 secondary keywords in H2/H3 headings
-- [ ] LSI keywords naturally throughout content
-- [ ] Location modifier in at least 3 places
-- [ ] Internal links with keyword-rich anchor text
-
----
-
-**Last Updated:** 2025-11-20
-**Next Review:** 2026-02-20
-
-**Related Documents:**
-- `seo-strategy-implementation.md` - Overall SEO strategy and execution plan
-- `blog-content-roadmap.md` - Detailed blog post outlines (if needed for reference)
+## Observações
+- Não é possível identificar query por usuário individual no GSC; os dados são agregados por consulta/página/período.
+- O dataset foi expandido para incluir marca pessoal, credenciais profissionais e sinais da landing page.

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { Badge } from '@/components/ui/Badge'
@@ -96,32 +97,54 @@ export default function BlogPage() {
               </p>
             </div>
           ) : (
-            <div className="mx-auto max-w-4xl space-y-8 lg:space-y-12">
+            <div className="mx-auto max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
               {posts.map((post) => (
                 <article
                   key={post.slug}
-                  className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 hover:border-secondary/30 transition-all duration-300 shadow-sm hover:shadow-md group"
+                  className="group overflow-hidden rounded-3xl border border-secondary/20 bg-card-bg shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-secondary/35 hover:shadow-lg"
                 >
-                  <div className="mb-6">
-                    <div className="flex items-center gap-4 text-sm text-secondary mb-4">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-secondary/15">
+                    {post.cardImage ? (
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="absolute inset-0 block"
+                        aria-label={`Abrir artigo: ${post.title}`}
+                      >
+                        <Image
+                          src={post.cardImage.src}
+                          alt={post.cardImage.alt}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(min-width: 1280px) 36rem, (min-width: 768px) 50vw, 100vw"
+                        />
+                      </Link>
+                    ) : (
+                      <div className="h-full w-full bg-gradient-to-br from-secondary/35 via-background to-secondary/5" />
+                    )}
+                  </div>
+
+                  <div className="p-5 lg:p-6">
+                    <div className="mb-3 flex items-center gap-4 text-sm text-text-muted">
                       <time dateTime={post.publishDate}>
-                        {new Date(post.publishDate).toLocaleDateString('pt-BR')}
+                        {new Date(post.publishDate).toLocaleDateString('pt-BR', {
+                          timeZone: 'UTC',
+                        })}
                       </time>
                       {post.readingTime && (
                         <span>{post.readingTime} min de leitura</span>
                       )}
                     </div>
 
-                    <h2 className="text-2xl lg:text-3xl font-serif font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    <h2 className="mb-3 text-2xl font-serif font-bold text-primary transition-colors group-hover:text-primary/90">
                       <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </h2>
 
-                    <div className="prose prose-lg max-w-none mb-6">
+                    <div className="prose prose-sm mb-5 max-w-none text-text-body [&_p]:mb-0">
                       <MDXRemote source={post.excerpt} />
                     </div>
 
-                    <div className="flex items-center justify-between">
-                      <div className="flex flex-wrap gap-2 mr-4">
+                    <div className="flex items-end justify-between gap-4">
+                      <div className="mr-4 flex flex-wrap gap-2">
                         <Badge variant="primary">
                           {getContentIntentLabel(post.intent)}
                         </Badge>
@@ -132,7 +155,7 @@ export default function BlogPage() {
 
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="text-primary hover:text-primary/80 font-medium transition-colors text-lg text-nowrap"
+                        className="text-nowrap font-medium text-primary transition-colors hover:text-primary/80"
                       >
                         Ler artigo →
                       </Link>

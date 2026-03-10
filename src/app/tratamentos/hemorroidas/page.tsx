@@ -4,6 +4,8 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
+import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
@@ -163,6 +165,9 @@ export default function TratamentoHemorroidasPage() {
                 dos sintomas e a resposta às medidas clínicas iniciais.
               </p>
             </header>
+
+            <TreatmentHeroImage slug="hemorroidas" />
+
 
             <main className="prose prose-lg max-w-none mb-12">
               <p>
@@ -336,6 +341,8 @@ export default function TratamentoHemorroidasPage() {
                 ambulatoriais até cirurgias minimamente invasivas, sempre com o
                 objetivo de oferecer segurança e qualidade de vida ao paciente.
               </p>
+
+              <RelatedBlogCard treatmentSlug="hemorroidas" />
 
               <h2>Perguntas frequentes (FAQ)</h2>
 

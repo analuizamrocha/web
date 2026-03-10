@@ -67,6 +67,14 @@ export interface FAQItem {
 }
 
 /**
+ * Blog card image metadata extracted from markdown body
+ */
+export interface BlogCardImage {
+  src: string
+  alt: string
+}
+
+/**
  * Blog post frontmatter metadata interface
  */
 export interface BlogPostMeta {
@@ -91,6 +99,7 @@ export interface BlogPostMeta {
 export interface BlogPost extends BlogPostMeta {
   content: string
   excerpt: string
+  cardImage?: BlogCardImage
 }
 
 /** Posts directory path */
@@ -196,6 +205,32 @@ function createExcerpt(content: string): string {
 }
 
 /**
+ * Extracts the first markdown image from the post body for card previews
+ * @param content - The markdown content
+ * @returns First image src/alt metadata when available
+ */
+function extractFirstImage(content: string): BlogCardImage | undefined {
+  const markdownImageRegex = /!\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)/m
+  const match = content.match(markdownImageRegex)
+
+  if (!match) {
+    return undefined
+  }
+
+  const altText = match[1]?.trim() || 'Imagem do artigo'
+  const src = match[2]?.trim().replace(/^<|>$/g, '')
+
+  if (!src) {
+    return undefined
+  }
+
+  return {
+    src,
+    alt: altText,
+  }
+}
+
+/**
  * Get a single blog post by its slug
  * @param slug - The post slug (filename without .md extension)
  * @returns Blog post data or null if not found
@@ -212,12 +247,14 @@ export function getPostBySlug(slug: string): BlogPost | null {
 
     const readingTime = calculateReadingTime(content)
     const excerpt = createExcerpt(content)
+    const cardImage = extractFirstImage(content)
 
     return {
       slug,
       content,
       excerpt,
       readingTime,
+      cardImage,
       ...data,
     } as BlogPost
   } catch (error) {

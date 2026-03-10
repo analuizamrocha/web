@@ -1,5 +1,6 @@
 import { LinkButton } from '@/components/ui/LinkButton'
 import { TreatmentCard } from '@/components/ui/TreatmentCard'
+import { getTreatmentImageBySlug } from '@/lib/treatment-images'
 
 const treatments = [
   {
@@ -66,15 +67,21 @@ export function TreatmentsSection() {
 
           {/* Smart Responsive Grid - Hides last item for even columns */}
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 xl:gap-7">
-            {treatments.map((treatment, index) => (
-              <TreatmentCard
-                key={treatment.slug}
-                title={treatment.name}
-                href={`/tratamentos/${treatment.slug}`}
-                variant="compact"
-                className={index === treatments.length - 1 ? 'sm:hidden lg:flex' : undefined}
-              />
-            ))}
+            {treatments.map((treatment, index) => {
+              const treatmentImage = getTreatmentImageBySlug(treatment.slug)
+
+              return (
+                <TreatmentCard
+                  key={treatment.slug}
+                  title={treatment.name}
+                  href={`/tratamentos/${treatment.slug}`}
+                  variant="compact"
+                  treatmentId={treatmentImage?.id}
+                  image={treatmentImage}
+                  className={index === treatments.length - 1 ? 'sm:hidden lg:flex' : undefined}
+                />
+              )
+            })}
           </div>
         </div>
 
