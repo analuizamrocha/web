@@ -77,3 +77,9 @@ dra ana luiza moraes rocha, dra ana luiza m rocha, ana luiza moraes rocha, ana l
 ## Observações
 - Não é possível identificar query por usuário individual no GSC; os dados são agregados por consulta/página/período.
 - O dataset foi expandido para incluir marca pessoal, credenciais profissionais e sinais da landing page.
+
+## Automação
+- Execução local/CI: `npm run seo:rank:pipeline`
+- Runbook completo: `docs/seo-rank-tracking-automation.md`
+- Histórico de snapshots para gráficos: `docs/serp-keywords-history.csv`
+- Banco canônico para BI: Supabase (`seo_keywords`, `seo_runs`, `seo_rank_history`)
