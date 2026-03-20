@@ -495,7 +495,7 @@ export default function SobrePage() {
             </div>
 
             {/* Principles Grid */}
-            <div className="bg-gradient-to-b from-muted/20 to-transparent rounded-3xl p-8 lg:p-12">
+            <div className="bg-gradient-to-b from-muted/20 to-transparent rounded-3xl p-4 sm:p-8 lg:p-12">
               <h3 className="text-2xl lg:text-3xl font-serif font-bold text-primary mb-8 text-center">
                 Meus princípios de atuação
               </h3>
