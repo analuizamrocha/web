@@ -34,14 +34,18 @@ export function Header() {
   } = useMobileMenu()
 
   const handleNavClick = (href: string) => {
-    // Only use scroll navigation for hash fragments on homepage
+    setMobileMenuOpen(false)
+
     if (isRootPage && href.startsWith('#')) {
-      scrollToSection(href)
+      // Wait for body scroll lock cleanup before measuring positions
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          scrollToSection(href)
+        })
+      })
     } else {
-      // For external routes, use Next.js router
       router.push(href)
     }
-    setMobileMenuOpen(false)
   }
 
   const handleMobileNavClick = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
