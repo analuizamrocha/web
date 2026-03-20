@@ -379,18 +379,10 @@
     @apply text-sm leading-relaxed max-w-[60ch];
   }
 
-  /* Add scroll margin to sections to account for fixed header */
-  section, 
+  /* Add scroll margin to sections to account for fixed header (69px) + breathing room (24px) */
+  section,
   [id] {
-    scroll-margin-top: 100px; /* Increased to account for actual header height + padding */
-  }
-  
-  /* Responsive scroll margin for mobile devices */
-  @media (max-width: 768px) {
-    section, 
-    [id] {
-      scroll-margin-top: 100px;
-    }
+    scroll-margin-top: 93px;
   }
 
   /* Screen reader only utility class */

@@ -14,7 +14,7 @@ export function useActiveSection(isRootPage: boolean) {
 
     const observerOptions = {
       root: null,
-      rootMargin: '-100px 0px -40% 0px',
+      rootMargin: '-93px 0px -40% 0px',
       threshold: [0.1, 0.3, 0.5],
     }
 
@@ -49,10 +49,13 @@ export function useActiveSection(isRootPage: boolean) {
     if (href.startsWith('#')) {
       const element = document.getElementById(href.slice(1))
       if (element) {
-        const headerHeight = 80 // Fixed header height
+        // Dynamically measure header + add breathing room to match CSS scroll-margin-top
+        const header = document.querySelector('header')
+        const headerHeight = header ? header.getBoundingClientRect().height : 69
+        const scrollPadding = 24 // breathing room below header
         const elementPosition =
           element.getBoundingClientRect().top + window.pageYOffset
-        const offsetPosition = elementPosition - headerHeight
+        const offsetPosition = elementPosition - headerHeight - scrollPadding
 
         window.scrollTo({
           top: offsetPosition,
