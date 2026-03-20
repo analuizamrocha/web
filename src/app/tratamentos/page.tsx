@@ -6,9 +6,9 @@ import { TreatmentCard } from '@/components/ui/TreatmentCard'
 import { getTreatmentImageBySlug } from '@/lib/treatment-images'
 
 export const metadata: Metadata = {
-  title: 'Tratamentos de Coloproctologia em Curitiba',
+  title: 'Tratamentos em Coloproctologia',
   description:
-    'Tratamentos especializados em coloproctologia: cirurgias a laser, tratamento de hemorroidas, fístulas anorretais e muito mais em Curitiba.',
+    'Do diagnóstico ao pós-operatório: cirurgia a laser, hemorroidas, fístulas, cisto pilonidal, HPV anal e doenças inflamatórias intestinais. Conheça cada abordagem.',
   keywords: [
     'coloproctologia curitiba',
     'cirurgia hemorroidas curitiba',
