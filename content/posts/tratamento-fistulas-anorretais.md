@@ -2,8 +2,8 @@
 title: 'Tratamento de fístulas anorretais'
 metaDescription: 'Entenda sintomas, diagnóstico e opções de tratamento para fístula anal com foco em segurança, preservação da continência e menor recorrência.'
 slug: 'tratamento-fistulas-anorretais'
-publishDate: '2026-02-20'
-lastModified: '2026-02-20'
+publishDate: '2026-03-05'
+lastModified: '2026-03-05'
 primaryKeyword: 'fístula anal'
 secondaryKeywords:
   - 'fístulas anorretais'

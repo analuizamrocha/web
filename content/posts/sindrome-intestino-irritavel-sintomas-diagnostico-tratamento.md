@@ -2,8 +2,8 @@
 title: 'Síndrome do Intestino Irritável (SII): sintomas, diagnóstico e tratamento personalizado'
 metaDescription: 'Entenda os sintomas da Síndrome do Intestino Irritável (SII), como é feito o diagnóstico e quais tratamentos personalizados ajudam no controle intestinal.'
 slug: 'sindrome-intestino-irritavel-sintomas-diagnostico-tratamento'
-publishDate: '2026-02-20'
-lastModified: '2026-02-20'
+publishDate: '2026-02-23'
+lastModified: '2026-02-23'
 primaryKeyword: 'síndrome do intestino irritável'
 secondaryKeywords:
   - 'SII sintomas'

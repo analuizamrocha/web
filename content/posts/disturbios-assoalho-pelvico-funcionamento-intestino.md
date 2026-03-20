@@ -2,8 +2,8 @@
 title: 'Distúrbios do assoalho pélvico: quando a musculatura interfere no funcionamento do intestino'
 metaDescription: 'Entenda sintomas, diagnóstico e tratamento dos distúrbios do assoalho pélvico, como evacuação incompleta, constipação e escapes fecais.'
 slug: 'disturbios-assoalho-pelvico-funcionamento-intestino'
-publishDate: '2026-02-20'
-lastModified: '2026-02-20'
+publishDate: '2026-02-26'
+lastModified: '2026-02-26'
 primaryKeyword: 'distúrbios do assoalho pélvico'
 secondaryKeywords:
   - 'incontinencia fecal'

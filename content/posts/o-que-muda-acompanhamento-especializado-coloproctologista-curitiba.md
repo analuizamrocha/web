@@ -2,8 +2,8 @@
 title: 'O que muda quando você tem acompanhamento especializado?'
 metaDescription: 'Entenda por que o acompanhamento especializado com coloproctologista em Curitiba melhora diagnóstico, reduz recorrências e traz mais previsibilidade no cuidado intestinal.'
 slug: 'o-que-muda-acompanhamento-especializado-coloproctologista-curitiba'
-publishDate: '2026-02-24'
-lastModified: '2026-02-24'
+publishDate: '2026-03-09'
+lastModified: '2026-03-09'
 primaryKeyword: 'acompanhamento especializado'
 secondaryKeywords:
   - 'coloproctologista em Curitiba'
@@ -27,6 +27,8 @@ faqs:
 ---
 
 _Quando o cuidado deixa de ser pontual e passa a ser estratégico, sintomas recorrentes dão lugar a controle, prevenção e segurança._
+
+![Consulta com coloproctologista mostrando modelo anatômico do cólon ao paciente](/images/posts/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba/consulta-coloproctologista-modelo-colon.png)
 
 Muitos pacientes procuram ajuda quando a dor aperta.
 

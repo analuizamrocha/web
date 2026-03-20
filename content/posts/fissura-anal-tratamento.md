@@ -2,7 +2,7 @@
 title: 'Fissura anal: sintomas, tratamentos e como a coloproctologia pode ajudar'
 metaDescription: 'Fissura anal causa dor intensa ao evacuar. Conheça sintomas, tratamentos clínicos, botox e cirurgia com coloproctologista em Curitiba.'
 slug: 'fissura-anal-tratamento'
-publishDate: '2025-12-02'
+publishDate: '2025-12-12'
 lastModified: '2026-02-14'
 primaryKeyword: 'fissura anal'
 secondaryKeywords:

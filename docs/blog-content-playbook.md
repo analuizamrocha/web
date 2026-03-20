@@ -54,6 +54,18 @@ Example:
 _Com avaliação precoce e acompanhamento adequado, sintomas intestinais podem ser tratados com mais segurança e previsibilidade._
 ```
 
+## Capitalization Rules
+
+Use **sentence case** for titles and all headings (`##`, `###`):
+
+- Capitalize only the first word and proper nouns (e.g., Curitiba, HPV, SII).
+- Do **not** use Title Case (e.g., "Quando a Cirurgia Pode Ser Indicada").
+- Correct: `Quando a cirurgia pode ser indicada`
+- Correct: `Coceira no ânus: o que pode ser?`
+- Incorrect: `Coceira no Ânus: O Que Pode Ser?`
+
+This applies to: `title` in frontmatter, `##` headings, and `###` subheadings.
+
 ## Body Conventions
 
 - Prefer `##` section headings.

@@ -2,8 +2,8 @@
 title: 'Quando o intestino dá sinais de alerta?'
 metaDescription: 'Saiba quais sinais intestinais exigem atenção, quando observar e quando procurar um coloproctologista em Curitiba para avaliação especializada.'
 slug: 'quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba'
-publishDate: '2026-02-24'
-lastModified: '2026-02-24'
+publishDate: '2026-03-11'
+lastModified: '2026-03-11'
 primaryKeyword: 'sinais de alerta intestinais'
 secondaryKeywords:
   - 'sangue nas fezes'
@@ -27,6 +27,8 @@ faqs:
 ---
 
 _Sintomas intestinais persistentes não devem ser ignorados: investigar cedo permite tratamento mais simples, seguro e eficaz._
+
+![Mulher com desconforto abdominal identificando sinais de alerta intestinais](/images/posts/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba/desconforto-intestinal-sinais-alerta.png)
 
 Muitas pessoas esperam a dor piorar.
 Esperam o sangramento aumentar.

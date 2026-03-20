@@ -2,7 +2,7 @@
 title: 'Constipação intestinal crônica: causas, tratamentos e quando procurar especialista'
 metaDescription: 'Constipação intestinal crônica tem tratamento. Descubra as causas da prisão de ventre, sinais de alerta e quando procurar um coloproctologista.'
 slug: 'constipacao-intestinal-cronica-causas-tratamento'
-publishDate: '2025-10-06'
+publishDate: '2025-10-10'
 lastModified: '2026-02-14'
 primaryKeyword: 'constipação intestinal crônica'
 secondaryKeywords:

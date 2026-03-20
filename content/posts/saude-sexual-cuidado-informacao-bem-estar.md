@@ -2,8 +2,8 @@
 title: 'Saúde sexual: cuidado, informação e bem-estar'
 metaDescription: 'Saiba quando procurar avaliação para dor, desconforto, lesões e dúvidas sobre saúde sexual com abordagem acolhedora e técnica em coloproctologia.'
 slug: 'saude-sexual-cuidado-informacao-bem-estar'
-publishDate: '2026-02-20'
-lastModified: '2026-02-20'
+publishDate: '2026-03-01'
+lastModified: '2026-03-01'
 primaryKeyword: 'saúde sexual'
 secondaryKeywords:
   - 'dor na relação sexual'
