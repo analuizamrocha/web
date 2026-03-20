@@ -190,28 +190,15 @@
     color: var(--color-text-body) !important;
   }
 
-  .prose a {
+  .prose a:not(:where(.not-prose, .not-prose *)) {
     color: var(--color-primary) !important;
     font-weight: 500 !important;
     text-decoration: none !important;
     transition: all 0.2s ease !important;
   }
 
-  .prose a:hover {
+  .prose a:not(:where(.not-prose, .not-prose *)):hover {
     text-decoration: underline !important;
-  }
-
-  /* Reset prose a styles inside not-prose containers (e.g. RelatedBlogCard) */
-  .prose .not-prose a {
-    color: inherit !important;
-    font-weight: inherit !important;
-    text-decoration: inherit !important;
-    transition: inherit !important;
-  }
-
-  .prose .not-prose a:hover {
-    color: inherit !important;
-    text-decoration: inherit !important;
   }
 
   .prose blockquote {
