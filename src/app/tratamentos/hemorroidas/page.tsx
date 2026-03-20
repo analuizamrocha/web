@@ -21,9 +21,9 @@ import {
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 
-const pageTitle = 'Hemorroidas: Tratamento em Curitiba'
+const pageTitle = 'Hemorroidas — quando tratar e como funciona'
 const pageDescription =
-  'Tratamentos especializados para hemorroidas: ligadura elástica, escleroterapia, cirurgia laser e THD em Curitiba. Procedimentos ambulatoriais e cirúrgicos.'
+  'Ligadura elástica, escleroterapia, laser e THD. Entenda cada opção, quando a cirurgia é necessária e o que esperar da recuperação.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/hemorroidas`
 
 export const metadata: Metadata = {

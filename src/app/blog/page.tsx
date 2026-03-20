@@ -13,12 +13,12 @@ import {
   WHATSAPP_MSG_TEXT_ENCODED,
 } from '@/lib/constants'
 
-const BLOG_PAGE_TITLE = 'Blog de Coloproctologia e Saúde Intestinal'
+const BLOG_PAGE_TITLE = 'Blog — Saúde intestinal sem tabu'
 
 export const metadata: Metadata = {
   title: BLOG_PAGE_TITLE,
   description:
-    'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
+    'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
   keywords: [
     'blog coloproctologia',
     'artigos coloproctologista curitiba',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: BLOG_PAGE_TITLE,
     description:
-      'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
+      'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
     type: 'website',
     locale: 'pt_BR',
     url: `${WEBSITE_URL}/blog`,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: BLOG_PAGE_TITLE,
     description:
-      'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
+      'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
     creator: TAG_INSTAGRAM,
     site: TAG_INSTAGRAM,
     images: [`${WEBSITE_URL}/og-image.jpg`],
