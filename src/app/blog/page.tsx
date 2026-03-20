@@ -2,13 +2,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { Badge } from '@/components/ui/Badge'
+import { LinkButton } from '@/components/ui/LinkButton'
 import {
   getAllPosts,
   getTargetAudienceLabel,
   getContentIntentLabel,
 } from '@/lib/blog'
 import type { Metadata } from 'next'
-import { WEBSITE_URL, SITE_NAME, TAG_INSTAGRAM } from '@/lib/constants'
+import { WEBSITE_URL, SITE_NAME, TAG_INSTAGRAM, WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 const BLOG_PAGE_TITLE = 'Blog de Coloproctologia e Saúde Intestinal'
 
@@ -165,6 +166,40 @@ export default function BlogPage() {
               ))}
             </div>
           )}
+
+          {/* CTA block — routes reader to /sobre for internal link value */}
+          <div className="mx-auto max-w-6xl mt-16 lg:mt-20">
+            <div className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 text-center">
+              <h2 className="text-2xl lg:text-3xl font-serif font-bold text-primary mb-4">
+                Quer conhecer a especialista por trás dos artigos?
+              </h2>
+              <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-8 max-w-2xl mx-auto">
+                Conheça a formação, os valores e a abordagem da Dra. Ana Luiza.
+                Atendimento humanizado com a mais alta qualidade técnica em coloproctologia.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <LinkButton
+                  href="/sobre"
+                  size="lg"
+                  variant="primary"
+                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  Conhecer a Dra. Ana Luiza
+                </LinkButton>
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  size="lg"
+                  variant="outline"
+                  external
+                  newTab
+                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl"
+                  aria-label="Agendar consulta com a Dra. Ana Luiza Moraes Rocha pelo WhatsApp"
+                >
+                  Agendar consulta
+                </LinkButton>
+              </div>
+            </div>
+          </div>
 
           <div className="pt-8 lg:pt-12 text-center">
             <Link
