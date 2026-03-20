@@ -190,15 +190,15 @@
     color: var(--color-text-body) !important;
   }
 
-  .prose a:not(:where(.not-prose, .not-prose *)) {
-    color: var(--color-primary) !important;
-    font-weight: 500 !important;
-    text-decoration: none !important;
-    transition: all 0.2s ease !important;
+  .prose a {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
   }
 
-  .prose a:not(:where(.not-prose, .not-prose *)):hover {
-    text-decoration: underline !important;
+  .prose a:hover {
+    text-decoration: underline;
   }
 
   .prose blockquote {
