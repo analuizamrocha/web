@@ -27,7 +27,6 @@ export function RelatedBlogCard({ treatmentSlug }: RelatedBlogCardProps) {
           href={relatedBlog.href}
           variant="outline"
           size="default"
-          className="hover:text-white focus:text-white active:text-white"
         >
           Ver artigo no blog
         </LinkButton>

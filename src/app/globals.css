@@ -201,6 +201,19 @@
     text-decoration: underline !important;
   }
 
+  /* Reset prose a styles inside not-prose containers (e.g. RelatedBlogCard) */
+  .prose .not-prose a {
+    color: inherit !important;
+    font-weight: inherit !important;
+    text-decoration: inherit !important;
+    transition: inherit !important;
+  }
+
+  .prose .not-prose a:hover {
+    color: inherit !important;
+    text-decoration: inherit !important;
+  }
+
   .prose blockquote {
     border-left: 4px solid var(--color-border-subtle) !important;
     padding-left: 1.5rem !important;
