@@ -3,13 +3,15 @@ import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { Badge } from '@/components/ui/Badge'
 import { LinkButton } from '@/components/ui/LinkButton'
-import {
-  getAllPosts,
-  getTargetAudienceLabel,
-  getContentIntentLabel,
-} from '@/lib/blog'
+import { getAllPosts, getTargetAudienceLabel, getContentIntentLabel } from '@/lib/blog'
 import type { Metadata } from 'next'
-import { WEBSITE_URL, SITE_NAME, TAG_INSTAGRAM, WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import {
+  WEBSITE_URL,
+  SITE_NAME,
+  TAG_INSTAGRAM,
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+} from '@/lib/constants'
 
 const BLOG_PAGE_TITLE = 'Blog de Coloproctologia e Saúde Intestinal'
 
@@ -83,9 +85,8 @@ export default function BlogPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
               <p>
-                Aqui compartilho conhecimentos, dicas práticas e orientações
-                sobre coloproctologia para ajudar você a entender melhor sua
-                saúde intestinal
+                Aqui compartilho conhecimentos, dicas práticas e orientações sobre coloproctologia
+                para ajudar você a entender melhor sua saúde intestinal
               </p>
             </div>
           </div>
@@ -93,8 +94,7 @@ export default function BlogPage() {
           {posts.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-lg lg:text-xl text-secondary">
-                Em breve estarei compartilhando artigos e dicas valiosas sobre
-                saúde intestinal.
+                Em breve estarei compartilhando artigos e dicas valiosas sobre saúde intestinal.
               </p>
             </div>
           ) : (
@@ -131,9 +131,7 @@ export default function BlogPage() {
                           timeZone: 'UTC',
                         })}
                       </time>
-                      {post.readingTime && (
-                        <span>{post.readingTime} min de leitura</span>
-                      )}
+                      {post.readingTime && <span>{post.readingTime} min de leitura</span>}
                     </div>
 
                     <h2 className="mb-3 text-2xl font-serif font-bold text-primary transition-colors group-hover:text-primary/90">
@@ -146,9 +144,7 @@ export default function BlogPage() {
 
                     <div className="flex items-end justify-between gap-4">
                       <div className="mr-4 flex flex-wrap gap-2">
-                        <Badge variant="primary">
-                          {getContentIntentLabel(post.intent)}
-                        </Badge>
+                        <Badge variant="primary">{getContentIntentLabel(post.intent)}</Badge>
                         <Badge variant="secondary">
                           {getTargetAudienceLabel(post.targetAudience)}
                         </Badge>
@@ -171,11 +167,10 @@ export default function BlogPage() {
           <div className="mx-auto max-w-6xl mt-16 lg:mt-20">
             <div className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 text-center">
               <h2 className="text-2xl lg:text-3xl font-serif font-bold text-primary mb-4">
-                Quer conhecer a especialista por trás dos artigos?
+                Conheça a formação, os valores e a abordagem da Dra. Ana Luiza.
               </h2>
               <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-8 max-w-2xl mx-auto">
-                Conheça a formação, os valores e a abordagem da Dra. Ana Luiza.
-                Atendimento humanizado com a mais alta qualidade técnica em coloproctologia.
+                Atendimento humanizado com a mais alta qualidade técnica em proctologia.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LinkButton
@@ -184,7 +179,7 @@ export default function BlogPage() {
                   variant="primary"
                   className="font-semibold text-nowrap shadow-lg hover:shadow-xl hover:scale-105"
                 >
-                  Conhecer a Dra. Ana Luiza
+                  Saber mais
                 </LinkButton>
                 <LinkButton
                   href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}

@@ -129,7 +129,7 @@ const principles = [
   },
   {
     icon: Shield,
-    title: 'Excelência Técnica',
+    title: 'Excelência técnica',
     description: 'Utilização de técnicas atualizadas e seguras.',
     color: 'text-brand-primary',
     bgColor: 'bg-brand-primary/10',
@@ -137,7 +137,7 @@ const principles = [
   },
   {
     icon: MessageCircle,
-    title: 'Comunicação Clara',
+    title: 'Comunicação clara',
     description: 'Explicações detalhadas sobre diagnósticos e tratamentos.',
     color: 'text-accent-neutral',
     bgColor: 'bg-accent-neutral/10',
@@ -145,7 +145,7 @@ const principles = [
   },
   {
     icon: Users,
-    title: 'Cuidado Continuado',
+    title: 'Cuidado continuado',
     description: 'Acompanhamento próximo em todo o processo de tratamento.',
     color: 'text-secondary',
     bgColor: 'bg-secondary/20',
@@ -271,12 +271,12 @@ export default function SobrePage() {
             </h2>
             <p className="text-lg text-secondary leading-relaxed mb-4">
               Minha jornada na medicina começou com a certeza de que queria cuidar de pessoas de
-              forma integral. Durante a graduação em Medicina na <strong>{PUC_PR}</strong>, desenvolvi
-              a base sólida da minha formação. Foi durante a&nbsp;
-              <strong>residência em Cirurgia Geral, no {HOSPITAL_SANTA_CASA}</strong>, que
-              descobri meu amor pela <strong>coloproctologia</strong> — especialidade que une
-              conhecimento técnico avançado com o cuidado humanizado que sempre busquei oferecer aos
-              meus pacientes.
+              forma integral. Durante a graduação em Medicina na <strong>{PUC_PR}</strong>,
+              desenvolvi a base sólida da minha formação. Foi durante a&nbsp;
+              <strong>residência em Cirurgia Geral, no {HOSPITAL_SANTA_CASA}</strong>, que descobri
+              meu amor pela <strong>coloproctologia</strong> — especialidade que une conhecimento
+              técnico avançado com o cuidado humanizado que sempre busquei oferecer aos meus
+              pacientes.
             </p>
 
             {/* Professional Images Grid */}
