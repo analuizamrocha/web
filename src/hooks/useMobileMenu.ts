@@ -50,14 +50,22 @@ export function useMobileMenu() {
     }
   }
 
-  // Handle body scroll and focus trapping only while menu is open.
+  // Handle body scroll lock and focus trapping only while menu is open.
+  // Uses position:fixed pattern for robust iOS Safari scroll prevention.
   useEffect(() => {
     if (!mobileMenuOpen) {
-      document.body.style.overflow = 'unset'
       return
     }
 
-    document.body.style.overflow = 'hidden'
+    // Save current scroll position and lock body
+    const scrollY = window.scrollY
+    const { body } = document
+    const { style } = body
+    style.position = 'fixed'
+    style.top = `-${scrollY}px`
+    style.left = '0'
+    style.right = '0'
+    style.overflow = 'hidden'
 
     // Focus the first focusable element in the menu
     if (firstFocusableElementRef.current) {
@@ -103,7 +111,13 @@ export function useMobileMenu() {
     }
 
     return () => {
-      document.body.style.overflow = 'unset'
+      // Restore scroll position and unlock body
+      style.position = ''
+      style.top = ''
+      style.left = ''
+      style.right = ''
+      style.overflow = ''
+      window.scrollTo(0, scrollY)
       cleanupInertAttributes()
     }
   }, [mobileMenuOpen])
