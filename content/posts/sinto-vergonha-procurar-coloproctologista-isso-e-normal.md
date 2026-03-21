@@ -2,8 +2,8 @@
 title: 'Sinto vergonha de procurar um coloproctologista. Isso é normal?'
 metaDescription: 'Entenda por que a vergonha na consulta proctológica é comum, como funciona o exame e quando procurar um coloproctologista em Curitiba.'
 slug: 'sinto-vergonha-procurar-coloproctologista-isso-e-normal'
-publishDate: '2026-02-24'
-lastModified: '2026-02-24'
+publishDate: '2026-03-12'
+lastModified: '2026-03-12'
 primaryKeyword: 'vergonha de procurar coloproctologista'
 secondaryKeywords:
   - 'exame proctológico'
@@ -27,6 +27,8 @@ faqs:
 ---
 
 _Sentir vergonha na primeira consulta é comum, mas entender como funciona o atendimento ajuda a buscar diagnóstico com mais tranquilidade._
+
+![Coloproctologista em atendimento acolhedor com paciente no consultório](/images/posts/sinto-vergonha-procurar-coloproctologista-isso-e-normal/desconforto-intestinal.png)
 
 "Eu tenho vergonha."
 Essa é uma das frases mais comuns antes de uma consulta.

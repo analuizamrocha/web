@@ -2,8 +2,8 @@
 title: 'Câncer colorretal: rastreio, prevenção e a importância do diagnóstico precoce'
 metaDescription: 'Entenda quem deve fazer rastreio do câncer colorretal, principais sintomas, exames indicados e como a prevenção reduz riscos e salva vidas.'
 slug: 'cancer-colorretal-rastreio-prevencao-diagnostico-precoce'
-publishDate: '2026-02-20'
-lastModified: '2026-02-20'
+publishDate: '2026-03-03'
+lastModified: '2026-03-03'
 primaryKeyword: 'câncer colorretal'
 secondaryKeywords:
   - 'rastreio câncer colorretal'

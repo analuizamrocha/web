@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_BRAND}`,
   },
   description:
-    'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico do intestino, reto e ânus. Tratamento de hemorroidas, fissuras anais, HPV e doenças inflamatórias intestinais. Consultas humanizadas na Clínica Nassif - Batel.',
+    'Coloproctologista em Curitiba. Cuidado clínico e cirúrgico com foco em hemorroidas, fissuras, fístulas, HPV anal e doenças inflamatórias intestinais. Clínica Nassif, Batel.',
   keywords: [
     'coloproctologista curitiba',
     'coloproctologia curitiba',

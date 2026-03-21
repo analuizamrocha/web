@@ -2,7 +2,7 @@
 title: "Plicoma anal: o que é e como a cirurgia a laser pode auxiliar na recuperação"
 metaDescription: "Plicoma anal pode causar desconforto e dificuldade de higiene. Entenda quando remover e como a cirurgia a laser oferece melhor recuperação."
 slug: "plicoma-anal-cirurgia-laser"
-publishDate: "2025-10-05"
+publishDate: "2025-10-08"
 lastModified: "2026-02-14"
 primaryKeyword: "plicoma anal"
 secondaryKeywords:

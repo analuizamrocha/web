@@ -3,11 +3,12 @@ import type { Metadata } from 'next'
 import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED, WEBSITE_URL } from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { TreatmentCard } from '@/components/ui/TreatmentCard'
+import { getTreatmentImageBySlug } from '@/lib/treatment-images'
 
 export const metadata: Metadata = {
-  title: 'Tratamentos de Coloproctologia em Curitiba',
+  title: 'Tratamentos em Coloproctologia',
   description:
-    'Tratamentos especializados em coloproctologia: cirurgias a laser, tratamento de hemorroidas, fístulas anorretais e muito mais em Curitiba.',
+    'Do diagnóstico ao pós-operatório: cirurgia a laser, hemorroidas, fístulas, cisto pilonidal, HPV anal e doenças inflamatórias intestinais. Conheça cada abordagem.',
   keywords: [
     'coloproctologia curitiba',
     'cirurgia hemorroidas curitiba',
@@ -95,13 +96,23 @@ export default function ServicosPage() {
             '@type': 'MedicalOrganization',
             '@id': `${WEBSITE_URL}/#organization`,
             medicalSpecialty: ['Coloproctologia', 'Proctologia'],
-            availableService: treatments.map((treatment) => ({
-              '@type': 'MedicalProcedure',
-              name: treatment.title,
-              description: treatment.description,
-              procedureType: treatment.category,
-              url: `${WEBSITE_URL}/tratamentos/${treatment.slug}`,
-            })),
+            availableService: treatments.map((treatment) => {
+              const treatmentImage = getTreatmentImageBySlug(treatment.slug)
+
+              return {
+                '@type': 'MedicalProcedure',
+                name: treatment.title,
+                description: treatment.description,
+                procedureType: treatment.category,
+                ...(treatmentImage
+                  ? {
+                      identifier: treatmentImage.id,
+                      image: `${WEBSITE_URL}${treatmentImage.src}`,
+                    }
+                  : {}),
+                url: `${WEBSITE_URL}/tratamentos/${treatment.slug}`,
+              }
+            }),
           }),
         }}
       />
@@ -131,16 +142,22 @@ export default function ServicosPage() {
 
             {/* Treatments Grid */}
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 xl:gap-8">
-              {treatments.map((treatment) => (
-                <TreatmentCard
-                  key={treatment.slug}
-                  title={treatment.title}
-                  description={treatment.description}
-                  category={treatment.category}
-                  href={`/tratamentos/${treatment.slug}`}
-                  variant="detailed"
-                />
-              ))}
+              {treatments.map((treatment) => {
+                const treatmentImage = getTreatmentImageBySlug(treatment.slug)
+
+                return (
+                  <TreatmentCard
+                    key={treatment.slug}
+                    title={treatment.title}
+                    description={treatment.description}
+                    category={treatment.category}
+                    href={`/tratamentos/${treatment.slug}`}
+                    variant="detailed"
+                    treatmentId={treatmentImage?.id}
+                    image={treatmentImage}
+                  />
+                )
+              })}
             </div>
           </div>
 

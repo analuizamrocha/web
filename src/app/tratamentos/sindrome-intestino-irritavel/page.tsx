@@ -4,6 +4,8 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
+import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED, WEBSITE_URL } from '@/lib/constants'
 import {
   generateFAQSchema,
@@ -166,6 +168,9 @@ export default function SindromeIntestinoIrritavelPage() {
               </p>
             </header>
 
+            <TreatmentHeroImage slug="sindrome-intestino-irritavel" />
+
+
             <main className="prose prose-lg max-w-none mb-12">
               <p>
                 O diagnóstico correto e o acompanhamento com&nbsp;
@@ -284,6 +289,8 @@ export default function SindromeIntestinoIrritavelPage() {
                   descubra as melhores estratégias para o seu caso.
                 </p>
               </blockquote>
+
+              <RelatedBlogCard treatmentSlug="sindrome-intestino-irritavel" />
 
               <h2>Perguntas frequentes (FAQ)</h2>
 

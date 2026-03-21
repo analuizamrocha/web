@@ -2,7 +2,7 @@
 title: 'Diarreia crônica: causas, diagnóstico e tratamentos'
 metaDescription: 'Diarreia crônica ou intestino solto persistente pode indicar SII, intolerâncias ou doenças inflamatórias. Saiba quando procurar por proctologista em Curitiba.'
 slug: 'diarreia-cronica-tratamento'
-publishDate: '2025-12-02'
+publishDate: '2025-12-09'
 lastModified: '2026-01-24'
 primaryKeyword: 'diarreia crônica'
 secondaryKeywords:

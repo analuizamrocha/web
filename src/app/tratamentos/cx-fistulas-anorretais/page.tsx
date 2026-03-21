@@ -4,6 +4,8 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
+import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
@@ -167,6 +169,9 @@ export default function CirurgiaFistulasPage() {
               </p>
             </header>
 
+            <TreatmentHeroImage slug="cx-fistulas-anorretais" />
+
+
             <main className="prose prose-lg max-w-none mb-12">
               <p>
                 Costumam surgir após abscessos anorretais e podem provocar secreção, dor e
@@ -316,6 +321,8 @@ export default function CirurgiaFistulasPage() {
                   da melhor estratégia de tratamento.
                 </p>
               </blockquote>
+
+              <RelatedBlogCard treatmentSlug="cx-fistulas-anorretais" />
 
               <h2>Perguntas frequentes (FAQ)</h2>
 

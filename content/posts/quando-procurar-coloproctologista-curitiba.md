@@ -32,6 +32,8 @@ faqs:
 
 _Sangramento ao evacuar, dor abdominal ou mudanças no hábito intestinal podem ser sinais importantes. Descubra quando esses sintomas exigem avaliação especializada e não devem ser ignorados._
 
+![Coloproctologista em consulta acolhedora com paciente no consultório](/images/posts/quando-procurar-coloproctologista-curitiba/consulta-coloproctologista-acolhimento.png)
+
 A saúde intestinal é fundamental para nosso bem-estar geral, mas muitas pessoas ficam em dúvida sobre **quando procurar coloproctologista**. Encontrar o especialista adequado pode fazer toda a diferença no diagnóstico precoce e tratamento eficaz de problemas que afetam o intestino grosso, reto e ânus.
 
 Se você está experimentando desconfortos intestinais, alterações no hábito intestinal ou simplesmente quer entender melhor quando é hora de buscar ajuda especializada, este guia completo irá esclarecer suas dúvidas e orientar sobre os próximos passos.
@@ -53,6 +55,8 @@ Esses sintomas podem ter diversas causas, desde condições simples até doença
 **Dica prática:** se você se reconheceu em algum desses sinais, já é motivo suficiente para procurar um **coloproctologista em Curitiba**. A avaliação médica precoce é fundamental para o diagnóstico correto e o início do tratamento adequado quando necessário.
 
 A consulta preventiva permite esclarecer dúvidas e iniciar os cuidados apropriados para sua saúde intestinal.
+
+![Mulher com desconforto abdominal — sintomas que não devem ser ignorados](/images/posts/quando-procurar-coloproctologista-curitiba/desconforto-intestinal-sinais-alerta.png)
 
 ## Sintomas que não devem ser ignorados
 

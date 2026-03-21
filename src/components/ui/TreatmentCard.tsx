@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
+import type { TreatmentImage } from '@/lib/treatment-images'
 import { cn } from '@/lib/utils'
 
 interface TreatmentCardProps {
@@ -9,6 +11,8 @@ interface TreatmentCardProps {
   description?: string
   category?: string
   variant?: 'compact' | 'detailed'
+  treatmentId?: string
+  image?: Pick<TreatmentImage, 'src' | 'alt'>
   className?: string
 }
 
@@ -18,6 +22,8 @@ export function TreatmentCard({
   description,
   category,
   variant = 'compact',
+  treatmentId,
+  image,
   className,
 }: TreatmentCardProps) {
   const isDetailed = variant === 'detailed'
@@ -28,6 +34,7 @@ export function TreatmentCard({
 
   return (
     <div
+      data-treatment-id={treatmentId}
       className={cn(
         'group relative isolate flex items-stretch overflow-hidden rounded-[1.4rem] border border-secondary/20 bg-secondary/10 shadow-sm transition-all duration-200 ease-out hover:-translate-y-[2px] hover:border-primary/35 hover:bg-secondary/15 hover:shadow-md active:translate-y-0 active:shadow-sm focus-within:ring-2 focus-within:ring-primary/65 focus-within:ring-offset-2 focus-within:ring-offset-background',
         isDetailed
@@ -36,6 +43,19 @@ export function TreatmentCard({
         className
       )}
     >
+      {image ? (
+        <div aria-hidden className="absolute inset-0 z-0">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            sizes="(min-width: 1280px) 30vw, (min-width: 640px) 45vw, 100vw"
+            className="object-cover opacity-30 transition-opacity duration-300 group-hover:opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/92 to-background/88" />
+        </div>
+      ) : null}
+
       <Link
         href={href}
         aria-label={cardAriaLabel}

@@ -4,6 +4,8 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
+import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
@@ -162,6 +164,9 @@ export default function CistoPilonidalPage() {
               </p>
             </header>
 
+            <TreatmentHeroImage slug="cx-cisto-pilonidal" />
+
+
             <main className="prose prose-lg max-w-none mb-12">
               <p>
                 Existem duas abordagens principais: a técnica&nbsp;
@@ -271,6 +276,8 @@ export default function CistoPilonidalPage() {
                   vida para o paciente.
                 </p>
               </blockquote>
+
+              <RelatedBlogCard treatmentSlug="cx-cisto-pilonidal" />
 
               <h2>Perguntas frequentes (FAQ)</h2>
 

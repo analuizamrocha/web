@@ -2,7 +2,7 @@
 title: 'Alimentação e saúde intestinal: o papel das fibras no funcionamento do intestino'
 metaDescription: 'As fibras são essenciais para a saúde intestinal. Entenda tipos de fibras, quantidade ideal e como prevenir constipação e hemorroidas em Curitiba.'
 slug: 'alimentacao-fibras-saude-intestinal'
-publishDate: '2025-12-02'
+publishDate: '2025-12-05'
 lastModified: '2026-02-14'
 primaryKeyword: 'fibras alimentares'
 secondaryKeywords:

@@ -4,6 +4,8 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
+import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
@@ -162,6 +164,9 @@ export default function CirurgiasLaserPage() {
               </p>
             </header>
 
+            <TreatmentHeroImage slug="cx-laser" />
+
+
             <main className="prose prose-lg max-w-none mb-12">
               <h2>Principais indicações</h2>
               <p>
@@ -249,6 +254,8 @@ export default function CirurgiasLaserPage() {
                 coloproctologia moderna, trazendo mais conforto e segurança em
                 casos bem selecionados.
               </p>
+
+              <RelatedBlogCard treatmentSlug="cx-laser" />
 
               <h2>Perguntas frequentes (FAQ)</h2>
 

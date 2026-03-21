@@ -2,8 +2,8 @@
 title: 'Por que meus sintomas nunca melhoram?'
 metaDescription: 'Entenda por que sintomas intestinais persistentes podem não melhorar e quando procurar um coloproctologista em Curitiba para investigação adequada.'
 slug: 'por-que-meus-sintomas-nunca-melhoram'
-publishDate: '2026-02-24'
-lastModified: '2026-02-24'
+publishDate: '2026-03-13'
+lastModified: '2026-03-13'
 primaryKeyword: 'sintomas intestinais persistentes'
 secondaryKeywords:
   - 'intestino desregulado'

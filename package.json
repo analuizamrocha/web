@@ -25,7 +25,10 @@
     "analyze": "ANALYZE=true npm run build",
     "lighthouse": "mkdir -p reports/lighthouse && lighthouse http://localhost:3000 --output=json,html --output-path=./reports/lighthouse/local --view",
     "lighthouse:prod": "mkdir -p reports/lighthouse && lighthouse https://analuizarocha.com.br --output=json,html --output-path=./reports/lighthouse/prod --view",
-    "lighthouse:ci": "mkdir -p reports/lighthouse && lighthouse http://localhost:3000 --output=json --output-path=./reports/lighthouse/ci --quiet --chrome-flags='--headless --no-sandbox'"
+    "lighthouse:ci": "mkdir -p reports/lighthouse && lighthouse http://localhost:3000 --output=json --output-path=./reports/lighthouse/ci --quiet --chrome-flags='--headless --no-sandbox'",
+    "seo:rank:update": "node scripts/update-rank-tracking-from-gsc.mjs",
+    "seo:rank:summary": "node scripts/build-seo-rank-summary.mjs",
+    "seo:rank:pipeline": "npm run seo:rank:update && npm run seo:rank:summary"
   },
   "dependencies": {
     "@next/third-parties": "16.1.6",

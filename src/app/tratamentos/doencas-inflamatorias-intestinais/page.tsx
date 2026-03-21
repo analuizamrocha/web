@@ -4,6 +4,8 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
+import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED, WEBSITE_URL } from '@/lib/constants'
 import {
   generateFAQSchema,
@@ -165,6 +167,9 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               </p>
             </header>
 
+            <TreatmentHeroImage slug="doencas-inflamatorias-intestinais" />
+
+
             <main className="prose prose-lg max-w-none mb-12">
               <p>
                 Com acompanhamento adequado em <strong>coloproctologia</strong>, é possível
@@ -293,6 +298,8 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                   agende sua avaliação em coloproctologia.
                 </p>
               </blockquote>
+
+              <RelatedBlogCard treatmentSlug="doencas-inflamatorias-intestinais" />
 
               <h2>Perguntas frequentes (FAQ)</h2>
 

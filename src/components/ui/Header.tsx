@@ -34,14 +34,18 @@ export function Header() {
   } = useMobileMenu()
 
   const handleNavClick = (href: string) => {
-    // Only use scroll navigation for hash fragments on homepage
+    setMobileMenuOpen(false)
+
     if (isRootPage && href.startsWith('#')) {
-      scrollToSection(href)
+      // Wait for body scroll lock cleanup before measuring positions
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          scrollToSection(href)
+        })
+      })
     } else {
-      // For external routes, use Next.js router
       router.push(href)
     }
-    setMobileMenuOpen(false)
   }
 
   const handleMobileNavClick = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
@@ -179,7 +183,7 @@ export function Header() {
 
       {/* Mobile menu overlay - Clean and minimal with focus trapping */}
       <div
-        className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 overflow-hidden overscroll-none touch-none ${
           mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
@@ -197,13 +201,13 @@ export function Header() {
           aria-labelledby="mobile-menu-title"
           aria-modal="true"
           inert={!mobileMenuOpen}
-          className={`fixed top-[67.5px] inset-x-0 bottom-0 bg-background/95 backdrop-blur-md border-t border-primary/10 shadow-lg transform transition-transform duration-300 ease-out ${
+          className={`fixed top-[67.5px] inset-x-0 bottom-0 bg-background/95 backdrop-blur-md border-t border-primary/10 shadow-lg transform transition-transform duration-300 ease-out overflow-hidden ${
             mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
           }`}
         >
           <div className="flex flex-col h-full">
-            {/* Clean navigation links */}
-            <div className="flex-1 px-6 py-8">
+            {/* Clean navigation links — scrollable independently */}
+            <div className="flex-1 px-6 py-8 overflow-y-auto overscroll-contain touch-auto">
               <nav className="space-y-2">
                 {isRootPage ? (
                   // Homepage: sections + divider + routes

@@ -1,0 +1,366 @@
+keyword,cluster,content_type,source,intent,audience,target_url,priority
+cirurgia laser hemorroidas curitiba,Cirurgia a Laser Proctológica,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-laser,P1
+cirurgia minimamente invasiva curitiba,Cirurgia a Laser Proctológica,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-laser,P1
+fissura anal laser curitiba,Cirurgia a Laser Proctológica,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-laser,P1
+proctologista laser curitiba,Cirurgia a Laser Proctológica,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-laser,P1
+cirurgia cisto pilonidal curitiba,Cisto Pilonidal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-cisto-pilonidal,P1
+cirurgia coccix curitiba,Cisto Pilonidal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-cisto-pilonidal,P1
+cisto pilonidal laser curitiba,Cisto Pilonidal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-cisto-pilonidal,P1
+cisto sacrococcigeo curitiba,Cisto Pilonidal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-cisto-pilonidal,P1
+crm pr 45351,credenciais-medicas,doctor-profile,doctor-credentials,decision,patients,/sobre,P1
+crm pr 45351 rqe 36221,credenciais-medicas,doctor-profile,doctor-credentials,decision,patients,/sobre,P1
+rqe 36221 coloproctologia,credenciais-medicas,doctor-profile,doctor-credentials,decision,patients,/sobre,P1
+DII curitiba,DII,treatment-page,metadata-keywords,decision,patients,/tratamentos/doencas-inflamatorias-intestinais,P1
+doença de crohn curitiba,DII,treatment-page,metadata-keywords,decision,patients,/tratamentos/doencas-inflamatorias-intestinais,P1
+doenças inflamatórias intestinais curitiba,DII,treatment-page,metadata-keywords,decision,patients,/tratamentos/doencas-inflamatorias-intestinais,P1
+retocolite ulcerativa curitiba,DII,treatment-page,metadata-keywords,decision,patients,/tratamentos/doencas-inflamatorias-intestinais,P1
+tratamento crohn curitiba,DII,treatment-page,metadata-keywords,decision,patients,/tratamentos/doencas-inflamatorias-intestinais,P1
+cirurgia fistula anal curitiba,Fístula Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-fistulas-anorretais,P1
+fistulotomia curitiba,Fístula Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-fistulas-anorretais,P1
+LIFT cirurgia curitiba,Fístula Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-fistulas-anorretais,P1
+seton fistula anal curitiba,Fístula Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-fistulas-anorretais,P1
+cirurgia hemorroidas laser curitiba,Hemorroidas,treatment-page,metadata-keywords,decision,patients,/tratamentos/hemorroidas,P1
+hemorroidectomia curitiba,Hemorroidas,treatment-page,metadata-keywords,decision,patients,/tratamentos/hemorroidas,P1
+ligadura elástica curitiba,Hemorroidas,treatment-page,metadata-keywords,decision,patients,/tratamentos/hemorroidas,P1
+THD curitiba,Hemorroidas,treatment-page,metadata-keywords,decision,patients,/tratamentos/hemorroidas,P1
+tratamento hemorroidas curitiba,Hemorroidas,treatment-page,metadata-keywords,decision,patients,/tratamentos/hemorroidas,P1
+condiloma anal curitiba,HPV Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/hpv-anal,P1
+tratamento HPV anal curitiba,HPV Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/hpv-anal,P1
+verrugas anais curitiba,HPV Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/hpv-anal,P1
+agendar consulta coloproctologista curitiba,landing-homepage,landing-page,landing-copy,decision,patients,/,P1
+cirurgia colorretal curitiba,landing-homepage,landing-page,landing-copy,decision,patients,/,P1
+coloproctologista curitiba batel,landing-homepage,landing-page,landing-copy,decision,patients,/,P1
+consulta coloproctologista curitiba,landing-homepage,landing-page,landing-copy,decision,patients,/,P1
+consultório médico coloproctologia curitiba,landing-homepage,landing-page,landing-copy,decision,patients,/,P1
+proctologia curitiba,landing-homepage,landing-page,landing-copy,decision,patients,/,P1
+proctologista curitiba batel,landing-homepage,landing-page,landing-copy,decision,patients,/,P1
+clínica nassif batel curitiba,landing-locais,landing-page,landing-copy,decision,patients,/,P1
+crm-pr 45351,landing-marca,landing-page,landing-copy,decision,patients,/,P1
+dra ana luiza moraes rocha coloproctologista curitiba,landing-marca,landing-page,landing-copy,decision,patients,/,P1
+dra ana luiza moraes rocha proctologista curitiba,landing-marca,landing-page,landing-copy,decision,patients,/,P1
+rqe 36221,landing-marca,landing-page,landing-copy,decision,patients,/,P1
+cirurgias a laser proctologia curitiba,landing-tratamentos,landing-page,landing-copy,decision,patients,/,P1
+ligadura elástica para hemorroidas curitiba,landing-tratamentos,landing-page,landing-copy,decision,patients,/,P1
+rastreio câncer de canal anal curitiba,landing-tratamentos,landing-page,landing-copy,decision,patients,/,P1
+toxina botulínica para fissura anal curitiba,landing-tratamentos,landing-page,landing-copy,decision,patients,/,P1
+tratamento de hpv curitiba,landing-tratamentos,landing-page,landing-copy,decision,patients,/,P1
+ana luiza moraes rocha,marca-dra-ana-luiza,doctor-profile,doctor-name,decision,patients,/sobre,P1
+ana luiza rocha coloproctologista,marca-dra-ana-luiza,doctor-profile,doctor-name,decision,patients,/sobre,P1
+dra ana luiza m rocha,marca-dra-ana-luiza,doctor-profile,doctor-name,decision,patients,/sobre,P1
+dra ana luiza moraes rocha,marca-dra-ana-luiza,doctor-profile,doctor-name,decision,patients,/sobre,P1
+médica coloproctologista curitiba,marca-dra-ana-luiza,doctor-profile,doctor-name,decision,patients,/sobre,P1
+proctologista dra ana luiza curitiba,marca-dra-ana-luiza,doctor-profile,doctor-name,decision,patients,/sobre,P1
+anuscopia alta resolução curitiba,Rastreio de Câncer Anal e HPV,treatment-page,metadata-keywords,decision,patients,/tratamentos/rastreio-cancer-anal,P1
+citologia anal curitiba,Rastreio de Câncer Anal e HPV,treatment-page,metadata-keywords,decision,patients,/tratamentos/rastreio-cancer-anal,P1
+rastreio cancer anal curitiba,Rastreio de Câncer Anal e HPV,treatment-page,metadata-keywords,decision,patients,/tratamentos/rastreio-cancer-anal,P1
+coloproctologista SII curitiba,Síndrome do Intestino Irritável (SII),treatment-page,metadata-keywords,decision,patients,/tratamentos/sindrome-intestino-irritavel,P1
+SII curitiba,Síndrome do Intestino Irritável (SII),treatment-page,metadata-keywords,decision,patients,/tratamentos/sindrome-intestino-irritavel,P1
+sindrome intestino irritavel curitiba,Síndrome do Intestino Irritável (SII),treatment-page,metadata-keywords,decision,patients,/tratamentos/sindrome-intestino-irritavel,P1
+botox fissura anal curitiba,Toxina Botulínica para Fissura Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/toxina-botulinica,P1
+dor anal cronica curitiba,Toxina Botulínica para Fissura Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/toxina-botulinica,P1
+esfíncter anal curitiba,Toxina Botulínica para Fissura Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/toxina-botulinica,P1
+toxina botulinica anal curitiba,Toxina Botulínica para Fissura Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/toxina-botulinica,P1
+cirurgia hemorroidas curitiba,tratamentos coloproctologia,treatment-hub,metadata-keywords,decision,patients,/tratamentos,P1
+cirurgia laser curitiba,tratamentos coloproctologia,treatment-hub,metadata-keywords,decision,patients,/tratamentos,P1
+cisto pilonidal curitiba,tratamentos coloproctologia,treatment-hub,metadata-keywords,decision,patients,/tratamentos,P1
+coloproctologia curitiba,tratamentos coloproctologia,treatment-hub,metadata-keywords,decision,patients,/tratamentos,P1
+HPV anal curitiba,tratamentos coloproctologia,treatment-hub,metadata-keywords,decision,patients,/tratamentos,P1
+proctologista curitiba,tratamentos coloproctologia,treatment-hub,metadata-keywords,decision,patients,/tratamentos,P1
+tratamento fissura anal,tratamentos coloproctologia,treatment-hub,metadata-keywords,decision,patients,/tratamentos,P1
+acompanhamento coloproctológico,acompanhamento especializado,blog-post,blog-secondary,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P2
+acompanhamento especializado,acompanhamento especializado,blog-post,blog-primary,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P2
+coloproctologista em Curitiba,acompanhamento especializado,blog-post,blog-secondary,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P2
+prevenção de recorrências intestinais,acompanhamento especializado,blog-post,blog-secondary,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P2
+saúde intestinal a longo prazo,acompanhamento especializado,blog-post,blog-secondary,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P2
+tratamento intestinal individualizado,acompanhamento especializado,blog-post,blog-secondary,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P2
+artigos coloproctologista curitiba,blog coloproctologia,blog-hub,metadata-keywords,awareness,general-public,/blog,P2
+coloproctologista Curitiba,câncer colorretal,blog-post,blog-secondary,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P2
+cirurgia a laser proctológica,Cirurgia a Laser Proctológica,treatment-page,title-topic,decision,patients,/tratamentos/cx-laser,P2
+coloproctologia laser,Cirurgia a Laser Proctológica,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-laser,P2
+abscesso sacrococcígeo,cisto pilonidal,blog-post,blog-secondary,consideration,patients,/blog/cisto-pilonidal-cirurgia-laser-quando-operar,P2
+cirurgia a laser cisto pilonidal,cisto pilonidal,blog-post,blog-secondary,consideration,patients,/blog/cisto-pilonidal-cirurgia-laser-quando-operar,P2
+cisto pilonidal,cisto pilonidal,blog-post,blog-primary,consideration,patients,/blog/cisto-pilonidal-cirurgia-laser-quando-operar,P2
+drenagem x cirurgia definitiva,cisto pilonidal,blog-post,blog-secondary,consideration,patients,/blog/cisto-pilonidal-cirurgia-laser-quando-operar,P2
+recidiva cisto pilonidal,cisto pilonidal,blog-post,blog-secondary,consideration,patients,/blog/cisto-pilonidal-cirurgia-laser-quando-operar,P2
+cisto pilonidal,Cisto Pilonidal,treatment-page,title-topic,decision,patients,/tratamentos/cx-cisto-pilonidal,P2
+laser pilonidal,Cisto Pilonidal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-cisto-pilonidal,P2
+tratamento cisto pilonidal,Cisto Pilonidal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-cisto-pilonidal,P2
+coloproctologista Curitiba,coceira anal,blog-post,blog-secondary,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P2
+coloproctologista Curitiba,constipação intestinal crônica,blog-post,blog-secondary,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P2
+diarreia crônica,diarreia crônica,blog-post,blog-primary,consideration,patients,/blog/diarreia-cronica-tratamento,P2
+diarreia nervosa,diarreia crônica,blog-post,blog-secondary,consideration,patients,/blog/diarreia-cronica-tratamento,P2
+exames diarreia,diarreia crônica,blog-post,blog-secondary,consideration,patients,/blog/diarreia-cronica-tratamento,P2
+intestino solto,diarreia crônica,blog-post,blog-secondary,consideration,patients,/blog/diarreia-cronica-tratamento,P2
+síndrome intestino irritável,diarreia crônica,blog-post,blog-secondary,consideration,patients,/blog/diarreia-cronica-tratamento,P2
+coloproctologista DII,DII,treatment-page,metadata-keywords,decision,patients,/tratamentos/doencas-inflamatorias-intestinais,P2
+dii,DII,treatment-page,title-topic,decision,patients,/tratamentos/doencas-inflamatorias-intestinais,P2
+coloproctologista Curitiba,distúrbios do assoalho pélvico,blog-post,blog-secondary,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P2
+acompanhamento DII,doenças inflamatórias intestinais,blog-post,blog-secondary,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P2
+coloproctologista Curitiba,doenças inflamatórias intestinais,blog-post,blog-secondary,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P2
+Doença de Crohn,doenças inflamatórias intestinais,blog-post,blog-secondary,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P2
+doenças inflamatórias intestinais,doenças inflamatórias intestinais,blog-post,blog-primary,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P2
+Retocolite Ulcerativa,doenças inflamatórias intestinais,blog-post,blog-secondary,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P2
+tratamento DII,doenças inflamatórias intestinais,blog-post,blog-secondary,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P2
+dor anal curitiba,fissura anal,blog-post,blog-secondary,consideration,patients,/blog/fissura-anal-tratamento,P2
+dor ao evacuar,fissura anal,blog-post,blog-secondary,consideration,patients,/blog/fissura-anal-tratamento,P2
+esfincterotomia,fissura anal,blog-post,blog-secondary,consideration,patients,/blog/fissura-anal-tratamento,P2
+fissura anal,fissura anal,blog-post,blog-primary,consideration,patients,/blog/fissura-anal-tratamento,P2
+fissura anal curitiba,fissura anal,blog-post,blog-secondary,consideration,patients,/blog/fissura-anal-tratamento,P2
+sangramento anal curitiba,fissura anal,blog-post,blog-secondary,consideration,patients,/blog/fissura-anal-tratamento,P2
+toxina botulínica fissura,fissura anal,blog-post,blog-secondary,consideration,patients,/blog/fissura-anal-tratamento,P2
+coloproctologista Curitiba,fístula anal,blog-post,blog-secondary,consideration,patients,/blog/tratamento-fistulas-anorretais,P2
+fístula anal,fístula anal,blog-post,blog-primary,consideration,patients,/blog/tratamento-fistulas-anorretais,P2
+fístulas anorretais,fístula anal,blog-post,blog-secondary,consideration,patients,/blog/tratamento-fistulas-anorretais,P2
+seton,fístula anal,blog-post,blog-secondary,consideration,patients,/blog/tratamento-fistulas-anorretais,P2
+técnica LIFT,fístula anal,blog-post,blog-secondary,consideration,patients,/blog/tratamento-fistulas-anorretais,P2
+tratamento fístula anal,fístula anal,blog-post,blog-secondary,consideration,patients,/blog/tratamento-fistulas-anorretais,P2
+fístula anal,Fístula Anal,treatment-page,title-topic,decision,patients,/tratamentos/cx-fistulas-anorretais,P2
+laser fistula anal,Fístula Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-fistulas-anorretais,P2
+retalho mucoso fistula,Fístula Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/cx-fistulas-anorretais,P2
+anuscopia de alta resolução curitiba,formacao-medica,doctor-profile,doctor-credentials,decision,patients,/sobre,P2
+fellow cirurgia colorretal barcelona,formacao-medica,doctor-profile,doctor-credentials,consideration,patients,/sobre,P2
+hospital clinic barcelona cirurgia colorretal,formacao-medica,doctor-profile,doctor-credentials,consideration,patients,/sobre,P2
+hospital santa casa de curitiba cirurgia geral,formacao-medica,doctor-profile,doctor-credentials,consideration,patients,/sobre,P2
+hospital universitário evangélico mackenzie coloproctologia,formacao-medica,doctor-profile,doctor-credentials,consideration,patients,/sobre,P2
+international anal neoplasia society,formacao-medica,doctor-profile,doctor-credentials,consideration,patients,/sobre,P2
+membro ians coloproctologia,formacao-medica,doctor-profile,doctor-credentials,consideration,patients,/sobre,P2
+mestranda ufpr clínica cirúrgica,formacao-medica,doctor-profile,doctor-credentials,consideration,patients,/sobre,P2
+puc-pr medicina,formacao-medica,doctor-profile,doctor-credentials,consideration,patients,/sobre,P2
+cirurgia hemorroida laser,hemorroida é cirúrgica,blog-post,blog-secondary,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P2
+coloproctologista Curitiba,hemorroida é cirúrgica,blog-post,blog-secondary,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P2
+hemorroida é cirúrgica,hemorroida é cirúrgica,blog-post,blog-primary,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P2
+hemorroida interna externa,hemorroida é cirúrgica,blog-post,blog-secondary,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P2
+ligadura elástica hemorroida,hemorroida é cirúrgica,blog-post,blog-secondary,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P2
+tratamento hemorroida,hemorroida é cirúrgica,blog-post,blog-secondary,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P2
+escleroterapia hemorroidas,Hemorroidas,treatment-page,metadata-keywords,decision,patients,/tratamentos/hemorroidas,P2
+hemorroidas,Hemorroidas,treatment-page,title-topic,decision,patients,/tratamentos/hemorroidas,P2
+coloproctologista Curitiba,HPV anal,blog-post,blog-secondary,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P2
+eletrocauterização HPV,HPV Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/hpv-anal,P2
+hpv anal,HPV Anal,treatment-page,title-topic,decision,patients,/tratamentos/hpv-anal,P2
+imiquimode condiloma,HPV Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/hpv-anal,P2
+laser HPV anal,HPV Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/hpv-anal,P2
+atendimento humanizado coloproctologia curitiba,landing-homepage,landing-page,landing-copy,decision,patients,/,P2
+colonoscopia curitiba mercês,landing-locais,landing-page,landing-copy,decision,patients,/,P2
+specta endoscopia digestiva curitiba,landing-locais,landing-page,landing-copy,consideration,patients,/,P2
+cisto pilonidal curitiba,landing-sintomas-condicoes,landing-page,landing-copy,consideration,patients,/,P2
+coceira anal curitiba,landing-sintomas-condicoes,landing-page,landing-copy,awareness,patients,/,P2
+constipação intestinal curitiba,landing-sintomas-condicoes,landing-page,landing-copy,awareness,patients,/,P2
+diarreia crônica curitiba,landing-sintomas-condicoes,landing-page,landing-copy,consideration,patients,/,P2
+distúrbios do assoalho pélvico curitiba,landing-sintomas-condicoes,landing-page,landing-copy,awareness,patients,/,P2
+doenças inflamatórias intestinais curitiba,landing-sintomas-condicoes,landing-page,landing-copy,consideration,patients,/,P2
+fissura anal curitiba,landing-sintomas-condicoes,landing-page,landing-copy,consideration,patients,/,P2
+fístula anal curitiba,landing-sintomas-condicoes,landing-page,landing-copy,consideration,patients,/,P2
+hemorroidas curitiba,landing-sintomas-condicoes,landing-page,landing-copy,consideration,patients,/,P2
+hpv anal curitiba,landing-sintomas-condicoes,landing-page,landing-copy,consideration,patients,/,P2
+prurido anal curitiba,landing-sintomas-condicoes,landing-page,landing-copy,awareness,patients,/,P2
+síndrome do intestino irritável curitiba,landing-sintomas-condicoes,landing-page,landing-copy,consideration,patients,/,P2
+tratamentos minimamente invasivos coloproctologia,landing-tratamentos,landing-page,landing-copy,consideration,patients,/,P2
+cirurgia a laser plicoma,plicoma anal,blog-post,blog-secondary,consideration,patients,/blog/plicoma-anal-cirurgia-laser,P2
+higiene anal difícil,plicoma anal,blog-post,blog-secondary,consideration,patients,/blog/plicoma-anal-cirurgia-laser,P2
+plicoma anal,plicoma anal,blog-post,blog-primary,consideration,patients,/blog/plicoma-anal-cirurgia-laser,P2
+recuperação plicoma,plicoma anal,blog-post,blog-secondary,consideration,patients,/blog/plicoma-anal-cirurgia-laser,P2
+sobras de pele anal,plicoma anal,blog-post,blog-secondary,consideration,patients,/blog/plicoma-anal-cirurgia-laser,P2
+coloproctologista Curitiba,quando procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P2
+médico intestino Curitiba,quando procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P2
+proctologista Curitiba,quando procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P2
+HPV canal anal,Rastreio de Câncer Anal e HPV,treatment-page,metadata-keywords,decision,patients,/tratamentos/rastreio-cancer-anal,P2
+IANS coloproctologia,Rastreio de Câncer Anal e HPV,treatment-page,metadata-keywords,decision,patients,/tratamentos/rastreio-cancer-anal,P2
+prevenção cancer anal,Rastreio de Câncer Anal e HPV,treatment-page,metadata-keywords,decision,patients,/tratamentos/rastreio-cancer-anal,P2
+rastreio de câncer anal e hpv,Rastreio de Câncer Anal e HPV,treatment-page,title-topic,decision,patients,/tratamentos/rastreio-cancer-anal,P2
+coloproctologista Curitiba,sangue nas fezes,blog-post,blog-secondary,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P2
+coloproctologista Curitiba,saúde sexual,blog-post,blog-secondary,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P2
+coloproctologista em Curitiba,sinais de alerta intestinais,blog-post,blog-secondary,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P2
+coloproctologista Curitiba,síndrome do intestino irritável,blog-post,blog-secondary,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P2
+disturbio funcional intestinal,Síndrome do Intestino Irritável (SII),treatment-page,metadata-keywords,decision,patients,/tratamentos/sindrome-intestino-irritavel,P2
+dor abdominal cronica,Síndrome do Intestino Irritável (SII),treatment-page,metadata-keywords,decision,patients,/tratamentos/sindrome-intestino-irritavel,P2
+intestino irritavel tratamento,Síndrome do Intestino Irritável (SII),treatment-page,metadata-keywords,decision,patients,/tratamentos/sindrome-intestino-irritavel,P2
+síndrome do intestino irritável (sii),Síndrome do Intestino Irritável (SII),treatment-page,title-topic,decision,patients,/tratamentos/sindrome-intestino-irritavel,P2
+coloproctologista em Curitiba,sintomas intestinais persistentes,blog-post,blog-secondary,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P2
+exames normais e sintomas,sintomas intestinais persistentes,blog-post,blog-secondary,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P2
+hemorroidas recorrentes,sintomas intestinais persistentes,blog-post,blog-secondary,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P2
+intestino desregulado,sintomas intestinais persistentes,blog-post,blog-secondary,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P2
+laxantes irritativos,sintomas intestinais persistentes,blog-post,blog-secondary,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P2
+sintomas intestinais persistentes,sintomas intestinais persistentes,blog-post,blog-primary,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P2
+procedimento minimamente invasivo,Toxina Botulínica para Fissura Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/toxina-botulinica,P2
+toxina botulínica para fissura anal,Toxina Botulínica para Fissura Anal,treatment-page,title-topic,decision,patients,/tratamentos/toxina-botulinica,P2
+tratamento fissura anal,Toxina Botulínica para Fissura Anal,treatment-page,metadata-keywords,decision,patients,/tratamentos/toxina-botulinica,P2
+coloproctologista em Curitiba,vergonha de procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P2
+acompanhamento significa consulta frequente,acompanhamento especializado,blog-post,faq-question,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P3
+o acompanhamento evita cirurgia,acompanhamento especializado,blog-post,faq-question,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P3
+preciso retornar mesmo se estiver melhor,acompanhamento especializado,blog-post,faq-question,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P3
+vale a pena mesmo quando o problema parece simples,acompanhamento especializado,blog-post,faq-question,consideration,patients,/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba,P3
+alimentação e saúde intestinal,alimentação e saúde intestinal,blog-post,blog-primary,awareness,patients,/blog/alimentacao-e-saude-intestinal,P3
+beber mais água ajuda meu intestino,alimentação e saúde intestinal,blog-post,faq-question,awareness,patients,/blog/alimentacao-e-saude-intestinal,P3
+como melhorar o intestino,alimentação e saúde intestinal,blog-post,blog-secondary,awareness,patients,/blog/alimentacao-e-saude-intestinal,P3
+dieta para constipação,alimentação e saúde intestinal,blog-post,blog-secondary,awareness,patients,/blog/alimentacao-e-saude-intestinal,P3
+fibras intestino,alimentação e saúde intestinal,blog-post,blog-secondary,awareness,patients,/blog/alimentacao-e-saude-intestinal,P3
+hidratação e intestino,alimentação e saúde intestinal,blog-post,blog-secondary,awareness,patients,/blog/alimentacao-e-saude-intestinal,P3
+posso usar laxantes naturais todos os dias,alimentação e saúde intestinal,blog-post,faq-question,awareness,patients,/blog/alimentacao-e-saude-intestinal,P3
+quanta fibra devo consumir por dia,alimentação e saúde intestinal,blog-post,faq-question,awareness,patients,/blog/alimentacao-e-saude-intestinal,P3
+ritmo intestinal,alimentação e saúde intestinal,blog-post,blog-secondary,awareness,patients,/blog/alimentacao-e-saude-intestinal,P3
+blog coloproctologia,blog coloproctologia,blog-hub,metadata-keywords,awareness,general-public,/blog,P3
+cirurgia laser coloproctologia,blog coloproctologia,blog-hub,metadata-keywords,awareness,general-public,/blog,P3
+cisto pilonidal,blog coloproctologia,blog-hub,metadata-keywords,awareness,general-public,/blog,P3
+plicoma anal,blog coloproctologia,blog-hub,metadata-keywords,awareness,general-public,/blog,P3
+prevenção câncer colorretal,blog coloproctologia,blog-hub,metadata-keywords,awareness,general-public,/blog,P3
+saúde intestinal,blog coloproctologia,blog-hub,metadata-keywords,awareness,general-public,/blog,P3
+tratamento hemorroidas,blog coloproctologia,blog-hub,metadata-keywords,awareness,general-public,/blog,P3
+a colonoscopia é segura,câncer colorretal,blog-post,faq-question,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P3
+câncer colorretal,câncer colorretal,blog-post,blog-primary,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P3
+colonoscopia preventiva,câncer colorretal,blog-post,blog-secondary,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P3
+com que frequência devo repetir a colonoscopia,câncer colorretal,blog-post,faq-question,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P3
+diagnóstico precoce câncer de intestino,câncer colorretal,blog-post,blog-secondary,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P3
+o rastreio é necessário mesmo sem sintomas,câncer colorretal,blog-post,faq-question,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P3
+pólipos intestinais,câncer colorretal,blog-post,blog-secondary,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P3
+rastreio câncer colorretal,câncer colorretal,blog-post,blog-secondary,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P3
+se eu tiver pólipos é câncer,câncer colorretal,blog-post,faq-question,awareness,patients,/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce,P3
+a cirurgia a laser dói,cisto pilonidal,blog-post,faq-question,consideration,patients,/blog/cisto-pilonidal-cirurgia-laser-quando-operar,P3
+o cisto pilonidal some sozinho,cisto pilonidal,blog-post,faq-question,consideration,patients,/blog/cisto-pilonidal-cirurgia-laser-quando-operar,P3
+preciso operar mesmo sem sintomas agora,cisto pilonidal,blog-post,faq-question,consideration,patients,/blog/cisto-pilonidal-cirurgia-laser-quando-operar,P3
+quanto tempo para recuperar,cisto pilonidal,blog-post,faq-question,consideration,patients,/blog/cisto-pilonidal-cirurgia-laser-quando-operar,P3
+causas coceira anal,coceira anal,blog-post,blog-secondary,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P3
+coceira anal,coceira anal,blog-post,blog-primary,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P3
+coceira anal é sempre sinal de doença,coceira anal,blog-post,faq-question,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P3
+doenças orificiais,coceira anal,blog-post,blog-secondary,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P3
+é normal ter coceira anal à noite,coceira anal,blog-post,faq-question,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P3
+o que posso fazer para prevenir a coceira anal,coceira anal,blog-post,faq-question,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P3
+posso usar pomadas por conta própria,coceira anal,blog-post,faq-question,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P3
+prurido anal,coceira anal,blog-post,blog-secondary,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P3
+tratamento prurido anal,coceira anal,blog-post,blog-secondary,awareness,patients,/blog/coceira-anal-quando-procurar-coloproctologista-curitiba,P3
+a prisão de ventre pode causar hemorroidas,constipação intestinal crônica,blog-post,faq-question,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P3
+causas constipação intestinal,constipação intestinal crônica,blog-post,blog-secondary,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P3
+constipação intestinal crônica,constipação intestinal crônica,blog-post,blog-primary,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P3
+posso usar laxantes por conta própria,constipação intestinal crônica,blog-post,faq-question,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P3
+prisão de ventre é sempre causada por má alimentação,constipação intestinal crônica,blog-post,faq-question,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P3
+prisão de ventre tratamento,constipação intestinal crônica,blog-post,blog-secondary,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P3
+quando devo procurar um coloproctologista,constipação intestinal crônica,blog-post,faq-question,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P3
+sintomas prisão de ventre,constipação intestinal crônica,blog-post,blog-secondary,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P3
+tratamento intestino preso,constipação intestinal crônica,blog-post,blog-secondary,awareness,patients,/blog/constipacao-intestinal-cronica-causas-tratamento,P3
+diarreia crônica pode ser apenas nervosa,diarreia crônica,blog-post,faq-question,consideration,patients,/blog/diarreia-cronica-tratamento,P3
+diarreia crônica pode ser câncer,diarreia crônica,blog-post,faq-question,consideration,patients,/blog/diarreia-cronica-tratamento,P3
+o que devo comer quando estou com diarreia frequente,diarreia crônica,blog-post,faq-question,consideration,patients,/blog/diarreia-cronica-tratamento,P3
+quando a colonoscopia é indicada,diarreia crônica,blog-post,faq-question,consideration,patients,/blog/diarreia-cronica-tratamento,P3
+dieta sozinha é suficiente para tratar sibo,disbiose intestinal,blog-post,faq-question,awareness,patients,/blog/disbiose-sibo-tratamento,P3
+disbiose e sibo são a mesma coisa,disbiose intestinal,blog-post,faq-question,awareness,patients,/blog/disbiose-sibo-tratamento,P3
+disbiose intestinal,disbiose intestinal,blog-post,blog-primary,awareness,patients,/blog/disbiose-sibo-tratamento,P3
+inchaço abdominal tratamento,disbiose intestinal,blog-post,blog-secondary,awareness,patients,/blog/disbiose-sibo-tratamento,P3
+microbiota intestinal,disbiose intestinal,blog-post,blog-secondary,awareness,patients,/blog/disbiose-sibo-tratamento,P3
+probióticos resolvem sibo,disbiose intestinal,blog-post,faq-question,awareness,patients,/blog/disbiose-sibo-tratamento,P3
+sibo sintomas,disbiose intestinal,blog-post,blog-secondary,awareness,patients,/blog/disbiose-sibo-tratamento,P3
+sibo tem cura,disbiose intestinal,blog-post,faq-question,awareness,patients,/blog/disbiose-sibo-tratamento,P3
+supercrescimento bacteriano,disbiose intestinal,blog-post,blog-secondary,awareness,patients,/blog/disbiose-sibo-tratamento,P3
+disfunção evacuatória,distúrbios do assoalho pélvico,blog-post,blog-secondary,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P3
+distúrbios do assoalho pélvico,distúrbios do assoalho pélvico,blog-post,blog-primary,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P3
+distúrbios do assoalho pélvico têm tratamento,distúrbios do assoalho pélvico,blog-post,faq-question,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P3
+esses distúrbios podem piorar com o tempo,distúrbios do assoalho pélvico,blog-post,faq-question,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P3
+evacuação incompleta,distúrbios do assoalho pélvico,blog-post,blog-secondary,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P3
+fisioterapia pélvica,distúrbios do assoalho pélvico,blog-post,blog-secondary,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P3
+fisioterapia pélvica realmente funciona,distúrbios do assoalho pélvico,blog-post,faq-question,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P3
+incontinencia fecal,distúrbios do assoalho pélvico,blog-post,blog-secondary,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P3
+incontinência fecal é normal com a idade,distúrbios do assoalho pélvico,blog-post,faq-question,awareness,patients,/blog/disturbios-assoalho-pelvico-funcionamento-intestino,P3
+crohn e retocolite ulcerativa são a mesma doença,doenças inflamatórias intestinais,blog-post,faq-question,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P3
+doença de crohn e retocolite ulcerativa têm cura,doenças inflamatórias intestinais,blog-post,faq-question,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P3
+mesmo em remissão preciso continuar acompanhamento,doenças inflamatórias intestinais,blog-post,faq-question,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P3
+todo paciente com dii precisa de cirurgia,doenças inflamatórias intestinais,blog-post,faq-question,consideration,patients,/blog/doencas-inflamatorias-intestinais-acompanhamento,P3
+beber pouca água interfere no efeito das fibras,fibras alimentares,blog-post,faq-question,awareness,general-public,/blog/alimentacao-fibras-saude-intestinal,P3
+comer muita fibra pode causar gases,fibras alimentares,blog-post,faq-question,awareness,general-public,/blog/alimentacao-fibras-saude-intestinal,P3
+constipação tratamento,fibras alimentares,blog-post,blog-secondary,awareness,general-public,/blog/alimentacao-fibras-saude-intestinal,P3
+fibras alimentares,fibras alimentares,blog-post,blog-primary,awareness,general-public,/blog/alimentacao-fibras-saude-intestinal,P3
+fibras solúveis insolúveis,fibras alimentares,blog-post,blog-secondary,awareness,general-public,/blog/alimentacao-fibras-saude-intestinal,P3
+prevenção hemorroidas,fibras alimentares,blog-post,blog-secondary,awareness,general-public,/blog/alimentacao-fibras-saude-intestinal,P3
+qual a quantidade ideal de fibras por dia,fibras alimentares,blog-post,faq-question,awareness,general-public,/blog/alimentacao-fibras-saude-intestinal,P3
+saúde intestinal,fibras alimentares,blog-post,blog-secondary,awareness,general-public,/blog/alimentacao-fibras-saude-intestinal,P3
+suplementos de fibras funcionam,fibras alimentares,blog-post,faq-question,awareness,general-public,/blog/alimentacao-fibras-saude-intestinal,P3
+a cirurgia de fissura anal causa incontinência,fissura anal,blog-post,faq-question,consideration,patients,/blog/fissura-anal-tratamento,P3
+a fissura anal pode cicatrizar sozinha,fissura anal,blog-post,faq-question,consideration,patients,/blog/fissura-anal-tratamento,P3
+quando devo procurar um coloproctologista em curitiba,fissura anal,blog-post,faq-question,consideration,patients,/blog/fissura-anal-tratamento,P3
+quando é indicado o uso de toxina botulínica,fissura anal,blog-post,faq-question,consideration,patients,/blog/fissura-anal-tratamento,P3
+doença de crohn muda o tratamento da fístula,fístula anal,blog-post,faq-question,consideration,patients,/blog/tratamento-fistulas-anorretais,P3
+fístula anal melhora sozinha,fístula anal,blog-post,faq-question,consideration,patients,/blog/tratamento-fistulas-anorretais,P3
+para que serve o seton,fístula anal,blog-post,faq-question,consideration,patients,/blog/tratamento-fistulas-anorretais,P3
+toda fístula precisa de cirurgia,fístula anal,blog-post,faq-question,consideration,patients,/blog/tratamento-fistulas-anorretais,P3
+a ligadura elástica dói,hemorroida é cirúrgica,blog-post,faq-question,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P3
+hemorroida externa sempre precisa operar,hemorroida é cirúrgica,blog-post,faq-question,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P3
+posso operar durante uma crise hemorroidária,hemorroida é cirúrgica,blog-post,faq-question,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P3
+toda hemorroida precisa de cirurgia,hemorroida é cirúrgica,blog-post,faq-question,consideration,patients,/blog/hemorroida-sempre-cirurgica-tratamento,P3
+a vacina funciona em adultos,HPV anal,blog-post,faq-question,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P3
+cancer anal HPV,HPV anal,blog-post,blog-secondary,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P3
+condilomas anais,HPV anal,blog-post,blog-secondary,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P3
+condilomas podem voltar após o tratamento,HPV anal,blog-post,faq-question,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P3
+HPV anal,HPV anal,blog-post,blog-primary,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P3
+hpv anal sempre causa verrugas,HPV anal,blog-post,faq-question,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P3
+hpv anal sempre evolui para câncer,HPV anal,blog-post,faq-question,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P3
+rastreio HPV anal,HPV anal,blog-post,blog-secondary,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P3
+vacina HPV adultos,HPV anal,blog-post,blog-secondary,awareness,patients,/blog/hpv-anal-condilomas-riscos-tratamento-rastreio,P3
+quando procurar coloproctologista,landing-homepage,landing-page,landing-copy,awareness,patients,/,P3
+sinais e sintomas intestinais,landing-homepage,landing-page,landing-copy,awareness,patients,/,P3
+dor ao evacuar,landing-sintomas-condicoes,landing-page,landing-copy,awareness,patients,/,P3
+evacuação incompleta,landing-sintomas-condicoes,landing-page,landing-copy,awareness,patients,/,P3
+incontinência fecal,landing-sintomas-condicoes,landing-page,landing-copy,awareness,patients,/,P3
+sangramento ao evacuar,landing-sintomas-condicoes,landing-page,landing-copy,awareness,patients,/,P3
+saúde sexual coloproctologia,landing-sintomas-condicoes,landing-page,landing-copy,awareness,patients,/,P3
+especialista em coloproctologia com formação internacional,marca-dra-ana-luiza,doctor-profile,doctor-name,awareness,patients,/sobre,P3
+quem é dra ana luiza,marca-dra-ana-luiza,doctor-profile,doctor-name,awareness,patients,/sobre,P3
+a cirurgia a laser é sempre melhor que a convencional,plicoma anal,blog-post,faq-question,consideration,patients,/blog/plicoma-anal-cirurgia-laser,P3
+o plicoma pode virar câncer,plicoma anal,blog-post,faq-question,consideration,patients,/blog/plicoma-anal-cirurgia-laser,P3
+preciso obrigatoriamente retirar o plicoma,plicoma anal,blog-post,faq-question,consideration,patients,/blog/plicoma-anal-cirurgia-laser,P3
+quanto tempo dura a recuperação da cirurgia a laser,plicoma anal,blog-post,faq-question,consideration,patients,/blog/plicoma-anal-cirurgia-laser,P3
+com que idade devo começar consultas de rotina,quando procurar coloproctologista,blog-post,faq-question,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+especialista cólon reto,quando procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+o exame proctológico dói,quando procurar coloproctologista,blog-post,faq-question,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+o que devo levar para minha primeira consulta,quando procurar coloproctologista,blog-post,faq-question,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+preciso mesmo procurar um coloproctologista se o sangramento for pequeno,quando procurar coloproctologista,blog-post,faq-question,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+problemas intestinais,quando procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+quando ir ao proctologista,quando procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+quando procurar coloproctologista,quando procurar coloproctologista,blog-post,blog-primary,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+sintomas coloproctologia,quando procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+tenho vergonha de falar sobre meus sintomas o que fazer,quando procurar coloproctologista,blog-post,faq-question,awareness,patients,/blog/quando-procurar-coloproctologista-curitiba,P3
+causas sangue fezes,sangue nas fezes,blog-post,blog-secondary,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P3
+hemorroida sangramento,sangue nas fezes,blog-post,blog-secondary,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P3
+o sangue pode aparecer mesmo sem dor,sangue nas fezes,blog-post,faq-question,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P3
+preciso fazer colonoscopia se tiver sangue nas fezes,sangue nas fezes,blog-post,faq-question,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P3
+quando devo procurar um coloproctologista,sangue nas fezes,blog-post,faq-question,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P3
+quando preocupar sangramento,sangue nas fezes,blog-post,blog-secondary,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P3
+sangramento anal,sangue nas fezes,blog-post,blog-secondary,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P3
+sangue nas fezes,sangue nas fezes,blog-post,blog-primary,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P3
+sangue nas fezes sempre significa câncer,sangue nas fezes,blog-post,faq-question,awareness,patients,/blog/sangue-nas-fezes-quando-procurar-coloproctologista,P3
+alterações anais podem afetar a vida sexual,saúde sexual,blog-post,faq-question,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P3
+dor durante a relação sexual é normal,saúde sexual,blog-post,faq-question,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P3
+dor na relação sexual,saúde sexual,blog-post,blog-secondary,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P3
+existe tratamento para melhorar o conforto sexual,saúde sexual,blog-post,faq-question,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P3
+HPV anal,saúde sexual,blog-post,blog-secondary,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P3
+IST anal,saúde sexual,blog-post,blog-secondary,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P3
+posso falar sobre práticas sexuais na consulta,saúde sexual,blog-post,faq-question,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P3
+saúde anorretal,saúde sexual,blog-post,blog-secondary,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P3
+saúde sexual,saúde sexual,blog-post,blog-primary,awareness,patients,/blog/saude-sexual-cuidado-informacao-bem-estar,P3
+dor ao evacuar,sinais de alerta intestinais,blog-post,blog-secondary,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P3
+dor ao evacuar é normal,sinais de alerta intestinais,blog-post,faq-question,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P3
+mudança no hábito intestinal,sinais de alerta intestinais,blog-post,blog-secondary,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P3
+mudança no hábito intestinal pode ser estresse,sinais de alerta intestinais,blog-post,faq-question,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P3
+quando é urgente procurar atendimento,sinais de alerta intestinais,blog-post,faq-question,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P3
+quando procurar coloproctologista,sinais de alerta intestinais,blog-post,blog-secondary,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P3
+sangue nas fezes,sinais de alerta intestinais,blog-post,blog-secondary,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P3
+sangue nas fezes sempre é hemorroida,sinais de alerta intestinais,blog-post,faq-question,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P3
+sinais de alerta intestinais,sinais de alerta intestinais,blog-post,blog-primary,awareness,patients,/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba,P3
+a sii pode virar câncer,síndrome do intestino irritável,blog-post,faq-question,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P3
+a sii tem cura,síndrome do intestino irritável,blog-post,faq-question,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P3
+ansiedade causa sii,síndrome do intestino irritável,blog-post,faq-question,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P3
+diagnóstico SII,síndrome do intestino irritável,blog-post,blog-secondary,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P3
+eixo intestino cérebro,síndrome do intestino irritável,blog-post,blog-secondary,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P3
+SII sintomas,síndrome do intestino irritável,blog-post,blog-secondary,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P3
+síndrome do intestino irritável,síndrome do intestino irritável,blog-post,blog-primary,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P3
+síndrome do intestino irritável é doença grave,síndrome do intestino irritável,blog-post,faq-question,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P3
+tratamento síndrome do intestino irritável,síndrome do intestino irritável,blog-post,blog-secondary,awareness,patients,/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento,P3
+exames normais significam que está tudo bem,sintomas intestinais persistentes,blog-post,faq-question,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P3
+hemorroida sempre volta,sintomas intestinais persistentes,blog-post,faq-question,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P3
+sintomas intestinais persistentes podem ser graves,sintomas intestinais persistentes,blog-post,faq-question,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P3
+usar laxante todos os dias faz mal,sintomas intestinais persistentes,blog-post,faq-question,consideration,patients,/blog/por-que-meus-sintomas-nunca-melhoram,P3
+consulta com coloproctologista,vergonha de procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P3
+dor ao evacuar,vergonha de procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P3
+é normal ter vergonha de fazer exame proctológico,vergonha de procurar coloproctologista,blog-post,faq-question,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P3
+exame proctológico,vergonha de procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P3
+o exame proctológico dói,vergonha de procurar coloproctologista,blog-post,faq-question,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P3
+o médico vai me julgar,vergonha de procurar coloproctologista,blog-post,faq-question,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P3
+preciso fazer exame já na primeira consulta,vergonha de procurar coloproctologista,blog-post,faq-question,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P3
+sangue nas fezes,vergonha de procurar coloproctologista,blog-post,blog-secondary,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P3
+vergonha de procurar coloproctologista,vergonha de procurar coloproctologista,blog-post,blog-primary,awareness,patients,/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal,P3

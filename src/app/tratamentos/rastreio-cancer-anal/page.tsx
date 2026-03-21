@@ -4,6 +4,8 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
+import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
@@ -162,6 +164,9 @@ export default function RastreioCancerAnalPage() {
               </p>
             </header>
 
+            <TreatmentHeroImage slug="rastreio-cancer-anal" />
+
+
             <main className="prose prose-lg max-w-none mb-12">
               <h2>Fatores de risco</h2>
               <p>Alguns fatores aumentam a probabilidade de desenvolver câncer de canal anal:</p>
@@ -304,6 +309,8 @@ export default function RastreioCancerAnalPage() {
                   coloproctologista para definir a melhor estratégia de acompanhamento.
                 </p>
               </blockquote>
+
+              <RelatedBlogCard treatmentSlug="rastreio-cancer-anal" />
 
               <h2>Perguntas frequentes (FAQ)</h2>
 

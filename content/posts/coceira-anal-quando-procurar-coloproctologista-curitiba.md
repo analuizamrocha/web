@@ -2,7 +2,7 @@
 title: "Coceira anal: quando é normal e quando procurar um coloproctologista em Curitiba"
 metaDescription: "Coceira anal pode ter diversas causas, desde higiene inadequada até doenças orificiais. Descubra quando procurar ajuda especializada em Curitiba."
 slug: "coceira-anal-quando-procurar-coloproctologista-curitiba"
-publishDate: "2025-10-21"
+publishDate: "2025-10-24"
 lastModified: "2026-02-14"
 primaryKeyword: "coceira anal"
 secondaryKeywords:

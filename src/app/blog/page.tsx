@@ -1,20 +1,24 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { Badge } from '@/components/ui/Badge'
-import {
-  getAllPosts,
-  getTargetAudienceLabel,
-  getContentIntentLabel,
-} from '@/lib/blog'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { getAllPosts, getTargetAudienceLabel, getContentIntentLabel } from '@/lib/blog'
 import type { Metadata } from 'next'
-import { WEBSITE_URL, SITE_NAME, TAG_INSTAGRAM } from '@/lib/constants'
+import {
+  WEBSITE_URL,
+  SITE_NAME,
+  TAG_INSTAGRAM,
+  WPP_NUMBER_NASSIF,
+  WHATSAPP_MSG_TEXT_ENCODED,
+} from '@/lib/constants'
 
-const BLOG_PAGE_TITLE = 'Blog de Coloproctologia e Saúde Intestinal'
+const BLOG_PAGE_TITLE = 'Blog — Saúde intestinal sem tabu'
 
 export const metadata: Metadata = {
   title: BLOG_PAGE_TITLE,
   description:
-    'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
+    'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
   keywords: [
     'blog coloproctologia',
     'artigos coloproctologista curitiba',
@@ -28,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: BLOG_PAGE_TITLE,
     description:
-      'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
+      'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
     type: 'website',
     locale: 'pt_BR',
     url: `${WEBSITE_URL}/blog`,
@@ -46,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: BLOG_PAGE_TITLE,
     description:
-      'Artigos especializados sobre coloproctologia, tratamentos e prevenção. Informações confiáveis sobre saúde intestinal por especialista em Curitiba.',
+      'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
     creator: TAG_INSTAGRAM,
     site: TAG_INSTAGRAM,
     images: [`${WEBSITE_URL}/og-image.jpg`],
@@ -81,9 +85,8 @@ export default function BlogPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
               <p>
-                Aqui compartilho conhecimentos, dicas práticas e orientações
-                sobre coloproctologia para ajudar você a entender melhor sua
-                saúde intestinal
+                Aqui compartilho conhecimentos, dicas práticas e orientações sobre coloproctologia
+                para ajudar você a entender melhor sua saúde intestinal
               </p>
             </div>
           </div>
@@ -91,40 +94,57 @@ export default function BlogPage() {
           {posts.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-lg lg:text-xl text-secondary">
-                Em breve estarei compartilhando artigos e dicas valiosas sobre
-                saúde intestinal.
+                Em breve estarei compartilhando artigos e dicas valiosas sobre saúde intestinal.
               </p>
             </div>
           ) : (
-            <div className="mx-auto max-w-4xl space-y-8 lg:space-y-12">
+            <div className="mx-auto max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
               {posts.map((post) => (
                 <article
                   key={post.slug}
-                  className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 hover:border-secondary/30 transition-all duration-300 shadow-sm hover:shadow-md group"
+                  className="group overflow-hidden rounded-3xl border border-secondary/20 bg-card-bg shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-secondary/35 hover:shadow-lg"
                 >
-                  <div className="mb-6">
-                    <div className="flex items-center gap-4 text-sm text-secondary mb-4">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-secondary/15">
+                    {post.cardImage ? (
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="absolute inset-0 block"
+                        aria-label={`Abrir artigo: ${post.title}`}
+                      >
+                        <Image
+                          src={post.cardImage.src}
+                          alt={post.cardImage.alt}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(min-width: 1280px) 36rem, (min-width: 768px) 50vw, 100vw"
+                        />
+                      </Link>
+                    ) : (
+                      <div className="h-full w-full bg-gradient-to-br from-secondary/35 via-background to-secondary/5" />
+                    )}
+                  </div>
+
+                  <div className="p-5 lg:p-6">
+                    <div className="mb-3 flex items-center gap-4 text-sm text-text-muted">
                       <time dateTime={post.publishDate}>
-                        {new Date(post.publishDate).toLocaleDateString('pt-BR')}
+                        {new Date(post.publishDate).toLocaleDateString('pt-BR', {
+                          timeZone: 'UTC',
+                        })}
                       </time>
-                      {post.readingTime && (
-                        <span>{post.readingTime} min de leitura</span>
-                      )}
+                      {post.readingTime && <span>{post.readingTime} min de leitura</span>}
                     </div>
 
-                    <h2 className="text-2xl lg:text-3xl font-serif font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    <h2 className="mb-3 text-2xl font-serif font-bold text-primary transition-colors group-hover:text-primary/90">
                       <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </h2>
 
-                    <div className="prose prose-lg max-w-none mb-6">
+                    <div className="prose prose-sm mb-5 max-w-none text-text-body [&_p]:mb-0">
                       <MDXRemote source={post.excerpt} />
                     </div>
 
-                    <div className="flex items-center justify-between">
-                      <div className="flex flex-wrap gap-2 mr-4">
-                        <Badge variant="primary">
-                          {getContentIntentLabel(post.intent)}
-                        </Badge>
+                    <div className="flex items-end justify-between gap-4">
+                      <div className="mr-4 flex flex-wrap gap-2">
+                        <Badge variant="primary">{getContentIntentLabel(post.intent)}</Badge>
                         <Badge variant="secondary">
                           {getTargetAudienceLabel(post.targetAudience)}
                         </Badge>
@@ -132,7 +152,7 @@ export default function BlogPage() {
 
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="text-primary hover:text-primary/80 font-medium transition-colors text-lg text-nowrap"
+                        className="text-nowrap font-medium text-primary transition-colors hover:text-primary/80"
                       >
                         Ler artigo →
                       </Link>
@@ -142,6 +162,39 @@ export default function BlogPage() {
               ))}
             </div>
           )}
+
+          {/* CTA block — routes reader to /sobre for internal link value */}
+          <div className="mx-auto max-w-6xl mt-16 lg:mt-20">
+            <div className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 text-center">
+              <h2 className="text-2xl lg:text-3xl font-serif font-bold text-primary mb-4">
+                Conheça a formação, os valores e a abordagem da Dra. Ana Luiza.
+              </h2>
+              <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-8 max-w-2xl mx-auto">
+                Atendimento humanizado com a mais alta qualidade técnica em proctologia.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <LinkButton
+                  href="/sobre"
+                  size="lg"
+                  variant="primary"
+                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  Saber mais
+                </LinkButton>
+                <LinkButton
+                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  size="lg"
+                  variant="outline"
+                  external
+                  newTab
+                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl"
+                  aria-label="Agendar consulta com a Dra. Ana Luiza Moraes Rocha pelo WhatsApp"
+                >
+                  Agendar consulta
+                </LinkButton>
+              </div>
+            </div>
+          </div>
 
           <div className="pt-8 lg:pt-12 text-center">
             <Link

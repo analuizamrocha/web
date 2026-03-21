@@ -38,15 +38,13 @@ import {
   Users,
 } from 'lucide-react'
 
-const pageTitle = 'Sobre a Dra. Ana Luiza M. Rocha | Especialista em Coloproctologia'
+const pageTitle = 'Formação e trajetória profissional'
 const pageDescription =
-  'Conheça a trajetória da Dra. Ana Luiza Moraes Rocha, especialista em Coloproctologia com formação internacional e experiência em cirurgias minimamente invasivas.'
+  'Residência em cirurgia geral, especialização em coloproctologia e fellowship internacional em cirurgia colorretal. Conheça quem cuida de você.'
 const pageUrl = `${WEBSITE_URL}/sobre`
 
 export const metadata: Metadata = {
-  title: {
-    absolute: pageTitle,
-  },
+  title: pageTitle,
   description: pageDescription,
   keywords: [
     'coloproctologista curitiba',
@@ -129,7 +127,7 @@ const principles = [
   },
   {
     icon: Shield,
-    title: 'Excelência Técnica',
+    title: 'Excelência técnica',
     description: 'Utilização de técnicas atualizadas e seguras.',
     color: 'text-brand-primary',
     bgColor: 'bg-brand-primary/10',
@@ -137,7 +135,7 @@ const principles = [
   },
   {
     icon: MessageCircle,
-    title: 'Comunicação Clara',
+    title: 'Comunicação clara',
     description: 'Explicações detalhadas sobre diagnósticos e tratamentos.',
     color: 'text-accent-neutral',
     bgColor: 'bg-accent-neutral/10',
@@ -145,7 +143,7 @@ const principles = [
   },
   {
     icon: Users,
-    title: 'Cuidado Continuado',
+    title: 'Cuidado continuado',
     description: 'Acompanhamento próximo em todo o processo de tratamento.',
     color: 'text-secondary',
     bgColor: 'bg-secondary/20',
@@ -271,12 +269,12 @@ export default function SobrePage() {
             </h2>
             <p className="text-lg text-secondary leading-relaxed mb-4">
               Minha jornada na medicina começou com a certeza de que queria cuidar de pessoas de
-              forma integral. Durante a graduação em Medicina na <strong>{PUC_PR}</strong>, desenvolvi
-              a base sólida da minha formação. Foi durante a&nbsp;
-              <strong>residência em Cirurgia Geral, no {HOSPITAL_SANTA_CASA}</strong>, que
-              descobri meu amor pela <strong>coloproctologia</strong> — especialidade que une
-              conhecimento técnico avançado com o cuidado humanizado que sempre busquei oferecer aos
-              meus pacientes.
+              forma integral. Durante a graduação em Medicina na <strong>{PUC_PR}</strong>,
+              desenvolvi a base sólida da minha formação. Foi durante a&nbsp;
+              <strong>residência em Cirurgia Geral, no {HOSPITAL_SANTA_CASA}</strong>, que descobri
+              meu amor pela <strong>coloproctologia</strong> — especialidade que une conhecimento
+              técnico avançado com o cuidado humanizado que sempre busquei oferecer aos meus
+              pacientes.
             </p>
 
             {/* Professional Images Grid */}
@@ -495,7 +493,7 @@ export default function SobrePage() {
             </div>
 
             {/* Principles Grid */}
-            <div className="bg-gradient-to-b from-muted/20 to-transparent rounded-3xl p-8 lg:p-12">
+            <div className="bg-gradient-to-b from-muted/20 to-transparent rounded-3xl p-4 sm:p-8 lg:p-12">
               <h3 className="text-2xl lg:text-3xl font-serif font-bold text-primary mb-8 text-center">
                 Meus princípios de atuação
               </h3>

@@ -10,7 +10,7 @@ import Instagram from '../icons/instagram'
 export function Footer() {
   return (
     <footer className="w-full bg-primary" aria-label="Footer">
-      <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 py-8 lg:py-12">
+      <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 pt-8 pb-24 lg:pt-12 lg:pb-20">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div className="flex flex-col gap-y-4">
             <Link
