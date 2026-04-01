@@ -32,7 +32,7 @@ faqs:
 
 _Sangramento ao evacuar, dor abdominal ou mudanças no hábito intestinal podem ser sinais importantes. Descubra quando esses sintomas exigem avaliação especializada e não devem ser ignorados._
 
-![Coloproctologista em consulta acolhedora com paciente no consultório](/images/posts/quando-procurar-coloproctologista-curitiba/consulta-coloproctologista-acolhimento.png)
+![Coloproctologista em consulta acolhedora com paciente no consultório](/images/posts/quando-procurar-coloproctologista-curitiba/consulta-coloproctologista-acolhimento.webp)
 
 A saúde intestinal é fundamental para nosso bem-estar geral, mas muitas pessoas ficam em dúvida sobre **quando procurar coloproctologista**. Encontrar o especialista adequado pode fazer toda a diferença no diagnóstico precoce e tratamento eficaz de problemas que afetam o intestino grosso, reto e ânus.
 
@@ -56,7 +56,7 @@ Esses sintomas podem ter diversas causas, desde condições simples até doença
 
 A consulta preventiva permite esclarecer dúvidas e iniciar os cuidados apropriados para sua saúde intestinal.
 
-![Mulher com desconforto abdominal — sintomas que não devem ser ignorados](/images/posts/quando-procurar-coloproctologista-curitiba/desconforto-intestinal-sinais-alerta.png)
+![Mulher com desconforto abdominal — sintomas que não devem ser ignorados](/images/posts/quando-procurar-coloproctologista-curitiba/desconforto-intestinal-sinais-alerta.webp)
 
 ## Sintomas que não devem ser ignorados
 
@@ -121,7 +121,6 @@ Se alguma dessas dúvidas também é sua, procure um médico coloproctologista d
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
-Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia
 

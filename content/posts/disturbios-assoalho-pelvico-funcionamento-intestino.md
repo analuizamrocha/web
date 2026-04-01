@@ -36,7 +36,7 @@ Esses sintomas são mais comuns do que se imagina e, muitas vezes, estão relaci
 
 Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que são os distúrbios do assoalho pélvico, quais sintomas eles podem causar, como é feito o diagnóstico e quais são as opções de tratamento.
 
-![Ilustração da musculatura do assoalho pélvico e sua função intestinal](/images/posts/disturbios-assoalho-pelvico/musculo-assoalho-pelvico.png)
+![Ilustração da musculatura do assoalho pélvico e sua função intestinal](/images/posts/disturbios-assoalho-pelvico/musculo-assoalho-pelvico.webp)
 
 ## O que é o assoalho pélvico?
 
@@ -159,7 +159,6 @@ Se você apresenta dificuldade para evacuar, escapes fecais ou sensação de eva
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
-Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia
 

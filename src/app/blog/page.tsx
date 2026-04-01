@@ -99,7 +99,7 @@ export default function BlogPage() {
             </div>
           ) : (
             <div className="mx-auto max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
-              {posts.map((post) => (
+              {posts.map((post, index) => (
                 <article
                   key={post.slug}
                   className="group overflow-hidden rounded-3xl border border-secondary/20 bg-card-bg shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-secondary/35 hover:shadow-lg"
@@ -117,6 +117,8 @@ export default function BlogPage() {
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                           sizes="(min-width: 1280px) 36rem, (min-width: 768px) 50vw, 100vw"
+                          // index < 2 is a heuristic — desktop shows 2 columns so both above-the-fold cards get priority; mobile shows 1 column so only index 0 truly needs it, but the extra preload on index 1 is harmless
+                          priority={index < 2}
                         />
                       </Link>
                     ) : (

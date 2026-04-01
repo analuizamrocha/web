@@ -47,7 +47,7 @@ Já a **diarreia crônica** é definida quando:
 
 Quando a diarreia persiste, ela **precisa ser investigada**.
 
-![Diferença entre diarreia aguda e diarreia crônica](/images/posts/diarreia-cronica-tratamento/diferenca-diarreia-aguda-cronica.png)
+![Diferença entre diarreia aguda e diarreia crônica](/images/posts/diarreia-cronica-tratamento/diferenca-diarreia-aguda-cronica.webp)
 
 ---
 
@@ -160,7 +160,6 @@ Se você convive com **intestino solto frequente**, agende uma consulta com a **
 ---
 
 **Dra. Ana Luiza Moraes Rocha**<br/>
-Médica Coloproctologista<br/>
 CRM-PR 45351 | RQE 36221<br/>
 Especialista em Coloproctologia
 

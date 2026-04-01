@@ -73,7 +73,7 @@ Quando isso acontece, os alimentos começam a fermentar **antes do lugar correto
 
 **Importante**: Nem todo paciente com disbiose tem SIBO, mas **muitos pacientes com SIBO apresentam disbiose associada**.
 
-![Comparativo entre intestino saudável, disbiose e SIBO](/images/posts/disbiose-sibo-tratamento/comparativo-intestino-saudavel-disbiose-sibo.png)
+![Comparativo entre intestino saudável, disbiose e SIBO](/images/posts/disbiose-sibo-tratamento/comparativo-intestino-saudavel-disbiose-sibo.webp)
 
 ---
 
@@ -100,7 +100,7 @@ Os sintomas podem variar de pessoa para pessoa, mas os mais frequentes são:
 
 ## Qual a diferença entre disbiose e SIBO?
 
-![Diferenças entre disbiose e SIBO](/images/posts/disbiose-sibo-tratamento/diferenca-disbiose-sibo.png)
+![Diferenças entre disbiose e SIBO](/images/posts/disbiose-sibo-tratamento/diferenca-disbiose-sibo.webp)
 
 | Disbiose                                | SIBO                                      |
 | --------------------------------------- | ----------------------------------------- |
@@ -208,6 +208,5 @@ Se você sofre com **inchaço abdominal, gases ou desconforto digestivo**, **age
 **Dra. Ana Luiza Moraes Rocha**<br/>
 Médica Coloproctologista<br/>
 CRM-PR 45351 | RQE 36221<br/>
-Especialista em Coloproctologia
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

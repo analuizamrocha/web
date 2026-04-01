@@ -29,7 +29,7 @@ faqs:
 
 _Uma das perguntas mais comuns no consultório é direta: "Doutora, hemorroida sempre precisa operar?"_
 
-![Ilustração de hemorroidas internas no canal anal](/images/posts/hemorroida-sempre-precisa-cirurgia/hemorroidas-internas.png)
+![Ilustração de hemorroidas internas no canal anal](/images/posts/hemorroida-sempre-precisa-cirurgia/hemorroidas-internas.webp)
 
 A resposta é simples: **não necessariamente**.
 
@@ -97,7 +97,7 @@ A cirurgia costuma ser considerada quando:
 
 A decisão não depende apenas do grau da hemorroida, mas também do impacto na qualidade de vida do paciente.
 
-![Ligadura elástica no tratamento de hemorroidas](/images/posts/hemorroida-sempre-precisa-cirurgia/hemorroida-banda-elastica.png)
+![Ligadura elástica no tratamento de hemorroidas](/images/posts/hemorroida-sempre-precisa-cirurgia/hemorroida-banda-elastica.webp)
 
 ## Um ponto importante: tratar o intestino primeiro
 
@@ -127,7 +127,7 @@ Mas adiar a avaliação por muito tempo pode levar a:
 
 Hoje existem diferentes abordagens cirúrgicas e procedimentos que podem ser discutidos de forma individualizada.
 
-![Hemorroidectomia com laser — técnica minimamente invasiva](/images/posts/hemorroida-sempre-precisa-cirurgia/hemorroidectomia-laser.png)
+![Hemorroidectomia com laser — técnica minimamente invasiva](/images/posts/hemorroida-sempre-precisa-cirurgia/hemorroidectomia-laser.webp)
 
 A decisão deve ser tomada com informação clara e avaliação especializada.
 
@@ -160,7 +160,6 @@ Ela é indicada quando os sintomas persistem ou quando a doença está em estág
 ---
 
 **Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
 CRM-PR 45351 | RQE 36221
 Especialista em Coloproctologia
 

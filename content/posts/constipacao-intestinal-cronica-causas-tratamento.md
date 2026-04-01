@@ -32,7 +32,7 @@ A **prisão de ventre**, também chamada de **constipação intestinal crônica*
 
 Neste artigo, você vai entender as **causas da constipação**, quais são as opções de **tratamento** e quando é a hora de procurar um coloproctologista.
 
-![Sinais mais comuns da constipação intestinal crônica](/images/posts/constipacao-intestinal-cronica-causas-tratamento/sinais-constipacao-intestinal-cronica.png)
+![Sinais mais comuns da constipação intestinal crônica](/images/posts/constipacao-intestinal-cronica-causas-tratamento/sinais-constipacao-intestinal-cronica.webp)
 
 ## O que é constipação intestinal crônica?
 
@@ -120,6 +120,5 @@ Se você convive com prisão de ventre frequente, procure avaliação especializ
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

@@ -42,18 +42,16 @@ Every tactic below fits into one of these categories.
 
 ### Step 2: Keyword Research ✅
 
-**Completed:** See `seo-keywords-tracking.md` for full list.
+**Completed:** Keywords tracked externally via own SEO rank solution.
 
 **Key Insights:**
 
-- **50 core keywords** identified across 5 priority groups
 - Focus on local intent: "coloproctologista curitiba"
 - Mix of commercial (procedures) + informational (symptoms)
 - Competitive gaps: "consulta coloproctologista curitiba", "agendar", insurance-related
 
 **Next Actions:**
 
-- Track all 50 keywords in Google Search Console
 - Review competitor rankings quarterly
 - Add missing keywords to page content
 

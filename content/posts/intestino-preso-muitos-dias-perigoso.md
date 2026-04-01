@@ -29,7 +29,7 @@ faqs:
 
 _Ficar alguns dias sem evacuar pode acontecer ocasionalmente. Mas quando isso se torna frequente, pode indicar constipação intestinal._
 
-![Ilustração do intestino grosso e funcionamento intestinal normal](/images/posts/intestino-preso-muitos-dias-perigoso/constipacao-intestino-grosso-normal.png)
+![Ilustração do intestino grosso e funcionamento intestinal normal](/images/posts/intestino-preso-muitos-dias-perigoso/constipacao-intestino-grosso-normal.webp)
 
 Muitas pessoas se acostumam com o intestino preso e passam a considerar isso normal — o que nem sempre é verdade.
 
@@ -93,7 +93,6 @@ Quando a constipação é persistente ou causa dor e sangramento.
 ---
 
 **Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
 CRM-PR 45351 | RQE 36221
 Especialista em Coloproctologia
 

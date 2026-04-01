@@ -32,7 +32,7 @@ Perceber **sangue nas fezes** é sempre um sinal que causa preocupação, e com 
 
 Neste artigo, você vai entender as **principais causas de sangue nas fezes**, quando é preciso se preocupar e por que a avaliação médica é essencial para garantir sua saúde intestinal.
 
-![Ilustração de sangue nas fezes e sinal de alerta intestinal](/images/posts/sangue-nas-fezes-quando-procurar-coloproctologista/sangue-nas-fezes.png)
+![Ilustração de sangue nas fezes e sinal de alerta intestinal](/images/posts/sangue-nas-fezes-quando-procurar-coloproctologista/sangue-nas-fezes.webp)
 
 ## O que significa ter sangue nas fezes?
 
@@ -70,7 +70,7 @@ Inclui a **doença de Crohn** e a **retocolite ulcerativa**, que provocam inflam
 
 Pode causar sangramento oculto ou visível nas fezes. O diagnóstico precoce aumenta significativamente as chances de cura.
 
-![Principais causas de sangue nas fezes em resumo visual](/images/posts/sangue-nas-fezes-quando-procurar-coloproctologista/principais-causas-sangue-nas-fezes.png)
+![Principais causas de sangue nas fezes em resumo visual](/images/posts/sangue-nas-fezes-quando-procurar-coloproctologista/principais-causas-sangue-nas-fezes.webp)
 
 ## Quando se preocupar com sangue nas fezes
 
@@ -151,6 +151,5 @@ Se você apresenta sangramento anal persistente ou outros sintomas de alerta, pr
 **Dra. Ana Luiza Moraes Rocha**
 Médica Coloproctologista
 CRM-PR 45351 | RQE 36221
-Especialista em Coloproctologia
 
 > *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*

@@ -2,6 +2,7 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Montserrat, Literata } from 'next/font/google'
+import Script from 'next/script'
 
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
@@ -167,6 +168,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: getStructuredData(),
           }}
         />
+        {/* React Grab - development only */}
+        {process.env.NODE_ENV === 'development' && (
+          <Script
+            src="//unpkg.com/react-grab/dist/index.global.js"
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        )}
       </head>
       <body className={`${montserrat.variable} ${literata.variable} font-sans`}>
         <Header />

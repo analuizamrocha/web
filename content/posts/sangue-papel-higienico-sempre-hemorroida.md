@@ -29,7 +29,7 @@ faqs:
 
 _Encontrar sangue no papel higiênico após evacuar é uma situação que gera preocupação imediata._
 
-![Causas de sangramento anal e quando investigar](/images/posts/sangue-papel-higienico-sempre-hemorroida/causas-sangramento-anal.png)
+![Causas de sangramento anal e quando investigar](/images/posts/sangue-papel-higienico-sempre-hemorroida/causas-sangramento-anal.webp)
 
 Muitas pessoas acreditam que isso significa apenas hemorroida, mas nem sempre é o caso.
 
@@ -83,7 +83,6 @@ Sempre que houver sangramento recorrente.
 ---
 
 **Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
 CRM-PR 45351 | RQE 36221
 Especialista em Coloproctologia
 

@@ -34,7 +34,7 @@ Esse desconforto pode afetar pessoas de todas as idades e costuma gerar **constr
 
 Neste artigo, você vai entender as **principais causas da coceira anal**, quando o sintoma merece investigação e quais cuidados ajudam a aliviar e prevenir o problema.
 
-![Ilustração de coceira anal e desconforto na região perianal](/images/posts/coceira-anal-quando-procurar-coloproctologista-curitiba/coceira-anal.png)
+![Ilustração de coceira anal e desconforto na região perianal](/images/posts/coceira-anal-quando-procurar-coloproctologista-curitiba/coceira-anal.webp)
 
 ## Causas comuns da coceira anal
 
@@ -67,7 +67,7 @@ Verminoses, como **oxiúros**, são uma causa importante de coceira anal noturna
 
 Condições como **psoríase**, **eczema**, **diabetes**, **suor excessivo** e até **uso prolongado de antibióticos** podem favorecer a irritação local.
 
-![Resumo visual das principais causas de coceira anal](/images/posts/coceira-anal-quando-procurar-coloproctologista-curitiba/principais-causas-coceira-anal.png)
+![Resumo visual das principais causas de coceira anal](/images/posts/coceira-anal-quando-procurar-coloproctologista-curitiba/principais-causas-coceira-anal.webp)
 
 ## Quando a coceira anal pode indicar doença orificial
 
@@ -157,6 +157,5 @@ Se o sintoma persistir ou vier acompanhado de outros sinais de alerta, procure a
 **Dra. Ana Luiza Moraes Rocha**
 Médica Coloproctologista
 CRM-PR 45351 | RQE 36221
-Especialista em Coloproctologia
 
 > *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*
