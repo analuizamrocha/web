@@ -28,7 +28,7 @@ faqs:
 
 _Sentir vergonha na primeira consulta é comum, mas entender como funciona o atendimento ajuda a buscar diagnóstico com mais tranquilidade._
 
-![Coloproctologista em atendimento acolhedor com paciente no consultório](/images/posts/sinto-vergonha-procurar-coloproctologista-isso-e-normal/desconforto-intestinal.png)
+![Coloproctologista em atendimento acolhedor com paciente no consultório](/images/posts/sinto-vergonha-procurar-coloproctologista-isso-e-normal/desconforto-intestinal.webp)
 
 "Eu tenho vergonha."
 Essa é uma das frases mais comuns antes de uma consulta.
@@ -150,7 +150,6 @@ Se você tem adiado sua avaliação por constrangimento, agende uma consulta com
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
-Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia
 

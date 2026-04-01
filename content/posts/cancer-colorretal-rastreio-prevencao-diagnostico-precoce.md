@@ -37,7 +37,7 @@ O **câncer colorretal** é um dos tumores mais comuns no mundo, mas também um 
 
 Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que é o câncer colorretal, quem deve fazer rastreio, quais exames são indicados e como a prevenção pode salvar vidas.
 
-![Ilustração de pólipos intestinais no cólon](/images/posts/cancer-colorretal/polipos-intestinais.png)
+![Ilustração de pólipos intestinais no cólon](/images/posts/cancer-colorretal/polipos-intestinais.webp)
 
 ## O que é o câncer colorretal?
 
@@ -46,7 +46,7 @@ Na maioria dos casos, ele surge a partir de **pólipos intestinais**, que são l
 
 Esse processo é lento, o que torna o rastreio extremamente eficaz.
 
-![Evolução do pólipo intestinal para câncer colorretal ao longo do tempo](/images/posts/cancer-colorretal/evolucao-polipo-cancer-colorretal.png)
+![Evolução do pólipo intestinal para câncer colorretal ao longo do tempo](/images/posts/cancer-colorretal/evolucao-polipo-cancer-colorretal.webp)
 
 ## Por que o rastreio é tão importante?
 
@@ -151,6 +151,5 @@ Se você deseja orientação sobre rastreio e prevenção, agende uma consulta c
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

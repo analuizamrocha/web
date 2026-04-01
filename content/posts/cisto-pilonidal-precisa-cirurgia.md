@@ -29,7 +29,7 @@ faqs:
 
 _O cisto pilonidal é uma condição relativamente comum, especialmente em adultos jovens._
 
-![Detalhamento anatômico do cisto pilonidal e da área acometida](/images/posts/cisto-pilonidal-precisa-cirurgia/cisto-pilonidal-detalhes.png)
+![Detalhamento anatômico do cisto pilonidal e da área acometida](/images/posts/cisto-pilonidal-precisa-cirurgia/cisto-pilonidal-detalhes.webp)
 
 Ele se desenvolve na região próxima ao cóccix e pode causar dor, inflamação e formação de abscessos.
 
@@ -98,7 +98,6 @@ Depende da técnica utilizada e da extensão da doença.
 ---
 
 **Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
 CRM-PR 45351 | RQE 36221
 Especialista em Coloproctologia
 

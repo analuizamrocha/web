@@ -34,7 +34,7 @@ Muitos pacientes chegam ao consultório relatando constipação, gases ou sensa�
 
 Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica como as fibras atuam no funcionamento do intestino, quais são seus tipos, como equilibrar o consumo e por que elas são fundamentais para prevenir doenças como **hemorroidas, fissuras e constipação crônica**.
 
-![Comparativo entre fibras solúveis e insolúveis e seus efeitos no intestino](/images/posts/alimentacao-fibras-saude-intestinal/fibra-soluvel-fibra-insoluvel.png)
+![Comparativo entre fibras solúveis e insolúveis e seus efeitos no intestino](/images/posts/alimentacao-fibras-saude-intestinal/fibra-soluvel-fibra-insoluvel.webp)
 
 ---
 
@@ -125,7 +125,6 @@ O segredo está no equilíbrio: combinar alimentos ricos em fibras com **ingest�
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
-Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia
 

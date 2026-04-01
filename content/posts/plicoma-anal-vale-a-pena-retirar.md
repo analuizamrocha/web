@@ -26,13 +26,13 @@ faqs:
     answer: 'Em muitos casos o laser oferece recuperação mais confortável, menor trauma tecidual, menor risco de recidiva e melhor resultado estético. A decisão depende da avaliação individual.'
 ---
 
-_Plicoma anal que incomoda no dia a dia pode ter solução — mas nem todo caso precisa de cirurgia. Entenda quando a retirada é indicada e o que esperar do tratamento._
+_Plicoma anal que incomoda no dia a dia pode ter solução, mas nem todo caso precisa de cirurgia. Entenda quando a retirada é indicada e o que esperar do tratamento._
 
 Muitos pacientes chegam ao consultório com uma dúvida muito comum: "Doutora, eu tenho uma pele sobrando no ânus. Isso precisa ser retirado?"
 
-A resposta depende de alguns fatores. O plicoma anal é uma alteração benigna, mas pode causar desconforto real no dia a dia — e a decisão de tratar deve ser individualizada.
+A resposta depende de alguns fatores. O plicoma anal é uma alteração benigna, mas pode causar desconforto real no dia a dia, e a decisão de tratar deve ser individualizada.
 
-![Ilustração de plicoma anal e cirurgia de remoção](/images/posts/plicoma-anal-vale-a-pena-retirar/plicoma-anal-cx.png)
+![Ilustração de plicoma anal e cirurgia de remoção](/images/posts/plicoma-anal-vale-a-pena-retirar/plicoma-anal-cx.webp)
 
 ---
 
@@ -117,9 +117,8 @@ Se você tem dúvidas sobre o seu caso, procure um coloproctologista para uma av
 
 ---
 
-**Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
-CRM-PR 45351 | RQE 36221
-Especialista em Coloproctologia
+**Dra. Ana Luiza Moraes Rocha**  
+Especialista em Coloproctologia  
+CRM-PR 45351 | RQE 36221  
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

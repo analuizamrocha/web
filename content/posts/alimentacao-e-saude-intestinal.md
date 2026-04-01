@@ -26,7 +26,7 @@ faqs:
 
 *Um intestino saudável depende de três pilares simples: fibras na medida certa, água ao longo do dia e uma rotina de horários que respeite o seu corpo.*
 
-![Ilustração de intestino saudável cercado por alimentos ricos em fibras](/images/posts/alimentacao-e-saude-intestinal/alimentacao-e-saude-intestinal.png)
+![Ilustração de intestino saudável cercado por alimentos ricos em fibras](/images/posts/alimentacao-e-saude-intestinal/alimentacao-e-saude-intestinal.webp)
 
 ## Por que a alimentação importa tanto para o intestino?
 
@@ -75,6 +75,5 @@ Uma avaliação individualizada identifica se a queixa é funcional ou se há do
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
 
 > *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*

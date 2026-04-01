@@ -35,7 +35,7 @@ Neste artigo, você vai entender melhor:
 - Quando considerar a remoção.
 - Diferenças entre cirurgia convencional e cirurgia a laser.
 
-![Ilustração de plicoma anal na borda do ânus](/images/posts/plicoma-anal-cirurgia-laser/plicoma.png)
+![Ilustração de plicoma anal na borda do ânus](/images/posts/plicoma-anal-cirurgia-laser/plicoma.webp)
 
 ---
 
@@ -103,6 +103,5 @@ Se você apresenta sintomas ou desconforto relacionados ao plicoma, procure um c
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
 
 > *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*

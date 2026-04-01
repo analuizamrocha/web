@@ -117,7 +117,7 @@ export default function BlogPage() {
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                           sizes="(min-width: 1280px) 36rem, (min-width: 768px) 50vw, 100vw"
-                          // TODO: index < 2 is a heuristic — desktop shows 2 columns so both above-the-fold cards get priority; mobile shows 1 column so only index 0 truly needs it, but the extra preload on index 1 is harmless
+                          // index < 2 is a heuristic — desktop shows 2 columns so both above-the-fold cards get priority; mobile shows 1 column so only index 0 truly needs it, but the extra preload on index 1 is harmless
                           priority={index < 2}
                         />
                       </Link>

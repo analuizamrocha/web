@@ -34,7 +34,7 @@ Apesar de simples, esse problema é muito comum em coloproctologia e pode trazer
 
 Neste artigo, você vai entender **o que é a fissura anal**, quais são os principais **sintomas e tratamentos disponíveis**, e quando procurar um **coloproctologista em Curitiba**.
 
-![Ilustração de fissura anal e região acometida](/images/posts/fissura-anal-tratamento/fissura-anal.png)
+![Ilustração de fissura anal e região acometida](/images/posts/fissura-anal-tratamento/fissura-anal.webp)
 
 ---
 
@@ -112,7 +112,6 @@ Se você sofre com **dor ao evacuar** ou suspeita de fissura anal, agende sua av
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
-Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia
 

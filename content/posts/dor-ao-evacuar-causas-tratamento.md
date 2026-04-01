@@ -29,7 +29,7 @@ faqs:
 
 _Sentir dor ao evacuar não é algo raro — mas também não deve ser considerado normal._
 
-![Dor ao evacuar — quando procurar um coloproctologista](/images/posts/dor-ao-evacuar-causas-tratamento/dor-ao-evacuar-coloproctologista.png)
+![Dor ao evacuar — quando procurar um coloproctologista](/images/posts/dor-ao-evacuar-causas-tratamento/dor-ao-evacuar-coloproctologista.webp)
 
 Muitas pessoas convivem com esse sintoma por semanas ou meses, acreditando que é algo passageiro. O problema é que a dor pode indicar alterações na região anal que precisam de avaliação adequada.
 
@@ -93,7 +93,6 @@ Sempre que a dor for persistente ou associada a sangramento.
 ---
 
 **Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
 CRM-PR 45351 | RQE 36221
 Especialista em Coloproctologia
 

@@ -20,6 +20,7 @@ import {
   TAG_INSTAGRAM,
 } from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
+import { MdxImage } from '@/components/ui/MdxImage'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -202,6 +203,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     remarkPlugins: [remarkGfm],
                   },
                 }}
+                components={{ img: MdxImage }}
               />
             </div>
           </div>

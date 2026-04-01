@@ -38,7 +38,7 @@ As hemorroidas são **veias localizadas na região anal e do reto**, que fazem p
 
 É importante destacar que **ter hemorroidas é normal**, mas quando elas se tornam sintomáticas, precisam de acompanhamento com coloproctologista.
 
-![Representação de hemorroidas internas e externas](/images/posts/hemorroida-sempre-cirurgica-tratamento/hemorroidas-internas-externas.png)
+![Representação de hemorroidas internas e externas](/images/posts/hemorroida-sempre-cirurgica-tratamento/hemorroidas-internas-externas.webp)
 
 ## Hemorroida interna x hemorroida externa
 
@@ -61,7 +61,7 @@ Durante uma **crise hemorroidária**, quando há inflamação ou **trombose** (f
 
 Nessa fase, o tratamento deve ser **clínico**, com foco em **aliviar a dor, reduzir o edema e controlar a inflamação**, deixando a avaliação cirúrgica para um momento mais seguro, após a estabilização do quadro.
 
-![Comparativo entre hemorroidas internas e externas por sintomas e localização](/images/posts/hemorroida-sempre-cirurgica-tratamento/diferenca-hemorroidas-internas-externas.png)
+![Comparativo entre hemorroidas internas e externas por sintomas e localização](/images/posts/hemorroida-sempre-cirurgica-tratamento/diferenca-hemorroidas-internas-externas.webp)
 
 ## Durante a crise: o tratamento deve ser clínico
 
@@ -121,6 +121,5 @@ O acompanhamento com um coloproctologista é fundamental para definir a melhor a
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
 
 > *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*

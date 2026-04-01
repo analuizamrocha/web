@@ -68,6 +68,7 @@
     "lighthouse": "^12.8.2",
     "react-grab": "^0.1.29",
     "schema-dts": "^1.1.5",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^2.1.8"

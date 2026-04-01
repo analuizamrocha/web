@@ -26,11 +26,11 @@ faqs:
     answer: 'Depende do tipo e grau das lesões. Muitas devem ser acompanhadas ou tratadas conforme avaliação especializada.'
 ---
 
-_O câncer de canal anal está relacionado ao HPV na maioria dos casos — mas com rastreio adequado, é possível identificar e tratar lesões antes que evoluam._
+_O câncer de canal anal está relacionado ao HPV na maioria dos casos, mas com rastreio adequado, é possível identificar e tratar lesões antes que evoluam._
 
 O câncer de canal anal ainda é pouco falado, mas tem uma característica importante: na maioria dos casos, está relacionado ao HPV (Papilomavírus Humano). A boa notícia é que, quando identificado precocemente, pode ser prevenido ou tratado com muito mais eficácia.
 
-![Ilustração da relação entre HPV e câncer de canal anal](/images/posts/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar/cancer-canal-anal-rastreio-hpv.png)
+![Ilustração da relação entre HPV e câncer de canal anal](/images/posts/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar/cancer-canal-anal-rastreio-hpv.webp)
 
 ---
 
@@ -65,13 +65,13 @@ Alguns grupos apresentam risco aumentado de desenvolver lesões relacionadas ao 
 
 Esses pacientes podem se beneficiar de acompanhamento mais próximo e rastreio regular.
 
-![Ilustração de verrugas anais por HPV associadas ao risco de câncer anal](/images/posts/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar/cancer-canal-anal-rastreio-hpv-verruga.png)
+![Ilustração de verrugas anais por HPV associadas ao risco de câncer anal](/images/posts/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar/cancer-canal-anal-rastreio-hpv-verruga.webp)
 
 ---
 
 ## Existe rastreio para câncer anal?
 
-![Gráfico de incidência de câncer anal por faixa etária relacionado ao HPV](/images/posts/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar/hpv-incidencia-idade-cancer.png)
+![Gráfico de incidência de câncer anal por faixa etária relacionado ao HPV](/images/posts/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar/hpv-incidencia-idade-cancer.webp)
 
 Sim, e ele é especialmente importante nos grupos de risco. Os principais métodos incluem:
 
@@ -124,9 +124,8 @@ O acompanhamento com um coloproctologista permite diagnóstico precoce, rastreio
 
 ---
 
-**Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
-CRM-PR 45351 | RQE 36221
-Especialista em Coloproctologia
+**Dra. Ana Luiza Moraes Rocha**  
+Médica Coloproctologista  
+CRM-PR 45351 | RQE 36221  
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

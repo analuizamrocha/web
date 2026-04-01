@@ -28,7 +28,7 @@ faqs:
 
 _Sintomas intestinais persistentes não devem ser ignorados: investigar cedo permite tratamento mais simples, seguro e eficaz._
 
-![Mulher com desconforto abdominal identificando sinais de alerta intestinais](/images/posts/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba/desconforto-intestinal-sinais-alerta.png)
+![Mulher com desconforto abdominal identificando sinais de alerta intestinais](/images/posts/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba/desconforto-intestinal-sinais-alerta.webp)
 
 Muitas pessoas esperam a dor piorar.
 Esperam o sangramento aumentar.
@@ -147,6 +147,5 @@ Se você percebe sinais de alerta, agende uma consulta com a Dra. Ana Luiza, col
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

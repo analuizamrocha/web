@@ -29,7 +29,7 @@ faqs:
 
 O **cisto pilonidal** ocorre na região **sacrococcígea** (perto do cóccix) quando **pelos penetram na pele**, gerando inflamação. É mais comum em homens jovens, mas também afeta mulheres. Fatores de risco incluem **excesso de pelos**, sedentarismo, longos períodos sentado, atrito local e predisposição genética.
 
-![Ilustração da região sacrococcígea com cisto pilonidal](/images/posts/cisto-pilonidal-cirurgia-laser-quando-operar/cisto-pilonidal.png)
+![Ilustração da região sacrococcígea com cisto pilonidal](/images/posts/cisto-pilonidal-cirurgia-laser-quando-operar/cisto-pilonidal.webp)
 
 ## Sintomas principais
 
@@ -45,7 +45,7 @@ O **cisto pilonidal** ocorre na região **sacrococcígea** (perto do cóccix) qu
 
 **Laser (minimamente invasivo):** pequena incisão e **cauterização interna** com energia de laser, com **menos dor**, retorno mais rápido às atividades, **menos curativos** e **menor risco de recidiva** por atuar no trajeto do cisto.
 
-![Detalhamento anatômico do cisto pilonidal e da área acometida](/images/posts/cisto-pilonidal-cirurgia-laser-quando-operar/cisto-pilonidal-detalhes.png)
+![Detalhamento anatômico do cisto pilonidal e da área acometida](/images/posts/cisto-pilonidal-cirurgia-laser-quando-operar/cisto-pilonidal-detalhes.webp)
 
 ## Quando é a melhor hora para operar?
 
@@ -76,7 +76,6 @@ Sofre com cisto pilonidal? Avalie a opção **a laser** para reduzir dor, aceler
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
-Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia  
 

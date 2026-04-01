@@ -34,7 +34,7 @@ Não se trata apenas de controlar sintomas, mas de prevenir complicações, pres
 
 A Dra. Ana Luiza, coloproctologista em Curitiba, oferece acompanhamento especializado em Doenças Inflamatórias Intestinais com abordagem integrada e foco em cuidado contínuo.
 
-![Visão geral das doenças inflamatórias intestinais](/images/posts/doencas-inflamatorias-intestinais-acompanhamento/doencas-inflamatorias-intestinais.png)
+![Visão geral das doenças inflamatórias intestinais](/images/posts/doencas-inflamatorias-intestinais-acompanhamento/doencas-inflamatorias-intestinais.webp)
 
 ## O que são as doenças inflamatórias intestinais?
 
@@ -48,7 +48,7 @@ Pode acometer qualquer segmento do trato digestivo, da boca ao ânus.
 
 Afeta principalmente o cólon e o reto.
 
-![Comparação entre Doença de Crohn e Retocolite Ulcerativa](/images/posts/doencas-inflamatorias-intestinais-acompanhamento/comparacao-doencas-inflamatorias-intestinais.png)
+![Comparação entre Doença de Crohn e Retocolite Ulcerativa](/images/posts/doencas-inflamatorias-intestinais-acompanhamento/comparacao-doencas-inflamatorias-intestinais.webp)
 
 Ambas podem apresentar períodos de atividade e remissão.
 
@@ -62,7 +62,7 @@ Ambas podem apresentar períodos de atividade e remissão.
 - anemia,
 - manifestações articulares e cutâneas.
 
-![Principais manifestações clínicas da Doença de Crohn e da Retocolite Ulcerativa](/images/posts/doencas-inflamatorias-intestinais-acompanhamento/chron-retite-ulcerativa.png)
+![Principais manifestações clínicas da Doença de Crohn e da Retocolite Ulcerativa](/images/posts/doencas-inflamatorias-intestinais-acompanhamento/chron-retite-ulcerativa.webp)
 
 O diagnóstico precoce é fundamental para evitar complicações.
 
@@ -124,6 +124,5 @@ O acompanhamento especializado é essencial para prevenção de complicações.
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

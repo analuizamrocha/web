@@ -29,7 +29,7 @@ faqs:
 
 _A coceira anal, também chamada de prurido anal, é um sintoma bastante comum, e muitas vezes constrangedor._
 
-![Principais causas de coceira anal e prurido](/images/posts/coceira-anus-causas-tratamento/causas-coceira-anal.png)
+![Principais causas de coceira anal e prurido](/images/posts/coceira-anus-causas-tratamento/causas-coceira-anal.webp)
 
 Apesar de parecer algo simples, pode ter diferentes causas e merece investigação quando persistente.
 
@@ -84,7 +84,6 @@ Sim, principalmente quando há condilomas.
 ---
 
 **Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
 CRM-PR 45351 | RQE 36221
 Especialista em Coloproctologia
 

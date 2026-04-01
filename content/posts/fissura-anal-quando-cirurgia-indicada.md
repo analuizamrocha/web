@@ -26,7 +26,7 @@ faqs:
     answer: 'Em alguns casos, técnicas minimamente invasivas com laser podem ser consideradas, com o objetivo de menor dano tecidual e recuperação mais confortável.'
 ---
 
-_Quando o tratamento clínico da fissura anal não é suficiente, a cirurgia pode ser a próxima etapa — e existem técnicas com perfis diferentes de risco e recuperação._
+_Quando o tratamento clínico da fissura anal não é suficiente, a cirurgia pode ser a próxima etapa, e existem técnicas com perfis diferentes de risco e recuperação._
 
 Dor intensa ao evacuar, sensação de corte na região anal e medo de ir ao banheiro. Esses são sintomas clássicos da fissura anal, uma pequena ferida no canal anal que pode causar grande desconforto.
 
@@ -57,7 +57,7 @@ Quando tratada precocemente, a fissura aguda tem boas chances de cicatrizar sem 
 
 ## Quando a fissura se torna crônica
 
-![Ilustração de fissura anal crônica e processo de cicatrização](/images/posts/fissura-anal-quando-cirurgia-indicada/fissura-anal-cicatrizacao.png)
+![Ilustração de fissura anal crônica e processo de cicatrização](/images/posts/fissura-anal-quando-cirurgia-indicada/fissura-anal-cicatrizacao.webp)
 
 Algumas fissuras não cicatrizam adequadamente e passam a apresentar:
 
@@ -83,7 +83,7 @@ O objetivo da cirurgia é **reduzir o espasmo muscular e criar condições para 
 
 ## Técnicas cirúrgicas disponíveis
 
-![Ilustração das técnicas cirúrgicas para tratamento de fissura anal](/images/posts/fissura-anal-quando-cirurgia-indicada/fissura-anal-cx.png)
+![Ilustração das técnicas cirúrgicas para tratamento de fissura anal](/images/posts/fissura-anal-quando-cirurgia-indicada/fissura-anal-cx.webp)
 
 Hoje existem diferentes abordagens que podem ser utilizadas, com características e indicações distintas.
 
@@ -119,9 +119,8 @@ A decisão deve ser sempre individualizada e tomada em conjunto com o coloprocto
 
 ---
 
-**Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
-CRM-PR 45351 | RQE 36221
-Especialista em Coloproctologia
+**Dra. Ana Luiza Moraes Rocha**  
+Médica Coloproctologista  
+CRM-PR 45351 | RQE 36221  
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

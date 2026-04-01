@@ -28,7 +28,7 @@ faqs:
 
 _Quando o cuidado deixa de ser pontual e passa a ser estratégico, sintomas recorrentes dão lugar a controle, prevenção e segurança._
 
-![Consulta com coloproctologista mostrando modelo anatômico do cólon ao paciente](/images/posts/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba/consulta-coloproctologista-modelo-colon.png)
+![Consulta com coloproctologista mostrando modelo anatômico do cólon ao paciente](/images/posts/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba/consulta-coloproctologista-modelo-colon.webp)
 
 Muitos pacientes procuram ajuda quando a dor aperta.
 
@@ -136,6 +136,5 @@ Se você deseja um plano estruturado para tratar e prevenir problemas intestinai
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

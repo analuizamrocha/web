@@ -29,7 +29,7 @@ faqs:
 
 _Nos últimos anos, a aplicação de toxina botulínica na região anal tem se tornado uma alternativa importante no tratamento da fissura anal crônica._
 
-![Aplicação de toxina botulínica para tratamento de fissura anal crônica](/images/posts/fissura-anal-toxina-botulinica-tratamento/fissura-anal-toxina-botulinica.png)
+![Aplicação de toxina botulínica para tratamento de fissura anal crônica](/images/posts/fissura-anal-toxina-botulinica-tratamento/fissura-anal-toxina-botulinica.webp)
 
 Muitos pacientes perguntam:
 "Botox realmente funciona para fissura?"
@@ -90,6 +90,5 @@ A indicação depende da avaliação clínica.
 **Dra. Ana Luiza Moraes Rocha**
 Médica Coloproctologista
 CRM-PR 45351 | RQE 36221
-Especialista em Coloproctologia
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

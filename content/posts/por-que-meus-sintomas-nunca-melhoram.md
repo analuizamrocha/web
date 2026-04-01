@@ -40,7 +40,7 @@ Muitos pacientes chegam ao consultório após meses, às vezes anos, convivendo 
 
 Neste artigo, a Dra. Ana Luiza, coloproctologista em Curitiba, explica por que alguns sintomas não melhoram e qual é a importância de uma investigação adequada.
 
-![Sintomas intestinais persistentes e investigação adequada](/images/posts/por-que-meus-sintomas-nunca-melhoram/por-que-meus-sintomas-nunca-melhoram.png)
+![Sintomas intestinais persistentes e investigação adequada](/images/posts/por-que-meus-sintomas-nunca-melhoram/por-que-meus-sintomas-nunca-melhoram.webp)
 
 ## 1. O problema do autodiagnóstico
 
@@ -177,7 +177,6 @@ Agende uma avaliação com a Dra. Ana Luiza, coloproctologista em Curitiba, e te
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
-Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia
 

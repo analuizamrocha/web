@@ -37,7 +37,7 @@ A **saúde sexual** vai muito além do diagnóstico e tratamento de infecções 
 
 Neste espaço, a **Dra. Ana Luiza**, coloproctologista em Curitiba, propõe um olhar acolhedor e técnico para a saúde sexual, ajudando cada paciente a compreender seu corpo e viver sua sexualidade com mais tranquilidade e bem-estar.
 
-![Pilares da saúde sexual: conforto, segurança, informação e acolhimento](/images/posts/saude-sexual/pilares-saude-sexual.png)
+![Pilares da saúde sexual: conforto, segurança, informação e acolhimento](/images/posts/saude-sexual/pilares-saude-sexual.webp)
 
 ## O que é saúde sexual?
 
@@ -149,6 +149,5 @@ Se você tem dúvidas ou sintomas relacionados à saúde sexual, agende uma cons
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

@@ -38,7 +38,7 @@ A verdade é que as hemorroidas podem sim melhorar em alguns casos, mas também 
 
 As hemorroidas são estruturas naturais do canal anal, formadas por vasos sanguíneos que participam do controle da evacuação.
 
-Elas passam a causar sintomas quando ocorre aumento de volume, inflamação ou prolapso — quando exteriorizam. Isso pode gerar dor, sangramento, coceira, inchaço e desconforto ao evacuar.
+Elas passam a causar sintomas quando ocorre aumento de volume, inflamação ou prolapso, quando exteriorizam. Isso pode gerar dor, sangramento, coceira, inchaço e desconforto ao evacuar.
 
 ### Hemorroidas internas
 
@@ -48,7 +48,7 @@ Localizadas dentro do canal anal, geralmente não causam dor, mas podem sangrar 
 
 Localizadas na parte externa do ânus, podem causar dor, inchaço e desconforto mais imediato.
 
-![Ilustração de hemorroida externa trombosada](/images/posts/hemorroida-quanto-tempo-dura-quando-procurar/hemorroida-externa-trombosada.png)
+![Ilustração de hemorroida externa trombosada](/images/posts/hemorroida-quanto-tempo-dura-quando-procurar/hemorroida-externa-trombosada.webp)
 
 ---
 
@@ -139,15 +139,14 @@ Mesmo que os sintomas pareçam leves, a persistência é um sinal de que o probl
 
 ## Não espere o quadro piorar
 
-Muitos pacientes adiam a consulta por medo da cirurgia. Na prática, quanto mais a doença evolui, mais intensos os sintomas se tornam — e o tratamento pode se tornar mais complexo.
+Muitos pacientes adiam a consulta por medo da cirurgia. Na prática, quanto mais a doença evolui, mais intensos os sintomas se tornam, e o tratamento pode se tornar mais complexo.
 
 Hoje existem diversas opções terapêuticas, e muitas delas são menos invasivas do que no passado. A avaliação precoce amplia as possibilidades de tratamento.
 
 ---
 
-**Dra. Ana Luiza Moraes Rocha**
-Médica Coloproctologista
-CRM-PR 45351 | RQE 36221
-Especialista em Coloproctologia
+**Dra. Ana Luiza Moraes Rocha**  
+Especialista em Coloproctologia  
+CRM-PR 45351 | RQE 36221  
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._

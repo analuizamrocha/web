@@ -35,7 +35,7 @@ O diferencial no tratamento da fístula está em compreender que **cada trajeto 
 
 A Dra. Ana Luiza, coloproctologista em Curitiba, realiza diagnóstico detalhado e oferece abordagem individualizada para o tratamento de fístulas anorretais, com foco em segurança, preservação esfincteriana e acompanhamento próximo.
 
-![Ilustração de fístula anorretal e trajeto fistuloso](/images/posts/tratamento-fistulas-anorretais/fistula.png)
+![Ilustração de fístula anorretal e trajeto fistuloso](/images/posts/tratamento-fistulas-anorretais/fistula.webp)
 
 ## O que é uma fístula anorretal?
 
@@ -95,7 +95,7 @@ Utilizado para fechamento do orifício interno em casos selecionados.
 
 Podem ser indicadas conforme o calibre, extensão e relação com a musculatura esfincteriana.
 
-![Representação de técnica minimamente invasiva com laser para fístula anal](/images/posts/tratamento-fistulas-anorretais/fistula-laser.png)
+![Representação de técnica minimamente invasiva com laser para fístula anal](/images/posts/tratamento-fistulas-anorretais/fistula-laser.webp)
 
 ### Terapia regenerativa com células mesenquimais
 
@@ -107,7 +107,7 @@ As células mesenquimais atuam:
 - estimulando a cicatrização tecidual,
 - favorecendo o fechamento do trajeto fistuloso.
 
-![Terapia regenerativa com células mesenquimais em fístulas complexas](/images/posts/tratamento-fistulas-anorretais/celulas-mesenquimais.png)
+![Terapia regenerativa com células mesenquimais em fístulas complexas](/images/posts/tratamento-fistulas-anorretais/celulas-mesenquimais.webp)
 
 Essa abordagem deve ser cuidadosamente indicada e acompanhada.
 
@@ -140,7 +140,6 @@ O tratamento precoce reduz complicações e melhora os resultados funcionais.
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
-Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia
 

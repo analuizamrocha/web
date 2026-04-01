@@ -39,7 +39,7 @@ Quando bem diagnosticada e acompanhada, é possível controlar os sintomas e rec
 
 Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que é a SII, seus sintomas, como é feito o diagnóstico e quais são as opções de tratamento e acompanhamento personalizado.
 
-![Ilustração dos principais sintomas da síndrome do intestino irritável](/images/posts/sindrome-intestino-irritavel/sindrome-intestino-irritavel.png)
+![Ilustração dos principais sintomas da síndrome do intestino irritável](/images/posts/sindrome-intestino-irritavel/sindrome-intestino-irritavel.webp)
 
 ## O que é a Síndrome do Intestino Irritável (SII)?
 
@@ -49,7 +49,7 @@ Ela está relacionada a uma alteração na comunicação entre o intestino e o s
 
 Isso não significa que os sintomas “estão na cabeça”, eles são reais e podem ser intensos.
 
-![Representação do eixo intestino-cérebro e sua influência nos sintomas](/images/posts/eixo-intestino-cerebro/eixo-intestino-cerebro.png)
+![Representação do eixo intestino-cérebro e sua influência nos sintomas](/images/posts/eixo-intestino-cerebro/eixo-intestino-cerebro.webp)
 
 ## Principais sintomas da SII
 
@@ -158,6 +158,5 @@ Se você convive com sintomas intestinais recorrentes, agende uma consulta com a
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia
 
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._
