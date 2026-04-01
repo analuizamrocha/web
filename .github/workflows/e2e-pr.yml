@@ -16,21 +16,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: '24'
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: bun install --frozen-lockfile
 
       - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
+        run: bunx playwright install --with-deps chromium
 
       - name: Run E2E smoke tests
         env:
           CI: true
-        run: npm run e2e -- tests/e2e/smoke.spec.ts
+        run: bun run e2e -- tests/e2e/smoke.spec.ts
 
       - name: Upload Playwright reports
         if: always()
