@@ -2,16 +2,33 @@ import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
 import { WEBSITE_URL } from '@/lib/constants'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const currentDate = new Date()
+const STATIC_ROUTE_LAST_MODIFIED: Record<string, string> = {
+  '/': '2026-04-01',
+  '/blog': '2026-04-01',
+  '/sobre': '2026-03-20',
+  '/tratamentos': '2026-03-20',
+  '/tratamentos/hemorroidas': '2026-03-20',
+  '/tratamentos/cx-cisto-pilonidal': '2026-03-10',
+  '/tratamentos/cx-fistulas-anorretais': '2026-03-10',
+  '/tratamentos/cx-laser': '2026-03-10',
+  '/tratamentos/doencas-inflamatorias-intestinais': '2026-03-10',
+  '/tratamentos/hpv-anal': '2026-03-10',
+  '/tratamentos/rastreio-cancer-anal': '2026-03-10',
+  '/tratamentos/sindrome-intestino-irritavel': '2026-03-10',
+  '/tratamentos/toxina-botulinica': '2026-03-10',
+}
 
-  // Get all blog posts
+export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
+  const latestBlogLastModified = posts.reduce(
+    (latestDate, post) => (post.lastModified > latestDate ? post.lastModified : latestDate),
+    STATIC_ROUTE_LAST_MODIFIED['/blog']
+  )
 
   // Blog post entries
   const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${WEBSITE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.lastModified),
+    lastModified: post.lastModified,
     changeFrequency: 'monthly' as const,
     priority: 0.8, // High priority - educational content drives authority
   }))
@@ -31,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const treatmentEntries: MetadataRoute.Sitemap = treatmentPages.map((slug) => ({
     url: `${WEBSITE_URL}/tratamentos/${slug}`,
-    lastModified: currentDate,
+    lastModified: STATIC_ROUTE_LAST_MODIFIED[`/tratamentos/${slug}`],
     changeFrequency: 'monthly' as const,
     priority: 0.9, // Very high priority - core service pages
   }))
@@ -40,14 +57,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Homepage - Highest priority
     {
       url: WEBSITE_URL,
-      lastModified: currentDate,
+      lastModified: STATIC_ROUTE_LAST_MODIFIED['/'],
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     // Treatments index - Very high priority
     {
       url: `${WEBSITE_URL}/tratamentos`,
-      lastModified: currentDate,
+      lastModified: STATIC_ROUTE_LAST_MODIFIED['/tratamentos'],
       changeFrequency: 'monthly' as const,
       priority: 0.95,
     },
@@ -56,25 +73,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // About page - Important for trust/authority
     {
       url: `${WEBSITE_URL}/sobre`,
-      lastModified: currentDate,
+      lastModified: STATIC_ROUTE_LAST_MODIFIED['/sobre'],
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     // Blog index - High priority for content hub
     {
       url: `${WEBSITE_URL}/blog`,
-      lastModified: currentDate,
+      lastModified: latestBlogLastModified,
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
     // Blog posts - High priority for educational content
     ...blogEntries,
-    // Privacy policy - Required but lower priority
-    {
-      url: `${WEBSITE_URL}/politica-privacidade`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-    },
   ]
 }
