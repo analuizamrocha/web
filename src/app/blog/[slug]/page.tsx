@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import {
   getPostBySlug,
+  getAllPosts,
   getAllPostSlugs,
   generateBlogPostSchema,
   getTargetAudienceLabel,
@@ -21,6 +22,12 @@ import {
 } from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { MdxImage } from '@/components/ui/MdxImage'
+import { RelatedTreatmentsSection } from '@/components/ui/RelatedTreatmentsSection'
+import { RelatedPostsSection } from '@/components/ui/RelatedPostsSection'
+import {
+  getResolvedRelatedPostSlugs,
+  getResolvedRelatedTreatmentSlugs,
+} from '@/lib/content-relationships'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -104,12 +111,18 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params
   const post = getPostBySlug(slug)
+  const allPosts = getAllPosts()
 
   if (!post) {
     notFound()
   }
 
   const schema = generateBlogPostSchema(post)
+  const relatedTreatmentSlugs = getResolvedRelatedTreatmentSlugs(post)
+  const relatedPostSlugs = getResolvedRelatedPostSlugs(post, allPosts)
+  const relatedPosts = relatedPostSlugs
+    .map((relatedSlug) => allPosts.find((candidate) => candidate.slug === relatedSlug))
+    .filter((candidate): candidate is NonNullable<typeof candidate> => Boolean(candidate))
 
   return (
     <>
@@ -206,6 +219,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 components={{ img: MdxImage }}
               />
             </div>
+
+            <RelatedTreatmentsSection treatmentSlugs={relatedTreatmentSlugs} />
+            <RelatedPostsSection posts={relatedPosts} />
           </div>
 
           {/* Article Footer */}

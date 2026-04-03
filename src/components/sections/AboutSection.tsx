@@ -48,8 +48,8 @@ export function AboutSection() {
             Quem é Dra. Ana Luiza?
           </h2>
           <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
-            <p>Especialista em coloproctologia com formação internacional.</p>
-            <p>Dedicada ao cuidado integral e humanizado de cada paciente.</p>
+            <p>Médica coloproctologista e proctologista em Curitiba, com formação internacional.</p>
+            <p>Dedicada ao cuidado integral e humanizado de cada paciente no Batel.</p>
           </div>
         </div>
 

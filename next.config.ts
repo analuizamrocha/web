@@ -23,18 +23,30 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
   },
-  // Permanent redirects for renamed/old URLs
+  // Permanent redirects for renamed/old URLs and canonical host enforcement
   redirects: async () => [
-    // Old treatment slug — page lives at /tratamentos/hpv-anal
+    // Specific slug redirects — old URLs that 404'd
     {
       source: '/tratamentos/tratamento-hpv-anal',
       destination: '/tratamentos/hpv-anal',
       permanent: true,
     },
-    // Old short blog slug — file is cisto-pilonidal-cirurgia-laser-quando-operar
     {
       source: '/blog/cisto-pilonidal-cirurgia-laser',
       destination: '/blog/cisto-pilonidal-cirurgia-laser-quando-operar',
+      permanent: true,
+    },
+    // Canonical host enforcement — belt-and-suspenders alongside Vercel platform config
+    {
+      source: '/:path*',
+      has: [{ type: 'host', value: 'analuizarocha.com.br' }],
+      destination: 'https://www.analuizarocha.com.br/:path*',
+      permanent: true,
+    },
+    {
+      source: '/:path*',
+      has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],
+      destination: 'https://www.analuizarocha.com.br/:path*',
       permanent: true,
     },
   ],

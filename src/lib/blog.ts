@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import type { FAQPage, Question, Answer, Thing } from 'schema-dts'
 import { WEBSITE_URL, SITE_NAME, URL_INSTAGRAM, URL_LINKEDIN } from '@/lib/constants'
+import type { TreatmentSlug } from '@/lib/treatment-images'
 
 /**
  * Target audience enum for blog posts
@@ -91,6 +92,8 @@ export interface BlogPostMeta {
   featured?: boolean
   order?: number
   faqs?: FAQItem[]
+  relatedTreatments?: TreatmentSlug[]
+  relatedPosts?: string[]
 }
 
 /**

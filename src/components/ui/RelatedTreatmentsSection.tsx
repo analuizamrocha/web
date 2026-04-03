@@ -1,21 +1,18 @@
 import { Badge } from '@/components/ui/Badge'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { getAllPosts } from '@/lib/blog'
-import { getRelatedPostsForTreatment } from '@/lib/content-relationships'
-import type { TreatmentSlug } from '@/lib/treatment-images'
+import { getTreatmentLinkBySlug } from '@/lib/content-relationships'
 
-interface RelatedBlogCardProps {
-  treatmentSlug: string
+interface RelatedTreatmentsSectionProps {
+  treatmentSlugs: string[]
 }
 
-export function RelatedBlogCard({ treatmentSlug }: RelatedBlogCardProps) {
-  const relatedPosts = getRelatedPostsForTreatment(
-    treatmentSlug as TreatmentSlug,
-    getAllPosts(),
-    4
-  )
+export function RelatedTreatmentsSection({ treatmentSlugs }: RelatedTreatmentsSectionProps) {
+  const relatedTreatments = treatmentSlugs
+    .map((slug) => getTreatmentLinkBySlug(slug))
+    .filter((treatment): treatment is NonNullable<typeof treatment> => Boolean(treatment))
+    .slice(0, 2)
 
-  if (relatedPosts.length === 0) {
+  if (relatedTreatments.length === 0) {
     return null
   }
 
@@ -23,22 +20,22 @@ export function RelatedBlogCard({ treatmentSlug }: RelatedBlogCardProps) {
     <aside className="not-prose my-10">
       <div className="rounded-3xl border border-secondary/20 bg-secondary/10 p-6 sm:p-8">
         <Badge variant="secondary" className="mb-4">
-          Leitura relacionada
+          Tratamentos relacionados
         </Badge>
         <div className="grid gap-4 md:grid-cols-2">
-          {relatedPosts.map((post) => (
+          {relatedTreatments.map((treatment) => (
             <article
-              key={post.slug}
+              key={treatment.slug}
               className="rounded-2xl border border-secondary/15 bg-background/80 p-5"
             >
               <h3 className="text-lg sm:text-xl font-serif font-bold text-primary mb-3 leading-tight">
-                {post.title}
+                {treatment.title}
               </h3>
               <p className="text-sm sm:text-base text-secondary leading-relaxed mb-5">
-                {post.excerpt}
+                {treatment.description}
               </p>
-              <LinkButton href={`/blog/${post.slug}`} variant="outline" size="default">
-                Ver artigo no blog
+              <LinkButton href={treatment.href} variant="outline" size="default">
+                Ver página de tratamento
               </LinkButton>
             </article>
           ))}

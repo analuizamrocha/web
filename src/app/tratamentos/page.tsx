@@ -8,12 +8,13 @@ import { getTreatmentImageBySlug } from '@/lib/treatment-images'
 export const metadata: Metadata = {
   title: 'Tratamentos em Coloproctologia',
   description:
-    'Do diagnóstico ao pós-operatório: cirurgia a laser, hemorroidas, fístulas, cisto pilonidal, HPV anal e doenças inflamatórias intestinais. Conheça cada abordagem.',
+    'Tratamentos em coloproctologia e proctologia em Curitiba: cirurgia a laser, hemorroidas, fístulas, cisto pilonidal, HPV anal e doenças inflamatórias intestinais.',
   keywords: [
     'coloproctologia curitiba',
+    'proctologia curitiba',
+    'proctologista curitiba',
     'cirurgia hemorroidas curitiba',
     'tratamento fissura anal',
-    'proctologista curitiba',
     'cirurgia laser curitiba',
     'HPV anal curitiba',
     'cisto pilonidal curitiba',
@@ -126,12 +127,12 @@ export default function ServicosPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
               <p>
-                Oferecemos tratamentos especializados com tecnologia avançada e cuidado humanizado
-                para todas as condições coloproctológicas.
+                Oferecemos tratamentos especializados em coloproctologia e proctologia, com
+                tecnologia avançada e cuidado humanizado em Curitiba.
               </p>
               <p>
                 Nossa abordagem é sempre individualizada, buscando o melhor resultado com o menor
-                desconforto possível.
+                desconforto possível no contexto clínico e cirúrgico de cada paciente.
               </p>
             </div>
           </div>

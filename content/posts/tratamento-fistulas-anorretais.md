@@ -3,7 +3,7 @@ title: 'Tratamento de fístulas anorretais'
 metaDescription: 'Entenda sintomas, diagnóstico e opções de tratamento para fístula anal com foco em segurança, preservação da continência e menor recorrência.'
 slug: 'tratamento-fistulas-anorretais'
 publishDate: '2026-03-05'
-lastModified: '2026-03-05'
+lastModified: '2026-04-02'
 primaryKeyword: 'fístula anal'
 secondaryKeywords:
   - 'fístulas anorretais'
@@ -11,10 +11,16 @@ secondaryKeywords:
   - 'seton'
   - 'técnica LIFT'
   - 'coloproctologista Curitiba'
+  - 'proctologista curitiba'
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
 order: 17
+relatedTreatments:
+  - 'cx-fistulas-anorretais'
+relatedPosts:
+  - 'doencas-inflamatorias-intestinais-acompanhamento'
+  - 'proctologista-e-coloproctologista-qual-diferenca-quando-procurar-atendimento'
 faqs:
   - question: 'Fístula anal melhora sozinha?'
     answer: 'Na maioria dos casos, não. Sem tratamento adequado, o trajeto fistuloso tende a persistir e recidivar.'
@@ -34,6 +40,8 @@ Quando mal conduzida, pode gerar recorrência, inflamações repetidas e, princi
 O diferencial no tratamento da fístula está em compreender que **cada trajeto fistuloso é único** e que a decisão terapêutica deve equilibrar eficácia e preservação da função.
 
 A Dra. Ana Luiza, coloproctologista em Curitiba, realiza diagnóstico detalhado e oferece abordagem individualizada para o tratamento de fístulas anorretais, com foco em segurança, preservação esfincteriana e acompanhamento próximo.
+
+Se você quiser comparar as técnicas descritas aqui com a organização da página de atendimento, vale revisar também [cirurgias para fístulas anorretais](/tratamentos/cx-fistulas-anorretais).
 
 ![Ilustração de fístula anorretal e trajeto fistuloso](/images/posts/tratamento-fistulas-anorretais/fistula.webp)
 
@@ -136,6 +144,8 @@ Procure avaliação especializada se você apresenta:
 - Doença de Crohn com sintomas anais.
 
 O tratamento precoce reduz complicações e melhora os resultados funcionais.
+
+Quando existe associação com sintomas intestinais mais amplos ou suspeita de inflamação de base, este conteúdo pode ajudar a complementar o raciocínio: [Doenças inflamatórias intestinais (DII): acompanhamento especializado](/blog/doencas-inflamatorias-intestinais-acompanhamento).
 
 ---
 

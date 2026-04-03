@@ -1,9 +1,9 @@
 ---
 title: 'Fissura anal: toxina botulínica ajuda mesmo?'
-metaDescription: 'Saiba como a toxina botulínica (botox) atua no tratamento da fissura anal crônica, quando é indicada e quais são os benefícios. Coloproctologista em Curitiba.'
+metaDescription: 'Saiba como a toxina botulínica (botox) atua no tratamento da fissura anal crônica, quando é indicada e quais são os benefícios com proctologista em Curitiba.'
 slug: 'fissura-anal-toxina-botulinica-tratamento'
 publishDate: '2026-03-15'
-lastModified: '2026-03-15'
+lastModified: '2026-04-02'
 primaryKeyword: 'toxina botulínica fissura anal'
 secondaryKeywords:
   - 'botox fissura anal'
@@ -11,11 +11,18 @@ secondaryKeywords:
   - 'toxina botulínica coloproctologia'
   - 'fissura anal sem cirurgia'
   - 'coloproctologista Curitiba'
+  - 'proctologista curitiba'
   - 'esfíncter anal relaxamento'
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
 order: 24
+relatedTreatments:
+  - 'toxina-botulinica'
+  - 'cx-laser'
+relatedPosts:
+  - 'fissura-anal-tratamento'
+  - 'fissura-anal-quando-cirurgia-indicada'
 faqs:
   - question: 'Botox para fissura dói?'
     answer: 'O procedimento costuma ser bem tolerado, mas geralmente realizado com anestésico local.'
@@ -35,6 +42,8 @@ Muitos pacientes perguntam:
 "Botox realmente funciona para fissura?"
 
 A resposta é: em muitos casos, sim.
+
+Quando a dor ao evacuar persiste e a fissura se torna crônica, a avaliação com **proctologista ou coloproctologista** ajuda a definir se o caso ainda responde a medidas clínicas ou se vale considerar opções como a [toxina botulínica para fissura anal](/tratamentos/toxina-botulinica).
 
 ## Como funciona a toxina botulínica?
 
@@ -56,6 +65,8 @@ A aplicação costuma ser considerada quando:
 - o tratamento clínico não foi suficiente
 - existe espasmo muscular importante
 
+Antes de indicar o procedimento, também vale revisar a base do tratamento da fissura, tema explicado em [fissura anal: sintomas, tratamentos e como a coloproctologia pode ajudar](/blog/fissura-anal-tratamento).
+
 ## Vantagens do tratamento
 
 Entre os benefícios estão:
@@ -70,6 +81,8 @@ Entre os benefícios estão:
 Em alguns pacientes, a fissura cicatriza completamente.
 
 Em outros, pode ser necessário repetir o tratamento ou considerar cirurgia.
+
+Quando a resposta não é suficiente ou a fissura já apresenta critérios de cronicidade mais marcados, o próximo passo pode incluir revisão de outras estratégias. Para esse cenário, o artigo [fissura anal: quando a cirurgia está indicada?](/blog/fissura-anal-quando-cirurgia-indicada) complementa bem a leitura.
 
 ## Perguntas frequentes (FAQ)
 

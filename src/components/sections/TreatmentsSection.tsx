@@ -51,8 +51,8 @@ export function TreatmentsSection() {
           </h2>
           <div className="text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
             <p>
-              Nossa consulta é individualizada e detalhada e busca um
-              entendimento completo sobre você e seu problema.
+              Nossa consulta em coloproctologia e proctologia é individualizada, detalhada e busca
+              um entendimento completo sobre você e seu problema.
             </p>
             <p>
               Para nós, cuidar vai além do diagnóstico. Adaptamos cada

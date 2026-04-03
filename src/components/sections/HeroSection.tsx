@@ -38,6 +38,9 @@ export function HeroSection() {
               <p className="text-2xl lg:text-3xl xl:text-4xl font-serif font-medium text-secondary leading-relaxed lg:max-w-xl">
                 Cuidado Clínico e Cirúrgico do Intestino, Reto e Ânus
               </p>
+              <p className="text-base sm:text-lg lg:text-xl text-secondary/90 leading-relaxed lg:max-w-xl">
+                Atendimento humanizado em coloproctologia e proctologia em Curitiba.
+              </p>
             </div>
 
             {/* Elegant CTA Section */}
