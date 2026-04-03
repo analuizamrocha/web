@@ -1,5 +1,12 @@
 import { expect, test } from '@playwright/test'
 
+const CANONICAL_WEBSITE_URL = 'https://www.analuizarocha.com.br'
+
+function getXmlValues(xml: string, tagName: string): string[] {
+  const pattern = new RegExp(`<${tagName}>(.*?)</${tagName}>`, 'g')
+  return Array.from(xml.matchAll(pattern), ([, value]) => value.trim())
+}
+
 test('homepage renders hero content and primary CTA', async ({ page }) => {
   await page.goto('/')
 
@@ -75,4 +82,28 @@ test('treatments page renders heading and treatment cards', async ({ page }) => 
   await expect(
     page.getByRole('link', { name: /Ver detalhes sobre Cirurgias a Laser/i })
   ).toBeVisible()
+})
+
+test('sitemap and robots expose canonical crawl signals', async ({ page }) => {
+  const sitemapResponse = await page.request.get('/sitemap.xml')
+  expect(sitemapResponse.ok()).toBeTruthy()
+
+  const sitemapXml = await sitemapResponse.text()
+  const locs = getXmlValues(sitemapXml, 'loc')
+  const blogPostLocs = locs.filter((loc) => loc.startsWith(`${CANONICAL_WEBSITE_URL}/blog/`))
+
+  expect(locs.length).toBeGreaterThan(0)
+  expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/blog`)
+  expect(blogPostLocs.length).toBeGreaterThan(0)
+  expect(locs).not.toContain(`${CANONICAL_WEBSITE_URL}/politica-privacidade`)
+
+  for (const loc of locs) {
+    expect(loc.startsWith(CANONICAL_WEBSITE_URL)).toBeTruthy()
+  }
+
+  const robotsResponse = await page.request.get('/robots.txt')
+  expect(robotsResponse.ok()).toBeTruthy()
+
+  const robotsTxt = await robotsResponse.text()
+  expect(robotsTxt).toContain(`Sitemap: ${CANONICAL_WEBSITE_URL}/sitemap.xml`)
 })
