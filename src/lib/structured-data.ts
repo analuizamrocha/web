@@ -1,26 +1,23 @@
 import {
   DR_NAME,
-  CLINICA_NASSIF,
-  WPP_NUMBER_NASSIF_FORMATTED,
-  WEBSITE_URL,
-  URL_INSTAGRAM,
   ORG_DESCRIPTION,
   PHYSICIAN_DESCRIPTION,
-  SERVICES_DESCRIPTION,
+  WEBSITE_URL,
+  URL_INSTAGRAM,
   WEBSITE_DESCRIPTION,
-  BUSINESS_DESCRIPTION,
   CRM_NUMBER,
   RQE_NUMBER,
   PUC_PR,
   HOSPITAL_SANTA_CASA,
   HOSPITAL_MACKENZIE,
   HOSPITAL_CLINIC_BARCELONA,
+  WPP_NUMBER_NASSIF_FORMATTED,
 } from './constants'
+import { locationPages, getLocationPath } from './locations'
 
-export const structuredData = {
+const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
-    // Medical Organization
     {
       '@type': 'MedicalOrganization',
       '@id': `${WEBSITE_URL}/#organization`,
@@ -28,45 +25,17 @@ export const structuredData = {
       url: WEBSITE_URL,
       logo: `${WEBSITE_URL}/images/og.png`,
       description: ORG_DESCRIPTION,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: CLINICA_NASSIF.address,
-        addressLocality: CLINICA_NASSIF.city,
-        addressRegion: CLINICA_NASSIF.state,
-        addressCountry: 'BR',
-        postalCode: CLINICA_NASSIF.cep,
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: CLINICA_NASSIF.coordinates.latitude,
-        longitude: CLINICA_NASSIF.coordinates.longitude,
-      },
       telephone: WPP_NUMBER_NASSIF_FORMATTED,
-      priceRange: '$$',
-      openingHours: CLINICA_NASSIF.openingHours,
       areaServed: {
         '@type': 'City',
         name: 'Curitiba',
         addressRegion: 'Paraná',
         addressCountry: 'Brasil',
       },
-      // Reference to the clinic where she works
-      containedInPlace: {
-        '@type': 'MedicalClinic',
-        name: CLINICA_NASSIF.name,
-        url: CLINICA_NASSIF.website,
-        telephone: CLINICA_NASSIF.phoneFormatted,
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: CLINICA_NASSIF.address,
-          addressLocality: CLINICA_NASSIF.city,
-          addressRegion: CLINICA_NASSIF.state,
-          addressCountry: 'BR',
-          postalCode: CLINICA_NASSIF.cep,
-        },
-      },
+      location: locationPages.map((location) => ({
+        '@id': `${WEBSITE_URL}${getLocationPath(location.slug)}#place`,
+      })),
     },
-    // Medical Professional
     {
       '@type': 'Physician',
       '@id': `${WEBSITE_URL}/#physician`,
@@ -98,12 +67,6 @@ export const structuredData = {
           description: 'Fellow em Cirurgia Colorretal',
         },
       ],
-      memberOf: [
-        {
-          '@type': 'Organization',
-          name: 'International Anal Neoplasia Society (IANS)',
-        },
-      ],
       hasCredential: [
         {
           '@type': 'EducationalOccupationalCredential',
@@ -129,58 +92,14 @@ export const structuredData = {
           },
         },
       ],
-      // Brazilian payment methods and currency
-      paymentAccepted: ['Dinheiro', 'Cartão de Crédito', 'Cartão de Débito', 'PIX'],
-      currenciesAccepted: 'BRL',
       worksFor: {
         '@id': `${WEBSITE_URL}/#organization`,
       },
-      workLocation: {
-        '@type': 'MedicalClinic',
-        name: CLINICA_NASSIF.name,
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: CLINICA_NASSIF.address,
-          addressLocality: CLINICA_NASSIF.city,
-          addressRegion: CLINICA_NASSIF.state,
-          addressCountry: 'BR',
-          postalCode: CLINICA_NASSIF.cep,
-        },
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: CLINICA_NASSIF.coordinates.latitude,
-          longitude: CLINICA_NASSIF.coordinates.longitude,
-        },
-      },
-      medicalSpecialty: [
-        'Coloproctologia',
-        'Cirurgia Colorretal',
-        'Proctologia',
-        'Gastroenterologia Cirúrgica',
-      ],
+      workLocation: locationPages.map((location) => ({
+        '@id': `${WEBSITE_URL}${getLocationPath(location.slug)}#place`,
+      })),
+      medicalSpecialty: ['Coloproctologia', 'Cirurgia Colorretal', 'Proctologia'],
     },
-    // Medical Services
-    {
-      '@type': 'MedicalProcedure',
-      '@id': `${WEBSITE_URL}/#services`,
-      name: 'Serviços de Coloproctologia',
-      description: SERVICES_DESCRIPTION,
-      procedureType: [
-        'Cirurgias a laser',
-        'Botox para fissura anal',
-        'Cirurgias para fístulas anorretais',
-        'Ligadura elástica para hemorroidas',
-        'Tratamento de HPV',
-        'Cirurgia de cisto pilonidal',
-        'Acompanhamento de doenças inflamatórias intestinais',
-        'Tratamento da síndrome do intestino irritável',
-        'Rastreio e prevenção do câncer de canal anal',
-      ],
-      performer: {
-        '@id': `${WEBSITE_URL}/#physician`,
-      },
-    },
-    // Website
     {
       '@type': 'WebSite',
       '@id': `${WEBSITE_URL}/#website`,
@@ -191,32 +110,6 @@ export const structuredData = {
         '@id': `${WEBSITE_URL}/#organization`,
       },
       inLanguage: 'pt-BR',
-    },
-    // Local Business
-    {
-      '@type': 'LocalBusiness',
-      '@id': `${WEBSITE_URL}/#localbusiness`,
-      name: `${DR_NAME} - Coloproctologia`,
-      description: BUSINESS_DESCRIPTION,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: CLINICA_NASSIF.address,
-        addressLocality: CLINICA_NASSIF.city,
-        addressRegion: CLINICA_NASSIF.state,
-        addressCountry: 'BR',
-        postalCode: CLINICA_NASSIF.cep,
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: CLINICA_NASSIF.coordinates.latitude,
-        longitude: CLINICA_NASSIF.coordinates.longitude,
-      },
-      telephone: WPP_NUMBER_NASSIF_FORMATTED,
-      url: WEBSITE_URL,
-      image: `${WEBSITE_URL}/images/og.png`,
-      priceRange: '$$',
-      openingHours: CLINICA_NASSIF.openingHours,
-      hasMap: `https://maps.google.com/?q=${CLINICA_NASSIF.coordinates.latitude},${CLINICA_NASSIF.coordinates.longitude}`,
     },
   ],
 }

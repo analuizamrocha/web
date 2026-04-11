@@ -8,10 +8,17 @@ import {
   AboutSection,
 } from '@/components/sections'
 import { getFAQSchema } from '@/lib/faq-schema'
+import { getHomeLocationsStructuredData } from '@/lib/locations'
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: getHomeLocationsStructuredData(),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
