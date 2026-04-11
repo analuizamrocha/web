@@ -11,7 +11,7 @@ const services = [
     name: 'Fissura Anal',
     description:
       'Trata-se de uma pequena lesão na borda anal que costuma causar dor intensa durante e após as evacuações. O tratamento precoce pode evitar sofrimento prolongado.',
-    href: '/tratamentos/toxina-botulinica',
+    href: '/blog/fissura-anal-tratamento',
   },
   {
     name: 'Fístula Anal',
