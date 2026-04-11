@@ -54,6 +54,12 @@ export function Footer() {
               >
                 Tratamentos
               </Link>
+              <Link
+                href="/llms.txt"
+                className="text-background/50 hover:text-background/70 text-xs font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-background/50 rounded-sm"
+              >
+                llms.txt
+              </Link>
             </nav>
           </div>
 

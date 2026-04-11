@@ -93,7 +93,7 @@ export default function ToxinaBotulínicaPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
-            '@id': `${WEBSITE_URL}/tratamentos/toxina-botulinica`,
+            '@id': pageUrl,
             name: 'Toxina Botulínica na Coloproctologia',
             description:
               'Aplicação de toxina botulínica para tratamento de fissura anal crônica e dores anais persistentes',

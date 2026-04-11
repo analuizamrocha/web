@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22.0.0",
+    "node": ">=24.0.0",
     "bun": ">=1.2.0"
   },
   "scripts": {
@@ -24,7 +24,7 @@
     "clean:reports": "rm -rf reports lighthouse-results playwright-report test-results",
     "analyze": "ANALYZE=true npm run build",
     "lighthouse": "mkdir -p reports/lighthouse && lighthouse http://localhost:3000 --output=json,html --output-path=./reports/lighthouse/local --view",
-    "lighthouse:prod": "mkdir -p reports/lighthouse && lighthouse https://analuizarocha.com.br --output=json,html --output-path=./reports/lighthouse/prod --view",
+    "lighthouse:prod": "mkdir -p reports/lighthouse && lighthouse https://www.analuizarocha.com.br --output=json,html --output-path=./reports/lighthouse/prod --view",
     "lighthouse:ci": "mkdir -p reports/lighthouse && lighthouse http://localhost:3000 --output=json --output-path=./reports/lighthouse/ci --quiet --chrome-flags='--headless --no-sandbox'"
   },
   "dependencies": {

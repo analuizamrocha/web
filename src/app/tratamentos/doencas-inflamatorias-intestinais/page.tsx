@@ -88,7 +88,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalCondition',
-            '@id': `${WEBSITE_URL}/tratamentos/doencas-inflamatorias-intestinais`,
+            '@id': pageUrl,
             name: 'Doenças Inflamatórias Intestinais',
             alternateName: ['DII', 'Doença de Crohn', 'Retocolite Ulcerativa'],
             description:

@@ -93,7 +93,7 @@ export default function RastreioCancerAnalPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
-            '@id': `${WEBSITE_URL}/tratamentos/rastreio-cancer-anal`,
+            '@id': pageUrl,
             name: 'Rastreio e Prevenção do Câncer de Canal Anal',
             description:
               'Rastreamento especializado para detecção precoce do câncer de canal anal em grupos de risco',

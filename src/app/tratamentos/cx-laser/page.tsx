@@ -92,7 +92,7 @@ export default function CirurgiasLaserPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
-            '@id': `${WEBSITE_URL}/tratamentos/cx-laser`,
+            '@id': pageUrl,
             name: 'Cirurgias a Laser em Coloproctologia',
             description:
               'Procedimentos cirúrgicos minimamente invasivos utilizando tecnologia laser para tratamento de hemorroidas e fissuras anais',

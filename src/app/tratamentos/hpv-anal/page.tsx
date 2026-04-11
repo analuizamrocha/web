@@ -93,7 +93,7 @@ export default function TratamentoHpvAnalPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
-            '@id': `${WEBSITE_URL}/tratamentos/tratamento-hpv-anal`,
+            '@id': pageUrl,
             name: 'Tratamento de HPV Anal: Condilomas e Verrugas',
             description:
               'Tratamento especializado de lesões de HPV anal incluindo condilomas e verrugas com técnicas cirúrgicas e tópicas',
