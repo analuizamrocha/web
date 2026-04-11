@@ -1,15 +1,21 @@
 import { Badge } from '@/components/ui/Badge'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { getRelatedBlogByTreatmentSlug } from '@/lib/treatment-related-blog'
+import { getAllPosts } from '@/lib/blog'
+import { getRelatedPostsForTreatment } from '@/lib/content-relationships'
+import type { TreatmentSlug } from '@/lib/treatment-images'
 
 interface RelatedBlogCardProps {
   treatmentSlug: string
 }
 
 export function RelatedBlogCard({ treatmentSlug }: RelatedBlogCardProps) {
-  const relatedBlog = getRelatedBlogByTreatmentSlug(treatmentSlug)
+  const relatedPosts = getRelatedPostsForTreatment(
+    treatmentSlug as TreatmentSlug,
+    getAllPosts(),
+    4
+  )
 
-  if (!relatedBlog) {
+  if (relatedPosts.length === 0) {
     return null
   }
 
@@ -19,17 +25,24 @@ export function RelatedBlogCard({ treatmentSlug }: RelatedBlogCardProps) {
         <Badge variant="secondary" className="mb-4">
           Leitura relacionada
         </Badge>
-        <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary mb-3 leading-tight">
-          {relatedBlog.title}
-        </h3>
-        <p className="text-base text-secondary leading-relaxed mb-6">{relatedBlog.description}</p>
-        <LinkButton
-          href={relatedBlog.href}
-          variant="outline"
-          size="default"
-        >
-          Ver artigo no blog
-        </LinkButton>
+        <div className="grid gap-4 md:grid-cols-2">
+          {relatedPosts.map((post) => (
+            <article
+              key={post.slug}
+              className="flex flex-col rounded-2xl border border-secondary/15 bg-background/80 p-5"
+            >
+              <h3 className="text-lg sm:text-xl font-serif font-bold text-primary mb-3 leading-tight">
+                {post.title}
+              </h3>
+              <p className="flex-1 text-sm sm:text-base text-secondary leading-relaxed mb-5">
+                {post.excerpt}
+              </p>
+              <LinkButton href={`/blog/${post.slug}`} variant="outline" size="default">
+                Ver artigo no blog
+              </LinkButton>
+            </article>
+          ))}
+        </div>
       </div>
     </aside>
   )

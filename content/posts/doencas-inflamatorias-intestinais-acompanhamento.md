@@ -15,6 +15,11 @@ targetAudience: 'patients'
 intent: 'consideration'
 featured: false
 order: 18
+relatedTreatments:
+  - 'doencas-inflamatorias-intestinais'
+relatedPosts:
+  - 'diarreia-cronica-tratamento'
+  - 'sangue-nas-fezes-quando-procurar-coloproctologista'
 faqs:
   - question: 'Doença de Crohn e Retocolite Ulcerativa têm cura?'
     answer: 'São doenças crônicas. O objetivo é controlar a inflamação, manter remissão e prevenir complicações com acompanhamento regular.'
@@ -33,6 +38,8 @@ As Doenças Inflamatórias Intestinais (DII), como a Doença de Crohn e a Retoco
 Não se trata apenas de controlar sintomas, mas de prevenir complicações, preservar qualidade de vida e reduzir impacto a longo prazo.
 
 A Dra. Ana Luiza, coloproctologista em Curitiba, oferece acompanhamento especializado em Doenças Inflamatórias Intestinais com abordagem integrada e foco em cuidado contínuo.
+
+Se você quiser ver como esse acompanhamento aparece na página de atendimento, vale acessar [Doença de Crohn e retocolite](/tratamentos/doencas-inflamatorias-intestinais).
 
 ![Visão geral das doenças inflamatórias intestinais](/images/posts/doencas-inflamatorias-intestinais-acompanhamento/doencas-inflamatorias-intestinais.webp)
 
@@ -65,6 +72,8 @@ Ambas podem apresentar períodos de atividade e remissão.
 ![Principais manifestações clínicas da Doença de Crohn e da Retocolite Ulcerativa](/images/posts/doencas-inflamatorias-intestinais-acompanhamento/chron-retite-ulcerativa.webp)
 
 O diagnóstico precoce é fundamental para evitar complicações.
+
+Quando diarreia persistente, sangue nas fezes ou perda de peso são os primeiros sinais, estes dois conteúdos podem complementar a leitura: [diarreia crônica: causas, diagnóstico e tratamentos](/blog/diarreia-cronica-tratamento) e [sangue nas fezes: quando se preocupar](/blog/sangue-nas-fezes-quando-procurar-coloproctologista).
 
 ## Avaliação e monitoramento contínuo
 

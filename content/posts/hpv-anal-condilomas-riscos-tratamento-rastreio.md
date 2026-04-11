@@ -15,6 +15,12 @@ targetAudience: 'patients'
 intent: 'awareness'
 featured: false
 order: 12
+relatedTreatments:
+  - 'hpv-anal'
+  - 'rastreio-cancer-anal'
+relatedPosts:
+  - 'cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar'
+  - 'proctologista-e-coloproctologista-qual-diferenca-quando-procurar-atendimento'
 faqs:
   - question: 'HPV anal sempre causa verrugas?'
     answer: 'Não. Muitas infecções são assintomáticas e só são identificadas em exames de rastreio.'
@@ -37,6 +43,8 @@ Essas perguntas são muito comuns no consultório.
 A infecção por **HPV anal** e o aparecimento de **condilomas (verrugas anais)** ainda são cercados de desinformação e estigma. Quando bem acompanhada, porém, é uma condição **tratável, rastreável e prevenível**.
 
 Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que é o HPV anal, sua história natural, os riscos associados, as opções de tratamento, a importância da vacina e do rastreio adequado.
+
+Para ver como esses temas aparecem organizados nas páginas de atendimento, você também pode revisar [tratamento de HPV anal](/tratamentos/hpv-anal) e [rastreio de câncer anal e HPV](/tratamentos/rastreio-cancer-anal).
 
 ![Ilustração de condilomas anais associados ao HPV](/images/posts/hpv-anal/condilomas-hpv.webp)
 
@@ -115,6 +123,8 @@ Semelhante ao exame preventivo ginecológico, avalia alterações celulares.
 Permite visualização detalhada da mucosa anal e identificação de lesões suspeitas, com possibilidade de biópsia.
 
 O rastreio é indicado principalmente para pacientes com fatores de risco, mas deve ser individualizado.
+
+Se a principal dúvida hoje é quem realmente deve investigar e com que urgência, vale complementar esta leitura com [câncer de canal anal: rastreio, HPV e quem deve se preocupar](/blog/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar).
 
 ## Tratamento dos condilomas anais
 
