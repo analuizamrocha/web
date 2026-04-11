@@ -9,9 +9,6 @@ import {
   WPP_NUMBER_NASSIF,
   WHATSAPP_MSG_TEXT_ENCODED,
   WEBSITE_URL,
-  CLINICA_NASSIF,
-  DR_NAME,
-  WPP_NUMBER_NASSIF_FORMATTED,
   URL_INSTAGRAM,
   CRM_NUMBER,
   RQE_NUMBER,
@@ -23,7 +20,6 @@ import {
   generateBreadcrumbSchema,
   generateOpenGraphMetadata,
   generateTwitterMetadata,
-  generateLocalBusinessSchema,
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
 import {
@@ -198,36 +194,6 @@ export default function SobrePage() {
               addressCountry: 'BR',
             },
           }),
-        }}
-      />
-
-      {/* LocalBusiness Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            generateLocalBusinessSchema({
-              name: `${DR_NAME} - Coloproctologia`,
-              description:
-                'Consultas de Coloproctologia com atendimento humanizado e especializado em Curitiba. Diagnóstico e tratamento de doenças do intestino, reto e ânus.',
-              address: {
-                streetAddress: CLINICA_NASSIF.address,
-                addressLocality: CLINICA_NASSIF.city,
-                addressRegion: CLINICA_NASSIF.state,
-                postalCode: CLINICA_NASSIF.cep,
-                addressCountry: 'BR',
-              },
-              geo: {
-                latitude: CLINICA_NASSIF.coordinates.latitude,
-                longitude: CLINICA_NASSIF.coordinates.longitude,
-              },
-              telephone: WPP_NUMBER_NASSIF_FORMATTED,
-              url: WEBSITE_URL,
-              image: `${WEBSITE_URL}/images/og.png`,
-              priceRange: '$$',
-              openingHours: CLINICA_NASSIF.openingHours,
-            })
-          ),
         }}
       />
 
