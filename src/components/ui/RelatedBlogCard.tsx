@@ -29,12 +29,12 @@ export function RelatedBlogCard({ treatmentSlug }: RelatedBlogCardProps) {
           {relatedPosts.map((post) => (
             <article
               key={post.slug}
-              className="rounded-2xl border border-secondary/15 bg-background/80 p-5"
+              className="flex flex-col rounded-2xl border border-secondary/15 bg-background/80 p-5"
             >
               <h3 className="text-lg sm:text-xl font-serif font-bold text-primary mb-3 leading-tight">
                 {post.title}
               </h3>
-              <p className="text-sm sm:text-base text-secondary leading-relaxed mb-5">
+              <p className="flex-1 text-sm sm:text-base text-secondary leading-relaxed mb-5">
                 {post.excerpt}
               </p>
               <LinkButton href={`/blog/${post.slug}`} variant="outline" size="default">
