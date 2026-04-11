@@ -173,6 +173,10 @@ export default function ServicosPage() {
                 <br />
                 Atendimento humanizado com a mais alta qualidade técnica.
               </p>
+              <p className="text-base lg:text-lg text-secondary/80 leading-relaxed mb-6">
+                Se quiser entender em qual clínica a consulta ou o exame faz mais sentido, veja
+                também os locais de atendimento.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LinkButton
                   href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
@@ -192,6 +196,14 @@ export default function ServicosPage() {
                   className="text-lg px-8 py-4 font-semibold text-nowrap shadow-lg hover:shadow-xl transform  transition-all duration-300"
                 >
                   Ver artigos
+                </LinkButton>
+                <LinkButton
+                  href="/locais-de-atendimento"
+                  size="xl"
+                  variant="subtle"
+                  className="text-lg px-8 py-4 font-semibold text-nowrap shadow-lg hover:shadow-xl transform transition-all duration-300"
+                >
+                  Ver locais
                 </LinkButton>
               </div>
             </div>

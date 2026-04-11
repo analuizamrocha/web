@@ -1,4 +1,8 @@
-import { WPP_NUMBER_NASSIF_FORMATTED, CLINICA_NASSIF } from './constants'
+import {
+  CLINICA_NASSIF,
+  SPECTA_ENDOSCOPIA,
+  WPP_NUMBER_NASSIF_FORMATTED,
+} from './constants'
 
 export const faqSchema = {
   '@context': 'https://schema.org',
@@ -30,10 +34,10 @@ export const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Onde fica o consultório em Curitiba?',
+      name: 'Onde a Dra. Ana Luiza atende em Curitiba?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `O consultório fica na ${CLINICA_NASSIF.name}, localizada na ${CLINICA_NASSIF.address}, no bairro ${CLINICA_NASSIF.neighborhood}, em ${CLINICA_NASSIF.city} - ${CLINICA_NASSIF.state}.`,
+        text: `As consultas em coloproctologia acontecem na ${CLINICA_NASSIF.name}, localizada na ${CLINICA_NASSIF.address}, no bairro ${CLINICA_NASSIF.neighborhood}, em ${CLINICA_NASSIF.city} - ${CLINICA_NASSIF.state}. Quando a colonoscopia é indicada, o site também informa a ${SPECTA_ENDOSCOPIA.name}, na ${SPECTA_ENDOSCOPIA.address}, no bairro ${SPECTA_ENDOSCOPIA.neighborhood}.`,
       },
     },
     {
