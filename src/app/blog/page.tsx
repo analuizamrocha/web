@@ -18,9 +18,11 @@ const BLOG_PAGE_TITLE = 'Blog — Saúde intestinal sem tabu'
 export const metadata: Metadata = {
   title: BLOG_PAGE_TITLE,
   description:
-    'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
+    'Orientações práticas de coloproctologia e proctologia sobre hemorroidas, fissuras, intestino preso, HPV anal e mais.',
   keywords: [
     'blog coloproctologia',
+    'blog proctologia',
+    'proctologista curitiba',
     'artigos coloproctologista curitiba',
     'saúde intestinal',
     'tratamento hemorroidas',
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: BLOG_PAGE_TITLE,
     description:
-      'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
+      'Orientações práticas de coloproctologia e proctologia sobre hemorroidas, fissuras, intestino preso, HPV anal e mais.',
     type: 'website',
     locale: 'pt_BR',
     url: `${WEBSITE_URL}/blog`,
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: BLOG_PAGE_TITLE,
     description:
-      'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
+      'Orientações práticas de coloproctologia e proctologia sobre hemorroidas, fissuras, intestino preso, HPV anal e mais.',
     creator: TAG_INSTAGRAM,
     site: TAG_INSTAGRAM,
     images: [`${WEBSITE_URL}/og-image.jpg`],
@@ -81,12 +83,12 @@ export default function BlogPage() {
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
           <div className="mx-auto max-w-4xl text-center mb-16 lg:mb-20">
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
-              Cuidando da sua saúde intestinal
+              Cuidando da sua saúde intestinal com informação clara
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
               <p>
                 Aqui compartilho conhecimentos, dicas práticas e orientações sobre coloproctologia
-                para ajudar você a entender melhor sua saúde intestinal
+                e proctologia para ajudar você a entender melhor sua saúde intestinal
               </p>
             </div>
           </div>

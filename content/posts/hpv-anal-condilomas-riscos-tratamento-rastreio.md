@@ -1,9 +1,9 @@
 ---
 title: 'HPV anal e condilomas: o que são, riscos, tratamento e importância do rastreio'
-metaDescription: 'Entenda HPV anal e condilomas: sintomas, riscos, tratamento, vacina e rastreio para prevenção do câncer anal com coloproctologista em Curitiba.'
+metaDescription: 'Entenda HPV anal e condilomas: sintomas, riscos, tratamento, vacina e rastreio para prevenção do câncer anal com proctologista em Curitiba.'
 slug: 'hpv-anal-condilomas-riscos-tratamento-rastreio'
 publishDate: '2026-02-20'
-lastModified: '2026-02-20'
+lastModified: '2026-04-02'
 primaryKeyword: 'HPV anal'
 secondaryKeywords:
   - 'condilomas anais'
@@ -11,6 +11,8 @@ secondaryKeywords:
   - 'cancer anal HPV'
   - 'vacina HPV adultos'
   - 'coloproctologista Curitiba'
+  - 'verrugas anais curitiba'
+  - 'proctologista curitiba'
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false

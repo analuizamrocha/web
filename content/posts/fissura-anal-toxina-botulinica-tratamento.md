@@ -1,9 +1,9 @@
 ---
 title: 'Fissura anal: toxina botulínica ajuda mesmo?'
-metaDescription: 'Saiba como a toxina botulínica (botox) atua no tratamento da fissura anal crônica, quando é indicada e quais são os benefícios. Coloproctologista em Curitiba.'
+metaDescription: 'Saiba como a toxina botulínica (botox) atua no tratamento da fissura anal crônica, quando é indicada e quais são os benefícios com proctologista em Curitiba.'
 slug: 'fissura-anal-toxina-botulinica-tratamento'
 publishDate: '2026-03-15'
-lastModified: '2026-03-15'
+lastModified: '2026-04-02'
 primaryKeyword: 'toxina botulínica fissura anal'
 secondaryKeywords:
   - 'botox fissura anal'
@@ -11,6 +11,7 @@ secondaryKeywords:
   - 'toxina botulínica coloproctologia'
   - 'fissura anal sem cirurgia'
   - 'coloproctologista Curitiba'
+  - 'proctologista curitiba'
   - 'esfíncter anal relaxamento'
 targetAudience: 'patients'
 intent: 'consideration'

@@ -83,12 +83,13 @@ export function ServicesSection() {
         {/* Header Section - Enhanced Typography */}
         <div className="mx-auto max-w-4xl text-center mb-16 lg:mb-20 animate-fade-in">
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
-            Quando procurar uma coloproctologista?
+            Quando procurar uma coloproctologista ou proctologista?
           </h2>
           <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
             <p>
-              Reconhecer os sinais e sintomas é fundamental para buscar ajuda no momento adequado.
-              Cada queixa merece atenção especializada e cuidadosa.
+              Reconhecer sinais e sintomas ajuda a buscar atendimento no momento certo. Cada queixa
+              merece avaliação especializada em coloproctologia e proctologia, com investigação
+              cuidadosa e plano individualizado.
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ title: 'Tratamento de fístulas anorretais'
 metaDescription: 'Entenda sintomas, diagnóstico e opções de tratamento para fístula anal com foco em segurança, preservação da continência e menor recorrência.'
 slug: 'tratamento-fistulas-anorretais'
 publishDate: '2026-03-05'
-lastModified: '2026-03-05'
+lastModified: '2026-04-02'
 primaryKeyword: 'fístula anal'
 secondaryKeywords:
   - 'fístulas anorretais'
@@ -11,6 +11,7 @@ secondaryKeywords:
   - 'seton'
   - 'técnica LIFT'
   - 'coloproctologista Curitiba'
+  - 'proctologista curitiba'
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false

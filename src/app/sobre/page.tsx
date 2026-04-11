@@ -40,7 +40,7 @@ import {
 
 const pageTitle = 'Formação e trajetória profissional'
 const pageDescription =
-  'Residência em cirurgia geral, especialização em coloproctologia e fellowship internacional em cirurgia colorretal. Conheça quem cuida de você.'
+  'Residência em cirurgia geral, especialização em coloproctologia, atuação em proctologia e fellowship internacional em cirurgia colorretal. Conheça quem cuida de você.'
 const pageUrl = `${WEBSITE_URL}/sobre`
 
 export const metadata: Metadata = {
@@ -51,7 +51,9 @@ export const metadata: Metadata = {
     'dra ana luiza moraes rocha',
     'crm pr 45351',
     'proctologista curitiba',
+    'proctologia curitiba',
     'medica coloproctologista',
+    'medica proctologista curitiba',
     'cirurgia colorretal curitiba',
   ],
   alternates: {
@@ -258,8 +260,8 @@ export default function SobrePage() {
             </h1>
 
             <h2 className="text-start sm:text-center text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium w-full flex flex-col items-center justify-center max-w-3xl mx-auto">
-              Especialista em Coloproctologia com formação internacional, dedicada ao cuidado
-              integral e humanizado de cada paciente.
+              Médica coloproctologista e proctologista em Curitiba, com formação internacional e
+              dedicada ao cuidado integral e humanizado de cada paciente.
             </h2>
           </div>
 
@@ -272,9 +274,9 @@ export default function SobrePage() {
               forma integral. Durante a graduação em Medicina na <strong>{PUC_PR}</strong>,
               desenvolvi a base sólida da minha formação. Foi durante a&nbsp;
               <strong>residência em Cirurgia Geral, no {HOSPITAL_SANTA_CASA}</strong>, que descobri
-              meu amor pela <strong>coloproctologia</strong> — especialidade que une conhecimento
-              técnico avançado com o cuidado humanizado que sempre busquei oferecer aos meus
-              pacientes.
+              meu amor pela <strong>coloproctologia</strong> e pela atuação em
+              <strong> proctologia</strong> — especialidade que une conhecimento técnico avançado
+              com o cuidado humanizado que sempre busquei oferecer aos meus pacientes.
             </p>
 
             {/* Professional Images Grid */}

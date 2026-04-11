@@ -1,9 +1,9 @@
 ---
 title: 'Doenças inflamatórias intestinais (DII): acompanhamento especializado'
-metaDescription: 'Saiba como funciona o acompanhamento da Doença de Crohn e Retocolite Ulcerativa com monitoramento contínuo, prevenção de complicações e tratamento individualizado.'
+metaDescription: 'Saiba como funciona o acompanhamento da Doença de Crohn e Retocolite Ulcerativa com monitoramento contínuo, prevenção de complicações e tratamento individualizado em Curitiba.'
 slug: 'doencas-inflamatorias-intestinais-acompanhamento'
 publishDate: '2026-03-07'
-lastModified: '2026-03-07'
+lastModified: '2026-04-02'
 primaryKeyword: 'doenças inflamatórias intestinais'
 secondaryKeywords:
   - 'Doença de Crohn'
@@ -11,6 +11,8 @@ secondaryKeywords:
   - 'acompanhamento DII'
   - 'tratamento DII'
   - 'coloproctologista Curitiba'
+  - 'tratamento crohn curitiba'
+  - 'proctologista curitiba'
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false

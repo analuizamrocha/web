@@ -37,7 +37,7 @@ const literata = Literata({
 })
 
 const SITE_BRAND = DR_NAME_ABBREVIATED
-const DEFAULT_SITE_TITLE = `${SITE_BRAND} | Coloproctologista Curitiba`
+const DEFAULT_SITE_TITLE = `${SITE_BRAND} | Coloproctologista e Proctologista Curitiba`
 
 export const metadata: Metadata = {
   metadataBase: new URL(WEBSITE_URL),
@@ -46,14 +46,16 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_BRAND}`,
   },
   description:
-    'Coloproctologista em Curitiba. Cuidado clínico e cirúrgico com foco em hemorroidas, fissuras, fístulas, HPV anal e doenças inflamatórias intestinais. Clínica Nassif, Batel.',
+    'Médica coloproctologista e proctologista em Curitiba. Consultas em coloproctologia no Batel e organização de exames quando indicados, com foco em hemorroidas, fissuras, fístulas, HPV anal e doenças inflamatórias intestinais.',
   keywords: [
     'coloproctologista curitiba',
     'coloproctologia curitiba',
+    'proctologista curitiba',
+    'proctologia curitiba',
     'ana luiza rocha',
     'cirurgia hemorroidas curitiba',
     'tratamento fissura anal',
-    'proctologista curitiba',
+    'médico proctologista curitiba',
     'médica intestino curitiba',
     'cirurgia ânus curitiba',
     'HPV anal tratamento',
@@ -65,8 +67,11 @@ export const metadata: Metadata = {
     'cisto pilonidal cirurgia',
     'fístula anorretal',
     'câncer canal anal',
+    'onde atende dra ana luiza rocha',
     'batel curitiba',
+    'mercês curitiba',
     'clínica nassif',
+    'specta endoscopia digestiva',
     'crm pr 45351',
   ],
   authors: [{ name: DR_NAME }],
@@ -101,7 +106,7 @@ export const metadata: Metadata = {
     url: WEBSITE_URL,
     title: DEFAULT_SITE_TITLE,
     description:
-      'Dra. Ana Luiza M. Rocha, especialista em Coloproctologia em Curitiba. Cuidado clínico e cirúrgico humanizado para tratamento de hemorroidas, fissuras anais, HPV e doenças inflamatórias intestinais.',
+      'Dra. Ana Luiza M. Rocha, médica coloproctologista e proctologista em Curitiba. Consultas em coloproctologia e cuidado humanizado com orientação clara sobre locais de atendimento e exames quando indicados.',
     siteName: `${DR_NAME} - Coloproctologia`,
     images: [
       {
@@ -124,7 +129,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: DEFAULT_SITE_TITLE,
     description:
-      'Especialista em Coloproctologia oferecendo cuidado clínico e cirúrgico humanizado do intestino, reto e ânus em Curitiba.',
+      'Médica coloproctologista e proctologista oferecendo cuidado clínico e cirúrgico humanizado em Curitiba, com informações claras sobre locais de atendimento.',
     images: [
       {
         url: `${WEBSITE_URL}/images/og.png`,
