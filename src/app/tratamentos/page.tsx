@@ -191,7 +191,7 @@ export default function ServicosPage() {
                   variant="outline"
                   className="text-lg px-8 py-4 font-semibold text-nowrap shadow-lg hover:shadow-xl transform  transition-all duration-300"
                 >
-                  Artigos educativos
+                  Ver artigos
                 </LinkButton>
               </div>
             </div>
