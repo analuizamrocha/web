@@ -592,6 +592,14 @@ export default function SobrePage() {
                 >
                   Conhecer tratamentos
                 </LinkButton>
+                <LinkButton
+                  href="/locais-de-atendimento"
+                  size="xl"
+                  variant="subtle"
+                  className="text-lg px-8 py-4 font-semibold text-nowrap shadow-lg hover:shadow-xl transform transition-all duration-300"
+                >
+                  Ver locais de atendimento
+                </LinkButton>
               </>
             }
             variant="secondary"

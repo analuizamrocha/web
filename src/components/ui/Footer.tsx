@@ -49,6 +49,12 @@ export function Footer() {
                 Sobre
               </Link>
               <Link
+                href="/locais-de-atendimento"
+                className="text-background/70 hover:text-background text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-background/50 rounded-sm"
+              >
+                Locais
+              </Link>
+              <Link
                 href="/tratamentos"
                 className="text-background/70 hover:text-background text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-background/50 rounded-sm"
               >
