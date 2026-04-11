@@ -5,6 +5,9 @@ import { WEBSITE_URL } from '@/lib/constants'
 const STATIC_ROUTE_LAST_MODIFIED: Record<string, string> = {
   '/': '2026-04-01',
   '/blog': '2026-04-01',
+  '/locais-de-atendimento': '2026-04-11',
+  '/locais-de-atendimento/clinica-nassif': '2026-04-11',
+  '/locais-de-atendimento/specta-endoscopia-digestiva': '2026-04-11',
   '/sobre': '2026-03-20',
   '/tratamentos': '2026-03-20',
   '/tratamentos/hemorroidas': '2026-03-20',
@@ -67,6 +70,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: STATIC_ROUTE_LAST_MODIFIED['/tratamentos'],
       changeFrequency: 'monthly' as const,
       priority: 0.95,
+    },
+    {
+      url: `${WEBSITE_URL}/locais-de-atendimento`,
+      lastModified: STATIC_ROUTE_LAST_MODIFIED['/locais-de-atendimento'],
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${WEBSITE_URL}/locais-de-atendimento/clinica-nassif`,
+      lastModified: STATIC_ROUTE_LAST_MODIFIED['/locais-de-atendimento/clinica-nassif'],
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${WEBSITE_URL}/locais-de-atendimento/specta-endoscopia-digestiva`,
+      lastModified: STATIC_ROUTE_LAST_MODIFIED['/locais-de-atendimento/specta-endoscopia-digestiva'],
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
     },
     // Individual treatment pages - Very high priority
     ...treatmentEntries,
