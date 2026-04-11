@@ -5,7 +5,7 @@ const services = [
     name: 'Hemorroidas',
     description:
       'Quando há dor, sangramento, coceira ou incômodo ao evacuar, é possível que se trate de hemorroidas. Felizmente, hoje existem alternativas modernas e menos invasivas para aliviar esses sintomas com segurança.',
-    href: '/tratamentos/hemorroidas',
+    href: '/blog/hemorroida-sempre-cirurgica-tratamento',
   },
   {
     name: 'Fissura Anal',
@@ -17,7 +17,7 @@ const services = [
     name: 'Fístula Anal',
     description:
       'Presença de secreção, dor ou abertura próxima ao ânus pode indicar uma fístula. Essa condição exige avaliação especializada, e há diferentes formas de abordagem.',
-    href: '/tratamentos/cx-fistulas-anorretais',
+    href: '/blog/tratamento-fistulas-anorretais',
   },
   {
     name: 'Coceira Anal (Prurido)',
@@ -29,13 +29,13 @@ const services = [
     name: 'HPV Anal',
     description:
       'Lesões causadas pelo papilomavírus humano podem afetar a região anal, tanto interna quanto externamente. O acompanhamento é essencial para tratamento e prevenção de complicações.',
-    href: '/tratamentos/hpv-anal',
+    href: '/blog/hpv-anal-condilomas-riscos-tratamento-rastreio',
   },
   {
     name: 'Cisto Pilonidal',
     description:
       'Se você nota dor ou secreção recorrente na parte inferior da coluna (perto do cóccix), pode ser um cisto pilonidal. Existem opções modernas de tratamento com recuperação mais rápida.',
-    href: '/tratamentos/cx-cisto-pilonidal',
+    href: '/blog/cisto-pilonidal-cirurgia-laser-quando-operar',
   },
   {
     name: 'Constipação Intestinal',
@@ -53,13 +53,13 @@ const services = [
     name: 'Síndrome do Intestino Irritável (SII)',
     description:
       'Sintomas como dor abdominal, gases, inchaço e alterações no ritmo intestinal podem fazer parte da SII. Com acompanhamento adequado, é possível controlar e melhorar muito a qualidade de vida.',
-    href: '/tratamentos/sindrome-intestino-irritavel',
+    href: '/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento',
   },
   {
     name: 'Doenças Inflamatórias Intestinais',
     description:
       'Retocolite Ulcerativa e Doença de Crohn são doenças crônicas que exigem acompanhamento contínuo. O foco é manter a doença sob controle e preservar a qualidade de vida do paciente.',
-    href: '/tratamentos/doencas-inflamatorias-intestinais',
+    href: '/blog/doencas-inflamatorias-intestinais-acompanhamento',
   },
   {
     name: 'Saúde Sexual',
