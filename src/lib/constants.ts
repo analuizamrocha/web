@@ -160,3 +160,34 @@ export const CLINICA_NASSIF = {
   /** Opening hours formatted for display */
   openingHoursDisplay: 'Segunda a Sexta: 08:00 - 19:30',
 } as const
+
+// =============================================================================
+// Specta Endoscopia Digestiva Information
+// =============================================================================
+
+export const SPECTA_ENDOSCOPIA = {
+  /** Clinic name */
+  name: 'Specta Endoscopia Digestiva',
+
+  /** Street address */
+  address: 'R. Dom Alberto Gonçalves, 311',
+
+  /** Neighborhood */
+  neighborhood: 'Mercês',
+
+  /** City */
+  city: 'Curitiba',
+
+  /** State abbreviation */
+  state: 'PR',
+
+  /** State full name */
+  stateFull: 'Paraná',
+
+  /** Contact phone used on the website */
+  phone: '(41) 98773-7829',
+
+  /** Google Maps search URL */
+  maps:
+    'https://maps.google.com/?q=R.%20Dom%20Alberto%20Gon%C3%A7alves%2C%20311%2C%20Merc%C3%AAs%2C%20Curitiba%20-%20PR',
+} as const
