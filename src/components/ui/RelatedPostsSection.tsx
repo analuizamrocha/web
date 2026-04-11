@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { Badge } from '@/components/ui/Badge'
+import { TreatmentCard } from '@/components/ui/TreatmentCard'
 import type { BlogPost } from '@/lib/blog'
 
 interface RelatedPostsSectionProps {
@@ -21,26 +21,13 @@ export function RelatedPostsSection({ posts }: RelatedPostsSectionProps) {
         </Badge>
         <div className="grid gap-4 md:grid-cols-2">
           {relatedPosts.map((post) => (
-            <article
+            <TreatmentCard
               key={post.slug}
-              className="rounded-2xl border border-secondary/15 bg-background/80 p-5"
-            >
-              <h3 className="text-lg sm:text-xl font-serif font-bold text-primary mb-3 leading-tight">
-                <Link href={`/blog/${post.slug}`} className="hover:text-primary/80 transition-colors">
-                  {post.title}
-                </Link>
-              </h3>
-              <p className="text-sm sm:text-base text-secondary leading-relaxed mb-4">
-                {post.excerpt}
-              </p>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="inline-flex items-center gap-1 text-primary font-semibold hover:text-primary/80 transition-colors"
-              >
-                Ler artigo
-                <span aria-hidden="true">→</span>
-              </Link>
-            </article>
+              href={`/blog/${post.slug}`}
+              title={post.title}
+              description={post.excerpt}
+              variant="detailed"
+            />
           ))}
         </div>
       </div>

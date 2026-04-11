@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/Badge'
-import { LinkButton } from '@/components/ui/LinkButton'
+import { TreatmentCard } from '@/components/ui/TreatmentCard'
 import { getTreatmentLinkBySlug } from '@/lib/content-relationships'
 
 interface RelatedTreatmentsSectionProps {
@@ -24,20 +24,13 @@ export function RelatedTreatmentsSection({ treatmentSlugs }: RelatedTreatmentsSe
         </Badge>
         <div className="grid gap-4 md:grid-cols-2">
           {relatedTreatments.map((treatment) => (
-            <article
+            <TreatmentCard
               key={treatment.slug}
-              className="rounded-2xl border border-secondary/15 bg-background/80 p-5"
-            >
-              <h3 className="text-lg sm:text-xl font-serif font-bold text-primary mb-3 leading-tight">
-                {treatment.title}
-              </h3>
-              <p className="text-sm sm:text-base text-secondary leading-relaxed mb-5">
-                {treatment.description}
-              </p>
-              <LinkButton href={treatment.href} variant="outline" size="default">
-                Ver página de tratamento
-              </LinkButton>
-            </article>
+              href={treatment.href}
+              title={treatment.title}
+              description={treatment.description}
+              variant="detailed"
+            />
           ))}
         </div>
       </div>
