@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 15 project for a medical practice website (Ana Luiza M. Rocha - Coloproctologista). It features a main landing page with multiple sections and a comprehensive blog system for SEO-optimized medical content, built with React 19, TypeScript, and TailwindCSS.
+This is a Next.js 16 project for a medical practice website (Ana Luiza M. Rocha - Coloproctologista). It features a main landing page with multiple sections and a comprehensive blog system for SEO-optimized medical content, built with React 19, TypeScript, and TailwindCSS.
 
 **Current State:**
 
@@ -163,7 +163,7 @@ src/
 
 ## Environment Requirements
 
-- Node.js >= 22.0.0
+- Node.js >= 24.0.0
 - Bun >= 1.2.0 (primary package manager)
 
 ## Testing Framework
@@ -177,7 +177,7 @@ Uses Vitest with React Testing Library:
 
 ## Key Dependencies
 
-- **Framework**: Next.js 15 with React 19
+- **Framework**: Next.js 16 with React 19
 - **Package Manager**: Bun (for fast installs and script execution)
 - **Styling**: TailwindCSS v4 with utility classes
 - **UI Libraries**: Lucide React for icons, class-variance-authority for styling variants

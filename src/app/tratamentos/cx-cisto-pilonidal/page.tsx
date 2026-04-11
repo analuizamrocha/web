@@ -93,7 +93,7 @@ export default function CistoPilonidalPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
-            '@id': `${WEBSITE_URL}/tratamentos/cx-cisto-pilonidal`,
+            '@id': pageUrl,
             name: 'Cirurgia para Cisto Pilonidal',
             description:
               'Tratamento cirúrgico do cisto pilonidal com técnicas convencionais e laser para resolução definitiva',

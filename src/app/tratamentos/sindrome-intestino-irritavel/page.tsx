@@ -88,7 +88,7 @@ export default function SindromeIntestinoIrritavelPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalCondition',
-            '@id': `${WEBSITE_URL}/tratamentos/sindrome-intestino-irritavel`,
+            '@id': pageUrl,
             name: 'Síndrome do Intestino Irritável',
             alternateName: ['SII', 'Intestino Irritável', 'IBS'],
             description:

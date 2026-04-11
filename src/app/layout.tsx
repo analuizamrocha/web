@@ -161,6 +161,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR">
       <head>
+        {/* LLM content index — machine-readable, invisible to users */}
+        <link rel="llms" href="/llms.txt" />
         {/* Structured data for SEO */}
         <script
           type="application/ld+json"

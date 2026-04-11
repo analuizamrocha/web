@@ -98,7 +98,7 @@ export default function CirurgiaFistulasPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
-            '@id': `${WEBSITE_URL}/tratamentos/cx-fistulas-anorretais`,
+            '@id': pageUrl,
             name: 'Cirurgias para Fístulas Anorretais',
             description:
               'Tratamentos cirúrgicos especializados para fístulas anorretais incluindo fistulotomia, retalho mucoso, LIFT e técnicas a laser',

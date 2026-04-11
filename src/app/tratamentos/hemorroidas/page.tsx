@@ -93,8 +93,7 @@ export default function TratamentoHemorroidasPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
-            '@id':
-              `${WEBSITE_URL}/tratamentos/tratamento-hemorroidas`,
+            '@id': pageUrl,
             name: 'Tratamento de Hemorroidas',
             description:
               'Tratamentos especializados para hemorroidas incluindo ligadura elástica, escleroterapia, cirurgia laser e THD',

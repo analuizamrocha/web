@@ -23,6 +23,21 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
   },
+  // Permanent redirects for renamed/old URLs
+  redirects: async () => [
+    // Old treatment slug — page lives at /tratamentos/hpv-anal
+    {
+      source: '/tratamentos/tratamento-hpv-anal',
+      destination: '/tratamentos/hpv-anal',
+      permanent: true,
+    },
+    // Old short blog slug — file is cisto-pilonidal-cirurgia-laser-quando-operar
+    {
+      source: '/blog/cisto-pilonidal-cirurgia-laser',
+      destination: '/blog/cisto-pilonidal-cirurgia-laser-quando-operar',
+      permanent: true,
+    },
+  ],
   // Security headers and caching
   headers: async () => [
     {

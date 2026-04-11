@@ -1,28 +1,84 @@
-# Dra. Ana Luiza M. Rocha - Coloproctologia em Curitiba (PR)
+# Dra. Ana Luiza M. Rocha — Coloproctologista em Curitiba, Brasil
 
-> Site oficial com conteúdo educativo sobre saúde intestinal, prevenção, diagnóstico e opções de tratamento em coloproctologia.
+> Official website of a colorectal surgeon based in Curitiba, Brazil. Content covers colorectal health, prevention, diagnosis and treatment options. All content is in Brazilian Portuguese. Primary audience: patients in Curitiba and the metropolitan region. Secondary audience: referring physicians.
 
-Conteúdo voltado principalmente para pacientes de Curitiba e região metropolitana, além de médicos encaminhadores.
+> Site oficial de coloproctologista em Curitiba (PR). Conteúdo educativo sobre saúde intestinal, prevenção, diagnóstico e tratamento em coloproctologia. Público-alvo: pacientes de Curitiba e região metropolitana; médicos encaminhadores.
 
 ## Páginas principais
 - [Início](https://www.analuizarocha.com.br/): Visão geral do atendimento em coloproctologia em Curitiba.
 - [Tratamentos](https://www.analuizarocha.com.br/tratamentos): Hub principal dos tratamentos e procedimentos.
-- [Blog](https://www.analuizarocha.com.br/blog): Artigos educativos com foco em dúvidas frequentes.
-- [Sobre](https://www.analuizarocha.com.br/sobre): Credenciais médicas, formação e contexto clínico.
+- [Blog](https://www.analuizarocha.com.br/blog): Artigos educativos com foco em dúvidas frequentes dos pacientes.
+- [Sobre](https://www.analuizarocha.com.br/sobre): Credenciais médicas, formação e trajetória profissional.
 
-## Tratamentos prioritários
+## Tratamentos
 - [Hemorroidas](https://www.analuizarocha.com.br/tratamentos/hemorroidas): Sintomas, diagnóstico e opções de tratamento.
 - [Cirurgia a laser](https://www.analuizarocha.com.br/tratamentos/cx-laser): Procedimentos proctológicos com tecnologia a laser.
 - [Fístulas anorretais](https://www.analuizarocha.com.br/tratamentos/cx-fistulas-anorretais): Avaliação e manejo cirúrgico especializado.
 - [Cisto pilonidal](https://www.analuizarocha.com.br/tratamentos/cx-cisto-pilonidal): Abordagens terapêuticas e recuperação.
-- [Doenças inflamatórias intestinais](https://www.analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais): Diagnóstico e acompanhamento clínico.
-- [HPV anal](https://www.analuizarocha.com.br/tratamentos/hpv-anal): Rastreio, monitoramento e tratamento.
+- [Doenças inflamatórias intestinais](https://www.analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais): Diagnóstico e acompanhamento clínico de Crohn e retocolite.
+- [HPV anal](https://www.analuizarocha.com.br/tratamentos/hpv-anal): Rastreio, monitoramento e tratamento de condilomas.
 - [Rastreio de câncer anal](https://www.analuizarocha.com.br/tratamentos/rastreio-cancer-anal): Fatores de risco e prevenção.
 - [Síndrome do intestino irritável](https://www.analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel): Sintomas e tratamento multidisciplinar.
 - [Toxina botulínica](https://www.analuizarocha.com.br/tratamentos/toxina-botulinica): Indicações e expectativas de resultado.
 
+## Blog — artigos educativos
+
+### Hemorroidas
+- [Hemorroida é sempre cirúrgica? Quando operar e opções de tratamento](https://www.analuizarocha.com.br/blog/hemorroida-sempre-cirurgica-tratamento)
+- [Hemorroida sempre precisa de cirurgia?](https://www.analuizarocha.com.br/blog/hemorroida-sempre-precisa-cirurgia)
+- [Hemorroida: quanto tempo dura e quando procurar médico](https://www.analuizarocha.com.br/blog/hemorroida-quanto-tempo-dura-quando-procurar)
+- [Sangue nas fezes: quando se preocupar e buscar ajuda especializada](https://www.analuizarocha.com.br/blog/sangue-nas-fezes-quando-procurar-coloproctologista)
+- [Sangue no papel higiênico é sempre hemorroida?](https://www.analuizarocha.com.br/blog/sangue-papel-higienico-sempre-hemorroida)
+
+### Fissura anal
+- [Fissura anal: opções de tratamento](https://www.analuizarocha.com.br/blog/fissura-anal-tratamento)
+- [Fissura anal: quando a cirurgia é indicada](https://www.analuizarocha.com.br/blog/fissura-anal-quando-cirurgia-indicada)
+- [Fissura anal: toxina botulínica como tratamento](https://www.analuizarocha.com.br/blog/fissura-anal-toxina-botulinica-tratamento)
+
+### Fístula e plicoma
+- [Tratamento de fístulas anorretais](https://www.analuizarocha.com.br/blog/tratamento-fistulas-anorretais)
+- [Plicoma anal: o que é e como a cirurgia a laser pode auxiliar](https://www.analuizarocha.com.br/blog/plicoma-anal-cirurgia-laser)
+- [Plicoma anal: vale a pena retirar?](https://www.analuizarocha.com.br/blog/plicoma-anal-vale-a-pena-retirar)
+
+### Cisto pilonidal
+- [Cisto pilonidal: o que é e quando é a melhor hora de operar](https://www.analuizarocha.com.br/blog/cisto-pilonidal-cirurgia-laser-quando-operar)
+- [Cisto pilonidal: sempre precisa de cirurgia?](https://www.analuizarocha.com.br/blog/cisto-pilonidal-precisa-cirurgia)
+
+### HPV anal e câncer
+- [HPV anal: condilomas, riscos, tratamento e rastreio](https://www.analuizarocha.com.br/blog/hpv-anal-condilomas-riscos-tratamento-rastreio)
+- [Câncer de canal anal: rastreio por HPV — quem deve se preocupar](https://www.analuizarocha.com.br/blog/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar)
+- [Câncer colorretal: rastreio, prevenção e diagnóstico precoce](https://www.analuizarocha.com.br/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce)
+
+### Coceira anal
+- [Coceira anal: quando procurar coloproctologista em Curitiba](https://www.analuizarocha.com.br/blog/coceira-anal-quando-procurar-coloproctologista-curitiba)
+- [Coceira no ânus: causas e tratamento](https://www.analuizarocha.com.br/blog/coceira-anus-causas-tratamento)
+
+### Constipação, diarreia e intestino
+- [Constipação intestinal crônica: causas e tratamento](https://www.analuizarocha.com.br/blog/constipacao-intestinal-cronica-causas-tratamento)
+- [Diarreia crônica: causas e tratamento](https://www.analuizarocha.com.br/blog/diarreia-cronica-tratamento)
+- [Intestino preso por muitos dias: é perigoso?](https://www.analuizarocha.com.br/blog/intestino-preso-muitos-dias-perigoso)
+- [Disbiose e SIBO: tratamento](https://www.analuizarocha.com.br/blog/disbiose-sibo-tratamento)
+- [Alimentação e saúde intestinal](https://www.analuizarocha.com.br/blog/alimentacao-e-saude-intestinal)
+- [Alimentação, fibras e saúde intestinal](https://www.analuizarocha.com.br/blog/alimentacao-fibras-saude-intestinal)
+- [Dor ao evacuar: causas e tratamento](https://www.analuizarocha.com.br/blog/dor-ao-evacuar-causas-tratamento)
+
+### Doenças funcionais e inflamatórias
+- [Síndrome do intestino irritável: sintomas, diagnóstico e tratamento](https://www.analuizarocha.com.br/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento)
+- [Doenças inflamatórias intestinais: acompanhamento clínico](https://www.analuizarocha.com.br/blog/doencas-inflamatorias-intestinais-acompanhamento)
+- [Distúrbios do assoalho pélvico e funcionamento intestinal](https://www.analuizarocha.com.br/blog/disturbios-assoalho-pelvico-funcionamento-intestino)
+
+### Saúde sexual
+- [Saúde sexual: cuidado, informação e bem-estar](https://www.analuizarocha.com.br/blog/saude-sexual-cuidado-informacao-bem-estar)
+
+### Orientação ao paciente
+- [Quando procurar um coloproctologista em Curitiba](https://www.analuizarocha.com.br/blog/quando-procurar-coloproctologista-curitiba)
+- [Quando o intestino dá sinais de alerta](https://www.analuizarocha.com.br/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba)
+- [O que muda com o acompanhamento especializado em coloproctologia](https://www.analuizarocha.com.br/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba)
+- [Sinto vergonha de procurar coloproctologista — isso é normal?](https://www.analuizarocha.com.br/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal)
+- [Por que meus sintomas nunca melhoram?](https://www.analuizarocha.com.br/blog/por-que-meus-sintomas-nunca-melhoram)
+
 ## Fontes técnicas
 - [Sitemap](https://www.analuizarocha.com.br/sitemap.xml): Inventário canônico de URLs para descoberta de conteúdo.
 
-## Opcional
-- [Política de privacidade](https://www.analuizarocha.com.br/politica-privacidade): Informações legais e de proteção de dados.
+## Informações legais
+- [Política de privacidade](https://www.analuizarocha.com.br/politica-privacidade): Informações de proteção de dados e LGPD.
