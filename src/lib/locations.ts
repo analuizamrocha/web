@@ -289,7 +289,7 @@ function getServiceSchema(service: LocationService) {
   }
 }
 
-function getLocationSchema(location: LocationPageData) {
+export function getLocationSchema(location: LocationPageData) {
   return {
     '@type': 'MedicalClinic',
     '@id': getLocationSchemaId(location.slug),
@@ -313,7 +313,6 @@ export function getHomeLocationsStructuredData() {
         '@id': `${WEBSITE_URL}/#physician`,
         name: DR_NAME,
         url: WEBSITE_URL,
-        medicalSpecialty: ['Coloproctologia', 'Proctologia'],
         workLocation: locationPages.map((location) => ({
           '@id': getLocationSchemaId(location.slug),
         })),
@@ -391,7 +390,6 @@ export function getLocationPageStructuredData(location: LocationPageData) {
         '@id': `${WEBSITE_URL}/#physician`,
         name: DR_NAME,
         url: WEBSITE_URL,
-        medicalSpecialty: ['Coloproctologia', 'Proctologia'],
         workLocation: [
           {
             '@id': getLocationSchemaId(location.slug),
