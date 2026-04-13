@@ -27,6 +27,8 @@ type RelatedLink = {
 type LocationService = {
   name: string
   description: string
+  // schema.org: availableService on MedicalClinic accepts MedicalTherapy | MedicalTest | MedicalProcedure
+  schemaType?: 'MedicalTherapy' | 'MedicalTest' | 'MedicalProcedure'
 }
 
 export interface LocationPageData {
@@ -239,6 +241,7 @@ export const locationPages: LocationPageData[] = [
         name: 'Colonoscopia',
         description:
           'Exame endoscópico realizado com a Dra. Ana Luiza Rocha quando há indicação clínica ou preventiva.',
+        schemaType: 'MedicalTest' as const,
       },
     ],
   },
@@ -273,7 +276,7 @@ function getPostalAddress(location: LocationPageData) {
 
 function getServiceSchema(service: LocationService) {
   return {
-    '@type': 'Service',
+    '@type': service.schemaType ?? 'MedicalTherapy',
     name: service.name,
     description: service.description,
     provider: {

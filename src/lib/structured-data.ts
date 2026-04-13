@@ -29,8 +29,6 @@ const structuredData = {
       areaServed: {
         '@type': 'City',
         name: 'Curitiba',
-        addressRegion: 'Paraná',
-        addressCountry: 'Brasil',
       },
       location: locationPages.map((location) => ({
         '@id': `${WEBSITE_URL}${getLocationPath(location.slug)}#place`,
@@ -40,7 +38,6 @@ const structuredData = {
       '@type': 'Physician',
       '@id': `${WEBSITE_URL}/#physician`,
       name: DR_NAME,
-      jobTitle: 'Coloproctologista',
       description: PHYSICIAN_DESCRIPTION,
       image: `${WEBSITE_URL}/images/og.png`,
       url: WEBSITE_URL,
@@ -65,6 +62,12 @@ const structuredData = {
           '@type': 'EducationalOrganization',
           name: HOSPITAL_CLINIC_BARCELONA,
           description: 'Fellow em Cirurgia Colorretal',
+        },
+      ],
+      memberOf: [
+        {
+          '@type': 'Organization',
+          name: 'International Anal Neoplasia Society (IANS)',
         },
       ],
       hasCredential: [
@@ -92,13 +95,27 @@ const structuredData = {
           },
         },
       ],
+      // availableService is valid on Physician per schema.org
+      availableService: [
+        { '@type': 'MedicalTherapy', name: 'Cirurgias a laser' },
+        { '@type': 'MedicalTherapy', name: 'Toxina botulínica para fissura anal' },
+        { '@type': 'MedicalTherapy', name: 'Cirurgias para fístulas anorretais' },
+        { '@type': 'MedicalProcedure', name: 'Ligadura elástica para hemorroidas' },
+        { '@type': 'MedicalTherapy', name: 'Tratamento de HPV anal' },
+        { '@type': 'MedicalTherapy', name: 'Cirurgia de cisto pilonidal' },
+        { '@type': 'MedicalTherapy', name: 'Acompanhamento de doenças inflamatórias intestinais' },
+        { '@type': 'MedicalTherapy', name: 'Tratamento da síndrome do intestino irritável' },
+        { '@type': 'MedicalProcedure', name: 'Rastreio e prevenção do câncer de canal anal' },
+        { '@type': 'MedicalTest', name: 'Colonoscopia quando indicada' },
+      ],
       worksFor: {
         '@id': `${WEBSITE_URL}/#organization`,
       },
       workLocation: locationPages.map((location) => ({
         '@id': `${WEBSITE_URL}${getLocationPath(location.slug)}#place`,
       })),
-      medicalSpecialty: ['Coloproctologia', 'Cirurgia Colorretal', 'Proctologia'],
+      // schema.org MedicalSpecialty requires enum URIs, not free-text strings
+      medicalSpecialty: ['https://schema.org/Gastroenterologic', 'https://schema.org/Surgical'],
     },
     {
       '@type': 'WebSite',
