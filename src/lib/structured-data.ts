@@ -13,7 +13,7 @@ import {
   HOSPITAL_CLINIC_BARCELONA,
   WPP_NUMBER_NASSIF_FORMATTED,
 } from './constants'
-import { locationPages, getLocationPath } from './locations'
+import { locationPages, getLocationPath, getLocationSchema } from './locations'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -117,6 +117,9 @@ const structuredData = {
       // schema.org MedicalSpecialty requires enum URIs, not free-text strings
       medicalSpecialty: ['https://schema.org/Gastroenterologic', 'https://schema.org/Surgical'],
     },
+    // MedicalClinic nodes included in global graph so all pages carry
+    // the concrete clinic entity data (address, services), not just @id refs
+    ...locationPages.map(getLocationSchema),
     {
       '@type': 'WebSite',
       '@id': `${WEBSITE_URL}/#website`,
