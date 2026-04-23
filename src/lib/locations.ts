@@ -6,7 +6,7 @@ import {
   WHATSAPP_MSG_TEXT_ENCODED,
   WPP_NUMBER_NASSIF,
 } from './constants'
-import { generateBreadcrumbSchema, type FAQItem } from './seo-schemas'
+import { generateBreadcrumbSchema, generateFAQSchema, type FAQItem } from './seo-schemas'
 
 export const LOCATIONS_BASE_PATH = '/locais-de-atendimento'
 
@@ -74,8 +74,8 @@ export const locationPages: LocationPageData[] = [
     name: CLINICA_NASSIF.name,
     shortName: CLINICA_NASSIF.shortName,
     badgeLabel: 'Consulta em coloproctologia',
-    pageTitle: 'Clínica Nassif',
-    metaTitle: 'Clínica Nassif | Onde a Dra. Ana Luiza Rocha atende em Curitiba',
+    pageTitle: CLINICA_NASSIF.name,
+    metaTitle: 'Clínica Nassif | Proctologia em Curitiba',
     metaDescription:
       'Consultas em coloproctologia com a Dra. Ana Luiza Rocha na Clínica Nassif, no Batel, em Curitiba. Veja endereço, como agendar e tratamentos relacionados.',
     summary: 'Consultas, retornos e acompanhamento no Batel.',
@@ -146,8 +146,7 @@ export const locationPages: LocationPageData[] = [
       },
       {
         name: 'Retorno e acompanhamento',
-        description:
-          'Seguimento clínico e pós-tratamento em doenças do intestino, reto e ânus.',
+        description: 'Seguimento clínico e pós-tratamento em doenças do intestino, reto e ânus.',
       },
     ],
     clinicWebsite: CLINICA_NASSIF.website,
@@ -157,8 +156,8 @@ export const locationPages: LocationPageData[] = [
     name: SPECTA_ENDOSCOPIA.name,
     shortName: SPECTA_ENDOSCOPIA.shortName,
     badgeLabel: 'Colonoscopia quando indicada',
-    pageTitle: 'Specta Endoscopia Digestiva',
-    metaTitle: 'Specta Endoscopia Digestiva | Colonoscopia com a Dra. Ana Luiza Rocha',
+    pageTitle: SPECTA_ENDOSCOPIA.name,
+    metaTitle: 'Specta Endoscopia Digestiva | Colonoscopia em Curitiba',
     metaDescription:
       'Colonoscopia com a Dra. Ana Luiza Rocha na Specta Endoscopia Digestiva, em Curitiba. Veja endereço, como agendar e quando o exame pode ser indicado.',
     summary: 'Local onde a colonoscopia é realizada quando indicada.',
@@ -219,8 +218,7 @@ export const locationPages: LocationPageData[] = [
     faq: [
       {
         question: `As consultas são realizadas na ${SPECTA_ENDOSCOPIA.shortName}?`,
-        answer:
-          `Não. As consultas e o acompanhamento clínico são realizados na ${CLINICA_NASSIF.shortName}. A ${SPECTA_ENDOSCOPIA.shortName} é o local onde a colonoscopia é realizada quando esse exame é indicado.`,
+        answer: `Não. As consultas e o acompanhamento clínico são realizados na ${CLINICA_NASSIF.shortName}. A ${SPECTA_ENDOSCOPIA.shortName} é o local onde a colonoscopia é realizada quando esse exame é indicado.`,
       },
       {
         question: 'Toda pessoa atendida pela Dra. Ana precisa de colonoscopia?',
@@ -403,4 +401,8 @@ export function getLocationPageStructuredData(location: LocationPageData) {
       ]),
     ],
   })
+}
+
+export function getLocationFAQStructuredData(location: LocationPageData) {
+  return JSON.stringify(generateFAQSchema(location.faq))
 }

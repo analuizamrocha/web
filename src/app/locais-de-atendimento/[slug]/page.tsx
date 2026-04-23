@@ -9,6 +9,7 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/seo-schemas'
 import {
   getLocationBySlug,
+  getLocationFAQStructuredData,
   getLocationPageStructuredData,
   getLocationPath,
   locationPages,
@@ -40,7 +41,9 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   const pageUrl = `${WEBSITE_URL}${getLocationPath(location.slug)}`
 
   return {
-    title: location.metaTitle,
+    title: {
+      absolute: location.metaTitle,
+    },
     description: location.metaDescription,
     alternates: {
       canonical: pageUrl,
@@ -72,6 +75,12 @@ export default async function LocationPage({ params }: LocationPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: getLocationPageStructuredData(location),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: getLocationFAQStructuredData(location),
         }}
       />
 
