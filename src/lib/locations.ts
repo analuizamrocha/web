@@ -72,7 +72,7 @@ export const locationPages: LocationPageData[] = [
   {
     slug: 'clinica-nassif',
     name: CLINICA_NASSIF.name,
-    shortName: 'Clínica Nassif',
+    shortName: CLINICA_NASSIF.shortName,
     badgeLabel: 'Consulta em coloproctologia',
     pageTitle: 'Clínica Nassif',
     metaTitle: 'Clínica Nassif | Onde a Dra. Ana Luiza Rocha atende em Curitiba',
@@ -155,18 +155,17 @@ export const locationPages: LocationPageData[] = [
   {
     slug: 'specta-endoscopia-digestiva',
     name: SPECTA_ENDOSCOPIA.name,
-    shortName: 'Specta Endoscopia Digestiva',
+    shortName: SPECTA_ENDOSCOPIA.shortName,
     badgeLabel: 'Colonoscopia quando indicada',
     pageTitle: 'Specta Endoscopia Digestiva',
-    metaTitle: 'Specta Endoscopia Digestiva | Atendimento com Dra. Ana Luiza Rocha',
+    metaTitle: 'Specta Endoscopia Digestiva | Colonoscopia com a Dra. Ana Luiza Rocha',
     metaDescription:
-      'Colonoscopia com a Dra. Ana Luiza Rocha na Specta Endoscopia Digestiva, em Curitiba. Veja endereço, orientações de agendamento e contexto do exame.',
-    summary:
-      'Local relacionado à colonoscopia no bairro Mercês.',
+      'Colonoscopia com a Dra. Ana Luiza Rocha na Specta Endoscopia Digestiva, em Curitiba. Veja endereço, como agendar e quando o exame pode ser indicado.',
+    summary: 'Local onde a colonoscopia é realizada quando indicada.',
     cardDescription:
       'Referência para colonoscopia com a Dra. Ana Luiza quando o exame entra na investigação ou no rastreio.',
     visibleRelationshipText:
-      'A Dra. Ana Luiza Rocha realiza colonoscopia na Specta quando o exame é indicado na avaliação do paciente.',
+      'A Dra. Ana Luiza Rocha realiza colonoscopia na Specta quando há indicação para o exame após avaliação clínica.',
     addressLines: ['R. Dom Alberto Gonçalves, 311', 'Mercês, Curitiba - PR'],
     streetAddress: SPECTA_ENDOSCOPIA.address,
     neighborhood: SPECTA_ENDOSCOPIA.neighborhood,
@@ -180,7 +179,7 @@ export const locationPages: LocationPageData[] = [
     mapLabel: 'Ver rota para a Specta Endoscopia Digestiva',
     primaryCtaLabel: 'Agendar colonoscopia',
     schedulingDescription:
-      'Este local é usado quando a colonoscopia faz parte da investigação de sintomas ou do rastreio recomendado pela Dra. Ana Luiza.',
+      'Este local é indicado quando a colonoscopia faz parte da investigação de sintomas ou do rastreio recomendado pela Dra. Ana Luiza.',
     servicesTitle: 'Quando este local costuma ser indicado',
     services: [
       'Colonoscopia solicitada após consulta, conforme sintomas, idade, histórico e fatores de risco.',
@@ -188,8 +187,8 @@ export const locationPages: LocationPageData[] = [
       'Complemento da avaliação quando o plano de cuidado exige confirmação diagnóstica por exame.',
     ],
     overviewParagraphs: [
-      'A Specta Endoscopia Digestiva é o local de referência quando a Dra. Ana Luiza indica colonoscopia como parte da investigação ou da prevenção. O foco aqui é o exame, e não a consulta geral.',
-      'Na prática, a consulta ajuda a definir se a colonoscopia faz sentido. Quando há indicação, o exame é organizado no local apropriado, com orientação específica para esse momento do cuidado.',
+      'A Specta Endoscopia Digestiva é o local onde a Dra. Ana Luiza realiza a colonoscopia quando o exame é indicado como parte da investigação ou da prevenção. Aqui, o foco é o exame, e não as consultas de rotina.',
+      'A consulta ajuda a definir se a colonoscopia é necessária. Quando há indicação, o exame é organizado na Specta, com orientações específicas para o preparo e a realização.',
     ],
     practicalInfo: [
       'O endereço fica no bairro Mercês, em Curitiba.',
@@ -219,9 +218,9 @@ export const locationPages: LocationPageData[] = [
     ],
     faq: [
       {
-        question: 'A Specta é o local das consultas em coloproctologia?',
+        question: `As consultas são realizadas na ${SPECTA_ENDOSCOPIA.shortName}?`,
         answer:
-          'Não. A Specta aparece no site como o local relacionado à colonoscopia quando esse exame é indicado. A consulta clínica e o acompanhamento geral são organizados em contexto próprio.',
+          `Não. As consultas e o acompanhamento clínico são realizados na ${CLINICA_NASSIF.shortName}. A ${SPECTA_ENDOSCOPIA.shortName} é o local onde a colonoscopia é realizada quando esse exame é indicado.`,
       },
       {
         question: 'Toda pessoa atendida pela Dra. Ana precisa de colonoscopia?',
@@ -231,7 +230,7 @@ export const locationPages: LocationPageData[] = [
       {
         question: 'Como agendar a colonoscopia na Specta?',
         answer:
-          'O agendamento pode ser iniciado pelo contato exibido nesta página. A equipe orienta os próximos passos, inclusive preparo e horário quando o exame é confirmado.',
+          'O agendamento pode ser iniciado pelo contato exibido nesta página. A equipe orienta os próximos passos, incluindo preparo, data e horário quando o exame é confirmado.',
       },
     ],
     schemaDescription:

@@ -1,8 +1,4 @@
-import {
-  CLINICA_NASSIF,
-  SPECTA_ENDOSCOPIA,
-  WPP_NUMBER_NASSIF_FORMATTED,
-} from './constants'
+import { CLINICA_NASSIF, SPECTA_ENDOSCOPIA, WPP_NUMBER_NASSIF_FORMATTED } from './constants'
 
 export const faqSchema = {
   '@context': 'https://schema.org',
@@ -37,7 +33,7 @@ export const faqSchema = {
       name: 'Onde a Dra. Ana Luiza atende em Curitiba?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `As consultas em coloproctologia acontecem na ${CLINICA_NASSIF.name}, localizada na ${CLINICA_NASSIF.address}, no bairro ${CLINICA_NASSIF.neighborhood}, em ${CLINICA_NASSIF.city} - ${CLINICA_NASSIF.state}. Quando a colonoscopia é indicada, o site também informa a ${SPECTA_ENDOSCOPIA.name}, na ${SPECTA_ENDOSCOPIA.address}, no bairro ${SPECTA_ENDOSCOPIA.neighborhood}.`,
+        text: `As consultas acontecem na ${CLINICA_NASSIF.name}, localizada na ${CLINICA_NASSIF.address}, no bairro ${CLINICA_NASSIF.neighborhood}, em ${CLINICA_NASSIF.city} - ${CLINICA_NASSIF.state}. A ${SPECTA_ENDOSCOPIA.name}, na ${SPECTA_ENDOSCOPIA.address}, no bairro ${SPECTA_ENDOSCOPIA.neighborhood}, é o local onde a colonoscopia é realizada quando há indicação para o exame.`,
       },
     },
     {
@@ -45,7 +41,7 @@ export const faqSchema = {
       name: 'Como agendar uma consulta?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `Você pode agendar uma consulta através do WhatsApp ${WPP_NUMBER_NASSIF_FORMATTED} ou pelo telefone da ${CLINICA_NASSIF.name} ${CLINICA_NASSIF.phone}.`,
+        text: `Você pode agendar uma consulta pelo WhatsApp ou pelo telefone da ${CLINICA_NASSIF.name} ${WPP_NUMBER_NASSIF_FORMATTED}.`,
       },
     },
   ],
