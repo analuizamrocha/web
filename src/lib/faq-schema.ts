@@ -41,7 +41,7 @@ export const faqSchema = {
       name: 'Como agendar uma consulta?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `Você pode agendar uma consulta pelo WhatsApp ou pelo telefone da ${CLINICA_NASSIF.name} ${WPP_NUMBER_NASSIF_FORMATTED}.`,
+        text: `Você pode agendar uma consulta pelo WhatsApp ${WPP_NUMBER_NASSIF_FORMATTED} ou pelo telefone da ${CLINICA_NASSIF.name} ${CLINICA_NASSIF.phone}.`,
       },
     },
   ],
