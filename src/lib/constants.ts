@@ -112,6 +112,9 @@ export const CLINICA_NASSIF = {
   /** Clinic name */
   name: 'Clínica Nassif',
 
+  /** Short name for patient-facing copy */
+  shortName: 'Clínica Nassif',
+
   /** Street address */
   address: 'Rua Bruno Filgueira, 489',
 
@@ -168,6 +171,9 @@ export const CLINICA_NASSIF = {
 export const SPECTA_ENDOSCOPIA = {
   /** Clinic name */
   name: 'Specta Endoscopia Digestiva',
+
+  /** Short name for patient-facing copy */
+  shortName: 'Specta',
 
   /** Street address */
   address: 'R. Dom Alberto Gonçalves, 311',
