@@ -1,31 +1,28 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, MapPin } from 'lucide-react'
-import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import { LinkButton } from '@/components/ui/LinkButton'
-import { Badge } from '@/components/ui/Badge'
-import { CallToActionCard } from '@/components/ui/CallToActionCard'
+import { PlaceCard } from '@/components/ui/PlaceCard'
+import { ChoiceRow, type ChoiceRowItem } from '@/components/ui/ChoiceRow'
+import { FAQAccordion, type FAQAccordionItem } from '@/components/ui/FAQAccordion'
+import { StickyCTABar } from '@/components/ui/StickyCTABar'
 import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/seo-schemas'
 import {
   LOCATIONS_BASE_PATH,
-  getLocationPath,
   getLocationsIndexStructuredData,
   locationPages,
 } from '@/lib/locations'
-import { WEBSITE_URL } from '@/lib/constants'
-import { cn } from '@/lib/utils'
+import { WEBSITE_URL, WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 const pageTitle = 'Locais de atendimento em Curitiba'
 const pageDescription =
   'Veja onde a Dra. Ana Luiza Rocha atende em Curitiba, com informações sobre consulta em coloproctologia, colonoscopia, endereços e agendamento.'
 const pageUrl = `${WEBSITE_URL}${LOCATIONS_BASE_PATH}`
 
+const nassifWhatsAppHref = `https://wa.me/${WPP_NUMBER_NASSIF.replace(/\D/g, '')}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`
+
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
-  alternates: {
-    canonical: pageUrl,
-  },
+  alternates: { canonical: pageUrl },
   openGraph: generateOpenGraphMetadata({
     title: pageTitle,
     description: pageDescription,
@@ -38,28 +35,67 @@ export const metadata: Metadata = {
   }),
 }
 
-const locationStyles: Record<
-  string,
+const choiceRows: ChoiceRowItem[] = [
   {
-    card: string
-    badge: string
-    glow: string
-    hint: string
-  }
-> = {
-  'clinica-nassif': {
-    card: 'border-secondary/20 bg-secondary/10',
-    badge: 'bg-secondary/35 text-primary',
-    glow: 'from-secondary/25 via-secondary/10 to-transparent',
-    hint: 'Melhor ponto de partida para avaliação, retorno e organização do cuidado.',
+    when: 'Primeira avaliação',
+    recommendationStrong: 'Comece pela consulta.',
+    recommendationRest:
+      'A avaliação acontece na Clínica Nassif e organiza sintomas, histórico, exames e próximos passos.',
+    href: '/locais-de-atendimento/clinica-nassif',
+    variant: 'terracotta',
   },
-  'specta-endoscopia-digestiva': {
-    card: 'border-primary/15 bg-primary/5',
-    badge: 'bg-primary/10 text-primary',
-    glow: 'from-primary/15 via-primary/5 to-transparent',
-    hint: 'Faz mais sentido quando a colonoscopia já entrou no plano definido em consulta.',
+  {
+    when: 'Retorno ou acompanhamento',
+    recommendationStrong: 'Siga pela Clínica Nassif.',
+    recommendationRest: 'O seguimento clínico e a revisão de condutas acontecem no mesmo local.',
+    href: '/locais-de-atendimento/clinica-nassif',
+    variant: 'terracotta',
   },
-}
+  {
+    when: 'Colonoscopia indicada',
+    recommendationStrong: 'Siga para o exame.',
+    recommendationRest:
+      'A colonoscopia é realizada pela Dra. Ana na Specta, com preparo orientado.',
+    href: '/locais-de-atendimento/specta-endoscopia-digestiva',
+    variant: 'sage',
+  },
+  {
+    when: 'Dúvida sobre agendamento',
+    recommendationStrong: 'Fale com a equipe.',
+    recommendationRest: 'O atendimento ajuda a identificar o melhor ponto de partida.',
+    href: nassifWhatsAppHref,
+    variant: 'terracotta',
+    external: true,
+  },
+]
+
+const indexFaq: FAQAccordionItem[] = [
+  {
+    question: 'Posso marcar a colonoscopia sem passar em consulta antes?',
+    answer:
+      'A colonoscopia é indicada a partir de avaliação clínica. Em geral, o ponto de partida é a consulta na Clínica Nassif. Se o exame fizer sentido para o seu caso, ele é organizado na Specta.',
+  },
+  {
+    question: 'A Dra. Ana atende em outros locais em Curitiba?',
+    answer:
+      'No momento, a consulta acontece na Clínica Nassif. A colonoscopia, quando indicada, é realizada na Specta. Procedimentos cirúrgicos são organizados em hospitais parceiros, sempre com orientação prévia.',
+  },
+  {
+    question: 'Os dois locais aceitam convênio?',
+    answer:
+      'Depende do plano e do tipo de atendimento. A equipe confirma autorização, cobertura e valores antes do agendamento. O atendimento particular também está disponível.',
+  },
+  {
+    question: 'Como funciona o retorno após a colonoscopia?',
+    answer:
+      'O resultado é revisto em consulta de retorno na Clínica Nassif, no Batel. A Dra. Ana relaciona o laudo ao seu quadro clínico e orienta os próximos passos.',
+  },
+  {
+    question: 'Pacientes de outras cidades podem agendar?',
+    answer:
+      'Sim. O atendimento presencial acontece em Curitiba, mas pacientes de outras cidades podem agendar consulta e, quando houver indicação, organizar exames na mesma vinda. A equipe orienta a melhor forma de planejar.',
+  },
+]
 
 export default function LocationsIndexPage() {
   return (
@@ -71,168 +107,89 @@ export default function LocationsIndexPage() {
         }}
       />
 
-      <section className="section bg-background pt-24 md:pt-28 animate-fade-in">
-        <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          <Breadcrumb
-            items={[{ label: 'Início', href: '/' }, { label: 'Locais de atendimento' }]}
-          />
-
-          <div className="mx-auto max-w-4xl text-center mb-12 lg:mb-16">
-            <div className="flex flex-wrap items-center justify-center gap-2 mb-5">
-              <Badge variant="secondary" size="lg">
-                Consulta em coloproctologia
-              </Badge>
-              <Badge variant="secondary" size="lg">
-                Colonoscopia quando indicada
-              </Badge>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-6">
-              Locais de atendimento da Dra. Ana Luiza Rocha
-            </h1>
-
-            <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
-              <p>
-                Aqui você encontra onde a consulta e o exame costumam acontecer no cuidado com a
-                Dra. Ana Luiza em Curitiba.
-              </p>
-            </div>
-          </div>
-
-          <div className="mx-auto max-w-5xl grid grid-cols-1 gap-6 lg:gap-8 mb-12 lg:mb-16">
-            {locationPages.map((location) =>
-              (() => {
-                const style = locationStyles[location.slug]
-
-                return (
-                  <article
-                    key={location.slug}
-                    className={cn(
-                      'relative overflow-hidden rounded-3xl border p-7 shadow-sm lg:p-8',
-                      style.card
-                    )}
-                  >
-                    <div
-                      className={cn(
-                        'pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b',
-                        style.glow
-                      )}
-                    />
-
-                    <div className="relative">
-                      <div className="mb-5 flex items-start gap-4">
-                        <div className="rounded-full bg-primary/10 p-3 flex-shrink-0">
-                          <MapPin className="size-5 text-primary" aria-hidden="true" />
-                        </div>
-
-                        <div className="min-w-0 flex-1">
-                          <Badge variant="secondary" className={cn('mb-3', style.badge)}>
-                            {location.badgeLabel}
-                          </Badge>
-                          <h2 className="mb-2 text-2xl font-serif font-bold text-primary lg:text-3xl">
-                            {location.name}
-                          </h2>
-                          <p className="mb-4 text-lg font-medium text-primary/80">
-                            {location.summary}
-                          </p>
-                          <address className="not-italic text-base leading-relaxed text-secondary lg:text-lg">
-                            {location.addressLines[0]}
-                            <br />
-                            {location.addressLines[1]}
-                          </address>
-                        </div>
-                      </div>
-
-                      <div className="mb-5 rounded-2xl border border-primary/10 bg-background/80 px-4 py-4">
-                        <p className="mb-1 text-sm font-semibold uppercase tracking-[0.16em] text-primary/70">
-                          Melhor para
-                        </p>
-                        <p className="text-base leading-relaxed text-secondary">{style.hint}</p>
-                      </div>
-
-                      <p className="mb-5 text-base leading-relaxed text-secondary lg:text-lg">
-                        {location.cardDescription}
-                      </p>
-
-                      <ul className="mb-6 space-y-3 text-base text-secondary lg:text-lg">
-                        {location.services.slice(0, 2).map((service) => (
-                          <li key={service} className="flex gap-3">
-                            <span className="mt-2 size-2 rounded-full bg-primary/50 flex-shrink-0" />
-                            <span>{service}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      <div className="flex flex-col gap-4 border-t border-secondary/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
-                        <div className="flex flex-wrap gap-4 text-sm font-medium lg:text-base">
-                          <a
-                            href={location.mapUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary hover:text-primary/80 transition-colors"
-                          >
-                            Ver mapa
-                          </a>
-                          <Link
-                            href={getLocationPath(location.slug)}
-                            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-                          >
-                            Ver detalhes do local
-                            <ArrowRight className="size-4" aria-hidden="true" />
-                          </Link>
-                        </div>
-
-                        <LinkButton
-                          href={location.whatsappHref}
-                          external
-                          newTab
-                          variant="primary"
-                          className="w-full px-5 text-sm font-semibold sm:w-auto"
-                        >
-                          {location.primaryCtaLabel}
-                        </LinkButton>
-                      </div>
-                    </div>
-                  </article>
-                )
-              })()
-            )}
-          </div>
-
-          <div className="mx-auto max-w-5xl">
-            <CallToActionCard
-              title="Ainda em dúvida sobre qual local faz mais sentido?"
-              body={
-                <p>
-                  Se a sua necessidade é consulta, retorno ou definição de conduta, comece pela
-                  avaliação em coloproctologia. Quando a colonoscopia fizer parte do plano, a equipe
-                  orienta o local e os próximos passos.
-                </p>
-              }
-              actions={
-                <>
-                  <LinkButton href="/tratamentos" variant="outline">
-                    Ver tratamentos
-                  </LinkButton>
-                  <LinkButton href="/sobre" variant="subtle">
-                    Conhecer a trajetória da Dra. Ana
-                  </LinkButton>
-                </>
-              }
-              variant="secondary"
-            />
-          </div>
-
-          <div className="mt-2 text-center">
-            <Link
-              href="/"
-              className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg"
-            >
-              ← Voltar ao início
+      {/* ── HERO ── */}
+      <section className="bg-background pt-24 md:pt-28 pb-6 lg:pb-10 animate-fade-in">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <nav className="mb-7 flex items-center gap-2.5 text-[13px] text-muted">
+            <Link href="/" className="hover:text-primary transition-colors">
+              Início
             </Link>
+            <span className="opacity-50">›</span>
+            <span className="font-medium text-primary">Locais de atendimento</span>
+          </nav>
+
+          <div className="max-w-[820px]">
+            <span className="mb-4 block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">
+              Atendimento em Curitiba
+            </span>
+            <h1 className="mb-5 max-w-[14ch] font-serif text-[36px] sm:text-5xl lg:text-[52px] font-bold leading-[1.04] tracking-[-0.01em] text-primary">
+              Consulta no Batel, colonoscopia nas Mercês.
+            </h1>
+            <p className="max-w-[52ch] font-serif text-[19px] italic font-normal leading-[1.55] text-body">
+              A avaliação clínica acontece na Clínica Nassif, no Batel. Quando há indicação de
+              colonoscopia, o exame é realizado na Specta Endoscopia Digestiva.
+            </p>
           </div>
         </div>
       </section>
+
+      {/* ── PLACES (2 cards side by side) ── */}
+      <section className="bg-background pb-14">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-7">
+            {locationPages.map((location) => (
+              <PlaceCard key={location.slug} location={location} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── HOW TO CHOOSE (decision band) ── */}
+      <section className="bg-subtle py-14">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[5fr_9fr] lg:gap-16 lg:items-start">
+            <header>
+              <span className="mb-3.5 block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">
+                Orientação de agendamento
+              </span>
+              <h2 className="max-w-[14ch] font-serif text-3xl sm:text-4xl font-bold leading-[1.1] tracking-[-0.01em] text-primary">
+                Qual local faz sentido para o seu momento
+              </h2>
+            </header>
+
+            <div className="grid gap-3.5">
+              {choiceRows.map((row) => (
+                <ChoiceRow key={row.when} {...row} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="bg-subtle py-14">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <div className="mb-10 text-center">
+            <span className="mb-3 block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">
+              Dúvidas comuns
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-[1.1] tracking-[-0.01em] text-primary">
+              Para agendar com mais clareza
+            </h2>
+          </div>
+          <FAQAccordion items={indexFaq} defaultOpenIndex={0} />
+        </div>
+      </section>
+
+      {/* ── STICKY CTA ── */}
+      <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14 -mt-8 pb-16">
+        <StickyCTABar
+          eyebrow="Não sabe por onde começar?"
+          message="Nossa equipe te ajuda a dar o primeiro passo"
+          primaryHref={nassifWhatsAppHref}
+          primaryLabel="Agendar consulta"
+        />
+      </div>
     </>
   )
 }

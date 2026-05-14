@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowRight, MapPin, Phone } from 'lucide-react'
-import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { ArrowRight, Calendar, MapPin, Navigation, Phone } from 'lucide-react'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { Badge } from '@/components/ui/Badge'
-import { CallToActionCard } from '@/components/ui/CallToActionCard'
+import { FAQAccordion } from '@/components/ui/FAQAccordion'
+import { MetaStrip, type MetaStripCell } from '@/components/ui/MetaStrip'
+import { IndicationSection } from '@/components/ui/IndicationSection'
+import { InfoCardGrid } from '@/components/ui/InfoCardGrid'
+import { LinkList } from '@/components/ui/LinkList'
+import { MapEmbed } from '@/components/ui/MapEmbed'
+import { MediaCard } from '@/components/ui/MediaCard'
+import { StickyCTABar } from '@/components/ui/StickyCTABar'
 import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/seo-schemas'
 import {
   getLocationBySlug,
@@ -22,30 +28,19 @@ interface LocationPageProps {
   }>
 }
 
-const locationStyles: Record<
-  string,
-  {
-    hero: string
-    badge: string
-    panel: string
-    eyebrow: string
-    quickFactTitle: string
-  }
-> = {
-  'clinica-nassif': {
-    hero: 'border-secondary/20 bg-secondary/10',
-    badge: 'bg-secondary/35 text-primary',
-    panel: 'border-secondary/20 bg-secondary/10',
-    eyebrow: 'Principal ponto de contato',
-    quickFactTitle: 'Mais indicado para',
-  },
-  'specta-endoscopia-digestiva': {
-    hero: 'border-primary/15 bg-primary/5',
-    badge: 'bg-primary/10 text-primary',
-    panel: 'border-primary/15 bg-primary/5',
-    eyebrow: 'Exame quando houver indicação',
-    quickFactTitle: 'Melhor contexto de uso',
-  },
+const photoFrameStyles: Record<string, string> = {
+  sage: 'bg-[#c7cfb8] border-accent-neutral/25',
+  terracotta: 'bg-secondary/70 border-secondary/45',
+}
+
+const roleChipStyles: Record<string, string> = {
+  sage: 'bg-accent-neutral/15 text-accent-sage-deep',
+  terracotta: 'bg-primary/10 text-primary',
+}
+
+const photoTagStyles: Record<string, string> = {
+  sage: 'text-accent-sage-deep',
+  terracotta: 'text-primary',
 }
 
 export async function generateStaticParams() {
@@ -59,9 +54,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   const location = getLocationBySlug(slug)
 
   if (!location) {
-    return {
-      title: 'Local não encontrado',
-    }
+    return { title: 'Local não encontrado' }
   }
 
   const pageUrl = `${WEBSITE_URL}${getLocationPath(location.slug)}`
@@ -69,9 +62,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   return {
     title: location.metaTitle,
     description: location.metaDescription,
-    alternates: {
-      canonical: pageUrl,
-    },
+    alternates: { canonical: pageUrl },
     openGraph: generateOpenGraphMetadata({
       title: location.metaTitle,
       description: location.metaDescription,
@@ -93,7 +84,46 @@ export default async function LocationPage({ params }: LocationPageProps) {
     notFound()
   }
 
-  const style = locationStyles[location.slug]
+  const photoFrameClass = photoFrameStyles[location.roleChipVariant] ?? photoFrameStyles.terracotta
+  const roleChipClass = roleChipStyles[location.roleChipVariant] ?? roleChipStyles.terracotta
+  const photoTagClass = photoTagStyles[location.roleChipVariant] ?? photoTagStyles.terracotta
+
+  const ctaVariant = location.ctaVariant === 'sage' ? 'sage' : 'primary'
+  const phoneIsSameAsWhatsapp = location.phoneDisplay === location.whatsappDisplay
+  const contactDetails = phoneIsSameAsWhatsapp
+    ? [
+        {
+          label: 'WhatsApp',
+          value: location.whatsappDisplay,
+        },
+      ]
+    : [
+        {
+          label: 'Telefone',
+          value: location.phoneDisplay,
+        },
+        {
+          label: 'WhatsApp',
+          value: location.whatsappDisplay,
+        },
+      ]
+
+  const metaCells: MetaStripCell[] = [
+    {
+      label: 'Endereço',
+      value: location.addressLines[0],
+      sub: location.addressLines[1],
+    },
+    {
+      label: 'Horários',
+      value: location.hours.display,
+      sub: location.hours.sub,
+    },
+    {
+      label: 'Contato',
+      details: contactDetails,
+    },
+  ]
 
   return (
     <>
@@ -104,222 +134,313 @@ export default async function LocationPage({ params }: LocationPageProps) {
         }}
       />
 
-      <section className="section bg-background pt-24 md:pt-28 animate-fade-in">
-        <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          <Breadcrumb
-            items={[
-              { label: 'Início', href: '/' },
-              { label: 'Locais de atendimento', href: '/locais-de-atendimento' },
-              { label: location.name },
-            ]}
-          />
+      {/* ── HERO ── */}
+      <section className="bg-background pt-24 pb-16 md:pt-28 lg:pb-20 animate-fade-in">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <nav className="mb-7 flex items-center gap-2.5 text-[13px] text-muted">
+            <Link href="/" className="hover:text-primary transition-colors">
+              Início
+            </Link>
+            <span className="opacity-50">›</span>
+            <Link href="/locais-de-atendimento" className="hover:text-primary transition-colors">
+              Locais de atendimento
+            </Link>
+            <span className="opacity-50">›</span>
+            <span className="font-medium text-primary">{location.name}</span>
+          </nav>
 
-          <div className="mx-auto max-w-4xl">
-            <header
-              className={cn(
-                'mb-10 overflow-hidden rounded-[2rem] border px-6 py-8 text-center lg:mb-12 lg:px-8 lg:py-10',
-                style.hero
-              )}
-            >
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-primary/70">
-                {style.eyebrow}
-              </p>
-
-              <div className="mb-5 flex flex-wrap items-center justify-center gap-2">
-                <Badge variant="secondary" size="lg" className={style.badge}>
-                  {location.badgeLabel}
-                </Badge>
-              </div>
-
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
+          <div className="mb-12 lg:mb-14 grid grid-cols-1 gap-9 lg:grid-cols-[7fr_5fr] lg:gap-14 lg:items-end">
+            <div>
+              <span
+                className={cn(
+                  'mb-5 inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide',
+                  roleChipClass
+                )}
+              >
+                <MapPin className="size-[13px]" strokeWidth={2.4} aria-hidden="true" />
+                {location.badgeLabel}
+              </span>
+              <h1 className="mb-6 max-w-[12ch] font-serif text-[40px] sm:text-5xl lg:text-[64px] font-bold leading-[1.02] tracking-[-0.01em] text-primary">
                 {location.pageTitle}
               </h1>
-
-              <p className="text-lg md:text-xl lg:text-2xl text-secondary leading-relaxed font-medium max-w-3xl mx-auto">
-                {location.visibleRelationshipText}
+              <p className="mb-8 max-w-[44ch] font-serif text-[20px] italic font-normal leading-[1.5] text-body">
+                {location.heroLead}
               </p>
-              <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-3 text-left md:grid-cols-3">
-                <div className="rounded-2xl border border-primary/10 bg-background/80 px-4 py-4">
-                  <p className="mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary/65">
-                    {style.quickFactTitle}
-                  </p>
-                  <p className="text-sm leading-relaxed text-secondary">{location.summary}</p>
-                </div>
-                <div className="rounded-2xl border border-primary/10 bg-background/80 px-4 py-4">
-                  <p className="mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary/65">
-                    Região
-                  </p>
-                  <p className="text-sm leading-relaxed text-secondary">
-                    {location.addressLines[1]}
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-primary/10 bg-background/80 px-4 py-4">
-                  <p className="mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary/65">
-                    Contato
-                  </p>
-                  <p className="text-sm leading-relaxed text-secondary">{location.phoneDisplay}</p>
-                </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <LinkButton
+                  href={location.whatsappHref}
+                  external
+                  newTab
+                  variant={ctaVariant}
+                  className="h-[52px] gap-2.5 px-6 text-[15px] font-semibold"
+                >
+                  <Calendar className="size-[18px]" aria-hidden="true" />
+                  {location.primaryCtaLabel}
+                </LinkButton>
+                <LinkButton
+                  href={location.mapUrl}
+                  external
+                  newTab
+                  variant="outline"
+                  className="h-[52px] gap-2.5 px-6 text-[15px] font-semibold"
+                >
+                  <Navigation className="size-4" aria-hidden="true" />
+                  Ver mapa
+                </LinkButton>
               </div>
-            </header>
+            </div>
 
-            <CallToActionCard
-              title="Agendamento e orientações"
-              body={<p>{location.schedulingDescription}</p>}
-              actions={
-                <>
-                  <LinkButton href={location.whatsappHref} external newTab variant="primary">
-                    {location.primaryCtaLabel}
-                  </LinkButton>
-                  <LinkButton href={location.mapUrl} external newTab variant="outline">
-                    Ver mapa e rota
-                  </LinkButton>
-                  <LinkButton href="/locais-de-atendimento" variant="subtle">
-                    Ver todos os locais
-                  </LinkButton>
-                </>
-              }
-              variant="secondary"
-            />
-
-            <div className="mb-10 grid gap-6 lg:mb-12 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-start">
-              <main className="rounded-3xl border border-secondary/20 bg-background p-8 lg:p-10">
-                <h2 className="mb-6 text-center font-serif text-3xl font-bold text-primary">
-                  Como este local se encaixa no cuidado
-                </h2>
-
-                <div className="space-y-4">
-                  {location.overviewParagraphs.map((paragraph) => (
-                    <p key={paragraph} className="text-lg leading-relaxed text-secondary">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-
-                <div className="mt-8 rounded-2xl border border-primary/10 bg-primary/5 px-5 py-5">
-                  <h3 className="mb-4 font-serif text-2xl font-bold text-primary">
-                    {location.servicesTitle}
-                  </h3>
-                  <ul className="space-y-3">
-                    {location.services.map((service) => (
-                      <li key={service} className="flex gap-3 text-lg leading-relaxed text-secondary">
-                        <span className="mt-2 size-2 rounded-full bg-primary/50 flex-shrink-0" />
-                        <span>{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </main>
-
-              <aside className="space-y-6">
-                <div className={cn('rounded-3xl border p-8 lg:p-10', style.panel)}>
-                  <h2 className="mb-5 font-serif text-2xl font-bold text-primary lg:text-3xl">
-                    Endereço e contato
-                  </h2>
-
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="rounded-full bg-primary/10 p-2">
-                        <MapPin className="size-4 text-primary" aria-hidden="true" />
-                      </div>
-                      <address className="not-italic text-base leading-relaxed text-secondary lg:text-lg">
-                        {location.addressLines[0]}
-                        <br />
-                        {location.addressLines[1]}
-                      </address>
-                    </div>
-
-                    <a
-                      href={location.phoneHref}
-                      className="inline-flex items-center gap-3 text-secondary hover:text-primary transition-colors"
-                    >
-                      <Phone className="size-5 text-primary" aria-hidden="true" />
-                      <span>{location.phoneDisplay}</span>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="rounded-3xl border border-secondary/20 bg-secondary/10 p-8 lg:p-10">
-                  <h2 className="mb-5 font-serif text-2xl font-bold text-primary lg:text-3xl">
-                    Informações práticas
-                  </h2>
-                  <ul className="space-y-3">
-                    {location.practicalInfo.map((item) => (
-                      <li key={item} className="flex gap-3 text-base leading-relaxed text-secondary lg:text-lg">
-                        <span className="mt-2 size-2 rounded-full bg-primary/50 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="rounded-3xl border border-secondary/20 bg-secondary/10 p-8 lg:p-10">
-                  <h2 className="mb-5 font-serif text-2xl font-bold text-primary lg:text-3xl">
-                    Tratamentos relacionados
-                  </h2>
-                  <div className="space-y-3">
-                    {location.relatedTreatments.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className="flex items-start justify-between gap-3 rounded-2xl border border-secondary/15 bg-background px-4 py-4 text-secondary hover:border-primary/30 hover:text-primary transition-colors"
-                      >
-                        <span>{link.label}</span>
-                        <ArrowRight className="mt-1 size-4 flex-shrink-0" aria-hidden="true" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
-                {location.relatedArticles && location.relatedArticles.length > 0 && (
-                  <div className="rounded-3xl border border-secondary/20 bg-secondary/10 p-8 lg:p-10">
-                    <h2 className="mb-5 font-serif text-2xl font-bold text-primary lg:text-3xl">
-                      Leituras úteis
-                    </h2>
-                    <div className="space-y-3">
-                      {location.relatedArticles.map((link) => (
-                        <Link
-                          key={link.href}
-                          href={link.href}
-                          className="flex items-start justify-between gap-3 rounded-2xl border border-secondary/15 bg-background px-4 py-4 text-secondary hover:border-primary/30 hover:text-primary transition-colors"
-                        >
-                          <span>{link.label}</span>
-                          <ArrowRight
-                            className="mt-1 size-4 flex-shrink-0"
-                            aria-hidden="true"
-                          />
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+            <div
+              className={cn(
+                'relative flex aspect-[5/4] items-end overflow-hidden rounded-[28px] border p-5 shadow-sm',
+                photoFrameClass
+              )}
+            >
+              <Image
+                src={location.heroPhotoSrc}
+                alt={location.heroPhotoAlt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover"
+                style={{ objectPosition: location.heroPhotoObjectPosition ?? 'center' }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/35 via-primary/5 to-transparent" />
+              <span
+                className={cn(
+                  'relative z-10 rounded-full border border-subtle bg-background/90 px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.08em]',
+                  photoTagClass
                 )}
-              </aside>
-            </div>
-
-            <div className="rounded-3xl border border-secondary/20 bg-background p-8 lg:p-10 mb-8">
-              <h2 className="text-2xl lg:text-3xl font-serif font-bold text-primary mb-6">
-                Perguntas frequentes
-              </h2>
-              <div className="space-y-6">
-                {location.faq.map((item) => (
-                  <div key={item.question}>
-                    <h3 className="text-xl font-semibold text-primary mb-2">{item.question}</h3>
-                    <p className="text-lg text-secondary leading-relaxed">{item.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="text-center">
-              <Link
-                href="/"
-                className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors text-lg"
               >
-                ← Voltar ao início
-              </Link>
+                {location.heroPhotoTag}
+              </span>
+            </div>
+          </div>
+
+          <MetaStrip cells={metaCells} />
+        </div>
+      </section>
+
+      {/* ── NARRATIVE (bg-subtle) ── */}
+      <section className="bg-subtle py-20">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[7fr_5fr] lg:gap-16 lg:items-start">
+            <div>
+              <span className="mb-4 block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">
+                {location.narrative.eyebrow}
+              </span>
+              <h2 className="mb-7 max-w-[18ch] font-serif text-3xl sm:text-4xl font-bold leading-[1.1] tracking-[-0.01em] text-primary">
+                {location.narrative.heading}
+              </h2>
+              {location.narrative.paragraphs.slice(0, 1).map((paragraph) => (
+                <p key={paragraph} className="mb-5 text-[17px] leading-[1.7] text-body">
+                  {paragraph}
+                </p>
+              ))}
+              <div className="my-9 max-w-[36ch] border-l-[3px] border-accent-neutral py-1 pl-6 font-serif text-2xl italic font-normal leading-[1.45] text-primary">
+                {location.narrative.pullQuote}
+              </div>
+              {location.narrative.paragraphs.slice(1).map((paragraph) => (
+                <p key={paragraph} className="mb-5 text-[17px] leading-[1.7] text-body">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            <div className="flex justify-center lg:pt-12">
+              <LinkList items={location.narrativeSideLinks.items} variant="primary" />
             </div>
           </div>
         </div>
       </section>
+
+      {/* ── INDICATION (dark brown) ── */}
+      <IndicationSection
+        eyebrow={location.indication.eyebrow}
+        heading={location.indication.heading}
+        intro={location.indication.intro}
+        items={location.indication.items}
+      />
+
+      {/* ── BEFORE YOU COME ── */}
+      <section className="bg-background py-20">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <div className="mb-8 max-w-[720px]">
+            <span className="mb-3.5 block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">
+              {location.beforeYouCome.eyebrow}
+            </span>
+            <h2 className="mb-4 max-w-[22ch] font-serif text-3xl sm:text-4xl font-bold leading-[1.1] tracking-[-0.01em] text-primary">
+              {location.beforeYouCome.heading}
+            </h2>
+            <p className="max-w-[54ch] text-[17px] leading-[1.65] text-body">
+              {location.beforeYouCome.intro}
+            </p>
+          </div>
+
+          <InfoCardGrid items={location.beforeYouCome.cards} />
+        </div>
+      </section>
+
+      {/* ── MAP STRIP (bg-subtle) ── */}
+      <section id="mapa" className="bg-subtle py-20">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <div className="mb-8 max-w-[720px]">
+            <span className="mb-3.5 block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">
+              {location.mapStrip.eyebrow}
+            </span>
+            <h2 className="mb-4 max-w-[22ch] font-serif text-3xl sm:text-4xl font-bold leading-[1.1] tracking-[-0.01em] text-primary">
+              {location.mapStrip.heading}
+            </h2>
+            <p className="max-w-[54ch] text-[17px] leading-[1.65] text-body">
+              {location.mapStrip.intro}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-0 overflow-hidden rounded-[28px] border border-subtle bg-background lg:grid-cols-[7fr_5fr] min-h-[360px]">
+            <MapEmbed
+              address={`${location.streetAddress}, ${location.neighborhood}, ${location.city} - ${location.state}`}
+              placeName={location.shortName}
+              className="min-h-[280px] lg:min-h-full"
+            />
+
+            {/* Map side panel */}
+            <div className="flex flex-col gap-5 p-8">
+              <div>
+                <div className="mb-2 text-[11px] font-bold uppercase tracking-[0.14em] text-muted">
+                  Endereço completo
+                </div>
+                <div className="font-serif text-xl font-bold leading-[1.25] text-primary">
+                  {location.addressLines[0]}
+                </div>
+                <div className="mt-1 text-[15.5px] text-body">{location.addressLines[1]}</div>
+              </div>
+
+              <div className="flex flex-col gap-2.5 border-y border-primary/10 py-4 text-[14.5px] leading-[1.55] text-body">
+                {location.mapStrip.references.map((ref) => (
+                  <div key={ref} className="flex items-start gap-2.5">
+                    <ArrowRight
+                      className="mt-1 size-4 flex-shrink-0 text-accent-neutral"
+                      aria-hidden="true"
+                    />
+                    <span>{ref}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-auto flex flex-col gap-2.5">
+                <LinkButton
+                  href={location.mapUrl}
+                  external
+                  newTab
+                  variant="outline"
+                  className="h-11 gap-2 px-4 text-[14px] font-semibold"
+                >
+                  <Navigation className="size-4" aria-hidden="true" />
+                  Abrir no Google Maps
+                </LinkButton>
+                <LinkButton
+                  href={location.whatsappHref}
+                  external
+                  newTab
+                  variant="outline"
+                  className="h-11 gap-2 px-4 text-[14px] font-semibold"
+                >
+                  <Phone className="size-4" aria-hidden="true" />
+                  Falar com a equipe
+                </LinkButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── RELATED ── */}
+      <section className="bg-background py-20">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <div className="mb-8 max-w-[720px]">
+            <h2 className="mb-4 max-w-[22ch] font-serif text-3xl sm:text-4xl font-bold leading-[1.1] tracking-[-0.01em] text-primary">
+              {location.relatedSection.heading}
+            </h2>
+            <p className="max-w-[54ch] text-[17px] leading-[1.65] text-body">
+              {location.relatedSection.intro}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[13fr_10fr] lg:gap-12">
+            <div>
+              <h3 className="mb-5 font-serif text-2xl font-bold text-primary">
+                {location.relatedSection.treatmentsHeading}
+              </h3>
+              <div className="grid gap-3">
+                {location.relatedTreatments.map((item) => (
+                  <MediaCard
+                    key={item.href}
+                    href={item.href}
+                    title={item.label}
+                    subtitle={item.subtitle}
+                    thumbVariant={item.thumbVariant}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {location.relatedArticles && location.relatedArticles.length > 0 && (
+              <div>
+                <h3 className="mb-5 font-serif text-2xl font-bold text-primary">
+                  {location.relatedSection.articlesHeading}
+                </h3>
+                <div className="rounded-3xl border border-secondary/40 bg-card py-2">
+                  {location.relatedArticles.map((article, index, all) => (
+                    <Link
+                      key={article.href}
+                      href={article.href}
+                      className={cn(
+                        'group flex items-center justify-between gap-4 px-6 py-[18px] no-underline text-inherit',
+                        'transition-[background-color,padding-left] duration-200',
+                        'hover:bg-background/60 hover:pl-7',
+                        index < all.length - 1 && 'border-b border-primary/[0.08]'
+                      )}
+                    >
+                      <span className="max-w-[32ch] text-[15.5px] font-semibold leading-snug text-primary">
+                        {article.label}
+                      </span>
+                      <ArrowRight
+                        className="size-[18px] flex-shrink-0 text-primary opacity-55 transition-[transform,opacity] duration-200 group-hover:translate-x-1 group-hover:opacity-100"
+                        aria-hidden="true"
+                      />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ (bg-subtle) ── */}
+      <section className="bg-subtle py-20">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
+          <div className="mb-10 text-center">
+            <span className="mb-3 block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">
+              {location.faqSection.eyebrow}
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-[1.1] tracking-[-0.01em] text-primary">
+              {location.faqSection.heading}
+            </h2>
+          </div>
+          <FAQAccordion items={location.faq} defaultOpenIndex={0} />
+        </div>
+      </section>
+
+      {/* ── STICKY CTA ── */}
+      <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14 -mt-10 pb-16">
+        <StickyCTABar
+          eyebrow={location.stickyBar.eyebrow}
+          message={location.stickyBar.message}
+          primaryHref={location.whatsappHref}
+          primaryLabel={location.primaryCtaLabel}
+        />
+      </div>
     </>
   )
 }

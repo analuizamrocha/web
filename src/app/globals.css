@@ -10,6 +10,7 @@
   --color-tertiary: #b08771;          /* Medium brown - rarely used */
   --color-brand-primary: #c27e5c;     /* Terracotta - primary buttons */
   --color-accent-neutral: #7a8b68;    /* Sage green - mission/values accent */
+  --color-accent-sage-deep: #5d6f47;  /* Deep sage - sage variant label color */
 
   /* High-contrast text hierarchy (WCAG AAA compliant) */
   --color-text-heading: #3d1f0f;      /* Very dark brown - 14.8:1 ratio - H1-H6, card titles */
@@ -516,6 +517,15 @@
 
   .bg-card-hover {
     background-color: var(--color-card-bg-hover);
+  }
+
+  /* Subtle surface and border (design system) */
+  .bg-subtle {
+    background-color: var(--color-bg-subtle);
+  }
+
+  .border-subtle {
+    border-color: var(--color-border-subtle);
   }
   
   /* Layout Utilities */
