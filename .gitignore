@@ -50,3 +50,6 @@ next-env.d.ts
 # lighthouse reports
 /lighthouse-results
 /lighthouse-results*
+
+# claude
+.design

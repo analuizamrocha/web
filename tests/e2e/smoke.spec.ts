@@ -19,7 +19,7 @@ test('homepage renders hero content and primary CTA', async ({ page }) => {
 
   await expect(
     page.getByRole('link', {
-      name: /Agende sua consulta agora/i,
+      name: /Agendar consulta com coloproctologista em Curitiba/i,
     })
   ).toBeVisible()
 })
