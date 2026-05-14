@@ -23,14 +23,14 @@ export const TREATMENT_IMAGE_BY_SLUG = {
   'toxina-botulinica': {
     id: 'TRT-004',
     slug: 'toxina-botulinica',
-    src: '/images/toxina-botulinica.webp',
+    src: '/images/posts/toxina-botulinica.webp',
     alt: 'Aplicacao de toxina botulinica no tratamento de fissura anal cronica',
     sourcePostSlug: null,
   },
   'rastreio-cancer-anal': {
     id: 'TRT-005',
     slug: 'rastreio-cancer-anal',
-    src: '/images/rastreio-prevencao-cancer-canal-anal.webp',
+    src: '/images/posts/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar/rastreio-prevencao-cancer-canal-anal.webp',
     alt: 'Rastreio e prevencao do cancer de canal anal',
     sourcePostSlug: null,
   },

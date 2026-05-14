@@ -28,7 +28,7 @@ export function CallToActionCard({
         {title}
       </h2>
 
-      <div className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
+      <div className="text-lg lg:text-xl text-body leading-relaxed mb-6">
         {body}
       </div>
 

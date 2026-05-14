@@ -77,7 +77,8 @@ export const URL_INSTAGRAM = 'https://www.instagram.com/analuiza.mrocha/'
 export const TAG_INSTAGRAM = '@analuiza.mrocha'
 
 /** LinkedIn profile URL */
-export const URL_LINKEDIN = 'https://linkedin.com/in/ana-luiza-moraes-rocha'
+export const URL_LINKEDIN =
+  'https://www.linkedin.com/in/ana-luiza-moraes-rocha-3728b92aa/'
 
 // =============================================================================
 // WhatsApp Contact
@@ -102,7 +103,7 @@ export const WHATSAPP_MSG_TEXT_ENCODED =
 // =============================================================================
 
 /** Google Maps short URL for Clínica Nassif */
-export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/GaXVRG6Et7rKJJtcA'
+export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/oWS7Zuw2YjE16jV79'
 
 /**
  * Clínica Nassif complete information
@@ -190,7 +191,6 @@ export const SPECTA_ENDOSCOPIA = {
   /** WhatsApp number (E.164 format for links) */
   wppNumber: '5541987737829',
 
-  /** Google Maps search URL */
-  maps:
-    'https://maps.google.com/?q=R.%20Dom%20Alberto%20Gon%C3%A7alves%2C%20311%2C%20Merc%C3%AAs%2C%20Curitiba%20-%20PR',
+  /** Google Maps short URL */
+  maps: 'https://maps.app.goo.gl/iR5CKZxYLZrzDweM6',
 } as const
