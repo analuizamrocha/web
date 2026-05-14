@@ -13,6 +13,7 @@ import {
   locationPages,
 } from '@/lib/locations'
 import { WEBSITE_URL } from '@/lib/constants'
+import { cn } from '@/lib/utils'
 
 const pageTitle = 'Locais de atendimento em Curitiba'
 const pageDescription =
@@ -37,6 +38,29 @@ export const metadata: Metadata = {
   }),
 }
 
+const locationStyles: Record<
+  string,
+  {
+    card: string
+    badge: string
+    glow: string
+    hint: string
+  }
+> = {
+  'clinica-nassif': {
+    card: 'border-secondary/20 bg-secondary/10',
+    badge: 'bg-secondary/35 text-primary',
+    glow: 'from-secondary/25 via-secondary/10 to-transparent',
+    hint: 'Melhor ponto de partida para avaliação, retorno e organização do cuidado.',
+  },
+  'specta-endoscopia-digestiva': {
+    card: 'border-primary/15 bg-primary/5',
+    badge: 'bg-primary/10 text-primary',
+    glow: 'from-primary/15 via-primary/5 to-transparent',
+    hint: 'Faz mais sentido quando a colonoscopia já entrou no plano definido em consulta.',
+  },
+}
+
 export default function LocationsIndexPage() {
   return (
     <>
@@ -49,7 +73,9 @@ export default function LocationsIndexPage() {
 
       <section className="section bg-background pt-24 md:pt-28 animate-fade-in">
         <div className="max-w-[1760px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
-          <Breadcrumb items={[{ label: 'Início', href: '/' }, { label: 'Locais de atendimento' }]} />
+          <Breadcrumb
+            items={[{ label: 'Início', href: '/' }, { label: 'Locais de atendimento' }]}
+          />
 
           <div className="mx-auto max-w-4xl text-center mb-12 lg:mb-16">
             <div className="flex flex-wrap items-center justify-center gap-2 mb-5">
@@ -67,89 +93,110 @@ export default function LocationsIndexPage() {
 
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
               <p>
-                Aqui você encontra os locais relacionados ao atendimento da Dra. Ana Luiza em
-                Curitiba.
-              </p>
-              <p>
-                Um deles concentra as consultas e o acompanhamento em coloproctologia. O outro é
-                usado quando a colonoscopia faz parte da investigação ou do rastreio indicado.
+                Aqui você encontra onde a consulta e o exame costumam acontecer no cuidado com a
+                Dra. Ana Luiza em Curitiba.
               </p>
             </div>
           </div>
 
           <div className="mx-auto max-w-5xl grid grid-cols-1 gap-6 lg:gap-8 mb-12 lg:mb-16">
-            {locationPages.map((location) => (
-              <article
-                key={location.slug}
-                className="rounded-3xl border border-secondary/20 bg-secondary/10 p-7 lg:p-8 shadow-sm"
-              >
-                <div className="flex items-start gap-4 mb-5">
-                  <div className="rounded-full bg-primary/10 p-3 flex-shrink-0">
-                    <MapPin className="size-5 text-primary" aria-hidden="true" />
-                  </div>
+            {locationPages.map((location) =>
+              (() => {
+                const style = locationStyles[location.slug]
 
-                  <div className="min-w-0 flex-1">
-                    <Badge variant="secondary" className="mb-3">
-                      {location.badgeLabel}
-                    </Badge>
-                    <h2 className="text-2xl lg:text-3xl font-serif font-bold text-primary mb-3">
-                      {location.name}
-                    </h2>
-                    <p className="text-lg text-secondary leading-relaxed mb-4">
-                      {location.visibleRelationshipText}
-                    </p>
-                    <address className="not-italic text-base lg:text-lg text-secondary leading-relaxed">
-                      {location.addressLines[0]}
-                      <br />
-                      {location.addressLines[1]}
-                    </address>
-                  </div>
-                </div>
-
-                <p className="text-base lg:text-lg text-secondary leading-relaxed mb-5">
-                  {location.cardDescription}
-                </p>
-
-                <ul className="space-y-3 text-base lg:text-lg text-secondary mb-6">
-                  {location.services.slice(0, 2).map((service) => (
-                    <li key={service} className="flex gap-3">
-                      <span className="mt-2 size-2 rounded-full bg-primary/50 flex-shrink-0" />
-                      <span>{service}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-5 border-t border-secondary/10">
-                  <div className="flex flex-wrap gap-4 text-sm lg:text-base font-medium">
-                    <a
-                      href={location.mapUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:text-primary/80 transition-colors"
-                    >
-                      Ver mapa
-                    </a>
-                    <Link
-                      href={getLocationPath(location.slug)}
-                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-                    >
-                      Ver detalhes
-                      <ArrowRight className="size-4" aria-hidden="true" />
-                    </Link>
-                  </div>
-
-                  <LinkButton
-                    href={location.whatsappHref}
-                    external
-                    newTab
-                    variant="primary"
-                    className="w-full sm:w-auto text-sm font-semibold px-5"
+                return (
+                  <article
+                    key={location.slug}
+                    className={cn(
+                      'relative overflow-hidden rounded-3xl border p-7 shadow-sm lg:p-8',
+                      style.card
+                    )}
                   >
-                    {location.primaryCtaLabel}
-                  </LinkButton>
-                </div>
-              </article>
-            ))}
+                    <div
+                      className={cn(
+                        'pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b',
+                        style.glow
+                      )}
+                    />
+
+                    <div className="relative">
+                      <div className="mb-5 flex items-start gap-4">
+                        <div className="rounded-full bg-primary/10 p-3 flex-shrink-0">
+                          <MapPin className="size-5 text-primary" aria-hidden="true" />
+                        </div>
+
+                        <div className="min-w-0 flex-1">
+                          <Badge variant="secondary" className={cn('mb-3', style.badge)}>
+                            {location.badgeLabel}
+                          </Badge>
+                          <h2 className="mb-2 text-2xl font-serif font-bold text-primary lg:text-3xl">
+                            {location.name}
+                          </h2>
+                          <p className="mb-4 text-lg font-medium text-primary/80">
+                            {location.summary}
+                          </p>
+                          <address className="not-italic text-base leading-relaxed text-secondary lg:text-lg">
+                            {location.addressLines[0]}
+                            <br />
+                            {location.addressLines[1]}
+                          </address>
+                        </div>
+                      </div>
+
+                      <div className="mb-5 rounded-2xl border border-primary/10 bg-background/80 px-4 py-4">
+                        <p className="mb-1 text-sm font-semibold uppercase tracking-[0.16em] text-primary/70">
+                          Melhor para
+                        </p>
+                        <p className="text-base leading-relaxed text-secondary">{style.hint}</p>
+                      </div>
+
+                      <p className="mb-5 text-base leading-relaxed text-secondary lg:text-lg">
+                        {location.cardDescription}
+                      </p>
+
+                      <ul className="mb-6 space-y-3 text-base text-secondary lg:text-lg">
+                        {location.services.slice(0, 2).map((service) => (
+                          <li key={service} className="flex gap-3">
+                            <span className="mt-2 size-2 rounded-full bg-primary/50 flex-shrink-0" />
+                            <span>{service}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="flex flex-col gap-4 border-t border-secondary/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="flex flex-wrap gap-4 text-sm font-medium lg:text-base">
+                          <a
+                            href={location.mapUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:text-primary/80 transition-colors"
+                          >
+                            Ver mapa
+                          </a>
+                          <Link
+                            href={getLocationPath(location.slug)}
+                            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                          >
+                            Ver detalhes do local
+                            <ArrowRight className="size-4" aria-hidden="true" />
+                          </Link>
+                        </div>
+
+                        <LinkButton
+                          href={location.whatsappHref}
+                          external
+                          newTab
+                          variant="primary"
+                          className="w-full px-5 text-sm font-semibold sm:w-auto"
+                        >
+                          {location.primaryCtaLabel}
+                        </LinkButton>
+                      </div>
+                    </div>
+                  </article>
+                )
+              })()
+            )}
           </div>
 
           <div className="mx-auto max-w-5xl">
@@ -158,8 +205,8 @@ export default function LocationsIndexPage() {
               body={
                 <p>
                   Se a sua necessidade é consulta, retorno ou definição de conduta, comece pela
-                  avaliação em coloproctologia. Se houver indicação de colonoscopia, a orientação
-                  pode seguir para o local apropriado.
+                  avaliação em coloproctologia. Quando a colonoscopia fizer parte do plano, a equipe
+                  orienta o local e os próximos passos.
                 </p>
               }
               actions={

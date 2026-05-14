@@ -144,8 +144,7 @@ export const locationPages: LocationPageData[] = [
       },
       {
         name: 'Retorno e acompanhamento',
-        description:
-          'Seguimento clínico e pós-tratamento em doenças do intestino, reto e ânus.',
+        description: 'Seguimento clínico e pós-tratamento em doenças do intestino, reto e ânus.',
       },
     ],
     clinicWebsite: CLINICA_NASSIF.website,
@@ -159,8 +158,7 @@ export const locationPages: LocationPageData[] = [
     metaTitle: 'Specta Endoscopia Digestiva | Atendimento com Dra. Ana Luiza Rocha',
     metaDescription:
       'Colonoscopia com a Dra. Ana Luiza Rocha na Specta Endoscopia Digestiva, em Curitiba. Veja endereço, orientações de agendamento e contexto do exame.',
-    summary:
-      'Local relacionado à colonoscopia no bairro Mercês.',
+    summary: 'Endoscopia e colonoscopia no bairro mercês.',
     cardDescription:
       'Referência para colonoscopia com a Dra. Ana Luiza quando o exame entra na investigação ou no rastreio.',
     visibleRelationshipText:
@@ -173,7 +171,7 @@ export const locationPages: LocationPageData[] = [
     phoneDisplay: SPECTA_ENDOSCOPIA.phone,
     phoneHref: createPhoneHref(SPECTA_ENDOSCOPIA.phone),
     whatsappDisplay: SPECTA_ENDOSCOPIA.phone,
-    whatsappHref: createWhatsAppHref(SPECTA_ENDOSCOPIA.phone, WHATSAPP_COLONOSCOPY_TEXT),
+    whatsappHref: createWhatsAppHref(SPECTA_ENDOSCOPIA.wppNumber, WHATSAPP_COLONOSCOPY_TEXT),
     mapUrl: SPECTA_ENDOSCOPIA.maps,
     mapLabel: 'Ver rota para a Specta Endoscopia Digestiva',
     primaryCtaLabel: 'Agendar colonoscopia',
