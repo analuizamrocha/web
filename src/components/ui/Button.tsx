@@ -13,6 +13,10 @@ const buttonVariants = cva(
           'bg-primary text-background hover:bg-primary/90 hover:shadow-md focus:bg-primary/80 active:bg-primary/95 disabled:bg-primary/40 disabled:cursor-not-allowed disabled:transform-none',
         secondary:
           'bg-secondary text-primary border border-secondary hover:bg-secondary/90 hover:shadow-sm focus:bg-secondary/80 active:bg-secondary/95 disabled:bg-secondary/40 disabled:text-primary/50 disabled:border-secondary/40 disabled:cursor-not-allowed disabled:transform-none',
+        tertiary:
+          'bg-brand-primary text-background hover:bg-brand-primary/90 hover:shadow-md focus:bg-brand-primary/80 active:bg-brand-primary/95 disabled:bg-brand-primary/40 disabled:cursor-not-allowed disabled:transform-none',
+        sage:
+          'bg-accent-neutral text-background hover:bg-accent-sage-deep hover:shadow-md focus:bg-accent-sage-deep active:bg-accent-sage-deep disabled:bg-accent-neutral/40 disabled:cursor-not-allowed disabled:transform-none',
         subtle:
           'bg-primary/5 text-primary border border-primary/20 hover:bg-primary/10 hover:border-primary/30 hover:shadow-sm focus:bg-primary/10 active:bg-primary/20 disabled:bg-primary/5 disabled:opacity-50 disabled:border-primary/10 disabled:cursor-not-allowed disabled:transform-none',
         outline:
