@@ -80,6 +80,12 @@ export const TAG_INSTAGRAM = '@analuiza.mrocha'
 export const URL_LINKEDIN =
   'https://www.linkedin.com/in/ana-luiza-moraes-rocha-3728b92aa/'
 
+/** YouTube channel URL */
+export const URL_YOUTUBE = 'https://www.youtube.com/@analuizarochaprocto'
+
+/** TikTok profile URL */
+export const URL_TIKTOK = 'https://www.tiktok.com/@luizamrocha'
+
 // =============================================================================
 // WhatsApp Contact
 // =============================================================================
