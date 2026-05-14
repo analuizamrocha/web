@@ -187,6 +187,9 @@ export const SPECTA_ENDOSCOPIA = {
   /** Contact phone used on the website */
   phone: '(41) 98773-7829',
 
+  /** WhatsApp number (E.164 format for links) */
+  wppNumber: '5541987737829',
+
   /** Google Maps search URL */
   maps:
     'https://maps.google.com/?q=R.%20Dom%20Alberto%20Gon%C3%A7alves%2C%20311%2C%20Merc%C3%AAs%2C%20Curitiba%20-%20PR',
