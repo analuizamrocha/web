@@ -23,7 +23,7 @@ export const TREATMENT_IMAGE_BY_SLUG = {
   'toxina-botulinica': {
     id: 'TRT-004',
     slug: 'toxina-botulinica',
-    src: '/images/posts/toxina-botulinica.webp',
+    src: '/images/posts/toxina-botulinica/toxina-botulinica.webp',
     alt: 'Aplicacao de toxina botulinica no tratamento de fissura anal cronica',
     sourcePostSlug: null,
   },

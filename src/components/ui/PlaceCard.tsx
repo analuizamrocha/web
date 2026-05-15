@@ -72,7 +72,7 @@ export function PlaceCard({ location, className }: PlaceCardProps) {
       {/* Photo header */}
       <div
         className={cn(
-          'relative flex h-[200px] items-start justify-between overflow-hidden p-5',
+          'relative flex h-[200px] flex-wrap items-start gap-2.5 overflow-hidden p-4 sm:p-5',
           styles.photo
         )}
         style={styles.photoPattern}
@@ -89,13 +89,13 @@ export function PlaceCard({ location, className }: PlaceCardProps) {
         <span
           className={cn(
             'relative z-10 inline-flex items-center rounded-full bg-background/90 px-3.5 py-1.5',
-            'text-xs font-semibold tracking-wide',
+            'max-w-full text-xs font-semibold leading-tight tracking-wide',
             styles.chip
           )}
         >
           {location.badgeLabel}
         </span>
-        <span className="relative z-10 self-end rounded-full bg-background/85 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-muted">
+        <span className="relative z-10 ml-auto max-w-full self-end truncate rounded-full bg-background/85 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-muted">
           {location.heroPhotoTag}
         </span>
       </div>

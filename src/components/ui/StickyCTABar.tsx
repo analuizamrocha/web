@@ -29,7 +29,7 @@ export function StickyCTABar({
         <strong className="block font-sans text-[11px] font-bold uppercase tracking-[0.14em] text-secondary">
           {eyebrow}
         </strong>
-        <span className="block font-serif text-[16px] sm:text-[17px] italic font-medium text-background/95 leading-snug truncate">
+        <span className="hidden font-serif text-[17px] italic font-medium text-background/95 leading-snug truncate sm:block">
           {message}
         </span>
       </div>

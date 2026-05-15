@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -7,6 +8,8 @@ export type MediaCardItem = {
   title: string
   subtitle?: string
   thumbVariant?: 'terracotta' | 'sage'
+  imageSrc?: string
+  imageAlt?: string
 }
 
 interface MediaCardProps extends MediaCardItem {
@@ -18,6 +21,8 @@ export function MediaCard({
   title,
   subtitle,
   thumbVariant = 'terracotta',
+  imageSrc,
+  imageAlt,
   className,
 }: MediaCardProps) {
   const thumbBg =
@@ -34,7 +39,22 @@ export function MediaCard({
         className
       )}
     >
-      <div className={cn('h-16 w-[84px] flex-shrink-0 rounded-xl', thumbBg)} />
+      <div
+        className={cn(
+          'relative h-16 w-[84px] flex-shrink-0 overflow-hidden rounded-xl',
+          !imageSrc && thumbBg
+        )}
+      >
+        {imageSrc && (
+          <Image
+            src={imageSrc}
+            alt={imageAlt ?? ''}
+            fill
+            sizes="84px"
+            className="object-cover transition-transform duration-[550ms] ease-out group-hover:scale-[1.03]"
+          />
+        )}
+      </div>
       <div className="min-w-0">
         <strong className="block font-serif text-[17px] font-bold leading-[1.25] text-primary">
           {title}
