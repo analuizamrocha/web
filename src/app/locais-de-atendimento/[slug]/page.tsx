@@ -20,7 +20,16 @@ import {
   locationPages,
 } from '@/lib/locations'
 import { WEBSITE_URL } from '@/lib/constants'
+import { getTreatmentImageBySlug } from '@/lib/treatment-images'
 import { cn } from '@/lib/utils'
+
+const TREATMENT_HREF_PREFIX = '/tratamentos/'
+
+function getTreatmentImageFromHref(href: string) {
+  if (!href.startsWith(TREATMENT_HREF_PREFIX)) return undefined
+  const slug = href.slice(TREATMENT_HREF_PREFIX.length)
+  return getTreatmentImageBySlug(slug)
+}
 
 interface LocationPageProps {
   params: Promise<{
@@ -137,16 +146,19 @@ export default async function LocationPage({ params }: LocationPageProps) {
       {/* ── HERO ── */}
       <section className="bg-background pt-24 pb-16 md:pt-28 lg:pb-20 animate-fade-in">
         <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-14">
-          <nav className="mb-7 flex items-center gap-2.5 text-[13px] text-muted">
-            <Link href="/" className="hover:text-primary transition-colors">
+          <nav className="mb-7 flex items-center gap-2.5 overflow-hidden whitespace-nowrap text-[13px] text-muted">
+            <Link href="/" className="flex-shrink-0 hover:text-primary transition-colors">
               Início
             </Link>
-            <span className="opacity-50">›</span>
-            <Link href="/locais-de-atendimento" className="hover:text-primary transition-colors">
+            <span className="flex-shrink-0 opacity-50">›</span>
+            <Link
+              href="/locais-de-atendimento"
+              className="flex-shrink-0 hover:text-primary transition-colors"
+            >
               Locais de atendimento
             </Link>
-            <span className="opacity-50">›</span>
-            <span className="font-medium text-primary">{location.name}</span>
+            <span className="flex-shrink-0 opacity-50">›</span>
+            <span className="min-w-0 truncate font-medium text-primary">{location.name}</span>
           </nav>
 
           <div className="mb-12 lg:mb-14 grid grid-cols-1 gap-9 lg:grid-cols-[7fr_5fr] lg:gap-14 lg:items-end">
@@ -372,15 +384,20 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 {location.relatedSection.treatmentsHeading}
               </h3>
               <div className="grid gap-3">
-                {location.relatedTreatments.map((item) => (
-                  <MediaCard
-                    key={item.href}
-                    href={item.href}
-                    title={item.label}
-                    subtitle={item.subtitle}
-                    thumbVariant={item.thumbVariant}
-                  />
-                ))}
+                {location.relatedTreatments.map((item) => {
+                  const treatmentImage = getTreatmentImageFromHref(item.href)
+                  return (
+                    <MediaCard
+                      key={item.href}
+                      href={item.href}
+                      title={item.label}
+                      subtitle={item.subtitle}
+                      thumbVariant={item.thumbVariant}
+                      imageSrc={treatmentImage?.src}
+                      imageAlt={treatmentImage?.alt}
+                    />
+                  )
+                })}
               </div>
             </div>
 

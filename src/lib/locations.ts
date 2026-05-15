@@ -236,7 +236,7 @@ export const locationPages: LocationPageData[] = [
     },
     structure: {
       display: 'Consultório clínico · acessível',
-      sub: 'Estacionamento conveniado próximo',
+      sub: 'Estacionamentos próximos disponíveis',
     },
     narrative: {
       eyebrow: 'O papel deste local',
@@ -322,7 +322,7 @@ export const locationPages: LocationPageData[] = [
       heading: 'Endereço da Clínica Nassif',
       intro: 'Confira a rota, referências próximas e opções de estacionamento antes da consulta.',
       fullAddress: 'Rua Bruno Filgueira, 489 · Batel, Curitiba - PR · 80240-220',
-      references: ['Próximo ao Shopping Pátio Batel', 'Estacionamento conveniado próximo'],
+      references: ['Próximo ao Shopping Pátio Batel', 'Estacionamentos próximos disponíveis'],
     },
     relatedSection: {
       eyebrow: 'Relacionado',
@@ -431,9 +431,9 @@ export const locationPages: LocationPageData[] = [
         thumbVariant: 'sage',
       },
       {
-        href: '/tratamentos',
-        label: 'Visão geral dos tratamentos',
-        subtitle: 'Todas as condições e procedimentos',
+        href: '/tratamentos/rastreio-cancer-anal',
+        label: 'Rastreio do câncer colorretal',
+        subtitle: 'Quando a colonoscopia entra no rastreio',
         thumbVariant: 'terracotta',
       },
     ],
@@ -450,7 +450,7 @@ export const locationPages: LocationPageData[] = [
     roleChipVariant: 'sage',
     hours: {
       display: 'Segunda a sexta',
-      sub: '7h às 16h · Conforme preparo agendado',
+      sub: '8h às 16h · Conforme preparo agendado',
     },
     structure: {
       display: 'Sedação · acompanhante',
@@ -540,7 +540,7 @@ export const locationPages: LocationPageData[] = [
       heading: 'Endereço da Specta',
       intro: 'Confira a rota e as orientações de chegada antes do dia do exame.',
       fullAddress: 'R. Dom Alberto Gonçalves, 311 · Mercês, Curitiba - PR',
-      references: ['3,2 km · 12 min da Clínica Nassif', 'Estacionamento conveniado no quarteirão'],
+      references: ['Dentro do Hospital Lipoplastic', 'Estacionamento próprio gratuito'],
     },
     relatedSection: {
       eyebrow: 'Relacionado',

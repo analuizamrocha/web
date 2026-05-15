@@ -74,12 +74,9 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 lg:mb-4 mt-4 lg:mt-8">
+        <div className="flex items-center justify-center mb-8 lg:mb-4 mt-4 lg:mt-8">
           <LinkButton href="/sobre" variant="outline" size="lg">
             Conheça minha trajetória
-          </LinkButton>
-          <LinkButton href="/locais-de-atendimento" variant="subtle" size="lg">
-            Ver locais de atendimento
           </LinkButton>
         </div>
       </div>
