@@ -139,16 +139,16 @@ export const locationPages: LocationPageData[] = [
     slug: 'clinica-nassif',
     name: CLINICA_NASSIF.name,
     shortName: 'Clínica Nassif',
-    badgeLabel: 'Atendimento em proctologia',
+    badgeLabel: 'Atendimento em coloproctologia',
     pageTitle: 'Clínica Nassif',
     metaTitle: 'Clínica Nassif | Onde a Dra. Ana Luiza Rocha atende em Curitiba',
     metaDescription:
-      'Consultas em proctologia com a Dra. Ana Luiza Rocha na Clínica Nassif, no Batel, em Curitiba. Veja endereço, como agendar e tratamentos relacionados.',
+      'Consultas em coloproctologia com a Dra. Ana Luiza Rocha na Clínica Nassif, no Batel, em Curitiba. Veja endereço, como agendar e tratamentos relacionados.',
     summary: 'Consultas, retornos e acompanhamento no Batel.',
     cardDescription:
-      'Avaliação de sintomas, revisão de exames, retornos e acompanhamento em proctologia.',
+      'Avaliação de sintomas, revisão de exames, retornos e acompanhamento em coloproctologia.',
     visibleRelationshipText:
-      'A Dra. Ana Luiza Rocha atende na Clínica Nassif para consultas, retornos e acompanhamento em proctologia.',
+      'A Dra. Ana Luiza Rocha atende na Clínica Nassif para consultas, retornos e acompanhamento em coloproctologia.',
     addressLines: ['Rua Bruno Filgueira, 489', 'Batel, Curitiba - PR'],
     streetAddress: CLINICA_NASSIF.address,
     neighborhood: CLINICA_NASSIF.neighborhood,
@@ -195,7 +195,7 @@ export const locationPages: LocationPageData[] = [
       },
       {
         href: '/tratamentos/cx-laser',
-        label: 'Cirurgias a laser em proctologia',
+        label: 'Cirurgias a laser em coloproctologia',
         subtitle: 'Procedimentos menos invasivos',
         thumbVariant: 'sage',
       },
@@ -203,7 +203,7 @@ export const locationPages: LocationPageData[] = [
     relatedArticles: [
       {
         href: '/blog/quando-procurar-coloproctologista-curitiba',
-        label: 'Quando procurar um proctologista',
+        label: 'Quando procurar um coloproctologista',
       },
       {
         href: '/blog/sangue-nas-fezes-quando-procurar-coloproctologista',
@@ -219,7 +219,7 @@ export const locationPages: LocationPageData[] = [
       },
     ],
     heroLead:
-      'Consulta, retorno e acompanhamento em proctologia, com escuta cuidadosa e plano definido caso a caso.',
+      'Consulta, retorno e acompanhamento em coloproctologia, com escuta cuidadosa e plano definido caso a caso.',
     heroPhotoTag: 'recepção · clínica nassif',
     heroPhotoSrc: '/images/nassif.png',
     heroPhotoAlt:
@@ -255,7 +255,7 @@ export const locationPages: LocationPageData[] = [
         { href: '/tratamentos', label: 'Ver tratamentos oferecidos' },
         {
           href: '/blog/quando-procurar-coloproctologista-curitiba',
-          label: 'Quando procurar um proctologista',
+          label: 'Quando procurar um coloproctologista',
         },
         {
           href: '/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal',
@@ -267,7 +267,7 @@ export const locationPages: LocationPageData[] = [
       eyebrow: 'Indicações de consulta',
       heading: 'Quando a consulta é o primeiro passo',
       intro:
-        'A Clínica Nassif é indicada para avaliação clínica em proctologia, revisão de exames e definição de um plano de cuidado individualizado.',
+        'A Clínica Nassif é indicada para avaliação clínica em coloproctologia, revisão de exames e definição de um plano de cuidado individualizado.',
       items: [
         {
           title: 'Avaliação de sintomas',
@@ -356,14 +356,14 @@ export const locationPages: LocationPageData[] = [
       {
         question: 'Quais queixas costumam ser avaliadas?',
         answer:
-          'Dor ao evacuar, sangramento, coceira anal, hemorroidas, fissuras, alteração intestinal e necessidade de acompanhamento especializado são motivos frequentes para avaliação em proctologia.',
+          'Dor ao evacuar, sangramento, coceira anal, hemorroidas, fissuras, alteração intestinal e necessidade de acompanhamento especializado são motivos frequentes para avaliação coloproctológica.',
       },
     ],
     schemaDescription:
-      'Clínica em Curitiba onde a Dra. Ana Luiza Rocha realiza consultas, retornos e acompanhamento em proctologia.',
+      'Clínica em Curitiba onde a Dra. Ana Luiza Rocha realiza consultas, retornos e acompanhamento em coloproctologia.',
     schemaServices: [
       {
-        name: 'Consulta em proctologia',
+        name: 'Consulta em coloproctologia',
         description:
           'Avaliação inicial, revisão de sintomas e definição de conduta com a Dra. Ana Luiza Rocha.',
       },
