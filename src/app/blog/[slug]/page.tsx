@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import {
   getPostBySlug,
+  getAllPosts,
   getAllPostSlugs,
   generateBlogPostSchema,
   getTargetAudienceLabel,
@@ -21,6 +22,7 @@ import {
 } from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { MdxImage } from '@/components/ui/MdxImage'
+import { RelatedPostsSection } from '@/components/ui/RelatedPostsSection'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -110,6 +112,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const schema = generateBlogPostSchema(post)
+  const allPosts = getAllPosts()
+  const relatedPosts = post.relatedPosts?.length
+    ? post.relatedPosts
+        .map((relatedSlug) => allPosts.find((candidate) => candidate.slug === relatedSlug))
+        .filter((candidate): candidate is NonNullable<typeof candidate> => Boolean(candidate))
+        .slice(0, 2)
+    : []
 
   return (
     <>
@@ -169,7 +178,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                     />
                   </svg>
-                  {new Date(post.publishDate).toLocaleDateString('pt-BR')}
+                  {new Date(post.publishDate).toLocaleDateString('pt-BR', {
+                    timeZone: 'UTC',
+                  })}
                 </time>
                 {post.readingTime && (
                   <span className="flex items-center gap-1">
@@ -206,6 +217,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 components={{ img: MdxImage }}
               />
             </div>
+            <RelatedPostsSection posts={relatedPosts} />
           </div>
 
           {/* Article Footer */}
@@ -243,7 +255,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </Link>
               <div className="text-sm text-secondary">
                 Última atualização:&nbsp;
-                {new Date(post.lastModified).toLocaleDateString('pt-BR')}
+                {new Date(post.lastModified).toLocaleDateString('pt-BR', {
+                  timeZone: 'UTC',
+                })}
               </div>
             </div>
           </footer>

@@ -15,6 +15,9 @@ targetAudience: "patients"
 intent: "consideration"
 featured: false
 order: 4
+relatedPosts:
+  - "hemorroida-sempre-precisa-cirurgia"
+  - "hemorroida-quanto-tempo-dura-quando-procurar"
 faqs:
   - question: "Toda hemorroida precisa de cirurgia?"
     answer: "Não. A maioria melhora com tratamento clínico. A cirurgia é indicada apenas em casos de falha do tratamento conservador ou em estágios mais avançados."

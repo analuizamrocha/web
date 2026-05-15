@@ -1,16 +1,16 @@
 ---
-title: 'Dor ao evacuar é normal? Causas e quando procurar um coloproctologista'
-metaDescription: 'Sentir dor ao evacuar não é normal. Conheça as principais causas — fissura anal, hemorroida trombosada, constipação — e quando procurar um coloproctologista em Curitiba.'
+title: 'Dor ao evacuar é normal? Causas e quando procurar um proctologista'
+metaDescription: 'Sentir dor ao evacuar não é normal. Conheça as principais causas — fissura anal, hemorroida trombosada, constipação — e quando procurar um proctologista em Curitiba.'
 slug: 'dor-ao-evacuar-causas-tratamento'
 publishDate: '2026-03-14'
-lastModified: '2026-03-14'
+lastModified: '2026-05-14'
 primaryKeyword: 'dor ao evacuar'
 secondaryKeywords:
   - 'dor ao evacuar é normal'
   - 'fissura anal dor'
   - 'hemorroida trombosada'
   - 'constipação crônica dor'
-  - 'coloproctologista Curitiba'
+  - 'proctologia Curitiba'
   - 'proctologista Curitiba'
 targetAudience: 'patients'
 intent: 'awareness'
@@ -23,13 +23,13 @@ faqs:
     answer: 'Em alguns casos sim, mas muitas precisam de tratamento adequado.'
   - question: 'Pomadas resolvem sempre?'
     answer: 'Nem sempre. O tratamento depende da causa da dor.'
-  - question: 'Quando procurar um coloproctologista?'
+  - question: 'Quando procurar um proctologista?'
     answer: 'Sempre que a dor for persistente ou associada a sangramento.'
 ---
 
 _Sentir dor ao evacuar não é algo raro — mas também não deve ser considerado normal._
 
-![Dor ao evacuar — quando procurar um coloproctologista](/images/posts/dor-ao-evacuar-causas-tratamento/dor-ao-evacuar-coloproctologista.webp)
+![Dor ao evacuar — quando procurar um proctologista](/images/posts/dor-ao-evacuar-causas-tratamento/dor-ao-evacuar-coloproctologista.webp)
 
 Muitas pessoas convivem com esse sintoma por semanas ou meses, acreditando que é algo passageiro. O problema é que a dor pode indicar alterações na região anal que precisam de avaliação adequada.
 
@@ -87,7 +87,7 @@ Em alguns casos sim, mas muitas precisam de tratamento adequado.
 **Pomadas resolvem sempre?**
 Nem sempre. O tratamento depende da causa da dor.
 
-**Quando procurar um coloproctologista?**
+**Quando procurar um proctologista?**
 Sempre que a dor for persistente ou associada a sangramento.
 
 ---

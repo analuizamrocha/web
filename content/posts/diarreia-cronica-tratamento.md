@@ -3,7 +3,7 @@ title: 'Diarreia crônica: causas, diagnóstico e tratamentos'
 metaDescription: 'Diarreia crônica ou intestino solto persistente pode indicar SII, intolerâncias ou doenças inflamatórias. Saiba quando procurar por proctologista em Curitiba.'
 slug: 'diarreia-cronica-tratamento'
 publishDate: '2025-12-09'
-lastModified: '2026-01-24'
+lastModified: '2026-05-14'
 primaryKeyword: 'diarreia crônica'
 secondaryKeywords:
   ['intestino solto', 'síndrome intestino irritável', 'diarreia nervosa', 'exames diarreia']
@@ -27,7 +27,7 @@ faqs:
 Evacuar várias vezes ao dia, com fezes amolecidas ou líquidas, não é normal, principalmente quando isso acontece por semanas ou meses.
 A **diarreia crônica** é um sintoma comum, muitas vezes subestimado, mas que pode indicar alterações importantes no funcionamento do intestino.
 
-Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que caracteriza a diarreia crônica, suas principais causas, quando investigar e como é feito o tratamento.
+Neste artigo, a **Dra. Ana Luiza**, proctologista em Curitiba, explica o que caracteriza a diarreia crônica, suas principais causas, quando investigar e como é feito o tratamento.
 
 ---
 
@@ -104,7 +104,7 @@ Algumas bactérias e parasitas podem causar diarreia prolongada, especialmente a
 
 ---
 
-## Quando procurar um coloproctologista?
+## Quando procurar um proctologista?
 
 Procure avaliação especializada se você apresenta:
 
@@ -115,7 +115,7 @@ Procure avaliação especializada se você apresenta:
 - Fraqueza, anemia ou desidratação
 - Piora progressiva dos sintomas
 
-O **coloproctologista** é o profissional indicado para investigar a causa e orientar o tratamento adequado.
+O **proctologista** é o profissional indicado para investigar a causa e orientar o tratamento adequado.
 
 ---
 
@@ -155,7 +155,7 @@ Tratar apenas a diarreia, sem investigar a causa, pode atrasar o diagnóstico e 
 A **diarreia crônica** não deve ser considerada normal.
 Ela pode ter causas simples, mas também pode indicar doenças que exigem tratamento específico e acompanhamento médico.
 
-Se você convive com **intestino solto frequente**, agende uma consulta com a **Dra. Ana Luiza**, coloproctologista em Curitiba, para uma avaliação cuidadosa e um plano de tratamento adequado ao seu caso.
+Se você convive com **intestino solto frequente**, agende uma consulta com a **Dra. Ana Luiza**, proctologista em Curitiba, para uma avaliação cuidadosa e um plano de tratamento adequado ao seu caso.
 
 ---
 

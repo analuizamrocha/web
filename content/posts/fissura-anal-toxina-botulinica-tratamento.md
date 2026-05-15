@@ -16,6 +16,9 @@ targetAudience: 'patients'
 intent: 'consideration'
 featured: false
 order: 24
+relatedPosts:
+  - 'fissura-anal-tratamento'
+  - 'fissura-anal-quando-cirurgia-indicada'
 faqs:
   - question: 'Botox para fissura dói?'
     answer: 'O procedimento costuma ser bem tolerado, mas geralmente realizado com anestésico local.'
