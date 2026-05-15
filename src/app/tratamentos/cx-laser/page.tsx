@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   keywords: [
     'cirurgia laser hemorroidas curitiba',
     'fissura anal laser curitiba',
-    'coloproctologia laser',
+    'proctologia laser',
     'cirurgia minimamente invasiva curitiba',
     'proctologista laser curitiba',
   ],
@@ -93,7 +93,7 @@ export default function CirurgiasLaserPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
             '@id': pageUrl,
-            name: 'Cirurgias a Laser em Coloproctologia',
+            name: 'Cirurgias a Laser em Proctologia',
             description:
               'Procedimentos cirúrgicos minimamente invasivos utilizando tecnologia laser para tratamento de hemorroidas e fissuras anais',
             procedureType: 'Laser Surgery',
@@ -153,7 +153,7 @@ export default function CirurgiasLaserPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
-                Cirurgias a Laser em Coloproctologia
+                Cirurgias a Laser em Proctologia
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
@@ -170,7 +170,7 @@ export default function CirurgiasLaserPage() {
             <main className="prose prose-lg max-w-none mb-12">
               <h2>Principais indicações</h2>
               <p>
-                Na coloproctologia, o laser pode ser utilizado em diferentes
+                Na proctologia, o laser pode ser utilizado em diferentes
                 situações:
               </p>
               <ul>
@@ -201,7 +201,7 @@ export default function CirurgiasLaserPage() {
                   <strong>Importante:</strong> A indicação do laser depende
                   sempre da avaliação individual de cada paciente. Nem todos os
                   casos se beneficiam dessa tecnologia, e a decisão deve ser
-                  tomada em conjunto com o coloproctologista.
+                  tomada em conjunto com o proctologista.
                 </p>
               </blockquote>
 
@@ -251,7 +251,7 @@ export default function CirurgiasLaserPage() {
               </p>
               <p>
                 O laser representa um recurso importante dentro da
-                coloproctologia moderna, trazendo mais conforto e segurança em
+                proctologia moderna, trazendo mais conforto e segurança em
                 casos bem selecionados.
               </p>
 

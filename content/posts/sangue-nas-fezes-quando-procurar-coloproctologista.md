@@ -1,13 +1,13 @@
 ---
 title: "Sangue nas fezes: quando se preocupar e buscar ajuda especializada"
-metaDescription: "Sangue nas fezes pode indicar desde hemorroidas até condições sérias. Descubra as causas, sinais de alerta e quando procurar um coloproctologista."
+metaDescription: "Sangue nas fezes pode indicar desde hemorroidas até condições sérias. Descubra as causas, sinais de alerta e quando procurar um proctologista."
 slug: "sangue-nas-fezes-quando-procurar-coloproctologista"
 publishDate: "2025-10-21"
-lastModified: "2026-02-14"
+lastModified: "2026-05-14"
 primaryKeyword: "sangue nas fezes"
 secondaryKeywords:
   - "sangramento anal"
-  - "coloproctologista Curitiba"
+  - "proctologista Curitiba"
   - "causas sangue fezes"
   - "quando preocupar sangramento"
   - "hemorroida sangramento"
@@ -15,10 +15,13 @@ targetAudience: "patients"
 intent: "awareness"
 featured: false
 order: 6
+relatedPosts:
+  - "sangue-papel-higienico-sempre-hemorroida"
+  - "quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba"
 faqs:
   - question: "Sangue nas fezes sempre significa câncer?"
-    answer: "Não. As causas mais comuns são hemorroidas e fissuras anais, mas o diagnóstico deve ser feito por um coloproctologista para descartar outras doenças."
-  - question: "Quando devo procurar um coloproctologista?"
+    answer: "Não. As causas mais comuns são hemorroidas e fissuras anais, mas o diagnóstico deve ser feito por um proctologista para descartar outras doenças."
+  - question: "Quando devo procurar um proctologista?"
     answer: "Se o sangramento persistir por mais de 3 dias, for intenso, vier acompanhado de dor ou estiver associado a perda de peso e anemia, procure atendimento médico especializado."
   - question: "O sangue pode aparecer mesmo sem dor?"
     answer: "Sim. Sangramentos sem dor são comuns em hemorroidas internas ou pólipos. Por isso, é importante investigar mesmo na ausência de desconforto."
@@ -83,9 +86,9 @@ Nem todo sangramento anal é grave, mas há **sinais de alerta** que exigem inve
 - Cansaço e fraqueza (podem indicar anemia).
 - Histórico familiar de **câncer colorretal**.
 
-Se você apresenta um ou mais desses sintomas, procure um coloproctologista para uma avaliação detalhada.
+Se você apresenta um ou mais desses sintomas, procure um proctologista para uma avaliação detalhada.
 
-## Como o coloproctologista investiga
+## Como o proctologista investiga
 
 O diagnóstico começa com uma **consulta detalhada** e exame físico, incluindo **toque retal** e **anuscopia** (exame rápido que permite visualizar o canal anal).
 
@@ -110,7 +113,7 @@ O tratamento vai depender da causa identificada:
 
 **Câncer colorretal:** quanto mais cedo for diagnosticado, mais eficaz é o tratamento cirúrgico e complementar.
 
-O papel do coloproctologista é **avaliar cada caso individualmente** e definir a melhor conduta, sempre com segurança e clareza.
+O papel do proctologista é **avaliar cada caso individualmente** e definir a melhor conduta, sempre com segurança e clareza.
 
 ## Prevenção e cuidados com a saúde intestinal
 
@@ -126,9 +129,9 @@ A prevenção é fundamental para manter a saúde intestinal em dia:
 
 ### 1. Sangue nas fezes sempre significa câncer?
 
-Não. As causas mais comuns são **hemorroidas** e **fissuras anais**, mas o diagnóstico deve ser feito por um coloproctologista para descartar outras doenças.
+Não. As causas mais comuns são **hemorroidas** e **fissuras anais**, mas o diagnóstico deve ser feito por um proctologista para descartar outras doenças.
 
-### 2. Quando devo procurar um coloproctologista?
+### 2. Quando devo procurar um proctologista?
 
 Se o sangramento persistir por mais de 3 dias, for intenso, vier acompanhado de dor ou estiver associado a perda de peso e anemia, procure atendimento médico especializado.
 
@@ -144,7 +147,7 @@ Depende da avaliação clínica. O exame é indicado principalmente para pacient
 
 Perceber **sangue nas fezes** nunca deve ser ignorado. Em muitos casos, o problema é simples e de fácil tratamento, mas somente uma avaliação médica especializada pode identificar a causa correta e indicar o tratamento ideal.
 
-Se você apresenta sangramento anal persistente ou outros sintomas de alerta, procure avaliação com um coloproctologista para diagnóstico e orientação adequados.
+Se você apresenta sangramento anal persistente ou outros sintomas de alerta, procure avaliação com um proctologista para diagnóstico e orientação adequados.
 
 ---
 

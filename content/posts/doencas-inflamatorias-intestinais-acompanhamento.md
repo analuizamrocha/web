@@ -15,6 +15,9 @@ targetAudience: 'patients'
 intent: 'consideration'
 featured: false
 order: 18
+relatedPosts:
+  - 'diarreia-cronica-tratamento'
+  - 'sangue-nas-fezes-quando-procurar-coloproctologista'
 faqs:
   - question: 'Doença de Crohn e Retocolite Ulcerativa têm cura?'
     answer: 'São doenças crônicas. O objetivo é controlar a inflamação, manter remissão e prevenir complicações com acompanhamento regular.'

@@ -34,8 +34,9 @@ export const metadata: Metadata = {
     'botox fissura anal curitiba',
     'tratamento fissura anal',
     'dor anal cronica curitiba',
+    'proctologia fissura anal',
     'esfíncter anal curitiba',
-    'procedimento minimamente invasivo',
+    'proctologista fissura anal',
   ],
   alternates: {
     canonical: pageUrl,
@@ -94,7 +95,7 @@ export default function ToxinaBotulínicaPage() {
             '@context': 'https://schema.org',
             '@type': 'MedicalProcedure',
             '@id': pageUrl,
-            name: 'Toxina Botulínica na Coloproctologia',
+            name: 'Toxina Botulínica na Proctologia',
             description:
               'Aplicação de toxina botulínica para tratamento de fissura anal crônica e dores anais persistentes',
             procedureType: 'Botulinum Toxin Injection',
@@ -153,7 +154,7 @@ export default function ToxinaBotulínicaPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
-                Toxina Botulínica na Coloproctologia
+                Toxina Botulínica na Proctologia
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
@@ -239,7 +240,7 @@ export default function ToxinaBotulínicaPage() {
               <h2>Considerações finais</h2>
               <p>
                 A aplicação de toxina botulínica representa uma ferramenta importante na
-                coloproctologia moderna, principalmente no manejo de{' '}
+                proctologia moderna, principalmente no manejo de{' '}
                 <strong>fissuras anais crônicas</strong> e&nbsp;
                 <strong>dores anais persistentes</strong>.
               </p>

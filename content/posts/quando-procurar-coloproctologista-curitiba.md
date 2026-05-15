@@ -17,6 +17,9 @@ targetAudience: 'patients'
 intent: 'awareness'
 featured: true
 order: 1
+relatedPosts:
+  - 'proctologista-e-coloproctologista-entenda-os-termos'
+  - 'sinto-vergonha-procurar-coloproctologista-isso-e-normal'
 faqs:
   - question: 'Preciso mesmo procurar um coloproctologista se o sangramento for pequeno?'
     answer: 'Sim. Mesmo pequenas quantidades de sangue podem indicar desde problemas simples, como hemorroidas, até condições mais sérias, como pólipos ou câncer colorretal. Só o especialista pode investigar com segurança.'

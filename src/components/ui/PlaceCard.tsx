@@ -70,9 +70,12 @@ export function PlaceCard({ location, className }: PlaceCardProps) {
       )}
     >
       {/* Photo header */}
-      <div
+      <Link
+        href={detailPath}
+        aria-label={`Ver detalhes da ${location.shortName}`}
         className={cn(
           'relative flex h-[200px] flex-wrap items-start gap-2.5 overflow-hidden p-4 sm:p-5',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
           styles.photo
         )}
         style={styles.photoPattern}
@@ -98,12 +101,17 @@ export function PlaceCard({ location, className }: PlaceCardProps) {
         <span className="relative z-10 ml-auto max-w-full self-end truncate rounded-full bg-background/85 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-muted">
           {location.heroPhotoTag}
         </span>
-      </div>
+      </Link>
 
       {/* Body */}
       <div className="flex flex-1 flex-col gap-[18px] p-7 sm:px-8 sm:py-7">
         <h2 className="font-serif text-[26px] sm:text-[28px] font-bold leading-[1.08] tracking-[-0.01em] text-primary">
-          {location.name}
+          <Link
+            href={detailPath}
+            className="transition-colors hover:text-primary/75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          >
+            {location.name}
+          </Link>
         </h2>
 
         <p className="-mt-1 max-w-[38ch] font-serif text-[15.5px] italic font-normal leading-[1.45] text-body">

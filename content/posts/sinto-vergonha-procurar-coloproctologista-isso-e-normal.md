@@ -1,20 +1,23 @@
 ---
-title: 'Sinto vergonha de procurar um coloproctologista. Isso é normal?'
-metaDescription: 'Entenda por que a vergonha na consulta proctológica é comum, como funciona o exame e quando procurar um coloproctologista em Curitiba.'
+title: 'Sinto vergonha de procurar um proctologista. Isso é normal?'
+metaDescription: 'Entenda por que a vergonha na consulta proctológica é comum, como funciona o exame e quando procurar um proctologista em Curitiba.'
 slug: 'sinto-vergonha-procurar-coloproctologista-isso-e-normal'
 publishDate: '2026-03-12'
-lastModified: '2026-03-12'
-primaryKeyword: 'vergonha de procurar coloproctologista'
+lastModified: '2026-05-14'
+primaryKeyword: 'vergonha de procurar proctologista'
 secondaryKeywords:
   - 'exame proctológico'
-  - 'consulta com coloproctologista'
+  - 'consulta com proctologista'
   - 'dor ao evacuar'
   - 'sangue nas fezes'
-  - 'coloproctologista em Curitiba'
+  - 'proctologista em Curitiba'
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
 order: 21
+relatedPosts:
+  - 'proctologista-e-coloproctologista-entenda-os-termos'
+  - 'quando-procurar-coloproctologista-curitiba'
 faqs:
   - question: 'É normal ter vergonha de fazer exame proctológico?'
     answer: 'Sim. Esse sentimento é comum, especialmente na primeira consulta.'
@@ -28,7 +31,7 @@ faqs:
 
 _Sentir vergonha na primeira consulta é comum, mas entender como funciona o atendimento ajuda a buscar diagnóstico com mais tranquilidade._
 
-![Coloproctologista em atendimento acolhedor com paciente no consultório](/images/posts/sinto-vergonha-procurar-coloproctologista-isso-e-normal/desconforto-intestinal.webp)
+![Proctologista em atendimento acolhedor com paciente no consultório](/images/posts/sinto-vergonha-procurar-coloproctologista-isso-e-normal/desconforto-intestinal.webp)
 
 "Eu tenho vergonha."
 Essa é uma das frases mais comuns antes de uma consulta.
@@ -37,7 +40,7 @@ Muitos pacientes convivem com dor, sangramento, coceira ou alterações intestin
 
 Se você já adiou uma consulta por vergonha, saiba: isso é mais comum do que parece.
 
-Neste artigo, a Dra. Ana Luiza, coloproctologista em Curitiba, explica por que esse sentimento é natural, como funciona a consulta proctológica e por que o exame físico é tão importante para um diagnóstico correto.
+Neste artigo, a Dra. Ana Luiza, proctologista em Curitiba, explica por que esse sentimento é natural, como funciona a consulta proctológica e por que o exame físico é tão importante para um diagnóstico correto.
 
 ## É normal sentir vergonha?
 
@@ -48,13 +51,13 @@ Estamos falando de uma região íntima do corpo.
 
 Mas é importante lembrar:
 
-- o coloproctologista examina essa região todos os dias,
+- o proctologista examina essa região todos os dias,
 - para o médico, trata-se de anatomia, diagnóstico e cuidado,
 - não há julgamento, há escuta e responsabilidade profissional.
 
 A vergonha costuma diminuir muito depois da primeira consulta.
 
-## Como é a consulta com um coloproctologista?
+## Como é a consulta com um proctologista?
 
 Muitas pessoas imaginam algo desconfortável ou constrangedor desde o início.
 Na prática, a consulta começa como qualquer outra.
@@ -125,7 +128,7 @@ Adiar a consulta pode levar a:
 
 Cuidar da saúde não deve ser motivo de constrangimento.
 
-## Quando procurar um coloproctologista em Curitiba?
+## Quando procurar um proctologista em Curitiba?
 
 Procure avaliação se você apresenta:
 
@@ -136,16 +139,16 @@ Procure avaliação se você apresenta:
 - alterações intestinais frequentes,
 - dúvidas sobre saúde anorretal.
 
-O coloproctologista em Curitiba é o profissional indicado para investigar e orientar de forma técnica e acolhedora.
+O proctologista em Curitiba é o profissional indicado para investigar e orientar de forma técnica e acolhedora.
 
 ## Conclusão
 
 Sentir vergonha é normal.
 Ignorar sintomas não deveria ser.
 
-A consulta com um coloproctologista é um passo importante para diagnóstico correto, tratamento adequado e tranquilidade.
+A consulta com um proctologista é um passo importante para diagnóstico correto, tratamento adequado e tranquilidade.
 
-Se você tem adiado sua avaliação por constrangimento, agende uma consulta com a Dra. Ana Luiza, coloproctologista em Curitiba, e receba atendimento ético, respeitoso e cuidadoso.
+Se você tem adiado sua avaliação por constrangimento, agende uma consulta com a Dra. Ana Luiza, proctologista em Curitiba, e receba atendimento ético, respeitoso e cuidadoso.
 
 ---
 

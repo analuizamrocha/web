@@ -15,6 +15,9 @@ targetAudience: 'patients'
 intent: 'awareness'
 featured: false
 order: 5
+relatedPosts:
+  - 'intestino-preso-muitos-dias-perigoso'
+  - 'alimentacao-fibras-saude-intestinal'
 faqs:
   - question: 'Prisão de ventre é sempre causada por má alimentação?'
     answer: 'Não. Embora a dieta pobre em fibras seja uma das causas principais, existem condições médicas e alterações estruturais que também podem provocar constipação.'

@@ -1,38 +1,42 @@
 ---
-title: 'Fissura anal: sintomas, tratamentos e como a coloproctologia pode ajudar'
-metaDescription: 'Fissura anal causa dor intensa ao evacuar. Conheça sintomas, tratamentos clínicos, botox e cirurgia com coloproctologista em Curitiba.'
+title: 'Fissura anal: sintomas, tratamentos e como a proctologia pode ajudar'
+metaDescription: 'Fissura anal causa dor intensa ao evacuar. Conheça sintomas, tratamentos clínicos, botox e cirurgia com proctologista em Curitiba.'
 slug: 'fissura-anal-tratamento'
 publishDate: '2025-12-12'
-lastModified: '2026-02-14'
+lastModified: '2026-05-14'
 primaryKeyword: 'fissura anal'
 secondaryKeywords:
   - 'fissura anal curitiba'
   - 'dor anal curitiba'
   - 'dor ao evacuar'
+  - 'proctologia'
   - 'toxina botulínica fissura'
   - 'esfincterotomia'
-  - 'sangramento anal curitiba'
+  - 'proctologista curitiba'
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
 order: 11
+relatedPosts:
+  - 'dor-ao-evacuar-causas-tratamento'
+  - 'fissura-anal-quando-cirurgia-indicada'
 faqs:
   - question: 'A fissura anal pode cicatrizar sozinha?'
     answer: 'Sim, em casos agudos e com medidas simples como banhos de assento, dieta rica em fibras e pomadas prescritas pelo médico.'
   - question: 'Quando é indicado o uso de toxina botulínica?'
     answer: 'Quando a fissura se torna crônica e não cicatriza com tratamento clínico. O Botox ajuda a relaxar a musculatura e facilita a cicatrização.'
   - question: 'A cirurgia de fissura anal causa incontinência?'
-    answer: 'O risco existe, mas é baixo quando realizada por coloproctologista experiente. A cirurgia é reservada para casos refratários.'
-  - question: 'Quando devo procurar um coloproctologista em Curitiba?'
+    answer: 'O risco existe, mas é baixo quando realizada por especialista experiente. A cirurgia é reservada para casos refratários.'
+  - question: 'Quando devo procurar um proctologista em Curitiba?'
     answer: 'Se você sente dor ao evacuar, percebe sangue nas fezes ou sintomas que não melhoram em até duas semanas, é indicado procurar avaliação médica.'
 ---
 
 _A dor ao evacuar muitas vezes tem nome: fissura anal, e entender o motivo é o primeiro passo para o alívio._
 
 A **fissura anal** é uma pequena ferida na região do ânus que pode causar dor intensa ao evacuar.
-Apesar de simples, esse problema é muito comum em coloproctologia e pode trazer grande impacto na qualidade de vida do paciente.
+Apesar de simples, esse problema é muito comum em proctologia e pode trazer grande impacto na qualidade de vida do paciente.
 
-Neste artigo, você vai entender **o que é a fissura anal**, quais são os principais **sintomas e tratamentos disponíveis**, e quando procurar um **coloproctologista em Curitiba**.
+Neste artigo, você vai entender **o que é a fissura anal**, quais são os principais **sintomas e tratamentos disponíveis**, e quando procurar um **proctologista em Curitiba**.
 
 ![Ilustração de fissura anal e região acometida](/images/posts/fissura-anal-tratamento/fissura-anal.webp)
 
@@ -54,7 +58,7 @@ Os sintomas mais comuns incluem:
 - **Espasmo do esfíncter anal**, aumentando a dor e dificultando a cicatrização.
 - **Coceira ou ardência** na região anal.
 
-> Muitas vezes, a fissura é confundida com hemorroidas. Por isso, a avaliação com coloproctologista é essencial para diagnóstico correto.
+> Muitas vezes, a fissura é confundida com hemorroidas. Por isso, a avaliação com proctologista é essencial para diagnóstico correto.
 
 ---
 
@@ -92,9 +96,9 @@ O tratamento depende da gravidade, tempo de evolução e resposta às terapias i
 
 ---
 
-## Coloproctologista em Curitiba: o papel do especialista
+## Proctologista em Curitiba: o papel do especialista
 
-O **coloproctologista** é o profissional capacitado para diagnosticar e tratar a fissura anal.
+O **proctologista** é o profissional capacitado para diagnosticar e tratar a fissura anal.
 Em **Curitiba**, o acompanhamento especializado é essencial para definir a melhor estratégia de tratamento, garantindo segurança e qualidade de vida ao paciente.
 
 Não adie a consulta se você sente **dor ao evacuar** ou apresenta **sangramento anal**.

@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
   keywords: [
     'blog coloproctologia',
-    'artigos coloproctologista curitiba',
+    'artigos proctologista curitiba',
     'saúde intestinal',
     'tratamento hemorroidas',
     'prevenção câncer colorretal',
-    'cirurgia laser coloproctologia',
+    'proctologia',
     'cisto pilonidal',
     'plicoma anal',
   ],
@@ -85,7 +85,7 @@ export default function BlogPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
               <p>
-                Aqui compartilho conhecimentos, dicas práticas e orientações sobre coloproctologia
+                Aqui compartilho conhecimentos, dicas práticas e orientações sobre proctologia
                 para ajudar você a entender melhor sua saúde intestinal
               </p>
             </div>

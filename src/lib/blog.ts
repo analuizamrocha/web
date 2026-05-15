@@ -91,6 +91,7 @@ export interface BlogPostMeta {
   featured?: boolean
   order?: number
   faqs?: FAQItem[]
+  relatedPosts?: string[]
 }
 
 /**

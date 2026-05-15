@@ -15,6 +15,9 @@ targetAudience: 'patients'
 intent: 'awareness'
 featured: false
 order: 12
+relatedPosts:
+  - 'cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar'
+  - 'saude-sexual-cuidado-informacao-bem-estar'
 faqs:
   - question: 'HPV anal sempre causa verrugas?'
     answer: 'Não. Muitas infecções são assintomáticas e só são identificadas em exames de rastreio.'
