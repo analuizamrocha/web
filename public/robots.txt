@@ -32,5 +32,3 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-# LLM content index
-LLMs: https://www.analuizarocha.com.br/llms.txt

@@ -70,12 +70,20 @@
 ### Saúde sexual
 - [Saúde sexual: cuidado, informação e bem-estar](https://www.analuizarocha.com.br/blog/saude-sexual-cuidado-informacao-bem-estar)
 
+### Proctologia e coloproctologia
+- [Proctologista e coloproctologista: entenda os termos](https://www.analuizarocha.com.br/blog/proctologista-e-coloproctologista-entenda-os-termos)
+
 ### Orientação ao paciente
 - [Quando procurar um coloproctologista em Curitiba](https://www.analuizarocha.com.br/blog/quando-procurar-coloproctologista-curitiba)
 - [Quando o intestino dá sinais de alerta](https://www.analuizarocha.com.br/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba)
 - [O que muda com o acompanhamento especializado em coloproctologia](https://www.analuizarocha.com.br/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba)
 - [Sinto vergonha de procurar coloproctologista — isso é normal?](https://www.analuizarocha.com.br/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal)
 - [Por que meus sintomas nunca melhoram?](https://www.analuizarocha.com.br/blog/por-que-meus-sintomas-nunca-melhoram)
+
+## Locais de atendimento
+- [Locais de atendimento](https://www.analuizarocha.com.br/locais-de-atendimento): Hub com os consultórios e locais de consulta em Curitiba.
+- [Clínica Nassif — Batel](https://www.analuizarocha.com.br/locais-de-atendimento/clinica-nassif): Consultas em coloproctologia. Rua Bruno Filgueira, 489, Batel, Curitiba - PR. Próximo ao Shopping Pátio Batel.
+- [Specta Endoscopia Digestiva — Mercês](https://www.analuizarocha.com.br/locais-de-atendimento/specta-endoscopia-digestiva): Colonoscopia e procedimentos endoscópicos. R. Dom Alberto Gonçalves, 311, Mercês, Curitiba - PR. Dentro do Hospital Lipoplastic, estacionamento próprio gratuito.
 
 ## Fontes técnicas
 - [Sitemap](https://www.analuizarocha.com.br/sitemap.xml): Inventário canônico de URLs para descoberta de conteúdo.
