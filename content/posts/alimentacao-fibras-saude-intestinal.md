@@ -15,7 +15,7 @@ secondaryKeywords:
 targetAudience: 'general-public'
 intent: 'awareness'
 featured: false
-order: 9
+order: 10
 faqs:
   - question: 'Comer muita fibra pode causar gases?'
     answer: 'Sim. O aumento abrupto do consumo de fibras, principalmente as insolúveis, pode causar gases e distensão abdominal. O ideal é aumentar gradualmente e manter boa hidratação.'

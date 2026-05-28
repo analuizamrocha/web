@@ -15,7 +15,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 25
+order: 26
 faqs:
   - question: 'Quantos dias sem evacuar é preocupante?'
     answer: 'Se passar de 3–4 dias com frequência, é importante investigar.'

@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 18
+order: 19
 relatedPosts:
   - 'diarreia-cronica-tratamento'
   - 'sangue-nas-fezes-quando-procurar-coloproctologista'

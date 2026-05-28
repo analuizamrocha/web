@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 30
+order: 31
 faqs:
   - question: 'Plicoma anal pode virar câncer?'
     answer: 'Não. O plicoma é uma alteração benigna e não representa risco de malignização.'

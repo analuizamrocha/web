@@ -13,7 +13,7 @@ secondaryKeywords:
 targetAudience: "patients"
 intent: "consideration"
 featured: false
-order: 2
+order: 9
 faqs:
   - question: "O cisto pilonidal some sozinho?"
     answer: "Não. Pode melhorar após drenagem, mas costuma recidivar. A cirurgia é o tratamento definitivo."

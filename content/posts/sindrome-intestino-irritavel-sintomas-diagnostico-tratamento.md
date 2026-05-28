@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 13
+order: 14
 faqs:
   - question: 'Síndrome do intestino irritável é doença grave?'
     answer: 'Não é uma doença grave, mas pode causar grande impacto na qualidade de vida se não for tratada adequadamente.'

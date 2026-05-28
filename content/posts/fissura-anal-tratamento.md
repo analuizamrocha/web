@@ -16,7 +16,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 11
+order: 12
 relatedPosts:
   - 'dor-ao-evacuar-causas-tratamento'
   - 'fissura-anal-quando-cirurgia-indicada'

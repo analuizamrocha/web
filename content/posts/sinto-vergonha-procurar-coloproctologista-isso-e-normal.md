@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 21
+order: 22
 relatedPosts:
   - 'proctologista-e-coloproctologista-entenda-os-termos'
   - 'quando-procurar-coloproctologista-curitiba'

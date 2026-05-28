@@ -15,7 +15,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 24
+order: 25
 relatedPosts:
   - 'fissura-anal-tratamento'
   - 'fissura-anal-quando-cirurgia-indicada'

@@ -15,7 +15,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 29
+order: 30
 faqs:
   - question: 'Cisto pilonidal sempre precisa operar?'
     answer: 'Na maioria dos casos com recorrência, a cirurgia é o tratamento definitivo.'

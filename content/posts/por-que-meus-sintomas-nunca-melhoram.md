@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 22
+order: 23
 faqs:
   - question: 'Sintomas intestinais persistentes podem ser graves?'
     answer: 'Nem sempre, mas precisam de avaliação quando não melhoram ou se repetem com frequência.'

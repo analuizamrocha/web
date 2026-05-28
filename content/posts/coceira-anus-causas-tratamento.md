@@ -15,7 +15,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 27
+order: 28
 faqs:
   - question: 'Coceira anal sempre é hemorroida?'
     answer: 'Não. Existem diversas causas possíveis.'
