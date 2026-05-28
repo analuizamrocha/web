@@ -29,21 +29,21 @@ export function Header() {
     mobileMenuOpen,
     setMobileMenuOpen,
     toggleMobileMenu,
+    closeWithoutScrollRestore,
     mobileMenuRef,
     firstFocusableElementRef,
   } = useMobileMenu()
 
   const handleNavClick = (href: string) => {
-    setMobileMenuOpen(false)
-
     if (isRootPage && href.startsWith('#')) {
-      // Wait for body scroll lock cleanup before measuring positions
+      closeWithoutScrollRestore()
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           scrollToSection(href)
         })
       })
     } else {
+      setMobileMenuOpen(false)
       router.push(href)
     }
   }

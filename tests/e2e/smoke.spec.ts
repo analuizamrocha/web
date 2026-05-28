@@ -18,7 +18,7 @@ test('homepage renders hero content and primary CTA', async ({ page }) => {
   ).toBeVisible()
 
   await expect(
-    page.getByRole('link', {
+    page.locator('#hero').getByRole('link', {
       name: /Agendar consulta com coloproctologista em Curitiba/i,
     })
   ).toBeVisible()

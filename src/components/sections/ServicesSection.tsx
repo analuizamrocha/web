@@ -1,4 +1,6 @@
 import { Card } from '@/components/ui/Card'
+import { LinkButton } from '@/components/ui/LinkButton'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 const services = [
   {
@@ -105,6 +107,25 @@ export function ServicesSection() {
               href={service.href}
             />
           ))}
+        </div>
+
+        <div className="mt-12 lg:mt-16 text-center">
+          <p className="text-base md:text-lg text-body my-6 max-w-2xl mx-auto">
+            Identificou algum desses sintomas?
+            <br />
+            Não espere para cuidar da sua saúde.
+          </p>
+          <LinkButton
+            href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+            external
+            newTab
+            variant="primary"
+            size="xl"
+            className="bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
+            aria-label="Agendar consulta com coloproctologista em Curitiba - Dra. Ana Luiza Moraes Rocha por WhatsApp"
+          >
+            Agende sua consulta agora
+          </LinkButton>
         </div>
       </div>
     </section>
