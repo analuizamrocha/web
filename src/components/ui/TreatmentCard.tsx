@@ -74,14 +74,19 @@ export function TreatmentCard({
           </Badge>
         ) : null}
 
-        <h3
-          className={cn(
-            '!font-sans font-semibold text-primary leading-snug break-words',
-            isDetailed ? 'text-lg sm:text-xl lg:text-2xl' : 'text-base sm:text-lg lg:text-xl'
-          )}
+        <Link
+          href={href}
+          className="relative z-40 w-fit rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/65 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          {title}
-        </h3>
+          <h3
+            className={cn(
+              '!font-sans font-semibold text-primary leading-snug break-words decoration-primary/40 underline-offset-4 group-hover:underline',
+              isDetailed ? 'text-lg sm:text-xl lg:text-2xl' : 'text-base sm:text-lg lg:text-xl'
+            )}
+          >
+            {title}
+          </h3>
+        </Link>
 
         {isDetailed && description ? (
           <p className="text-sm sm:text-base leading-relaxed text-body">{description}</p>
