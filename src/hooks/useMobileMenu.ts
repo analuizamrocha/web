@@ -6,9 +6,16 @@ export function useMobileMenu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
   const firstFocusableElementRef = useRef<HTMLButtonElement>(null)
+  const skipScrollRestoreRef = useRef(false)
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prevState) => !prevState)
+  }
+
+  /** Close the menu without restoring the saved scroll position (use for section nav clicks). */
+  const closeWithoutScrollRestore = () => {
+    skipScrollRestoreRef.current = true
+    setMobileMenuOpen(false)
   }
 
   const cleanupInertAttributes = () => {
@@ -36,7 +43,7 @@ export function useMobileMenu() {
     })
 
     if (header) {
-      const desktopNav = header.querySelector('.hidden.md\\:flex')
+      const desktopNav = header.querySelector('.hidden.lg\\:flex')
       const logoLink = header.querySelector('a[href="/"]')
       if (desktopNav) {
         desktopNav.removeAttribute('inert')
@@ -67,9 +74,11 @@ export function useMobileMenu() {
     style.right = '0'
     style.overflow = 'hidden'
 
-    // Focus the first focusable element in the menu
+    // Focus the first focusable element in the menu.
+    // preventScroll guards against the browser auto-scrolling toward the
+    // (transitioning) panel before our body lock has settled.
     if (firstFocusableElementRef.current) {
-      firstFocusableElementRef.current.focus()
+      firstFocusableElementRef.current.focus({ preventScroll: true })
     }
 
     // Add inert attribute to main content and other elements to prevent tab navigation
@@ -97,7 +106,7 @@ export function useMobileMenu() {
     })
 
     if (header) {
-      const desktopNav = header.querySelector('.hidden.md\\:flex')
+      const desktopNav = header.querySelector('.hidden.lg\\:flex')
       const logoLink = header.querySelector('a[href="/"]')
       if (desktopNav) {
         desktopNav.setAttribute('inert', '')
@@ -111,13 +120,17 @@ export function useMobileMenu() {
     }
 
     return () => {
-      // Restore scroll position and unlock body
       style.position = ''
       style.top = ''
       style.left = ''
       style.right = ''
       style.overflow = ''
-      window.scrollTo(0, scrollY)
+      if (!skipScrollRestoreRef.current) {
+        // 'instant' overrides html { scroll-behavior: smooth }, which would
+        // otherwise animate the restore and the user sees the page scroll back.
+        window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' as ScrollBehavior })
+      }
+      skipScrollRestoreRef.current = false
       cleanupInertAttributes()
     }
   }, [mobileMenuOpen])
@@ -140,6 +153,7 @@ export function useMobileMenu() {
     mobileMenuOpen,
     setMobileMenuOpen,
     toggleMobileMenu,
+    closeWithoutScrollRestore,
     mobileMenuRef,
     firstFocusableElementRef,
   }

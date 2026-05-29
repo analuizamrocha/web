@@ -102,7 +102,7 @@ export default function BlogPage() {
               {posts.map((post, index) => (
                 <article
                   key={post.slug}
-                  className="group overflow-hidden rounded-3xl border border-secondary/20 bg-card-bg shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-secondary/35 hover:shadow-lg"
+                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-secondary/20 bg-card-bg shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-secondary/35 hover:shadow-lg"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-secondary/15">
                     {post.cardImage ? (
@@ -115,7 +115,7 @@ export default function BlogPage() {
                           src={post.cardImage.src}
                           alt={post.cardImage.alt}
                           fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                           sizes="(min-width: 1280px) 36rem, (min-width: 768px) 50vw, 100vw"
                           // index < 2 is a heuristic — desktop shows 2 columns so both above-the-fold cards get priority; mobile shows 1 column so only index 0 truly needs it, but the extra preload on index 1 is harmless
                           priority={index < 2}
@@ -126,7 +126,7 @@ export default function BlogPage() {
                     )}
                   </div>
 
-                  <div className="p-5 lg:p-6">
+                  <div className="flex flex-1 flex-col p-5 lg:p-6">
                     <div className="mb-3 flex items-center gap-4 text-sm text-text-muted">
                       <time dateTime={post.publishDate}>
                         {new Date(post.publishDate).toLocaleDateString('pt-BR', {
@@ -144,7 +144,7 @@ export default function BlogPage() {
                       <MDXRemote source={post.excerpt} />
                     </div>
 
-                    <div className="flex items-end justify-between gap-4">
+                    <div className="mt-auto flex items-end justify-between gap-4">
                       <div className="mr-4 flex flex-wrap gap-2">
                         <Badge variant="primary">{getContentIntentLabel(post.intent)}</Badge>
                         <Badge variant="secondary">

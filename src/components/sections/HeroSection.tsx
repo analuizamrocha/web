@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF } from '@/lib/constants'
+import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
 
 export function HeroSection() {
   return (
@@ -43,7 +43,7 @@ export function HeroSection() {
             {/* Elegant CTA Section */}
             <div className="mt-8">
               <LinkButton
-                href={`https://wa.me/${WPP_NUMBER_NASSIF}`}
+                href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
                 external
                 newTab
                 variant="primary"

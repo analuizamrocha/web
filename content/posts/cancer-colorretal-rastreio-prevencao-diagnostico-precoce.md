@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 16
+order: 17
 faqs:
   - question: 'O rastreio é necessário mesmo sem sintomas?'
     answer: 'Sim. O câncer colorretal pode ser silencioso nas fases iniciais.'

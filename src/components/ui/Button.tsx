@@ -22,7 +22,7 @@ const buttonVariants = cva(
         outline:
           'border-2 border-primary text-primary hover:bg-primary hover:text-background hover:shadow-sm focus:bg-primary/10 focus:text-primary active:bg-primary/20 disabled:border-primary/30 disabled:text-primary/30 disabled:cursor-not-allowed disabled:transform-none',
         ghost:
-          'text-primary hover:bg-neutral-100 hover:shadow-sm focus:bg-neutral-100 active:bg-neutral-200 disabled:text-primary/40 disabled:cursor-not-allowed disabled:transform-none',
+          'text-muted hover:text-primary focus:text-primary active:text-primary/80 disabled:text-primary/40 disabled:cursor-not-allowed disabled:transform-none',
         link: 'text-primary hover:text-primary/80 underline-offset-4 hover:underline transition-colors font-medium disabled:text-primary/40 disabled:cursor-not-allowed bg-transparent border-none rounded-none p-0 h-auto transform-none hover:transform-none active:transform-none',
         destructive:
           'bg-red-600 text-white hover:bg-red-700 hover:shadow-md focus:bg-red-700 active:bg-red-800 disabled:bg-red-300 disabled:cursor-not-allowed disabled:transform-none',

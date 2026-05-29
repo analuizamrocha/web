@@ -2,8 +2,8 @@
 title: 'Fissura anal: quando a cirurgia está indicada?'
 metaDescription: 'Fissura anal crônica pode precisar de cirurgia quando o tratamento clínico falha. Conheça as técnicas disponíveis e saiba quando a cirurgia é a melhor opção.'
 slug: 'fissura-anal-quando-cirurgia-indicada'
-publishDate: '2026-04-01'
-lastModified: '2026-04-01'
+publishDate: '2026-04-04'
+lastModified: '2026-04-04'
 primaryKeyword: 'cirurgia fissura anal'
 secondaryKeywords:
   - 'fissura anal crônica cirurgia'
@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 31
+order: 32
 faqs:
   - question: 'Fissura anal sempre precisa de cirurgia?'
     answer: 'Não. Muitas fissuras cicatrizam com tratamento clínico. A cirurgia costuma ser considerada quando a fissura se torna crônica e não responde às outras abordagens.'

@@ -15,7 +15,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 23
+order: 24
 faqs:
   - question: 'Dor ao evacuar pode ser apenas constipação?'
     answer: 'Pode, mas é importante avaliar se há fissura ou inflamação associada.'

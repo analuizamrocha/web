@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 19
+order: 20
 faqs:
   - question: 'Preciso retornar mesmo se estiver melhor?'
     answer: 'Em muitos casos, sim. O acompanhamento ajuda a prevenir recaídas e ajustar condutas antes de novas crises.'

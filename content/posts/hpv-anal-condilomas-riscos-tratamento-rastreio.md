@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 12
+order: 13
 relatedPosts:
   - 'cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar'
   - 'saude-sexual-cuidado-informacao-bem-estar'

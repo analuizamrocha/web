@@ -10,7 +10,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 10
+order: 11
 faqs:
   - question: 'Diarreia crônica pode ser apenas "nervosa"?'
     answer: 'Pode estar relacionada ao estresse, especialmente na síndrome do intestino irritável. Ainda assim, é importante investigar antes de atribuir os sintomas apenas a fatores emocionais.'

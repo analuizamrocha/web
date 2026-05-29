@@ -46,27 +46,29 @@ export function useActiveSection(isRootPage: boolean) {
   }, [isRootPage])
 
   const scrollToSection = (href: string) => {
-    if (href.startsWith('#')) {
-      const element = document.getElementById(href.slice(1))
-      if (element) {
-        // Dynamically measure header + add breathing room to match CSS scroll-margin-top
-        const header = document.querySelector('header')
-        const headerHeight = header ? header.getBoundingClientRect().height : 69
-        const scrollPadding = 24 // breathing room below header
-        const elementPosition =
-          element.getBoundingClientRect().top + window.pageYOffset
-        const offsetPosition = elementPosition - headerHeight - scrollPadding
+    if (!href.startsWith('#')) return
+    const element = document.getElementById(href.slice(1))
+    if (!element) return
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        })
+    // Sections below the fold use `content-visibility: auto` with a placeholder
+    // intrinsic size. During a smooth scroll, those placeholders swap for real
+    // content as they enter the viewport — that reflows the document and the
+    // scroll target drifts, so we land at the wrong section. Pin the deferred
+    // sections to `visible` for the rest of this page session: the user has
+    // committed to engaging with the page, so the initial-paint perf savings
+    // no longer matter, and stable layout matters more than memory savings.
+    document
+      .querySelectorAll<HTMLElement>('.section-deferred')
+      .forEach((el) => {
+        el.style.contentVisibility = 'visible'
+      })
 
-        // Clear focus from the clicked button to allow intersection observer to take over
-        if (document.activeElement instanceof HTMLElement) {
-          document.activeElement.blur()
-        }
-      }
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+    // Clear focus from the clicked button so the IntersectionObserver can take
+    // over highlighting the active section.
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur()
     }
   }
 

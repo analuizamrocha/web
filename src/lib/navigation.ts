@@ -44,7 +44,7 @@ export const globalNavigation: NavigationItem[] = [
   { name: 'Início', href: '/', id: 'home', type: 'route' },
   { name: 'Blog', href: '/blog', id: 'blog', type: 'route' },
   {
-    name: 'Locais',
+    name: 'Locais de atendimento',
     href: '/locais-de-atendimento',
     id: 'locais',
     type: 'route',

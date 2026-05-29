@@ -2,8 +2,8 @@
 title: 'Câncer de canal anal: rastreio, HPV e quem deve se preocupar'
 metaDescription: 'Câncer de canal anal está relacionado ao HPV e pode ser prevenido com rastreio adequado. Saiba quem deve se preocupar e quando buscar avaliação especializada.'
 slug: 'cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar'
-publishDate: '2026-04-01'
-lastModified: '2026-04-01'
+publishDate: '2026-04-12'
+lastModified: '2026-04-12'
 primaryKeyword: 'câncer de canal anal'
 secondaryKeywords:
   - 'rastreio câncer anal'
@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 33
+order: 34
 faqs:
   - question: 'HPV sempre causa câncer anal?'
     answer: 'Não. A maioria das infecções não evolui para câncer, especialmente quando há acompanhamento adequado.'

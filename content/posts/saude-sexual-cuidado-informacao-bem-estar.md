@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 15
+order: 16
 faqs:
   - question: 'Dor durante a relação sexual é normal?'
     answer: 'Não. Dor deve sempre ser investigada.'

@@ -15,7 +15,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 28
+order: 29
 faqs:
   - question: 'Hemorroida sempre precisa de cirurgia?'
     answer: 'Não. Muitos casos melhoram com ajustes intestinais e tratamentos conservadores.'

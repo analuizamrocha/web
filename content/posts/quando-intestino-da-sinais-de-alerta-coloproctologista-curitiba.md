@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 20
+order: 21
 faqs:
   - question: 'Sangue nas fezes sempre é hemorroida?'
     answer: 'Não. O sangramento pode ter diversas causas, desde doenças benignas até condições que exigem investigação rápida.'

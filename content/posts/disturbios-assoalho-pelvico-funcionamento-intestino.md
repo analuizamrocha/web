@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 14
+order: 15
 faqs:
   - question: 'Distúrbios do assoalho pélvico têm tratamento?'
     answer: 'Sim. Na maioria dos casos, o tratamento é conservador e traz bons resultados.'

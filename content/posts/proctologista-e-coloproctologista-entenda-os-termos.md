@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'awareness'
 featured: false
-order: 34
+order: 35
 relatedPosts:
   - 'quando-procurar-coloproctologista-curitiba'
   - 'sinto-vergonha-procurar-coloproctologista-isso-e-normal'

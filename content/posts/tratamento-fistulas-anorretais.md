@@ -14,7 +14,7 @@ secondaryKeywords:
 targetAudience: 'patients'
 intent: 'consideration'
 featured: false
-order: 17
+order: 18
 faqs:
   - question: 'Fístula anal melhora sozinha?'
     answer: 'Na maioria dos casos, não. Sem tratamento adequado, o trajeto fistuloso tende a persistir e recidivar.'
