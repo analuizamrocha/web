@@ -595,10 +595,11 @@ export default function SobrePage() {
                 <LinkButton
                   href="/locais-de-atendimento"
                   size="xl"
-                  variant="subtle"
-                  className="text-lg px-8 py-4 font-semibold text-nowrap shadow-lg hover:shadow-xl transform transition-all duration-300"
+                  variant="ghost"
+                  className="group text-lg px-8 py-4 font-semibold text-nowrap transition-colors duration-200"
                 >
                   Ver locais de atendimento
+                  <span className="ml-2 transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                 </LinkButton>
               </>
             }
