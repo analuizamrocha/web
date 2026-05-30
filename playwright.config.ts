@@ -20,7 +20,10 @@ export default defineConfig({
     baseURL,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    // `video: 'retain-on-failure'` hangs context teardown for ~30s per failed
+    // test when paired with `channel: 'chrome'`. Disabled for now — re-enable
+    // once we're back on Playwright's bundled Chromium.
+    video: 'off',
   },
   webServer: process.env.PLAYWRIGHT_BASE_URL
     ? undefined
@@ -33,7 +36,11 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      // Use the system-installed Google Chrome instead of Playwright's bundled
+      // Chromium. Avoids the playwright.download.prss.microsoft.com 400 outage.
+      // If a contributor doesn't have Chrome locally, remove `channel: 'chrome'`
+      // and run `bunx playwright install chromium`.
+      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     },
   ],
 })
