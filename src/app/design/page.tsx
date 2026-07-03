@@ -10,6 +10,7 @@ import { Divider } from '@/components/ui/Divider'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { TreatmentCard } from '@/components/ui/TreatmentCard'
+import { WHATSAPP_HREF_SECRETARY } from '@/lib/constants'
 
 /**
  * Dev-only kitchen-sink page.
@@ -75,7 +76,7 @@ const TOC = [
 const SAMPLE_FAQ = [
   {
     question: 'Como agendo uma consulta?',
-    answer: 'Você pode agendar pelo botão "Agendar consulta" ou diretamente pelo WhatsApp da Clínica Nassif.',
+    answer: 'Você pode agendar pelo botão "Agendar consulta" ou diretamente pelo nosso WhatsApp.',
   },
   {
     question: 'Quais convênios são aceitos?',
@@ -87,7 +88,7 @@ export default function DesignPage() {
   if (process.env.NODE_ENV === 'production') notFound()
 
   return (
-    <main className="mx-auto max-w-[1280px] px-6 py-16 sm:px-8 lg:px-10 xl:px-12">
+    <main className="mx-auto max-w-[1280px] px-6 pt-24 pb-16 sm:px-8 md:pt-28 lg:px-10 xl:px-12">
       <header className="mb-12">
         <p className="text-xs font-mono uppercase tracking-wider text-muted">dev only · not indexed</p>
         <h1 className="mt-2 font-serif text-4xl font-bold text-heading sm:text-5xl">
@@ -249,7 +250,7 @@ export default function DesignPage() {
           <LinkButton href="/" variant="primary" size="lg">
             Internal link
           </LinkButton>
-          <LinkButton href="https://wa.me/+5541988645800" external newTab variant="outline" size="lg">
+          <LinkButton href={WHATSAPP_HREF_SECRETARY} external newTab variant="outline" size="lg">
             External + new tab
           </LinkButton>
           <LinkButton href="/blog" variant="ghost" size="lg" className="group">
@@ -350,7 +351,7 @@ export default function DesignPage() {
           }
           actions={
             <>
-              <LinkButton href="https://wa.me/+5541988645800" external newTab variant="primary" size="lg">
+              <LinkButton href={WHATSAPP_HREF_SECRETARY} external newTab variant="primary" size="lg">
                 Agendar consulta
               </LinkButton>
               <LinkButton href="/locais-de-atendimento" variant="outline" size="lg">
@@ -370,7 +371,7 @@ export default function DesignPage() {
           title="Vamos cuidar da sua saúde juntos?"
           body="Estou aqui para oferecer o cuidado especializado que você merece."
           actions={
-            <LinkButton href="https://wa.me/+5541988645800" external newTab variant="primary" size="lg">
+            <LinkButton href={WHATSAPP_HREF_SECRETARY} external newTab variant="primary" size="lg">
               Agendar consulta
             </LinkButton>
           }

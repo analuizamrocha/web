@@ -6,12 +6,11 @@ import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { LinkButton } from '@/components/ui/LinkButton'
 import {
-  WPP_NUMBER_NASSIF,
-  WHATSAPP_MSG_TEXT_ENCODED,
+  WHATSAPP_HREF_SECRETARY,
   WEBSITE_URL,
   CLINICA_NASSIF,
   DR_NAME,
-  WPP_NUMBER_NASSIF_FORMATTED,
+  WPP_NUMBER_SECRETARY_FORMATTED,
   URL_INSTAGRAM,
   CRM_NUMBER,
   RQE_NUMBER,
@@ -221,7 +220,7 @@ export default function SobrePage() {
                 latitude: CLINICA_NASSIF.coordinates.latitude,
                 longitude: CLINICA_NASSIF.coordinates.longitude,
               },
-              telephone: WPP_NUMBER_NASSIF_FORMATTED,
+              telephone: WPP_NUMBER_SECRETARY_FORMATTED,
               url: WEBSITE_URL,
               image: `${WEBSITE_URL}/images/og.png`,
               priceRange: '$$',
@@ -574,7 +573,7 @@ export default function SobrePage() {
             actions={
               <>
                 <LinkButton
-                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  href={WHATSAPP_HREF_SECRETARY}
                   external
                   newTab
                   variant="primary"

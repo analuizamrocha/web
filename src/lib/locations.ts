@@ -1,4 +1,5 @@
 import {
+  buildWhatsAppHref,
   CLINICA_NASSIF,
   DR_NAME,
   SPECTA_ENDOSCOPIA,
@@ -13,9 +14,6 @@ export const LOCATIONS_BASE_PATH = '/locais-de-atendimento'
 const WHATSAPP_COLONOSCOPY_TEXT = encodeURIComponent(
   'Olá! Gostaria de agendar minha colonoscopia com a Dra. Ana Luiza Rocha.'
 )
-
-const createWhatsAppHref = (phone: string, encodedText: string) =>
-  `https://wa.me/${phone.replace(/\D/g, '')}/?text=${encodedText}`
 
 const createPhoneHref = (phone: string) => `tel:${phone.replace(/\D/g, '')}`
 
@@ -158,7 +156,7 @@ export const locationPages: LocationPageData[] = [
     phoneDisplay: CLINICA_NASSIF.phone,
     phoneHref: createPhoneHref(CLINICA_NASSIF.phoneFormatted),
     whatsappDisplay: CLINICA_NASSIF.wpp,
-    whatsappHref: createWhatsAppHref(WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED),
+    whatsappHref: buildWhatsAppHref(WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED),
     mapUrl: CLINICA_NASSIF.maps,
     mapLabel: 'Ver rota para a Clínica Nassif',
     primaryCtaLabel: 'Agendar consulta',
@@ -396,7 +394,7 @@ export const locationPages: LocationPageData[] = [
     phoneDisplay: SPECTA_ENDOSCOPIA.phone,
     phoneHref: createPhoneHref(SPECTA_ENDOSCOPIA.phone),
     whatsappDisplay: SPECTA_ENDOSCOPIA.phone,
-    whatsappHref: createWhatsAppHref(SPECTA_ENDOSCOPIA.wppNumber, WHATSAPP_COLONOSCOPY_TEXT),
+    whatsappHref: buildWhatsAppHref(SPECTA_ENDOSCOPIA.wppNumber, WHATSAPP_COLONOSCOPY_TEXT),
     mapUrl: SPECTA_ENDOSCOPIA.maps,
     mapLabel: 'Ver rota para a Specta Endoscopia Digestiva',
     primaryCtaLabel: 'Agendar colonoscopia',

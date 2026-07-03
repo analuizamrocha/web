@@ -10,14 +10,12 @@ import {
   getLocationsIndexStructuredData,
   locationPages,
 } from '@/lib/locations'
-import { WEBSITE_URL, WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import { WEBSITE_URL, WHATSAPP_HREF_SECRETARY } from '@/lib/constants'
 
 const pageTitle = 'Locais de atendimento em Curitiba'
 const pageDescription =
   'Veja onde a Dra. Ana Luiza Rocha atende em Curitiba, com informações sobre consulta em coloproctologia, colonoscopia, endereços e agendamento.'
 const pageUrl = `${WEBSITE_URL}${LOCATIONS_BASE_PATH}`
-
-const nassifWhatsAppHref = `https://wa.me/${WPP_NUMBER_NASSIF.replace(/\D/g, '')}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -63,7 +61,7 @@ const choiceRows: ChoiceRowItem[] = [
     when: 'Dúvida sobre agendamento',
     recommendationStrong: 'Fale com a equipe.',
     recommendationRest: 'O atendimento ajuda a identificar o melhor ponto de partida.',
-    href: nassifWhatsAppHref,
+    href: WHATSAPP_HREF_SECRETARY,
     variant: 'terracotta',
     external: true,
   },
@@ -186,7 +184,7 @@ export default function LocationsIndexPage() {
         <StickyCTABar
           eyebrow="Não sabe por onde começar?"
           message="Nossa equipe te ajuda a dar o primeiro passo"
-          primaryHref={nassifWhatsAppHref}
+          primaryHref={WHATSAPP_HREF_SECRETARY}
           primaryLabel="Agendar consulta"
         />
       </div>

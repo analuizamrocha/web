@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
 import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED, WEBSITE_URL } from '@/lib/constants'
+import { WHATSAPP_HREF_SECRETARY, WEBSITE_URL } from '@/lib/constants'
 import {
   generateFAQSchema,
   generateBreadcrumbSchema,
@@ -348,7 +348,7 @@ export default function SindromeIntestinoIrritavelPage() {
               }
               actions={
                 <LinkButton
-                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  href={WHATSAPP_HREF_SECRETARY}
                   external
                   newTab
                   variant="primary"

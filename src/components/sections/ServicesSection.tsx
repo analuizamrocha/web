@@ -1,6 +1,6 @@
 import { Card } from '@/components/ui/Card'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED } from '@/lib/constants'
+import { WHATSAPP_HREF_SECRETARY } from '@/lib/constants'
 
 const services = [
   {
@@ -116,7 +116,7 @@ export function ServicesSection() {
             Não espere para cuidar da sua saúde.
           </p>
           <LinkButton
-            href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+            href={WHATSAPP_HREF_SECRETARY}
             external
             newTab
             variant="primary"

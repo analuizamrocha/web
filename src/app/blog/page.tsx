@@ -9,8 +9,7 @@ import {
   WEBSITE_URL,
   SITE_NAME,
   TAG_INSTAGRAM,
-  WPP_NUMBER_NASSIF,
-  WHATSAPP_MSG_TEXT_ENCODED,
+  WHATSAPP_HREF_SECRETARY,
 } from '@/lib/constants'
 
 const BLOG_PAGE_TITLE = 'Blog — Saúde intestinal sem tabu'
@@ -176,23 +175,23 @@ export default function BlogPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LinkButton
-                  href="/sobre"
+                  href={WHATSAPP_HREF_SECRETARY}
                   size="lg"
                   variant="primary"
-                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl hover:scale-105"
-                >
-                  Saber mais
-                </LinkButton>
-                <LinkButton
-                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
-                  size="lg"
-                  variant="outline"
                   external
                   newTab
-                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl"
+                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl hover:scale-105"
                   aria-label="Agendar consulta com a Dra. Ana Luiza Moraes Rocha pelo WhatsApp"
                 >
                   Agendar consulta
+                </LinkButton>
+                <LinkButton
+                  href="/sobre"
+                  size="lg"
+                  variant="outline"
+                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl"
+                >
+                  Saber mais
                 </LinkButton>
               </div>
             </div>
