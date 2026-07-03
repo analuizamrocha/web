@@ -25,6 +25,8 @@ faqs:
     answer: "Em muitos casos, sim — principalmente em fissuras crônicas com espasmo muscular, pois relaxa o esfíncter e cria melhores condições para a cicatrização."
 ---
 
+_A fissura anal pode cicatrizar sozinha em casos agudos, mas quando a dor persiste, tratar a causa intestinal é o que evita o quadro crônico._
+
 Dor intensa ao evacuar. Sensação de corte. Medo de ir ao banheiro. A **fissura anal** é uma das condições mais dolorosas da coloproctologia e também uma das mais negligenciadas.
 
 Muitos pacientes passam semanas tentando pomadas por conta própria, esperando que o problema desapareça sozinho. Mas afinal, **a fissura anal pode realmente cicatrizar sozinha?**

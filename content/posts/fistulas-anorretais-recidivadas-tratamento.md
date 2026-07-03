@@ -26,6 +26,8 @@ faqs:
     answer: "Não. O tratamento da fístula recidivada deve ser individualizado conforme anatomia, inflamação, histórico cirúrgico e continência do paciente."
 ---
 
+_Nas fístulas anorretais recidivadas, o desafio não é apenas fechar o trajeto: é preservar a continência com a técnica certa para cada caso._
+
 As **fístulas anorretais recidivadas** representam um dos maiores desafios da coloproctologia moderna. Quando uma fístula retorna após a cirurgia, o problema deixa de ser apenas o fechamento do trajeto: passa a envolver **preservação funcional**, **controle inflamatório** e **escolha estratégica da técnica**.
 
 Foi justamente esse cenário complexo que motivou minha **pesquisa de mestrado** sobre tratamento de fístulas anorretais recidivadas e terapias regenerativas associadas. Neste artigo, compartilho um pouco da experiência construída durante essa trajetória acadêmica e como a coloproctologia vem evoluindo na busca por tratamentos mais individualizados.

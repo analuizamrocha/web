@@ -29,6 +29,8 @@ faqs:
     answer: "Em muitos casos, sim. A vacina não trata a infecção existente, mas pode proteger contra outros subtipos. A indicação deve ser individualizada."
 ---
 
+_Descobrir que tem HPV anal assusta, mas na maioria dos casos existe tratamento, acompanhamento e formas eficazes de reduzir riscos._
+
 Receber o diagnóstico de HPV costuma ser assustador. É comum que, nos primeiros minutos, surjam inúmeras dúvidas: *"Isso é câncer?"*, *"Vou transmitir para meu parceiro?"*, *"Vou conviver com isso para sempre?"*, *"Preciso operar?"*
 
 Se você acabou de descobrir que tem **HPV anal**, a primeira coisa que gostaria de dizer é: **respire.**

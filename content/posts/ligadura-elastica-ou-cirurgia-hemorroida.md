@@ -28,6 +28,8 @@ faqs:
     answer: "Sim, principalmente se fatores como constipação e esforço evacuatório não forem corrigidos."
 ---
 
+_Nem toda hemorroida precisa de cirurgia: a ligadura elástica resolve muitos casos, e o grau da doença define qual tratamento faz mais sentido._
+
 Receber o diagnóstico de hemorroida costuma trazer duas preocupações. A primeira é **aliviar os sintomas**. A segunda, quase sempre, é o **medo de precisar de cirurgia**.
 
 A boa notícia é que **nem toda hemorroida precisa ser operada**. Em muitos casos, é possível tratar a doença com procedimentos realizados no próprio consultório, como a **ligadura elástica**. Mas quando ela realmente funciona? E quando a cirurgia passa a ser a melhor opção?

@@ -28,6 +28,8 @@ faqs:
     answer: "Sim. O seguimento é importante, principalmente em pacientes de risco, para identificar recidivas precocemente."
 ---
 
+_A vaporização com laser de CO2 trata lesões anais por HPV com precisão e menor agressão, mas o acompanhamento continua sendo parte essencial do cuidado._
+
 Receber o diagnóstico de **HPV anal** costuma gerar muitas dúvidas. "Precisa tratar?" "Isso pode voltar?" "Laser realmente funciona?"
 
 Hoje, a **vaporização com laser de CO2** representa uma das principais ferramentas no tratamento de lesões anais relacionadas ao HPV, especialmente em casos selecionados. Além da precisão cirúrgica, o laser permite uma abordagem minimamente invasiva e cuidadosa de uma região extremamente delicada.
