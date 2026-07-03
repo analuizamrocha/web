@@ -75,6 +75,7 @@ export const structuredData = {
       description: PHYSICIAN_DESCRIPTION,
       image: `${WEBSITE_URL}/images/og.png`,
       url: WEBSITE_URL,
+      telephone: WPP_NUMBER_SECRETARY_FORMATTED,
       sameAs: [URL_INSTAGRAM],
       alumniOf: [
         {
@@ -138,6 +139,7 @@ export const structuredData = {
       workLocation: {
         '@type': 'MedicalClinic',
         name: CLINICA_NASSIF.name,
+        telephone: CLINICA_NASSIF.phoneFormatted,
         address: {
           '@type': 'PostalAddress',
           streetAddress: CLINICA_NASSIF.address,
