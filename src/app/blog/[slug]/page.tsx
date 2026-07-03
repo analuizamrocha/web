@@ -14,8 +14,7 @@ import {
 } from '@/lib/blog'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import {
-  WHATSAPP_MSG_TEXT_ENCODED,
-  WPP_NUMBER_NASSIF,
+  WHATSAPP_HREF_SECRETARY,
   WEBSITE_URL,
   SITE_NAME,
   TAG_INSTAGRAM,
@@ -232,7 +231,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               }
               actions={
                 <LinkButton
-                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  href={WHATSAPP_HREF_SECRETARY}
                   external
                   newTab
                   variant="primary"

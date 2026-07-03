@@ -7,8 +7,7 @@ import { LinkButton } from '@/components/ui/LinkButton'
 import { TreatmentHeroImage } from '@/components/ui/TreatmentHeroImage'
 import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import {
-  WPP_NUMBER_NASSIF,
-  WHATSAPP_MSG_TEXT_ENCODED,
+  WHATSAPP_HREF_SECRETARY,
   WEBSITE_URL,
   CRM_NUMBER,
 } from '@/lib/constants'
@@ -369,7 +368,7 @@ export default function RastreioCancerAnalPage() {
               }
               actions={
                 <LinkButton
-                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  href={WHATSAPP_HREF_SECRETARY}
                   external
                   newTab
                   variant="primary"
