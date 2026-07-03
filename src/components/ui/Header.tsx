@@ -1,9 +1,8 @@
 'use client'
 
 import {
-  WPP_NUMBER_NASSIF,
-  WPP_NUMBER_NASSIF_FORMATTED,
-  WHATSAPP_MSG_TEXT_ENCODED,
+  WHATSAPP_HREF_SECRETARY,
+  WPP_NUMBER_SECRETARY_FORMATTED,
   TAG_INSTAGRAM,
   URL_INSTAGRAM,
   CRM_RQE_TEXT,
@@ -282,12 +281,12 @@ export function Header() {
                 <div>
                   <p className="text-sm font-medium text-primary mb-1">WhatsApp</p>
                   <Link
-                    href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                    href={WHATSAPP_HREF_SECRETARY}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-secondary font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-sm cursor-pointer"
                   >
-                    {WPP_NUMBER_NASSIF_FORMATTED}
+                    {WPP_NUMBER_SECRETARY_FORMATTED}
                   </Link>
                 </div>
 
