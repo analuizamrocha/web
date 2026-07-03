@@ -119,8 +119,19 @@ export const WHATSAPP_MSG_TEXT_SECRETARY =
 export const WHATSAPP_MSG_TEXT_SECRETARY_ENCODED =
   'Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra%20Ana%20Luiza%20Rocha%20'
 
+/**
+ * Build a wa.me link from a phone number and a pre-encoded message.
+ * Strips non-digits from the number so E.164 (`+55...`) or formatted inputs
+ * all normalize to the digits wa.me expects.
+ */
+export const buildWhatsAppHref = (phone: string, encodedMessage: string) =>
+  `https://wa.me/${phone.replace(/\D/g, '')}?text=${encodedMessage}`
+
 /** Ready-to-use wa.me href for scheduling a consultation with the secretary */
-export const WHATSAPP_HREF_SECRETARY = `https://wa.me/${WPP_NUMBER_SECRETARY}?text=${WHATSAPP_MSG_TEXT_SECRETARY_ENCODED}`
+export const WHATSAPP_HREF_SECRETARY = buildWhatsAppHref(
+  WPP_NUMBER_SECRETARY,
+  WHATSAPP_MSG_TEXT_SECRETARY_ENCODED
+)
 
 // =============================================================================
 // Clínica Nassif Information
