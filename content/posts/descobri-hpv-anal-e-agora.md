@@ -149,6 +149,7 @@ Se você recebeu recentemente o diagnóstico de HPV anal ou apresenta lesões na
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
+Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia  
 

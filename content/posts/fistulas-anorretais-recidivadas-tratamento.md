@@ -124,6 +124,7 @@ Se você possui fístula anal recorrente ou deseja avaliação especializada, ag
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
+Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia  
 

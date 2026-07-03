@@ -170,6 +170,7 @@ Se você apresenta sangramento, prolapso ou desconforto relacionado às hemorroi
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
+Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia  
 

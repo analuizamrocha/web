@@ -151,6 +151,7 @@ Se você apresenta dor ao evacuar ou suspeita de fissura anal, agende uma consul
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
+Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia  
 

@@ -142,6 +142,7 @@ Se você possui lesões por HPV ou dúvidas sobre tratamento e rastreio, agende 
 ---
 
 **Dra. Ana Luiza Moraes Rocha**  
+Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
 Especialista em Coloproctologia  
 
