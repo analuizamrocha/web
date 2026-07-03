@@ -99,6 +99,30 @@ export const WHATSAPP_MSG_TEXT_ENCODED =
   'Ol%C3%A1%21%0A%0AGostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Ana%20Luiza%20Rocha.%20'
 
 // =============================================================================
+// WhatsApp Contact — Agendamento (secretária / Dra. Ana Luiza)
+// =============================================================================
+// Direct scheduling line for consultations with Dra. Ana Luiza. Used by the
+// general "agendar consulta" CTAs across the site. Clinic-specific location
+// cards keep their own numbers (Clínica Nassif / Specta) below.
+
+/** Scheduling WhatsApp number in E.164 digits (for wa.me links) */
+export const WPP_NUMBER_SECRETARY = '554130739732'
+
+/** Scheduling WhatsApp number formatted for display */
+export const WPP_NUMBER_SECRETARY_FORMATTED = '(41) 3073-9732'
+
+/** Scheduling WhatsApp message text (plain) */
+export const WHATSAPP_MSG_TEXT_SECRETARY =
+  'Olá! Gostaria de agendar uma consulta com a Dra Ana Luiza Rocha '
+
+/** Scheduling WhatsApp message text (URL encoded for links) */
+export const WHATSAPP_MSG_TEXT_SECRETARY_ENCODED =
+  'Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra%20Ana%20Luiza%20Rocha%20'
+
+/** Ready-to-use wa.me href for scheduling a consultation with the secretary */
+export const WHATSAPP_HREF_SECRETARY = `https://wa.me/${WPP_NUMBER_SECRETARY}?text=${WHATSAPP_MSG_TEXT_SECRETARY_ENCODED}`
+
+// =============================================================================
 // Clínica Nassif Information
 // =============================================================================
 

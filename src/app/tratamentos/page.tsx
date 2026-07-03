@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { WPP_NUMBER_NASSIF, WHATSAPP_MSG_TEXT_ENCODED, WEBSITE_URL } from '@/lib/constants'
+import { WHATSAPP_HREF_SECRETARY, WEBSITE_URL } from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { TreatmentCard } from '@/components/ui/TreatmentCard'
 import { getTreatmentImageBySlug } from '@/lib/treatment-images'
@@ -178,7 +178,7 @@ export default function ServicosPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LinkButton
-                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  href={WHATSAPP_HREF_SECRETARY}
                   external
                   newTab
                   variant="primary"

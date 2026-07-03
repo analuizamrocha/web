@@ -6,8 +6,7 @@ import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { LinkButton } from '@/components/ui/LinkButton'
 import {
-  WPP_NUMBER_NASSIF,
-  WHATSAPP_MSG_TEXT_ENCODED,
+  WHATSAPP_HREF_SECRETARY,
   WEBSITE_URL,
   CLINICA_NASSIF,
   DR_NAME,
@@ -574,7 +573,7 @@ export default function SobrePage() {
             actions={
               <>
                 <LinkButton
-                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  href={WHATSAPP_HREF_SECRETARY}
                   external
                   newTab
                   variant="primary"

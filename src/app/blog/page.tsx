@@ -9,8 +9,7 @@ import {
   WEBSITE_URL,
   SITE_NAME,
   TAG_INSTAGRAM,
-  WPP_NUMBER_NASSIF,
-  WHATSAPP_MSG_TEXT_ENCODED,
+  WHATSAPP_HREF_SECRETARY,
 } from '@/lib/constants'
 
 const BLOG_PAGE_TITLE = 'Blog — Saúde intestinal sem tabu'
@@ -184,7 +183,7 @@ export default function BlogPage() {
                   Saber mais
                 </LinkButton>
                 <LinkButton
-                  href={`https://wa.me/${WPP_NUMBER_NASSIF}/?text=${WHATSAPP_MSG_TEXT_ENCODED}`}
+                  href={WHATSAPP_HREF_SECRETARY}
                   size="lg"
                   variant="outline"
                   external
