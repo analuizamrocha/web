@@ -71,8 +71,6 @@ Nesses casos, ajustes simples podem ajudar:
 - melhora da consistência das fezes
 - redução do esforço evacuatório
 
-![Comparação entre fissura anal aguda e fissura anal crônica](/images/posts/fissura-anal-pode-cicatrizar-sozinha/fissura-aguda-cronica.webp)
-
 ## Quando a fissura se torna crônica
 
 O problema é que algumas fissuras entram em um ciclo difícil:

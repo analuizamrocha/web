@@ -58,8 +58,6 @@ As hemorroidas permanecem **permanentemente para fora** do canal anal e não ret
 
 Além do grau da doença, também avaliamos a presença de hemorroidas externas, plicomas e outros fatores que podem influenciar a escolha do tratamento.
 
-![Ilustração dos quatro graus de hemorroida interna](/images/posts/ligadura-elastica-ou-cirurgia-hemorroida/graus-hemorroida.webp)
-
 ## O que é a ligadura elástica?
 
 A ligadura elástica é um **procedimento realizado no consultório**. Por meio de um aparelho específico, um pequeno anel elástico é colocado na base da hemorroida interna, interrompendo o fluxo sanguíneo da hemorroida.

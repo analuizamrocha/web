@@ -96,8 +96,6 @@ A recuperação depende da extensão das lesões, da quantidade tratada e da ár
 
 Sim. Ambas são técnicas válidas. A **eletrocauterização** continua sendo muito utilizada e eficaz no tratamento das lesões. Já o **laser de CO2** oferece maior precisão, melhor controle superficial e menor dano térmico lateral. A escolha depende da anatomia das lesões e da estratégia terapêutica.
 
-![Comparação entre laser de CO2 e eletrocauterização no tratamento de lesões anais por HPV](/images/posts/hpv-anal-vaporizacao-laser-co2/laser-co2-x-cauterizacao.webp)
-
 ## A vacina contra HPV continua sendo importante?
 
 Sim — mesmo após o tratamento. A vacinação **não trata lesões existentes**, mas ajuda a reduzir o risco de novas infecções e reinfecções. Ela faz parte da prevenção moderna relacionada ao HPV.

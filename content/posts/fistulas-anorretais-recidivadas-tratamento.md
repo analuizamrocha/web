@@ -62,8 +62,6 @@ Atualmente, diferentes estratégias podem ser utilizadas dependendo do caso:
 
 Cada técnica possui **vantagens, limitações e indicações específicas**.
 
-![Comparação esquemática de técnicas para fístula anal com foco na preservação do esfíncter](/images/posts/fistulas-anorretais-recidivadas-tratamento/tecnicas-preservacao-esfincter.webp)
-
 ## O papel do seton nas fístulas complexas
 
 Em trajetos extensos e espessos, muitas vezes a primeira etapa do tratamento envolve a colocação de **seton**. O objetivo é:
