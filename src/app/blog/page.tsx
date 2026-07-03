@@ -188,7 +188,7 @@ export default function BlogPage() {
                 <LinkButton
                   href="/sobre"
                   size="lg"
-                  variant="secondary"
+                  variant="outline"
                   className="font-semibold text-nowrap shadow-lg hover:shadow-xl"
                 >
                   Saber mais
