@@ -73,7 +73,7 @@ export function Footer() {
               {TAG_INSTAGRAM}
             </span>
             <div className="group-hover:scale-105 group-active:scale-95 transition-all duration-300 group-hover:drop-shadow-[0_0_3px_rgba(255,249,243,0.2)]">
-              <Instagram fill="#fff9f3" />
+              <Instagram fill="#fffbf7" />
             </div>
           </Link>
         </div>

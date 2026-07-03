@@ -3,9 +3,10 @@ version: alpha
 name: analuizarocha
 description: Warm, calm, editorial medical interface for a coloproctology practice in Curitiba.
 sourceOfTruth:
-  tailwindConfig: tailwind.config.ts
   cssTheme: src/app/globals.css
-  note: "Use tailwind.config.ts and @theme tokens together. If values conflict, update both before changing UI."
+  tailwindConfig: tailwind.config.ts
+  componentInventory: docs/components.md
+  note: "Tailwind v4: CSS @theme in globals.css is the primary token source at runtime; tailwind.config.ts extends with breakpoints/shadows/font families. When values disagree, CSS wins. docs/components.md is the source of truth for which components exist and which to use when."
 colors:
   background: "#fffbf7"
   primary: "#663a25"
@@ -13,6 +14,7 @@ colors:
   tertiary: "#b08771"
   brand-primary: "#c27e5c"
   accent-neutral: "#7a8b68"
+  accent-sage-deep: "#5d6f47"
   text-heading: "#3d1f0f"
   text-body: "#6b4226"
   text-muted: "#8b5a3c"
@@ -32,22 +34,22 @@ colors:
   neutral-900: "#2d2622"
 typography:
   display-xl:
-    fontFamily: Literata
+    fontFamily: Literata (--font-pt-serif)
     fontSize: 3.75rem
     fontWeight: 700
     lineHeight: 1
   display-lg:
-    fontFamily: Literata
+    fontFamily: Literata (--font-pt-serif)
     fontSize: 3rem
     fontWeight: 700
     lineHeight: 1
   heading-lg:
-    fontFamily: Literata
+    fontFamily: Literata (--font-pt-serif)
     fontSize: 2.25rem
     fontWeight: 700
     lineHeight: 1.15
   heading-md:
-    fontFamily: Literata
+    fontFamily: Literata (--font-pt-serif)
     fontSize: 1.875rem
     fontWeight: 700
     lineHeight: 1.25
@@ -205,9 +207,9 @@ If a token value must change, update both token sources in the same change and k
 
 ### Font Families
 
-- **Headings:** Literata from `next/font/google`, exposed as `--font-pt-serif`. Existing CSS may also reference `font-serif`.
-- **Body/UI:** Montserrat from `next/font/google`, exposed as `--font-montserrat`.
-- **Legacy note:** `tailwind.config.ts` defines `fontFamily.serif` with `--font-unna`, but the current layout provides Literata. Prefer the active `font-serif` behavior already used in the app and do not add another display family casually.
+- **Headings:** Literata from `next/font/google`, exposed via the CSS variable `--font-pt-serif` (the variable name is legacy from when PT Serif was used; the loaded font today is Literata). Reach it with `font-serif` or `font-family: var(--font-pt-serif)`.
+- **Body/UI:** Montserrat from `next/font/google`, exposed as `--font-montserrat`. Reach it with `font-sans`.
+- Both fonts are loaded in `src/app/layout.tsx` via `next/font/google` with `display: 'swap'` and fallback fonts configured.
 
 ### Hierarchy
 
@@ -246,6 +248,12 @@ Headings should feel editorial and composed. Do not use oversized all-caps headi
 - Blog cards use 2 columns on desktop/tablet and 1 column on mobile.
 - Keep grid gaps in the `gap-5` to `gap-10` range depending on density.
 
+### Below-the-fold rendering
+
+Page sections below the first viewport carry `class="section section-deferred"`. The `.section-deferred` utility (`src/app/globals.css`) uses `content-visibility: auto` with `contain-intrinsic-size: 1px 900px` so the browser can skip layout and paint for off-screen sections — improves LCP on the homepage.
+
+**Gotcha:** a smooth `window.scrollTo` (or `element.scrollIntoView({behavior:'smooth'})`) into a deferred section drifts as placeholders are swapped for real content mid-scroll. `useActiveSection.scrollToSection` pins all deferred sections to `content-visibility: visible` before the scroll begins; do the same if you write a new programmatic scroll. See PR #51 for the diagnosis.
+
 ## Elevation And Depth
 
 Depth should be subtle. The site mostly uses warm surface changes, hairline borders, and modest shadows.
@@ -273,23 +281,35 @@ Desktop nav links are small, semibold, and underline through an animated bottom 
 
 ### Buttons
 
-- **Primary:** `bg-primary text-background rounded-full`, used for appointment scheduling and highest-emphasis actions.
-- **Default warm CTA:** `bg-brand-primary text-background rounded-full`, useful where a softer terracotta action is desired.
-- **Outline:** `border-2 border-primary text-primary`, used for secondary actions.
-- **Subtle:** `bg-primary/5 text-primary border-primary/20`, used for quiet routing actions.
-- **Link:** inline text link, primary color, underline on hover.
+`Button` and `LinkButton` share the same variant system (see `src/components/ui/Button.tsx`). Six variants, all pill-shaped, all with focus rings and `active:scale-95` press feedback.
 
-Buttons should have clear focus rings. Keep labels direct and action-oriented, but avoid urgency language that feels coercive.
+The active design hierarchy on CTA blocks is **primary → outline → ghost** (recently adopted on `/tratamentos` and `/sobre`):
+
+- **`primary`:** `bg-primary text-background`. The one main action — appointment scheduling, highest-emphasis CTAs.
+- **`secondary`:** `bg-secondary text-primary` with a thin border. Warmer beige fill used in `CallToActionCard` and a few section CTAs where neither primary nor outline reads right.
+- **`outline`:** `border-2 border-primary text-primary`. Important alternative to the primary action (e.g. "Locais de atendimento" next to "Agendar consulta").
+- **`ghost`:** `text-muted` with hover transition to `text-primary`, no fill. Quiet third-tier action — optional/discovery links. Pair with a `group-hover:translate-x-0.5` arrow span (`→`) when the action is a "read more" or "see also".
+- **`sage`:** `bg-accent-neutral text-background`. Reserved palette slot for sage-themed institutional content. Not currently used at the call site but kept in the system.
+- **`destructive`:** red action button. Reserved for genuinely destructive actions (delete, cancel-with-consequences). Not currently used.
+
+Sizes: `sm`, `default`, `lg`, `xl`, `icon`.
+
+Use `LinkButton` (not `Button`) whenever the action navigates — it accepts `href`, `external`, and `newTab` props and renders an `<a>` or Next `<Link>` as appropriate. Use raw `Button` only for actions that are not navigation (form submission, modal trigger).
+
+Keep labels direct and action-oriented. Avoid urgency language that feels coercive.
 
 ### Cards
 
-- **Treatment card:** rounded, `bg-secondary/10` or `bg-card`, primary title, optional muted image wash, right rail arrow on treatment cards.
-- **Service card:** `bg-secondary/10`, `border-primary/10`, generous padding, title in primary, description in body text.
-- **Blog card:** image top, `bg-card-bg`, secondary border, primary serif title, excerpt in readable prose, metadata in muted text.
-- **Credential card:** soft secondary panel, primary title, secondary institution text.
-- **Related content card:** secondary soft panel with badge, concise heading, body, and outline CTA.
+Multiple card primitives coexist today — see `docs/components.md` for the "which card to use when" matrix. Briefly:
 
-Cards are functional surfaces, not decorative filler. Avoid nesting cards inside cards.
+- **`TreatmentCard`** — treatment grid items, with image background and optional category badge. Two variants: `compact` for 3-up grids, `detailed` for hero placement.
+- **`CallToActionCard`** — body-of-page CTA blocks (the "Precisa de um diagnóstico" pattern). Two tone variants: `primary` and `secondary`.
+- **`PlaceCard`** — location pages only. Deeply specialized for clinic data (address, hours, phone, WhatsApp, photo). Not reusable.
+- **`RelatedBlogCard`** — blog "Related posts" lists.
+- **`MediaCard`** — horizontal media tiles (one-off blog widget).
+- **`Card`** — generic three-variant primitive (`default` / `treatment` / `service`). Overlaps `TreatmentCard`; consolidation is a known follow-up.
+
+Common rules across all card types: rounded surfaces, soft borders, no nested cards, no decorative-only cards. Functional surfaces only.
 
 ### Forms And Inputs
 
@@ -388,8 +408,8 @@ Do not:
 
 ## Iteration Guide
 
-1. Before changing UI, inspect `tailwind.config.ts`, `src/app/globals.css`, and the nearest existing component.
-2. Reuse `Button`, `LinkButton`, `Badge`, `Card`, `TreatmentCard`, and `CallToActionCard` before creating new primitives.
+1. Before changing UI, inspect `docs/components.md` (the inventory), `src/app/globals.css` (the active design tokens), `tailwind.config.ts` (the extension), and the nearest existing component.
+2. Reuse `Button`, `LinkButton`, `Badge`, `Card`, `TreatmentCard`, `CallToActionCard`, `RelatedBlogCard`, `Breadcrumb`, or `FAQAccordion` before creating new primitives. The kitchen-sink page at `/design` (dev only — returns 404 in production builds) shows every variant.
 3. If a new component is needed, define it using existing semantic tokens and document any reusable pattern here.
 4. Keep changes scoped. Do not redesign unrelated pages as part of a single component task.
 5. After UI changes, verify desktop and mobile layouts for text overflow, focus states, and coherent spacing.

@@ -23,7 +23,7 @@ const config: Config = {
         accent: {
           neutral: '#7a8b68',
         },
-        background: '#fff9f3',
+        background: '#fffbf7',
         // Neutral palette
         neutral: {
           50: '#faf9f7',
@@ -40,7 +40,7 @@ const config: Config = {
       },
       // Typography scale
       fontFamily: {
-        serif: ['var(--font-unna)', 'Unna', 'serif'],
+        serif: ['var(--font-pt-serif)', 'Literata', 'Georgia', 'serif'],
         sans: ['var(--font-montserrat)', 'Montserrat', 'sans-serif'],
       },
       fontSize: {
