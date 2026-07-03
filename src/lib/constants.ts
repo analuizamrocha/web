@@ -115,9 +115,10 @@ export const WPP_NUMBER_SECRETARY_FORMATTED = '(41) 3073-9732'
 export const WHATSAPP_MSG_TEXT_SECRETARY =
   'Olá! Gostaria de agendar uma consulta com a Dra Ana Luiza Rocha '
 
-/** Scheduling WhatsApp message text (URL encoded for links) */
-export const WHATSAPP_MSG_TEXT_SECRETARY_ENCODED =
-  'Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra%20Ana%20Luiza%20Rocha%20'
+/** Scheduling WhatsApp message text (URL encoded for links, derived from plain) */
+export const WHATSAPP_MSG_TEXT_SECRETARY_ENCODED = encodeURIComponent(
+  WHATSAPP_MSG_TEXT_SECRETARY
+)
 
 /**
  * Build a wa.me link from a phone number and a pre-encoded message.

@@ -1,4 +1,4 @@
-import { WPP_NUMBER_NASSIF_FORMATTED, CLINICA_NASSIF } from './constants'
+import { WPP_NUMBER_SECRETARY_FORMATTED, CLINICA_NASSIF } from './constants'
 
 export const faqSchema = {
   '@context': 'https://schema.org',
@@ -41,7 +41,7 @@ export const faqSchema = {
       name: 'Como agendar uma consulta?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `Você pode agendar uma consulta através do WhatsApp ${WPP_NUMBER_NASSIF_FORMATTED} ou pelo telefone da ${CLINICA_NASSIF.name} ${CLINICA_NASSIF.phone}.`,
+        text: `Você pode agendar uma consulta através do WhatsApp ${WPP_NUMBER_SECRETARY_FORMATTED} ou pelo telefone da ${CLINICA_NASSIF.name} ${CLINICA_NASSIF.phone}.`,
       },
     },
   ],

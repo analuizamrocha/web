@@ -1,7 +1,7 @@
 import {
   DR_NAME,
   CLINICA_NASSIF,
-  WPP_NUMBER_NASSIF_FORMATTED,
+  WPP_NUMBER_SECRETARY_FORMATTED,
   WEBSITE_URL,
   URL_INSTAGRAM,
   ORG_DESCRIPTION,
@@ -41,7 +41,7 @@ export const structuredData = {
         latitude: CLINICA_NASSIF.coordinates.latitude,
         longitude: CLINICA_NASSIF.coordinates.longitude,
       },
-      telephone: WPP_NUMBER_NASSIF_FORMATTED,
+      telephone: WPP_NUMBER_SECRETARY_FORMATTED,
       priceRange: '$$',
       openingHours: CLINICA_NASSIF.openingHours,
       areaServed: {
@@ -211,7 +211,7 @@ export const structuredData = {
         latitude: CLINICA_NASSIF.coordinates.latitude,
         longitude: CLINICA_NASSIF.coordinates.longitude,
       },
-      telephone: WPP_NUMBER_NASSIF_FORMATTED,
+      telephone: WPP_NUMBER_SECRETARY_FORMATTED,
       url: WEBSITE_URL,
       image: `${WEBSITE_URL}/images/og.png`,
       priceRange: '$$',
