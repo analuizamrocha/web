@@ -3,7 +3,7 @@ title: 'Cirurgia a laser para hemorroida: quando ela faz sentido?'
 metaDescription: 'Entenda quando a cirurgia a laser para hemorroida pode ser indicada, quais são suas limitações e por que a avaliação individualizada é essencial.'
 slug: 'cirurgia-laser-hemorroida-quando-faz-sentido'
 publishDate: '2026-05-28'
-lastModified: '2026-05-28'
+lastModified: '2026-06-25'
 primaryKeyword: 'cirurgia a laser para hemorroida'
 secondaryKeywords:
   - 'cirurgia hemorroida laser Curitiba'
@@ -126,6 +126,25 @@ Mesmo assim, continua sendo uma cirurgia com pós-operatório. O paciente precis
 
 Para entender melhor esse processo, leia também [fases da cicatrização após cirurgia de hemorroida](/blog/fases-cicatrizacao-cirurgia-hemorroida).
 
+## Laser de diodo e laser de CO₂: qual é a diferença?
+
+Apesar de ambos serem chamados de "laser", eles possuem funções completamente diferentes.
+
+### Laser de diodo
+
+O laser de diodo atua principalmente **dentro da hemorroida**, promovendo coagulação dos vasos sanguíneos e retração do tecido. É utilizado na hemorroidoplastia, uma técnica que busca preservar a anatomia sem remover completamente a hemorroida.
+
+### Laser de CO₂
+
+O laser de CO₂ funciona como um **instrumento cirúrgico de altíssima precisão**. Ele permite realizar cortes delicados e vaporização controlada dos tecidos, sendo utilizado na hemorroidectomia a laser.
+
+Ou seja:
+
+- o laser de diodo **trata** a hemorroida internamente;
+- o laser de CO₂ **remove** a hemorroida com alta precisão.
+
+São tecnologias diferentes e com indicações diferentes.
+
 ## E o THD, desarterialização hemorroidária?
 
 Outra técnica moderna é o THD, também chamado de desarterialização hemorroidária transanal.
@@ -181,6 +200,14 @@ Constipação, esforço evacuatório e hábitos intestinais inadequados aumentam
 - edema prolongado
 
 O intestino precisa fazer parte do tratamento. Quando a constipação é frequente, o cuidado intestinal deve ser planejado junto com a escolha da técnica.
+
+## Vale a pena investir em uma cirurgia a laser?
+
+Essa é uma pergunta frequente, e a resposta depende do que o paciente busca.
+
+Quando há indicação adequada, o laser pode oferecer benefícios relacionados ao **conforto pós-operatório** e à **preservação dos tecidos**. No entanto, ele também apresenta **custo mais elevado**, principalmente pelo uso de equipamentos específicos e fibras descartáveis.
+
+Mais importante do que escolher "a técnica mais moderna" é escolher **a técnica mais indicada para o seu caso**.
 
 ## Perguntas frequentes (FAQ)
 
