@@ -175,23 +175,23 @@ export default function BlogPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LinkButton
-                  href="/sobre"
-                  size="lg"
-                  variant="primary"
-                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl hover:scale-105"
-                >
-                  Saber mais
-                </LinkButton>
-                <LinkButton
                   href={WHATSAPP_HREF_SECRETARY}
                   size="lg"
-                  variant="outline"
+                  variant="primary"
                   external
                   newTab
-                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl"
+                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl hover:scale-105"
                   aria-label="Agendar consulta com a Dra. Ana Luiza Moraes Rocha pelo WhatsApp"
                 >
                   Agendar consulta
+                </LinkButton>
+                <LinkButton
+                  href="/sobre"
+                  size="lg"
+                  variant="secondary"
+                  className="font-semibold text-nowrap shadow-lg hover:shadow-xl"
+                >
+                  Saber mais
                 </LinkButton>
               </div>
             </div>
