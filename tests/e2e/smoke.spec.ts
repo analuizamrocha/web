@@ -130,6 +130,23 @@ test('technical social metadata and article schema use valid site resources', as
   expect(socialImageResponse.ok()).toBeTruthy()
 })
 
+test('privacy page keeps noindex while owning its canonical and social URL', async ({ page }) => {
+  await page.goto('/politica-privacidade')
+
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    'content',
+    /noindex, nofollow/i
+  )
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    `${CANONICAL_WEBSITE_URL}/politica-privacidade`
+  )
+  await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
+    'content',
+    `${CANONICAL_WEBSITE_URL}/politica-privacidade`
+  )
+})
+
 test('sitemap and robots expose canonical crawl signals', async ({ page }) => {
   const sitemapResponse = await page.request.get('/sitemap.xml')
   expect(sitemapResponse.ok()).toBeTruthy()
@@ -142,6 +159,7 @@ test('sitemap and robots expose canonical crawl signals', async ({ page }) => {
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/blog`)
   expect(blogPostLocs.length).toBeGreaterThan(0)
   expect(locs).not.toContain(`${CANONICAL_WEBSITE_URL}/politica-privacidade`)
+  expect(sitemapXml).toContain('<lastmod>2026-07-18</lastmod>')
 
   for (const loc of locs) {
     expect(loc.startsWith(CANONICAL_WEBSITE_URL)).toBeTruthy()

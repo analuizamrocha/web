@@ -1,10 +1,29 @@
 import type { Metadata } from 'next'
+import { WEBSITE_URL } from '@/lib/constants'
+import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/seo-schemas'
+
+const pageTitle = 'Política de Privacidade'
+const pageDescription =
+  'Política de Privacidade e Proteção de Dados conforme LGPD - Consultório de Coloproctologia'
+const pageUrl = `${WEBSITE_URL}/politica-privacidade`
 
 export const metadata: Metadata = {
-  title: 'Política de Privacidade',
-  description:
-    'Política de Privacidade e Proteção de Dados conforme LGPD - Consultório de Coloproctologia',
+  title: pageTitle,
+  description: pageDescription,
   robots: 'noindex, nofollow', // Privacy policies shouldn't be indexed
+  alternates: {
+    canonical: pageUrl,
+  },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
 
 export default function PoliticaPrivacidadePage() {
