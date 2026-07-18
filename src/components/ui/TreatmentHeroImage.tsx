@@ -3,9 +3,10 @@ import { getTreatmentImageBySlug } from '@/lib/treatment-images'
 
 interface TreatmentHeroImageProps {
   slug: string
+  priority?: boolean
 }
 
-export function TreatmentHeroImage({ slug }: TreatmentHeroImageProps) {
+export function TreatmentHeroImage({ slug, priority = false }: TreatmentHeroImageProps) {
   const treatmentImage = getTreatmentImageBySlug(slug)
 
   if (!treatmentImage) {
@@ -23,6 +24,8 @@ export function TreatmentHeroImage({ slug }: TreatmentHeroImageProps) {
         width={1600}
         height={900}
         sizes="(min-width: 1280px) 56rem, (min-width: 768px) 80vw, 100vw"
+        priority={priority}
+        fetchPriority={priority ? 'high' : undefined}
         className="h-auto w-full object-cover"
       />
     </figure>

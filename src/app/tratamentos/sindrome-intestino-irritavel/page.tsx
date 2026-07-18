@@ -171,7 +171,7 @@ export default function SindromeIntestinoIrritavelPage() {
             <TreatmentHeroImage slug="sindrome-intestino-irritavel" />
 
 
-            <main className="prose prose-lg max-w-none mb-12">
+            <div className="prose prose-lg max-w-none mb-12">
               <p>
                 O diagnóstico correto e o acompanhamento com&nbsp;
                 <strong>coloproctologista</strong> são fundamentais para diferenciar a SII de outras
@@ -336,7 +336,7 @@ export default function SindromeIntestinoIrritavelPage() {
                   </p>
                 </div>
               </div>
-            </main>
+            </div>
 
             <CallToActionCard
               title="Sofre com sintomas de Intestino Irritável?"

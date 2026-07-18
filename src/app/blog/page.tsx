@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     images: [
       {
-        url: `${WEBSITE_URL}/og-image.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${WEBSITE_URL}/images/og.png`,
+        width: 547,
+        height: 684,
         alt: 'Blog de Coloproctologia - Dra. Ana Luiza Moraes Rocha',
       },
     ],
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       'Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.',
     creator: TAG_INSTAGRAM,
     site: TAG_INSTAGRAM,
-    images: [`${WEBSITE_URL}/og-image.jpg`],
+    images: [`${WEBSITE_URL}/images/og.png`],
   },
   alternates: {
     canonical: `${WEBSITE_URL}/blog`,
@@ -118,6 +118,7 @@ export default function BlogPage() {
                           sizes="(min-width: 1280px) 36rem, (min-width: 768px) 50vw, 100vw"
                           // index < 2 is a heuristic — desktop shows 2 columns so both above-the-fold cards get priority; mobile shows 1 column so only index 0 truly needs it, but the extra preload on index 1 is harmless
                           priority={index < 2}
+                          fetchPriority={index === 0 ? 'high' : undefined}
                         />
                       </Link>
                     ) : (

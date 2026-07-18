@@ -19,8 +19,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <main
-      id="main"
+    <div
       className="min-h-screen bg-background flex items-center justify-center px-6 py-20"
     >
       <div className="max-w-lg w-full text-center">
@@ -100,6 +99,6 @@ export default function NotFound() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

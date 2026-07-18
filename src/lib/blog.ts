@@ -322,10 +322,6 @@ export function generateBlogPostSchema(post: BlogPost): {
         '@id': `${WEBSITE_URL}/#website`,
         url: WEBSITE_URL,
         name: SITE_NAME,
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: `${WEBSITE_URL}/search?q={search_term_string}`,
-        },
       },
       about: {
         '@type': 'MedicalCondition',
@@ -370,23 +366,6 @@ export function generateBlogPostSchema(post: BlogPost): {
         publisher: {
           '@type': 'MedicalOrganization',
           '@id': `${WEBSITE_URL}/#organization`,
-          name: SITE_NAME,
-          url: WEBSITE_URL,
-          logo: {
-            '@type': 'ImageObject',
-            url: `${WEBSITE_URL}/logo.png`,
-          },
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Curitiba',
-            addressRegion: 'PR',
-            addressCountry: 'BR',
-          },
-          areaServed: {
-            '@type': 'City',
-            name: 'Curitiba',
-            sameAs: 'https://en.wikipedia.org/wiki/Curitiba',
-          },
         },
         medicalAudience: {
           '@type': post.targetAudience === 'patients' ? 'Patient' : 'MedicalAudience',

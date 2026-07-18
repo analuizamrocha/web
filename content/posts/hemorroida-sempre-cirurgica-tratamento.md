@@ -3,7 +3,7 @@ title: "Hemorroida é sempre cirúrgica? Entenda quando operar e opções de tra
 metaDescription: "Hemorroida nem sempre precisa de cirurgia. Descubra quando é indicada a ligadura elástica, cirurgia a laser e tratamentos clínicos para hemorroidas."
 slug: "hemorroida-sempre-cirurgica-tratamento"
 publishDate: "2025-10-06"
-lastModified: "2026-02-14"
+lastModified: "2026-07-18"
 primaryKeyword: "hemorroida é cirúrgica"
 secondaryKeywords:
   - "tratamento hemorroida"
@@ -75,7 +75,7 @@ Na fase de crise, o tratamento tem como objetivo **aliviar a dor, reduzir a infl
 - **Medicações orais** para controle da dor e do edema.
 - **Dieta rica em fibras e líquidos**, evitando esforço evacuatório.
 
-Após a melhora da crise, o coloproctologista avalia o tratamento definitivo — seja com ligadura elástica ou cirurgia, conforme o tipo e o grau da doença.
+Após a melhora da crise, o coloproctologista avalia o [tratamento definitivo](/tratamentos/hemorroidas) — seja com ligadura elástica ou cirurgia, conforme o tipo e o grau da doença.
 
 ## Tratamentos para hemorroidas internas
 

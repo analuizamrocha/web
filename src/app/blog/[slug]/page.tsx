@@ -64,9 +64,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       url: `${WEBSITE_URL}/blog/${post.slug}`,
       images: [
         {
-          url: `${WEBSITE_URL}/og-image.jpg`,
-          width: 1200,
-          height: 630,
+          url: `${WEBSITE_URL}/images/og.png`,
+          width: 547,
+          height: 684,
           alt: `${post.title} - Dra. Ana Luiza Moraes Rocha`,
         },
       ],
@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       description: post.metaDescription,
       creator: TAG_INSTAGRAM,
       site: TAG_INSTAGRAM,
-      images: [`${WEBSITE_URL}/og-image.jpg`],
+      images: [`${WEBSITE_URL}/images/og.png`],
     },
     alternates: {
       canonical: `${WEBSITE_URL}/blog/${post.slug}`,

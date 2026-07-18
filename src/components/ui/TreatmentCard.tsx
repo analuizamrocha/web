@@ -14,6 +14,8 @@ interface TreatmentCardProps {
   treatmentId?: string
   image?: Pick<TreatmentImage, 'src' | 'alt'>
   className?: string
+  headingLevel?: 'h2' | 'h3'
+  imagePriority?: boolean
 }
 
 export function TreatmentCard({
@@ -25,9 +27,12 @@ export function TreatmentCard({
   treatmentId,
   image,
   className,
+  headingLevel = 'h3',
+  imagePriority = false,
 }: TreatmentCardProps) {
   const isDetailed = variant === 'detailed'
   const cardAriaLabel = `Ver detalhes sobre ${title}`
+  const Heading = headingLevel
 
   const railClasses =
     'relative z-20 flex flex-none w-14 min-w-14 sm:w-16 sm:min-w-16 items-center justify-center border-l border-primary/20 bg-background/90 transition-all duration-300 group-hover:border-primary/35 group-hover:bg-primary px-0'
@@ -50,6 +55,8 @@ export function TreatmentCard({
             alt={image.alt}
             fill
             sizes="(min-width: 1280px) 30vw, (min-width: 640px) 45vw, 100vw"
+            priority={imagePriority}
+            fetchPriority={imagePriority ? 'high' : undefined}
             className="object-cover opacity-30 transition-opacity duration-300 group-hover:opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/92 to-background/88" />
@@ -78,14 +85,14 @@ export function TreatmentCard({
           href={href}
           className="relative z-40 w-fit rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/65 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          <h3
+          <Heading
             className={cn(
               '!font-sans font-semibold text-primary leading-snug break-words decoration-primary/40 underline-offset-4 group-hover:underline',
               isDetailed ? 'text-lg sm:text-xl lg:text-2xl' : 'text-base sm:text-lg lg:text-xl'
             )}
           >
             {title}
-          </h3>
+          </Heading>
         </Link>
 
         {isDetailed && description ? (

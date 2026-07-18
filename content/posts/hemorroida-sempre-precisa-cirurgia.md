@@ -3,7 +3,7 @@ title: 'Hemorroida sempre precisa de cirurgia?'
 metaDescription: 'Hemorroida nem sempre precisa de cirurgia. Entenda os graus da doença hemorroidária, quando operar e por que tratar o intestino é parte fundamental do tratamento.'
 slug: 'hemorroida-sempre-precisa-cirurgia'
 publishDate: '2026-03-19'
-lastModified: '2026-03-19'
+lastModified: '2026-07-18'
 primaryKeyword: 'hemorroida precisa de cirurgia'
 secondaryKeywords:
   - 'doença hemorroidária graus'
@@ -70,7 +70,7 @@ As hemorroidas internas são classificadas em graus, de acordo com sua evoluçã
 
 - permanecem exteriorizadas e podem causar dor ou inflamação frequente
 
-Essa classificação ajuda a definir a melhor forma de tratamento.
+Essa classificação ajuda a definir a [melhor forma de tratamento](/tratamentos/hemorroidas).
 
 ## Nem toda hemorroida precisa de cirurgia
 

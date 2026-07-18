@@ -127,8 +127,8 @@ export const generateOpenGraphMetadata = (data: OpenGraphData) => {
     images: [
       {
         url: data.image || `${WEBSITE_URL}/images/og.png`,
-        width: 1200,
-        height: 630,
+        width: 547,
+        height: 684,
         alt: data.title,
       },
     ],

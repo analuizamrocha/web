@@ -180,8 +180,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       </head>
       <body className={`${montserrat.variable} ${literata.variable} font-sans`}>
+        <a
+          id="skip-to-content"
+          href="#main"
+          className="fixed left-4 top-0 z-[100] -translate-y-full rounded-md bg-primary px-4 py-3 font-semibold text-background shadow-lg transition-transform focus:translate-y-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+        >
+          Ir para o conteúdo principal
+        </a>
         <Header />
-        {children}
+        <main id="main" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
         <ClientProviders enableVercelSignals={isVercelRuntime} />
       </body>

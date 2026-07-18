@@ -166,7 +166,7 @@ export default function CistoPilonidalPage() {
             <TreatmentHeroImage slug="cx-cisto-pilonidal" />
 
 
-            <main className="prose prose-lg max-w-none mb-12">
+            <div className="prose prose-lg max-w-none mb-12">
               <p>
                 Existem duas abordagens principais: a técnica&nbsp;
                 <strong>convencional</strong> e a técnica&nbsp;
@@ -322,7 +322,7 @@ export default function CistoPilonidalPage() {
                   </p>
                 </div>
               </div>
-            </main>
+            </div>
 
             <CallToActionCard
               title="Sofre com cisto pilonidal recorrente?"

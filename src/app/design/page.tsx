@@ -88,7 +88,7 @@ export default function DesignPage() {
   if (process.env.NODE_ENV === 'production') notFound()
 
   return (
-    <main className="mx-auto max-w-[1280px] px-6 pt-24 pb-16 sm:px-8 md:pt-28 lg:px-10 xl:px-12">
+    <div className="mx-auto max-w-[1280px] px-6 pt-24 pb-16 sm:px-8 md:pt-28 lg:px-10 xl:px-12">
       <header className="mb-12">
         <p className="text-xs font-mono uppercase tracking-wider text-muted">dev only · not indexed</p>
         <h1 className="mt-2 font-serif text-4xl font-bold text-heading sm:text-5xl">
@@ -450,7 +450,7 @@ export default function DesignPage() {
           <FAQAccordion items={SAMPLE_FAQ} defaultOpenIndex={0} />
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

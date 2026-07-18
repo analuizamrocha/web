@@ -166,7 +166,7 @@ export default function RastreioCancerAnalPage() {
             <TreatmentHeroImage slug="rastreio-cancer-anal" />
 
 
-            <main className="prose prose-lg max-w-none mb-12">
+            <div className="prose prose-lg max-w-none mb-12">
               <h2>Fatores de risco</h2>
               <p>Alguns fatores aumentam a probabilidade de desenvolver câncer de canal anal:</p>
               <ul>
@@ -356,7 +356,7 @@ export default function RastreioCancerAnalPage() {
                   </p>
                 </div>
               </div>
-            </main>
+            </div>
 
             <CallToActionCard
               title="Faz parte de algum grupo de risco para câncer anal?"
