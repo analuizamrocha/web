@@ -3,7 +3,7 @@ title: 'Fissura anal: sintomas, tratamentos e como a proctologia pode ajudar'
 metaDescription: 'Fissura anal causa dor intensa ao evacuar. Conheça sintomas, tratamentos clínicos, botox e cirurgia com proctologista em Curitiba.'
 slug: 'fissura-anal-tratamento'
 publishDate: '2025-12-12'
-lastModified: '2026-05-14'
+lastModified: '2026-07-18'
 primaryKeyword: 'fissura anal'
 secondaryKeywords:
   - 'fissura anal curitiba'
@@ -109,7 +109,7 @@ O diagnóstico precoce aumenta as chances de tratamento menos invasivo e recuper
 ## Conclusão
 
 A **fissura anal** é uma condição comum, mas que não deve ser ignorada.
-O tratamento varia desde medidas clínicas até procedimentos mais avançados, como aplicação de toxina botulínica e cirurgia.
+O tratamento varia desde medidas clínicas até procedimentos mais avançados, como [aplicação de toxina botulínica](/tratamentos/toxina-botulinica) e cirurgia.
 
 Se você sofre com **dor ao evacuar** ou suspeita de fissura anal, agende sua avaliação em **proctologista em Curitiba** e descubra a melhor forma de tratamento para o seu caso.
 

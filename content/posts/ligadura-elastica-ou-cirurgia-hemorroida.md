@@ -3,7 +3,7 @@ title: "Ligadura elástica ou cirurgia para hemorroida: qual é o melhor tratame
 metaDescription: "Nem toda hemorroida precisa de cirurgia. Entenda quando a ligadura elástica resolve, quando operar e como o grau da doença define o melhor tratamento."
 slug: "ligadura-elastica-ou-cirurgia-hemorroida"
 publishDate: "2026-06-27"
-lastModified: "2026-06-27"
+lastModified: "2026-07-18"
 primaryKeyword: "ligadura elástica hemorroida"
 secondaryKeywords:
   - "ligadura elástica ou cirurgia"
@@ -34,7 +34,7 @@ Receber o diagnóstico de hemorroida costuma trazer duas preocupações. A prime
 
 A boa notícia é que **nem toda hemorroida precisa ser operada**. Em muitos casos, é possível tratar a doença com procedimentos realizados no próprio consultório, como a **ligadura elástica**. Mas quando ela realmente funciona? E quando a cirurgia passa a ser a melhor opção?
 
-A seguir, você entende as diferenças entre a ligadura elástica e a cirurgia para hemorroida, para saber qual tratamento pode fazer mais sentido em cada situação.
+A seguir, você entende as [diferenças entre a ligadura elástica e a cirurgia para hemorroida](/tratamentos/hemorroidas), para saber qual tratamento pode fazer mais sentido em cada situação.
 
 ![Ilustração comparando ligadura elástica e cirurgia no tratamento de hemorroida](/images/posts/ligadura-elastica-ou-cirurgia-hemorroida/ligadura-elastica.webp)
 

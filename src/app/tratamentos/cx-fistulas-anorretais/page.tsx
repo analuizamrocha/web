@@ -168,7 +168,7 @@ export default function CirurgiaFistulasPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="cx-fistulas-anorretais" />
+            <TreatmentHeroImage slug="cx-fistulas-anorretais" priority />
 
 
             <div className="prose prose-lg max-w-none mb-12">

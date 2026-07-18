@@ -3,7 +3,7 @@ title: 'HPV anal e condilomas: o que são, riscos, tratamento e importância do 
 metaDescription: 'Entenda HPV anal e condilomas: sintomas, riscos, tratamento, vacina e rastreio para prevenção do câncer anal com coloproctologista em Curitiba.'
 slug: 'hpv-anal-condilomas-riscos-tratamento-rastreio'
 publishDate: '2026-02-20'
-lastModified: '2026-02-20'
+lastModified: '2026-07-18'
 primaryKeyword: 'HPV anal'
 secondaryKeywords:
   - 'condilomas anais'
@@ -39,7 +39,7 @@ Essas perguntas são muito comuns no consultório.
 
 A infecção por **HPV anal** e o aparecimento de **condilomas (verrugas anais)** ainda são cercados de desinformação e estigma. Quando bem acompanhada, porém, é uma condição **tratável, rastreável e prevenível**.
 
-Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que é o HPV anal, sua história natural, os riscos associados, as opções de tratamento, a importância da vacina e do rastreio adequado.
+Neste artigo, a **Dra. Ana Luiza**, coloproctologista em Curitiba, explica o que é o HPV anal, sua história natural, os riscos associados, as [opções de tratamento](/tratamentos/hpv-anal), a importância da vacina e do rastreio adequado.
 
 ![Ilustração de condilomas anais associados ao HPV](/images/posts/hpv-anal/condilomas-hpv.webp)
 

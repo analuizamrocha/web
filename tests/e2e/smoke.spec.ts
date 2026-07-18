@@ -82,6 +82,52 @@ test('treatments page renders heading and treatment cards', async ({ page }) => 
   await expect(
     page.getByRole('link', { name: /Ver detalhes sobre Cirurgias a Laser/i })
   ).toBeVisible()
+
+  await expect(page.locator('img[fetchpriority="high"]').first()).toBeAttached()
+})
+
+test('treatment heroes are prioritized without changing their layout', async ({ page }) => {
+  const treatmentSlugs = [
+    'cx-cisto-pilonidal',
+    'cx-fistulas-anorretais',
+    'cx-laser',
+    'doencas-inflamatorias-intestinais',
+    'hemorroidas',
+    'hpv-anal',
+    'rastreio-cancer-anal',
+    'sindrome-intestino-irritavel',
+    'toxina-botulinica',
+  ]
+
+  for (const slug of treatmentSlugs) {
+    await page.goto(`/tratamentos/${slug}`)
+    await expect(page.locator('figure img[fetchpriority="high"]')).toHaveCount(1)
+  }
+})
+
+test('technical social metadata and article schema use valid site resources', async ({ page }) => {
+  await page.goto('/tratamentos')
+  await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
+    'content',
+    `${CANONICAL_WEBSITE_URL}/tratamentos`
+  )
+
+  await page.goto('/blog/fissura-anal-tratamento')
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+    'content',
+    `${CANONICAL_WEBSITE_URL}/images/og.png`
+  )
+
+  const schemas = await page
+    .locator('script[type="application/ld+json"]')
+    .allTextContents()
+  expect(schemas.length).toBeGreaterThan(0)
+  expect(() => schemas.map((schema) => JSON.parse(schema))).not.toThrow()
+  expect(schemas.join(' ')).not.toContain('/search?q=')
+  expect(schemas.join(' ')).not.toContain('/logo.png')
+
+  const socialImageResponse = await page.request.get('/images/og.png')
+  expect(socialImageResponse.ok()).toBeTruthy()
 })
 
 test('sitemap and robots expose canonical crawl signals', async ({ page }) => {

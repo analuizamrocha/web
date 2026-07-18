@@ -167,7 +167,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="doencas-inflamatorias-intestinais" />
+            <TreatmentHeroImage slug="doencas-inflamatorias-intestinais" priority />
 
 
             <div className="prose prose-lg max-w-none mb-12">
