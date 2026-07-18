@@ -1,0 +1,4 @@
+interface:
+  display_name: "SeuSEO Project Audit"
+  short_description: "Turn SeuSEO reports into focused SEO action plans"
+  default_prompt: "Use $seuseo-project-audit to analyze this project and its SeuSEO report, then create a focused import CSV and implementation handoff."

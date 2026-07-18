@@ -1,0 +1,61 @@
+keyword,cluster,intent,priority
+dra ana luiza m rocha,brand,navigational,3
+ana luiza moraes rocha,brand,navigational,3
+crm-pr 45351,brand,navigational,3
+coloproctologista curitiba,local-acquisition,local-commercial,1
+proctologista curitiba,local-acquisition,local-commercial,1
+proctologia curitiba,local-acquisition,local-commercial,1
+médica coloproctologista curitiba,local-acquisition,local-commercial,1
+coloproctologista mulher curitiba,local-acquisition,local-commercial,1
+consulta coloproctologista curitiba,local-acquisition,local-commercial,1
+agendar consulta coloproctologista curitiba,local-acquisition,local-commercial,1
+coloproctologista batel,local-acquisition,local-commercial,1
+proctologista batel,local-acquisition,local-commercial,1
+hemorroidas curitiba,hemorroidas,local-commercial,1
+tratamento hemorroidas curitiba,hemorroidas,local-commercial,1
+cirurgia hemorroidas curitiba,hemorroidas,local-commercial,1
+cirurgia hemorroidas laser curitiba,hemorroidas,local-commercial,1
+ligadura elástica para hemorroidas curitiba,hemorroidas,local-commercial,1
+hemorroidectomia curitiba,hemorroidas,local-commercial,1
+escleroterapia hemorroidas curitiba,hemorroidas,local-commercial,2
+hemorroida é cirúrgica,hemorroidas,informational,2
+toda hemorroida precisa de cirurgia,hemorroidas,informational,2
+fissura anal curitiba,fissura-anal,local-commercial,1
+tratamento fissura anal curitiba,fissura-anal,local-commercial,1
+fissura anal tratamento curitiba,fissura-anal,local-commercial,1
+fissura anal laser curitiba,fissura-anal,local-commercial,1
+toxina botulínica para fissura anal curitiba,fissura-anal,local-commercial,1
+toxina botulínica fissura anal curitiba,fissura-anal,local-commercial,1
+botox fissura anal curitiba,fissura-anal,local-commercial,2
+fístula anal curitiba,fistula-anal,local-commercial,1
+tratamento fístula anal curitiba,fistula-anal,local-commercial,1
+cirurgia fístula anal curitiba,fistula-anal,local-commercial,1
+fístula perianal curitiba,fistula-anal,local-commercial,2
+fistulotomia curitiba,fistula-anal,local-commercial,2
+seton fístula anal curitiba,fistula-anal,local-commercial,2
+hpv anal curitiba,hpv-cancer-anal,local-commercial,2
+tratamento hpv anal curitiba,hpv-cancer-anal,local-commercial,1
+condiloma anal curitiba,hpv-cancer-anal,local-commercial,1
+tratamento condiloma anal curitiba,hpv-cancer-anal,local-commercial,1
+verrugas anais curitiba,hpv-cancer-anal,local-commercial,2
+rastreio câncer anal curitiba,hpv-cancer-anal,local-commercial,1
+citologia anal curitiba,hpv-cancer-anal,local-commercial,2
+anuscopia de alta resolução curitiba,hpv-cancer-anal,local-commercial,2
+cisto pilonidal curitiba,cisto-pilonidal,local-commercial,1
+cirurgia cisto pilonidal curitiba,cisto-pilonidal,local-commercial,1
+tratamento cisto pilonidal curitiba,cisto-pilonidal,local-commercial,1
+cisto pilonidal laser curitiba,cisto-pilonidal,local-commercial,1
+cirurgia cóccix curitiba,cisto-pilonidal,local-commercial,2
+síndrome intestino irritável curitiba,intestinal,local-commercial,2
+sii curitiba,intestinal,local-commercial,2
+doenças inflamatórias intestinais curitiba,intestinal,local-commercial,2
+doença de crohn curitiba,intestinal,local-commercial,2
+retocolite ulcerativa curitiba,intestinal,local-commercial,2
+coceira anal curitiba,symptoms,local-commercial,2
+sangue nas fezes curitiba,symptoms,local-commercial,2
+sangramento ao evacuar curitiba,symptoms,local-commercial,2
+dor ao evacuar curitiba,symptoms,local-commercial,2
+constipação intestinal curitiba,symptoms,local-commercial,2
+colonoscopia curitiba,colonoscopia,local-commercial,2
+colonoscopia curitiba mercês,colonoscopia,local-commercial,2
+onde fazer colonoscopia curitiba,colonoscopia,local-commercial,2
