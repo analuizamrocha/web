@@ -2,7 +2,6 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Montserrat, Literata } from 'next/font/google'
-import Script from 'next/script'
 
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
@@ -113,8 +112,8 @@ export const metadata: Metadata = {
       },
       {
         url: `${WEBSITE_URL}/images/sobre-mim.webp`,
-        width: 1080,
-        height: 1350,
+        width: 960,
+        height: 1200,
         alt: `${DR_NAME} - Formação e qualificações profissionais em coloproctologia`,
         type: 'image/webp',
       },
@@ -172,10 +171,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {/* React Grab - development only */}
         {process.env.NODE_ENV === 'development' && (
-          <Script
+          <script
             src="//unpkg.com/react-grab/dist/index.global.js"
             crossOrigin="anonymous"
-            strategy="beforeInteractive"
+            defer
           />
         )}
       </head>

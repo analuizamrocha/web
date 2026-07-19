@@ -19,9 +19,13 @@ test('homepage renders hero content and primary CTA', async ({ page }) => {
 
   await expect(
     page.locator('#hero').getByRole('link', {
-      name: /Agendar consulta com coloproctologista em Curitiba/i,
+      name: /Agende sua consulta agora pelo WhatsApp/i,
     })
   ).toBeVisible()
+
+  const aboutImage = page.locator('img[alt*="formação internacional em coloproctologia"]')
+  await expect(aboutImage).toHaveAttribute('width', '960')
+  await expect(aboutImage).toHaveAttribute('height', '1200')
 })
 
 test('cookie consent stores accepted decision', async ({ page }) => {
@@ -54,6 +58,7 @@ test('blog index renders and links to articles', async ({ page }) => {
   ).toBeVisible()
 
   await expect(page.getByRole('link', { name: /Ler artigo/i }).first()).toBeVisible()
+  await expect(page.locator('img[fetchpriority="high"]')).toHaveCount(1)
 })
 
 test('blog post page renders expected heading and CTA', async ({ page }) => {
@@ -101,8 +106,21 @@ test('treatment heroes are prioritized without changing their layout', async ({ 
 
   for (const slug of treatmentSlugs) {
     await page.goto(`/tratamentos/${slug}`)
-    await expect(page.locator('figure img[fetchpriority="high"]')).toHaveCount(1)
+    const heroImage = page.locator('figure img[fetchpriority="high"]')
+    await expect(heroImage).toHaveCount(1)
+    await expect(heroImage).toHaveAttribute('width', '1200')
+    await expect(heroImage).toHaveAttribute('height', '800')
   }
+})
+
+test('framework caching and compact favicon avoid redundant transfer', async ({ page }) => {
+  const homepageResponse = await page.request.get('/')
+  expect(homepageResponse.ok()).toBeTruthy()
+  expect(homepageResponse.headers()['cache-control']).not.toContain('s-maxage=0')
+
+  const faviconResponse = await page.request.get('/favicon.ico')
+  expect(faviconResponse.ok()).toBeTruthy()
+  expect((await faviconResponse.body()).byteLength).toBeLessThan(20_000)
 })
 
 test('technical social metadata and article schema use valid site resources', async ({ page }) => {

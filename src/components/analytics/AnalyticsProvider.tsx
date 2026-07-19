@@ -2,7 +2,18 @@
 
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+
+const GoogleAnalytics = dynamic(
+  () =>
+    import('@next/third-parties/google').then((mod) => mod.GoogleAnalytics),
+  { ssr: false }
+)
+
+const GoogleTagManager = dynamic(
+  () =>
+    import('@next/third-parties/google').then((mod) => mod.GoogleTagManager),
+  { ssr: false }
+)
 
 const VercelAnalytics = dynamic(
   () => import('@vercel/analytics/next').then((mod) => mod.Analytics),

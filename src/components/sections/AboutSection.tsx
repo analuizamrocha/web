@@ -84,8 +84,8 @@ export function AboutSection() {
       {/* Mobile: Full-Width Image  */}
       <div className="lg:hidden w-full">
         <Image
-          width={1366}
-          height={768}
+          width={960}
+          height={1200}
           src="/images/sobre-mim.webp"
           alt="Dra. Ana Luiza Moraes Rocha CRM-PR 45351, formação internacional em coloproctologia, Hospital Clinic Barcelona, especialista em cirurgia colorretal"
           sizes="(max-width: 1024px) 100vw, 0px"

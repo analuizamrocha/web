@@ -122,7 +122,7 @@ export function ServicesSection() {
             variant="primary"
             size="xl"
             className="bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-            aria-label="Agendar consulta com coloproctologista em Curitiba - Dra. Ana Luiza Moraes Rocha por WhatsApp"
+            aria-label="Agende sua consulta agora pelo WhatsApp"
           >
             Agende sua consulta agora
           </LinkButton>

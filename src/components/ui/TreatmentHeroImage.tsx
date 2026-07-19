@@ -21,8 +21,8 @@ export function TreatmentHeroImage({ slug, priority = false }: TreatmentHeroImag
       <Image
         src={treatmentImage.src}
         alt={treatmentImage.alt}
-        width={1600}
-        height={900}
+        width={1200}
+        height={800}
         sizes="(min-width: 1280px) 56rem, (min-width: 768px) 80vw, 100vw"
         priority={priority}
         fetchPriority={priority ? 'high' : undefined}
