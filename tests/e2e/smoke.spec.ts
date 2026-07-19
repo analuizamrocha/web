@@ -113,7 +113,7 @@ test('treatment heroes are prioritized without changing their layout', async ({ 
   }
 })
 
-test('framework caching and compact favicon avoid redundant transfer', async ({ page }) => {
+test('framework caching keeps versioned assets fast and public images replaceable', async ({ page }) => {
   const homepageResponse = await page.request.get('/')
   expect(homepageResponse.ok()).toBeTruthy()
   expect(homepageResponse.headers()['cache-control']).not.toContain('s-maxage=0')
@@ -121,6 +121,10 @@ test('framework caching and compact favicon avoid redundant transfer', async ({ 
   const faviconResponse = await page.request.get('/favicon.ico')
   expect(faviconResponse.ok()).toBeTruthy()
   expect((await faviconResponse.body()).byteLength).toBeLessThan(20_000)
+
+  const publicImageResponse = await page.request.get('/images/og.png')
+  expect(publicImageResponse.ok()).toBeTruthy()
+  expect(publicImageResponse.headers()['cache-control']).not.toContain('immutable')
 })
 
 test('technical social metadata and article schema use valid site resources', async ({ page }) => {
