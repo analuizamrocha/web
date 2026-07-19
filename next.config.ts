@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
       permanent: true,
     },
   ],
-  // Security headers and static-asset caching
+  // Security headers
   headers: async () => [
     {
       source: '/(.*)',
@@ -58,15 +58,6 @@ const nextConfig: NextConfig = {
         {
           key: 'Strict-Transport-Security',
           value: 'max-age=31536000; includeSubDomains'
-        }
-      ]
-    },
-    {
-      source: '/_next/static/(.*)',
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable'
         }
       ]
     }
