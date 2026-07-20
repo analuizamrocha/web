@@ -162,7 +162,7 @@ export default function ToxinaBotulínicaPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="toxina-botulinica" priority />
+            <TreatmentHeroImage slug="toxina-botulinica" preload />
 
 
             <div className="prose prose-lg max-w-none mb-12">

@@ -163,7 +163,7 @@ export default function RastreioCancerAnalPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="rastreio-cancer-anal" priority />
+            <TreatmentHeroImage slug="rastreio-cancer-anal" preload />
 
 
             <div className="prose prose-lg max-w-none mb-12">

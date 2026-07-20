@@ -58,7 +58,7 @@ test('blog index renders and links to articles', async ({ page }) => {
   ).toBeVisible()
 
   await expect(page.getByRole('link', { name: /Ler artigo/i }).first()).toBeVisible()
-  await expect(page.locator('img[fetchpriority="high"]')).toHaveCount(1)
+  await expect(page.locator('link[rel="preload"][as="image"]')).toHaveCount(1)
 })
 
 test('blog post page renders expected heading and CTA', async ({ page }) => {
@@ -88,10 +88,10 @@ test('treatments page renders heading and treatment cards', async ({ page }) => 
     page.getByRole('link', { name: /Ver detalhes sobre Cirurgias a Laser/i })
   ).toBeVisible()
 
-  await expect(page.locator('img[fetchpriority="high"]').first()).toBeAttached()
+  await expect(page.locator('link[rel="preload"][as="image"]')).toHaveCount(1)
 })
 
-test('treatment heroes are prioritized without changing their layout', async ({ page }) => {
+test('treatment heroes are preloaded without changing their layout', async ({ page }) => {
   const treatmentSlugs = [
     'cx-cisto-pilonidal',
     'cx-fistulas-anorretais',
@@ -106,7 +106,8 @@ test('treatment heroes are prioritized without changing their layout', async ({ 
 
   for (const slug of treatmentSlugs) {
     await page.goto(`/tratamentos/${slug}`)
-    const heroImage = page.locator('figure img[fetchpriority="high"]')
+    await expect(page.locator('link[rel="preload"][as="image"]')).toHaveCount(1)
+    const heroImage = page.locator('figure img')
     await expect(heroImage).toHaveCount(1)
     await expect(heroImage).toHaveAttribute('width', '1200')
     await expect(heroImage).toHaveAttribute('height', '800')

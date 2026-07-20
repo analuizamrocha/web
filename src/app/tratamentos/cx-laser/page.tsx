@@ -163,7 +163,7 @@ export default function CirurgiasLaserPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="cx-laser" priority />
+            <TreatmentHeroImage slug="cx-laser" preload />
 
 
             <div className="prose prose-lg max-w-none mb-12">

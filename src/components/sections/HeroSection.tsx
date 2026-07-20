@@ -20,8 +20,7 @@ export function HeroSection() {
               height={1200}
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
               className="w-full h-auto object-contain lg:shadow-2xl"
-              priority
-              fetchPriority="high"
+              preload
             />
           </div>
 

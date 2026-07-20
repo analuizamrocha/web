@@ -163,7 +163,7 @@ export default function CistoPilonidalPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="cx-cisto-pilonidal" priority />
+            <TreatmentHeroImage slug="cx-cisto-pilonidal" preload />
 
 
             <div className="prose prose-lg max-w-none mb-12">

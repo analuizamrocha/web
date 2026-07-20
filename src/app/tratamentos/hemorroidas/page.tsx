@@ -164,7 +164,7 @@ export default function TratamentoHemorroidasPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="hemorroidas" priority />
+            <TreatmentHeroImage slug="hemorroidas" preload />
 
 
             <div className="prose prose-lg max-w-none mb-12">

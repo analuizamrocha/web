@@ -55,8 +55,7 @@ export function TreatmentCard({
             alt={image.alt}
             fill
             sizes="(min-width: 1280px) 30vw, (min-width: 640px) 45vw, 100vw"
-            priority={imagePriority}
-            fetchPriority={imagePriority ? 'high' : undefined}
+            preload={imagePriority}
             className="object-cover opacity-30 transition-opacity duration-300 group-hover:opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/92 to-background/88" />

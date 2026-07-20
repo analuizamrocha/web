@@ -163,7 +163,7 @@ export default function TratamentoHpvAnalPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="hpv-anal" priority />
+            <TreatmentHeroImage slug="hpv-anal" preload />
 
 
             <div className="prose prose-lg max-w-none mb-12">

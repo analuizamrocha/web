@@ -168,7 +168,7 @@ export default function SindromeIntestinoIrritavelPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="sindrome-intestino-irritavel" priority />
+            <TreatmentHeroImage slug="sindrome-intestino-irritavel" preload />
 
 
             <div className="prose prose-lg max-w-none mb-12">

@@ -212,7 +212,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 src={location.heroPhotoSrc}
                 alt={location.heroPhotoAlt}
                 fill
-                priority
+                preload
                 sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-cover"
                 style={{ objectPosition: location.heroPhotoObjectPosition ?? 'center' }}

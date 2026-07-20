@@ -116,8 +116,7 @@ export default function BlogPage() {
                           fill
                           className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                           sizes="(min-width: 1280px) 36rem, (min-width: 768px) 50vw, 100vw"
-                          priority={index === 0}
-                          fetchPriority={index === 0 ? 'high' : undefined}
+                          preload={index === 0}
                         />
                       </Link>
                     ) : (

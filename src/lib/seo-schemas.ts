@@ -114,11 +114,22 @@ export interface OpenGraphData {
   title: string
   description: string
   url: string
-  image?: string
+  image?: {
+    url: string
+    width?: number
+    height?: number
+    alt?: string
+  }
   type?: 'website' | 'article'
 }
 
 export const generateOpenGraphMetadata = (data: OpenGraphData) => {
+  const image = data.image ?? {
+    url: `${WEBSITE_URL}/images/og.png`,
+    width: 547,
+    height: 684,
+  }
+
   return {
     title: data.title,
     description: data.description,
@@ -126,10 +137,8 @@ export const generateOpenGraphMetadata = (data: OpenGraphData) => {
     siteName: SITE_NAME,
     images: [
       {
-        url: data.image || `${WEBSITE_URL}/images/og.png`,
-        width: 547,
-        height: 684,
-        alt: data.title,
+        ...image,
+        alt: image.alt ?? data.title,
       },
     ],
     locale: 'pt_BR',
@@ -145,6 +154,6 @@ export const generateTwitterMetadata = (data: OpenGraphData) => {
     card: 'summary_large_image',
     title: data.title,
     description: data.description,
-    images: [data.image || `${WEBSITE_URL}/images/og.png`],
+    images: [data.image?.url ?? `${WEBSITE_URL}/images/og.png`],
   }
 }
