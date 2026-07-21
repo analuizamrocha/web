@@ -22,7 +22,7 @@ This is a Next.js 16 project for a medical practice website (Ana Luiza M. Rocha 
 **This project uses Bun as the package manager** (not npm or yarn).
 
 - Always use `bun` commands instead of `npm`
-- Lockfile: `bun.lockb` (gitignored)
+- Lockfile: `bun.lockb` (committed)
 - Faster installs and script execution than npm
 
 ## Development Commands
@@ -72,10 +72,11 @@ src/
 │   ├── faq-schema.ts   # FAQ schema markup
 │   ├── navigation.ts   # Navigation configuration
 │   ├── blog.ts         # Blog utilities and content processing
+│   ├── mdx-image-dimensions.ts # Intrinsic dimensions for post images
 │   └── utils.ts        # Utility functions
-├── hooks/              # Custom React hooks
-└── content/            # Blog content management
-    └── posts/          # Markdown blog posts
+└── hooks/              # Custom React hooks
+content/
+└── posts/              # Markdown blog posts
 ```
 
 ### Key Architectural Patterns
@@ -126,7 +127,12 @@ src/
 - Medical schema markup (Article + MedicalWebPage)
 - Comprehensive frontmatter for SEO metadata
 - Automatic sitemap integration
+- Curated `public/llms.txt` discovery inventory
+- `next/image` rendering with tested intrinsic image dimensions
 - Portuguese-focused medical content targeting
+
+See `docs/blog-content-playbook.md` for the authoritative post, image, discovery, and
+validation workflow.
 
 ## Code Standards
 

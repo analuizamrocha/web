@@ -16,6 +16,7 @@ intent: "consideration"
 featured: false
 order: 4
 relatedPosts:
+  - "hemorroida-grau-3-tratamento"
   - "hemorroida-sempre-precisa-cirurgia"
   - "hemorroida-quanto-tempo-dura-quando-procurar"
 faqs:
