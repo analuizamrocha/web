@@ -25,11 +25,11 @@ const credentials: {
   },
   {
     eyebrow: 'Residência',
-    title: 'Coloproctologista',
+    title: 'Coloproctologia',
     institution: HOSPITAL_MACKENZIE,
   },
   {
-    eyebrow: 'Fellowship internacional',
+    eyebrow: 'Fellowship',
     title: 'Fellow em Cirurgia Colorretal',
     institution: `${HOSPITAL_CLINIC_BARCELONA} — Espanha`,
   },
@@ -71,13 +71,16 @@ export function AboutSection() {
                 key={index}
                 className="rounded-3xl bg-card border border-secondary/20 p-6 lg:p-7 shadow-brand transition-all duration-300 hover:bg-card-hover hover:border-secondary/30 hover:shadow-brand-lg"
               >
-                <div className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-accent-strong">
-                  {credential.eyebrow}
+                <div className="flex items-center gap-2.5">
+                  <span aria-hidden className="h-px w-5 flex-none bg-accent-strong/60" />
+                  <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent-strong">
+                    {credential.eyebrow}
+                  </span>
                 </div>
-                <h3 className="mt-2 text-lg lg:text-xl font-sans font-bold text-primary leading-snug">
+                <h3 className="mt-3 text-xl lg:text-2xl font-sans font-bold text-primary leading-snug">
                   {credential.title}
                 </h3>
-                <p className="mt-1 text-sm lg:text-base text-muted leading-relaxed">
+                <p className="mt-2 text-base lg:text-lg text-muted leading-relaxed">
                   {credential.institution}
                 </p>
               </div>
