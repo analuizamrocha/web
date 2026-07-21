@@ -1,14 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import {
-  Award,
-  GraduationCap,
-  HeartPulse,
-  Microscope,
-  ShieldCheck,
-  Stethoscope,
-  type LucideIcon,
-} from 'lucide-react'
 import { LinkButton } from '@/components/ui/LinkButton'
 import {
   PUC_PR,
@@ -17,55 +8,40 @@ import {
   HOSPITAL_CLINIC_BARCELONA,
 } from '@/lib/constants'
 
-type ChipTint = 'primary' | 'accent' | 'sage'
-
-const chipStyles: Record<ChipTint, string> = {
-  primary: 'bg-primary/10 text-primary',
-  accent: 'bg-brand-primary/15 text-brand-primary',
-  sage: 'bg-accent-neutral/15 text-accent-sage-deep',
-}
-
 const credentials: {
+  eyebrow: string
   title: string
   institution: string
-  icon: LucideIcon
-  tint: ChipTint
 }[] = [
   {
+    eyebrow: 'Formação',
     title: 'Graduada em Medicina',
     institution: PUC_PR,
-    icon: GraduationCap,
-    tint: 'primary',
   },
   {
+    eyebrow: 'Residência',
     title: 'Cirurgia Geral',
     institution: HOSPITAL_SANTA_CASA,
-    icon: Stethoscope,
-    tint: 'accent',
   },
   {
+    eyebrow: 'Residência',
     title: 'Coloproctologista',
     institution: HOSPITAL_MACKENZIE,
-    icon: HeartPulse,
-    tint: 'sage',
   },
   {
-    title: 'Mestranda UFPR',
-    institution: 'Programa de Clínica Cirúrgica',
-    icon: Microscope,
-    tint: 'primary',
+    eyebrow: 'Fellowship internacional',
+    title: 'Fellow em Cirurgia Colorretal',
+    institution: `${HOSPITAL_CLINIC_BARCELONA} — Espanha`,
   },
   {
+    eyebrow: 'Mestrado',
+    title: 'Mestre em Clínica Cirúrgica',
+    institution: 'Universidade Federal do Paraná (UFPR)',
+  },
+  {
+    eyebrow: 'Membro',
     title: 'Membro IANS',
     institution: 'International Anal Neoplasia Society',
-    icon: ShieldCheck,
-    tint: 'accent',
-  },
-  {
-    title: 'Fellow Cirurgia Colorretal',
-    institution: `${HOSPITAL_CLINIC_BARCELONA} - Espanha`,
-    icon: Award,
-    tint: 'sage',
   },
 ]
 
@@ -89,30 +65,23 @@ export function AboutSection() {
 
         {/* Desktop: Credentials Grid */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 xl:gap-12">
-            {credentials.map((credential, index) => {
-              const Icon = credential.icon
-              return (
-                <div
-                  key={index}
-                  className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 hover:border-secondary/30 transition-all duration-300 shadow-brand hover:shadow-brand-lg group"
-                >
-                  <div className="space-y-4">
-                    <span
-                      className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ${chipStyles[credential.tint]}`}
-                    >
-                      <Icon className="h-6 w-6" strokeWidth={2} aria-hidden="true" />
-                    </span>
-                    <h3 className="text-xl lg:text-2xl font-sans font-bold text-primary">
-                      {credential.title}
-                    </h3>
-                    <p className="text-lg lg:text-xl text-muted font-regular leading-relaxed">
-                      {credential.institution}
-                    </p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
+            {credentials.map((credential, index) => (
+              <div
+                key={index}
+                className="rounded-3xl bg-card border border-secondary/20 p-6 lg:p-7 shadow-brand transition-all duration-300 hover:bg-card-hover hover:border-secondary/30 hover:shadow-brand-lg"
+              >
+                <div className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-accent-strong">
+                  {credential.eyebrow}
                 </div>
-              )
-            })}
+                <h3 className="mt-2 text-lg lg:text-xl font-sans font-bold text-primary leading-snug">
+                  {credential.title}
+                </h3>
+                <p className="mt-1 text-sm lg:text-base text-muted leading-relaxed">
+                  {credential.institution}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
