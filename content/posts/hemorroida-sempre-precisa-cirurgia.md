@@ -16,6 +16,9 @@ targetAudience: 'patients'
 intent: 'consideration'
 featured: false
 order: 29
+relatedPosts:
+  - 'hemorroida-grau-3-tratamento'
+  - 'ligadura-elastica-ou-cirurgia-hemorroida'
 faqs:
   - question: 'Hemorroida sempre precisa de cirurgia?'
     answer: 'Não. Muitos casos melhoram com ajustes intestinais e tratamentos conservadores.'

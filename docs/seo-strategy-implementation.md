@@ -1,312 +1,141 @@
-# SEO Strategy & Implementation Plan
-
-**Website:** Ana Luiza M. Rocha - Coloproctologia
-**Last Updated:** 2025-11-20
-**Purpose:** Actionable SEO roadmap for ranking page 1 in Curitiba
-
----
-
-## The SEO Mental Model
-
-SEO success rests on four interlocking pillars:
-
-1. **Technical Performance** — Fast, crawlable, properly indexed site
-2. **Content Quality** — Matches user intent, outperforms competitors
-3. **Authority** — Backlinks and internal links signal trust
-4. **User Response** — Click-through rate (CTR), dwell time, conversions
-
-Every tactic below fits into one of these categories.
-
----
-
-## 8-Step Execution Flow
-
-### Step 1: Technical Foundation ✅
-
-**Current Status:** Site already optimized with:
-
-- HTTPS enabled
-- Valid sitemap (`/sitemap.xml`)
-- Clean robots.txt
-- Page speed under 3s (Next.js + Image optimization)
-- WebP images, lazy loading
-- CDN (Vercel)
-
-**Ongoing Maintenance:**
-
-- Monitor Core Web Vitals monthly
-- Run Lighthouse audits quarterly
-- Keep dependencies updated
-
----
-
-### Step 2: Keyword Research ✅
-
-**Completed:** Keywords tracked externally via own SEO rank solution.
-
-**Key Insights:**
-
-- Focus on local intent: "coloproctologista curitiba"
-- Mix of commercial (procedures) + informational (symptoms)
-- Competitive gaps: "consulta coloproctologista curitiba", "agendar", insurance-related
-
-**Next Actions:**
-
-- Review competitor rankings quarterly
-- Add missing keywords to page content
-
----
-
-### Step 3: Optimize Landing Pages
-
-**Treatment Pages (High Priority):**
-
-Each treatment page needs:
-
-- ✅ H1 with primary keyword
-- ✅ Meta description with local modifier
-- ✅ FAQ schema markup
-- ✅ Internal links to 5+ related pages
-- 🎯 **Add:** "Agendar consulta" CTAs with keyword-rich anchor text
-
-**Homepage:**
-
-- ✅ Optimized for "coloproctologista curitiba"
-- 🎯 **Add:** "consulta coloproctologista curitiba" to CTA buttons
-- 🎯 **Add:** "médica coloproctologista curitiba" to About section H2
-
----
-
-### Step 4: Blog Content Strategy
-
-**Current Status:**
-
-- ✅ 10 published posts (Oct-Nov 2025)
-- 🎯 **Target:** 50+ posts in 12 months
-
-**Content Distribution:**
-
-- 40% Awareness (symptoms, "when to seek care")
-- 35% Consideration (treatment comparisons, procedures)
-- 25% Decision (cost, insurance, doctor selection)
-
-**Priority Topic Clusters:**
-
-#### Cluster 1: Hemorroidas (3 posts)
-
-1. ✅ "Quando Procurar Coloproctologista Curitiba" (published)
-2. 🎯 "5 Sinais que Sua Hemorroida Precisa de Avaliação Médica"
-3. 🎯 "Como Prevenir Hemorroidas: Alimentação e Hábitos"
-4. 🎯 "Diferença Entre Hemorroida Interna e Externa"
-
-#### Cluster 2: Fissura Anal (2 posts)
-
-1. 🎯 "Fissura Anal: Por Que Não Cicatriza e Como Tratar"
-2. 🎯 "Toxina Botulínica para Fissura Anal: Como Funciona"
-
-#### Cluster 3: Cisto Pilonidal (2 posts)
-
-1. ✅ "Cisto Pilonidal Cirurgia Laser" (published)
-2. 🎯 "Recuperação Pós-Cirurgia de Cisto Pilonidal"
-
-#### Cluster 4: Constipação & SII (3 posts)
-
-1. ✅ "Constipação Intestinal Crônica" (published)
-2. 🎯 "Síndrome do Intestino Irritável: Guia Completo"
-3. 🎯 "Dieta Low FODMAP para SII"
-
-#### Cluster 5: Rastreio & Prevenção (2 posts)
-
-1. 🎯 "Quando Fazer Colonoscopia: Rastreio do Câncer Colorretal"
-2. 🎯 "Câncer de Canal Anal: Fatores de Risco e Prevenção"
-
-**Publishing Schedule:**
-
-- **Months 1-3:** 2 posts/week (hemorroidas, fissura, cisto clusters)
-- **Months 4-6:** 1-2 posts/week (constipação, SII, rastreio)
-- **Months 7-12:** 1 post/week (long-tail, FAQ consolidation)
-
----
-
-### Step 5: Link Building
-
-**Medical Practice Link Building Strategy:**
-
-**Priority 1: Local Authority (Months 1-3)**
-
-- Submit to Doctoralia, Google Business Profile
-- Get listed on Curitiba medical directories
-- Partner with Clínica Nassif for cross-linking
-- Local health blogs (guest posts about coloproctology)
-
-**Priority 2: Educational Content (Months 4-6)**
-
-- Create linkable asset: "Guia Completo de Saúde Intestinal"
-- Infographic: "Quando Procurar um Coloproctologista"
-- Offer expert quotes to health journalists (HARO Brasil)
-- Collaborate with nutrition/gastro professionals
-
-**Priority 3: Community Engagement (Ongoing)**
-
-- Answer questions on health forums
-- Publish educational content on Instagram/YouTube
-- Get featured in local news (health awareness campaigns)
-
-**Link Quality Over Quantity:**
-
-- Target: 5-10 quality backlinks/month
-- Focus on medical, health, local Curitiba sites
-- Avoid PBNs, link farms, spam directories
-
----
-
-### Step 6: Internal Linking
-
-**Current Status:** ✅ Partially implemented
-
-**Rules:**
-
-- Every blog post links to 10+ related pages
-- Treatment pages cross-link to related conditions
-- Use descriptive anchor text with keywords
-- Link from high-authority pages to new content
-
-**Quick Win:**
-Run this Google search to find linking opportunities:
-
-```
-site:analuizarocha.com.br "hemorroidas"
+# SEO Strategy and Implementation
+
+**Website:** Dra. Ana Luiza Moraes Rocha — Coloproctologia
+
+**Last updated:** 2026-07-21
+
+**Scope:** Durable strategy and repository implementation notes after PR #55
+
+## Current Baseline
+
+The July 2026 SeuSEO review found a strong existing local and topical footprint:
+
+- 328 tracked queries.
+- 66 queries in the Top 3.
+- 96 queries in the Top 10.
+- 44 published Markdown posts.
+- Strong gains for several high-intent treatment and informational queries.
+
+These figures are a point-in-time baseline, not a ranking promise. The underlying
+focused tracking portfolio remains in `research/seuseo-keywords-2026-08.csv`. Search
+volume, Search Console, analytics, leads, and booked consultations were not available
+for that review and must be considered before attributing business impact.
+
+## Strategic Priorities
+
+1. Protect queries and pages already on page one.
+2. Move relevant queries in positions 4–10 toward the Top 3 before expanding content
+   indiscriminately.
+3. Assign one owner URL to each commercial or local-intent cluster.
+4. Keep blog posts focused on informational questions and link them naturally to the
+   owner treatment or location page.
+5. Consolidate overlapping posts before creating another URL for the same intent.
+6. Publish only when a new article answers a distinct, useful patient question.
+7. Measure organic consultation journeys, not only the number of ranking keywords.
+
+No page should promise outcomes, imply superiority, or use fear to earn clicks. All
+medical content remains subject to `docs/cfm-compliance-guidelines.md`.
+
+## Page Ownership Model
+
+| Cluster | Owner URL | Supporting content role |
+| --- | --- | --- |
+| Broad local coloproctology | `/` | Explain the practice and route users to the right service. |
+| Treatment discovery | `/tratamentos` | Organize the service portfolio without competing with detail pages. |
+| Hemorrhoids | `/tratamentos/hemorroidas` | Own consultation/treatment intent; blog answers symptom and comparison questions. |
+| Proctology laser procedures | `/tratamentos/cx-laser` | Own verified laser-service intent without universal claims. |
+| Anal fistulas | `/tratamentos/cx-fistulas-anorretais` | Own specialist treatment intent. |
+| Pilonidal disease | `/tratamentos/cx-cisto-pilonidal` | Own evaluation and surgery intent. |
+| Anal HPV | `/tratamentos/hpv-anal` | Own HPV assessment/treatment intent. |
+| Anal cancer screening | `/tratamentos/rastreio-cancer-anal` | Own screening intent for appropriate patients. |
+| Inflammatory bowel disease | `/tratamentos/doencas-inflamatorias-intestinais` | Own local follow-up intent. |
+| Irritable bowel syndrome | `/tratamentos/sindrome-intestino-irritavel` | Own local evaluation/treatment intent. |
+| Botulinum toxin | `/tratamentos/toxina-botulinica` | Own verified procedure intent. |
+
+Treat this table as an architectural default. Change ownership only after checking
+current Search Console queries, ranking URLs, and the clinical/service scope.
+
+## Blog Expansion Rules
+
+The blog is already substantial, so content quality and differentiation matter more
+than raw volume.
+
+Before adding a post:
+
+1. Search titles, primary keywords, headings, and patient intent across
+   `content/posts`.
+2. Decide whether the need is best met by updating, differentiating, consolidating,
+   or creating content.
+3. Define the one primary query, the distinct reader question, and the owner service
+   page the article should support.
+4. Use reliable medical sources and a sober, patient-friendly explanation.
+5. Add contextual internal links based on reader usefulness rather than a fixed link
+   quota.
+
+Known overlap areas that deserve extra review include hemorrhoid surgery, anal itch,
+intestinal nutrition/fiber, and pilonidal disease. Similar wording alone is not enough
+to consolidate; compare the actual intent and clinical purpose.
+
+The complete post schema, subtitle behavior, image workflow, footer, and validation
+steps live in `docs/blog-content-playbook.md`.
+
+## Repository SEO Safeguards
+
+The implementation now makes several SEO/content assumptions executable:
+
+- `src/lib/blog.ts` parses frontmatter, creates card excerpts, and uses the first
+  Markdown image for the blog card.
+- `src/app/sitemap.ts` discovers all published Markdown posts automatically.
+- `public/llms.txt` is the curated machine-readable inventory of key routes and posts.
+- `tests/content-discovery.test.ts` verifies that every post appears in both the
+  sitemap and `llms.txt`.
+- `src/components/ui/MdxImage.tsx` renders Markdown images through `next/image`.
+- `src/lib/mdx-image-dimensions.ts` stores exact intrinsic dimensions so image space
+  is reserved before loading.
+- `tests/mdx-image-dimensions.test.ts` compares every referenced post image with its
+  real Sharp metadata.
+- `tests/seo-metadata.test.ts` protects Open Graph and Twitter image behavior.
+
+The dimension resolver defaults to `1200x800`. Add an exact registry entry whenever a
+referenced asset has different intrinsic dimensions; the focused test verifies the
+resolved dimensions against the real file.
+
+## Measurement Loop
+
+Review performance monthly with a focused portfolio instead of treating every query
+variant as a separate content mandate.
+
+- **SeuSEO:** position, landing URL, movement, and cannibalization for the focused
+  portfolio.
+- **Search Console:** query/page pairs, impressions, CTR, position, and unexpected
+  ranking URLs.
+- **Analytics:** organic landing pages, CTA/WhatsApp clicks, and consultation funnel
+  events when available.
+- **Technical:** indexing, Core Web Vitals, image weight, metadata, structured data,
+  and mobile behavior.
+
+After enough data has accumulated (normally at least 28 days), use these rules:
+
+- High impressions and low CTR: test title and description while preserving medical
+  accuracy.
+- Positions 4–10: improve intent match, content depth, and internal links.
+- Wrong URL ranking: resolve page ownership and cannibalization.
+- Rankings without consultation actions: improve the journey and CTA relevance.
+- No meaningful demand: do not publish solely because a tracker contains a keyword.
+
+## Validation
+
+For blog and SEO changes, run:
+
+```bash
+bun run test:run -- \
+  tests/content-discovery.test.ts \
+  tests/mdx-image-dimensions.test.ts \
+  tests/seo-metadata.test.ts
+bun run lint
+bun run build
 ```
 
-Then add contextual links from top results to related posts.
-
-**Biannual Review:** Audit internal links every 6 months.
-
----
-
-### Step 7: Improve Click-Through Rates (CTR)
-
-**Goal:** Beat average CTR for each position.
-
-| Position | Avg CTR | Target CTR |
-| -------- | ------- | ---------- |
-| 1-3      | 25%     | 30%+       |
-| 4-6      | 10%     | 15%+       |
-| 7-10     | 5%      | 8%+        |
-
-**Optimization Process:**
-
-1. Identify low-CTR pages in Google Search Console (>28 days data)
-2. Rewrite title tags with:
-   - Numbers ("5 Sinais", "Guia Completo")
-   - Benefits ("Como Prevenir", "Tratamento Eficaz")
-   - Local modifier ("Curitiba")
-   - Urgency ("Quando Procurar")
-3. Test new meta descriptions (action-oriented, keyword-rich)
-4. Wait 3-4 weeks, measure impact
-5. Iterate
-
----
-
-### Step 8: Continuous Optimization
-
-**Monthly Tasks:**
-
-- Review Google Search Console performance
-- Track rankings for top keywords ✅
-- Identify new keyword opportunities
-- Update 1-2 older blog posts with fresh info
-
-**Quarterly Tasks:**
-
-- Full content audit (update outdated posts)
-- Backlink analysis (gain quality, disavow spam)
-- Competitor analysis (what's ranking now?)
-- Technical SEO audit (speed, errors, mobile)
-
-**Yearly Tasks:**
-
-- Comprehensive keyword research refresh
-- Redesign underperforming pages
-- Major content expansion (add new clusters)
-
----
-
-## Content Creation Checklist
-
-For every new blog post:
-
-- [x] Frontmatter complete (title, metaDescription, slug, keywords, targetAudience, intent, order, faqs)
-- [ ] Primary keyword in H1 (naturally)
-- [ ] Primary keyword in first 100 words
-- [ ] H2/H3 structure with LSI keywords
-- [ ] 1500-2500 words (1.5-2x competitor length)
-- [x] 3-5 FAQs
-- [-] 3-5 FAQs with schema markup
-- [ ] 10+ internal links to related content
-- [ ] 2-3 external links to authority sites (medical journals, government health sites)
-- [ ] Images optimized (WebP, alt text with keywords)
-- [ ] Meta description <155 chars with keyword + CTA
-- [x] URL slug descriptive and keyword-rich
-- [x] CTA at end: "Agendar consulta" with WhatsApp link
-
----
-
-## Quick Wins (Next 30 Days)
-
-**Week 1:**
-
-1. Add "consulta coloproctologista curitiba" to homepage CTA
-2. Update 3 treatment page meta descriptions with local modifiers
-3. Publish "5 Sinais de Hemorroida" blog post
-
-**Week 2:** 4. Run internal linking audit with `site:` search 5. Add 20+ internal links across existing posts 6. Publish "Fissura Anal: Por Que Não Cicatriza"
-
-**Week 3:** 7. Submit to 3 local medical directories 8. Create Google Business Profile post with blog link 9. Publish "Como Prevenir Hemorroidas"
-
-**Week 4:** 10. Review GSC for CTR optimization opportunities 11. Rewrite 3 low-CTR title tags 12. Plan next month's content calendar
-
----
-
-## Success Metrics
-
-**3-Month Goals:**
-
-- 30% increase in organic traffic
-- 20+ blog posts published
-- Top 10 ranking for 10 core keywords
-- 15+ quality backlinks acquired
-
-**6-Month Goals:**
-
-- 50% increase in organic traffic
-- 40+ blog posts published
-- Top 5 ranking for 15 core keywords
-- Page 1 for "coloproctologista curitiba"
-
-**12-Month Goals:**
-
-- 100% increase in organic traffic
-- 50+ blog posts published
-- Top 3 for "coloproctologista curitiba"
-- 30+ quality backlinks from medical/local sites
-
----
-
-## Core Principle
-
-> **SEO is a long-term system, not a growth hack.** Build fast, relevant, authoritative, and human-centered content — the rankings follow naturally.
-
-Focus on helping patients find answers to their health concerns. The algorithm rewards content that genuinely serves user intent.
-
----
-
-**Next Steps:**
-
-1. Review keyword tracking document
-2. Prioritize first 5 blog posts
-3. Create content calendar
-4. Execute Week 1 quick wins
-5. Track progress in Google Search Console
-
-**Last Updated:** 2025-11-20
+For changes to navigation, responsive layouts, or rendered blog behavior, also run the
+relevant Playwright tests and manually inspect the riskiest page at mobile and desktop
+sizes.

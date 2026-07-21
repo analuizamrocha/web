@@ -15,6 +15,7 @@ intent: "consideration"
 featured: false
 order: 43
 relatedPosts:
+  - "hemorroida-grau-3-tratamento"
   - "cirurgia-laser-hemorroida-quando-faz-sentido"
   - "hemorroida-sempre-precisa-cirurgia"
 faqs:

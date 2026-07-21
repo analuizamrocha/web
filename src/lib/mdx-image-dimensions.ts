@@ -29,6 +29,10 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1024,
     height: 1536,
   },
+  '/images/posts/cisto-pilonidal-cirurgia-laser-quando-operar/cirurgia-convencional-laser-cisto-pilonidal.webp': {
+    width: 1200,
+    height: 900,
+  },
   '/images/posts/cisto-pilonidal-precisa-cirurgia/cisto-pilonidal-detalhes.webp': {
     width: 1130,
     height: 746,
@@ -57,6 +61,10 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1200,
     height: 600,
   },
+  '/images/posts/fissura-anal-toxina-botulinica-tratamento/tratamento-fissura-anal-tres-pilares.webp': {
+    width: 1200,
+    height: 900,
+  },
   '/images/posts/gastroenterologista-ou-coloproctologista-diferenca/gastroenterologista-ou-coloproctologista.png': {
     width: 1536,
     height: 1024,
@@ -68,6 +76,14 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
   '/images/posts/hemorroida-sempre-precisa-cirurgia/hemorroidectomia-laser.webp': {
     width: 1084,
     height: 778,
+  },
+  '/images/posts/laser-ou-eletrocauterizacao-hpv-anal/laser-versus-eletrocauterizacao-infografico.webp': {
+    width: 1200,
+    height: 900,
+  },
+  '/images/posts/plicoma-anal-vale-a-pena-retirar/remocao-plicoma-laser-co2-infografico.webp': {
+    width: 1200,
+    height: 900,
   },
   '/images/posts/plicoma-anal-cirurgia-laser/plicoma.webp': {
     width: 1024,

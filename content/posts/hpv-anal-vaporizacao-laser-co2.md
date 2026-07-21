@@ -15,6 +15,7 @@ intent: "consideration"
 featured: false
 order: 42
 relatedPosts:
+  - "laser-ou-eletrocauterizacao-hpv-anal"
   - "hpv-anal-condilomas-riscos-tratamento-rastreio"
   - "cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar"
 faqs:

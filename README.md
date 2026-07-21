@@ -47,7 +47,7 @@ A modern, SEO-optimized medical practice website built with Next.js 16, featurin
 
 ### Prerequisites
 
-- Node.js >= 22.0.0
+- Node.js >= 24.0.0
 - Bun >= 1.2.0
 
 ### Installation
@@ -132,12 +132,14 @@ bun run analyze
 │   ├── lib/                   # Utilities
 │   │   ├── blog.ts           # Blog utilities
 │   │   ├── constants.ts      # App constants
-│   │   ├── structured-data.ts # SEO schema
+│   │   ├── mdx-image-dimensions.ts # Post image dimensions
+│   │   ├── seo-schemas.ts    # SEO metadata helpers
+│   │   ├── structured-data.ts # Structured data helpers
 │   │   └── utils.ts          # Helper functions
-│   ├── hooks/                # Custom React hooks
-│   └── content/
-│       └── posts/            # Markdown blog posts
-├── public/                   # Static assets
+│   └── hooks/                # Custom React hooks
+├── content/
+│   └── posts/                # Markdown blog posts
+├── public/                   # Static assets and llms.txt
 ├── CLAUDE.md                # AI assistant instructions
 └── package.json             # Dependencies and scripts
 ```
@@ -146,24 +148,9 @@ bun run analyze
 
 ### Adding Blog Posts
 
-Create a new markdown file in `/content/posts/`:
-
-```markdown
----
-title: "Your SEO-optimized title"
-metaDescription: "Meta description under 160 characters"
-slug: "url-friendly-slug"
-publishDate: "2025-01-20"
-lastModified: "2025-01-20"
-primaryKeyword: "main keyword"
-secondaryKeywords: ["keyword1", "keyword2"]
-targetAudience: "patients" | "referring-doctors" | "general-public"
-intent: "awareness" | "consideration" | "decision"
-featured: true
----
-
-Your content here...
-```
+Create a Markdown file in `content/posts` and follow the complete metadata, subtitle,
+image-dimension, discovery-file, compliance, and validation contract in
+[`docs/blog-content-playbook.md`](./docs/blog-content-playbook.md).
 
 Blog posts automatically:
 
@@ -171,8 +158,12 @@ Blog posts automatically:
 - Include in sitemap
 - Create SEO meta tags
 - Support static generation
+- Use the first Markdown image for the blog card
 
-For project-specific authoring rules (subtitle extraction, metadata contract, checklist), see:
+Before opening a blog PR, update `public/llms.txt`, add non-default image dimensions to
+`src/lib/mdx-image-dimensions.ts`, and run the focused content tests.
+
+For project-specific authoring rules, see:
 
 - [AGENTS.md](./AGENTS.md)
 - [docs/blog-content-playbook.md](./docs/blog-content-playbook.md)

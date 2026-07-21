@@ -8,6 +8,10 @@ Operational guide for creating and maintaining blog posts in this project.
 - Listing page: `src/app/blog/page.tsx`
 - Post page route: `src/app/blog/[slug]/page.tsx`
 - Content parser + excerpt logic: `src/lib/blog.ts`
+- Post images: `public/images/posts/<slug>`
+- Markdown image renderer: `src/components/ui/MdxImage.tsx`
+- Intrinsic image dimensions: `src/lib/mdx-image-dimensions.ts`
+- Machine-readable post inventory: `public/llms.txt`
 
 ## Metadata Schema (Frontmatter)
 
@@ -34,8 +38,13 @@ faqs:
     answer: 'Resposta 1.'
   - question: 'Pergunta 2?'
     answer: 'Resposta 2.'
+relatedPosts:
+  - 'related-post-slug'
 ---
 ```
+
+`relatedPosts` is optional. When present, use existing post slugs only and keep the
+selection tightly related to the reader's next question.
 
 ## Card Subtitle System (Important)
 
@@ -73,6 +82,42 @@ This applies to: `title` in frontmatter, `##` headings, and `###` subheadings.
 - Use bullet lists for sintomas, sinais, indicações e condutas.
 - Keep CTA in conclusion.
 - Keep FAQ in frontmatter (`faqs`) for schema metadata.
+
+## Image Workflow
+
+The first Markdown image in a post is also used as its `/blog` card image. Keep all
+post-specific assets under the post slug and reference them from the site root:
+
+```md
+![Descrição objetiva e acessível da imagem](/images/posts/post-slug/image-name.webp)
+```
+
+For every new or replaced image:
+
+1. Prefer WebP unless transparency or another requirement justifies PNG.
+2. Use a descriptive lowercase filename with hyphens.
+3. Write useful alt text that describes the image; do not stuff keywords.
+4. Inspect the asset's real `width` and `height`. If they differ from the
+   `1200x800` default, add them to `src/lib/mdx-image-dimensions.ts` using the exact
+   Markdown path.
+5. Run `tests/mdx-image-dimensions.test.ts`. It reads every local image referenced
+   by a post, inspects the file with Sharp, and fails when the resolved dimensions do
+   not match the asset.
+
+`MdxImage` passes these intrinsic dimensions to `next/image` to reserve the correct
+aspect ratio and prevent layout shifts. An image may use the `1200x800` fallback only
+when those are its real intrinsic dimensions.
+
+## SEO Discovery Files
+
+New posts are added to the dynamic sitemap automatically. They must also be listed in
+`public/llms.txt`, grouped with the most relevant topic cluster. The discovery test
+requires the post slugs in Markdown, the sitemap, and `llms.txt` to stay aligned.
+
+Before creating a new URL, check nearby posts for overlapping intent. Prefer updating,
+differentiating, or consolidating an existing article when two URLs would answer the
+same patient question. Informational posts should link naturally to the treatment or
+location page that owns the corresponding consultation intent.
 
 ## CFM Compliance Pass (Mandatory)
 
@@ -119,20 +164,26 @@ Especialista em Coloproctologia
 1. Scan existing posts for overlap.
 2. Create new file with valid frontmatter.
 3. Add italic hook + body.
-4. Add signature/disclaimer footer.
-5. Run CFM compliance pass.
-6. Run build.
-7. Review `/blog` card subtitle and date rendering.
+4. Add optimized images and register any non-default dimensions.
+5. Add the post to `public/llms.txt`.
+6. Add signature/disclaimer footer.
+7. Run CFM compliance pass.
+8. Run focused content tests, lint, and build.
+9. Review the `/blog` card image/subtitle and the rendered article.
 
 ## Validation Commands
 
 ```bash
-# list posts
-ls -1 content/posts
-
-# search duplicates by topic
+# Search duplicates by topic
 rg -n "keyword-or-topic" content/posts
 
-# full validation
+# Validate post discovery, image dimensions, and social metadata
+bun run test:run -- \
+  tests/content-discovery.test.ts \
+  tests/mdx-image-dimensions.test.ts \
+  tests/seo-metadata.test.ts
+
+# Repository checks
+bun run lint
 bun run build
 ```

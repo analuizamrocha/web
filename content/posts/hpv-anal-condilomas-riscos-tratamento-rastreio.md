@@ -16,6 +16,7 @@ intent: 'awareness'
 featured: false
 order: 13
 relatedPosts:
+  - 'laser-ou-eletrocauterizacao-hpv-anal'
   - 'cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar'
   - 'saude-sexual-cuidado-informacao-bem-estar'
 faqs:

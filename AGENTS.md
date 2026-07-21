@@ -34,7 +34,7 @@ Required frontmatter fields:
 
 ## CFM Compliance Baseline
 
-Use [docs/cfm-compliance-guidelines.md](/Users/diegovfeder/workspace/jobs/analu-procto/docs/cfm-compliance-guidelines.md) as a mandatory review reference before publishing.
+Use `docs/cfm-compliance-guidelines.md` as a mandatory review reference before publishing.
 
 Minimum checks for each post:
 
@@ -78,11 +78,27 @@ Especialista em Coloproctologia
 > _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._
 ```
 
+## Blog Image Contract
+
+- Store post images in `public/images/posts/<slug>`.
+- Use root-relative Markdown paths such as `/images/posts/<slug>/image.webp`.
+- The first Markdown image becomes the `/blog` card image.
+- Inspect each referenced image's real width and height. Add an entry to
+  `src/lib/mdx-image-dimensions.ts` when they differ from the `1200x800` default.
+- Use the default only for images whose real intrinsic dimensions are `1200x800`.
+- Add useful descriptive alt text without keyword stuffing.
+
+The focused image test inspects the source assets with Sharp and verifies that every
+image referenced by a post matches its resolved dimensions.
+
 ## Pre-publish Checklist
 
 1. Confirm no near-duplicate post already exists.
 2. Validate slug uniqueness in `content/posts`.
 3. Validate metadata completeness and enum values.
 4. Apply CFM compliance pass using `docs/cfm-compliance-guidelines.md`.
-5. Run build (`bun run build` or `npm run build`).
-6. Confirm blog card subtitle is the intended hook.
+5. Add new post slugs to `public/llms.txt`; the sitemap updates automatically.
+6. Register exact image dimensions when they differ from the `1200x800` default.
+7. Run `bun run test:run -- tests/content-discovery.test.ts tests/mdx-image-dimensions.test.ts tests/seo-metadata.test.ts`.
+8. Run `bun run lint` and `bun run build`.
+9. Confirm the blog card image and subtitle are the intended ones.
