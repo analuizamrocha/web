@@ -49,7 +49,7 @@ export function TreatmentsSection() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
             Tratamentos
           </h2>
-          <div className="text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
+          <div className="text-xl lg:text-2xl leading-relaxed text-body font-medium space-y-4">
             <p>
               Nossa consulta é individualizada e detalhada e busca um
               entendimento completo sobre você e seu problema.

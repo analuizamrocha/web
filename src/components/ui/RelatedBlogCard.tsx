@@ -22,7 +22,7 @@ export function RelatedBlogCard({ treatmentSlug }: RelatedBlogCardProps) {
         <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary mb-3 leading-tight">
           {relatedBlog.title}
         </h3>
-        <p className="text-base text-secondary leading-relaxed mb-6">{relatedBlog.description}</p>
+        <p className="text-base text-body leading-relaxed mb-6">{relatedBlog.description}</p>
         <LinkButton
           href={relatedBlog.href}
           variant="outline"

@@ -48,7 +48,7 @@ export function MissionSection() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
             Nossa Missão
           </h2>
-          <div className="text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
+          <div className="text-xl lg:text-2xl leading-relaxed text-body font-medium space-y-4">
             <p>
               Transformar tabus em cuidado humanizado através de atendimento
               médico especializado.

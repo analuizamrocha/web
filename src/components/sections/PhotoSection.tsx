@@ -10,7 +10,7 @@ export function PhotoSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary mb-8">
             Cuidado humanizado e especializado
           </h2>
-          <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium">
+          <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-body font-medium">
             <p>
               Cada consulta é uma oportunidade de cuidar com atenção, técnica e
               carinho em um ambiente acolhedor.
