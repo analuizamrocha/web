@@ -139,7 +139,11 @@ export function Card({
     variant === 'default' &&
       'bg-neutral-50/50 hover:bg-neutral-100/50 p-6 sm:p-8 border border-neutral-200',
     variant === 'service' &&
-      'bg-secondary/10 hover:bg-card-hover p-6 sm:p-8 border border-primary/10 hover:border-primary/20 backdrop-blur-sm min-h-[300px] sm:min-h-[320px]',
+      cn(
+        'overflow-hidden bg-secondary/10 hover:bg-card-hover p-6 sm:p-8 border border-primary/10 hover:border-primary/35 backdrop-blur-sm min-h-[300px] sm:min-h-[320px]',
+        // Left accent rail: wipes in top→bottom on hover (terracotta, decorative)
+        "before:content-[''] before:absolute before:inset-y-0 before:left-0 before:w-1 before:origin-top before:scale-y-0 before:bg-brand-primary before:transition-transform before:duration-500 before:ease-out group-hover:before:scale-y-100 motion-reduce:before:transition-none"
+      ),
     className
   )
 
