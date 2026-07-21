@@ -3,7 +3,7 @@ title: 'Tratamento de fístulas anorretais'
 metaDescription: 'Entenda sintomas, diagnóstico e opções de tratamento para fístula anal com foco em segurança, preservação da continência e menor recorrência.'
 slug: 'tratamento-fistulas-anorretais'
 publishDate: '2026-03-05'
-lastModified: '2026-03-05'
+lastModified: '2026-07-18'
 primaryKeyword: 'fístula anal'
 secondaryKeywords:
   - 'fístulas anorretais'
@@ -72,7 +72,7 @@ O objetivo é definir a estratégia mais segura para cada caso.
 
 ## Tratamentos disponíveis
 
-O tratamento da fístula anal depende da sua classificação (simples ou complexa).
+O [tratamento da fístula anal](/tratamentos/cx-fistulas-anorretais) depende da sua classificação (simples ou complexa).
 
 ### Colocação de seton (sedenho)
 

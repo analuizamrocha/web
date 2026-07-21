@@ -162,10 +162,10 @@ export default function ToxinaBotulínicaPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="toxina-botulinica" />
+            <TreatmentHeroImage slug="toxina-botulinica" preload />
 
 
-            <main className="prose prose-lg max-w-none mb-12">
+            <div className="prose prose-lg max-w-none mb-12">
               <h2>Indicações principais</h2>
 
               <h3>Fissura anal crônica</h3>
@@ -301,7 +301,7 @@ export default function ToxinaBotulínicaPage() {
                   </p>
                 </div>
               </div>
-            </main>
+            </div>
 
             <CallToActionCard
               title="Sofre com dor anal persistente ou fissura crônica?"

@@ -3,9 +3,10 @@ import { getTreatmentImageBySlug } from '@/lib/treatment-images'
 
 interface TreatmentHeroImageProps {
   slug: string
+  preload?: boolean
 }
 
-export function TreatmentHeroImage({ slug }: TreatmentHeroImageProps) {
+export function TreatmentHeroImage({ slug, preload = false }: TreatmentHeroImageProps) {
   const treatmentImage = getTreatmentImageBySlug(slug)
 
   if (!treatmentImage) {
@@ -20,9 +21,10 @@ export function TreatmentHeroImage({ slug }: TreatmentHeroImageProps) {
       <Image
         src={treatmentImage.src}
         alt={treatmentImage.alt}
-        width={1600}
-        height={900}
+        width={1200}
+        height={800}
         sizes="(min-width: 1280px) 56rem, (min-width: 768px) 80vw, 100vw"
+        preload={preload}
         className="h-auto w-full object-cover"
       />
     </figure>

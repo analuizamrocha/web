@@ -4,11 +4,16 @@ import { WHATSAPP_HREF_SECRETARY, WEBSITE_URL } from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { TreatmentCard } from '@/components/ui/TreatmentCard'
 import { getTreatmentImageBySlug } from '@/lib/treatment-images'
+import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/seo-schemas'
+
+const pageTitle = 'Tratamentos em Coloproctologia'
+const pageDescription =
+  'Do diagnóstico ao pós-operatório: cirurgia a laser, hemorroidas, fístulas, cisto pilonidal, HPV anal e doenças inflamatórias intestinais. Conheça cada abordagem.'
+const pageUrl = `${WEBSITE_URL}/tratamentos`
 
 export const metadata: Metadata = {
-  title: 'Tratamentos em Coloproctologia',
-  description:
-    'Do diagnóstico ao pós-operatório: cirurgia a laser, hemorroidas, fístulas, cisto pilonidal, HPV anal e doenças inflamatórias intestinais. Conheça cada abordagem.',
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     'coloproctologia curitiba',
     'cirurgia hemorroidas curitiba',
@@ -19,8 +24,18 @@ export const metadata: Metadata = {
     'cisto pilonidal curitiba',
   ],
   alternates: {
-    canonical: `${WEBSITE_URL}/tratamentos`,
+    canonical: pageUrl,
   },
+  openGraph: generateOpenGraphMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
+  twitter: generateTwitterMetadata({
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+  }),
 }
 
 const treatments = [
@@ -142,7 +157,7 @@ export default function ServicosPage() {
 
             {/* Treatments Grid */}
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 xl:gap-8">
-              {treatments.map((treatment) => {
+              {treatments.map((treatment, index) => {
                 const treatmentImage = getTreatmentImageBySlug(treatment.slug)
 
                 return (
@@ -155,6 +170,8 @@ export default function ServicosPage() {
                     variant="detailed"
                     treatmentId={treatmentImage?.id}
                     image={treatmentImage}
+                    headingLevel="h2"
+                    imagePriority={index === 0}
                   />
                 )
               })}
@@ -184,7 +201,6 @@ export default function ServicosPage() {
                   variant="primary"
                   size="xl"
                   className="bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
                   Agendar consulta
                 </LinkButton>

@@ -2,10 +2,13 @@
 
 import { useState, useEffect, useRef } from 'react'
 
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+
 export function useMobileMenu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
-  const firstFocusableElementRef = useRef<HTMLButtonElement>(null)
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null)
   const skipScrollRestoreRef = useRef(false)
 
   const toggleMobileMenu = () => {
@@ -21,26 +24,13 @@ export function useMobileMenu() {
   const cleanupInertAttributes = () => {
     const mainContent = document.getElementById('main')
     const header = document.querySelector('header')
+    const footer = document.querySelector('footer')
     const skipToContent = document.getElementById('skip-to-content')
-
-    const allButtons = document.querySelectorAll('main button, main a[href]')
-    const heroSection = document.getElementById('hero')
-    const locationSection = document.getElementById('atendimento')
 
     if (mainContent) {
       mainContent.removeAttribute('inert')
     }
-
-    if (heroSection) {
-      heroSection.removeAttribute('inert')
-    }
-    if (locationSection) {
-      locationSection.removeAttribute('inert')
-    }
-
-    allButtons.forEach((element) => {
-      element.removeAttribute('inert')
-    })
+    footer?.removeAttribute('inert')
 
     if (header) {
       const desktopNav = header.querySelector('.hidden.lg\\:flex')
@@ -68,42 +58,23 @@ export function useMobileMenu() {
     const scrollY = window.scrollY
     const { body } = document
     const { style } = body
+    const menuButton = mobileMenuButtonRef.current
     style.position = 'fixed'
     style.top = `-${scrollY}px`
     style.left = '0'
     style.right = '0'
     style.overflow = 'hidden'
 
-    // Focus the first focusable element in the menu.
-    // preventScroll guards against the browser auto-scrolling toward the
-    // (transitioning) panel before our body lock has settled.
-    if (firstFocusableElementRef.current) {
-      firstFocusableElementRef.current.focus({ preventScroll: true })
-    }
-
-    // Add inert attribute to main content and other elements to prevent tab navigation
+    // Keep page content outside the modal navigation unavailable while it is open.
     const mainContent = document.getElementById('main')
     const header = document.querySelector('header')
+    const footer = document.querySelector('footer')
     const skipToContent = document.getElementById('skip-to-content')
-
-    const allButtons = document.querySelectorAll('main button, main a[href]')
-    const heroSection = document.getElementById('hero')
-    const locationSection = document.getElementById('atendimento')
 
     if (mainContent) {
       mainContent.setAttribute('inert', '')
     }
-
-    if (heroSection) {
-      heroSection.setAttribute('inert', '')
-    }
-    if (locationSection) {
-      locationSection.setAttribute('inert', '')
-    }
-
-    allButtons.forEach((element) => {
-      element.setAttribute('inert', '')
-    })
+    footer?.setAttribute('inert', '')
 
     if (header) {
       const desktopNav = header.querySelector('.hidden.lg\\:flex')
@@ -119,6 +90,11 @@ export function useMobileMenu() {
       skipToContent.setAttribute('inert', '')
     }
 
+    // This works on every route; previously only the homepage supplied a focus ref.
+    mobileMenuRef.current
+      ?.querySelector<HTMLElement>(FOCUSABLE_SELECTOR)
+      ?.focus({ preventScroll: true })
+
     return () => {
       style.position = ''
       style.top = ''
@@ -132,21 +108,71 @@ export function useMobileMenu() {
       }
       skipScrollRestoreRef.current = false
       cleanupInertAttributes()
+      menuButton?.focus({ preventScroll: true })
     }
   }, [mobileMenuOpen])
 
-  // Attach escape key handler only when menu is open.
+  // Keep keyboard focus within the modal navigation and its visible toggle.
   useEffect(() => {
     if (!mobileMenuOpen) return
 
-    const handleEscape = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setMobileMenuOpen(false)
+        return
+      }
+
+      if (e.key !== 'Tab') return
+
+      const menu = mobileMenuRef.current
+      const menuButton = mobileMenuButtonRef.current
+      if (!menu || !menuButton) return
+
+      const menuElements = Array.from(menu.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR))
+      const firstElement = menuElements[0]
+      const lastMenuElement = menuElements[menuElements.length - 1]
+      const activeElement = document.activeElement
+
+      if (!firstElement || !lastMenuElement) return
+
+      if (e.shiftKey && activeElement === firstElement) {
+        e.preventDefault()
+        menuButton.focus()
+      } else if (e.shiftKey && activeElement === menuButton) {
+        e.preventDefault()
+        lastMenuElement.focus()
+      } else if (!e.shiftKey && activeElement === lastMenuElement) {
+        e.preventDefault()
+        menuButton.focus()
+      } else if (!e.shiftKey && activeElement === menuButton) {
+        e.preventDefault()
+        firstElement.focus()
+      } else if (
+        activeElement !== menuButton &&
+        !menuElements.includes(activeElement as HTMLElement)
+      ) {
+        e.preventDefault()
+        firstElement.focus()
       }
     }
 
-    document.addEventListener('keydown', handleEscape)
-    return () => document.removeEventListener('keydown', handleEscape)
+    const handleFocusIn = (e: FocusEvent) => {
+      const menu = mobileMenuRef.current
+      const menuButton = mobileMenuButtonRef.current
+      const target = e.target
+
+      if (!(target instanceof HTMLElement) || !menu || !menuButton) return
+      if (target === menuButton || menu.contains(target)) return
+
+      menu.querySelector<HTMLElement>(FOCUSABLE_SELECTOR)?.focus({ preventScroll: true })
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('focusin', handleFocusIn)
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('focusin', handleFocusIn)
+    }
   }, [mobileMenuOpen])
 
   return {
@@ -155,6 +181,6 @@ export function useMobileMenu() {
     toggleMobileMenu,
     closeWithoutScrollRestore,
     mobileMenuRef,
-    firstFocusableElementRef,
+    mobileMenuButtonRef,
   }
 }

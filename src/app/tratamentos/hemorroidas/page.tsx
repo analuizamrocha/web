@@ -164,10 +164,10 @@ export default function TratamentoHemorroidasPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="hemorroidas" />
+            <TreatmentHeroImage slug="hemorroidas" preload />
 
 
-            <main className="prose prose-lg max-w-none mb-12">
+            <div className="prose prose-lg max-w-none mb-12">
               <p>
                 Na coloproctologia moderna, diferentes técnicas podem ser
                 utilizadas:
@@ -389,7 +389,7 @@ export default function TratamentoHemorroidasPage() {
                   </p>
                 </div>
               </div>
-            </main>
+            </div>
 
             <CallToActionCard
               title="Precisa de avaliação para tratamento de hemorroidas?"

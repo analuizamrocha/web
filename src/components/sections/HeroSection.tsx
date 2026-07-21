@@ -20,8 +20,7 @@ export function HeroSection() {
               height={1200}
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
               className="w-full h-auto object-contain lg:shadow-2xl"
-              priority
-              fetchPriority="high"
+              preload
             />
           </div>
 
@@ -49,7 +48,7 @@ export function HeroSection() {
                 variant="primary"
                 size="xl"
                 className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-                aria-label="Agendar consulta com coloproctologista em Curitiba - Dra. Ana Luiza Moraes Rocha por WhatsApp"
+                aria-label="Agende sua consulta agora pelo WhatsApp"
               >
                 Agende sua consulta agora
               </LinkButton>

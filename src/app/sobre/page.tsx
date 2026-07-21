@@ -262,7 +262,7 @@ export default function SobrePage() {
             </h2>
           </div>
 
-          <main className="prose prose-lg max-w-none mb-8 lg:mb-16">
+          <div className="prose prose-lg max-w-none mb-8 lg:mb-16">
             <h2 className="text-3xl font-serif font-bold text-primary mb-6 text-center">
               Minha trajetória profissional
             </h2>
@@ -285,7 +285,7 @@ export default function SobrePage() {
                     src="/images/cx-group.webp"
                     alt={`Dra. Ana Luiza Moraes Rocha, coloproctologista em Curitiba, ${CRM_NUMBER}, em seu consultório médico especializado`}
                     fill
-                    priority
+                    preload
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
@@ -321,7 +321,7 @@ export default function SobrePage() {
               vivência ampliou minha visão da especialidade e reforçou meu compromisso em oferecer
               tratamentos modernos, seguros e individualizados aos pacientes.
             </p>
-          </main>
+          </div>
 
           <div className="prose prose-lg max-w-none mb-8 lg:mb-16">
             <h2 className="text-3xl font-serif font-bold text-primary text-center">
@@ -579,7 +579,6 @@ export default function SobrePage() {
                   variant="primary"
                   size="xl"
                   className="group bg-primary hover:bg-primary/90 text-background shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold text-nowrap"
-                  aria-label="Enviar mensagem para Dra. Ana Luiza Moraes Rocha por WhatsApp"
                 >
                   Agendar consulta
                 </LinkButton>

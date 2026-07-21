@@ -30,7 +30,7 @@ export function Header() {
     toggleMobileMenu,
     closeWithoutScrollRestore,
     mobileMenuRef,
-    firstFocusableElementRef,
+    mobileMenuButtonRef,
   } = useMobileMenu()
 
   const handleNavClick = (href: string) => {
@@ -148,13 +148,14 @@ export function Header() {
             {/* Mobile menu button */}
             <div className="lg:hidden">
               <button
+                ref={mobileMenuButtonRef}
                 type="button"
                 className="relative p-2 text-secondary hover:text-primary focus:text-primary transition-colors duration-200 cursor-pointer focus:outline-none"
                 onClick={toggleMobileMenu}
                 aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu de navegação'}
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu"
-                aria-haspopup="true"
+                aria-haspopup="dialog"
               >
                 {/* Animated hamburger icon */}
                 <div className="w-6 h-6 flex flex-col justify-center items-center">
@@ -197,7 +198,7 @@ export function Header() {
           ref={mobileMenuRef}
           id="mobile-menu"
           role="dialog"
-          aria-labelledby="mobile-menu-title"
+          aria-label="Menu de navegação"
           aria-modal="true"
           inert={!mobileMenuOpen}
           className={`fixed top-[67.5px] inset-x-0 bottom-0 bg-background/95 backdrop-blur-md border-t border-primary/10 shadow-lg transform transition-transform duration-300 ease-out overflow-hidden ${
@@ -212,10 +213,9 @@ export function Header() {
                   // Homepage: sections + divider + routes
                   <>
                     {/* Homepage sections with scroll navigation */}
-                    {getHashNavigation().map((item, index) => (
+                    {getHashNavigation().map((item) => (
                       <button
                         key={item.name}
-                        ref={index === 0 ? firstFocusableElementRef : null}
                         onClick={(e) => handleMobileNavClick(e, item.href)}
                         className={cn(
                           'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',

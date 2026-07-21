@@ -163,10 +163,10 @@ export default function TratamentoHpvAnalPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="hpv-anal" />
+            <TreatmentHeroImage slug="hpv-anal" preload />
 
 
-            <main className="prose prose-lg max-w-none mb-12">
+            <div className="prose prose-lg max-w-none mb-12">
               <p>
                 Essas lesões podem provocar desconforto, sangramento, coceira e, em alguns casos,
                 constrangimento estético.
@@ -322,7 +322,7 @@ export default function TratamentoHpvAnalPage() {
                   </p>
                 </div>
               </div>
-            </main>
+            </div>
 
             <CallToActionCard
               title="Identificou lesões suspeitas na região anal?"

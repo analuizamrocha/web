@@ -19,9 +19,13 @@ test('homepage renders hero content and primary CTA', async ({ page }) => {
 
   await expect(
     page.locator('#hero').getByRole('link', {
-      name: /Agendar consulta com coloproctologista em Curitiba/i,
+      name: /Agende sua consulta agora pelo WhatsApp/i,
     })
   ).toBeVisible()
+
+  const aboutImage = page.locator('img[alt*="formação internacional em coloproctologia"]')
+  await expect(aboutImage).toHaveAttribute('width', '960')
+  await expect(aboutImage).toHaveAttribute('height', '1200')
 })
 
 test('cookie consent stores accepted decision', async ({ page }) => {
@@ -54,6 +58,7 @@ test('blog index renders and links to articles', async ({ page }) => {
   ).toBeVisible()
 
   await expect(page.getByRole('link', { name: /Ler artigo/i }).first()).toBeVisible()
+  await expect(page.locator('link[rel="preload"][as="image"]')).toHaveCount(1)
 })
 
 test('blog post page renders expected heading and CTA', async ({ page }) => {
@@ -82,6 +87,87 @@ test('treatments page renders heading and treatment cards', async ({ page }) => 
   await expect(
     page.getByRole('link', { name: /Ver detalhes sobre Cirurgias a Laser/i })
   ).toBeVisible()
+
+  await expect(page.locator('link[rel="preload"][as="image"]')).toHaveCount(1)
+})
+
+test('treatment heroes are preloaded without changing their layout', async ({ page }) => {
+  const treatmentSlugs = [
+    'cx-cisto-pilonidal',
+    'cx-fistulas-anorretais',
+    'cx-laser',
+    'doencas-inflamatorias-intestinais',
+    'hemorroidas',
+    'hpv-anal',
+    'rastreio-cancer-anal',
+    'sindrome-intestino-irritavel',
+    'toxina-botulinica',
+  ]
+
+  for (const slug of treatmentSlugs) {
+    await page.goto(`/tratamentos/${slug}`)
+    await expect(page.locator('link[rel="preload"][as="image"]')).toHaveCount(1)
+    const heroImage = page.locator('figure img')
+    await expect(heroImage).toHaveCount(1)
+    await expect(heroImage).toHaveAttribute('width', '1200')
+    await expect(heroImage).toHaveAttribute('height', '800')
+  }
+})
+
+test('framework caching keeps versioned assets fast and public images replaceable', async ({ page }) => {
+  const homepageResponse = await page.request.get('/')
+  expect(homepageResponse.ok()).toBeTruthy()
+  expect(homepageResponse.headers()['cache-control']).not.toContain('s-maxage=0')
+
+  const faviconResponse = await page.request.get('/favicon.ico')
+  expect(faviconResponse.ok()).toBeTruthy()
+  expect((await faviconResponse.body()).byteLength).toBeLessThan(20_000)
+
+  const publicImageResponse = await page.request.get('/images/og.png')
+  expect(publicImageResponse.ok()).toBeTruthy()
+  expect(publicImageResponse.headers()['cache-control']).not.toContain('immutable')
+})
+
+test('technical social metadata and article schema use valid site resources', async ({ page }) => {
+  await page.goto('/tratamentos')
+  await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
+    'content',
+    `${CANONICAL_WEBSITE_URL}/tratamentos`
+  )
+
+  await page.goto('/blog/fissura-anal-tratamento')
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+    'content',
+    `${CANONICAL_WEBSITE_URL}/images/og.png`
+  )
+
+  const schemas = await page
+    .locator('script[type="application/ld+json"]')
+    .allTextContents()
+  expect(schemas.length).toBeGreaterThan(0)
+  expect(() => schemas.map((schema) => JSON.parse(schema))).not.toThrow()
+  expect(schemas.join(' ')).not.toContain('/search?q=')
+  expect(schemas.join(' ')).not.toContain('/logo.png')
+
+  const socialImageResponse = await page.request.get('/images/og.png')
+  expect(socialImageResponse.ok()).toBeTruthy()
+})
+
+test('privacy page keeps noindex while owning its canonical and social URL', async ({ page }) => {
+  await page.goto('/politica-privacidade')
+
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    'content',
+    /noindex, nofollow/i
+  )
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    `${CANONICAL_WEBSITE_URL}/politica-privacidade`
+  )
+  await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
+    'content',
+    `${CANONICAL_WEBSITE_URL}/politica-privacidade`
+  )
 })
 
 test('sitemap and robots expose canonical crawl signals', async ({ page }) => {
@@ -96,6 +182,7 @@ test('sitemap and robots expose canonical crawl signals', async ({ page }) => {
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/blog`)
   expect(blogPostLocs.length).toBeGreaterThan(0)
   expect(locs).not.toContain(`${CANONICAL_WEBSITE_URL}/politica-privacidade`)
+  expect(sitemapXml).toContain('<lastmod>2026-07-18</lastmod>')
 
   for (const loc of locs) {
     expect(loc.startsWith(CANONICAL_WEBSITE_URL)).toBeTruthy()

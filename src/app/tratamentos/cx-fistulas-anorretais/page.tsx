@@ -168,10 +168,10 @@ export default function CirurgiaFistulasPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="cx-fistulas-anorretais" />
+            <TreatmentHeroImage slug="cx-fistulas-anorretais" preload />
 
 
-            <main className="prose prose-lg max-w-none mb-12">
+            <div className="prose prose-lg max-w-none mb-12">
               <p>
                 Costumam surgir após abscessos anorretais e podem provocar secreção, dor e
                 desconforto.
@@ -376,7 +376,7 @@ export default function CirurgiaFistulasPage() {
                   </p>
                 </div>
               </div>
-            </main>
+            </div>
 
             <CallToActionCard
               title="Precisa de avaliação para tratamento de fístula anorretal?"

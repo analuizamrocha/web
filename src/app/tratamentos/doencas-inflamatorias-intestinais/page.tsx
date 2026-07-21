@@ -167,10 +167,10 @@ export default function DoencasInflamatoriasIntestinaisPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="doencas-inflamatorias-intestinais" />
+            <TreatmentHeroImage slug="doencas-inflamatorias-intestinais" preload />
 
 
-            <main className="prose prose-lg max-w-none mb-12">
+            <div className="prose prose-lg max-w-none mb-12">
               <p>
                 Com acompanhamento adequado em <strong>coloproctologia</strong>, é possível
                 controlar os sintomas, prevenir complicações e manter o bem-estar.
@@ -345,7 +345,7 @@ export default function DoencasInflamatoriasIntestinaisPage() {
                   </p>
                 </div>
               </div>
-            </main>
+            </div>
 
             <CallToActionCard
               title="Suspeita de Doença Inflamatória Intestinal?"

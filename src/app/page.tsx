@@ -18,7 +18,7 @@ export default function Home() {
           __html: getFAQSchema(),
         }}
       />
-      <main id="main" className="min-h-screen">
+      <div className="min-h-screen">
         <HeroSection />
         <AboutSection />
         <MissionSection />
@@ -26,7 +26,7 @@ export default function Home() {
         <PhotoSection />
         <TreatmentsSection />
         <LocationsSection />
-      </main>
+      </div>
     </>
   )
 }

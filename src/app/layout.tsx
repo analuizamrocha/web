@@ -2,7 +2,6 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Montserrat, Literata } from 'next/font/google'
-import Script from 'next/script'
 
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
@@ -113,8 +112,8 @@ export const metadata: Metadata = {
       },
       {
         url: `${WEBSITE_URL}/images/sobre-mim.webp`,
-        width: 1080,
-        height: 1350,
+        width: 960,
+        height: 1200,
         alt: `${DR_NAME} - Formação e qualificações profissionais em coloproctologia`,
         type: 'image/webp',
       },
@@ -172,16 +171,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {/* React Grab - development only */}
         {process.env.NODE_ENV === 'development' && (
-          <Script
+          <script
             src="//unpkg.com/react-grab/dist/index.global.js"
             crossOrigin="anonymous"
-            strategy="beforeInteractive"
+            defer
           />
         )}
       </head>
       <body className={`${montserrat.variable} ${literata.variable} font-sans`}>
+        <a
+          id="skip-to-content"
+          href="#main"
+          className="fixed left-4 top-0 z-[100] -translate-y-full rounded-md bg-primary px-4 py-3 font-semibold text-background shadow-lg transition-transform focus:translate-y-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+        >
+          Ir para o conteúdo principal
+        </a>
         <Header />
-        {children}
+        <main id="main" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
         <ClientProviders enableVercelSignals={isVercelRuntime} />
       </body>

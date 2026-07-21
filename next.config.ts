@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
       permanent: true,
     },
   ],
-  // Security headers and caching
+  // Security headers
   headers: async () => [
     {
       source: '/(.*)',
@@ -58,35 +58,13 @@ const nextConfig: NextConfig = {
         {
           key: 'Strict-Transport-Security',
           value: 'max-age=31536000; includeSubDomains'
-        },
-        {
-          key: 'Cache-Control',
-          value: 'public, s-maxage=0, must-revalidate'
-        }
-      ]
-    },
-    {
-      source: '/images/(.*)',
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable'
-        }
-      ]
-    },
-    {
-      source: '/_next/static/(.*)',
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable'
         }
       ]
     }
   ],
   images: {
     formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 768, 1024, 1280, 1600],
+    deviceSizes: [576, 640, 768, 896, 1024, 1280, 1600],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",

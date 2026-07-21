@@ -163,10 +163,10 @@ export default function CirurgiasLaserPage() {
               </p>
             </header>
 
-            <TreatmentHeroImage slug="cx-laser" />
+            <TreatmentHeroImage slug="cx-laser" preload />
 
 
-            <main className="prose prose-lg max-w-none mb-12">
+            <div className="prose prose-lg max-w-none mb-12">
               <h2>Principais indicações</h2>
               <p>
                 Na proctologia, o laser pode ser utilizado em diferentes
@@ -302,7 +302,7 @@ export default function CirurgiasLaserPage() {
                   </p>
                 </div>
               </div>
-            </main>
+            </div>
 
             <CallToActionCard
               title="Quer saber se a cirurgia a laser é adequada para o seu caso?"

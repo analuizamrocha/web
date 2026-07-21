@@ -158,6 +158,37 @@ test.describe('mobile menu — scroll behavior', () => {
     await page.waitForURL('**/locais-de-atendimento')
     expect(page.url()).toMatch(/\/locais-de-atendimento$/)
   })
+
+  test('skip link and mobile menu keep keyboard focus in the expected region', async ({
+    page,
+  }) => {
+    await page.goto('/blog')
+
+    await page.keyboard.press('Tab')
+    await expect(page.locator('#skip-to-content')).toBeFocused()
+
+    await page.getByRole('button', { name: 'Abrir menu de navegação' }).click()
+    const dialog = page.getByRole('dialog', { name: 'Menu de navegação' })
+    await expect(dialog).toBeVisible()
+
+    const focusableCount = await dialog
+      .locator('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+      .count()
+
+    for (let index = 0; index < focusableCount + 2; index += 1) {
+      await page.keyboard.press('Tab')
+      const focusStayedInMenu = await page.evaluate(() => {
+        const activeElement = document.activeElement
+        const menu = document.getElementById('mobile-menu')
+        const menuButton = document.querySelector('button[aria-label="Fechar menu"]')
+        return menu?.contains(activeElement) || activeElement === menuButton
+      })
+      expect(focusStayedInMenu).toBe(true)
+    }
+
+    await page.keyboard.press('Escape')
+    await expect(page.getByRole('button', { name: 'Abrir menu de navegação' })).toBeFocused()
+  })
 })
 
 test.describe('desktop section nav — same scroll logic must still work', () => {
