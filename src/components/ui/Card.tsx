@@ -46,7 +46,6 @@ export function Card({
   ctaLabel = 'Saiba mais',
   external = false,
 }: CardProps) {
-  const isServiceSelectiveMobileLink = variant === 'service' && Boolean(href)
   const cardAriaLabel = `${title} - ${ctaLabel}`
 
   const content = (
@@ -61,21 +60,7 @@ export function Card({
             : 'text-lg sm:text-xl text-primary font-bold'
         )}
       >
-        {isServiceSelectiveMobileLink ? (
-          <>
-            <CardActionLink
-              href={href!}
-              external={external}
-              className="inline sm:hidden focus-visible:outline-none focus-visible:underline"
-              ariaLabel={cardAriaLabel}
-            >
-              {title}
-            </CardActionLink>
-            <span className="hidden sm:inline">{title}</span>
-          </>
-        ) : (
-          title
-        )}
+        {title}
       </h3>
 
       {description && (
@@ -97,15 +82,7 @@ export function Card({
 
       {href && variant === 'service' && (
         <div className="mt-auto flex items-center justify-between gap-4 pt-4 border-t border-primary/10">
-          <CardActionLink
-            href={href!}
-            external={external}
-            className="inline-flex sm:hidden text-primary font-semibold text-sm lg:text-base focus-visible:outline-none focus-visible:underline"
-            ariaLabel={cardAriaLabel}
-          >
-            {ctaLabel}
-          </CardActionLink>
-          <span className="hidden sm:inline-flex text-primary font-semibold text-sm lg:text-base">
+          <span className="inline-flex text-primary font-semibold text-sm lg:text-base">
             {ctaLabel}
           </span>
           <span
@@ -131,9 +108,7 @@ export function Card({
   const baseClasses = cn(
     'group relative isolate flex flex-col rounded-3xl transition-all duration-300 h-full shadow-sm hover:shadow-md block focus-within:outline focus-within:outline-2 focus-within:outline-offset-4 focus-within:outline-primary',
     href &&
-      (variant === 'service'
-        ? 'sm:cursor-pointer transform hover:-translate-y-[2px] hover:shadow-lg'
-        : 'cursor-pointer transform hover:-translate-y-[2px] hover:shadow-lg'),
+      'cursor-pointer transform hover:-translate-y-[2px] hover:shadow-lg',
     variant === 'treatment' &&
       'bg-card hover:bg-card-hover text-center justify-center p-6 min-h-[140px] sm:min-h-[160px] lg:p-8 lg:min-h-[200px] xl:min-h-[220px] border border-secondary/20 hover:border-secondary/30',
     variant === 'default' &&
@@ -153,7 +128,7 @@ export function Card({
         <CardActionLink
           href={href}
           external={external}
-          className="absolute inset-0 z-30 hidden rounded-3xl sm:block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="absolute inset-0 z-30 block rounded-3xl cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           ariaLabel={cardAriaLabel}
         />
         <div className="relative z-20 h-full">{content}</div>

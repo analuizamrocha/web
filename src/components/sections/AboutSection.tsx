@@ -39,7 +39,7 @@ const credentials: {
     institution: 'Universidade Federal do Paraná (UFPR)',
   },
   {
-    eyebrow: 'Membro',
+    eyebrow: 'SOCIEDADE',
     title: 'Membro IANS',
     institution: 'International Anal Neoplasia Society',
   },
