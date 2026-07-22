@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
+import { ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface CardProps {
@@ -45,7 +46,6 @@ export function Card({
   ctaLabel = 'Saiba mais',
   external = false,
 }: CardProps) {
-  const isServiceSelectiveMobileLink = variant === 'service' && Boolean(href)
   const cardAriaLabel = `${title} - ${ctaLabel}`
 
   const content = (
@@ -57,24 +57,10 @@ export function Card({
             ? 'text-lg sm:text-xl lg:text-xl xl:text-2xl text-primary font-bold leading-tight'
             : variant === 'service'
             ? 'text-xl sm:text-2xl text-primary font-bold leading-tight'
-            : 'text-lg sm:text-xl text-secondary font-bold'
+            : 'text-lg sm:text-xl text-primary font-bold'
         )}
       >
-        {isServiceSelectiveMobileLink ? (
-          <>
-            <CardActionLink
-              href={href!}
-              external={external}
-              className="inline sm:hidden focus-visible:outline-none focus-visible:underline"
-              ariaLabel={cardAriaLabel}
-            >
-              {title}
-            </CardActionLink>
-            <span className="hidden sm:inline">{title}</span>
-          </>
-        ) : (
-          title
-        )}
+        {title}
       </h3>
 
       {description && (
@@ -94,39 +80,26 @@ export function Card({
 
       {children && <div className={cn(variant === 'service' ? 'mt-auto pt-6' : 'mt-6')}>{children}</div>}
 
-      {href && (
-        <div
-          className={cn(
-            variant === 'service' ? 'mt-auto pt-3 border-t border-primary/10' : 'mt-6'
-          )}
-        >
-          {isServiceSelectiveMobileLink ? (
-            <>
-              <CardActionLink
-                href={href!}
-                external={external}
-                className="inline-flex items-center gap-1 text-primary font-semibold text-sm lg:text-base sm:hidden focus-visible:outline-none focus-visible:underline"
-                ariaLabel={cardAriaLabel}
-              >
-                <span>{ctaLabel}</span>
-                <span aria-hidden="true">→</span>
-              </CardActionLink>
-              <span className="hidden sm:inline-flex items-center gap-1 text-primary font-semibold text-sm lg:text-base transition-transform duration-300 group-hover:translate-x-0.5">
-                <span>{ctaLabel}</span>
-                <span aria-hidden="true">→</span>
-              </span>
-            </>
-          ) : (
-            <span
-              className={cn(
-                'inline-flex items-center gap-1 text-primary font-semibold text-sm lg:text-base',
-                variant === 'service' && 'transition-transform duration-300 group-hover:translate-x-0.5'
-              )}
-            >
-              <span>{ctaLabel}</span>
-              <span aria-hidden="true">→</span>
-            </span>
-          )}
+      {href && variant === 'service' && (
+        <div className="mt-auto flex items-center justify-between gap-4 pt-4 border-t border-primary/10">
+          <span className="inline-flex text-primary font-semibold text-sm lg:text-base">
+            {ctaLabel}
+          </span>
+          <span
+            aria-hidden="true"
+            className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-primary/20 bg-background text-primary transition-all duration-300 group-hover:translate-x-0.5 group-hover:border-primary group-hover:bg-primary group-hover:text-background"
+          >
+            <ArrowRight size={16} />
+          </span>
+        </div>
+      )}
+
+      {href && variant !== 'service' && (
+        <div className="mt-6">
+          <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm lg:text-base">
+            <span>{ctaLabel}</span>
+            <span aria-hidden="true">→</span>
+          </span>
         </div>
       )}
     </div>
@@ -135,15 +108,17 @@ export function Card({
   const baseClasses = cn(
     'group relative isolate flex flex-col rounded-3xl transition-all duration-300 h-full shadow-sm hover:shadow-md block focus-within:outline focus-within:outline-2 focus-within:outline-offset-4 focus-within:outline-primary',
     href &&
-      (variant === 'service'
-        ? 'sm:cursor-pointer transform hover:-translate-y-[2px] hover:shadow-lg'
-        : 'cursor-pointer transform hover:-translate-y-[2px] hover:shadow-lg'),
+      'cursor-pointer transform hover:-translate-y-[2px] hover:shadow-lg',
     variant === 'treatment' &&
       'bg-card hover:bg-card-hover text-center justify-center p-6 min-h-[140px] sm:min-h-[160px] lg:p-8 lg:min-h-[200px] xl:min-h-[220px] border border-secondary/20 hover:border-secondary/30',
     variant === 'default' &&
       'bg-neutral-50/50 hover:bg-neutral-100/50 p-6 sm:p-8 border border-neutral-200',
     variant === 'service' &&
-      'bg-secondary/10 hover:bg-card-hover p-6 sm:p-8 border border-primary/10 hover:border-primary/20 backdrop-blur-sm min-h-[300px] sm:min-h-[320px]',
+      cn(
+        'overflow-hidden bg-secondary/10 hover:bg-card-hover p-6 sm:p-8 border border-primary/10 hover:border-primary/35 backdrop-blur-sm min-h-[300px] sm:min-h-[320px]',
+        // Left accent rail: wipes in top→bottom on hover (terracotta, decorative)
+        "before:content-[''] before:absolute before:inset-y-0 before:left-0 before:w-1 before:origin-top before:scale-y-0 before:bg-brand-primary before:transition-transform before:duration-500 before:ease-out hover:before:scale-y-100 motion-reduce:before:transition-none"
+      ),
     className
   )
 
@@ -153,7 +128,7 @@ export function Card({
         <CardActionLink
           href={href}
           external={external}
-          className="absolute inset-0 z-30 hidden rounded-3xl sm:block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="absolute inset-0 z-30 block rounded-3xl cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           ariaLabel={cardAriaLabel}
         />
         <div className="relative z-20 h-full">{content}</div>

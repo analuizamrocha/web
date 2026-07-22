@@ -8,30 +8,40 @@ import {
   HOSPITAL_CLINIC_BARCELONA,
 } from '@/lib/constants'
 
-const credentials = [
+const credentials: {
+  eyebrow: string
+  title: string
+  institution: string
+}[] = [
   {
+    eyebrow: 'Formação',
     title: 'Graduada em Medicina',
     institution: PUC_PR,
   },
   {
+    eyebrow: 'Residência',
     title: 'Cirurgia Geral',
     institution: HOSPITAL_SANTA_CASA,
   },
   {
-    title: 'Coloproctologista',
+    eyebrow: 'Residência',
+    title: 'Coloproctologia',
     institution: HOSPITAL_MACKENZIE,
   },
   {
-    title: 'Mestranda UFPR',
-    institution: 'Programa de Clínica Cirúrgica',
+    eyebrow: 'Fellowship',
+    title: 'Fellow em Cirurgia Colorretal',
+    institution: `${HOSPITAL_CLINIC_BARCELONA} — Espanha`,
   },
   {
+    eyebrow: 'Mestrado',
+    title: 'Mestre em Clínica Cirúrgica',
+    institution: 'Universidade Federal do Paraná (UFPR)',
+  },
+  {
+    eyebrow: 'SOCIEDADE',
     title: 'Membro IANS',
     institution: 'International Anal Neoplasia Society',
-  },
-  {
-    title: 'Fellow Cirurgia Colorretal',
-    institution: `${HOSPITAL_CLINIC_BARCELONA} - Espanha`,
   },
 ]
 
@@ -47,7 +57,7 @@ export function AboutSection() {
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-8">
             Quem é Dra. Ana Luiza?
           </h2>
-          <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
+          <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-body font-medium space-y-4">
             <p>Especialista em coloproctologia com formação internacional.</p>
             <p>Dedicada ao cuidado integral e humanizado de cada paciente.</p>
           </div>
@@ -55,20 +65,24 @@ export function AboutSection() {
 
         {/* Desktop: Credentials Grid */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 xl:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
             {credentials.map((credential, index) => (
               <div
                 key={index}
-                className="bg-secondary/10 rounded-3xl p-8 lg:p-10 border border-secondary/20 hover:border-secondary/30 transition-all duration-300 shadow-sm hover:shadow-md group"
+                className="rounded-3xl bg-card border border-secondary/20 p-6 lg:p-7 shadow-brand transition-all duration-300 hover:bg-card-hover hover:border-secondary/30 hover:shadow-brand-lg"
               >
-                <div className="space-y-4">
-                  <h3 className="text-xl lg:text-2xl font-sans font-bold text-primary">
-                    {credential.title}
-                  </h3>
-                  <p className="text-lg lg:text-xl text-secondary font-regular leading-relaxed">
-                    {credential.institution}
-                  </p>
+                <div className="flex items-center gap-2.5">
+                  <span aria-hidden className="h-px w-5 flex-none bg-accent-strong/60" />
+                  <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent-strong">
+                    {credential.eyebrow}
+                  </span>
                 </div>
+                <h3 className="mt-3 text-xl lg:text-2xl font-sans font-bold text-primary leading-snug">
+                  {credential.title}
+                </h3>
+                <p className="mt-2 text-base lg:text-lg text-muted leading-relaxed">
+                  {credential.institution}
+                </p>
               </div>
             ))}
           </div>

@@ -9,6 +9,7 @@
   --color-secondary: #d4b7a2;         /* Light beige - decorative use only (no longer for text) */
   --color-tertiary: #b08771;          /* Medium brown - rarely used */
   --color-brand-primary: #c27e5c;     /* Terracotta - primary buttons */
+  --color-accent-strong: #a85a39;     /* Darker terracotta - small labels/eyebrows (AA 4.6:1 on cream) */
   --color-accent-neutral: #7a8b68;    /* Sage green - mission/values accent */
   --color-accent-sage-deep: #5d6f47;  /* Deep sage - sage variant label color */
 
