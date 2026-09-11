@@ -36,7 +36,7 @@ _A toxina botulínica pode ajudar algumas fissuras crônicas a cicatrizar, mas n
 
 Quem convive com dor intensa ao evacuar costuma querer uma resposta direta: **botox para fissura anal funciona mesmo?**
 
-Em pacientes selecionados, a toxina botulínica pode ser uma alternativa após o tratamento inicial não ter sido suficiente. Ela não “fecha” a ferida diretamente. Seu papel é reduzir temporariamente a contração do esfíncter anal e favorecer a cicatrização.
+Em pacientes selecionados, a toxina botulínica pode ser uma alternativa após o tratamento inicial não ter sido suficiente. Ela não “fecha” a ferida diretamente. Seu papel é reduzir temporariamente a contração do esfíncter anal e favorecer a cicatrização. O mesmo mecanismo também pode ser usado, em casos selecionados, no [planejamento da cirurgia de hemorroida](/blog/toxina-botulinica-cirurgia-hemorroida).
 
 As diretrizes da American Society of Colon and Rectal Surgeons (ASCRS) apontam resultados semelhantes aos tratamentos tópicos como primeira opção e um benefício modesto quando usada após falha dessas medidas. Por isso, indicação, expectativas e riscos precisam ser discutidos individualmente.
 

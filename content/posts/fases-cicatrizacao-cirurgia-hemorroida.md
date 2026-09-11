@@ -3,11 +3,11 @@ title: 'Fases da cicatrização: o que esperar após a cirurgia de hemorroida?'
 metaDescription: 'Entenda as fases da cicatrização após cirurgia de hemorroida, o que pode ser esperado no pós-operatório e quando procurar avaliação médica.'
 slug: 'fases-cicatrizacao-cirurgia-hemorroida'
 publishDate: '2026-05-16'
-lastModified: '2026-05-16'
+lastModified: '2026-09-11'
 primaryKeyword: 'cicatrização cirurgia hemorroida'
 secondaryKeywords:
   - 'pós-operatório cirurgia hemorroida'
-  - 'recuperação cirurgia hemorroida'
+  - 'fases da cicatrização hemorroidectomia'
   - 'cirurgia de hemorroida Curitiba'
   - 'proctologista Curitiba'
 targetAudience: 'patients'
@@ -24,6 +24,7 @@ faqs:
   - question: 'A região pode parecer pior no começo?'
     answer: 'Sim. No início, o inchaço e a inflamação podem assustar, mas fazem parte do processo de cicatrização em muitos casos.'
 relatedPosts:
+  - 'recuperacao-cirurgia-hemorroida-quanto-tempo'
   - 'hemorroida-sempre-precisa-cirurgia'
   - 'hemorroida-quanto-tempo-dura-quando-procurar'
 ---
@@ -172,7 +173,7 @@ O acompanhamento adequado ajuda a:
 - acompanhar a evolução da cicatrização
 - reduzir ansiedade sobre alterações esperadas
 
-Esse seguimento permite corrigir dificuldades precocemente e alinhar expectativas sobre cada fase da recuperação.
+Esse seguimento permite corrigir dificuldades precocemente e alinhar expectativas sobre cada fase da recuperação. Para dúvidas práticas, como a primeira evacuação e a volta ao trabalho e à academia, veja [recuperação da cirurgia de hemorroida: quanto tempo leva?](/blog/recuperacao-cirurgia-hemorroida-quanto-tempo).
 
 ## Perguntas frequentes (FAQ)
 

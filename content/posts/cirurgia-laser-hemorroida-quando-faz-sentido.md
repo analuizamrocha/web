@@ -3,7 +3,7 @@ title: 'Cirurgia a laser para hemorroida: quando ela faz sentido?'
 metaDescription: 'Entenda quando a cirurgia a laser para hemorroida pode ser indicada, quais são suas limitações e por que a avaliação individualizada é essencial.'
 slug: 'cirurgia-laser-hemorroida-quando-faz-sentido'
 publishDate: '2026-05-28'
-lastModified: '2026-06-25'
+lastModified: '2026-09-11'
 primaryKeyword: 'cirurgia a laser para hemorroida'
 secondaryKeywords:
   - 'cirurgia hemorroida laser Curitiba'
@@ -143,7 +143,7 @@ Ou seja:
 - o laser de diodo **trata** a hemorroida internamente;
 - o laser de CO₂ **remove** a hemorroida com alta precisão.
 
-São tecnologias diferentes e com indicações diferentes.
+São tecnologias diferentes e com indicações diferentes. Para entender como a anatomia da hemorroida define a escolha, e quando os dois podem ser combinados, leia [laser para hemorroida: CO₂ ou diodo?](/blog/laser-hemorroida-co2-ou-diodo).
 
 ## E o THD, desarterialização hemorroidária?
 
