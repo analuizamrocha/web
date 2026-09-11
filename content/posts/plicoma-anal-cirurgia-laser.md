@@ -3,7 +3,7 @@ title: "Plicoma anal: o que é e como a cirurgia a laser pode auxiliar na recupe
 metaDescription: "Plicoma anal pode causar desconforto e dificuldade de higiene. Entenda quando remover e como a cirurgia a laser oferece melhor recuperação."
 slug: "plicoma-anal-cirurgia-laser"
 publishDate: "2025-10-08"
-lastModified: "2026-02-14"
+lastModified: "2026-09-11"
 primaryKeyword: "plicoma anal"
 secondaryKeywords:
   - "cirurgia a laser plicoma"
@@ -44,6 +44,8 @@ Neste artigo, você vai entender melhor:
 - É uma *pequena sobra de pele na borda anal*.
 - Pode surgir após crises de hemorroida, fissura anal ou inflamações locais.
 - Não é uma lesão maligna, mas pode causar *incômodo físico ou estético*.
+
+Entenda melhor [por que o plicoma aparece](/blog/plicoma-anal-por-que-aparece) e [como diferenciar hemorroida e plicoma](/blog/hemorroida-ou-plicoma-diferenca).
 
 ---
 

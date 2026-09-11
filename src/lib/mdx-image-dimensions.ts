@@ -109,6 +109,14 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1024,
     height: 1024,
   },
+  '/images/posts/plicoma-anal-por-que-aparece/causas-plicoma-anal.webp': {
+    width: 1200,
+    height: 675,
+  },
+  '/images/posts/hemorroida-ou-plicoma-diferenca/hemorroida-ou-plicoma-anal.webp': {
+    width: 1200,
+    height: 675,
+  },
   '/images/posts/proctologista-e-coloproctologista-entenda-os-termos/proctologista-e-coloproctologista-entenda-os-termos.png': {
     width: 1536,
     height: 1024,
