@@ -77,6 +77,22 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1084,
     height: 778,
   },
+  '/images/posts/laser-co2-diodo-eletrocauterio-diferenca/eletrocauterio-laser-diodo-laser-co2-infografico.webp': {
+    width: 1200,
+    height: 675,
+  },
+  '/images/posts/laser-co2-diodo-eletrocauterio-diferenca/acao-termica-eletrocauterio-diodo-co2-tecido.webp': {
+    width: 1200,
+    height: 675,
+  },
+  '/images/posts/laser-hemorroida-co2-ou-diodo/hemorroidoplastia-diodo-hemorroidectomia-co2.webp': {
+    width: 1200,
+    height: 675,
+  },
+  '/images/posts/laser-hemorroida-co2-ou-diodo/comparativo-tecnologias-cirurgia-proctologica.webp': {
+    width: 1200,
+    height: 675,
+  },
   '/images/posts/laser-ou-eletrocauterizacao-hpv-anal/laser-versus-eletrocauterizacao-infografico.webp': {
     width: 1200,
     height: 900,
@@ -108,6 +124,10 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
   '/images/posts/sangue-papel-higienico-sempre-hemorroida/causas-sangramento-anal.webp': {
     width: 1200,
     height: 719,
+  },
+  '/images/posts/toxina-botulinica-cirurgia-hemorroida/toxina-botulinica-hipertonia-esfincter-anal.webp': {
+    width: 1096,
+    height: 664,
   },
 }
 
