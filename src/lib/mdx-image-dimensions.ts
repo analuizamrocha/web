@@ -29,6 +29,10 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1024,
     height: 1536,
   },
+  '/images/posts/cisto-pilonidal-cirurgia-laser-quando-operar/recuperacao-excisao-ou-laser-cisto-pilonidal.webp': {
+    width: 1200,
+    height: 675,
+  },
   '/images/posts/cisto-pilonidal-cirurgia-laser-quando-operar/cirurgia-convencional-laser-cisto-pilonidal.webp': {
     width: 1200,
     height: 900,
