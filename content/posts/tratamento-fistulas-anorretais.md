@@ -3,7 +3,7 @@ title: 'Tratamento de fístulas anorretais'
 metaDescription: 'Entenda sintomas, diagnóstico e opções de tratamento para fístula anal com foco em segurança, preservação da continência e menor recorrência.'
 slug: 'tratamento-fistulas-anorretais'
 publishDate: '2026-03-05'
-lastModified: '2026-07-18'
+lastModified: '2026-09-11'
 primaryKeyword: 'fístula anal'
 secondaryKeywords:
   - 'fístulas anorretais'
@@ -40,7 +40,7 @@ A Dra. Ana Luiza, coloproctologista em Curitiba, realiza diagnóstico detalhado 
 ## O que é uma fístula anorretal?
 
 A fístula anal é um trajeto inflamatório que conecta o interior do canal anal à pele ao redor do ânus.
-Na maioria das vezes, surge após um abscesso anal prévio.
+Na maioria das vezes, surge após um abscesso anal prévio. Entenda [por que a fístula pode aparecer depois de um abscesso](/blog/fistula-anal-depois-de-abscesso) e [o que observar depois da drenagem](/blog/drenei-abscesso-anal-e-agora).
 
 Os sintomas mais comuns incluem:
 
