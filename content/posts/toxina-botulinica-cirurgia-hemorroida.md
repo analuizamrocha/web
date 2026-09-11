@@ -194,7 +194,7 @@ Não. É uma medida complementar e não substitui o protocolo de controle da dor
 ## Fontes médicas
 
 - [Diretriz de prática clínica da ASCRS para o manejo da doença hemorroidária (2024)](https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf)
-- [Guia prático da ASCRS para o manejo da fissura anal (2023)](https://www.ascrsu.com/ascrs/view/ASCRS-Toolkit/2851088/2/Management_of_Anal_Fissures__2023_)
+- [Toolkit da ASCRS para o manejo da fissura anal (2023)](https://www.ascrsu.com/ascrs/view/ASCRS-Toolkit/2851088/2/Management_of_Anal_Fissures__2023_)
 
 ## Conclusão
 
