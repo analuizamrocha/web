@@ -3,7 +3,7 @@ title: 'Plicoma anal precisa operar?'
 metaDescription: 'Plicoma anal nem sempre precisa de cirurgia. Saiba quando observar, quando a retirada pode ajudar e o que esperar da recuperação.'
 slug: 'plicoma-anal-vale-a-pena-retirar'
 publishDate: '2026-04-01'
-lastModified: '2026-07-21'
+lastModified: '2026-09-11'
 primaryKeyword: 'plicoma anal precisa operar'
 secondaryKeywords:
   - 'plicoma anal vale a pena retirar'
@@ -34,7 +34,7 @@ _O plicoma anal é benigno e muitas vezes pode ser apenas observado; a retirada 
 
 Muitas pessoas descrevem o plicoma como uma “pelinha” na borda do ânus e perguntam se precisam operar. A resposta mais comum é: **não obrigatoriamente**.
 
-Antes de decidir, é necessário confirmar que a alteração é mesmo um plicoma e entender se existe fissura, hemorroida ou irritação ativa por trás do incômodo.
+Antes de decidir, é necessário confirmar que a alteração é mesmo um plicoma e entender se existe fissura, hemorroida ou irritação ativa por trás do incômodo. Veja [por que o plicoma aparece](/blog/plicoma-anal-por-que-aparece) e [como diferenciá-lo de uma hemorroida](/blog/hemorroida-ou-plicoma-diferenca).
 
 ![Ilustração de plicoma anal e cirurgia de remoção](/images/posts/plicoma-anal-vale-a-pena-retirar/plicoma-anal-cx.webp)
 
