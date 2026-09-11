@@ -53,6 +53,14 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1075,
     height: 732,
   },
+  '/images/posts/drenei-abscesso-anal-e-agora/drenagem-abscesso-anal-cicatrizacao-ou-fistula.webp': {
+    width: 1200,
+    height: 675,
+  },
+  '/images/posts/fistula-anal-depois-de-abscesso/etapas-formacao-fistula-anal.webp': {
+    width: 1200,
+    height: 675,
+  },
   '/images/posts/fases-cicatrizacao-cirurgia-hemorroida/hemorroida-fases-da-cicatrizacao.png': {
     width: 1536,
     height: 1024,
