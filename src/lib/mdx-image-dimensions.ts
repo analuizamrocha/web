@@ -9,6 +9,10 @@ const DEFAULT_MDX_IMAGE_DIMENSIONS: MdxImageDimensions = {
 }
 
 const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
+  '/images/posts/hemorroida-ou-prolapso-retal/hemorroida-ou-prolapso-retal.webp': {
+    width: 1672,
+    height: 941,
+  },
   '/images/posts/laser-fistula-anal-filac-indicacoes/filac-fistula-anal.webp': {
     width: 1672,
     height: 941,

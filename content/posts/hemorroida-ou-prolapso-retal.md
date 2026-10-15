@@ -59,6 +59,10 @@ Por isso, antes de pensar em pomada, ligadura, laser ou cirurgia, precisamos res
 
 **o que realmente está saindo?**
 
+![Comparação anatômica ilustrada entre hemorroidas prolapsadas e prolapso retal](/images/posts/hemorroida-ou-prolapso-retal/hemorroida-ou-prolapso-retal.webp)
+
+_Ilustração esquemática para fins educativos; a aparência isolada não confirma diagnóstico nem prevê a evolução individual._
+
 ## O que é uma hemorroida prolapsada?
 
 Os coxins hemorroidários fazem parte da anatomia normal do canal anal.
