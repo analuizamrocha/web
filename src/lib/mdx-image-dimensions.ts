@@ -9,6 +9,10 @@ const DEFAULT_MDX_IMAGE_DIMENSIONS: MdxImageDimensions = {
 }
 
 const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
+  '/images/posts/laser-fistula-anal-filac-indicacoes/filac-fistula-anal.webp': {
+    width: 1672,
+    height: 941,
+  },
   '/images/posts/alimentacao-fibras-saude-intestinal/fibra-soluvel-fibra-insoluvel.webp': {
     width: 1200,
     height: 709,

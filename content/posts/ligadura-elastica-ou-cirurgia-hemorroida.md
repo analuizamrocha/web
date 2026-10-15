@@ -3,7 +3,7 @@ title: "Ligadura elástica ou cirurgia para hemorroida: qual é o melhor tratame
 metaDescription: "Nem toda hemorroida precisa de cirurgia. Entenda quando a ligadura elástica resolve, quando operar e como o grau da doença define o melhor tratamento."
 slug: "ligadura-elastica-ou-cirurgia-hemorroida"
 publishDate: "2026-06-27"
-lastModified: "2026-07-18"
+lastModified: '2026-10-22'
 primaryKeyword: "ligadura elástica hemorroida"
 secondaryKeywords:
   - "ligadura elástica ou cirurgia"
@@ -69,7 +69,7 @@ Após alguns dias, o tecido tratado sofre **necrose controlada** e é eliminado 
 
 ## A ligadura elástica dói?
 
-Essa é uma das dúvidas mais frequentes. Na maioria dos casos, **não**. A ligadura é realizada **acima da linha pectínea**, uma região que possui pouca sensibilidade dolorosa.
+Essa é uma das dúvidas mais frequentes. Pode haver pressão, desconforto e, em alguns casos, dor. A ligadura é realizada **acima da linha pectínea**, uma região que possui pouca sensibilidade dolorosa.
 
 O que alguns pacientes podem sentir nas primeiras horas é:
 
@@ -79,9 +79,21 @@ O que alguns pacientes podem sentir nas primeiras horas é:
 
 Esses sintomas costumam ser **temporários** e desaparecem espontaneamente.
 
+## Como é a sessão de ligadura?
+
+Antes da aplicação, o exame confirma se as hemorroidas são internas e se a anatomia permite o procedimento. Um anuscópio ajuda a visualizar a região, e um aplicador coloca um pequeno anel na base do tecido selecionado, acima da região de maior sensibilidade dolorosa. Não é uma técnica para retirar plicomas nem tratar o componente externo.
+
+Em geral, a sessão é ambulatorial e não exige anestesia, mas o planejamento pode variar. Informe medicamentos, especialmente anticoagulantes e antiagregantes; não os suspenda por conta própria. Dependendo do número de hemorroidas e da resposta, podem ser necessárias sessões espaçadas.
+
+## O que observar depois que o elástico cai?
+
+O pequeno tecido tratado costuma se desprender depois de alguns dias. Nesse período, pode ocorrer discreto sangramento. O retorno ao trabalho e aos exercícios depende dos sintomas e das orientações recebidas; uma atividade de escritório não exige o mesmo esforço de um trabalho físico intenso.
+
+**Sangramento volumoso ou persistente, dor forte ou progressiva, febre e dificuldade para urinar exigem avaliação imediata.** Procure atendimento de urgência se não conseguir contato rápido com a equipe. Esses sinais não devem ser atribuídos automaticamente à recuperação habitual.
+
 ## Quando a ligadura elástica é indicada?
 
-A ligadura costuma oferecer excelentes resultados para pacientes com:
+A ligadura costuma oferecer controle dos sintomas para pacientes com:
 
 - hemorroidas internas grau I
 - hemorroidas internas grau II
@@ -91,7 +103,7 @@ Ela é especialmente eficaz quando os principais sintomas são **sangramento**, 
 
 ## Quando a ligadura não é a melhor opção?
 
-Embora seja um excelente tratamento, ela possui limitações. A ligadura atua **apenas sobre hemorroidas internas**. Ela **não trata**:
+Embora seja um tratamento útil, ela possui limitações. A ligadura atua **apenas sobre hemorroidas internas**. Ela **não trata**:
 
 - hemorroidas externas
 - plicomas
@@ -160,9 +172,13 @@ Na maioria dos casos, sim. O procedimento costuma permitir **retorno rápido** �
 
 Sim, principalmente se os fatores que favoreceram a doença — como **constipação** e **esforço evacuatório** — não forem corrigidos.
 
+## Fontes médicas
+
+- [ASCRS: informações sobre hemorroidas e ligadura elástica](https://www.fascrs.org/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)
+
 ## Conclusão
 
-A ligadura elástica é uma excelente opção para muitos pacientes com hemorroidas internas e pode evitar a necessidade de cirurgia em casos bem indicados. No entanto, ela **não substitui todos os tratamentos**.
+A ligadura elástica é uma opção para muitos pacientes com hemorroidas internas e pode evitar a necessidade de cirurgia em casos bem indicados. No entanto, ela **não substitui todos os tratamentos**.
 
 Uma avaliação especializada permite identificar o grau da doença, entender a causa dos sintomas e definir qual estratégia oferece maior benefício para cada paciente.
 
@@ -173,6 +189,6 @@ Se você apresenta sangramento, prolapso ou desconforto relacionado às hemorroi
 **Dra. Ana Luiza Moraes Rocha**  
 Médica Coloproctologista  
 CRM-PR 45351 | RQE 36221  
-Especialista em Coloproctologia  
+Especialista em Coloproctologia
 
-> *Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados.*
+> _Este conteúdo tem caráter educativo e não substitui a consulta médica. Procure sempre orientação profissional para diagnóstico e tratamento adequados._
