@@ -20,6 +20,17 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  rewrites: async () => ({
+    beforeFiles: [],
+    afterFiles: [],
+    // Only unresolved URLs reach this rewrite; existing HTML routes and public
+    // files keep their normal behavior. Proxy normalizes the private header.
+    fallback: [{
+      source: '/:path*',
+      has: [{ type: 'header', key: 'x-agent-markdown', value: '1' }],
+      destination: '/agent-markdown/not-found',
+    }],
+  }),
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
   },

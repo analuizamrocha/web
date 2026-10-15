@@ -30,7 +30,7 @@ jobs:
       - name: Run E2E smoke tests
         env:
           CI: true
-        run: bun run e2e -- tests/e2e/smoke.spec.ts
+        run: bun run e2e -- tests/e2e/smoke.spec.ts tests/e2e/agent-readiness.spec.ts
 
       - name: Upload Playwright reports
         if: always()

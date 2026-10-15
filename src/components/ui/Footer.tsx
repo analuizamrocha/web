@@ -31,6 +31,12 @@ export function Footer() {
             {/* Navigation links */}
             <nav className="flex flex-wrap gap-4 mt-2">
               <Link
+                href="/contact"
+                className="text-background/70 hover:text-background text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-background/50 rounded-sm"
+              >
+                Contato
+              </Link>
+              <Link
                 href="/blog"
                 className="text-background/70 hover:text-background text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-background/50 rounded-sm"
               >

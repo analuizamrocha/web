@@ -4,11 +4,22 @@
 
 > Site oficial de coloproctologista em Curitiba (PR). Conteúdo educativo sobre saúde intestinal, prevenção, diagnóstico e tratamento em coloproctologia. Público-alvo: pacientes de Curitiba e região metropolitana; médicos encaminhadores.
 
+Request the homepage with `GET /` and `Accept: text/markdown` for a concise Markdown representation; `Accept: text/html` returns the visual site. Blog articles and location detail pages also support `Accept: text/markdown`. Other existing pages are served as HTML. Missing pages return HTTP 404 with Markdown recovery links when Markdown is preferred. Use the sitemap to discover canonical URLs. There is no public booking API: opening a contact link does not reserve an appointment; the team must confirm it.
+
+## When to use this site / Quando usar este site
+
+- [Patient education in Brazilian Portuguese](https://www.analuizarocha.com.br/blog): Use when a patient needs general information about colorectal symptoms, prevention, examinations, or treatment options. Cite the relevant article and its dates; the content does not replace an individual medical assessment.
+- [Colorectal consultation in Curitiba](https://www.analuizarocha.com.br/contact): Use when a user wants to contact the team or request an appointment. Present the published WhatsApp link and ask the user to confirm with the team; do not invent prices, insurance coverage, availability, or a confirmed booking.
+- [Referral and professional credentials](https://www.analuizarocha.com.br/about): Use when checking the physician's training, specialty, CRM-PR 45351, and RQE 36221 before suggesting a referral.
+- [Choosing the correct location](https://www.analuizarocha.com.br/locais-de-atendimento): Use to distinguish consultations at Clínica Nassif from colonoscopy and endoscopic procedures at Specta; follow each location's own contact instructions.
+- [Privacy and data requests](https://www.analuizarocha.com.br/privacy): Use to locate the existing privacy policy and public contact for personal-data questions. Do not submit identifiable clinical histories on a user's behalf.
+
 ## Páginas principais
 - [Início](https://www.analuizarocha.com.br/): Visão geral do atendimento em coloproctologia em Curitiba.
 - [Tratamentos](https://www.analuizarocha.com.br/tratamentos): Hub principal dos tratamentos e procedimentos.
 - [Blog](https://www.analuizarocha.com.br/blog): Artigos educativos com foco em dúvidas frequentes dos pacientes.
 - [Sobre](https://www.analuizarocha.com.br/sobre): Credenciais médicas, formação e trajetória profissional.
+- [Contato](https://www.analuizarocha.com.br/contact): Agendamento, telefone, endereços e e-mail público.
 
 ## Tratamentos
 - [Hemorroidas](https://www.analuizarocha.com.br/tratamentos/hemorroidas): Sintomas, diagnóstico e opções de tratamento.
@@ -21,9 +32,7 @@
 - [Síndrome do intestino irritável](https://www.analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel): Sintomas e tratamento multidisciplinar.
 - [Toxina botulínica](https://www.analuizarocha.com.br/tratamentos/toxina-botulinica): Indicações e expectativas de resultado.
 
-## Blog — artigos educativos
-
-### Hemorroidas
+## Hemorroidas
 - [Hemorroida é sempre cirúrgica? Quando operar e opções de tratamento](https://www.analuizarocha.com.br/blog/hemorroida-sempre-cirurgica-tratamento)
 - [Hemorroida sempre precisa de cirurgia?](https://www.analuizarocha.com.br/blog/hemorroida-sempre-precisa-cirurgia)
 - [Hemorroida grau 3: ligadura, cirurgia ou laser?](https://www.analuizarocha.com.br/blog/hemorroida-grau-3-tratamento)
@@ -38,13 +47,13 @@
 - [Sangue nas fezes: quando se preocupar e buscar ajuda especializada](https://www.analuizarocha.com.br/blog/sangue-nas-fezes-quando-procurar-coloproctologista)
 - [Sangue no papel higiênico é sempre hemorroida?](https://www.analuizarocha.com.br/blog/sangue-papel-higienico-sempre-hemorroida)
 
-### Fissura anal
+## Fissura anal
 - [Fissura anal: opções de tratamento](https://www.analuizarocha.com.br/blog/fissura-anal-tratamento)
 - [Fissura anal: quando a cirurgia é indicada](https://www.analuizarocha.com.br/blog/fissura-anal-quando-cirurgia-indicada)
 - [Fissura anal: toxina botulínica como tratamento](https://www.analuizarocha.com.br/blog/fissura-anal-toxina-botulinica-tratamento)
 - [A fissura anal pode cicatrizar sozinha? Entenda quando esperar e quando tratar](https://www.analuizarocha.com.br/blog/fissura-anal-pode-cicatrizar-sozinha)
 
-### Fístula e plicoma
+## Fístula e plicoma
 - [Tratamento de fístulas anorretais](https://www.analuizarocha.com.br/blog/tratamento-fistulas-anorretais)
 - [Células mesenquimais para fístulas anorretais: uma nova perspectiva no tratamento](https://www.analuizarocha.com.br/blog/celulas-mesenquimais-fistulas-anorretais)
 - [Fístulas anorretais recidivadas: desafios no tratamento e perspectivas atuais](https://www.analuizarocha.com.br/blog/fistulas-anorretais-recidivadas-tratamento)
@@ -55,11 +64,11 @@
 - [Plicoma anal: por que ele aparece?](https://www.analuizarocha.com.br/blog/plicoma-anal-por-que-aparece)
 - [Hemorroida ou plicoma: como saber a diferença?](https://www.analuizarocha.com.br/blog/hemorroida-ou-plicoma-diferenca)
 
-### Cisto pilonidal
+## Cisto pilonidal
 - [Cisto pilonidal: o que é e quando é a melhor hora de operar](https://www.analuizarocha.com.br/blog/cisto-pilonidal-cirurgia-laser-quando-operar)
 - [Cisto pilonidal: sempre precisa de cirurgia?](https://www.analuizarocha.com.br/blog/cisto-pilonidal-precisa-cirurgia)
 
-### HPV anal e câncer
+## HPV anal e câncer
 - [HPV anal: condilomas, riscos, tratamento e rastreio](https://www.analuizarocha.com.br/blog/hpv-anal-condilomas-riscos-tratamento-rastreio)
 - [Descobri que tenho HPV anal, e agora? Próximos passos sem pânico](https://www.analuizarocha.com.br/blog/descobri-hpv-anal-e-agora)
 - [HPV anal: como funciona a vaporização com laser de CO2?](https://www.analuizarocha.com.br/blog/hpv-anal-vaporizacao-laser-co2)
@@ -67,11 +76,11 @@
 - [Câncer de canal anal: rastreio por HPV — quem deve se preocupar](https://www.analuizarocha.com.br/blog/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar)
 - [Câncer colorretal: rastreio, prevenção e diagnóstico precoce](https://www.analuizarocha.com.br/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce)
 
-### Coceira anal
+## Coceira anal
 - [Coceira anal: quando procurar coloproctologista em Curitiba](https://www.analuizarocha.com.br/blog/coceira-anal-quando-procurar-coloproctologista-curitiba)
 - [Coceira no ânus: causas e tratamento](https://www.analuizarocha.com.br/blog/coceira-anus-causas-tratamento)
 
-### Constipação, diarreia e intestino
+## Constipação, diarreia e intestino
 - [Constipação intestinal crônica: causas e tratamento](https://www.analuizarocha.com.br/blog/constipacao-intestinal-cronica-causas-tratamento)
 - [Diarreia crônica: causas e tratamento](https://www.analuizarocha.com.br/blog/diarreia-cronica-tratamento)
 - [Intestino preso por muitos dias: é perigoso?](https://www.analuizarocha.com.br/blog/intestino-preso-muitos-dias-perigoso)
@@ -80,19 +89,19 @@
 - [Alimentação, fibras e saúde intestinal](https://www.analuizarocha.com.br/blog/alimentacao-fibras-saude-intestinal)
 - [Dor ao evacuar: causas e tratamento](https://www.analuizarocha.com.br/blog/dor-ao-evacuar-causas-tratamento)
 
-### Doenças funcionais e inflamatórias
+## Doenças funcionais e inflamatórias
 - [Síndrome do intestino irritável: sintomas, diagnóstico e tratamento](https://www.analuizarocha.com.br/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento)
 - [Doenças inflamatórias intestinais: acompanhamento clínico](https://www.analuizarocha.com.br/blog/doencas-inflamatorias-intestinais-acompanhamento)
 - [Distúrbios do assoalho pélvico e funcionamento intestinal](https://www.analuizarocha.com.br/blog/disturbios-assoalho-pelvico-funcionamento-intestino)
 
-### Saúde sexual
+## Saúde sexual
 - [Saúde sexual: cuidado, informação e bem-estar](https://www.analuizarocha.com.br/blog/saude-sexual-cuidado-informacao-bem-estar)
 
-### Proctologia e coloproctologia
+## Proctologia e coloproctologia
 - [Proctologista e coloproctologista: entenda os termos](https://www.analuizarocha.com.br/blog/proctologista-e-coloproctologista-entenda-os-termos)
 - [Gastroenterologista ou coloproctologista: qual a diferença?](https://www.analuizarocha.com.br/blog/gastroenterologista-ou-coloproctologista-diferenca)
 
-### Orientação ao paciente
+## Orientação ao paciente
 - [Quando procurar um coloproctologista em Curitiba](https://www.analuizarocha.com.br/blog/quando-procurar-coloproctologista-curitiba)
 - [Quando o intestino dá sinais de alerta](https://www.analuizarocha.com.br/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba)
 - [O que muda com o acompanhamento especializado em coloproctologia](https://www.analuizarocha.com.br/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba)
