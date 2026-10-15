@@ -50,6 +50,10 @@ E passa a ser:
 
 **“Que tipo de pólipo era esse e o que esse resultado muda daqui para frente?”**
 
+![Ilustração de pólipos de diferentes formatos na parede intestinal, com uma alça utilizada na retirada endoscópica](/images/posts/polipo-retirado-colonoscopia-e-agora/polipo-retirado-colonoscopia-e-agora.webp)
+
+_Ilustração esquemática para fins educativos; a aparência isolada não confirma diagnóstico nem prevê a evolução individual._
+
 ## O que é um pólipo intestinal?
 
 Pólipo é um crescimento que surge na parede interna do intestino.

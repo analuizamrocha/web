@@ -60,6 +60,10 @@ Um intestino bem preparado permite examinar melhor a mucosa e identificar lesõe
 
 Um intestino mal preparado pode esconder alterações e, em alguns casos, obrigar a repetir o procedimento.
 
+![Ilustração das etapas do preparo intestinal, com alimentação, solução prescrita e visualização do cólon](/images/posts/preparo-colonoscopia-orientacoes/preparo-colonoscopia-orientacoes.webp)
+
+_Ilustração esquemática para fins educativos; a aparência isolada não confirma diagnóstico nem prevê a evolução individual._
+
 ## Por que o preparo importa tanto?
 
 Durante a colonoscopia, precisamos enxergar a parede interna do intestino.

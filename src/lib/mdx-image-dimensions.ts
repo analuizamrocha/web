@@ -9,6 +9,26 @@ const DEFAULT_MDX_IMAGE_DIMENSIONS: MdxImageDimensions = {
 }
 
 const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
+  '/images/posts/bolinha-no-anus-causas-avaliacao/bolinha-no-anus-causas-avaliacao.webp': {
+    width: 1672,
+    height: 941,
+  },
+  '/images/posts/hemorroida-gravidez-pos-parto/hemorroida-gravidez-pos-parto.webp': {
+    width: 1672,
+    height: 941,
+  },
+  '/images/posts/hemorroida-trombosada-sintomas-tratamento/hemorroida-trombosada-sintomas-tratamento.webp': {
+    width: 1672,
+    height: 941,
+  },
+  '/images/posts/polipo-retirado-colonoscopia-e-agora/polipo-retirado-colonoscopia-e-agora.webp': {
+    width: 1672,
+    height: 941,
+  },
+  '/images/posts/preparo-colonoscopia-orientacoes/preparo-colonoscopia-orientacoes.webp': {
+    width: 1672,
+    height: 941,
+  },
   '/images/posts/alimentacao-fibras-saude-intestinal/fibra-soluvel-fibra-insoluvel.webp': {
     width: 1200,
     height: 709,

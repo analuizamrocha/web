@@ -92,4 +92,4 @@ Weekly spacing is an editorial review and operational choice; it is not a promis
 
 For every release, the dynamic `/sitemap.xml` automatically includes that branch’s articles; `public/llms.txt` must contain the same article URLs. Keep later drafts out of an earlier branch. Confirm production discovery after each merge/deploy; a PR build is not evidence of deployment or indexing.
 
-Do not mark Notion TODO entries DONE until the corresponding article or update is actually published. Original image exports are still pending except FiLaC; the existing images remain on the three updated URLs. Keep the PRs in draft until those assets and cards are reviewed.
+Do not mark Notion TODO entries DONE until the corresponding article or update is actually published. Original Notion illustrations and their validation status are tracked in each release document; the existing images remain on the three updated URLs. Keep the PRs in draft for final editorial review and the intended weekly merge dates.

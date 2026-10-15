@@ -49,6 +49,10 @@ Mas existe um detalhe que muda bastante a conduta:
 
 O tratamento que pode fazer muito sentido no início da crise pode deixar de ser interessante alguns dias depois, quando o próprio organismo já começou a reabsorver o coágulo.
 
+![Corte anatômico ilustrando um nódulo hemorroidário com coágulo e diferentes volumes de inchaço](/images/posts/hemorroida-trombosada-sintomas-tratamento/hemorroida-trombosada-sintomas-tratamento.webp)
+
+_Ilustração esquemática para fins educativos; a aparência isolada não confirma diagnóstico nem prevê a evolução individual._
+
 ## O que é uma trombose hemorroidária?
 
 A trombose acontece quando se forma um coágulo em uma hemorroida externa.

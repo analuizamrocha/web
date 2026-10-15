@@ -51,6 +51,10 @@ ou
 
 **usar pomadas e medicamentos por conta própria.**
 
+![Ilustração anatômica da gestação, com o útero aumentado e os vasos da região pélvica e anal](/images/posts/hemorroida-gravidez-pos-parto/hemorroida-gravidez-pos-parto.webp)
+
+_Ilustração esquemática para fins educativos; a aparência isolada não confirma diagnóstico nem prevê a evolução individual._
+
 ## Por que hemorroidas ficam mais comuns durante a gravidez?
 
 A gestação modifica vários fatores ao mesmo tempo.

@@ -52,6 +52,10 @@ Isso porque diferentes condições podem ser percebidas simplesmente como:
 
 **“uma bolinha.”**
 
+![Representação esquemática de diferentes nódulos e elevações ao redor do canal anal](/images/posts/bolinha-no-anus-causas-avaliacao/bolinha-no-anus-causas-avaliacao.webp)
+
+_Ilustração esquemática para fins educativos; a aparência isolada não confirma diagnóstico nem prevê a evolução individual._
+
 ## Nem toda bolinha é hemorroida
 
 Entre as possibilidades estão:
