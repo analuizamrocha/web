@@ -1,0 +1,2897 @@
+{
+  "reviewDateLocal": "2026-10-14",
+  "reviewTimezone": "America/Sao_Paulo",
+  "scope": "Read-only source analysis and live HTTP/HTML audit. Research artifacts only.",
+  "sources": [
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-2026-10-14/Chart.csv",
+      "sha256": "8cb299b7285d06c689ad4671a2592464f037fdcc5125bb19204d626efcd9d25c",
+      "dataRows": 92,
+      "headers": [
+        "Date",
+        "Clicks",
+        "Impressions",
+        "CTR",
+        "Position"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-2026-10-14/Countries.csv",
+      "sha256": "1927bab2f6d9b013d59337adb145b4aed19a6d97f4fb09dd8a5fd391b2e8fe3d",
+      "dataRows": 201,
+      "headers": [
+        "Country",
+        "Clicks",
+        "Impressions",
+        "CTR",
+        "Position"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-2026-10-14/Devices.csv",
+      "sha256": "49ef1f39656306145043b9aef611a8f982e8dac1b2b5036b01c80de3a56242a5",
+      "dataRows": 3,
+      "headers": [
+        "Device",
+        "Clicks",
+        "Impressions",
+        "CTR",
+        "Position"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-2026-10-14/Filters.csv",
+      "sha256": "335d093169630379294c15d230d6ef231bfb8f52e1b5793ba5f539bc393444c1",
+      "dataRows": 2,
+      "headers": [
+        "Filter",
+        "Value"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-2026-10-14/Pages.csv",
+      "sha256": "1dd6a02afaa59cc6c8d0fa66a6559d9585c1e0cfd08d301375b7033bcc5167f1",
+      "dataRows": 214,
+      "headers": [
+        "Top pages",
+        "Clicks",
+        "Impressions",
+        "CTR",
+        "Position"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-2026-10-14/Queries.csv",
+      "sha256": "0f72b462e14b6eb8a50fb1a648e7f17fd10547e1a007d922315d99064d2f74ff",
+      "dataRows": 1000,
+      "headers": [
+        "Top queries",
+        "Clicks",
+        "Impressions",
+        "CTR",
+        "Position"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-2026-10-14/Search appearance.csv",
+      "sha256": "eed9ceafb9193e5e3d034f5897ad992bc851f1998204cd98f0b0f6873fbfc8b2",
+      "dataRows": 0,
+      "headers": [
+        "Search Appearance",
+        "Clicks",
+        "Impressions",
+        "CTR",
+        "Position"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14 (1)../Chart.csv",
+      "sha256": "2c436ade0247270b7fb8f3bb7ea2b179acd35d88b5bba1b4d12d5b216c158182",
+      "dataRows": 61,
+      "headers": [
+        "Date",
+        "Impressions"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14 (1)../Countries.csv",
+      "sha256": "368f23326107241f4cd5038fdb67d28bea82037dc59f6017bf1d4f448006b447",
+      "dataRows": 134,
+      "headers": [
+        "Country",
+        "Impressions"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14 (1)../Devices.csv",
+      "sha256": "70cae0fdaaa0f2c3d03b48a03206703f4603254bf89cf643b8d1194f9c348e47",
+      "dataRows": 3,
+      "headers": [
+        "Device",
+        "Impressions"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14 (1)../Filters.csv",
+      "sha256": "0e744ed20d60ec9c40af72eae2e347e1dc14c4df7ec8d2e73511b897d3a15442",
+      "dataRows": 2,
+      "headers": [
+        "Filter",
+        "Value"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14 (1)../Pages.csv",
+      "sha256": "1eef64197718a6b0120fb9bf74d8f69513eab50d4f7316e338a262fad0ade20a",
+      "dataRows": 89,
+      "headers": [
+        "Top pages",
+        "Impressions"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14/Chart.csv",
+      "sha256": "e334d9d1a52094098d2e081564a48f874d30178794aa3fbe9527e1c943f43db1",
+      "dataRows": 28,
+      "headers": [
+        "Date",
+        "Impressions"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14/Countries.csv",
+      "sha256": "2628084c16af545fe76b39770442e009e612d846b48267ef84fab3c1189990e2",
+      "dataRows": 117,
+      "headers": [
+        "Country",
+        "Impressions"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14/Devices.csv",
+      "sha256": "575f85778fb135331c981f85b26091edfb65d7f3ba2567a05a55ef3237b869cf",
+      "dataRows": 3,
+      "headers": [
+        "Device",
+        "Impressions"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14/Filters.csv",
+      "sha256": "f1105f5dddd2bd878e136898e15ae5c73fd841d793dc4fb462953a3aa05aebd0",
+      "dataRows": 2,
+      "headers": [
+        "Filter",
+        "Value"
+      ]
+    },
+    {
+      "path": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14/Pages.csv",
+      "sha256": "84f644f8b2133d14734bd93f0920a334583e86bde50d3ab8559c52782b06e420",
+      "dataRows": 180,
+      "headers": [
+        "Top pages",
+        "Impressions"
+      ]
+    }
+  ],
+  "csvCaveats": [
+    "All filters are Web (text-based).",
+    "Standard page/query dimensions cover the full 92-day range; no page/query period deltas can be calculated.",
+    "Query export limited to 1000 rows and includes only 8150 of 16827 chart clicks.",
+    "Page and property totals differ; do not force reconciliation.",
+    "AI and standard Web impressions overlap and must not be added.",
+    "AI exports do not cover September 12–14.",
+    "Weighted position estimates use rounded daily exports."
+  ],
+  "standardWeb": {
+    "windows": {
+      "all": {
+        "from": "2026-07-13",
+        "to": "2026-10-12",
+        "days": 92,
+        "clicks": 16827,
+        "impressions": 2276748,
+        "ctr": 0.7390804779448582,
+        "approxPosition": 6.721929304428948
+      },
+      "previous28": {
+        "from": "2026-08-18",
+        "to": "2026-09-14",
+        "days": 28,
+        "clicks": 5899,
+        "impressions": 806573,
+        "ctr": 0.7313659148025039,
+        "approxPosition": 6.754443305193702
+      },
+      "latest28": {
+        "from": "2026-09-15",
+        "to": "2026-10-12",
+        "days": 28,
+        "clicks": 7051,
+        "impressions": 980753,
+        "ctr": 0.7189373879050076,
+        "approxPosition": 6.5159575346697896
+      },
+      "previous7": {
+        "from": "2026-09-29",
+        "to": "2026-10-05",
+        "days": 7,
+        "clicks": 1697,
+        "impressions": 249545,
+        "ctr": 0.6800376685567733,
+        "approxPosition": 6.392830952333247
+      },
+      "latest7": {
+        "from": "2026-10-06",
+        "to": "2026-10-12",
+        "days": 7,
+        "clicks": 1478,
+        "impressions": 217277,
+        "ctr": 0.6802376689663425,
+        "approxPosition": 6.459451299493273
+      }
+    },
+    "recentWeeks": [
+      {
+        "start": "2026-09-15",
+        "end": "2026-09-21",
+        "clicks": 1943,
+        "impressions": 255025,
+        "ctrPercent": 0.7618860895990589,
+        "approxWeightedPosition": 6.64722282129203
+      },
+      {
+        "start": "2026-09-22",
+        "end": "2026-09-28",
+        "clicks": 1933,
+        "impressions": 258906,
+        "ctrPercent": 0.7466030142213776,
+        "approxWeightedPosition": 6.552755440198373
+      },
+      {
+        "start": "2026-09-29",
+        "end": "2026-10-05",
+        "clicks": 1697,
+        "impressions": 249545,
+        "ctrPercent": 0.6800376685567733,
+        "approxWeightedPosition": 6.392830952333247
+      },
+      {
+        "start": "2026-10-06",
+        "end": "2026-10-12",
+        "clicks": 1478,
+        "impressions": 217277,
+        "ctrPercent": 0.6802376689663425,
+        "approxWeightedPosition": 6.459451299493273
+      }
+    ],
+    "dailyChart": [
+      {
+        "Date": "2026-07-13",
+        "Clicks": 83,
+        "Impressions": 9808,
+        "CTR": "0.85%",
+        "Position": 7.1
+      },
+      {
+        "Date": "2026-07-14",
+        "Clicks": 84,
+        "Impressions": 10549,
+        "CTR": "0.8%",
+        "Position": 7.1
+      },
+      {
+        "Date": "2026-07-15",
+        "Clicks": 73,
+        "Impressions": 9009,
+        "CTR": "0.81%",
+        "Position": 7.0
+      },
+      {
+        "Date": "2026-07-16",
+        "Clicks": 79,
+        "Impressions": 9240,
+        "CTR": "0.85%",
+        "Position": 7.2
+      },
+      {
+        "Date": "2026-07-17",
+        "Clicks": 62,
+        "Impressions": 8532,
+        "CTR": "0.73%",
+        "Position": 7.0
+      },
+      {
+        "Date": "2026-07-18",
+        "Clicks": 67,
+        "Impressions": 7508,
+        "CTR": "0.89%",
+        "Position": 6.9
+      },
+      {
+        "Date": "2026-07-19",
+        "Clicks": 72,
+        "Impressions": 8082,
+        "CTR": "0.89%",
+        "Position": 7.2
+      },
+      {
+        "Date": "2026-07-20",
+        "Clicks": 100,
+        "Impressions": 10816,
+        "CTR": "0.92%",
+        "Position": 6.7
+      },
+      {
+        "Date": "2026-07-21",
+        "Clicks": 102,
+        "Impressions": 11197,
+        "CTR": "0.91%",
+        "Position": 6.7
+      },
+      {
+        "Date": "2026-07-22",
+        "Clicks": 104,
+        "Impressions": 11165,
+        "CTR": "0.93%",
+        "Position": 6.7
+      },
+      {
+        "Date": "2026-07-23",
+        "Clicks": 105,
+        "Impressions": 10777,
+        "CTR": "0.97%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-07-24",
+        "Clicks": 102,
+        "Impressions": 10607,
+        "CTR": "0.96%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-07-25",
+        "Clicks": 90,
+        "Impressions": 8781,
+        "CTR": "1.02%",
+        "Position": 7.0
+      },
+      {
+        "Date": "2026-07-26",
+        "Clicks": 90,
+        "Impressions": 9857,
+        "CTR": "0.91%",
+        "Position": 6.9
+      },
+      {
+        "Date": "2026-07-27",
+        "Clicks": 127,
+        "Impressions": 12380,
+        "CTR": "1.03%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-07-28",
+        "Clicks": 110,
+        "Impressions": 12662,
+        "CTR": "0.87%",
+        "Position": 6.8
+      },
+      {
+        "Date": "2026-07-29",
+        "Clicks": 126,
+        "Impressions": 12292,
+        "CTR": "1.03%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-07-30",
+        "Clicks": 108,
+        "Impressions": 12198,
+        "CTR": "0.89%",
+        "Position": 6.8
+      },
+      {
+        "Date": "2026-07-31",
+        "Clicks": 84,
+        "Impressions": 10961,
+        "CTR": "0.77%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-08-01",
+        "Clicks": 86,
+        "Impressions": 9371,
+        "CTR": "0.92%",
+        "Position": 6.9
+      },
+      {
+        "Date": "2026-08-02",
+        "Clicks": 90,
+        "Impressions": 10237,
+        "CTR": "0.88%",
+        "Position": 6.8
+      },
+      {
+        "Date": "2026-08-03",
+        "Clicks": 160,
+        "Impressions": 15441,
+        "CTR": "1.04%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-08-04",
+        "Clicks": 140,
+        "Impressions": 17417,
+        "CTR": "0.8%",
+        "Position": 7.1
+      },
+      {
+        "Date": "2026-08-05",
+        "Clicks": 141,
+        "Impressions": 17666,
+        "CTR": "0.8%",
+        "Position": 7.3
+      },
+      {
+        "Date": "2026-08-06",
+        "Clicks": 118,
+        "Impressions": 17007,
+        "CTR": "0.69%",
+        "Position": 7.1
+      },
+      {
+        "Date": "2026-08-07",
+        "Clicks": 119,
+        "Impressions": 15702,
+        "CTR": "0.76%",
+        "Position": 7.0
+      },
+      {
+        "Date": "2026-08-08",
+        "Clicks": 115,
+        "Impressions": 13454,
+        "CTR": "0.85%",
+        "Position": 7.1
+      },
+      {
+        "Date": "2026-08-09",
+        "Clicks": 109,
+        "Impressions": 13266,
+        "CTR": "0.82%",
+        "Position": 7.3
+      },
+      {
+        "Date": "2026-08-10",
+        "Clicks": 151,
+        "Impressions": 19435,
+        "CTR": "0.78%",
+        "Position": 6.9
+      },
+      {
+        "Date": "2026-08-11",
+        "Clicks": 152,
+        "Impressions": 21488,
+        "CTR": "0.71%",
+        "Position": 7.4
+      },
+      {
+        "Date": "2026-08-12",
+        "Clicks": 131,
+        "Impressions": 20502,
+        "CTR": "0.64%",
+        "Position": 7.3
+      },
+      {
+        "Date": "2026-08-13",
+        "Clicks": 105,
+        "Impressions": 21078,
+        "CTR": "0.5%",
+        "Position": 7.4
+      },
+      {
+        "Date": "2026-08-14",
+        "Clicks": 99,
+        "Impressions": 20440,
+        "CTR": "0.48%",
+        "Position": 7.5
+      },
+      {
+        "Date": "2026-08-15",
+        "Clicks": 99,
+        "Impressions": 17941,
+        "CTR": "0.55%",
+        "Position": 7.7
+      },
+      {
+        "Date": "2026-08-16",
+        "Clicks": 137,
+        "Impressions": 18781,
+        "CTR": "0.73%",
+        "Position": 7.8
+      },
+      {
+        "Date": "2026-08-17",
+        "Clicks": 157,
+        "Impressions": 23775,
+        "CTR": "0.66%",
+        "Position": 7.5
+      },
+      {
+        "Date": "2026-08-18",
+        "Clicks": 191,
+        "Impressions": 24372,
+        "CTR": "0.78%",
+        "Position": 6.8
+      },
+      {
+        "Date": "2026-08-19",
+        "Clicks": 170,
+        "Impressions": 23043,
+        "CTR": "0.74%",
+        "Position": 6.8
+      },
+      {
+        "Date": "2026-08-20",
+        "Clicks": 174,
+        "Impressions": 22073,
+        "CTR": "0.79%",
+        "Position": 6.9
+      },
+      {
+        "Date": "2026-08-21",
+        "Clicks": 148,
+        "Impressions": 23658,
+        "CTR": "0.63%",
+        "Position": 6.7
+      },
+      {
+        "Date": "2026-08-22",
+        "Clicks": 168,
+        "Impressions": 20442,
+        "CTR": "0.82%",
+        "Position": 7.0
+      },
+      {
+        "Date": "2026-08-23",
+        "Clicks": 162,
+        "Impressions": 20992,
+        "CTR": "0.77%",
+        "Position": 7.1
+      },
+      {
+        "Date": "2026-08-24",
+        "Clicks": 215,
+        "Impressions": 28202,
+        "CTR": "0.76%",
+        "Position": 7.1
+      },
+      {
+        "Date": "2026-08-25",
+        "Clicks": 240,
+        "Impressions": 31031,
+        "CTR": "0.77%",
+        "Position": 6.7
+      },
+      {
+        "Date": "2026-08-26",
+        "Clicks": 239,
+        "Impressions": 30761,
+        "CTR": "0.78%",
+        "Position": 6.9
+      },
+      {
+        "Date": "2026-08-27",
+        "Clicks": 191,
+        "Impressions": 31413,
+        "CTR": "0.61%",
+        "Position": 7.0
+      },
+      {
+        "Date": "2026-08-28",
+        "Clicks": 213,
+        "Impressions": 29519,
+        "CTR": "0.72%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-08-29",
+        "Clicks": 171,
+        "Impressions": 26296,
+        "CTR": "0.65%",
+        "Position": 7.2
+      },
+      {
+        "Date": "2026-08-30",
+        "Clicks": 182,
+        "Impressions": 27761,
+        "CTR": "0.66%",
+        "Position": 7.3
+      },
+      {
+        "Date": "2026-08-31",
+        "Clicks": 236,
+        "Impressions": 35468,
+        "CTR": "0.67%",
+        "Position": 7.0
+      },
+      {
+        "Date": "2026-09-01",
+        "Clicks": 242,
+        "Impressions": 38829,
+        "CTR": "0.62%",
+        "Position": 7.2
+      },
+      {
+        "Date": "2026-09-02",
+        "Clicks": 231,
+        "Impressions": 35567,
+        "CTR": "0.65%",
+        "Position": 6.9
+      },
+      {
+        "Date": "2026-09-03",
+        "Clicks": 208,
+        "Impressions": 30161,
+        "CTR": "0.69%",
+        "Position": 6.9
+      },
+      {
+        "Date": "2026-09-04",
+        "Clicks": 189,
+        "Impressions": 28805,
+        "CTR": "0.66%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-09-05",
+        "Clicks": 176,
+        "Impressions": 23476,
+        "CTR": "0.75%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-09-06",
+        "Clicks": 186,
+        "Impressions": 21952,
+        "CTR": "0.85%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-09-07",
+        "Clicks": 187,
+        "Impressions": 24380,
+        "CTR": "0.77%",
+        "Position": 6.8
+      },
+      {
+        "Date": "2026-09-08",
+        "Clicks": 197,
+        "Impressions": 29690,
+        "CTR": "0.66%",
+        "Position": 6.4
+      },
+      {
+        "Date": "2026-09-09",
+        "Clicks": 268,
+        "Impressions": 33647,
+        "CTR": "0.8%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-09-10",
+        "Clicks": 288,
+        "Impressions": 34395,
+        "CTR": "0.84%",
+        "Position": 6.1
+      },
+      {
+        "Date": "2026-09-11",
+        "Clicks": 214,
+        "Impressions": 33092,
+        "CTR": "0.65%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-09-12",
+        "Clicks": 210,
+        "Impressions": 28060,
+        "CTR": "0.75%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-09-13",
+        "Clicks": 258,
+        "Impressions": 29871,
+        "CTR": "0.86%",
+        "Position": 6.4
+      },
+      {
+        "Date": "2026-09-14",
+        "Clicks": 345,
+        "Impressions": 39617,
+        "CTR": "0.87%",
+        "Position": 6.4
+      },
+      {
+        "Date": "2026-09-15",
+        "Clicks": 326,
+        "Impressions": 40403,
+        "CTR": "0.81%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-09-16",
+        "Clicks": 288,
+        "Impressions": 39645,
+        "CTR": "0.73%",
+        "Position": 6.7
+      },
+      {
+        "Date": "2026-09-17",
+        "Clicks": 279,
+        "Impressions": 38963,
+        "CTR": "0.72%",
+        "Position": 6.7
+      },
+      {
+        "Date": "2026-09-18",
+        "Clicks": 274,
+        "Impressions": 35287,
+        "CTR": "0.78%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-09-19",
+        "Clicks": 213,
+        "Impressions": 29376,
+        "CTR": "0.73%",
+        "Position": 6.8
+      },
+      {
+        "Date": "2026-09-20",
+        "Clicks": 257,
+        "Impressions": 31608,
+        "CTR": "0.81%",
+        "Position": 6.8
+      },
+      {
+        "Date": "2026-09-21",
+        "Clicks": 306,
+        "Impressions": 39743,
+        "CTR": "0.77%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-09-22",
+        "Clicks": 309,
+        "Impressions": 39825,
+        "CTR": "0.78%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-09-23",
+        "Clicks": 259,
+        "Impressions": 39442,
+        "CTR": "0.66%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-09-24",
+        "Clicks": 302,
+        "Impressions": 39081,
+        "CTR": "0.77%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-09-25",
+        "Clicks": 244,
+        "Impressions": 36556,
+        "CTR": "0.67%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-09-26",
+        "Clicks": 204,
+        "Impressions": 29707,
+        "CTR": "0.69%",
+        "Position": 6.9
+      },
+      {
+        "Date": "2026-09-27",
+        "Clicks": 245,
+        "Impressions": 31631,
+        "CTR": "0.77%",
+        "Position": 6.7
+      },
+      {
+        "Date": "2026-09-28",
+        "Clicks": 370,
+        "Impressions": 42664,
+        "CTR": "0.87%",
+        "Position": 6.3
+      },
+      {
+        "Date": "2026-09-29",
+        "Clicks": 390,
+        "Impressions": 46068,
+        "CTR": "0.85%",
+        "Position": 6.1
+      },
+      {
+        "Date": "2026-09-30",
+        "Clicks": 261,
+        "Impressions": 39667,
+        "CTR": "0.66%",
+        "Position": 6.2
+      },
+      {
+        "Date": "2026-10-01",
+        "Clicks": 254,
+        "Impressions": 39220,
+        "CTR": "0.65%",
+        "Position": 6.4
+      },
+      {
+        "Date": "2026-10-02",
+        "Clicks": 229,
+        "Impressions": 36500,
+        "CTR": "0.63%",
+        "Position": 6.4
+      },
+      {
+        "Date": "2026-10-03",
+        "Clicks": 181,
+        "Impressions": 28833,
+        "CTR": "0.63%",
+        "Position": 6.8
+      },
+      {
+        "Date": "2026-10-04",
+        "Clicks": 145,
+        "Impressions": 25059,
+        "CTR": "0.58%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-10-05",
+        "Clicks": 237,
+        "Impressions": 34198,
+        "CTR": "0.69%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-10-06",
+        "Clicks": 281,
+        "Impressions": 36797,
+        "CTR": "0.76%",
+        "Position": 6.5
+      },
+      {
+        "Date": "2026-10-07",
+        "Clicks": 252,
+        "Impressions": 35179,
+        "CTR": "0.72%",
+        "Position": 6.3
+      },
+      {
+        "Date": "2026-10-08",
+        "Clicks": 215,
+        "Impressions": 33246,
+        "CTR": "0.65%",
+        "Position": 6.3
+      },
+      {
+        "Date": "2026-10-09",
+        "Clicks": 186,
+        "Impressions": 30604,
+        "CTR": "0.61%",
+        "Position": 6.4
+      },
+      {
+        "Date": "2026-10-10",
+        "Clicks": 167,
+        "Impressions": 26355,
+        "CTR": "0.63%",
+        "Position": 6.7
+      },
+      {
+        "Date": "2026-10-11",
+        "Clicks": 165,
+        "Impressions": 26641,
+        "CTR": "0.62%",
+        "Position": 6.6
+      },
+      {
+        "Date": "2026-10-12",
+        "Clicks": 212,
+        "Impressions": 28455,
+        "CTR": "0.75%",
+        "Position": 6.5
+      }
+    ],
+    "topPagesWholePeriod": [
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/disbiose-sibo-tratamento",
+        "Clicks": 4754,
+        "Impressions": 516139,
+        "CTR": "0.92%",
+        "Position": 7.08
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/plicoma-anal-vale-a-pena-retirar",
+        "Clicks": 3715,
+        "Impressions": 371254,
+        "CTR": "1%",
+        "Position": 5.25
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "Clicks": 2075,
+        "Impressions": 491722,
+        "CTR": "0.42%",
+        "Position": 7.23
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/hemorroida-sempre-cirurgica-tratamento",
+        "Clicks": 1236,
+        "Impressions": 166825,
+        "CTR": "0.74%",
+        "Position": 4.99
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/fases-cicatrizacao-cirurgia-hemorroida",
+        "Clicks": 1023,
+        "Impressions": 84384,
+        "CTR": "1.21%",
+        "Position": 6.79
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/cirurgia-laser-hemorroida-quando-faz-sentido",
+        "Clicks": 664,
+        "Impressions": 26731,
+        "CTR": "2.48%",
+        "Position": 6.42
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/",
+        "Clicks": 484,
+        "Impressions": 30798,
+        "CTR": "1.57%",
+        "Position": 7.44
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/hemorroida-quanto-tempo-dura-quando-procurar",
+        "Clicks": 349,
+        "Impressions": 73467,
+        "CTR": "0.48%",
+        "Position": 7.65
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/intestino-preso-muitos-dias-perigoso",
+        "Clicks": 284,
+        "Impressions": 70907,
+        "CTR": "0.4%",
+        "Position": 6.27
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/hemorroida-grau-3-tratamento",
+        "Clicks": 232,
+        "Impressions": 15203,
+        "CTR": "1.53%",
+        "Position": 5.03
+      },
+      {
+        "Top pages": "http://analuizarocha.com.br/",
+        "Clicks": 165,
+        "Impressions": 18238,
+        "CTR": "0.9%",
+        "Position": 2.31
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/descobri-hpv-anal-e-agora",
+        "Clicks": 152,
+        "Impressions": 9666,
+        "CTR": "1.57%",
+        "Position": 7.33
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/constipacao-intestinal-cronica-causas-tratamento",
+        "Clicks": 134,
+        "Impressions": 50798,
+        "CTR": "0.26%",
+        "Position": 7.9
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/locais-de-atendimento/specta-endoscopia-digestiva",
+        "Clicks": 118,
+        "Impressions": 1653,
+        "CTR": "7.14%",
+        "Position": 8.88
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/sangue-nas-fezes-quando-procurar-coloproctologista",
+        "Clicks": 117,
+        "Impressions": 29242,
+        "CTR": "0.4%",
+        "Position": 7.67
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/blog/disturbios-assoalho-pelvico-funcionamento-intestino",
+        "Clicks": 115,
+        "Impressions": 14431,
+        "CTR": "0.8%",
+        "Position": 7.17
+      }
+    ],
+    "selectedQueriesWholePeriod": [
+      {
+        "Top queries": "plicoma",
+        "Clicks": 998,
+        "Impressions": 86065,
+        "CTR": "1.16%",
+        "Position": 3.19
+      },
+      {
+        "Top queries": "sibo sintomas",
+        "Clicks": 671,
+        "Impressions": 42066,
+        "CTR": "1.6%",
+        "Position": 4.56
+      },
+      {
+        "Top queries": "disbiose intestinal",
+        "Clicks": 231,
+        "Impressions": 52090,
+        "CTR": "0.44%",
+        "Position": 8.2
+      },
+      {
+        "Top queries": "coceira no anus",
+        "Clicks": 163,
+        "Impressions": 49881,
+        "CTR": "0.33%",
+        "Position": 7.66
+      },
+      {
+        "Top queries": "proctologista curitiba",
+        "Clicks": 82,
+        "Impressions": 2132,
+        "CTR": "3.85%",
+        "Position": 1.48
+      },
+      {
+        "Top queries": "coloproctologista curitiba",
+        "Clicks": 46,
+        "Impressions": 1249,
+        "CTR": "3.68%",
+        "Position": 1.84
+      },
+      {
+        "Top queries": "ana luiza moraes rocha",
+        "Clicks": 28,
+        "Impressions": 143,
+        "CTR": "19.58%",
+        "Position": 1.01
+      },
+      {
+        "Top queries": "hemorroida interna",
+        "Clicks": 11,
+        "Impressions": 27336,
+        "CTR": "0.04%",
+        "Position": 4.93
+      },
+      {
+        "Top queries": "hemorroida externa",
+        "Clicks": 7,
+        "Impressions": 19571,
+        "CTR": "0.04%",
+        "Position": 4.04
+      },
+      {
+        "Top queries": "colonoscopia curitiba",
+        "Clicks": 1,
+        "Impressions": 245,
+        "CTR": "0.41%",
+        "Position": 10.69
+      }
+    ],
+    "treatmentPagesWholePeriod": [
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/hpv-anal",
+        "Clicks": 66,
+        "Impressions": 7763,
+        "CTR": "0.85%",
+        "Position": 6.6
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/cx-laser",
+        "Clicks": 32,
+        "Impressions": 2138,
+        "CTR": "1.5%",
+        "Position": 7.02
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/cx-cisto-pilonidal",
+        "Clicks": 24,
+        "Impressions": 11079,
+        "CTR": "0.22%",
+        "Position": 7.39
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel",
+        "Clicks": 8,
+        "Impressions": 7554,
+        "CTR": "0.11%",
+        "Position": 7.4
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/rastreio-cancer-anal",
+        "Clicks": 6,
+        "Impressions": 350,
+        "CTR": "1.71%",
+        "Position": 7.3
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/hemorroidas",
+        "Clicks": 5,
+        "Impressions": 1558,
+        "CTR": "0.32%",
+        "Position": 7.65
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/toxina-botulinica",
+        "Clicks": 4,
+        "Impressions": 202,
+        "CTR": "1.98%",
+        "Position": 6.83
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/cx-fistulas-anorretais",
+        "Clicks": 3,
+        "Impressions": 1308,
+        "CTR": "0.23%",
+        "Position": 7.74
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais",
+        "Clicks": 3,
+        "Impressions": 943,
+        "CTR": "0.32%",
+        "Position": 5.99
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/cx-cisto-cisto-pilonidal",
+        "Clicks": 0,
+        "Impressions": 1,
+        "CTR": "0%",
+        "Position": 1.0
+      },
+      {
+        "Top pages": "https://www.analuizarocha.com.br/tratamentos/sindrome-intestino-intestino-irritavel",
+        "Clicks": 0,
+        "Impressions": 1,
+        "CTR": "0%",
+        "Position": 1.0
+      }
+    ],
+    "devicesWholePeriod": [
+      {
+        "Device": "Mobile",
+        "Clicks": 15001,
+        "Impressions": 2041869,
+        "CTR": "0.73%",
+        "Position": 6.77
+      },
+      {
+        "Device": "Desktop",
+        "Clicks": 1750,
+        "Impressions": 227128,
+        "CTR": "0.77%",
+        "Position": 6.31
+      },
+      {
+        "Device": "Tablet",
+        "Clicks": 76,
+        "Impressions": 7751,
+        "CTR": "0.98%",
+        "Position": 6.85
+      }
+    ],
+    "countriesSummary": [
+      {
+        "Country": "Brazil",
+        "Clicks": 16009,
+        "Impressions": 2174197,
+        "CTR": "0.74%",
+        "Position": 6.7
+      },
+      {
+        "Country": "Portugal",
+        "Clicks": 310,
+        "Impressions": 32830,
+        "CTR": "0.94%",
+        "Position": 7.52
+      },
+      {
+        "Country": "United States",
+        "Clicks": 83,
+        "Impressions": 14747,
+        "CTR": "0.56%",
+        "Position": 6.74
+      },
+      {
+        "Country": "Angola",
+        "Clicks": 55,
+        "Impressions": 10595,
+        "CTR": "0.52%",
+        "Position": 7.06
+      },
+      {
+        "Country": "Mozambique",
+        "Clicks": 50,
+        "Impressions": 8738,
+        "CTR": "0.57%",
+        "Position": 7.17
+      }
+    ],
+    "reconciliation": {
+      "chartClicks": 16827,
+      "pageClicks": 16845,
+      "queryClicks": 8150,
+      "chartImpressions": 2276748,
+      "pageImpressions": 2326706
+    }
+  },
+  "aiVisibility": {
+    "exports": [
+      {
+        "sourceDirectory": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14 (1)..",
+        "days": 61,
+        "propertyImpressions": 199707,
+        "dailyChart": [
+          {
+            "Date": "2026-07-13",
+            "Impressions": "1430"
+          },
+          {
+            "Date": "2026-07-14",
+            "Impressions": "1585"
+          },
+          {
+            "Date": "2026-07-15",
+            "Impressions": "1488"
+          },
+          {
+            "Date": "2026-07-16",
+            "Impressions": "1304"
+          },
+          {
+            "Date": "2026-07-17",
+            "Impressions": "1448"
+          },
+          {
+            "Date": "2026-07-18",
+            "Impressions": "1404"
+          },
+          {
+            "Date": "2026-07-19",
+            "Impressions": "1511"
+          },
+          {
+            "Date": "2026-07-20",
+            "Impressions": "2154"
+          },
+          {
+            "Date": "2026-07-21",
+            "Impressions": "2269"
+          },
+          {
+            "Date": "2026-07-22",
+            "Impressions": "2317"
+          },
+          {
+            "Date": "2026-07-23",
+            "Impressions": "2307"
+          },
+          {
+            "Date": "2026-07-24",
+            "Impressions": "2044"
+          },
+          {
+            "Date": "2026-07-25",
+            "Impressions": "1646"
+          },
+          {
+            "Date": "2026-07-26",
+            "Impressions": "1784"
+          },
+          {
+            "Date": "2026-07-27",
+            "Impressions": "2602"
+          },
+          {
+            "Date": "2026-07-28",
+            "Impressions": "2662"
+          },
+          {
+            "Date": "2026-07-29",
+            "Impressions": "2424"
+          },
+          {
+            "Date": "2026-07-30",
+            "Impressions": "1975"
+          },
+          {
+            "Date": "2026-07-31",
+            "Impressions": "2125"
+          },
+          {
+            "Date": "2026-08-01",
+            "Impressions": "1817"
+          },
+          {
+            "Date": "2026-08-02",
+            "Impressions": "2059"
+          },
+          {
+            "Date": "2026-08-03",
+            "Impressions": "3226"
+          },
+          {
+            "Date": "2026-08-04",
+            "Impressions": "2949"
+          },
+          {
+            "Date": "2026-08-05",
+            "Impressions": "2584"
+          },
+          {
+            "Date": "2026-08-06",
+            "Impressions": "2658"
+          },
+          {
+            "Date": "2026-08-07",
+            "Impressions": "2377"
+          },
+          {
+            "Date": "2026-08-08",
+            "Impressions": "1985"
+          },
+          {
+            "Date": "2026-08-09",
+            "Impressions": "1788"
+          },
+          {
+            "Date": "2026-08-10",
+            "Impressions": "3316"
+          },
+          {
+            "Date": "2026-08-11",
+            "Impressions": "3187"
+          },
+          {
+            "Date": "2026-08-12",
+            "Impressions": "3681"
+          },
+          {
+            "Date": "2026-08-13",
+            "Impressions": "3447"
+          },
+          {
+            "Date": "2026-08-14",
+            "Impressions": "2944"
+          },
+          {
+            "Date": "2026-08-15",
+            "Impressions": "2325"
+          },
+          {
+            "Date": "2026-08-16",
+            "Impressions": "2592"
+          },
+          {
+            "Date": "2026-08-17",
+            "Impressions": "3366"
+          },
+          {
+            "Date": "2026-08-18",
+            "Impressions": "4502"
+          },
+          {
+            "Date": "2026-08-19",
+            "Impressions": "3775"
+          },
+          {
+            "Date": "2026-08-20",
+            "Impressions": "3580"
+          },
+          {
+            "Date": "2026-08-21",
+            "Impressions": "3953"
+          },
+          {
+            "Date": "2026-08-22",
+            "Impressions": "3068"
+          },
+          {
+            "Date": "2026-08-23",
+            "Impressions": "2971"
+          },
+          {
+            "Date": "2026-08-24",
+            "Impressions": "4286"
+          },
+          {
+            "Date": "2026-08-25",
+            "Impressions": "6773"
+          },
+          {
+            "Date": "2026-08-26",
+            "Impressions": "5320"
+          },
+          {
+            "Date": "2026-08-27",
+            "Impressions": "4738"
+          },
+          {
+            "Date": "2026-08-28",
+            "Impressions": "5688"
+          },
+          {
+            "Date": "2026-08-29",
+            "Impressions": "3361"
+          },
+          {
+            "Date": "2026-08-30",
+            "Impressions": "3419"
+          },
+          {
+            "Date": "2026-08-31",
+            "Impressions": "5578"
+          },
+          {
+            "Date": "2026-09-01",
+            "Impressions": "5227"
+          },
+          {
+            "Date": "2026-09-02",
+            "Impressions": "5100"
+          },
+          {
+            "Date": "2026-09-03",
+            "Impressions": "4701"
+          },
+          {
+            "Date": "2026-09-04",
+            "Impressions": "5093"
+          },
+          {
+            "Date": "2026-09-05",
+            "Impressions": "4526"
+          },
+          {
+            "Date": "2026-09-06",
+            "Impressions": "3732"
+          },
+          {
+            "Date": "2026-09-07",
+            "Impressions": "3538"
+          },
+          {
+            "Date": "2026-09-08",
+            "Impressions": "5156"
+          },
+          {
+            "Date": "2026-09-09",
+            "Impressions": "5732"
+          },
+          {
+            "Date": "2026-09-10",
+            "Impressions": "6946"
+          },
+          {
+            "Date": "2026-09-11",
+            "Impressions": "6164"
+          }
+        ],
+        "devices": [
+          {
+            "Device": "Mobile",
+            "Impressions": "157530"
+          },
+          {
+            "Device": "Desktop",
+            "Impressions": "41407"
+          },
+          {
+            "Device": "Tablet",
+            "Impressions": "770"
+          }
+        ],
+        "countriesTop5": [
+          {
+            "Country": "Brazil",
+            "Impressions": "191820"
+          },
+          {
+            "Country": "Portugal",
+            "Impressions": "2726"
+          },
+          {
+            "Country": "United States",
+            "Impressions": "1004"
+          },
+          {
+            "Country": "Angola",
+            "Impressions": "614"
+          },
+          {
+            "Country": "Mozambique",
+            "Impressions": "437"
+          }
+        ],
+        "topPages": [
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/plicoma-anal-vale-a-pena-retirar",
+            "Impressions": "70034"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/disbiose-sibo-tratamento",
+            "Impressions": "54675"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/hemorroida-sempre-cirurgica-tratamento",
+            "Impressions": "19409"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+            "Impressions": "11131"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/fases-cicatrizacao-cirurgia-hemorroida",
+            "Impressions": "9556"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/sangue-nas-fezes-quando-procurar-coloproctologista",
+            "Impressions": "7559"
+          }
+        ]
+      },
+      {
+        "sourceDirectory": "/Users/diegovfeder/Downloads/analuizarocha.com.br-Performance-on-Search-Generative-AI-Features-2026-10-14",
+        "days": 28,
+        "propertyImpressions": 180108,
+        "dailyChart": [
+          {
+            "Date": "2026-09-15",
+            "Impressions": "7631"
+          },
+          {
+            "Date": "2026-09-16",
+            "Impressions": "7236"
+          },
+          {
+            "Date": "2026-09-17",
+            "Impressions": "6942"
+          },
+          {
+            "Date": "2026-09-18",
+            "Impressions": "6851"
+          },
+          {
+            "Date": "2026-09-19",
+            "Impressions": "5254"
+          },
+          {
+            "Date": "2026-09-20",
+            "Impressions": "5310"
+          },
+          {
+            "Date": "2026-09-21",
+            "Impressions": "7866"
+          },
+          {
+            "Date": "2026-09-22",
+            "Impressions": "7764"
+          },
+          {
+            "Date": "2026-09-23",
+            "Impressions": "7945"
+          },
+          {
+            "Date": "2026-09-24",
+            "Impressions": "7069"
+          },
+          {
+            "Date": "2026-09-25",
+            "Impressions": "6851"
+          },
+          {
+            "Date": "2026-09-26",
+            "Impressions": "4483"
+          },
+          {
+            "Date": "2026-09-27",
+            "Impressions": "5085"
+          },
+          {
+            "Date": "2026-09-28",
+            "Impressions": "8980"
+          },
+          {
+            "Date": "2026-09-29",
+            "Impressions": "10288"
+          },
+          {
+            "Date": "2026-09-30",
+            "Impressions": "8349"
+          },
+          {
+            "Date": "2026-10-01",
+            "Impressions": "7464"
+          },
+          {
+            "Date": "2026-10-02",
+            "Impressions": "6449"
+          },
+          {
+            "Date": "2026-10-03",
+            "Impressions": "4376"
+          },
+          {
+            "Date": "2026-10-04",
+            "Impressions": "3739"
+          },
+          {
+            "Date": "2026-10-05",
+            "Impressions": "5835"
+          },
+          {
+            "Date": "2026-10-06",
+            "Impressions": "7522"
+          },
+          {
+            "Date": "2026-10-07",
+            "Impressions": "6791"
+          },
+          {
+            "Date": "2026-10-08",
+            "Impressions": "6591"
+          },
+          {
+            "Date": "2026-10-09",
+            "Impressions": "5215"
+          },
+          {
+            "Date": "2026-10-10",
+            "Impressions": "3637"
+          },
+          {
+            "Date": "2026-10-11",
+            "Impressions": "3984"
+          },
+          {
+            "Date": "2026-10-12",
+            "Impressions": "4601"
+          }
+        ],
+        "devices": [
+          {
+            "Device": "Mobile",
+            "Impressions": "144585"
+          },
+          {
+            "Device": "Desktop",
+            "Impressions": "34907"
+          },
+          {
+            "Device": "Tablet",
+            "Impressions": "616"
+          }
+        ],
+        "countriesTop5": [
+          {
+            "Country": "Brazil",
+            "Impressions": "173191"
+          },
+          {
+            "Country": "Portugal",
+            "Impressions": "2316"
+          },
+          {
+            "Country": "United States",
+            "Impressions": "869"
+          },
+          {
+            "Country": "Angola",
+            "Impressions": "486"
+          },
+          {
+            "Country": "Mozambique",
+            "Impressions": "363"
+          }
+        ],
+        "topPages": [
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/disbiose-sibo-tratamento",
+            "Impressions": "60816"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/plicoma-anal-vale-a-pena-retirar",
+            "Impressions": "38290"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+            "Impressions": "19926"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/hemorroida-sempre-cirurgica-tratamento",
+            "Impressions": "15102"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/fases-cicatrizacao-cirurgia-hemorroida",
+            "Impressions": "7282"
+          },
+          {
+            "Top pages": "https://www.analuizarocha.com.br/blog/intestino-preso-muitos-dias-perigoso",
+            "Impressions": "4906"
+          }
+        ]
+      }
+    ],
+    "earlierLast28": {
+      "from": "2026-08-15",
+      "to": "2026-09-11",
+      "impressions": 125210
+    }
+  },
+  "liveAudit": {
+    "observedAtUtc": "2026-10-15T00:21:03.983321+00:00",
+    "sitemapUrlCount": 66,
+    "pages": [
+      {
+        "url": "https://www.analuizarocha.com.br",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br",
+        "canonical": [
+          "https://www.analuizarocha.com.br"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Dra. Ana Luiza M. Rocha | Coloproctologista Curitiba",
+        "description": "Coloproctologista em Curitiba. Cuidado clínico e cirúrgico com foco em hemorroidas, fissuras, fístulas, HPV anal e doenças inflamatórias intestinais. Clínica Nassif, Batel.",
+        "h1Text": "Cada paciente uma história, cada história um cuidado único",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Tratamentos em Coloproctologia | Dra. Ana Luiza M. Rocha",
+        "description": "Do diagnóstico ao pós-operatório: cirurgia a laser, hemorroidas, fístulas, cisto pilonidal, HPV anal e doenças inflamatórias intestinais. Conheça cada abordagem.",
+        "h1Text": "Tratamentos de Coloproctologia",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/locais-de-atendimento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/locais-de-atendimento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/locais-de-atendimento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Locais de atendimento em Curitiba | Dra. Ana Luiza M. Rocha",
+        "description": "Veja onde a Dra. Ana Luiza Rocha atende em Curitiba, com informações sobre consulta em coloproctologia, colonoscopia, endereços e agendamento.",
+        "h1Text": "Consulta no Batel, colonoscopia nas Mercês.",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/locais-de-atendimento/clinica-nassif",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/locais-de-atendimento/clinica-nassif",
+        "canonical": [
+          "https://www.analuizarocha.com.br/locais-de-atendimento/clinica-nassif"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Clínica Nassif | Onde a Dra. Ana Luiza Rocha atende em Curitiba | Dra. Ana Luiza M. Rocha",
+        "description": "Consultas em coloproctologia com a Dra. Ana Luiza Rocha na Clínica Nassif, no Batel, em Curitiba. Veja endereço, como agendar e tratamentos relacionados.",
+        "h1Text": "Clínica Nassif",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/locais-de-atendimento/specta-endoscopia-digestiva",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/locais-de-atendimento/specta-endoscopia-digestiva",
+        "canonical": [
+          "https://www.analuizarocha.com.br/locais-de-atendimento/specta-endoscopia-digestiva"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Specta Endoscopia Digestiva | Atendimento com Dra. Ana Luiza Rocha | Dra. Ana Luiza M. Rocha",
+        "description": "Colonoscopia com a Dra. Ana Luiza Rocha na Specta Endoscopia Digestiva, em Curitiba. Veja endereço, orientações de agendamento e contexto do exame.",
+        "h1Text": "Specta Endoscopia Digestiva",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos/hemorroidas",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos/hemorroidas",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos/hemorroidas"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Hemorroidas — quando tratar e como funciona | Dra. Ana Luiza M. Rocha",
+        "description": "Ligadura elástica, escleroterapia, laser e THD. Entenda cada opção, quando a cirurgia é necessária e o que esperar da recuperação.",
+        "h1Text": "Tratamento de Hemorroidas",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos/cx-laser",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos/cx-laser",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos/cx-laser"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Cirurgia a Laser Proctológica | Dra. Ana Luiza M. Rocha",
+        "description": "Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.",
+        "h1Text": "Cirurgias a Laser em Proctologia",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos/cx-fistulas-anorretais",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos/cx-fistulas-anorretais",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos/cx-fistulas-anorretais"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Fístula Anal: Cirurgia Especializada | Dra. Ana Luiza M. Rocha",
+        "description": "Tratamentos cirúrgicos especializados para fístulas anorretais: fistulotomia, retalho mucoso, LIFT, laser e técnicas combinadas em Curitiba.",
+        "h1Text": "Cirurgias para Fístulas Anorretais",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos/cx-cisto-pilonidal",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos/cx-cisto-pilonidal",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos/cx-cisto-pilonidal"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Cisto Pilonidal: Cirurgia e Recuperação | Dra. Ana Luiza M. Rocha",
+        "description": "Cirurgia para cisto pilonidal: técnica convencional e laser. Tratamento definitivo com recuperação rápida e menor dor pós-operatória em Curitiba.",
+        "h1Text": "Cirurgia para Cisto Pilonidal",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos/doencas-inflamatorias-intestinais"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "DII: Crohn e Retocolite | Dra. Ana Luiza M. Rocha",
+        "description": "Diagnóstico e tratamento de Doenças Inflamatórias Intestinais: Doença de Crohn e Retocolite Ulcerativa. Acompanhamento especializado em Curitiba.",
+        "h1Text": "Doenças Inflamatórias Intestinais (DII): Diagnóstico e Tratamento",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos/hpv-anal",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos/hpv-anal",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos/hpv-anal"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "HPV Anal: Condilomas e Tratamento | Dra. Ana Luiza M. Rocha",
+        "description": "Tratamento especializado de HPV anal: remoção de condilomas e verrugas com laser, eletrocauterização e terapias tópicas em Curitiba.",
+        "h1Text": "Tratamento das Lesões de HPV Anal: Condilomas e Verrugas",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos/rastreio-cancer-anal",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos/rastreio-cancer-anal",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos/rastreio-cancer-anal"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Rastreio de Câncer Anal e HPV | Dra. Ana Luiza M. Rocha",
+        "description": "Rastreamento e prevenção do câncer de canal anal: grupos de risco, citologia anal, anuscopia de alta resolução e vacinação HPV em Curitiba.",
+        "h1Text": "Rastreio e Prevenção do Câncer de Canal Anal",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos/sindrome-intestino-irritavel"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Síndrome do Intestino Irritável (SII) | Dra. Ana Luiza M. Rocha",
+        "description": "Diagnóstico e tratamento personalizado da Síndrome do Intestino Irritável (SII). Acompanhamento especializado em coloproctologia em Curitiba.",
+        "h1Text": "Síndrome do Intestino Irritável (SII): Diagnóstico e Tratamento Personalizado",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/tratamentos/toxina-botulinica",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/tratamentos/toxina-botulinica",
+        "canonical": [
+          "https://www.analuizarocha.com.br/tratamentos/toxina-botulinica"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Toxina Botulínica para Fissura Anal | Dra. Ana Luiza M. Rocha",
+        "description": "Aplicação de toxina botulínica para tratamento de fissura anal crônica e dores anais persistentes em Curitiba. Procedimento minimamente invasivo.",
+        "h1Text": "Toxina Botulínica na Proctologia",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/sobre",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/sobre",
+        "canonical": [
+          "https://www.analuizarocha.com.br/sobre"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Formação e trajetória profissional | Dra. Ana Luiza M. Rocha",
+        "description": "Residência em cirurgia geral, especialização em coloproctologia e fellowship internacional em cirurgia colorretal. Conheça quem cuida de você.",
+        "h1Text": "Dra. Ana Luiza Moraes Rocha",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Blog — Saúde intestinal sem tabu | Dra. Ana Luiza M. Rocha",
+        "description": "Orientações práticas sobre hemorroidas, fissuras, intestino preso, HPV anal e mais. Conteúdo direto, sem jargão, escrito por quem trata.",
+        "h1Text": "Cuidando da sua saúde intestinal",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/quando-procurar-coloproctologista-curitiba",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/quando-procurar-coloproctologista-curitiba",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/quando-procurar-coloproctologista-curitiba"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Quando procurar um coloproctologista: guia completo | Dra. Ana Luiza M. Rocha",
+        "description": "Descubra quando procurar um coloproctologista. Sintomas, sinais de alerta e como escolher o especialista certo para sua saúde intestinal.",
+        "h1Text": "Quando procurar um coloproctologista: guia completo",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/alimentacao-e-saude-intestinal",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/alimentacao-e-saude-intestinal",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/alimentacao-e-saude-intestinal"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Alimentação e saúde intestinal: fibras, hidratação e ritmo para um intestino equilibrado | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda como uma alimentação rica em fibras, água e rotina regular ajuda a prevenir constipação, diarreia e desconfortos intestinais no dia a dia.",
+        "h1Text": "Alimentação e saúde intestinal: fibras, hidratação e ritmo para um intestino equilibrado",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/plicoma-anal-cirurgia-laser",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/plicoma-anal-cirurgia-laser",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/plicoma-anal-cirurgia-laser"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Plicoma anal: o que é e como a cirurgia a laser pode auxiliar na recuperação | Dra. Ana Luiza M. Rocha",
+        "description": "Plicoma anal pode causar desconforto e dificuldade de higiene. Entenda quando remover e como a cirurgia a laser oferece melhor recuperação.",
+        "h1Text": "Plicoma anal: o que é e como a cirurgia a laser pode auxiliar na recuperação",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/hemorroida-sempre-cirurgica-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/hemorroida-sempre-cirurgica-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/hemorroida-sempre-cirurgica-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Hemorroida é sempre cirúrgica? Entenda quando operar e opções de tratamento | Dra. Ana Luiza M. Rocha",
+        "description": "Hemorroida nem sempre precisa de cirurgia. Descubra quando é indicada a ligadura elástica, cirurgia a laser e tratamentos clínicos para hemorroidas.",
+        "h1Text": "Hemorroida é sempre cirúrgica? Entenda quando operar e opções de tratamento",
+        "articleTreatmentLinks": [
+          "/tratamentos/hemorroidas"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/constipacao-intestinal-cronica-causas-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/constipacao-intestinal-cronica-causas-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/constipacao-intestinal-cronica-causas-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Constipação intestinal crônica: causas, tratamentos e quando procurar especialista | Dra. Ana Luiza M. Rocha",
+        "description": "Constipação intestinal crônica tem tratamento. Descubra as causas da prisão de ventre, sinais de alerta e quando procurar um coloproctologista.",
+        "h1Text": "Constipação intestinal crônica: causas, tratamentos e quando procurar especialista",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/sangue-nas-fezes-quando-procurar-coloproctologista",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/sangue-nas-fezes-quando-procurar-coloproctologista",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/sangue-nas-fezes-quando-procurar-coloproctologista"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Sangue nas fezes: quando se preocupar e buscar ajuda especializada | Dra. Ana Luiza M. Rocha",
+        "description": "Sangue nas fezes pode indicar desde hemorroidas até condições sérias. Descubra as causas, sinais de alerta e quando procurar um proctologista.",
+        "h1Text": "Sangue nas fezes: quando se preocupar e buscar ajuda especializada",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/coceira-anal-quando-procurar-coloproctologista-curitiba"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Coceira anal: quando é normal e quando procurar um coloproctologista em Curitiba | Dra. Ana Luiza M. Rocha",
+        "description": "Coceira anal pode ter diversas causas, desde higiene inadequada até doenças orificiais. Descubra quando procurar ajuda especializada em Curitiba.",
+        "h1Text": "Coceira anal: quando é normal e quando procurar um coloproctologista em Curitiba",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/disbiose-sibo-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/disbiose-sibo-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/disbiose-sibo-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Disbiose e SIBO: entenda as causas, sintomas e tratamentos | Dra. Ana Luiza M. Rocha",
+        "description": "Disbiose intestinal e SIBO causam inchaço, gases e dor abdominal. Entenda as diferenças, diagnóstico e tratamentos eficazes com coloproctologista em Curitiba.",
+        "h1Text": "Disbiose e SIBO: entenda as causas, sintomas e tratamentos",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/cisto-pilonidal-cirurgia-laser-quando-operar",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/cisto-pilonidal-cirurgia-laser-quando-operar",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/cisto-pilonidal-cirurgia-laser-quando-operar"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Cisto pilonidal: cirurgia convencional ou laser? | Dra. Ana Luiza M. Rocha",
+        "description": "Compare cirurgia convencional e laser para cisto pilonidal, entenda indicações, recuperação, limitações e como a técnica é escolhida.",
+        "h1Text": "Cisto pilonidal: cirurgia convencional ou laser?",
+        "articleTreatmentLinks": [
+          "/tratamentos/cx-cisto-pilonidal"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/alimentacao-fibras-saude-intestinal",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/alimentacao-fibras-saude-intestinal",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/alimentacao-fibras-saude-intestinal"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Alimentação e saúde intestinal: o papel das fibras no funcionamento do intestino | Dra. Ana Luiza M. Rocha",
+        "description": "As fibras são essenciais para a saúde intestinal. Entenda tipos de fibras, quantidade ideal e como prevenir constipação e hemorroidas em Curitiba.",
+        "h1Text": "Alimentação e saúde intestinal: o papel das fibras no funcionamento do intestino",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/diarreia-cronica-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/diarreia-cronica-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/diarreia-cronica-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Diarreia crônica: causas, diagnóstico e tratamentos | Dra. Ana Luiza M. Rocha",
+        "description": "Diarreia crônica ou intestino solto persistente pode indicar SII, intolerâncias ou doenças inflamatórias. Saiba quando procurar por proctologista em Curitiba.",
+        "h1Text": "Diarreia crônica: causas, diagnóstico e tratamentos",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/fissura-anal-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/fissura-anal-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/fissura-anal-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Fissura anal: sintomas, tratamentos e como a proctologia pode ajudar | Dra. Ana Luiza M. Rocha",
+        "description": "Fissura anal causa dor intensa ao evacuar. Conheça sintomas, tratamentos clínicos, botox e cirurgia com proctologista em Curitiba.",
+        "h1Text": "Fissura anal: sintomas, tratamentos e como a proctologia pode ajudar",
+        "articleTreatmentLinks": [
+          "/tratamentos/toxina-botulinica"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/hpv-anal-condilomas-riscos-tratamento-rastreio",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/hpv-anal-condilomas-riscos-tratamento-rastreio",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/hpv-anal-condilomas-riscos-tratamento-rastreio"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "HPV anal e condilomas: o que são, riscos, tratamento e importância do rastreio | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda HPV anal e condilomas: sintomas, riscos, tratamento, vacina e rastreio para prevenção do câncer anal com coloproctologista em Curitiba.",
+        "h1Text": "HPV anal e condilomas: o que são, riscos, tratamento e importância do rastreio",
+        "articleTreatmentLinks": [
+          "/tratamentos/hpv-anal"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Síndrome do Intestino Irritável (SII): sintomas, diagnóstico e tratamento personalizado | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda os sintomas da Síndrome do Intestino Irritável (SII), como é feito o diagnóstico e quais tratamentos personalizados ajudam no controle intestinal.",
+        "h1Text": "Síndrome do Intestino Irritável (SII): sintomas, diagnóstico e tratamento personalizado",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/disturbios-assoalho-pelvico-funcionamento-intestino",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/disturbios-assoalho-pelvico-funcionamento-intestino",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/disturbios-assoalho-pelvico-funcionamento-intestino"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Distúrbios do assoalho pélvico: quando a musculatura interfere no funcionamento do intestino | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda sintomas, diagnóstico e tratamento dos distúrbios do assoalho pélvico, como evacuação incompleta, constipação e escapes fecais.",
+        "h1Text": "Distúrbios do assoalho pélvico: quando a musculatura interfere no funcionamento do intestino",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/saude-sexual-cuidado-informacao-bem-estar",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/saude-sexual-cuidado-informacao-bem-estar",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/saude-sexual-cuidado-informacao-bem-estar"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Saúde sexual: cuidado, informação e bem-estar | Dra. Ana Luiza M. Rocha",
+        "description": "Saiba quando procurar avaliação para dor, desconforto, lesões e dúvidas sobre saúde sexual com abordagem acolhedora e técnica em coloproctologia.",
+        "h1Text": "Saúde sexual: cuidado, informação e bem-estar",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/cancer-colorretal-rastreio-prevencao-diagnostico-precoce"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Câncer colorretal: rastreio, prevenção e a importância do diagnóstico precoce | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda quem deve fazer rastreio do câncer colorretal, principais sintomas, exames indicados e como a prevenção reduz riscos e salva vidas.",
+        "h1Text": "Câncer colorretal: rastreio, prevenção e a importância do diagnóstico precoce",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/tratamento-fistulas-anorretais",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/tratamento-fistulas-anorretais",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/tratamento-fistulas-anorretais"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Tratamento de fístulas anorretais | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda sintomas, diagnóstico e opções de tratamento para fístula anal com foco em segurança, preservação da continência e menor recorrência.",
+        "h1Text": "Tratamento de fístulas anorretais",
+        "articleTreatmentLinks": [
+          "/tratamentos/cx-fistulas-anorretais"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/doencas-inflamatorias-intestinais-acompanhamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/doencas-inflamatorias-intestinais-acompanhamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/doencas-inflamatorias-intestinais-acompanhamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Doenças inflamatórias intestinais (DII): acompanhamento especializado | Dra. Ana Luiza M. Rocha",
+        "description": "Saiba como funciona o acompanhamento da Doença de Crohn e Retocolite Ulcerativa com monitoramento contínuo, prevenção de complicações e tratamento individualizado.",
+        "h1Text": "Doenças inflamatórias intestinais (DII): acompanhamento especializado",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "O que muda quando você tem acompanhamento especializado? | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda por que o acompanhamento especializado com coloproctologista em Curitiba melhora diagnóstico, reduz recorrências e traz mais previsibilidade no cuidado intestinal.",
+        "h1Text": "O que muda quando você tem acompanhamento especializado?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Quando o intestino dá sinais de alerta? | Dra. Ana Luiza M. Rocha",
+        "description": "Saiba quais sinais intestinais exigem atenção, quando observar e quando procurar um coloproctologista em Curitiba para avaliação especializada.",
+        "h1Text": "Quando o intestino dá sinais de alerta?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/sinto-vergonha-procurar-coloproctologista-isso-e-normal"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Sinto vergonha de procurar um proctologista. Isso é normal? | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda por que a vergonha na consulta proctológica é comum, como funciona o exame e quando procurar um proctologista em Curitiba.",
+        "h1Text": "Sinto vergonha de procurar um proctologista. Isso é normal?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/por-que-meus-sintomas-nunca-melhoram",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/por-que-meus-sintomas-nunca-melhoram",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/por-que-meus-sintomas-nunca-melhoram"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Por que meus sintomas nunca melhoram? | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda por que sintomas intestinais persistentes podem não melhorar e quando procurar um coloproctologista em Curitiba para investigação adequada.",
+        "h1Text": "Por que meus sintomas nunca melhoram?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/dor-ao-evacuar-causas-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/dor-ao-evacuar-causas-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/dor-ao-evacuar-causas-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Dor ao evacuar é normal? Causas e quando procurar um proctologista | Dra. Ana Luiza M. Rocha",
+        "description": "Sentir dor ao evacuar não é normal. Conheça as principais causas — fissura anal, hemorroida trombosada, constipação — e quando procurar um proctologista em Curitiba.",
+        "h1Text": "Dor ao evacuar é normal? Causas e quando procurar um proctologista",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/fissura-anal-toxina-botulinica-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/fissura-anal-toxina-botulinica-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/fissura-anal-toxina-botulinica-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Botox para fissura anal funciona mesmo? | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda como a toxina botulínica age na fissura anal crônica, quando pode ser indicada, suas limitações e quando a cirurgia é considerada.",
+        "h1Text": "Botox para fissura anal funciona mesmo?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/intestino-preso-muitos-dias-perigoso",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/intestino-preso-muitos-dias-perigoso",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/intestino-preso-muitos-dias-perigoso"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Intestino preso por muitos dias é perigoso? | Dra. Ana Luiza M. Rocha",
+        "description": "Ficar muitos dias sem evacuar pode indicar constipação intestinal. Saiba o que causa intestino preso, complicações e quando procurar um coloproctologista em Curitiba.",
+        "h1Text": "Intestino preso por muitos dias é perigoso?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/sangue-papel-higienico-sempre-hemorroida",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/sangue-papel-higienico-sempre-hemorroida",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/sangue-papel-higienico-sempre-hemorroida"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Sangue no papel higiênico é sempre hemorroida? | Dra. Ana Luiza M. Rocha",
+        "description": "Sangue no papel higiênico nem sempre é hemorroida. Conheça as causas de sangramento anal, quando investigar e quando procurar um coloproctologista em Curitiba.",
+        "h1Text": "Sangue no papel higiênico é sempre hemorroida?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/coceira-anus-causas-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/coceira-anus-causas-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/coceira-anus-causas-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Coceira no ânus: o que pode ser? | Dra. Ana Luiza M. Rocha",
+        "description": "A coceira anal pode ter várias causas: hemorroidas, dermatites, fissura ou HPV. Saiba quando procurar um coloproctologista em Curitiba para avaliação.",
+        "h1Text": "Coceira no ânus: o que pode ser?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/hemorroida-sempre-precisa-cirurgia",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/hemorroida-sempre-precisa-cirurgia",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/hemorroida-sempre-precisa-cirurgia"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Hemorroida sempre precisa de cirurgia? | Dra. Ana Luiza M. Rocha",
+        "description": "Hemorroida nem sempre precisa de cirurgia. Entenda os graus da doença hemorroidária, quando operar e por que tratar o intestino é parte fundamental do tratamento.",
+        "h1Text": "Hemorroida sempre precisa de cirurgia?",
+        "articleTreatmentLinks": [
+          "/tratamentos/hemorroidas"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/cisto-pilonidal-precisa-cirurgia",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/cisto-pilonidal-precisa-cirurgia",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/cisto-pilonidal-precisa-cirurgia"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Cisto pilonidal: precisa de cirurgia? | Dra. Ana Luiza M. Rocha",
+        "description": "O cisto pilonidal causa dor e abscessos recorrentes. Saiba quando a cirurgia é indicada, diferenças entre técnica convencional e laser. Coloproctologista em Curitiba.",
+        "h1Text": "Cisto pilonidal: precisa de cirurgia?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/plicoma-anal-vale-a-pena-retirar",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/plicoma-anal-vale-a-pena-retirar",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/plicoma-anal-vale-a-pena-retirar"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Plicoma anal precisa operar? | Dra. Ana Luiza M. Rocha",
+        "description": "Plicoma anal nem sempre precisa de cirurgia. Saiba quando observar, quando a retirada pode ajudar e o que esperar da recuperação.",
+        "h1Text": "Plicoma anal precisa operar?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/fissura-anal-quando-cirurgia-indicada",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/fissura-anal-quando-cirurgia-indicada",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/fissura-anal-quando-cirurgia-indicada"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Fissura anal: quando a cirurgia está indicada? | Dra. Ana Luiza M. Rocha",
+        "description": "Fissura anal crônica pode precisar de cirurgia quando o tratamento clínico falha. Conheça as técnicas disponíveis e saiba quando a cirurgia é a melhor opção.",
+        "h1Text": "Fissura anal: quando a cirurgia está indicada?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/hemorroida-quanto-tempo-dura-quando-procurar",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/hemorroida-quanto-tempo-dura-quando-procurar",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/hemorroida-quanto-tempo-dura-quando-procurar"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Quanto tempo a hemorroida dura e quando procurar um coloproctologista? | Dra. Ana Luiza M. Rocha",
+        "description": "Hemorroidas podem melhorar, mas também persistir ou voltar com frequência. Entenda quanto tempo os sintomas duram e quando buscar avaliação especializada.",
+        "h1Text": "Quanto tempo a hemorroida dura e quando procurar um coloproctologista?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Câncer de canal anal: rastreio, HPV e quem deve se preocupar | Dra. Ana Luiza M. Rocha",
+        "description": "Câncer de canal anal está relacionado ao HPV e pode ser prevenido com rastreio adequado. Saiba quem deve se preocupar e quando buscar avaliação especializada.",
+        "h1Text": "Câncer de canal anal: rastreio, HPV e quem deve se preocupar",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/proctologista-e-coloproctologista-entenda-os-termos",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/proctologista-e-coloproctologista-entenda-os-termos",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/proctologista-e-coloproctologista-entenda-os-termos"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Proctologista e coloproctologista: entenda os termos | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda por que proctologista e coloproctologista costumam aparecer juntos, quais sintomas merecem avaliação e como se preparar para a consulta.",
+        "h1Text": "Proctologista e coloproctologista: entenda os termos",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/fases-cicatrizacao-cirurgia-hemorroida",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/fases-cicatrizacao-cirurgia-hemorroida",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/fases-cicatrizacao-cirurgia-hemorroida"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Fases da cicatrização: o que esperar após a cirurgia de hemorroida? | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda as fases da cicatrização após cirurgia de hemorroida, o que pode ser esperado no pós-operatório e quando procurar avaliação médica.",
+        "h1Text": "Fases da cicatrização: o que esperar após a cirurgia de hemorroida?",
+        "articleTreatmentLinks": [
+          "/tratamentos/cx-laser",
+          "/tratamentos/hemorroidas"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/gastroenterologista-ou-coloproctologista-diferenca",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/gastroenterologista-ou-coloproctologista-diferenca",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/gastroenterologista-ou-coloproctologista-diferenca"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Gastroenterologista ou coloproctologista: qual a diferença? | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda a diferença entre gastroenterologista e coloproctologista, quais doenças cada especialista acompanha e quando procurar avaliação.",
+        "h1Text": "Gastroenterologista ou coloproctologista: qual a diferença?",
+        "articleTreatmentLinks": [
+          "/tratamentos/doencas-inflamatorias-intestinais",
+          "/tratamentos/sindrome-intestino-irritavel"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/celulas-mesenquimais-fistulas-anorretais",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/celulas-mesenquimais-fistulas-anorretais",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/celulas-mesenquimais-fistulas-anorretais"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Células mesenquimais para fístulas anorretais: uma nova perspectiva no tratamento | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda como células mesenquimais vêm sendo estudadas no tratamento de fístulas anorretais complexas, especialmente em casos associados à Doença de Crohn.",
+        "h1Text": "Células mesenquimais para fístulas anorretais: uma nova perspectiva no tratamento",
+        "articleTreatmentLinks": [
+          "/tratamentos/cx-fistulas-anorretais",
+          "/tratamentos/doencas-inflamatorias-intestinais"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/cirurgia-laser-hemorroida-quando-faz-sentido",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/cirurgia-laser-hemorroida-quando-faz-sentido",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/cirurgia-laser-hemorroida-quando-faz-sentido"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Cirurgia a laser para hemorroida: quando ela faz sentido? | Dra. Ana Luiza M. Rocha",
+        "description": "Entenda quando a cirurgia a laser para hemorroida pode ser indicada, quais são suas limitações e por que a avaliação individualizada é essencial.",
+        "h1Text": "Cirurgia a laser para hemorroida: quando ela faz sentido?",
+        "articleTreatmentLinks": [
+          "/tratamentos/hemorroidas"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/fissura-anal-pode-cicatrizar-sozinha",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/fissura-anal-pode-cicatrizar-sozinha",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/fissura-anal-pode-cicatrizar-sozinha"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "A fissura anal pode cicatrizar sozinha? Entenda quando esperar e quando tratar | Dra. Ana Luiza M. Rocha",
+        "description": "A fissura anal pode cicatrizar sozinha em casos agudos, mas depende do estágio e da causa. Saiba quando o quadro vira crônico e quais tratamentos ajudam.",
+        "h1Text": "A fissura anal pode cicatrizar sozinha? Entenda quando esperar e quando tratar",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/fistulas-anorretais-recidivadas-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/fistulas-anorretais-recidivadas-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/fistulas-anorretais-recidivadas-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Fístulas anorretais recidivadas: desafios no tratamento e perspectivas atuais | Dra. Ana Luiza M. Rocha",
+        "description": "Fístula anal recidivada é um dos maiores desafios da coloproctologia. Entenda por que recidivam e como preservar a continência com técnicas modernas.",
+        "h1Text": "Fístulas anorretais recidivadas: desafios no tratamento e perspectivas atuais",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/hpv-anal-vaporizacao-laser-co2",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/hpv-anal-vaporizacao-laser-co2",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/hpv-anal-vaporizacao-laser-co2"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "HPV anal: como funciona a vaporização com laser de CO2? | Dra. Ana Luiza M. Rocha",
+        "description": "Vaporização com laser de CO2 é uma opção precisa e minimamente invasiva para lesões anais por HPV. Entenda como funciona, vantagens e por que acompanhar.",
+        "h1Text": "HPV anal: como funciona a vaporização com laser de CO2?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/ligadura-elastica-ou-cirurgia-hemorroida",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/ligadura-elastica-ou-cirurgia-hemorroida",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/ligadura-elastica-ou-cirurgia-hemorroida"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Ligadura elástica ou cirurgia para hemorroida: qual é o melhor tratamento? | Dra. Ana Luiza M. Rocha",
+        "description": "Nem toda hemorroida precisa de cirurgia. Entenda quando a ligadura elástica resolve, quando operar e como o grau da doença define o melhor tratamento.",
+        "h1Text": "Ligadura elástica ou cirurgia para hemorroida: qual é o melhor tratamento?",
+        "articleTreatmentLinks": [
+          "/tratamentos/hemorroidas"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/descobri-hpv-anal-e-agora",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/descobri-hpv-anal-e-agora",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/descobri-hpv-anal-e-agora"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Descobri que tenho HPV anal, e agora? Próximos passos sem pânico | Dra. Ana Luiza M. Rocha",
+        "description": "Descobriu HPV anal? Respire. Entenda o que o diagnóstico significa, quando tratar, se precisa operar e por que acompanhamento e vacina ainda importam.",
+        "h1Text": "Descobri que tenho HPV anal, e agora? Próximos passos sem pânico",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/laser-ou-eletrocauterizacao-hpv-anal",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/laser-ou-eletrocauterizacao-hpv-anal",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/laser-ou-eletrocauterizacao-hpv-anal"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Laser ou eletrocauterização para HPV anal? | Dra. Ana Luiza M. Rocha",
+        "description": "Laser de CO₂ e eletrocauterização tratam verrugas por HPV anal. Compare indicações, limitações, recuperação e risco de recorrência.",
+        "h1Text": "Laser ou eletrocauterização para HPV anal?",
+        "articleTreatmentLinks": [
+          "/tratamentos/rastreio-cancer-anal"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/hemorroida-grau-3-tratamento",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/hemorroida-grau-3-tratamento",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/hemorroida-grau-3-tratamento"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Hemorroida grau 3: ligadura, cirurgia ou laser? | Dra. Ana Luiza M. Rocha",
+        "description": "Hemorroida grau 3 nem sempre exige a mesma técnica. Entenda quando ligadura, cirurgia convencional ou laser podem ser considerados.",
+        "h1Text": "Hemorroida grau 3: ligadura, cirurgia ou laser?",
+        "articleTreatmentLinks": []
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/recuperacao-cirurgia-hemorroida-quanto-tempo",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/recuperacao-cirurgia-hemorroida-quanto-tempo",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/recuperacao-cirurgia-hemorroida-quanto-tempo"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Recuperação da cirurgia de hemorroida: quanto tempo leva? | Dra. Ana Luiza M. Rocha",
+        "description": "Quanto tempo leva a recuperação da cirurgia de hemorroida? Veja o que esperar nas primeiras semanas, a primeira evacuação e a volta ao trabalho.",
+        "h1Text": "Recuperação da cirurgia de hemorroida: quanto tempo leva?",
+        "articleTreatmentLinks": [
+          "/tratamentos/hemorroidas"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/laser-hemorroida-co2-ou-diodo",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/laser-hemorroida-co2-ou-diodo",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/laser-hemorroida-co2-ou-diodo"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Laser para hemorroida: CO₂ ou diodo? | Dra. Ana Luiza M. Rocha",
+        "description": "Laser de CO₂ ou de diodo para hemorroida? Entenda a diferença entre hemorroidoplastia e hemorroidectomia a laser e como a anatomia define a técnica.",
+        "h1Text": "Laser para hemorroida: CO₂ ou diodo?",
+        "articleTreatmentLinks": [
+          "/tratamentos/cx-laser"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/laser-co2-diodo-eletrocauterio-diferenca",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/laser-co2-diodo-eletrocauterio-diferenca",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/laser-co2-diodo-eletrocauterio-diferenca"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Laser de CO₂, laser de diodo e eletrocautério: qual é a diferença? | Dra. Ana Luiza M. Rocha",
+        "description": "Qual a diferença entre laser de CO₂, laser de diodo e eletrocautério? Veja como cada tecnologia age no tecido e onde é usada na coloproctologia.",
+        "h1Text": "Laser de CO₂, laser de diodo e eletrocautério: qual é a diferença?",
+        "articleTreatmentLinks": [
+          "/tratamentos/cx-laser"
+        ]
+      },
+      {
+        "url": "https://www.analuizarocha.com.br/blog/toxina-botulinica-cirurgia-hemorroida",
+        "status": 200,
+        "finalUrl": "https://www.analuizarocha.com.br/blog/toxina-botulinica-cirurgia-hemorroida",
+        "canonical": [
+          "https://www.analuizarocha.com.br/blog/toxina-botulinica-cirurgia-hemorroida"
+        ],
+        "robots": "index, follow",
+        "xRobotsTag": null,
+        "title": "Toxina botulínica antes da cirurgia de hemorroida: quando pode ajudar? | Dra. Ana Luiza M. Rocha",
+        "description": "Botox na cirurgia de hemorroida: entenda quando a toxina botulínica pode reduzir o espasmo do esfíncter no pós-operatório e por que não é para todos.",
+        "h1Text": "Toxina botulínica antes da cirurgia de hemorroida: quando pode ajudar?",
+        "articleTreatmentLinks": [
+          "/tratamentos/hemorroidas",
+          "/tratamentos/toxina-botulinica"
+        ]
+      }
+    ],
+    "workingHomepageVariant": {
+      "Top pages": "http://analuizarocha.com.br/",
+      "Impressions": "130",
+      "status": 200,
+      "finalUrl": "https://www.analuizarocha.com.br/"
+    },
+    "brokenEquivalentUrls": [
+      {
+        "source": "/blog/coceira-anal-quando-is-normal-e-quando-procurar-coloproctologista-curitiba",
+        "destination": "/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "observedHttpStatus": 404,
+        "recentAiImpressions": 453,
+        "webWholePeriod": {
+          "Top pages": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-is-normal-e-quando-procurar-coloproctologista-curitiba",
+          "Clicks": 6,
+          "Impressions": 1263,
+          "CTR": "0.48%",
+          "Position": 1.0
+        }
+      },
+      {
+        "source": "/blog/coceira-anal-quando-is-normal-e-quando-procurar-um-coloproctologista-curitiba",
+        "destination": "/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "observedHttpStatus": 404,
+        "recentAiImpressions": 143,
+        "webWholePeriod": {
+          "Top pages": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-is-normal-e-quando-procurar-um-coloproctologista-curitiba",
+          "Clicks": 1,
+          "Impressions": 230,
+          "CTR": "0.43%",
+          "Position": 1.0
+        }
+      },
+      {
+        "source": "/blog/coceira-anal-quando-normal-quando-procurar-coloproctologista-curitiba",
+        "destination": "/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "observedHttpStatus": 404,
+        "recentAiImpressions": 142,
+        "webWholePeriod": {
+          "Top pages": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-normal-quando-procurar-coloproctologista-curitiba",
+          "Clicks": 0,
+          "Impressions": 161,
+          "CTR": "0%",
+          "Position": 1.08
+        }
+      },
+      {
+        "source": "/blog/coceira-anal-quando-normal-e-quando-procurar-coloproctologista-curitiba",
+        "destination": "/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "observedHttpStatus": 404,
+        "recentAiImpressions": 135,
+        "webWholePeriod": {
+          "Top pages": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-normal-e-quando-procurar-coloproctologista-curitiba",
+          "Clicks": 1,
+          "Impressions": 177,
+          "CTR": "0.56%",
+          "Position": 1.01
+        }
+      },
+      {
+        "source": "/blog/coceira-anal-quando-normal-e-quando-procurar-um-coloproctologista-curitiba",
+        "destination": "/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "observedHttpStatus": 404,
+        "recentAiImpressions": 106,
+        "webWholePeriod": {
+          "Top pages": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-normal-e-quando-procurar-um-coloproctologista-curitiba",
+          "Clicks": 1,
+          "Impressions": 128,
+          "CTR": "0.78%",
+          "Position": 1.02
+        }
+      },
+      {
+        "source": "/blog/coloproctologista-curitiba-prurido-anal",
+        "destination": "/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "observedHttpStatus": 404,
+        "recentAiImpressions": 86,
+        "webWholePeriod": {
+          "Top pages": "https://www.analuizarocha.com.br/blog/coloproctologista-curitiba-prurido-anal",
+          "Clicks": 0,
+          "Impressions": 86,
+          "CTR": "0%",
+          "Position": 1.0
+        }
+      },
+      {
+        "source": "/blog/cirurgia-laser-hemorroida-cuando-faz-sentido",
+        "destination": "/blog/cirurgia-laser-hemorroida-quando-faz-sentido",
+        "observedHttpStatus": 404,
+        "recentAiImpressions": 69,
+        "webWholePeriod": {
+          "Top pages": "https://www.analuizarocha.com.br/blog/cirurgia-laser-hemorroida-cuando-faz-sentido",
+          "Clicks": 1,
+          "Impressions": 70,
+          "CTR": "1.43%",
+          "Position": 1.1
+        }
+      },
+      {
+        "source": "/blog/coloproctologia/prurido-anal-coceira-no-anus/",
+        "destination": "/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "observedHttpStatus": 404,
+        "recentAiImpressions": 62,
+        "webWholePeriod": {
+          "Top pages": "https://www.analuizarocha.com.br/blog/coloproctologia/prurido-anal-coceira-no-anus/",
+          "Clicks": 0,
+          "Impressions": 64,
+          "CTR": "0%",
+          "Position": 1.0
+        }
+      },
+      {
+        "source": "/blog/coceira-anal-quando-es-normal-quando-procurar-coloproctologista-curitiba",
+        "destination": "/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+        "observedHttpStatus": 404,
+        "recentAiImpressions": 57,
+        "webWholePeriod": {
+          "Top pages": "https://www.analuizarocha.com.br/blog/coceira-anal-quando-es-normal-quando-procurar-coloproctologista-curitiba",
+          "Clicks": 0,
+          "Impressions": 57,
+          "CTR": "0%",
+          "Position": 1.0
+        }
+      }
+    ],
+    "unrelatedUnknownPath": "/__seo_audit_missing_page__ returned 404"
+  },
+  "repository": {
+    "branch": "diegovfeder/blog-cisto-pilonidal-laser",
+    "head": "fa2d32a",
+    "localPosts": 46,
+    "livePosts": 50,
+    "liveOnlyPostSlugs": [
+      "laser-co2-diodo-eletrocauterio-diferenca",
+      "laser-hemorroida-co2-ou-diodo",
+      "recuperacao-cirurgia-hemorroida-quanto-tempo",
+      "toxina-botulinica-cirurgia-hemorroida"
+    ],
+    "localPostsWithoutMarkdownTreatmentDetailLinks": [
+      "alimentacao-e-saude-intestinal",
+      "alimentacao-fibras-saude-intestinal",
+      "cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar",
+      "cancer-colorretal-rastreio-prevencao-diagnostico-precoce",
+      "cisto-pilonidal-precisa-cirurgia",
+      "coceira-anal-quando-procurar-coloproctologista-curitiba",
+      "coceira-anus-causas-tratamento",
+      "constipacao-intestinal-cronica-causas-tratamento",
+      "descobri-hpv-anal-e-agora",
+      "diarreia-cronica-tratamento",
+      "disbiose-sibo-tratamento",
+      "disturbios-assoalho-pelvico-funcionamento-intestino",
+      "doencas-inflamatorias-intestinais-acompanhamento",
+      "dor-ao-evacuar-causas-tratamento",
+      "fissura-anal-pode-cicatrizar-sozinha",
+      "fissura-anal-quando-cirurgia-indicada",
+      "fissura-anal-toxina-botulinica-tratamento",
+      "fistulas-anorretais-recidivadas-tratamento",
+      "hemorroida-grau-3-tratamento",
+      "hemorroida-quanto-tempo-dura-quando-procurar",
+      "hpv-anal-vaporizacao-laser-co2",
+      "intestino-preso-muitos-dias-perigoso",
+      "o-que-muda-acompanhamento-especializado-coloproctologista-curitiba",
+      "plicoma-anal-cirurgia-laser",
+      "plicoma-anal-vale-a-pena-retirar",
+      "por-que-meus-sintomas-nunca-melhoram",
+      "proctologista-e-coloproctologista-entenda-os-termos",
+      "quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba",
+      "quando-procurar-coloproctologista-curitiba",
+      "sangue-nas-fezes-quando-procurar-coloproctologista",
+      "sangue-papel-higienico-sempre-hemorroida",
+      "saude-sexual-cuidado-informacao-bem-estar",
+      "sindrome-intestino-irritavel-sintomas-diagnostico-tratamento",
+      "sinto-vergonha-procurar-coloproctologista-isso-e-normal"
+    ],
+    "verification": {
+      "focusedTestFiles": 3,
+      "focusedTestsPassed": 5,
+      "applicationCodeChanged": false,
+      "lintBuildRun": false
+    }
+  }
+}
