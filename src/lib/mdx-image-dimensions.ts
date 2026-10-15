@@ -9,6 +9,10 @@ const DEFAULT_MDX_IMAGE_DIMENSIONS: MdxImageDimensions = {
 }
 
 const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
+  '/images/posts/alimentacao-fibras-saude-intestinal/fibra-soluvel-fibra-insoluvel.webp': {
+    width: 1200,
+    height: 709,
+  },
   '/images/posts/bolinha-no-anus-causas-avaliacao/bolinha-no-anus-causas-avaliacao.webp': {
     width: 1672,
     height: 941,
@@ -28,10 +32,6 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
   '/images/posts/preparo-colonoscopia-orientacoes/preparo-colonoscopia-orientacoes.webp': {
     width: 1672,
     height: 941,
-  },
-  '/images/posts/alimentacao-fibras-saude-intestinal/fibra-soluvel-fibra-insoluvel.webp': {
-    width: 1200,
-    height: 709,
   },
   '/images/posts/cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar/cancer-canal-anal-rastreio-hpv-verruga.webp': {
     width: 1024,
