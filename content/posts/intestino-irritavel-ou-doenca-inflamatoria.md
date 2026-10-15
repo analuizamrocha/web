@@ -55,6 +55,10 @@ Nas doenças inflamatórias intestinais, como **doença de Crohn e retocolite ul
 
 E essa diferença muda completamente a investigação e o tratamento.
 
+![Comparação esquemática entre a parede intestinal sem inflamação visível e a parede com alterações inflamatórias](/images/posts/intestino-irritavel-ou-doenca-inflamatoria/intestino-irritavel-ou-doenca-inflamatoria.webp)
+
+_Ilustração esquemática para fins educativos; a aparência isolada não confirma diagnóstico nem prevê a evolução individual._
+
 ## Por que é tão fácil confundir?
 
 Porque alguns sintomas se sobrepõem.

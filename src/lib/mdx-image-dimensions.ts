@@ -93,6 +93,10 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1672,
     height: 941,
   },
+  '/images/posts/intestino-irritavel-ou-doenca-inflamatoria/intestino-irritavel-ou-doenca-inflamatoria.webp': {
+    width: 1672,
+    height: 941,
+  },
   '/images/posts/laser-fistula-anal-filac-indicacoes/filac-fistula-anal.webp': {
     width: 1672,
     height: 941,
