@@ -69,6 +69,10 @@ Quando um cisto pilonidal recidiva, minha primeira pergunta não é:
 
 A resposta é o que deveria orientar a segunda estratégia.
 
+![Esquema de cicatriz de cirurgia pilonidal, trajeto residual sob a pele e nova ramificação com abertura na superfície](/images/posts/cisto-pilonidal-recidivado-tratamento/cisto-pilonidal-recidivado-tratamento.webp)
+
+_Esquema de uma possibilidade de recidiva: trajeto residual sob a cicatriz e nova abertura na pele. Nem toda recidiva tem esse mecanismo; a imagem não indica, por si só, falha na cirurgia anterior._
+
 ## Primeiro: é realmente uma recidiva?
 
 Existem situações diferentes que podem parecer a mesma coisa.

@@ -52,6 +52,10 @@ E, principalmente nos primeiros dias, pequenas decisões fazem muita diferença:
 
 Quanto mais claro o plano, menos ansiedade existe quando surgem sintomas normais da recuperação.
 
+![Ilustração de cuidados após cirurgia proctológica, com hidratação, alimentação, medicamentos prescritos, higiene e contato com a equipe](/images/posts/pos-operatorio-cirurgia-proctologica-cuidados/pos-operatorio-cirurgia-proctologica-cuidados.webp)
+
+_Ilustração esquemática para fins educativos; a aparência isolada não confirma diagnóstico nem prevê a evolução individual._
+
 ## Os primeiros dias não exigem imobilidade
 
 Depois de uma cirurgia proctológica, geralmente não queremos que o paciente permaneça imóvel o dia inteiro.

@@ -129,6 +129,18 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1536,
     height: 1024,
   },
+  '/images/posts/cisto-pilonidal-recidivado-tratamento/cisto-pilonidal-recidivado-tratamento.webp': {
+    width: 1672,
+    height: 941,
+  },
+  '/images/posts/dor-anal-relacao-sexual/dor-anal-relacao-sexual.webp': {
+    width: 1672,
+    height: 941,
+  },
+  '/images/posts/pos-operatorio-cirurgia-proctologica-cuidados/pos-operatorio-cirurgia-proctologica-cuidados.webp': {
+    width: 1672,
+    height: 941,
+  },
   '/images/posts/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba/desconforto-intestinal-sinais-alerta.webp': {
     width: 1024,
     height: 1536,

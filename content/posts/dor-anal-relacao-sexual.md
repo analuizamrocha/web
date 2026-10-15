@@ -52,6 +52,10 @@ Pode existir uma causa física identificável.
 
 E, na maioria das vezes, existem estratégias de tratamento.
 
+![Ilustração do canal anal com fissura, alterações da musculatura e irritação local como possibilidades na avaliação da dor](/images/posts/dor-anal-relacao-sexual/dor-anal-relacao-sexual.webp)
+
+_Ilustração esquemática para fins educativos; a aparência isolada não confirma diagnóstico nem prevê a evolução individual._
+
 ## Dor recorrente não deve ser considerada normal
 
 Desconforto eventual pode acontecer.
