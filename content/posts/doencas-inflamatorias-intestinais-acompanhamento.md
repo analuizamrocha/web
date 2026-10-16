@@ -3,7 +3,7 @@ title: 'Doenças inflamatórias intestinais (DII): acompanhamento especializado'
 metaDescription: 'Saiba como funciona o acompanhamento da Doença de Crohn e Retocolite Ulcerativa com monitoramento contínuo, prevenção de complicações e tratamento individualizado.'
 slug: 'doencas-inflamatorias-intestinais-acompanhamento'
 publishDate: '2026-03-07'
-lastModified: '2026-03-07'
+lastModified: '2026-10-16'
 primaryKeyword: 'doenças inflamatórias intestinais'
 secondaryKeywords:
   - 'Doença de Crohn'
@@ -80,7 +80,7 @@ O acompanhamento especializado inclui:
 - avaliação da atividade inflamatória,
 - rastreio de complicações.
 
-O objetivo é manter a doença em remissão pelo maior tempo possível.
+O objetivo é manter a doença em remissão pelo maior tempo possível. Veja como é organizado o [acompanhamento das doenças inflamatórias intestinais](/tratamentos/doencas-inflamatorias-intestinais), com decisões ajustadas ao quadro de cada paciente.
 
 ## Tratamento individualizado
 
