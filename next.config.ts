@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
     },
   },
+  // Apply exact legacy redirects before the usual trailing-slash normalization.
+  skipTrailingSlashRedirect: true,
   // Production optimizations
   compress: true,
   poweredByHeader: false,
@@ -36,6 +38,52 @@ const nextConfig: NextConfig = {
   },
   // Permanent redirects for renamed/old URLs
   redirects: async () => [
+    // Redirect known article URL variants to their canonical pages.
+    {
+      source: '/blog/coceira-anal-quando-is-normal-e-quando-procurar-coloproctologista-curitiba',
+      destination: '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba',
+      permanent: true,
+    },
+    {
+      source: '/blog/coceira-anal-quando-is-normal-e-quando-procurar-um-coloproctologista-curitiba',
+      destination: '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba',
+      permanent: true,
+    },
+    {
+      source: '/blog/coceira-anal-quando-normal-quando-procurar-coloproctologista-curitiba',
+      destination: '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba',
+      permanent: true,
+    },
+    {
+      source: '/blog/coceira-anal-quando-normal-e-quando-procurar-coloproctologista-curitiba',
+      destination: '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba',
+      permanent: true,
+    },
+    {
+      source: '/blog/coceira-anal-quando-normal-e-quando-procurar-um-coloproctologista-curitiba',
+      destination: '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba',
+      permanent: true,
+    },
+    {
+      source: '/blog/coloproctologista-curitiba-prurido-anal',
+      destination: '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba',
+      permanent: true,
+    },
+    {
+      source: '/blog/cirurgia-laser-hemorroida-cuando-faz-sentido',
+      destination: '/blog/cirurgia-laser-hemorroida-quando-faz-sentido',
+      permanent: true,
+    },
+    {
+      source: '/blog/coloproctologia/prurido-anal-coceira-no-anus',
+      destination: '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba',
+      permanent: true,
+    },
+    {
+      source: '/blog/coceira-anal-quando-es-normal-quando-procurar-coloproctologista-curitiba',
+      destination: '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba',
+      permanent: true,
+    },
     // Old treatment slug — page lives at /tratamentos/hpv-anal
     {
       source: '/tratamentos/tratamento-hpv-anal',
@@ -46,6 +94,12 @@ const nextConfig: NextConfig = {
     {
       source: '/blog/cisto-pilonidal-cirurgia-laser',
       destination: '/blog/cisto-pilonidal-cirurgia-laser-quando-operar',
+      permanent: true,
+    },
+    // Preserve Next.js default slash removal after exact legacy mappings.
+    {
+      source: '/:path+/',
+      destination: '/:path+',
       permanent: true,
     },
   ],

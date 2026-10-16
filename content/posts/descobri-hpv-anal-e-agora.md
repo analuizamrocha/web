@@ -3,7 +3,7 @@ title: "Descobri que tenho HPV anal, e agora? Próximos passos sem pânico"
 metaDescription: "Descobriu HPV anal? Respire. Entenda o que o diagnóstico significa, quando tratar, se precisa operar e por que acompanhamento e vacina ainda importam."
 slug: "descobri-hpv-anal-e-agora"
 publishDate: "2026-07-02"
-lastModified: "2026-07-02"
+lastModified: '2026-10-16'
 primaryKeyword: "descobri que tenho HPV anal"
 secondaryKeywords:
   - "HPV anal e agora"
@@ -139,6 +139,8 @@ Não. O tratamento depende do **número, tamanho e localização** das lesões.
 Em muitos casos, sim. A indicação deve ser avaliada **individualmente**.
 
 ## Conclusão
+
+As [opções de avaliação e tratamento das lesões de HPV anal](/tratamentos/hpv-anal) são discutidas conforme o tipo de lesão e o perfil de cada paciente.
 
 Receber o diagnóstico de HPV pode gerar medo, mas **informação de qualidade** ajuda a transformar insegurança em cuidado. Na maioria das vezes, existe tratamento, acompanhamento e formas eficazes de reduzir o risco de complicações.
 

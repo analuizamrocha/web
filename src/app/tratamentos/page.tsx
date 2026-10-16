@@ -49,7 +49,7 @@ const treatments = [
   {
     title: 'Tratamento de Hemorroidas',
     description:
-      'Ligadura elástica, escleroterapia e outros procedimentos para alívio definitivo das hemorroidas.',
+      'Ligadura elástica, escleroterapia e outros procedimentos para alívio dos sintomas das hemorroidas.',
     slug: 'hemorroidas',
     category: 'Clínico/Cirúrgico',
   },
@@ -81,7 +81,7 @@ const treatments = [
   },
   {
     title: 'Cirurgia de Cisto Pilonidal',
-    description: 'Remoção cirúrgica de cistos pilonidais com técnicas modernas e baixa recidiva.',
+    description: 'Remoção cirúrgica de cistos pilonidais com técnicas modernas e indicação individualizada.',
     slug: 'cx-cisto-pilonidal',
     category: 'Cirúrgico',
   },
@@ -187,7 +187,7 @@ export default function ServicosPage() {
               <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
                 Agende sua consulta e receba o cuidado especializado que você merece.
                 <br />
-                Atendimento humanizado com a mais alta qualidade técnica.
+                Atendimento humanizado com qualidade técnica.
               </p>
               <p className="text-base lg:text-lg text-secondary/80 leading-relaxed mb-6">
                 Se quiser entender em qual clínica a consulta ou o exame faz mais sentido, veja

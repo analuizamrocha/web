@@ -10,7 +10,7 @@ const STATIC_ROUTE_LAST_MODIFIED: Record<string, string> = {
   '/locais-de-atendimento/specta-endoscopia-digestiva': '2026-05-14',
   '/sobre': '2026-03-20',
   '/contato': '2026-10-16',
-  '/tratamentos': '2026-07-18',
+  '/tratamentos': '2026-10-16',
   '/tratamentos/hemorroidas': '2026-07-18',
   '/tratamentos/cx-cisto-pilonidal': '2026-07-18',
   '/tratamentos/cx-fistulas-anorretais': '2026-07-18',

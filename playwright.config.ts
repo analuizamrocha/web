@@ -36,11 +36,8 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      // Use the system-installed Google Chrome instead of Playwright's bundled
-      // Chromium. Avoids the playwright.download.prss.microsoft.com 400 outage.
-      // If a contributor doesn't have Chrome locally, remove `channel: 'chrome'`
-      // and run `bunx playwright install chromium`.
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+      // CI uses the Chromium installed by the workflow; local runs use Chrome.
+      use: { ...devices['Desktop Chrome'], ...(process.env.CI ? {} : { channel: 'chrome' }) },
     },
   ],
 })
