@@ -52,7 +52,7 @@ Esses recursos não entram no sitemap. A política permanece no llms.txt para co
 
 Os testes isolados do AnalyticsProvider verificam que nenhum provedor é inicializado antes do consentimento ou após uma escolha inicial de recusa; verificam também o carregamento após o consentimento e o trabalho adiado, a seleção GA/GTM e os sinais Vercel. Os SDKs são substituídos nos testes e nenhum evento real é enviado. Os handlers Markdown não renderizam o layout React nem inicializam analytics de navegador.
 
-Essa verificação de inicialização não comprova configurações externas de GA/GTM, o conteúdo de containers, nem interrompe SDKs que já foram carregados antes de uma revogação; uma revisão dessas condições exige evidência específica. Nenhum novo provedor ou evento é introduzido nesta PR. O prompt reutilizável para revisão dos outros projetos está em `docs/agent-readiness-review-prompt.md`.
+Essa verificação de inicialização não comprova configurações externas de GA/GTM, o conteúdo de containers, nem interrompe SDKs que já foram carregados antes de uma revogação; uma revisão dessas condições exige evidência específica. Nenhum novo provedor ou evento é introduzido nesta PR.
 
 ## Compatibilidade do Vary no Next.js
 
