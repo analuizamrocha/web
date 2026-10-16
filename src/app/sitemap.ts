@@ -9,6 +9,7 @@ const STATIC_ROUTE_LAST_MODIFIED: Record<string, string> = {
   '/locais-de-atendimento/clinica-nassif': '2026-05-14',
   '/locais-de-atendimento/specta-endoscopia-digestiva': '2026-05-14',
   '/sobre': '2026-03-20',
+  '/contato': '2026-10-16',
   '/tratamentos': '2026-07-18',
   '/tratamentos/hemorroidas': '2026-07-18',
   '/tratamentos/cx-cisto-pilonidal': '2026-07-18',
@@ -97,6 +98,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: STATIC_ROUTE_LAST_MODIFIED['/sobre'],
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    },
+    // Contact page - Published scheduling and business details
+    {
+      url: `${WEBSITE_URL}/contato`,
+      lastModified: STATIC_ROUTE_LAST_MODIFIED['/contato'],
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     },
     // Blog index - High priority for content hub
     {
