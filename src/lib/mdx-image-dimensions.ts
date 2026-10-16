@@ -133,7 +133,15 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1672,
     height: 941,
   },
+  '/images/posts/dissinergia-evacuatoria-toxina-botulinica/dissinergia-evacuatoria-toxina-botulinica.webp': {
+    width: 1672,
+    height: 941,
+  },
   '/images/posts/dor-anal-relacao-sexual/dor-anal-relacao-sexual.webp': {
+    width: 1672,
+    height: 941,
+  },
+  '/images/posts/fotobiomodulacao-pos-operatorio-proctologia/fotobiomodulacao-pos-operatorio-proctologia.webp': {
     width: 1672,
     height: 941,
   },

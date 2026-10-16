@@ -56,6 +56,10 @@ Ou seja:
 
 **um laser realiza parte da cirurgia. O outro pode fazer parte do pós-operatório.**
 
+![Comparação esquemática entre laser cirúrgico com corte de tecido à esquerda e aplicação de luz de baixa potência sem corte à direita](/images/posts/fotobiomodulacao-pos-operatorio-proctologia/fotobiomodulacao-pos-operatorio-proctologia.webp)
+
+_Comparação conceitual entre aplicações de luz com objetivos diferentes; não é uma sequência de antes e depois nem demonstra benefício clínico da fotobiomodulação._
+
 ## O que é fotobiomodulação?
 
 Fotobiomodulação é a aplicação de luz de baixa potência sobre um tecido com o objetivo de modular determinadas respostas celulares.

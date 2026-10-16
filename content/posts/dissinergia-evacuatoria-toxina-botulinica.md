@@ -52,6 +52,10 @@ E quando esse é o mecanismo, aumentar continuamente laxantes pode aumentar a vo
 
 **a saída continua fechada.**
 
+![Sequência esquemática da região anorretal mostrando resistência muscular à saída das fezes e relaxamento da musculatura](/images/posts/dissinergia-evacuatoria-toxina-botulinica/dissinergia-evacuatoria-toxina-botulinica.webp)
+
+_Esquema conceitual de resistência e relaxamento muscular. A imagem não confirma dissinergia nem representa resultado garantido da aplicação de toxina botulínica._
+
 ## O que é dissinergia evacuatória?
 
 Para evacuar normalmente, várias estruturas precisam trabalhar de maneira coordenada.
