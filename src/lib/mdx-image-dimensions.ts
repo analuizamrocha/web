@@ -109,6 +109,18 @@ const MDX_IMAGE_DIMENSIONS: Record<string, MdxImageDimensions> = {
     width: 1084,
     height: 778,
   },
+  '/images/posts/hemorroida-ou-prolapso-retal/hemorroida-ou-prolapso-retal.webp': {
+    width: 1672,
+    height: 941,
+  },
+  '/images/posts/intestino-irritavel-ou-doenca-inflamatoria/intestino-irritavel-ou-doenca-inflamatoria.webp': {
+    width: 1672,
+    height: 941,
+  },
+  '/images/posts/laser-fistula-anal-filac-indicacoes/filac-fistula-anal.webp': {
+    width: 1672,
+    height: 941,
+  },
   '/images/posts/laser-co2-diodo-eletrocauterio-diferenca/eletrocauterio-laser-diodo-laser-co2-infografico.webp': {
     width: 1200,
     height: 675,
