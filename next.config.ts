@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
   },
   // Permanent redirects for renamed/old URLs
   redirects: async () => [
-    // Exact equivalent URLs observed in the October Search Console audit (PR #64).
+    // Redirect known article URL variants to their canonical pages.
     {
       source: '/blog/coceira-anal-quando-is-normal-e-quando-procurar-coloproctologista-curitiba',
       destination: '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba',

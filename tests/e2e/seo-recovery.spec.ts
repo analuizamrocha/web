@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 const website = 'https://www.analuizarocha.com.br'
 const itchArticle = '/blog/coceira-anal-quando-procurar-coloproctologista-curitiba'
-// Independent fixture: the nine observed URL equivalents in PR #64's evidence.
+// Known legacy article URLs and their canonical destinations.
 const equivalents = [
   ['/blog/coceira-anal-quando-is-normal-e-quando-procurar-coloproctologista-curitiba', itchArticle],
   ['/blog/coceira-anal-quando-is-normal-e-quando-procurar-um-coloproctologista-curitiba', itchArticle],

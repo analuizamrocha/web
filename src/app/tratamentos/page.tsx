@@ -42,21 +42,21 @@ const treatments = [
   {
     title: 'Cirurgias a Laser',
     description:
-      'Aplicações do laser em proctologia, com indicações e limitações discutidas na avaliação individual.',
+      'Procedimentos minimamente invasivos com tecnologia laser para tratamento de hemorroidas e fissuras anais.',
     slug: 'cx-laser',
     category: 'Cirúrgico',
   },
   {
     title: 'Tratamento de Hemorroidas',
     description:
-      'Opções de tratamento para hemorroidas, incluindo ligadura elástica e escleroterapia, conforme avaliação individual.',
+      'Ligadura elástica, escleroterapia e outros procedimentos para alívio dos sintomas das hemorroidas.',
     slug: 'hemorroidas',
     category: 'Clínico/Cirúrgico',
   },
   {
     title: 'Cirurgias para Fístulas Anorretais',
     description:
-      'Opções cirúrgicas para fístulas anorretais, com planejamento voltado à preservação da continência.',
+      'Tratamento cirúrgico especializado para fístulas complexas com preservação da continência.',
     slug: 'cx-fistulas-anorretais',
     category: 'Cirúrgico',
   },
@@ -81,7 +81,7 @@ const treatments = [
   },
   {
     title: 'Cirurgia de Cisto Pilonidal',
-    description: 'Opções convencionais e a laser para cisto pilonidal, conforme avaliação individual.',
+    description: 'Remoção cirúrgica de cistos pilonidais com técnicas modernas e indicação individualizada.',
     slug: 'cx-cisto-pilonidal',
     category: 'Cirúrgico',
   },
@@ -141,12 +141,12 @@ export default function ServicosPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
               <p>
-                Conheça as opções de cuidado para condições do intestino, reto e ânus.
-                A avaliação coloproctológica orienta quais abordagens podem ser consideradas.
+                Oferecemos tratamentos especializados com tecnologia avançada e cuidado humanizado
+                para todas as condições coloproctológicas.
               </p>
               <p>
-                A escolha considera os sintomas, o histórico e as necessidades de cada paciente,
-                com discussão dos benefícios, limitações e riscos de cada alternativa.
+                Nossa abordagem é sempre individualizada, buscando o melhor resultado com o menor
+                desconforto possível.
               </p>
             </div>
           </div>
@@ -185,9 +185,9 @@ export default function ServicosPage() {
                 Precisa de um diagnóstico especializado?
               </h2>
               <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
-                Agende uma consulta para avaliar seus sintomas e conversar sobre as opções de cuidado.
+                Agende sua consulta e receba o cuidado especializado que você merece.
                 <br />
-                As orientações e os próximos passos são definidos conforme o seu caso.
+                Atendimento humanizado com qualidade técnica.
               </p>
               <p className="text-base lg:text-lg text-secondary/80 leading-relaxed mb-6">
                 Se quiser entender em qual clínica a consulta ou o exame faz mais sentido, veja

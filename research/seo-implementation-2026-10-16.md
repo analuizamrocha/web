@@ -17,41 +17,45 @@ The production commit remains unconfirmed: the domain was unavailable through th
 - Nine exact equivalent URL redirects, retaining the two pre-existing legacy redirects. Each audited source resolves directly to its canonical article with HTTP 308. The nested itch URL supports its observed trailing slash and its normalized form.
 - Next's normal trailing-slash removal now runs after the explicit mappings, preventing an intermediate redirect to another broken URL. Unrelated missing pages still return 404. Tests cover query preservation and representative slash normalization.
 - Eleven contextual links: grade-3 hemorrhoids and duration → hemorrhoid treatment; toxin-specific fissure → botulinum toxin; recurrent fistulas → fistula surgery; DII and SII → their respective care pages; HPV → HPV treatment; screening → anal cancer screening; plicoma → laser indications/limitations; SIBO and the substantial itch guide → Clínica Nassif consultation information.
-- Qualified the laser and pilonidal page descriptions, introductory text, outcome claims and relevant FAQs; aligned the laser, pilonidal, hemorrhoid and fistula treatment-index cards and MedicalProcedure descriptions. Both FAQ sections now render the same data used for their structured markup.
-- Final #58 scope check: replaced the treatment hub's remaining definitive-relief claim, universal service wording and technical-superiority CTA with individualized evaluation language. The fistula card now describes preservation of continence as a planning goal. These changes use the same descriptions for visible cards, schema and negotiated Markdown.
+- Narrowed service-copy edits to the specific statements listed below. The original introductions, benefits, comparisons, procedure explanations, page structure, FAQ rendering and most answers are retained. This batch does not claim that broad changes of voice improve SEO.
 - Updated modification dates for the edited posts and three treatment routes. The SIBO date records an editorial consultation-link change, not clinical approval or a medical-evidence refresh.
 
 All article titles, descriptions, slugs, hook lines, first images, existing FAQ frontmatter, signatures and educational disclaimers are preserved. Assets and image dimensions are unchanged. No new article, homepage title experiment, consolidation, or tracking integration is included.
 
-## Exact metadata before and after
+## Conservative copy scope and rationale
 
-`/tratamentos/cx-laser`
+The first draft rewrote entire benefit sections and several FAQ answers without ranking, usability or clinician-review evidence for those rewrites. Those edits have been removed. Copy changes are now small corrections to specific wording; they are not presented as demonstrated traffic gains.
+
+| Page | Retained change | Reason |
+| --- | --- | --- |
+| `/tratamentos` | “alívio definitivo” → “alívio dos sintomas” | Avoid promising a permanent result while keeping the original service description. |
+| `/tratamentos` | “baixa recidiva” → “indicação individualizada” | Remove an unquantified outcome claim from the pilonidal card. |
+| `/tratamentos` | “a mais alta qualidade técnica” → “qualidade técnica” | Remove the superlative while keeping the original CTA and voice. |
+| `/tratamentos/cx-laser` | Only the second sentence of the description changes. | Keep the treatment topics and Curitiba; describe indications and recovery without promising fast recovery or less pain to every reader. The visible body and FAQ answers are unchanged. |
+| `/tratamentos/cx-cisto-pilonidal` | Revise the universal laser-indication paragraph and its matching FAQ answer. | Replace “todo cisto” / “praticamente todos os casos” with individual case selection; keep recurrence information. |
+| `/tratamentos/cx-cisto-pilonidal` | Remove definitive-result wording from metadata/schema and the CTA's second sentence. | Keep the original procedure terms and consultation invitation without an outcome guarantee. |
+
+`/tratamentos/cx-laser` description:
 
 Before: “Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.”
 
-After: “Conheça as aplicações do laser em coloproctologia, suas indicações e limitações. A escolha da técnica depende de avaliação individual em Curitiba.”
+After: “Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Entenda as indicações, benefícios e cuidados na recuperação.”
 
-`/tratamentos/cx-cisto-pilonidal`
+`/tratamentos/cx-cisto-pilonidal` description:
 
 Before: “Cirurgia para cisto pilonidal: técnica convencional e laser. Tratamento definitivo com recuperação rápida e menor dor pós-operatória em Curitiba.”
 
-After: “Entenda as opções de cirurgia para cisto pilonidal, incluindo técnicas convencionais e laser, e os cuidados discutidos na avaliação em Curitiba.”
+After: “Cirurgia para cisto pilonidal: técnica convencional e laser. Conheça as indicações e os cuidados na recuperação em Curitiba.”
 
-Treatment hub, hemorrhoid card:
-
-Before: “Ligadura elástica, escleroterapia e outros procedimentos para alívio definitivo das hemorroidas.”
-
-After: “Opções de tratamento para hemorroidas, incluindo ligadura elástica e escleroterapia, conforme avaliação individual.”
-
-Pilonidal FAQ, “O laser é indicado em todos os casos?”
+Pilonidal FAQ, “O laser é indicado em todos os casos?”:
 
 Before: “Sim. Hoje se sabe que todo cisto pilonidal pode responder ao tratamento a laser, mas é importante entender que, assim como na cirurgia convencional, ainda existe risco de recidiva.”
 
-After: “Não há uma técnica indicada para todos. A escolha depende da extensão da doença, de inflamação ativa e de tratamentos anteriores; outras abordagens podem ser mais adequadas.”
+After: “Não. A indicação depende da avaliação individual de cada paciente. Assim como na cirurgia convencional, ainda existe risco de recidiva.”
 
-All remaining exact visible-copy changes are available in the implementation PR diff. The pages retain procedure descriptions and recurrence information; benefit, pain and recovery claims now depend on procedure and patient rather than implying a universal outcome. The repository CFM reference was applied to the edits; this does not constitute clinician or legal certification.
+The shared FAQ-rendering refactor and the added on-page guideline citation were removed from this PR to keep its scope narrow. Existing clinical comparisons are preserved for clinician review; restoring them does not assert a fresh clinical or legal certification. The FAQ regression still checks that visible answers match their structured data.
 
-Sources: [ESCP pilonidal guideline (2024)](https://pubmed.ncbi.nlm.nih.gov/39397672/), with its [published guideline](https://doi.org/10.1093/bjs/znae237) linked on the service page. Permanent 308 redirects are recognized by [Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects).
+References: [ESCP pilonidal guideline (2024)](https://pubmed.ncbi.nlm.nih.gov/39397672/), [Google's descriptive-snippet guidance](https://developers.google.com/search/docs/appearance/snippet), and [permanent redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects). These support the specific decisions; they do not establish a ranking benefit for this wording.
 
 ## Remaining clinical review: SIBO/disbiose
 
@@ -85,7 +89,7 @@ PLAYWRIGHT_BASE_URL=http://localhost:3100 PLAYWRIGHT_PRODUCTION=true bun run e2e
 
 [PR #58](https://github.com/analuizamrocha/web/pull/58) is also documentation only: a July second-pass agent prompt, based on PR #55 and the historical SeuSEO portfolio. It proposes a broad independent audit, then at most five selected improvements. PR #64 adds the October Search Console evidence and exact URL/content findings that drive this batch.
 
-The shared priorities are protecting successful URLs, preserving commercial page ownership, useful editorial links, qualified medical copy, consistent visible FAQs/schema, and mobile verification. This batch covers the confirmed link/copy/FAQ opportunities and responsive checks. Main already has a main landmark, skip link and keyboard/menu regression coverage; their presence is not a fresh complete accessibility audit.
+The shared priorities are protecting successful URLs, preserving commercial page ownership, useful editorial links, qualified medical copy, consistent visible FAQs/schema, and mobile verification. This batch covers the confirmed redirect/link opportunities, narrowly scoped wording corrections and responsive checks. Main already has a main landmark, skip link and keyboard/menu regression coverage; their presence is not a fresh complete accessibility audit.
 
 Keep the additional #58 work as an evidence-driven backlog: a focused accessibility audit, measured field LCP/INP/CLS, image-weight/index-rendering investigation, and a wider entity/schema/NAP review. Query ownership, overlap decisions and metadata experiments still require current page/query evidence. Do not label these unmeasured areas as defects.
 
