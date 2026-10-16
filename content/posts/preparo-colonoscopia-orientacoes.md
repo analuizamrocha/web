@@ -2,8 +2,8 @@
 title: "Preparo da colonoscopia: alimentação, medicamentos e dúvidas frequentes"
 metaDescription: "Veja como seguir o preparo da colonoscopia, informar medicamentos e reconhecer dificuldades que precisam ser discutidas com a equipe do exame."
 slug: "preparo-colonoscopia-orientacoes"
-publishDate: "2026-10-15"
-lastModified: "2026-10-15"
+publishDate: "2026-10-16"
+lastModified: "2026-10-16"
 primaryKeyword: "preparo da colonoscopia"
 secondaryKeywords:
   - "alimentação antes da colonoscopia"
@@ -219,9 +219,7 @@ Muitas vezes, o paciente pensa:
 
 Náusea pode acontecer.
 
-Se isso ocorrer, uma estratégia frequentemente utilizada é interromper por um período curto e retomar mais lentamente.
-
-Mas, se você não consegue completar o preparo, entre em contato com a equipe.
+Se ocorrer vômito, entre em contato com a equipe para receber orientação sobre pausa e retomada do preparo. Não force a ingestão se os vômitos persistirem ou se não conseguir manter líquidos.
 
 Não chegue ao exame sem avisar.
 
@@ -321,7 +319,7 @@ Um bom preparo aumenta a chance de realizarmos um exame completo e de qualidade 
 ## Fontes médicas
 
 - [AGA: recomendações sobre preparo intestinal (2025)](https://gastro.org/clinical-guidance/u-s-multi-society-guidance-on-optimal-bowel-prep-for-quality-colonoscopy-outcomes/)
-- [AGA: decisão individualizada sobre GLP-1 antes de endoscopia](https://gastro.org/press-releases/continue-glp1-drugs-before-endoscopy/)
+- [AGA: orientação multissocietária sobre GLP-1 antes de procedimentos](https://gastro.org/press-releases/most-patients-can-continue-glp-1-anti-obesity-drugs-before-surgery-2/)
 
 ## Avaliação individualizada
 

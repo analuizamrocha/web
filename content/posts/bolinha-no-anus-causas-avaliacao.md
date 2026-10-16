@@ -2,8 +2,8 @@
 title: "Bolinha no ânus: o que pode ser e quando procurar avaliação?"
 metaDescription: "Uma bolinha no ânus pode ter diferentes causas. Veja como o início, a dor e os sinais de inflamação orientam a necessidade de avaliação médica."
 slug: "bolinha-no-anus-causas-avaliacao"
-publishDate: "2026-10-15"
-lastModified: "2026-10-15"
+publishDate: "2026-10-16"
+lastModified: "2026-10-16"
 primaryKeyword: "bolinha no ânus"
 secondaryKeywords:
   - "caroço no ânus"
@@ -133,9 +133,9 @@ Uma região:
 
 principalmente quando acompanhada de febre ou mal-estar, faz pensar em **abscesso**.
 
-Nesse cenário, não considero ideal esperar uma semana para ver se passa.
+Dor anal que piora progressivamente, especialmente com febre ou mal-estar, precisa de avaliação no mesmo dia. Um abscesso também pode existir sem febre ou vermelhidão visível.
 
-Existe possibilidade de uma coleção infecciosa que precisa ser avaliada.
+Não tente furar ou espremer a região; uma possível coleção infecciosa precisa de avaliação médica.
 
 ## E se forem várias bolinhas pequenas?
 

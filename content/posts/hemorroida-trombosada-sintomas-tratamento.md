@@ -2,8 +2,8 @@
 title: "Hemorroida trombosada: sintomas e como o tempo influencia o tratamento"
 metaDescription: "Caroço doloroso e arroxeado pode ser trombose hemorroidária. Entenda a avaliação, as opções de tratamento e os sinais que exigem atendimento."
 slug: "hemorroida-trombosada-sintomas-tratamento"
-publishDate: "2026-10-15"
-lastModified: "2026-10-15"
+publishDate: "2026-10-16"
+lastModified: "2026-10-16"
 primaryKeyword: "hemorroida trombosada"
 secondaryKeywords:
   - "trombose hemorroidária externa"
@@ -101,7 +101,7 @@ No abscesso, a dor tende a piorar progressivamente e podem existir:
 - febre;
 - mal-estar.
 
-Essa diferença é importante porque o tratamento muda completamente.
+Essa diferença é importante porque o tratamento muda completamente. Dor que piora progressivamente, febre, secreção ou mal-estar justificam avaliação no mesmo dia. A ausência de febre não exclui abscesso.
 
 ## Por que o tempo muda o tratamento?
 
@@ -327,6 +327,7 @@ Depois avaliamos em que fase da evolução você está.
 ## Fontes médicas
 
 - [ASCRS: informações sobre hemorroidas](https://www.fascrs.org/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)
+- [ASCRS: diretriz sobre abscessos e fístulas anais (2022)](https://www.ascrsu.com/ascrs/view/ASCRS-Evidence-Based-Guidelines-and-Expert-Consensus/3982014/0/Management_of_Anorectal_Abscess__Fistula_in_Ano__and_Rectovaginal_Fistula__2022_)
 
 ## Avaliação individualizada
 

@@ -2,8 +2,8 @@
 title: "Hemorroida na gravidez e no pós-parto: quais cuidados são indicados?"
 metaDescription: "Entenda os cuidados com hemorroidas na gravidez e no pós-parto, o papel da constipação e por que medicamentos precisam de orientação individual."
 slug: "hemorroida-gravidez-pos-parto"
-publishDate: "2026-10-15"
-lastModified: "2026-10-15"
+publishDate: "2026-10-16"
+lastModified: "2026-10-16"
 primaryKeyword: "hemorroida na gravidez"
 secondaryKeywords:
   - "hemorroida no pós-parto"

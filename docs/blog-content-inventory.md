@@ -63,15 +63,15 @@ Snapshot: `origin/main` at `321f99a`, reviewed on 2026-10-14. Use this with `doc
 
 ## Requested Notion drafts
 
-All 16 TODO drafts are accounted for: 13 new URLs and 3 updates to existing URLs. No draft is silently skipped. Detailed overlap decisions and remaining image work are recorded in the release document for each date.
+All 16 TODO drafts are accounted for: 13 new URLs and 3 updates to existing URLs. No draft is silently skipped. Detailed overlap decisions and image validation are recorded in the release document for each date.
 
 | Intended merge | Notion source | Destination | Action |
 | --- | --- | --- | --- |
-| 2026-10-15 | [Draft](https://www.notion.so/3f68f9d0a797801da6ebea0b08721016) | `polipo-retirado-colonoscopia-e-agora` | new |
-| 2026-10-15 | [Draft](https://www.notion.so/3f68f9d0a79780dd8e86f05e13f0dc17) | `hemorroida-trombosada-sintomas-tratamento` | new |
-| 2026-10-15 | [Draft](https://www.notion.so/3f68f9d0a7978054a819d5cfa664ea72) | `preparo-colonoscopia-orientacoes` | new |
-| 2026-10-15 | [Draft](https://www.notion.so/3f78f9d0a797800dade2de74c00fda0f) | `hemorroida-gravidez-pos-parto` | new |
-| 2026-10-15 | [Draft](https://www.notion.so/3f78f9d0a79780629658d9a0a9e15250) | `bolinha-no-anus-causas-avaliacao` | new |
+| 2026-10-16 | [Draft](https://www.notion.so/3f68f9d0a797801da6ebea0b08721016) | `polipo-retirado-colonoscopia-e-agora` | new |
+| 2026-10-16 | [Draft](https://www.notion.so/3f68f9d0a79780dd8e86f05e13f0dc17) | `hemorroida-trombosada-sintomas-tratamento` | new |
+| 2026-10-16 | [Draft](https://www.notion.so/3f68f9d0a7978054a819d5cfa664ea72) | `preparo-colonoscopia-orientacoes` | new |
+| 2026-10-16 | [Draft](https://www.notion.so/3f78f9d0a797800dade2de74c00fda0f) | `hemorroida-gravidez-pos-parto` | new |
+| 2026-10-16 | [Draft](https://www.notion.so/3f78f9d0a79780629658d9a0a9e15250) | `bolinha-no-anus-causas-avaliacao` | new |
 | 2026-10-22 | [Draft](https://www.notion.so/3f68f9d0a79780a797a3dc81f66e42be) | `laser-fistula-anal-filac-indicacoes` | new |
 | 2026-10-22 | [Draft](https://www.notion.so/3f78f9d0a79780949cf2f067a3913da1) | `hemorroida-ou-prolapso-retal` | new |
 | 2026-10-22 | [Draft](https://www.notion.so/3f78f9d0a79780b49facf54bc6298da8) | `intestino-irritavel-ou-doenca-inflamatoria` | new |
@@ -86,7 +86,7 @@ All 16 TODO drafts are accounted for: 13 new URLs and 3 updates to existing URLs
 
 ## Publication workflow
 
-Prepare independent draft PRs for October 15, 22, and 29, 2026. Leave them unmerged until their weekly release, with no automatic merge or deployment. Merge timing controls publication because `getAllPosts()` does not filter future `publishDate` values. Update publication/modification dates if the actual release changes. Do not merge a later batch early.
+Prepare independent draft PRs for October 16, 22, and 29, 2026. The first batch was originally planned for October 15 and updated to October 16 ahead of the intended merge. Leave them unmerged until their weekly release, with no automatic merge or deployment. Merge timing controls publication because `getAllPosts()` does not filter future `publishDate` values. Update publication/modification dates if the actual release changes. Do not merge a later batch early.
 
 Weekly spacing is an editorial review and operational choice; it is not a promised Google ranking benefit. Google prioritizes useful content and does not advise adding content merely to appear fresh: [people-first content guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content).
 

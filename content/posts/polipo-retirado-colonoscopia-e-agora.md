@@ -2,8 +2,8 @@
 title: "Tiraram um pólipo na colonoscopia: e agora?"
 metaDescription: "Entenda o laudo do pólipo retirado na colonoscopia, o significado de adenoma e displasia e como é definido o próximo exame."
 slug: "polipo-retirado-colonoscopia-e-agora"
-publishDate: "2026-10-15"
-lastModified: "2026-10-15"
+publishDate: "2026-10-16"
+lastModified: "2026-10-16"
 primaryKeyword: "pólipo retirado na colonoscopia"
 secondaryKeywords:
   - "adenoma tubular"
