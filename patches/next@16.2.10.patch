@@ -1,0 +1,38 @@
+diff --git a/dist/build/templates/app-page.js b/dist/build/templates/app-page.js
+index e0e16e8cdcb98beb66af51c924921b6d2e2fa904..ad09c5f2a24898b2ea0f15baa6e42020732d556f 100644
+--- a/dist/build/templates/app-page.js
++++ b/dist/build/templates/app-page.js
+@@ -443,7 +443,13 @@ async function handler(req, res, ctx) {
+     };
+     try {
+         const varyHeader = routeModule.getVaryHeader(resolvedPathname, interceptionRoutePatterns);
+-        res.setHeader('Vary', varyHeader);
++        // Preserve content-negotiation headers added by Proxy/config.
++        const existingVary = res.getHeader('Vary');
++        const varyValues = [existingVary, varyHeader].flat().filter(Boolean)
++            .flatMap((value) => String(value).split(','))
++            .map((value) => value.trim()).filter(Boolean);
++        res.setHeader('Vary', [...new Map(varyValues.map((value) =>
++            [value.toLowerCase(), value])).values()].join(', '));
+         let parentSpan;
+         const invokeRouteModule = async (span, context)=>{
+             const nextReq = new _node.NodeNextRequest(req);
+diff --git a/dist/esm/build/templates/app-page.js b/dist/esm/build/templates/app-page.js
+index 0cec08429603871865933de0a5ae4dd8f0d9a0d3..5727aacdf17dfd5ec236667a9f7eeeac55d159a4 100644
+--- a/dist/esm/build/templates/app-page.js
++++ b/dist/esm/build/templates/app-page.js
+@@ -434,7 +434,13 @@ export async function handler(req, res, ctx) {
+     };
+     try {
+         const varyHeader = routeModule.getVaryHeader(resolvedPathname, interceptionRoutePatterns);
+-        res.setHeader('Vary', varyHeader);
++        // Preserve content-negotiation headers added by Proxy/config.
++        const existingVary = res.getHeader('Vary');
++        const varyValues = [existingVary, varyHeader].flat().filter(Boolean)
++            .flatMap((value) => String(value).split(','))
++            .map((value) => value.trim()).filter(Boolean);
++        res.setHeader('Vary', [...new Map(varyValues.map((value) =>
++            [value.toLowerCase(), value])).values()].join(', '));
+         let parentSpan;
+         const invokeRouteModule = async (span, context)=>{
+             const nextReq = new NodeNextRequest(req);

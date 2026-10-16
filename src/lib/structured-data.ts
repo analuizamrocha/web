@@ -2,6 +2,8 @@ import {
   DR_NAME,
   CLINICA_NASSIF,
   WPP_NUMBER_SECRETARY_FORMATTED,
+  WPP_NUMBER_SECRETARY,
+  CONTACT_EMAIL,
   WEBSITE_URL,
   URL_INSTAGRAM,
   ORG_DESCRIPTION,
@@ -42,6 +44,14 @@ export const structuredData = {
         longitude: CLINICA_NASSIF.coordinates.longitude,
       },
       telephone: WPP_NUMBER_SECRETARY_FORMATTED,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: `+${WPP_NUMBER_SECRETARY}`,
+        email: CONTACT_EMAIL,
+        contactType: 'appointment scheduling',
+        availableLanguage: ['pt-BR'],
+        url: `${WEBSITE_URL}/contato`,
+      },
       priceRange: '$$',
       openingHours: CLINICA_NASSIF.openingHours,
       areaServed: {

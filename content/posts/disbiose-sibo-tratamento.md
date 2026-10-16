@@ -3,7 +3,7 @@ title: 'Disbiose e SIBO: entenda as causas, sintomas e tratamentos'
 metaDescription: 'Disbiose intestinal e SIBO causam inchaço, gases e dor abdominal. Entenda as diferenças, diagnóstico e tratamentos eficazes com coloproctologista em Curitiba.'
 slug: 'disbiose-sibo-tratamento'
 publishDate: '2025-12-02'
-lastModified: '2026-01-24'
+lastModified: '2026-10-16'
 primaryKeyword: 'disbiose intestinal'
 secondaryKeywords:
   [
@@ -192,7 +192,7 @@ Procure avaliação especializada se você apresenta:
 - Alterações persistentes do hábito intestinal
 - Sintomas que não melhoram com mudanças simples na dieta
 
-Um **médico especialista** poderá investigar corretamente e indicar o tratamento mais adequado para o seu caso.
+Um **médico especialista** poderá investigar corretamente e indicar o tratamento mais adequado para o seu caso. Para organizar uma consulta, veja as [informações de atendimento na Clínica Nassif, em Curitiba](/locais-de-atendimento/clinica-nassif).
 
 ---
 

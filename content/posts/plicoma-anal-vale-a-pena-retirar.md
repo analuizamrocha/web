@@ -3,7 +3,7 @@ title: 'Plicoma anal precisa operar?'
 metaDescription: 'Plicoma anal nem sempre precisa de cirurgia. Saiba quando observar, quando a retirada pode ajudar e o que esperar da recuperação.'
 slug: 'plicoma-anal-vale-a-pena-retirar'
 publishDate: '2026-04-01'
-lastModified: '2026-09-11'
+lastModified: '2026-10-16'
 primaryKeyword: 'plicoma anal precisa operar'
 secondaryKeywords:
   - 'plicoma anal vale a pena retirar'
@@ -103,7 +103,7 @@ Os instrumentos podem incluir:
 
 O laser de CO₂ permite corte e coagulação precisos, enquanto técnicas convencionais também são seguras quando bem indicadas. Há pouca evidência comparativa específica para plicomas anais que permita prometer menos dor, melhor estética ou menor recorrência com um único instrumento.
 
-Mais importante do que o equipamento é retirar apenas o necessário, preservar pontes de pele e planejar a cicatrização sem estreitar a abertura anal.
+Mais importante do que o equipamento é retirar apenas o necessário, preservar pontes de pele e planejar a cicatrização sem estreitar a abertura anal. Veja as [aplicações e limitações do laser na proctologia](/tratamentos/cx-laser), que também dependem de avaliação individual.
 
 ## Como costuma ser a recuperação?
 

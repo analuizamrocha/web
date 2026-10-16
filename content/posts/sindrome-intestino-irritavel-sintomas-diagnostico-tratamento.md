@@ -3,7 +3,7 @@ title: 'Síndrome do Intestino Irritável (SII): sintomas, diagnóstico e tratam
 metaDescription: 'Entenda os sintomas da Síndrome do Intestino Irritável (SII), como é feito o diagnóstico e quais tratamentos personalizados ajudam no controle intestinal.'
 slug: 'sindrome-intestino-irritavel-sintomas-diagnostico-tratamento'
 publishDate: '2026-02-23'
-lastModified: '2026-02-23'
+lastModified: '2026-10-16'
 primaryKeyword: 'síndrome do intestino irritável'
 secondaryKeywords:
   - 'SII sintomas'
@@ -61,6 +61,8 @@ Os sintomas variam de pessoa para pessoa, mas os mais comuns incluem:
 - alteração do hábito intestinal,
 - sensação de evacuação incompleta,
 - piora dos sintomas em situações de estresse.
+
+Para conhecer a abordagem de cuidado, veja a página sobre [avaliação e tratamento da Síndrome do Intestino Irritável](/tratamentos/sindrome-intestino-irritavel).
 
 ## Tipos de Síndrome do Intestino Irritável
 

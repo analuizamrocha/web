@@ -3,7 +3,7 @@ title: 'Câncer de canal anal: rastreio, HPV e quem deve se preocupar'
 metaDescription: 'Câncer de canal anal está relacionado ao HPV e pode ser prevenido com rastreio adequado. Saiba quem deve se preocupar e quando buscar avaliação especializada.'
 slug: 'cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar'
 publishDate: '2026-04-12'
-lastModified: '2026-04-12'
+lastModified: '2026-10-16'
 primaryKeyword: 'câncer de canal anal'
 secondaryKeywords:
   - 'rastreio câncer anal'
@@ -120,7 +120,7 @@ Procure avaliação especializada se você:
 - apresenta sintomas persistentes na região anal
 - deseja orientação sobre rastreio e prevenção
 
-O acompanhamento com um coloproctologista permite diagnóstico precoce, rastreio adequado ao perfil de risco e tratamento direcionado quando necessário.
+O acompanhamento com um coloproctologista permite diagnóstico precoce, rastreio adequado ao perfil de risco e tratamento direcionado quando necessário. Conheça a [avaliação para rastreio do câncer de canal anal](/tratamentos/rastreio-cancer-anal), cuja indicação considera o histórico e o risco individual.
 
 ---
 

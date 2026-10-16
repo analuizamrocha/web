@@ -3,7 +3,7 @@ title: "Coceira anal: quando é normal e quando procurar um coloproctologista em
 metaDescription: "Coceira anal pode ter diversas causas, desde higiene inadequada até doenças orificiais. Descubra quando procurar ajuda especializada em Curitiba."
 slug: "coceira-anal-quando-procurar-coloproctologista-curitiba"
 publishDate: "2025-10-24"
-lastModified: "2026-02-14"
+lastModified: '2026-10-16'
 primaryKeyword: "coceira anal"
 secondaryKeywords:
   - "prurido anal"
@@ -126,7 +126,7 @@ Procure ajuda médica se a coceira anal:
 - Vier acompanhada de dor, sangramento ou secreção.
 - Piorar mesmo após cuidados de higiene adequados.
 
-O coloproctologista poderá investigar a causa, indicar o tratamento ideal e orientar medidas para evitar recidivas.
+O coloproctologista poderá investigar a causa, indicar o tratamento ideal e orientar medidas para evitar recidivas. Consulte as [informações sobre consultas na Clínica Nassif, em Curitiba](/locais-de-atendimento/clinica-nassif) para conhecer o local e as orientações de agendamento.
 
 ## Perguntas frequentes (FAQ)
 
