@@ -3,7 +3,7 @@ title: "Fístulas anorretais recidivadas: desafios no tratamento e perspectivas 
 metaDescription: "Fístula anal recidivada é um dos maiores desafios da coloproctologia. Entenda por que recidivam e como preservar a continência com técnicas modernas."
 slug: "fistulas-anorretais-recidivadas-tratamento"
 publishDate: "2026-06-11"
-lastModified: "2026-06-11"
+lastModified: '2026-10-16'
 primaryKeyword: "fístula anal recidivada"
 secondaryKeywords:
   - "fístulas anorretais recidivadas"
@@ -62,7 +62,7 @@ Atualmente, diferentes estratégias podem ser utilizadas dependendo do caso:
 - terapias regenerativas
 - abordagens combinadas
 
-Cada técnica possui **vantagens, limitações e indicações específicas**.
+Cada técnica possui **vantagens, limitações e indicações específicas**. Conheça as [abordagens cirúrgicas para fístulas anorretais](/tratamentos/cx-fistulas-anorretais), cuja escolha depende da avaliação do trajeto e da função anal.
 
 ## O papel do seton nas fístulas complexas
 

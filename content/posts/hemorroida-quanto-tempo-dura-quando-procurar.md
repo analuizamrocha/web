@@ -3,7 +3,7 @@ title: 'Quanto tempo a hemorroida dura e quando procurar um coloproctologista?'
 metaDescription: 'Hemorroidas podem melhorar, mas também persistir ou voltar com frequência. Entenda quanto tempo os sintomas duram e quando buscar avaliação especializada.'
 slug: 'hemorroida-quanto-tempo-dura-quando-procurar'
 publishDate: '2026-04-08'
-lastModified: '2026-04-08'
+lastModified: '2026-10-16'
 primaryKeyword: 'quanto tempo hemorroida dura'
 secondaryKeywords:
   - 'hemorroida quando procurar médico'
@@ -119,7 +119,7 @@ Quando os sintomas persistem ou se repetem, outras opções podem ser indicadas,
 - procedimentos minimamente invasivos
 - cirurgia, incluindo técnicas modernas como laser
 
-A escolha depende do grau da doença e do impacto na qualidade de vida do paciente.
+A escolha depende do grau da doença e do impacto na qualidade de vida do paciente. Conheça as [opções de tratamento de hemorroidas](/tratamentos/hemorroidas) discutidas na avaliação individual.
 
 ---
 

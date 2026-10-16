@@ -28,7 +28,7 @@ export default defineConfig({
   webServer: process.env.PLAYWRIGHT_BASE_URL
     ? undefined
     : {
-        command: 'npm run dev',
+        command: process.env.PLAYWRIGHT_PRODUCTION === 'true' ? 'bun run start' : 'bun run dev',
         url: baseURL,
         reuseExistingServer: !process.env.CI,
         timeout: 120_000,
@@ -36,11 +36,8 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      // Use the system-installed Google Chrome instead of Playwright's bundled
-      // Chromium. Avoids the playwright.download.prss.microsoft.com 400 outage.
-      // If a contributor doesn't have Chrome locally, remove `channel: 'chrome'`
-      // and run `bunx playwright install chromium`.
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+      // CI uses the Chromium installed by the workflow; local runs use Chrome.
+      use: { ...devices['Desktop Chrome'], ...(process.env.CI ? {} : { channel: 'chrome' }) },
     },
   ],
 })
