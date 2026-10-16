@@ -17,7 +17,8 @@ The production commit remains unconfirmed: the domain was unavailable through th
 - Nine exact equivalent URL redirects, retaining the two pre-existing legacy redirects. Each audited source resolves directly to its canonical article with HTTP 308. The nested itch URL supports its observed trailing slash and its normalized form.
 - Next's normal trailing-slash removal now runs after the explicit mappings, preventing an intermediate redirect to another broken URL. Unrelated missing pages still return 404. Tests cover query preservation and representative slash normalization.
 - Eleven contextual links: grade-3 hemorrhoids and duration → hemorrhoid treatment; toxin-specific fissure → botulinum toxin; recurrent fistulas → fistula surgery; DII and SII → their respective care pages; HPV → HPV treatment; screening → anal cancer screening; plicoma → laser indications/limitations; SIBO and the substantial itch guide → Clínica Nassif consultation information.
-- Qualified the laser and pilonidal page descriptions, introductory text, outcome claims and relevant FAQs; aligned the two treatment-index cards and MedicalProcedure descriptions. Both FAQ sections now render the same data used for their structured markup.
+- Qualified the laser and pilonidal page descriptions, introductory text, outcome claims and relevant FAQs; aligned the laser, pilonidal, hemorrhoid and fistula treatment-index cards and MedicalProcedure descriptions. Both FAQ sections now render the same data used for their structured markup.
+- Final #58 scope check: replaced the treatment hub's remaining definitive-relief claim, universal service wording and technical-superiority CTA with individualized evaluation language. The fistula card now describes preservation of continence as a planning goal. These changes use the same descriptions for visible cards, schema and negotiated Markdown.
 - Updated modification dates for the edited posts and three treatment routes. The SIBO date records an editorial consultation-link change, not clinical approval or a medical-evidence refresh.
 
 All article titles, descriptions, slugs, hook lines, first images, existing FAQ frontmatter, signatures and educational disclaimers are preserved. Assets and image dimensions are unchanged. No new article, homepage title experiment, consolidation, or tracking integration is included.
@@ -35,6 +36,12 @@ After: “Conheça as aplicações do laser em coloproctologia, suas indicaçõe
 Before: “Cirurgia para cisto pilonidal: técnica convencional e laser. Tratamento definitivo com recuperação rápida e menor dor pós-operatória em Curitiba.”
 
 After: “Entenda as opções de cirurgia para cisto pilonidal, incluindo técnicas convencionais e laser, e os cuidados discutidos na avaliação em Curitiba.”
+
+Treatment hub, hemorrhoid card:
+
+Before: “Ligadura elástica, escleroterapia e outros procedimentos para alívio definitivo das hemorroidas.”
+
+After: “Opções de tratamento para hemorroidas, incluindo ligadura elástica e escleroterapia, conforme avaliação individual.”
 
 Pilonidal FAQ, “O laser é indicado em todos os casos?”
 

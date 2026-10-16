@@ -49,14 +49,14 @@ const treatments = [
   {
     title: 'Tratamento de Hemorroidas',
     description:
-      'Ligadura elástica, escleroterapia e outros procedimentos para alívio definitivo das hemorroidas.',
+      'Opções de tratamento para hemorroidas, incluindo ligadura elástica e escleroterapia, conforme avaliação individual.',
     slug: 'hemorroidas',
     category: 'Clínico/Cirúrgico',
   },
   {
     title: 'Cirurgias para Fístulas Anorretais',
     description:
-      'Tratamento cirúrgico especializado para fístulas complexas com preservação da continência.',
+      'Opções cirúrgicas para fístulas anorretais, com planejamento voltado à preservação da continência.',
     slug: 'cx-fistulas-anorretais',
     category: 'Cirúrgico',
   },
@@ -141,12 +141,12 @@ export default function ServicosPage() {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl leading-relaxed text-secondary font-medium space-y-4">
               <p>
-                Oferecemos tratamentos especializados com tecnologia avançada e cuidado humanizado
-                para todas as condições coloproctológicas.
+                Conheça as opções de cuidado para condições do intestino, reto e ânus.
+                A avaliação coloproctológica orienta quais abordagens podem ser consideradas.
               </p>
               <p>
-                Nossa abordagem é sempre individualizada, buscando o melhor resultado com o menor
-                desconforto possível.
+                A escolha considera os sintomas, o histórico e as necessidades de cada paciente,
+                com discussão dos benefícios, limitações e riscos de cada alternativa.
               </p>
             </div>
           </div>
@@ -185,9 +185,9 @@ export default function ServicosPage() {
                 Precisa de um diagnóstico especializado?
               </h2>
               <p className="text-lg lg:text-xl text-secondary leading-relaxed mb-6">
-                Agende sua consulta e receba o cuidado especializado que você merece.
+                Agende uma consulta para avaliar seus sintomas e conversar sobre as opções de cuidado.
                 <br />
-                Atendimento humanizado com a mais alta qualidade técnica.
+                As orientações e os próximos passos são definidos conforme o seu caso.
               </p>
               <p className="text-base lg:text-lg text-secondary/80 leading-relaxed mb-6">
                 Se quiser entender em qual clínica a consulta ou o exame faz mais sentido, veja
