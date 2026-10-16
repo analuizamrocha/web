@@ -1,21 +1,21 @@
-// Keep the proxy lightweight: shared content is loaded only by the Markdown
-// handler, and only for the requested page. These imports are also traced by Next.
+// Reuse the existing synchronous server pages without moving their source or
+// metadata. Load only the requested page; keep these imports out of the proxy.
 export const markdownPages = {
-  blog: () => import('@/content/pages/blog'),
-  tratamentos: () => import('@/content/pages/tratamentos'),
-  sobre: () => import('@/content/pages/sobre'),
-  contato: () => import('@/content/pages/contato'),
-  'politica-privacidade': () => import('@/content/pages/politica-privacidade'),
-  'locais-de-atendimento': () => import('@/content/pages/locais-de-atendimento'),
-  'tratamentos/hemorroidas': () => import('@/content/pages/tratamentos/hemorroidas'),
-  'tratamentos/cx-laser': () => import('@/content/pages/tratamentos/cx-laser'),
-  'tratamentos/cx-fistulas-anorretais': () => import('@/content/pages/tratamentos/cx-fistulas-anorretais'),
-  'tratamentos/toxina-botulinica': () => import('@/content/pages/tratamentos/toxina-botulinica'),
-  'tratamentos/rastreio-cancer-anal': () => import('@/content/pages/tratamentos/rastreio-cancer-anal'),
-  'tratamentos/hpv-anal': () => import('@/content/pages/tratamentos/hpv-anal'),
-  'tratamentos/cx-cisto-pilonidal': () => import('@/content/pages/tratamentos/cx-cisto-pilonidal'),
-  'tratamentos/doencas-inflamatorias-intestinais': () => import('@/content/pages/tratamentos/doencas-inflamatorias-intestinais'),
-  'tratamentos/sindrome-intestino-irritavel': () => import('@/content/pages/tratamentos/sindrome-intestino-irritavel'),
+  blog: () => import('@/app/blog/page'),
+  tratamentos: () => import('@/app/tratamentos/page'),
+  sobre: () => import('@/app/sobre/page'),
+  contato: () => import('@/app/contato/page'),
+  'politica-privacidade': () => import('@/app/politica-privacidade/page'),
+  'locais-de-atendimento': () => import('@/app/locais-de-atendimento/page'),
+  'tratamentos/hemorroidas': () => import('@/app/tratamentos/hemorroidas/page'),
+  'tratamentos/cx-laser': () => import('@/app/tratamentos/cx-laser/page'),
+  'tratamentos/cx-fistulas-anorretais': () => import('@/app/tratamentos/cx-fistulas-anorretais/page'),
+  'tratamentos/toxina-botulinica': () => import('@/app/tratamentos/toxina-botulinica/page'),
+  'tratamentos/rastreio-cancer-anal': () => import('@/app/tratamentos/rastreio-cancer-anal/page'),
+  'tratamentos/hpv-anal': () => import('@/app/tratamentos/hpv-anal/page'),
+  'tratamentos/cx-cisto-pilonidal': () => import('@/app/tratamentos/cx-cisto-pilonidal/page'),
+  'tratamentos/doencas-inflamatorias-intestinais': () => import('@/app/tratamentos/doencas-inflamatorias-intestinais/page'),
+  'tratamentos/sindrome-intestino-irritavel': () => import('@/app/tratamentos/sindrome-intestino-irritavel/page'),
 }
 
 export function getMarkdownPage(path: string) {

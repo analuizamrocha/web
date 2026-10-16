@@ -33,11 +33,11 @@ O JSON-LD de MedicalOrganization conserva o PostalAddress e inclui ContactPoint 
 
 ## Fonte compartilhada das páginas
 
-Os módulos em `src/content/pages` conservam o JSX, as classes, os dados e os metadados das páginas existentes. Os arquivos `page.tsx` apenas reexportam esses módulos para o Next.js. Assim, alterações na descrição de um tratamento, em uma FAQ ou nos dados de um índice chegam aos dois formatos sem uma segunda cópia de conteúdo médico.
+Os arquivos `page.tsx` existentes conservam seu JSX, suas classes, seus dados e seus metadados nos caminhos originais em `src/app`. O handler Markdown importa somente a página solicitada e reutiliza sua árvore de conteúdo. Assim, alterações na descrição de um tratamento, em uma FAQ ou nos dados de um índice chegam aos dois formatos sem mover páginas nem manter uma segunda cópia de conteúdo médico.
 
 O renderer `src/lib/page-markdown.ts` lê a árvore semântica desse conteúdo, expande somente uma lista explícita de componentes síncronos sem hooks e transforma HAST em Markdown com bibliotecas de sintaxe. Links e imagens são resolvidos para o domínio canônico. Scripts de schema, navegação e elementos decorativos não entram no documento; o layout global e os provedores de analytics não são executados. A identificação profissional é incluída porque o rodapé HTML não é renderizado. Componentes novos sem adapter geram erro e são detectados nos testes, em vez de perder conteúdo silenciosamente.
 
-Para uma nova página, registre o caminho público em `src/lib/markdown-page-paths.ts`, adicione o loader correspondente em `src/lib/markdown-pages.ts` e mantenha o conteúdo no módulo compartilhado. Os artigos continuam usando seus arquivos Markdown originais; os detalhes dos locais continuam usando `src/lib/locations.ts`. Nenhum handler busca HTML de produção ou mantém uma cópia manual do texto dos tratamentos.
+Para uma nova página, registre o caminho público em `src/lib/markdown-page-paths.ts` e adicione o loader de seu `page.tsx` em `src/lib/markdown-pages.ts`. A reutilização é limitada às páginas síncronas de servidor atualmente suportadas; páginas com outra estrutura precisam de um adapter explícito. Os artigos continuam usando seus arquivos Markdown originais; os detalhes dos locais continuam usando `src/lib/locations.ts`. Nenhum handler busca HTML de produção ou mantém uma cópia manual do texto dos tratamentos.
 
 
 ## Canônicos, links e recursos não indexáveis
