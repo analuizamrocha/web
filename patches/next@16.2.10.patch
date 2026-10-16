@@ -1,5 +1,18 @@
+diff --git a/dist/build/generate-routes-manifest.js b/dist/build/generate-routes-manifest.js
+index baa348513c8d1099738d2bc2fee07951fc71882e..d736c4b8f5f66074ba7fe261b7b0e542c8167c8c 100644
+--- a/dist/build/generate-routes-manifest.js
++++ b/dist/build/generate-routes-manifest.js
+@@ -57,7 +57,7 @@ function generateRoutesManifest(options) {
+             header: _approuterheaders.RSC_HEADER,
+             // This vary header is used as a default. It is technically re-assigned in `base-server`,
+             // and may include an additional Vary option for `Next-URL`.
+-            varyHeader: `${_approuterheaders.RSC_HEADER}, ${_approuterheaders.NEXT_ROUTER_STATE_TREE_HEADER}, ${_approuterheaders.NEXT_ROUTER_PREFETCH_HEADER}, ${_approuterheaders.NEXT_ROUTER_SEGMENT_PREFETCH_HEADER}`,
++            varyHeader: `${_approuterheaders.RSC_HEADER}, ${_approuterheaders.NEXT_ROUTER_STATE_TREE_HEADER}, ${_approuterheaders.NEXT_ROUTER_PREFETCH_HEADER}, ${_approuterheaders.NEXT_ROUTER_SEGMENT_PREFETCH_HEADER}, Accept`,
+             prefetchHeader: _approuterheaders.NEXT_ROUTER_PREFETCH_HEADER,
+             didPostponeHeader: _approuterheaders.NEXT_DID_POSTPONE_HEADER,
+             contentTypeHeader: _approuterheaders.RSC_CONTENT_TYPE_HEADER,
 diff --git a/dist/build/templates/app-page.js b/dist/build/templates/app-page.js
-index e0e16e8cdcb98beb66af51c924921b6d2e2fa904..ad09c5f2a24898b2ea0f15baa6e42020732d556f 100644
+index e0e16e8cdcb98beb66af51c924921b6d2e2fa904..91eee12fd9b5b1e178c43a431b6b7b01e9002fab 100644
 --- a/dist/build/templates/app-page.js
 +++ b/dist/build/templates/app-page.js
 @@ -443,7 +443,13 @@ async function handler(req, res, ctx) {
@@ -9,7 +22,7 @@ index e0e16e8cdcb98beb66af51c924921b6d2e2fa904..ad09c5f2a24898b2ea0f15baa6e42020
 -        res.setHeader('Vary', varyHeader);
 +        // Preserve content-negotiation headers added by Proxy/config.
 +        const existingVary = res.getHeader('Vary');
-+        const varyValues = [existingVary, varyHeader].flat().filter(Boolean)
++        const varyValues = [existingVary, varyHeader, 'Accept'].flat().filter(Boolean)
 +            .flatMap((value) => String(value).split(','))
 +            .map((value) => value.trim()).filter(Boolean);
 +        res.setHeader('Vary', [...new Map(varyValues.map((value) =>
@@ -17,8 +30,21 @@ index e0e16e8cdcb98beb66af51c924921b6d2e2fa904..ad09c5f2a24898b2ea0f15baa6e42020
          let parentSpan;
          const invokeRouteModule = async (span, context)=>{
              const nextReq = new _node.NodeNextRequest(req);
+diff --git a/dist/esm/build/generate-routes-manifest.js b/dist/esm/build/generate-routes-manifest.js
+index ea01cfa9f27eb134a609a327f07c4d778876ffae..052374ae8e9e327b69077ea7b0efa53d41177659 100644
+--- a/dist/esm/build/generate-routes-manifest.js
++++ b/dist/esm/build/generate-routes-manifest.js
+@@ -51,7 +51,7 @@ import { sortPages } from '../shared/lib/router/utils/sortable-routes';
+             header: RSC_HEADER,
+             // This vary header is used as a default. It is technically re-assigned in `base-server`,
+             // and may include an additional Vary option for `Next-URL`.
+-            varyHeader: `${RSC_HEADER}, ${NEXT_ROUTER_STATE_TREE_HEADER}, ${NEXT_ROUTER_PREFETCH_HEADER}, ${NEXT_ROUTER_SEGMENT_PREFETCH_HEADER}`,
++            varyHeader: `${RSC_HEADER}, ${NEXT_ROUTER_STATE_TREE_HEADER}, ${NEXT_ROUTER_PREFETCH_HEADER}, ${NEXT_ROUTER_SEGMENT_PREFETCH_HEADER}, Accept`,
+             prefetchHeader: NEXT_ROUTER_PREFETCH_HEADER,
+             didPostponeHeader: NEXT_DID_POSTPONE_HEADER,
+             contentTypeHeader: RSC_CONTENT_TYPE_HEADER,
 diff --git a/dist/esm/build/templates/app-page.js b/dist/esm/build/templates/app-page.js
-index 0cec08429603871865933de0a5ae4dd8f0d9a0d3..5727aacdf17dfd5ec236667a9f7eeeac55d159a4 100644
+index 0cec08429603871865933de0a5ae4dd8f0d9a0d3..12f7e96ab5819a7568885b06205b319a1fd5bc1e 100644
 --- a/dist/esm/build/templates/app-page.js
 +++ b/dist/esm/build/templates/app-page.js
 @@ -434,7 +434,13 @@ export async function handler(req, res, ctx) {
@@ -28,7 +54,7 @@ index 0cec08429603871865933de0a5ae4dd8f0d9a0d3..5727aacdf17dfd5ec236667a9f7eeeac
 -        res.setHeader('Vary', varyHeader);
 +        // Preserve content-negotiation headers added by Proxy/config.
 +        const existingVary = res.getHeader('Vary');
-+        const varyValues = [existingVary, varyHeader].flat().filter(Boolean)
++        const varyValues = [existingVary, varyHeader, 'Accept'].flat().filter(Boolean)
 +            .flatMap((value) => String(value).split(','))
 +            .map((value) => value.trim()).filter(Boolean);
 +        res.setHeader('Vary', [...new Map(varyValues.map((value) =>
