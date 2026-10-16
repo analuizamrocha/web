@@ -22,7 +22,7 @@ import {
 
 const pageTitle = 'Cirurgia a Laser Proctológica'
 const pageDescription =
-  'Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.'
+  'Conheça as aplicações do laser em coloproctologia, suas indicações e limitações. A escolha da técnica depende de avaliação individual em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/cx-laser`
 
 export const metadata: Metadata = {
@@ -60,7 +60,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'A cirurgia a laser é menos dolorosa que a convencional?',
     answer:
-      'Em muitos casos, sim. O laser pode reduzir o trauma nos tecidos e, consequentemente, a dor no pós-operatório. Mas a resposta varia conforme o paciente e o tipo de doença.',
+      'A dor depende do procedimento, da extensão do tratamento e da resposta individual. O uso do laser não garante um pós-operatório menos doloroso.',
   },
   {
     question: 'O laser substitui totalmente a cirurgia convencional?',
@@ -70,7 +70,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Quanto tempo leva para se recuperar de uma cirurgia a laser?',
     answer:
-      'A recuperação costuma ser mais rápida do que na cirurgia convencional, permitindo retorno precoce às atividades leves. O tempo exato varia conforme o procedimento realizado.',
+      'O prazo varia conforme o procedimento e a cicatrização individual. O retorno às atividades deve seguir as orientações da equipe responsável.',
   },
 ]
 
@@ -93,8 +93,7 @@ export default function CirurgiasLaserPage() {
             '@type': 'MedicalProcedure',
             '@id': pageUrl,
             name: 'Cirurgias a Laser em Proctologia',
-            description:
-              'Procedimentos cirúrgicos minimamente invasivos utilizando tecnologia laser para tratamento de hemorroidas e fissuras anais',
+            description: pageDescription,
             procedureType: 'Laser Surgery',
             bodyLocation: {
               '@type': 'AnatomicalStructure',
@@ -156,10 +155,10 @@ export default function CirurgiasLaserPage() {
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-secondary mb-8 leading-relaxed font-medium">
-                A cirurgia a laser tem se consolidado como uma alternativa
-                moderna e menos invasiva no tratamento de algumas doenças do
-                ânus e reto. Essa tecnologia permite maior precisão, menor
-                trauma tecidual e uma recuperação geralmente mais rápida.
+                O laser pode ser utilizado em procedimentos para algumas doenças
+                anorretais. As indicações, limitações e alternativas precisam ser
+                discutidas na avaliação individual. Dor, cicatrização e retorno
+                às atividades variam conforme o procedimento e o paciente.
               </p>
             </header>
 
@@ -186,8 +185,8 @@ export default function CirurgiasLaserPage() {
                   fistuloso em casos específicos.
                 </li>
                 <li>
-                  <strong>Plicomas</strong> – remoção da sobra de pele com menor
-                  risco de sangramento.
+                  <strong>Plicomas</strong> – remoção da sobra de pele quando
+                  indicada após avaliação.
                 </li>
                 <li>
                   <strong>Cisto pilonidal</strong> – cauterização do trajeto,
@@ -204,40 +203,18 @@ export default function CirurgiasLaserPage() {
                 </p>
               </blockquote>
 
-              <h2>Benefícios do uso do laser</h2>
+              <h2>O que discutir antes de escolher a técnica</h2>
               <ul>
-                <li>
-                  Procedimentos <strong>menos invasivos</strong>.
-                </li>
-                <li>
-                  <strong>Menor sangramento</strong> intraoperatório.
-                </li>
-                <li>
-                  Possibilidade de <strong>menos dor</strong> no pós-operatório.
-                </li>
-                <li>
-                  <strong>Recuperação mais rápida</strong>, favorecendo retorno
-                  precoce às atividades.
-                </li>
-                <li>
-                  Potencial para <strong>melhor resultado estético</strong> em
-                  alguns casos.
-                </li>
+                <li>Qual procedimento será realizado e quais são as alternativas.</li>
+                <li>A extensão do tratamento e os cuidados com a ferida.</li>
+                <li>Como serão planejados o controle da dor e os retornos.</li>
+                <li>Os riscos e a possibilidade de persistência ou recorrência.</li>
               </ul>
-
-              <h2>Vantagens em relação às técnicas convencionais</h2>
-              <ul>
-                <li>
-                  Instrumento de alta precisão, que preserva estruturas
-                  saudáveis.
-                </li>
-                <li>Pode reduzir a necessidade de curativos extensos.</li>
-                <li>
-                  Menor risco de complicações como infecção e edema, em
-                  determinadas situações.
-                </li>
-                <li>Em alguns casos, menor chance de recidiva.</li>
-              </ul>
+              <p>
+                O uso do laser não garante ausência de dor, recuperação mais rápida
+                ou menor chance de recidiva. A comparação depende da doença e da
+                técnica específica, além das condições de cada paciente.
+              </p>
 
               <h2>Considerações importantes</h2>
               <p>
@@ -249,9 +226,8 @@ export default function CirurgiasLaserPage() {
                 sua gravidade e o perfil do paciente.
               </p>
               <p>
-                O laser representa um recurso importante dentro da
-                proctologia moderna, trazendo mais conforto e segurança em
-                casos bem selecionados.
+                A decisão deve considerar os benefícios esperados, as limitações
+                e os riscos de cada alternativa, sem prometer um resultado específico.
               </p>
 
               <RelatedBlogCard treatmentSlug="cx-laser" />
@@ -259,48 +235,14 @@ export default function CirurgiasLaserPage() {
               <h2>Perguntas frequentes (FAQ)</h2>
 
               <div className="space-y-8 my-12">
-                <div>
-                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
-                    Todas as doenças anorretais podem ser tratadas com laser?
-                  </h3>
-                  <p className="text-secondary leading-relaxed">
-                    O laser é útil em casos selecionados e a indicação depende
-                    sempre da avaliação médica.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
-                    A cirurgia a laser é menos dolorosa que a convencional?
-                  </h3>
-                  <p className="text-secondary leading-relaxed">
-                    Em muitos casos, sim. O laser pode reduzir o trauma nos
-                    tecidos e, consequentemente, a dor no pós-operatório. Mas a
-                    resposta varia conforme o paciente e o tipo de doença.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
-                    O laser substitui totalmente a cirurgia convencional?
-                  </h3>
-                  <p className="text-secondary leading-relaxed">
-                    Não. O laser é uma ferramenta moderna, mas não elimina a
-                    necessidade de técnicas tradicionais em determinados casos.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-serif font-bold text-primary mb-3">
-                    Quanto tempo leva para se recuperar de uma cirurgia a laser?
-                  </h3>
-                  <p className="text-secondary leading-relaxed">
-                    A recuperação costuma ser mais rápida do que na cirurgia
-                    convencional, permitindo retorno precoce às atividades
-                    leves. O tempo exato varia conforme o procedimento
-                    realizado.
-                  </p>
-                </div>
+                {faqItems.map(({ question, answer }) => (
+                  <div key={question}>
+                    <h3 className="text-xl font-serif font-bold text-primary mb-3">
+                      {question}
+                    </h3>
+                    <p className="text-secondary leading-relaxed">{answer}</p>
+                  </div>
+                ))}
               </div>
             </div>
 

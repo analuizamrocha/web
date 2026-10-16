@@ -42,7 +42,7 @@ const treatments = [
   {
     title: 'Cirurgias a Laser',
     description:
-      'Procedimentos minimamente invasivos com tecnologia laser para tratamento de hemorroidas e fissuras anais.',
+      'Aplicações do laser em proctologia, com indicações e limitações discutidas na avaliação individual.',
     slug: 'cx-laser',
     category: 'Cirúrgico',
   },
@@ -81,7 +81,7 @@ const treatments = [
   },
   {
     title: 'Cirurgia de Cisto Pilonidal',
-    description: 'Remoção cirúrgica de cistos pilonidais com técnicas modernas e baixa recidiva.',
+    description: 'Opções convencionais e a laser para cisto pilonidal, conforme avaliação individual.',
     slug: 'cx-cisto-pilonidal',
     category: 'Cirúrgico',
   },

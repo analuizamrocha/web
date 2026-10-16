@@ -1,0 +1,130 @@
+{
+  "checkedDateLocal": "2026-10-16",
+  "timezone": "America/Sao_Paulo",
+  "sourcePR": "https://github.com/analuizamrocha/web/pull/64",
+  "implementationBase": "321f99ab7df065fd53adf14b07917992dfd279e6",
+  "liveSitemapUrls": 66,
+  "livePostSlugs": [
+    "alimentacao-e-saude-intestinal",
+    "alimentacao-fibras-saude-intestinal",
+    "cancer-canal-anal-rastreio-hpv-quem-deve-se-preocupar",
+    "cancer-colorretal-rastreio-prevencao-diagnostico-precoce",
+    "celulas-mesenquimais-fistulas-anorretais",
+    "cirurgia-laser-hemorroida-quando-faz-sentido",
+    "cisto-pilonidal-cirurgia-laser-quando-operar",
+    "cisto-pilonidal-precisa-cirurgia",
+    "coceira-anal-quando-procurar-coloproctologista-curitiba",
+    "coceira-anus-causas-tratamento",
+    "constipacao-intestinal-cronica-causas-tratamento",
+    "descobri-hpv-anal-e-agora",
+    "diarreia-cronica-tratamento",
+    "disbiose-sibo-tratamento",
+    "disturbios-assoalho-pelvico-funcionamento-intestino",
+    "doencas-inflamatorias-intestinais-acompanhamento",
+    "dor-ao-evacuar-causas-tratamento",
+    "fases-cicatrizacao-cirurgia-hemorroida",
+    "fissura-anal-pode-cicatrizar-sozinha",
+    "fissura-anal-quando-cirurgia-indicada",
+    "fissura-anal-toxina-botulinica-tratamento",
+    "fissura-anal-tratamento",
+    "fistulas-anorretais-recidivadas-tratamento",
+    "gastroenterologista-ou-coloproctologista-diferenca",
+    "hemorroida-grau-3-tratamento",
+    "hemorroida-quanto-tempo-dura-quando-procurar",
+    "hemorroida-sempre-cirurgica-tratamento",
+    "hemorroida-sempre-precisa-cirurgia",
+    "hpv-anal-condilomas-riscos-tratamento-rastreio",
+    "hpv-anal-vaporizacao-laser-co2",
+    "intestino-preso-muitos-dias-perigoso",
+    "laser-co2-diodo-eletrocauterio-diferenca",
+    "laser-hemorroida-co2-ou-diodo",
+    "laser-ou-eletrocauterizacao-hpv-anal",
+    "ligadura-elastica-ou-cirurgia-hemorroida",
+    "o-que-muda-acompanhamento-especializado-coloproctologista-curitiba",
+    "plicoma-anal-cirurgia-laser",
+    "plicoma-anal-vale-a-pena-retirar",
+    "por-que-meus-sintomas-nunca-melhoram",
+    "proctologista-e-coloproctologista-entenda-os-termos",
+    "quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba",
+    "quando-procurar-coloproctologista-curitiba",
+    "recuperacao-cirurgia-hemorroida-quanto-tempo",
+    "sangue-nas-fezes-quando-procurar-coloproctologista",
+    "sangue-papel-higienico-sempre-hemorroida",
+    "saude-sexual-cuidado-informacao-bem-estar",
+    "sindrome-intestino-irritavel-sintomas-diagnostico-tratamento",
+    "sinto-vergonha-procurar-coloproctologista-isso-e-normal",
+    "toxina-botulinica-cirurgia-hemorroida",
+    "tratamento-fistulas-anorretais"
+  ],
+  "sourcePostCount": 54,
+  "liveMissingFromSource": [],
+  "sourceOnlyPostSlugs": [
+    "drenei-abscesso-anal-e-agora",
+    "fistula-anal-depois-de-abscesso",
+    "hemorroida-ou-plicoma-diferenca",
+    "plicoma-anal-por-que-aparece"
+  ],
+  "preChangeHttpChecks": [
+    {
+      "path": "/__seo_audit_missing_page__",
+      "result": "404 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/cirurgia-laser-hemorroida-cuando-faz-sentido",
+      "result": "404 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/cirurgia-laser-hemorroida-quando-faz-sentido",
+      "result": "200 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/coceira-anal-quando-es-normal-quando-procurar-coloproctologista-curitiba",
+      "result": "404 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/coceira-anal-quando-is-normal-e-quando-procurar-coloproctologista-curitiba",
+      "result": "404 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/coceira-anal-quando-is-normal-e-quando-procurar-um-coloproctologista-curitiba",
+      "result": "404 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/coceira-anal-quando-normal-e-quando-procurar-coloproctologista-curitiba",
+      "result": "404 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/coceira-anal-quando-normal-e-quando-procurar-um-coloproctologista-curitiba",
+      "result": "404 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/coceira-anal-quando-normal-quando-procurar-coloproctologista-curitiba",
+      "result": "404 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/coceira-anal-quando-procurar-coloproctologista-curitiba",
+      "result": "200 ",
+      "error": ""
+    },
+    {
+      "path": "/blog/coloproctologia/prurido-anal-coceira-no-anus/",
+      "result": "308 https://www.analuizarocha.com.br/blog/coloproctologia/prurido-anal-coceira-no-anus",
+      "error": ""
+    },
+    {
+      "path": "/blog/coloproctologista-curitiba-prurido-anal",
+      "result": "404 ",
+      "error": ""
+    }
+  ],
+  "deploymentRevision": "Unconfirmed: deployment unavailable in connected Vercel teams; GitHub deployment records are incomplete."
+}

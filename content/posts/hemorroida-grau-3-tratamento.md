@@ -3,7 +3,7 @@ title: 'Hemorroida grau 3: ligadura, cirurgia ou laser?'
 metaDescription: 'Hemorroida grau 3 nem sempre exige a mesma técnica. Entenda quando ligadura, cirurgia convencional ou laser podem ser considerados.'
 slug: 'hemorroida-grau-3-tratamento'
 publishDate: '2026-07-21'
-lastModified: '2026-07-21'
+lastModified: '2026-10-16'
 primaryKeyword: 'hemorroida grau 3 tratamento'
 secondaryKeywords:
   - 'hemorroida grau 3 precisa operar'
@@ -70,7 +70,7 @@ A cirurgia tende a ganhar importância quando há:
 - sintomas persistentes após tratamento de consultório
 - preferência por uma abordagem excisional após discutir recuperação e riscos
 
-Duas pessoas com o mesmo grau podem receber recomendações diferentes.
+Duas pessoas com o mesmo grau podem receber recomendações diferentes. Veja como essas opções são discutidas na [avaliação e no tratamento de hemorroidas](/tratamentos/hemorroidas).
 
 ## Tratar o intestino faz parte da decisão
 
