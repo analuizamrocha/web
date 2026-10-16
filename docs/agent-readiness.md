@@ -17,7 +17,7 @@ As páginas de conteúdo oferecem HTML e Markdown no mesmo endereço canônico, 
 
 ## Patch do Next.js
 
-O Next.js 16.2.10 sobrescreve o `Vary` das páginas HTML. O Bun aplica `patches/next@16.2.10.patch`, que mescla os valores existentes com os cabeçalhos exigidos pelo framework. Ao atualizar o Next.js, remova o patch somente depois de confirmar que as respostas finais HTML e Markdown conservam `Vary: Accept` e passam nas regressões HTTP.
+O Next.js 16.2.10 sobrescreve o `Vary` das páginas HTML. O Bun aplica `patches/next@16.2.10.patch`, que preserva `Accept` junto aos cabeçalhos exigidos pelo framework, tanto no handler quanto no padrão do manifesto de rotas usado pelo Vercel para servir HTML pré-renderizado. Ao atualizar o Next.js, remova o patch somente depois de passar nas regressões HTTP e na verificação do manifesto de build.
 
 ## Verificação
 
@@ -26,6 +26,7 @@ bun install --frozen-lockfile
 bun run test:run
 bun run lint
 bun run build
+node --test tests/build/agent-vary.mjs
 bunx tsc --noEmit
 PLAYWRIGHT_PRODUCTION=true bun run e2e -- tests/e2e/smoke.spec.ts tests/e2e/agent-readiness.spec.ts
 ```

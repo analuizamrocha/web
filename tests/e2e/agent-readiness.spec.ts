@@ -34,6 +34,13 @@ test('homepage negotiates Markdown and HTML without crossing response variants',
   expect(head.status()).toBe(200)
   expect(head.headers()['content-type']).toContain('text/markdown')
   expect(await head.text()).toBe('')
+
+  const flight = await request.get('/sobre?_rsc=vary-regression', { headers: { RSC: '1', Accept: '*/*' } })
+  expect(flight.status()).toBe(200)
+  expect(flight.headers()['content-type']).toContain('text/x-component')
+  const vary = flight.headers()['vary'].toLowerCase().split(/,\s*/)
+  expect(vary).toContain('accept')
+  expect(vary).toContain('rsc')
 })
 
 test('missing routes return Markdown 404s and retain HTML 404 behavior', async ({ request }) => {
