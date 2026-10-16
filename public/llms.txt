@@ -31,6 +31,8 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [Toxina botulínica](https://www.analuizarocha.com.br/tratamentos/toxina-botulinica): Indicações e expectativas de resultado.
 
 ## Hemorroidas
+- [Hemorroida trombosada: sintomas e como o tempo influencia o tratamento](https://www.analuizarocha.com.br/blog/hemorroida-trombosada-sintomas-tratamento)
+- [Hemorroida na gravidez e no pós-parto: quais cuidados são indicados?](https://www.analuizarocha.com.br/blog/hemorroida-gravidez-pos-parto)
 - [Hemorroida é sempre cirúrgica? Quando operar e opções de tratamento](https://www.analuizarocha.com.br/blog/hemorroida-sempre-cirurgica-tratamento)
 - [Hemorroida sempre precisa de cirurgia?](https://www.analuizarocha.com.br/blog/hemorroida-sempre-precisa-cirurgia)
 - [Hemorroida grau 3: ligadura, cirurgia ou laser?](https://www.analuizarocha.com.br/blog/hemorroida-grau-3-tratamento)
@@ -66,6 +68,10 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [Cisto pilonidal: o que é e quando é a melhor hora de operar](https://www.analuizarocha.com.br/blog/cisto-pilonidal-cirurgia-laser-quando-operar)
 - [Cisto pilonidal: sempre precisa de cirurgia?](https://www.analuizarocha.com.br/blog/cisto-pilonidal-precisa-cirurgia)
 
+## Colonoscopia
+- [Tiraram um pólipo na colonoscopia: e agora?](https://www.analuizarocha.com.br/blog/polipo-retirado-colonoscopia-e-agora)
+- [Preparo da colonoscopia: alimentação, medicamentos e dúvidas frequentes](https://www.analuizarocha.com.br/blog/preparo-colonoscopia-orientacoes)
+
 ## HPV anal e câncer
 - [HPV anal: condilomas, riscos, tratamento e rastreio](https://www.analuizarocha.com.br/blog/hpv-anal-condilomas-riscos-tratamento-rastreio)
 - [Descobri que tenho HPV anal, e agora? Próximos passos sem pânico](https://www.analuizarocha.com.br/blog/descobri-hpv-anal-e-agora)
@@ -100,6 +106,7 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [Gastroenterologista ou coloproctologista: qual a diferença?](https://www.analuizarocha.com.br/blog/gastroenterologista-ou-coloproctologista-diferenca)
 
 ## Orientação ao paciente
+- [Bolinha no ânus: o que pode ser e quando procurar avaliação?](https://www.analuizarocha.com.br/blog/bolinha-no-anus-causas-avaliacao)
 - [Quando procurar um coloproctologista em Curitiba](https://www.analuizarocha.com.br/blog/quando-procurar-coloproctologista-curitiba)
 - [Quando o intestino dá sinais de alerta](https://www.analuizarocha.com.br/blog/quando-intestino-da-sinais-de-alerta-coloproctologista-curitiba)
 - [O que muda com o acompanhamento especializado em coloproctologia](https://www.analuizarocha.com.br/blog/o-que-muda-acompanhamento-especializado-coloproctologista-curitiba)
