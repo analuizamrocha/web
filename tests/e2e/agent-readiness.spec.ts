@@ -1,4 +1,7 @@
 import { expect, test } from '@playwright/test'
+import { markdownPagePaths } from '../../src/lib/markdown-page-paths'
+import { remark } from 'remark'
+import { visit } from 'unist-util-visit'
 
 const markdownHeaders = { Accept: 'text/markdown' }
 
@@ -68,7 +71,7 @@ test('dynamic pages support Markdown and renamed URLs retain their redirects', a
 })
 
 test('helper URLs stay private to rewrites, including spoofed request markers', async ({ request }) => {
-  for (const path of ['/conteudo-markdown', '/conteudo-markdown/blog/fissura-anal-tratamento']) {
+  for (const path of ['/conteudo-markdown', '/conteudo-markdown/blog/fissura-anal-tratamento', '/conteudo-markdown/tratamentos/hemorroidas', '/conteudo-markdown/politica-privacidade']) {
     for (const accept of ['text/html', 'text/markdown']) {
       const response = await request.get(path, { headers: { Accept: accept, 'x-agent-markdown': '1' } })
       expect(response.status(), path).toBe(404)
@@ -89,7 +92,7 @@ test('utility pages and social-preview resources are excluded from indexing, not
       expect(response.headers()['x-robots-tag'], path).toContain('noindex')
       if (path === '/politica-privacidade') {
         expect(response.status()).toBe(200)
-        expect(response.headers()['content-type']).toContain('text/html')
+        expect(response.headers()['content-type']).toContain(accept)
       } else {
         expect(response.status()).toBe(404)
       }
@@ -185,15 +188,56 @@ test('all sitemap URLs and llms links resolve, and discovery files keep their fo
     const response = await request.get(path, { headers: { Accept: 'text/html' } })
     expect(response.status(), path).toBe(200)
     await response.dispose()
-    if (path === '/' || path.startsWith('/blog/') || path.startsWith('/locais-de-atendimento/')) {
+    if (!['/sitemap.xml', '/llms.txt', '/robots.txt'].includes(path)) {
       const markdown = await request.get(path, { headers: markdownHeaders })
       expect(markdown.status(), path).toBe(200)
       expect(markdown.headers()['content-type'], path).toContain('text/markdown')
-      expect(markdown.headers()['x-robots-tag'], path).toBeUndefined()
+      if (path === '/politica-privacidade') expect(markdown.headers()['x-robots-tag'], path).toContain('noindex')
+      else expect(markdown.headers()['x-robots-tag'], path).toBeUndefined()
       expect(markdown.headers()['link'], path).toBe(`<https://www.analuizarocha.com.br${path === '/' ? '' : path}>; rel="canonical"`)
-      if (path.startsWith('/blog/')) expect(await markdown.text(), path).not.toMatch(/\]\(\s*\/(?!\/)/)
+      expect(await markdown.text(), path).not.toMatch(/\]\(\s*\/(?!\/)/)
       expect((await markdown.text()).length, path).toBeGreaterThan(100)
       await markdown.dispose()
+    }
+  }
+})
+
+test('shared page content is present in both HTML and Markdown', async ({ page, request }) => {
+  test.setTimeout(120_000)
+  const normalize = (text: string) => text.normalize('NFKC').replace(/\s+/g, ' ').trim()
+  for (const path of markdownPagePaths) {
+    await page.goto(path)
+    const content = await page.locator('main h1, main h2, main h3, main h4, main p, main li, main summary').allTextContents()
+    const response = await request.get(path, { headers: markdownHeaders })
+    expect(response.status(), path).toBe(200)
+    const tree = remark().parse(await response.text())
+    let markdownText = ''
+    visit(tree, (node) => {
+      if (node.type === 'text' || node.type === 'inlineCode') markdownText += node.value
+      else if (['paragraph', 'heading', 'listItem', 'blockquote'].includes(node.type)) markdownText += ' '
+    })
+    const normalizedMarkdown = normalize(markdownText)
+    for (const text of content.map(normalize).filter((text) => text.length > 8)) {
+      expect(normalizedMarkdown, `${path}: ${text}`).toContain(text)
+    }
+    for (const accept of ['application/json', 'text/markdown;q=0, text/html;q=0']) {
+      const unsupported = await request.get(path, { headers: { Accept: accept } })
+      expect(unsupported.status(), path).toBe(406)
+      expect(unsupported.headers()['vary'].toLowerCase()).toContain('accept')
+    }
+    const head = await request.head(path, { headers: markdownHeaders })
+    expect(head.status(), path).toBe(200)
+    expect(head.headers()['content-type']).toContain('text/markdown')
+    expect(await head.text()).toBe('')
+    for (const [accept, contentType] of [
+      ['text/markdown;q=0.9, text/html;q=0.2', 'text/markdown'],
+      ['text/markdown;q=0.2, text/html;q=0.9', 'text/html'],
+      ['text/markdown;q=0, */*;q=0.5', 'text/html'],
+    ]) {
+      const preferred = await request.get(path, { headers: { Accept: accept } })
+      expect(preferred.status(), path).toBe(200)
+      expect(preferred.headers()['content-type'], path).toContain(contentType)
+      expect(preferred.headers()['vary'].toLowerCase(), path).toContain('accept')
     }
   }
 })

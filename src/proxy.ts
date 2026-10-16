@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { negotiatePage } from '@/lib/content-negotiation'
+import { supportsPageMarkdown } from '@/lib/markdown-page-paths'
 
 export function proxy(request: NextRequest) {
   const headers = new Headers(request.headers)
@@ -27,14 +28,14 @@ export function proxy(request: NextRequest) {
     headers.set('x-agent-markdown', '1')
     // Dynamic routes match even for missing slugs, so handle their Markdown
     // variants here rather than waiting for the filesystem fallback rewrite.
-    if (pathname === '/' || pathname.startsWith('/blog/') || pathname.startsWith('/locais-de-atendimento/')) {
+    if (supportsPageMarkdown(pathname)) {
       const url = request.nextUrl.clone()
       url.pathname = `/conteudo-markdown${pathname === '/' ? '' : pathname}`
       return NextResponse.rewrite(url, { request: { headers } })
     }
   }
 
-  if (pathname === '/' && !format) {
+  if (supportsPageMarkdown(pathname) && !format) {
     return new NextResponse('Representações disponíveis: text/html, text/markdown.\n', {
       status: 406,
       headers: {

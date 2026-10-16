@@ -3,6 +3,8 @@ import { getHomepageMarkdown, markdownNotFound } from '@/lib/agent-markdown'
 import { getLocationBySlug } from '@/lib/locations'
 import { WEBSITE_URL } from '@/lib/constants'
 import { absolutizeMarkdownUrls } from '@/lib/markdown-links'
+import { getMarkdownPage } from '@/lib/markdown-pages'
+import { renderPageMarkdown } from '@/lib/page-markdown'
 
 export const dynamic = 'force-dynamic'
 
@@ -11,10 +13,14 @@ export async function GET(request: Request, context: { params: Promise<{ path?: 
   let body: string | undefined
   let canonicalUrl: string | undefined
   const negotiated = request.headers.get('x-agent-markdown') === '1'
+  const sharedPage = negotiated ? await getMarkdownPage(path.join('/')) : undefined
 
   if (negotiated && path.length === 0) {
     body = getHomepageMarkdown()
     canonicalUrl = WEBSITE_URL
+  } else if (sharedPage) {
+    canonicalUrl = `${WEBSITE_URL}/${path.join('/')}`
+    body = renderPageMarkdown(sharedPage.default(), canonicalUrl)
   } else if (negotiated && path.length === 2 && path[0] === 'blog') {
     // Select a published slug, rather than passing URL input to filesystem APIs.
     const post = getAllPostSlugs().includes(path[1]) ? getPostBySlug(path[1]) : null
@@ -43,8 +49,8 @@ export async function GET(request: Request, context: { params: Promise<{ path?: 
   }
   // A negotiated variant at an existing canonical URL must remain indexable.
   // Direct helper requests are real 404s, even when their path matches a page.
-  if (!body) {
-    headers.set('X-Robots-Tag', 'noindex')
+  if (!body || path.join('/') === 'politica-privacidade') {
+    headers.set('X-Robots-Tag', body ? 'noindex, nofollow' : 'noindex')
   }
 
   return new Response(body ?? markdownNotFound, {

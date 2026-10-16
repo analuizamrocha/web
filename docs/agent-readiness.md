@@ -14,21 +14,30 @@ O `llms.txt` usa português brasileiro, inclusive na seção “Quando usar este
 | --- | --- |
 | `GET /`, `Accept: text/markdown` | 200, resumo em português, `Content-Type: text/markdown; charset=utf-8`, `Content-Language: pt-BR`, `Vary: Accept` |
 | `GET /`, HTML, curinga ou sem Accept | Página visual existente; Vary conserva Accept e os cabeçalhos de navegação do Next.js |
-| `GET /`, somente formatos não disponíveis | 406, com os formatos disponíveis informados |
+| Página com negociação, somente formatos não disponíveis | 406, com os formatos disponíveis informados |
 | Página inexistente, Markdown preferido | 404 em Markdown com links para início, llms.txt e sitemap |
 | Artigo ou local inexistente, Markdown preferido | Mesmo 404 recuperável em Markdown |
 | Artigo publicado, Markdown preferido | Título, datas, fonte canônica e texto original com links/imagens absolutos; lê somente o arquivo solicitado após validar o slug publicado |
 | Local de atendimento, Markdown preferido | Resumo e contatos derivados dos dados existentes, com link para os detalhes completos |
+| Índices de blog, tratamentos e locais; tratamentos individuais; Sobre e Contato, Markdown preferido | Conteúdo da página visual, com estrutura semântica, imagens, FAQs e links absolutos |
 | `HEAD` em recursos negociados | Mesmo status e cabeçalhos, sem corpo |
 | `/sobre` | Página existente com formação, registros profissionais e trajetória |
 | `/contato` | Página com os contatos publicados, locais e orientações de agendamento |
-| `/politica-privacidade` | Política existente, com seu canônico e noindex preservados |
+| `/politica-privacidade` | Política existente em HTML ou Markdown, com seu canônico e noindex preservados |
 | `/llms.txt` | Listas de links e orientações específicas sobre quando e como consultar o site |
 | `/sitemap.xml` | Endereços canônicos existentes mais `/contato`; sem aliases ou rotas auxiliares de Markdown |
 
-Requisições RSC, ações de servidor, arquivos estáticos, robots.txt, sitemap.xml e llms.txt conservam seus protocolos. As demais páginas existentes continuam servindo HTML. Respostas Markdown usam `private, no-store` para não preencher entradas de cache destinadas ao HTML. A variante negociada de uma página canônica não recebe `noindex`; esse cabeçalho fica restrito às páginas inexistentes e aos recursos excluídos da indexação. O acesso direto à rota auxiliar `/conteudo-markdown` retorna HTTP 404, inclusive quando alguém envia o cabeçalho interno manualmente. O Proxy remove esse marcador antes de encaminhar requisições diretas.
+Requisições RSC, ações de servidor, arquivos estáticos, robots.txt, sitemap.xml e llms.txt conservam seus protocolos. Todas as páginas de conteúdo listadas no sitemap oferecem HTML e Markdown no mesmo endereço. Respostas Markdown usam `private, no-store` para não preencher entradas de cache destinadas ao HTML. A variante negociada de uma página canônica não recebe `noindex`; esse cabeçalho fica restrito às páginas inexistentes e aos recursos excluídos da indexação, incluindo a política de privacidade nos dois formatos. O acesso direto à rota auxiliar `/conteudo-markdown` retorna HTTP 404, inclusive quando alguém envia o cabeçalho interno manualmente. O Proxy remove esse marcador antes de encaminhar requisições diretas.
 
 O JSON-LD de MedicalOrganization conserva o PostalAddress e inclui ContactPoint com telefone de agendamento, e-mail público, idioma e link para `/contato`. A página e as orientações reutilizam as informações profissionais e de contato existentes; não acrescentam dados de pacientes, preços, disponibilidade ou promessas de resultado.
+
+## Fonte compartilhada das páginas
+
+Os módulos em `src/content/pages` conservam o JSX, as classes, os dados e os metadados das páginas existentes. Os arquivos `page.tsx` apenas reexportam esses módulos para o Next.js. Assim, alterações na descrição de um tratamento, em uma FAQ ou nos dados de um índice chegam aos dois formatos sem uma segunda cópia de conteúdo médico.
+
+O renderer `src/lib/page-markdown.ts` lê a árvore semântica desse conteúdo, expande somente uma lista explícita de componentes síncronos sem hooks e transforma HAST em Markdown com bibliotecas de sintaxe. Links e imagens são resolvidos para o domínio canônico. Scripts de schema, navegação e elementos decorativos não entram no documento; o layout global e os provedores de analytics não são executados. A identificação profissional é incluída porque o rodapé HTML não é renderizado. Componentes novos sem adapter geram erro e são detectados nos testes, em vez de perder conteúdo silenciosamente.
+
+Para uma nova página, registre o caminho público em `src/lib/markdown-page-paths.ts`, adicione o loader correspondente em `src/lib/markdown-pages.ts` e mantenha o conteúdo no módulo compartilhado. Os artigos continuam usando seus arquivos Markdown originais; os detalhes dos locais continuam usando `src/lib/locations.ts`. Nenhum handler busca HTML de produção ou mantém uma cópia manual do texto dos tratamentos.
 
 
 ## Canônicos, links e recursos não indexáveis
@@ -62,7 +71,7 @@ PLAYWRIGHT_PRODUCTION=true bun run e2e -- tests/e2e/smoke.spec.ts tests/e2e/agen
 
 O Playwright inicia o servidor de produção após o build. Para apontar a suíte para um servidor já iniciado, use `PLAYWRIGHT_BASE_URL`. A CI executa testes unitários, lint, build, TypeScript e os testes HTTP/navegador contra produção, incluindo o comportamento final do patch Vary.
 
-A suíte verifica status, cabeçalhos e corpos das respostas; qualidade e exclusões do Accept; privacidade e indexação; canônicos; conteúdo das três páginas de confiança; contatos reais; navegação e largura de tela; formatos dos arquivos de descoberta; todos os links internos do llms.txt e endereços do sitemap. Também consulta a variante Markdown de cada artigo e local publicado.
+A suíte verifica status, cabeçalhos e corpos das respostas; qualidade e exclusões do Accept; privacidade e indexação; canônicos; conteúdo das três páginas de confiança; contatos reais; navegação e largura de tela; formatos dos arquivos de descoberta; todos os links internos do llms.txt e endereços do sitemap, em HTML e Markdown. Também compara títulos, parágrafos, listas e FAQs do HTML com o Markdown de cada módulo compartilhado e verifica HEAD e 406 nas novas páginas.
 
 Após a publicação, repita as consultas alternando representações, em ambos os hosts, para verificar os redirecionamentos e o cache de produção:
 
@@ -77,4 +86,4 @@ curl -sS -L -i -H 'Accept: text/markdown' https://analuizarocha.com.br/pagina-in
 
 Depois, repita a varredura do Is Agentic e confirme que `scanned_at` é posterior à publicação. O relatório armazenado anteriormente não comprova o resultado das alterações. O preview depende do acesso do autor Git ao projeto Vercel; nenhuma credencial nova é necessária para os recursos do site.
 
-Referências de formato: [Accept: text/markdown](https://acceptmarkdown.com/), [qualidade do Accept](https://acceptmarkdown.com/guides/accept-parsing), [llms.txt](https://llmstxt.org/) e [Schema.org ContactPoint](https://schema.org/ContactPoint).
+Referências de formato: [guia inicial Accept: text/markdown](https://acceptmarkdown.com/start), [qualidade do Accept](https://acceptmarkdown.com/guides/accept-parsing), [llms.txt](https://llmstxt.org/) e [Schema.org ContactPoint](https://schema.org/ContactPoint).
