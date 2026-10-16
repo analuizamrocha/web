@@ -22,7 +22,7 @@ import {
 
 const pageTitle = 'Cisto Pilonidal: Cirurgia e Recuperação'
 const pageDescription =
-  'Cirurgia para cisto pilonidal: técnica convencional e laser. Conheça as indicações e os cuidados na recuperação em Curitiba.'
+  'Cirurgia para cisto pilonidal: técnica convencional e laser. Tratamento definitivo com recuperação rápida e menor dor pós-operatória em Curitiba.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/cx-cisto-pilonidal`
 
 export const metadata: Metadata = {
@@ -71,7 +71,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'O laser é indicado em todos os casos?',
     answer:
-      'Não. A indicação depende da avaliação individual de cada paciente. Assim como na cirurgia convencional, ainda existe risco de recidiva.',
+      'Sim. Hoje se sabe que todo cisto pilonidal pode responder ao tratamento a laser, mas é importante entender que, assim como na cirurgia convencional, ainda existe risco de recidiva.',
   },
 ]
 
@@ -95,7 +95,7 @@ export default function CistoPilonidalPage() {
             '@id': pageUrl,
             name: 'Cirurgia para Cisto Pilonidal',
             description:
-              'Tratamento cirúrgico do cisto pilonidal com técnicas convencionais e laser',
+              'Tratamento cirúrgico do cisto pilonidal com técnicas convencionais e laser para resolução definitiva',
             procedureType: 'Pilonidal Cyst Surgery',
             bodyLocation: {
               '@type': 'AnatomicalStructure',
@@ -210,9 +210,9 @@ export default function CistoPilonidalPage() {
                 pilonidal.
               </p>
               <p>
-                O laser pode ser considerado em&nbsp;
-                <strong>casos selecionados</strong>, conforme a avaliação individual
-                de cada paciente.
+                Hoje se sabe que&nbsp;
+                <strong>todo cisto pilonidal pode responder ao tratamento a laser</strong>, sendo
+                válida a tentativa em praticamente todos os casos.
               </p>
 
               <ul>
@@ -316,8 +316,9 @@ export default function CistoPilonidalPage() {
                     O laser é indicado em todos os casos?
                   </h3>
                   <p className="text-secondary leading-relaxed">
-                    Não. A indicação depende da avaliação individual de cada paciente.
-                    Assim como na cirurgia convencional, ainda existe risco de recidiva.
+                    Sim. Hoje se sabe que todo cisto pilonidal pode responder ao tratamento a laser,
+                    mas é importante entender que, assim como na cirurgia convencional, ainda existe
+                    risco de recidiva.
                   </p>
                 </div>
               </div>
@@ -328,7 +329,7 @@ export default function CistoPilonidalPage() {
               body={
                 <p>
                   Agende uma consulta para avaliação especializada e definição da melhor técnica
-                  cirúrgica. Conheça as opções e os cuidados na recuperação.
+                  cirúrgica. Tratamento definitivo com recuperação rápida e menor dor.
                 </p>
               }
               actions={

@@ -22,7 +22,7 @@ import {
 
 const pageTitle = 'Cirurgia a Laser Proctológica'
 const pageDescription =
-  'Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Entenda as indicações, benefícios e cuidados na recuperação.'
+  'Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.'
 const pageUrl = `${WEBSITE_URL}/tratamentos/cx-laser`
 
 export const metadata: Metadata = {

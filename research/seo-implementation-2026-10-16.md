@@ -2,7 +2,7 @@
 
 Work date: October 16, 2026 (America/Sao_Paulo). Branch: `codex/2026-10-16-posts`.
 
-This implements the first repository changes supported by [PR #64](https://github.com/analuizamrocha/web/pull/64) and the shared priorities in [PR #58](https://github.com/analuizamrocha/web/pull/58). It is delivered as a separate draft implementation PR against main. No production deployment was performed.
+This implements the first repository changes supported by [PR #64](https://github.com/analuizamrocha/web/pull/64) and the shared priorities in [PR #58](https://github.com/analuizamrocha/web/pull/58). It is delivered as a separate implementation PR against main. No production deployment was performed.
 
 ## Source reconciliation
 
@@ -17,45 +17,24 @@ The production commit remains unconfirmed: the domain was unavailable through th
 - Nine exact equivalent URL redirects, retaining the two pre-existing legacy redirects. Each audited source resolves directly to its canonical article with HTTP 308. The nested itch URL supports its observed trailing slash and its normalized form.
 - Next's normal trailing-slash removal now runs after the explicit mappings, preventing an intermediate redirect to another broken URL. Unrelated missing pages still return 404. Tests cover query preservation and representative slash normalization.
 - Eleven contextual links: grade-3 hemorrhoids and duration → hemorrhoid treatment; toxin-specific fissure → botulinum toxin; recurrent fistulas → fistula surgery; DII and SII → their respective care pages; HPV → HPV treatment; screening → anal cancer screening; plicoma → laser indications/limitations; SIBO and the substantial itch guide → Clínica Nassif consultation information.
-- Narrowed service-copy edits to the specific statements listed below. The original introductions, benefits, comparisons, procedure explanations, page structure, FAQ rendering and most answers are retained. This batch does not claim that broad changes of voice improve SEO.
-- Updated modification dates for the edited posts and three treatment routes. The SIBO date records an editorial consultation-link change, not clinical approval or a medical-evidence refresh.
+- Kept only three small wording substitutions on the treatment hub, listed below. The laser and pilonidal detail pages are unchanged from main, including metadata, schema, body, FAQs and CTAs.
+- Updated modification dates for the edited posts and the treatment hub. The SIBO date records an editorial consultation-link change, not clinical approval or a medical-evidence refresh.
 
 All article titles, descriptions, slugs, hook lines, first images, existing FAQ frontmatter, signatures and educational disclaimers are preserved. Assets and image dimensions are unchanged. No new article, homepage title experiment, consolidation, or tracking integration is included.
 
-## Conservative copy scope and rationale
+## Final copy scope
 
-The first draft rewrote entire benefit sections and several FAQ answers without ranking, usability or clinician-review evidence for those rewrites. Those edits have been removed. Copy changes are now small corrections to specific wording; they are not presented as demonstrated traffic gains.
+The original laser and pilonidal page copy is retained in full. Those two files have no diff against main, and their sitemap modification dates are unchanged. This includes the pilonidal laser-indication answer in both the visible FAQ and its structured data. The clinical wording has not been recertified or rewritten as part of this technical SEO batch.
 
-| Page | Retained change | Reason |
-| --- | --- | --- |
-| `/tratamentos` | “alívio definitivo” → “alívio dos sintomas” | Avoid promising a permanent result while keeping the original service description. |
-| `/tratamentos` | “baixa recidiva” → “indicação individualizada” | Remove an unquantified outcome claim from the pilonidal card. |
-| `/tratamentos` | “a mais alta qualidade técnica” → “qualidade técnica” | Remove the superlative while keeping the original CTA and voice. |
-| `/tratamentos/cx-laser` | Only the second sentence of the description changes. | Keep the treatment topics and Curitiba; describe indications and recovery without promising fast recovery or less pain to every reader. The visible body and FAQ answers are unchanged. |
-| `/tratamentos/cx-cisto-pilonidal` | Revise the universal laser-indication paragraph and its matching FAQ answer. | Replace “todo cisto” / “praticamente todos os casos” with individual case selection; keep recurrence information. |
-| `/tratamentos/cx-cisto-pilonidal` | Remove definitive-result wording from metadata/schema and the CTA's second sentence. | Keep the original procedure terms and consultation invitation without an outcome guarantee. |
+Only these treatment-hub substitutions remain:
 
-`/tratamentos/cx-laser` description:
+| Original | Updated |
+| --- | --- |
+| “alívio definitivo” | “alívio dos sintomas” |
+| “baixa recidiva” | “indicação individualizada” |
+| “a mais alta qualidade técnica” | “qualidade técnica” |
 
-Before: “Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Procedimento minimamente invasivo com recuperação rápida e menos dor.”
-
-After: “Cirurgias a laser para hemorroidas e fissuras anais em Curitiba. Entenda as indicações, benefícios e cuidados na recuperação.”
-
-`/tratamentos/cx-cisto-pilonidal` description:
-
-Before: “Cirurgia para cisto pilonidal: técnica convencional e laser. Tratamento definitivo com recuperação rápida e menor dor pós-operatória em Curitiba.”
-
-After: “Cirurgia para cisto pilonidal: técnica convencional e laser. Conheça as indicações e os cuidados na recuperação em Curitiba.”
-
-Pilonidal FAQ, “O laser é indicado em todos os casos?”:
-
-Before: “Sim. Hoje se sabe que todo cisto pilonidal pode responder ao tratamento a laser, mas é importante entender que, assim como na cirurgia convencional, ainda existe risco de recidiva.”
-
-After: “Não. A indicação depende da avaliação individual de cada paciente. Assim como na cirurgia convencional, ainda existe risco de recidiva.”
-
-The shared FAQ-rendering refactor and the added on-page guideline citation were removed from this PR to keep its scope narrow. Existing clinical comparisons are preserved for clinician review; restoring them does not assert a fresh clinical or legal certification. The FAQ regression still checks that visible answers match their structured data.
-
-References: [ESCP pilonidal guideline (2024)](https://pubmed.ncbi.nlm.nih.gov/39397672/), [Google's descriptive-snippet guidance](https://developers.google.com/search/docs/appearance/snippet), and [permanent redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects). These support the specific decisions; they do not establish a ranking benefit for this wording.
+The hub's original introduction, service descriptions and consultation invitation otherwise remain intact. The broad rewrites and FAQ rendering refactor are excluded. No ranking improvement is asserted for these small copy edits.
 
 ## Remaining clinical review: SIBO/disbiose
 
@@ -74,7 +53,7 @@ Useful primary professional sources for that review: [ACG patient information, p
 - ESLint passed.
 - Production build and standalone TypeScript check passed, generating all 54 article routes. The first sandboxed attempt could not download the existing Google Fonts; the network-enabled build passed without application changes.
 - Final production browser suite: 39 tests passed, including all nine single-hop 308s, 200 destinations, correct canonicals, preserved query strings, unrelated 404s, HTML/Markdown clients, FAQ visibility, existing navigation, cookie consent and crawl signals. This includes the existing agent-readiness and mobile-menu coverage.
-- All 14 affected routes checked at 390px and 1440px: 28 page/viewport checks passed with one H1, HTTP 200 and no horizontal overflow. Contextual destinations returned 200; both service descriptions matched server metadata. All 11 edited article cards retained their original subtitles and first images, and their remaining frontmatter and footer contracts were checked against the baseline. Representative service/article screenshots were captured for visual inspection.
+- 14 representative routes checked at 390px and 1440px: 28 page/viewport checks passed with one H1, HTTP 200 and no horizontal overflow. Contextual destinations returned 200; the service descriptions matched server metadata. All 11 edited article cards retained their original subtitles and first images, and their remaining frontmatter and footer contracts were checked against the baseline. Representative service/article screenshots were captured for visual inspection.
 
 Local preview: http://localhost:3100. Start a fresh production preview with `bun run build` followed by `bun run start --port 3100`.
 
