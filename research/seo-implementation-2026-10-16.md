@@ -6,7 +6,7 @@ This implements the first repository changes supported by [PR #64](https://githu
 
 ## Source reconciliation
 
-The implementation starts from current `origin/main`, `321f99ab7df065fd53adf14b07917992dfd279e6`, preserving the separate agent-readiness branch. The live sitemap contains 66 URLs, including 50 articles. All 50 have source files in this branch, including the four previously missing recovery/laser/toxin posts. No article was reconstructed from HTML or removed.
+The initial inventory was taken from `321f99ab7df065fd53adf14b07917992dfd279e6`. Before opening the implementation PR, the branch was rebased onto `65f4e831bc499800b9049d3ff489f1787e4a3650`, which includes the merged agent-readiness work (#65). Contact routes, shared Markdown rendering, indexing rules, and their CI checks are preserved. The live sitemap contains 66 URLs, including 50 articles. All 50 have source files in this branch, including the four previously missing recovery/laser/toxin posts. No article was reconstructed from HTML or removed.
 
 Main has 54 posts. Four source-only articles already exist in the baseline: `drenei-abscesso-anal-e-agora`, `fistula-anal-depois-de-abscesso`, `hemorroida-ou-plicoma-diferenca`, and `plicoma-anal-por-que-aparece`. A deployment of this branch would include those existing main-branch changes too. These additions are not part of this batch's diff.
 
@@ -59,10 +59,10 @@ Useful primary professional sources for that review: [ACG patient information, p
 
 ## Validation and preview
 
-- Required content discovery, intrinsic image dimensions and SEO metadata checks: 3 files, 5 tests passed.
+- All unit tests on the rebased branch: 6 files, 65 tests passed, including content discovery, intrinsic image dimensions, SEO metadata, consent handling and shared Markdown content.
 - ESLint passed.
-- Production build passed, generating all 54 article routes. The first sandboxed attempt could not download the existing Google Fonts; the network-enabled build passed without application changes.
-- Initial built-app regression and existing smoke suite: 21 tests passed, including all nine single-hop 308s, 200 destinations, correct canonicals, preserved query strings, unrelated 404s, FAQ visibility, existing navigation, cookie consent and crawl signals.
+- Production build and standalone TypeScript check passed, generating all 54 article routes. The first sandboxed attempt could not download the existing Google Fonts; the network-enabled build passed without application changes.
+- Final production browser suite: 39 tests passed, including all nine single-hop 308s, 200 destinations, correct canonicals, preserved query strings, unrelated 404s, HTML/Markdown clients, FAQ visibility, existing navigation, cookie consent and crawl signals. This includes the existing agent-readiness and mobile-menu coverage.
 - All 14 affected routes checked at 390px and 1440px: 28 page/viewport checks passed with one H1, HTTP 200 and no horizontal overflow. Contextual destinations returned 200; both service descriptions matched server metadata. All 11 edited article cards retained their original subtitles and first images, and their remaining frontmatter and footer contracts were checked against the baseline. Representative service/article screenshots were captured for visual inspection.
 
 Local preview: http://localhost:3100. Start a fresh production preview with `bun run build` followed by `bun run start --port 3100`.
@@ -71,7 +71,7 @@ Local preview: http://localhost:3100. Start a fresh production preview with `bun
 bun run test:run -- tests/content-discovery.test.ts tests/mdx-image-dimensions.test.ts tests/seo-metadata.test.ts
 bun run lint
 bun run build
-PLAYWRIGHT_BASE_URL=http://localhost:3100 PLAYWRIGHT_PRODUCTION=true bun run e2e -- tests/e2e/seo-recovery.spec.ts tests/e2e/smoke.spec.ts --headed --workers=2
+PLAYWRIGHT_BASE_URL=http://localhost:3100 PLAYWRIGHT_PRODUCTION=true bun run e2e -- --headed --workers=2
 ```
 
 ## Relationship to PR #58
@@ -83,6 +83,8 @@ The shared priorities are protecting successful URLs, preserving commercial page
 Keep the additional #58 work as an evidence-driven backlog: a focused accessibility audit, measured field LCP/INP/CLS, image-weight/index-rendering investigation, and a wider entity/schema/NAP review. Query ownership, overlap decisions and metadata experiments still require current page/query evidence. Do not label these unmeasured areas as defects.
 
 The July counts (44 articles, 328 historical tracked terms and a 67-route build) are historical. Current source has 54 articles, the live sitemap has 50, and Vitest coverage now exists. Several research paths required by #58 are absent from current main. Reconcile those references before reusing its prompt. The user subsequently authorized a new implementation PR.
+
+CI now runs the SEO regression suite with the existing production smoke/agent checks. CI uses its installed Chromium; local runs retain system Chrome.
 
 ## Replacing the reporting PRs
 

@@ -66,6 +66,25 @@ test('pre-existing redirects still resolve directly to their published pages', a
   }
 })
 
+test('legacy URLs also redirect Markdown clients to the canonical representation', async ({ request }) => {
+  for (const [source, destination] of equivalents) {
+    const response = await request.get(source, {
+      headers: { Accept: 'text/markdown' },
+      maxRedirects: 0,
+    })
+    expect(response.status()).toBe(308)
+    expect(new URL(response.headers().location, response.url()).pathname).toBe(destination)
+
+    const target = await request.get(destination, {
+      headers: { Accept: 'text/markdown' },
+      maxRedirects: 0,
+    })
+    expect(target.status()).toBe(200)
+    expect(target.headers()['content-type']).toContain('text/markdown')
+    expect(target.headers().link).toBe(`<${website}${destination}>; rel="canonical"`)
+  }
+})
+
 test('treatment FAQs expose the same answers to readers and structured data', async ({ page }) => {
   for (const slug of ['cx-laser', 'cx-cisto-pilonidal']) {
     await page.goto(`/tratamentos/${slug}`)
