@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
     fallback: [{
       source: '/:path*',
       has: [{ type: 'header', key: 'x-agent-markdown', value: '1' }],
-      destination: '/agent-markdown/not-found',
+      destination: '/conteudo-markdown/nao-encontrado',
     }],
   }),
   compiler: {

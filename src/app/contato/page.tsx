@@ -12,8 +12,8 @@ import { locationPages } from '@/lib/locations'
 import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/seo-schemas'
 
 const pageTitle = 'Contato e agendamento'
-const pageDescription = 'Canais de contato para agendar consulta com a Dra. Ana Luiza Moraes Rocha, coloproctologista em Curitiba, e informações dos locais de atendimento.'
-const pageUrl = `${WEBSITE_URL}/contact`
+const pageDescription = 'Contato da Dra. Ana Luiza Moraes Rocha, coloproctologista em Curitiba: WhatsApp para agendamento, endereços e orientações dos locais de atendimento.'
+const pageUrl = `${WEBSITE_URL}/contato`
 
 export const metadata: Metadata = {
   title: pageTitle,

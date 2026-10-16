@@ -64,7 +64,7 @@ ${faqSchema.mainEntity.map((item) => `### ${item.name}\n\n${item.acceptedAnswer.
 
 ## Contato e informações do site
 
-- [Contato](${WEBSITE_URL}/contact)
+- [Contato](${WEBSITE_URL}/contato)
 - [Política de privacidade](${WEBSITE_URL}/politica-privacidade)
 - [Quando usar este site e instruções para agentes](${WEBSITE_URL}/llms.txt)
 - [Mapa do site](${WEBSITE_URL}/sitemap.xml)

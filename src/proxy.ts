@@ -19,13 +19,13 @@ export function proxy(request: NextRequest) {
     // variants here rather than waiting for the filesystem fallback rewrite.
     if (pathname === '/' || pathname.startsWith('/blog/') || pathname.startsWith('/locais-de-atendimento/')) {
       const url = request.nextUrl.clone()
-      url.pathname = `/agent-markdown${pathname === '/' ? '' : pathname}`
+      url.pathname = `/conteudo-markdown${pathname === '/' ? '' : pathname}`
       return NextResponse.rewrite(url, { request: { headers } })
     }
   }
 
   if (pathname === '/' && !format) {
-    return new NextResponse('Available representations: text/html, text/markdown.\n', {
+    return new NextResponse('Representações disponíveis: text/html, text/markdown.\n', {
       status: 406,
       headers: {
         'Content-Type': 'text/plain; charset=utf-8',
@@ -41,5 +41,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/|api/|images/|agent-markdown(?:/|$)|robots\\.txt$|llms\\.txt$|sitemap\\.xml$|favicon\\.ico$|apple-icon\\.png$).*)'],
+  matcher: ['/((?!_next/|api/|images/|conteudo-markdown(?:/|$)|robots\\.txt$|llms\\.txt$|sitemap\\.xml$|favicon\\.ico$|apple-icon\\.png$).*)'],
 }

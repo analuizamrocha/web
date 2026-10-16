@@ -11,6 +11,8 @@ test('homepage negotiates Markdown and HTML without crossing response variants',
     if (accept === 'text/markdown') {
       expect(response.headers()['content-type']).toContain('text/markdown')
       expect(response.headers()['cache-control']).toContain('no-store')
+      expect(response.headers()['x-robots-tag']).toBeUndefined()
+      expect(response.headers()['content-language']).toBe('pt-BR')
       expect(body).toContain('# Dra. Ana Luiza')
       expect(body).toContain('/sitemap.xml')
       expect(body).not.toContain('<!DOCTYPE')
@@ -53,6 +55,7 @@ test('dynamic pages support Markdown and renamed URLs retain their redirects', a
     const response = await request.get(path, { headers: markdownHeaders })
     expect(response.status(), path).toBe(200)
     expect(response.headers()['content-type']).toContain('text/markdown')
+    expect(response.headers()['x-robots-tag']).toBeUndefined()
     expect((await response.text()).length).toBeGreaterThan(500)
   }
   for (const accept of ['text/markdown', 'text/html']) {
@@ -63,23 +66,44 @@ test('dynamic pages support Markdown and renamed URLs retain their redirects', a
 })
 
 test('trust pages expose substantive content, canonical URLs, and real contacts', async ({ page }) => {
-  for (const [path, canonical] of [['/about', '/sobre'], ['/contact', '/contact'], ['/privacy', '/politica-privacidade']]) {
+  for (const path of ['/sobre', '/contato', '/politica-privacidade']) {
     const response = await page.goto(path)
     expect(response?.status(), path).toBe(200)
     expect((await page.locator('main').innerText()).length, path).toBeGreaterThan(500)
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `https://www.analuizarocha.com.br${canonical}`)
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `https://www.analuizarocha.com.br${path}`)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'pt-BR')
   }
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
-  await page.goto('/contact')
+  await page.goto('/contato')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Contato e agendamento')
   await expect(page.locator('main a[href^="https://wa.me/"]').first()).toHaveAttribute('href', /wa\.me\/554130739732/)
   await expect(page.locator('a[href="mailto:analuizarochaprocto@gmail.com"]')).toBeVisible()
-  await expect(page.locator('footer a[href="/contact"]')).toBeVisible()
+  await expect(page.locator('footer a[href="/contato"]')).toBeVisible()
   const organization = await page.locator('script[type="application/ld+json"]').evaluateAll((scripts) =>
     scripts.flatMap((script) => JSON.parse(script.textContent ?? '{}')['@graph'] ?? []).find((item) => item['@type'] === 'MedicalOrganization')
   )
   expect(organization.contactPoint).toMatchObject({ '@type': 'ContactPoint', telephone: '+554130739732', contactType: 'appointment scheduling' })
   expect(organization.address['@type']).toBe('PostalAddress')
+
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 900 })
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
+  }
+
+  await page.goto('/')
+  await page.locator('footer a[href="/contato"]').click()
+  await expect(page).toHaveURL(/\/contato$/)
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Contato e agendamento')
+})
+
+test('unpublished English aliases remain absent from routes and discovery', async ({ request }) => {
+  for (const path of ['/about', '/contact', '/privacy']) {
+    for (const accept of ['text/html', 'text/markdown']) {
+      const response = await request.get(path, { headers: { Accept: accept } })
+      expect(response.status(), path).toBe(404)
+      expect(response.headers()['content-type']).toContain(accept)
+    }
+  }
 })
 
 test('all sitemap URLs and llms links resolve, and discovery files keep their formats', async ({ request }) => {
@@ -94,7 +118,9 @@ test('all sitemap URLs and llms links resolve, and discovery files keep their fo
   expect(llms.status()).toBe(200)
   expect(llms.headers()['content-type']).toContain('text/plain')
   const guide = await llms.text()
-  expect(guide).toContain('## When to use this site')
+  expect(guide).toContain('## Quando usar este site')
+  expect(guide).not.toMatch(/Official website|When to use|Use when/)
+  expect(guide).not.toMatch(/https:\/\/www\.analuizarocha\.com\.br\/(about|contact|privacy)(?:\)|\/|$)/m)
 
   const robots = await request.get('/robots.txt', { headers: markdownHeaders })
   expect(robots.status()).toBe(200)
@@ -110,5 +136,13 @@ test('all sitemap URLs and llms links resolve, and discovery files keep their fo
     const response = await request.get(path, { headers: { Accept: 'text/html' } })
     expect(response.status(), path).toBe(200)
     await response.dispose()
+    if (path === '/' || path.startsWith('/blog/') || path.startsWith('/locais-de-atendimento/')) {
+      const markdown = await request.get(path, { headers: markdownHeaders })
+      expect(markdown.status(), path).toBe(200)
+      expect(markdown.headers()['content-type'], path).toContain('text/markdown')
+      expect(markdown.headers()['x-robots-tag'], path).toBeUndefined()
+      expect((await markdown.text()).length, path).toBeGreaterThan(100)
+      await markdown.dispose()
+    }
   }
 })

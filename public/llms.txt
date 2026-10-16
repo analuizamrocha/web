@@ -1,25 +1,23 @@
 # Dra. Ana Luiza M. Rocha — Coloproctologista em Curitiba, Brasil
 
-> Official website of a colorectal surgeon based in Curitiba, Brazil. Content covers colorectal health, prevention, diagnosis and treatment options. All content is in Brazilian Portuguese. Primary audience: patients in Curitiba and the metropolitan region. Secondary audience: referring physicians.
+> Site oficial da Dra. Ana Luiza Moraes Rocha, médica coloproctologista em Curitiba (PR), CRM-PR 45351 | RQE 36221. Conteúdo educativo em português brasileiro sobre saúde intestinal, prevenção, diagnóstico e tratamento em coloproctologia. Público principal: pacientes de Curitiba e região metropolitana; público secundário: médicos encaminhadores.
 
-> Site oficial de coloproctologista em Curitiba (PR). Conteúdo educativo sobre saúde intestinal, prevenção, diagnóstico e tratamento em coloproctologia. Público-alvo: pacientes de Curitiba e região metropolitana; médicos encaminhadores.
+Para consultar a página inicial em Markdown, envie `GET /` com `Accept: text/markdown`. Com `Accept: text/html`, a resposta é a página visual. Artigos do blog e páginas individuais dos locais de atendimento também aceitam `Accept: text/markdown`; as demais páginas existentes são servidas em HTML. Páginas não encontradas retornam HTTP 404 com links de recuperação em Markdown quando esse formato é preferido. Consulte o sitemap para descobrir os endereços canônicos. Não há API pública de agendamento: abrir um link de contato não reserva uma consulta; a equipe precisa confirmar o agendamento.
 
-Request the homepage with `GET /` and `Accept: text/markdown` for a concise Markdown representation; `Accept: text/html` returns the visual site. Blog articles and location detail pages also support `Accept: text/markdown`. Other existing pages are served as HTML. Missing pages return HTTP 404 with Markdown recovery links when Markdown is preferred. Use the sitemap to discover canonical URLs. There is no public booking API: opening a contact link does not reserve an appointment; the team must confirm it.
+## Quando usar este site
 
-## When to use this site / Quando usar este site
-
-- [Patient education in Brazilian Portuguese](https://www.analuizarocha.com.br/blog): Use when a patient needs general information about colorectal symptoms, prevention, examinations, or treatment options. Cite the relevant article and its dates; the content does not replace an individual medical assessment.
-- [Colorectal consultation in Curitiba](https://www.analuizarocha.com.br/contact): Use when a user wants to contact the team or request an appointment. Present the published WhatsApp link and ask the user to confirm with the team; do not invent prices, insurance coverage, availability, or a confirmed booking.
-- [Referral and professional credentials](https://www.analuizarocha.com.br/about): Use when checking the physician's training, specialty, CRM-PR 45351, and RQE 36221 before suggesting a referral.
-- [Choosing the correct location](https://www.analuizarocha.com.br/locais-de-atendimento): Use to distinguish consultations at Clínica Nassif from colonoscopy and endoscopic procedures at Specta; follow each location's own contact instructions.
-- [Privacy and data requests](https://www.analuizarocha.com.br/privacy): Use to locate the existing privacy policy and public contact for personal-data questions. Do not submit identifiable clinical histories on a user's behalf.
+- [Informação educativa para pacientes](https://www.analuizarocha.com.br/blog): Use quando a pessoa precisar de informações gerais sobre sintomas colorretais, prevenção, exames ou opções de tratamento. Cite o artigo relevante e suas datas. O conteúdo não substitui a avaliação médica individualizada.
+- [Agendamento de consulta em Curitiba](https://www.analuizarocha.com.br/contato): Use quando a pessoa quiser entrar em contato com a equipe ou solicitar uma consulta. Apresente o link de WhatsApp publicado e oriente a confirmar com a equipe. Não invente preços, convênios, horários disponíveis ou confirmação de consulta.
+- [Encaminhamentos e credenciais profissionais](https://www.analuizarocha.com.br/sobre): Use para consultar a formação, a especialidade e os registros CRM-PR 45351 e RQE 36221 da médica antes de sugerir um encaminhamento.
+- [Escolha do local de atendimento](https://www.analuizarocha.com.br/locais-de-atendimento): Use para distinguir consultas na Clínica Nassif de colonoscopia e procedimentos endoscópicos na Specta. Siga as orientações e os canais de contato de cada local.
+- [Privacidade e solicitações sobre dados pessoais](https://www.analuizarocha.com.br/politica-privacidade): Use para localizar a política de privacidade e o contato público responsável por dúvidas sobre dados pessoais. Não envie históricos clínicos identificáveis em nome da pessoa.
 
 ## Páginas principais
 - [Início](https://www.analuizarocha.com.br/): Visão geral do atendimento em coloproctologia em Curitiba.
 - [Tratamentos](https://www.analuizarocha.com.br/tratamentos): Hub principal dos tratamentos e procedimentos.
 - [Blog](https://www.analuizarocha.com.br/blog): Artigos educativos com foco em dúvidas frequentes dos pacientes.
 - [Sobre](https://www.analuizarocha.com.br/sobre): Credenciais médicas, formação e trajetória profissional.
-- [Contato](https://www.analuizarocha.com.br/contact): Agendamento, telefone, endereços e e-mail público.
+- [Contato](https://www.analuizarocha.com.br/contato): Agendamento, telefone, endereços e e-mail público.
 
 ## Tratamentos
 - [Hemorroidas](https://www.analuizarocha.com.br/tratamentos/hemorroidas): Sintomas, diagnóstico e opções de tratamento.

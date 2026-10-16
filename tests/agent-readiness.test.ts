@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest'
 import { NextRequest } from 'next/server'
 import { negotiatePage } from '@/lib/content-negotiation'
 import { proxy } from '@/proxy'
-import { GET } from '@/app/agent-markdown/[[...path]]/route'
+import { GET } from '@/app/conteudo-markdown/[[...path]]/route'
 import { getAllPosts } from '@/lib/blog'
 import { locationPages } from '@/lib/locations'
 import { structuredData } from '@/lib/structured-data'
@@ -33,7 +33,7 @@ describe('page content negotiation', () => {
 
   it('rewrites Markdown homepage requests without changing the public URL', () => {
     const response = proxy(new NextRequest(`${WEBSITE_URL}/?source=agent`, { headers: { accept: 'text/markdown' } }))
-    expect(response.headers.get('x-middleware-rewrite')).toBe(`${WEBSITE_URL}/agent-markdown?source=agent`)
+    expect(response.headers.get('x-middleware-rewrite')).toBe(`${WEBSITE_URL}/conteudo-markdown?source=agent`)
   })
 
   it('removes a spoofed internal format header', () => {
@@ -60,7 +60,7 @@ describe('Markdown representations', () => {
     expect(response.headers.get('vary')).toBe('Accept')
     expect(response.headers.get('cache-control')).toContain('no-store')
     const body = await response.text()
-    for (const value of ['CRM-PR 45351', 'RQE 36221', 'Clínica Nassif', 'Specta', '/contact', '/llms.txt', '/sitemap.xml']) {
+    for (const value of ['CRM-PR 45351', 'RQE 36221', 'Clínica Nassif', 'Specta', '/contato', '/llms.txt', '/sitemap.xml']) {
       expect(body).toContain(value)
     }
   })
@@ -69,7 +69,18 @@ describe('Markdown representations', () => {
     const post = getAllPosts()[0]
     const response = await GET(new Request(WEBSITE_URL), { params: Promise.resolve({ path: ['blog', post.slug] }) })
     expect(response.status).toBe(200)
-    expect(await response.text()).toBe(`# ${post.title}\n\n${post.content.trim()}\n`)
+    const body = await response.text()
+    expect(body).toContain(`Publicado em: ${post.publishDate}. Última atualização: ${post.lastModified}.`)
+    expect(body).toContain(`[Fonte original](${WEBSITE_URL}/blog/${post.slug})`)
+    expect(body.endsWith(`${post.content.trim()}\n`)).toBe(true)
+  })
+
+  it('keeps negotiated canonical content indexable and direct helper URLs noindex', async () => {
+    const response = await GET(new Request(WEBSITE_URL, { headers: { 'x-agent-markdown': '1' } }), { params: Promise.resolve({}) })
+    expect(response.headers.has('x-robots-tag')).toBe(false)
+    expect(response.headers.get('content-language')).toBe('pt-BR')
+    const direct = await GET(new Request(`${WEBSITE_URL}/conteudo-markdown`), { params: Promise.resolve({}) })
+    expect(direct.headers.get('x-robots-tag')).toBe('noindex')
   })
 
   it('uses the existing data for each location', async () => {
@@ -101,21 +112,22 @@ describe('business discovery', () => {
       telephone: `+${WPP_NUMBER_SECRETARY}`,
       email: CONTACT_EMAIL,
       contactType: 'appointment scheduling',
-      url: `${WEBSITE_URL}/contact`,
+      url: `${WEBSITE_URL}/contato`,
     })
     expect(organization.address).toMatchObject({ '@type': 'PostalAddress', addressLocality: 'Curitiba', addressCountry: 'BR' })
   })
 
   it('publishes linked when-to-use guidance and canonical contact discovery', () => {
     const llms = fs.readFileSync('public/llms.txt', 'utf8')
-    expect(llms).toContain('## When to use this site / Quando usar este site')
+    expect(llms).toContain('## Quando usar este site')
+    expect(llms).not.toMatch(/Official website|When to use|Use when|Patient education/)
     expect(llms).toContain('Accept: text/markdown')
     expect(llms).not.toContain('### ')
     // Every H2 section follows the llms.txt file-list format.
     for (const section of llms.split(/^## /m).slice(1)) {
       expect(section).toMatch(/\n\s*- \[[^\]]+\]\(https:\/\/[^)]+\)/)
     }
-    for (const route of ['/about', '/contact', '/privacy']) expect(llms).toContain(`${WEBSITE_URL}${route}`)
-    expect(sitemap().some((item) => item.url === `${WEBSITE_URL}/contact`)).toBe(true)
+    for (const route of ['/sobre', '/contato', '/politica-privacidade']) expect(llms).toContain(`${WEBSITE_URL}${route}`)
+    expect(sitemap().some((item) => item.url === `${WEBSITE_URL}/contato`)).toBe(true)
   })
 })

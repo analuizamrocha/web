@@ -1,58 +1,65 @@
-# Agent readiness
+# Preparação do site para agentes
 
-The [Is Agentic report](https://is-agentic.com/scan/www.analuizarocha.com.br), scanned at 2026-10-15 00:35 UTC (October 14 in Curitiba), scored production 77/100. This change addresses its five reported gaps. A new production score requires deployment and a fresh scan.
+O [relatório do Is Agentic](https://is-agentic.com/scan/www.analuizarocha.com.br), de 15/10/2026 às 00:35 UTC (14/10 em Curitiba), registrou 77/100 em produção. Esta alteração trata as lacunas de acesso e descoberta apontadas. Uma nova pontuação depende de publicação e nova varredura.
 
-## Public behavior
+## Idioma e endereços canônicos
 
-| Request | Result |
+O site é em português brasileiro. As páginas de confiança são `/sobre`, `/contato` e `/politica-privacidade`. Não são necessárias cópias dessas páginas em endereços ingleses para disponibilizar as informações aos agentes. A política conserva seu `noindex` e endereço canônico original. Como os aliases ingleses desta PR ainda não foram publicados, foram removidos sem adicionar redirecionamentos.
+
+O `llms.txt` usa português brasileiro, inclusive na seção “Quando usar este site”. O formato não exige inglês; os nomes padronizados de arquivos, cabeçalhos HTTP e tipos de mídia permanecem inalterados. Se o scanner procurar literalmente `/about`, `/contact`, `/privacy` ou títulos ingleses, poderá deixar de reconhecer os equivalentes locais. A avaliação após a publicação deve distinguir essa limitação do scanner da disponibilidade real das informações; não se promete uma pontuação específica.
+
+## Comportamento público
+
+| Requisição | Resultado |
 | --- | --- |
-| `GET /`, `Accept: text/markdown` | 200, useful Portuguese Markdown, `Content-Type: text/markdown; charset=utf-8`, `Vary: Accept` |
-| `GET /`, HTML, wildcard, or absent Accept | Existing HTML page; `Vary` retains Accept and Next.js routing headers |
-| `GET /`, unsupported representations only | 406, available representations listed |
-| Missing page, Markdown preferred | 404 Markdown with links to the homepage, llms.txt, and sitemap |
-| Missing blog/location slug, Markdown preferred | Same recoverable Markdown 404 |
-| Published blog/location detail, Markdown preferred | Markdown from existing content/data; renamed URLs still redirect first |
-| `HEAD` on negotiated resources | Same status and headers, no response body |
-| `/about` | Full existing `/sobre` page, HTTP 200, canonical remains `/sobre` |
-| `/privacy` | Full existing privacy policy, HTTP 200, original canonical and noindex retained |
-| `/contact` | Portuguese contact page with published scheduling details, location contacts, and public privacy email |
-| `/llms.txt` | Markdown file lists with explicit when-to-use guidance and request instructions |
-| `/sitemap.xml` | Existing canonical URLs plus `/contact`; aliases and internal Markdown routes are excluded |
+| `GET /`, `Accept: text/markdown` | 200, resumo em português, `Content-Type: text/markdown; charset=utf-8`, `Content-Language: pt-BR`, `Vary: Accept` |
+| `GET /`, HTML, curinga ou sem Accept | Página visual existente; Vary conserva Accept e os cabeçalhos de navegação do Next.js |
+| `GET /`, somente formatos não disponíveis | 406, com os formatos disponíveis informados |
+| Página inexistente, Markdown preferido | 404 em Markdown com links para início, llms.txt e sitemap |
+| Artigo ou local inexistente, Markdown preferido | Mesmo 404 recuperável em Markdown |
+| Artigo publicado, Markdown preferido | Título, datas, fonte canônica e corpo original; lê somente o arquivo solicitado após validar o slug publicado |
+| Local de atendimento, Markdown preferido | Resumo e contatos derivados dos dados existentes, com link para os detalhes completos |
+| `HEAD` em recursos negociados | Mesmo status e cabeçalhos, sem corpo |
+| `/sobre` | Página existente com formação, registros profissionais e trajetória |
+| `/contato` | Página com os contatos publicados, locais e orientações de agendamento |
+| `/politica-privacidade` | Política existente, com seu canônico e noindex preservados |
+| `/llms.txt` | Listas de links e orientações específicas sobre quando e como consultar o site |
+| `/sitemap.xml` | Endereços canônicos existentes mais `/contato`; sem aliases ou rotas auxiliares de Markdown |
 
-RSC requests, server actions, static assets, robots.txt, sitemap.xml, and llms.txt retain their normal protocols. Existing static pages beyond the homepage keep serving HTML. Markdown variants and errors use `private, no-store` and `X-Robots-Tag: noindex`; they do not populate shared HTML cache entries. Organization JSON-LD retains the existing PostalAddress and adds a ContactPoint with the published scheduling phone, public email, language, and contact URL.
+Requisições RSC, ações de servidor, arquivos estáticos, robots.txt, sitemap.xml e llms.txt conservam seus protocolos. As demais páginas existentes continuam servindo HTML. Respostas Markdown usam `private, no-store` para não preencher entradas de cache destinadas ao HTML. A variante negociada de uma página canônica não recebe `noindex`; esse cabeçalho fica restrito às páginas inexistentes e ao acesso direto à rota auxiliar `/conteudo-markdown`.
 
-The new content uses the existing medical identification, service descriptions, and contact details. It introduces no patient data, pricing, availability, or treatment guarantees. About and Privacy share their existing implementations to prevent policy or credential drift.
+O JSON-LD de MedicalOrganization conserva o PostalAddress e inclui ContactPoint com telefone de agendamento, e-mail público, idioma e link para `/contato`. A página e as orientações reutilizam as informações profissionais e de contato existentes; não acrescentam dados de pacientes, preços, disponibilidade ou promessas de resultado.
 
-## Next.js Vary compatibility patch
+## Compatibilidade do Vary no Next.js
 
-Next.js 16.2.10 overwrites Proxy's `Vary` header when rendering App Router HTML pages ([upstream issue](https://github.com/vercel/next.js/issues/85852)). `patches/next@16.2.10.patch` changes the CommonJS and ESM page-entry templates to merge existing Vary tokens with Next.js's required routing tokens. Bun applies this version-pinned patch during installation. Keep it until an upgraded Next.js passes the HTTP regression without the patch. The end-to-end suite asserts the final headers on both representations.
+O Next.js 16.2.10 sobrescreve o Vary definido pelo Proxy ao renderizar páginas HTML do App Router ([problema no projeto](https://github.com/vercel/next.js/issues/85852)). O patch `patches/next@16.2.10.patch` altera os templates CommonJS e ESM para mesclar os valores existentes com os cabeçalhos de navegação exigidos pelo Next.js. O Bun aplica o patch vinculado a essa versão durante a instalação. Ele poderá ser removido quando uma atualização do Next.js passar na mesma regressão HTTP sem o patch.
 
-## Verification
+## Verificação
 
 ```sh
 bun install --frozen-lockfile
 bun run test:run
 bun run lint
-bunx tsc --noEmit
 bun run build
-bun run start -- --hostname localhost --port 3127
-# In a second terminal:
-PLAYWRIGHT_BASE_URL=http://localhost:3127 bun run e2e -- tests/e2e/smoke.spec.ts tests/e2e/agent-readiness.spec.ts
+bunx tsc --noEmit
+PLAYWRIGHT_PRODUCTION=true bun run e2e -- tests/e2e/smoke.spec.ts tests/e2e/agent-readiness.spec.ts
 ```
 
-The HTTP regression follows redirects, checks the response bodies as well as status and media type, exercises Accept quality values and exclusions, checks trust-page content length and canonicals, and requests every canonical sitemap URL and first-party llms.txt link. Browser checks cover existing homepage behavior, contact navigation, and published contact links.
+O Playwright inicia o servidor de produção após o build. Para apontar a suíte para um servidor já iniciado, use `PLAYWRIGHT_BASE_URL`. A CI executa testes unitários, lint, build, TypeScript e os testes HTTP/navegador contra produção, incluindo o comportamento final do patch Vary.
 
-After deployment, repeat against both the apex and www hosts, alternating representations to detect cache contamination:
+A suíte verifica status, cabeçalhos e corpos das respostas; qualidade e exclusões do Accept; privacidade e indexação; canônicos; conteúdo das três páginas de confiança; contatos reais; navegação e largura de tela; formatos dos arquivos de descoberta; todos os links internos do llms.txt e endereços do sitemap. Também consulta a variante Markdown de cada artigo e local publicado.
+
+Após a publicação, repita as consultas alternando representações, em ambos os hosts, para verificar os redirecionamentos e o cache de produção:
 
 ```sh
 curl -sS -L -i -H 'Accept: text/markdown' https://www.analuizarocha.com.br/
 curl -sS -L -i -H 'Accept: text/html' https://www.analuizarocha.com.br/
-curl -sS -L -i -H 'Accept: text/markdown' https://www.analuizarocha.com.br/some-path-that-does-not-exist
+curl -sS -L -i -H 'Accept: text/markdown' https://www.analuizarocha.com.br/pagina-inexistente
 curl -sS -L -i -H 'Accept: text/markdown' https://analuizarocha.com.br/
 curl -sS -L -i -H 'Accept: text/html' https://analuizarocha.com.br/
-curl -sS -L -i -H 'Accept: text/markdown' https://analuizarocha.com.br/some-path-that-does-not-exist
+curl -sS -L -i -H 'Accept: text/markdown' https://analuizarocha.com.br/pagina-inexistente
 ```
 
-Then rescan Is Agentic and confirm `scanned_at` is newer than the deployment. Its stored report does not prove the deployed changes passed. No new account credentials or booking API are needed for these fixes.
+Depois, repita a varredura do Is Agentic e confirme que `scanned_at` é posterior à publicação. O relatório armazenado anteriormente não comprova o resultado das alterações. O preview depende do acesso do autor Git ao projeto Vercel; nenhuma credencial nova é necessária para os recursos do site.
 
-Protocol references: [Accept: text/markdown](https://acceptmarkdown.com/), [quality values](https://acceptmarkdown.com/guides/accept-parsing), [llms.txt format](https://llmstxt.org/), and [Schema.org ContactPoint](https://schema.org/ContactPoint).
+Referências de formato: [Accept: text/markdown](https://acceptmarkdown.com/), [qualidade do Accept](https://acceptmarkdown.com/guides/accept-parsing), [llms.txt](https://llmstxt.org/) e [Schema.org ContactPoint](https://schema.org/ContactPoint).

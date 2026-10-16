@@ -50,7 +50,7 @@ export const structuredData = {
         email: CONTACT_EMAIL,
         contactType: 'appointment scheduling',
         availableLanguage: ['pt-BR'],
-        url: `${WEBSITE_URL}/contact`,
+        url: `${WEBSITE_URL}/contato`,
       },
       priceRange: '$$',
       openingHours: CLINICA_NASSIF.openingHours,
