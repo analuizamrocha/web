@@ -6,13 +6,23 @@ export function proxy(request: NextRequest) {
   // Never trust a client-supplied value used by the fallback rewrite.
   headers.delete('x-agent-markdown')
 
+  // Only an internal rewrite may identify the helper as a negotiated request.
+  // Direct requests, including spoofed markers, continue with the marker removed.
+  const pathname = request.nextUrl.pathname
+  if (pathname === '/conteudo-markdown' || pathname.startsWith('/conteudo-markdown/')) {
+    return NextResponse.next({ request: { headers } })
+  }
+  // Extensionless social-image routes are binary resources, not documents.
+  if (pathname.endsWith('/opengraph-image') || pathname.endsWith('/twitter-image')) {
+    return NextResponse.next({ request: { headers } })
+  }
+
   // RSC navigation and server actions have their own Next.js protocol.
-  if (!['GET', 'HEAD'].includes(request.method) || request.headers.has('rsc')) {
+  if (!['GET', 'HEAD'].includes(request.method) || request.headers.has('rsc') || request.headers.has('next-router-prefetch') || request.headers.has('next-action')) {
     return NextResponse.next({ request: { headers } })
   }
 
   const format = negotiatePage(request.headers.get('accept'))
-  const pathname = request.nextUrl.pathname
   if (format === 'text/markdown') {
     headers.set('x-agent-markdown', '1')
     // Dynamic routes match even for missing slugs, so handle their Markdown
@@ -41,5 +51,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/|api/|images/|conteudo-markdown(?:/|$)|robots\\.txt$|llms\\.txt$|sitemap\\.xml$|favicon\\.ico$|apple-icon\\.png$).*)'],
+  matcher: ['/((?!_next/|api/|images/|robots\\.txt$|llms\\.txt$|sitemap\\.xml$|favicon\\.ico$|apple-icon\\.png$).*)'],
 }

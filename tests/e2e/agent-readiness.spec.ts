@@ -13,6 +13,7 @@ test('homepage negotiates Markdown and HTML without crossing response variants',
       expect(response.headers()['cache-control']).toContain('no-store')
       expect(response.headers()['x-robots-tag']).toBeUndefined()
       expect(response.headers()['content-language']).toBe('pt-BR')
+      expect(response.headers()['link']).toBe('<https://www.analuizarocha.com.br>; rel="canonical"')
       expect(body).toContain('# Dra. Ana Luiza')
       expect(body).toContain('/sitemap.xml')
       expect(body).not.toContain('<!DOCTYPE')
@@ -56,6 +57,7 @@ test('dynamic pages support Markdown and renamed URLs retain their redirects', a
     expect(response.status(), path).toBe(200)
     expect(response.headers()['content-type']).toContain('text/markdown')
     expect(response.headers()['x-robots-tag']).toBeUndefined()
+    expect(response.headers()['link']).toBe(`<https://www.analuizarocha.com.br${path}>; rel="canonical"`)
     expect((await response.text()).length).toBeGreaterThan(500)
   }
   for (const accept of ['text/markdown', 'text/html']) {
@@ -63,6 +65,50 @@ test('dynamic pages support Markdown and renamed URLs retain their redirects', a
     expect(response.status()).toBe(308)
     expect(response.headers()['location']).toBe('/blog/cisto-pilonidal-cirurgia-laser-quando-operar')
   }
+})
+
+test('helper URLs stay private to rewrites, including spoofed request markers', async ({ request }) => {
+  for (const path of ['/conteudo-markdown', '/conteudo-markdown/blog/fissura-anal-tratamento']) {
+    for (const accept of ['text/html', 'text/markdown']) {
+      const response = await request.get(path, { headers: { Accept: accept, 'x-agent-markdown': '1' } })
+      expect(response.status(), path).toBe(404)
+      expect(response.headers()['x-robots-tag']).toContain('noindex')
+      expect(response.headers()['link']).toBeUndefined()
+      expect(await response.text()).toContain('/llms.txt')
+    }
+    const head = await request.head(path, { headers: markdownHeaders })
+    expect(head.status()).toBe(404)
+    expect(await head.text()).toBe('')
+  }
+})
+
+test('utility pages and social-preview resources are excluded from indexing, not from use', async ({ page, request }) => {
+  for (const path of ['/politica-privacidade', '/design', '/design-system', '/opengraph-image', '/twitter-image', '/blog/exemplo/opengraph-image']) {
+    for (const accept of ['text/html', 'text/markdown']) {
+      const response = await request.get(path, { headers: { Accept: accept } })
+      expect(response.headers()['x-robots-tag'], path).toContain('noindex')
+      if (path === '/politica-privacidade') {
+        expect(response.status()).toBe(200)
+        expect(response.headers()['content-type']).toContain('text/html')
+      } else {
+        expect(response.status()).toBe(404)
+      }
+    }
+  }
+  for (const path of ['/images/og.png', '/_next/image?url=%2Fimages%2Fog.png&w=640&q=75']) {
+    const image = await request.get(path)
+    expect(image.status(), path).toBe(200)
+    expect(image.headers()['content-type']).toMatch(/^image\//)
+    expect(image.headers()['x-robots-tag'], path).toContain('noindex')
+  }
+  const articleImage = await request.get('/images/posts/fissura-anal-tratamento/fissura-anal.webp')
+  expect(articleImage.status()).toBe(200)
+  expect(articleImage.headers()['x-robots-tag']).toBeUndefined()
+
+  await page.goto('/politica-privacidade')
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
+  await page.goto('/blog/fissura-anal-tratamento')
+  await expect(page.locator('meta[name="robots"]')).not.toHaveAttribute('content', /noindex/)
 })
 
 test('trust pages expose substantive content, canonical URLs, and real contacts', async ({ page }) => {
@@ -121,6 +167,9 @@ test('all sitemap URLs and llms links resolve, and discovery files keep their fo
   expect(guide).toContain('## Quando usar este site')
   expect(guide).not.toMatch(/Official website|When to use|Use when/)
   expect(guide).not.toMatch(/https:\/\/www\.analuizarocha\.com\.br\/(about|contact|privacy)(?:\)|\/|$)/m)
+  for (const excluded of ['/politica-privacidade', '/design', '/design-system', '/conteudo-markdown', '/images/og.png', '/opengraph-image', '/twitter-image']) {
+    expect(xml).not.toContain(`<loc>https://www.analuizarocha.com.br${excluded}</loc>`)
+  }
 
   const robots = await request.get('/robots.txt', { headers: markdownHeaders })
   expect(robots.status()).toBe(200)
@@ -141,6 +190,8 @@ test('all sitemap URLs and llms links resolve, and discovery files keep their fo
       expect(markdown.status(), path).toBe(200)
       expect(markdown.headers()['content-type'], path).toContain('text/markdown')
       expect(markdown.headers()['x-robots-tag'], path).toBeUndefined()
+      expect(markdown.headers()['link'], path).toBe(`<https://www.analuizarocha.com.br${path === '/' ? '' : path}>; rel="canonical"`)
+      if (path.startsWith('/blog/')) expect(await markdown.text(), path).not.toMatch(/\]\(\s*\/(?!\/)/)
       expect((await markdown.text()).length, path).toBeGreaterThan(100)
       await markdown.dispose()
     }

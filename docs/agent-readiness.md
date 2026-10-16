@@ -17,7 +17,7 @@ O `llms.txt` usa português brasileiro, inclusive na seção “Quando usar este
 | `GET /`, somente formatos não disponíveis | 406, com os formatos disponíveis informados |
 | Página inexistente, Markdown preferido | 404 em Markdown com links para início, llms.txt e sitemap |
 | Artigo ou local inexistente, Markdown preferido | Mesmo 404 recuperável em Markdown |
-| Artigo publicado, Markdown preferido | Título, datas, fonte canônica e corpo original; lê somente o arquivo solicitado após validar o slug publicado |
+| Artigo publicado, Markdown preferido | Título, datas, fonte canônica e texto original com links/imagens absolutos; lê somente o arquivo solicitado após validar o slug publicado |
 | Local de atendimento, Markdown preferido | Resumo e contatos derivados dos dados existentes, com link para os detalhes completos |
 | `HEAD` em recursos negociados | Mesmo status e cabeçalhos, sem corpo |
 | `/sobre` | Página existente com formação, registros profissionais e trajetória |
@@ -26,9 +26,24 @@ O `llms.txt` usa português brasileiro, inclusive na seção “Quando usar este
 | `/llms.txt` | Listas de links e orientações específicas sobre quando e como consultar o site |
 | `/sitemap.xml` | Endereços canônicos existentes mais `/contato`; sem aliases ou rotas auxiliares de Markdown |
 
-Requisições RSC, ações de servidor, arquivos estáticos, robots.txt, sitemap.xml e llms.txt conservam seus protocolos. As demais páginas existentes continuam servindo HTML. Respostas Markdown usam `private, no-store` para não preencher entradas de cache destinadas ao HTML. A variante negociada de uma página canônica não recebe `noindex`; esse cabeçalho fica restrito às páginas inexistentes e ao acesso direto à rota auxiliar `/conteudo-markdown`.
+Requisições RSC, ações de servidor, arquivos estáticos, robots.txt, sitemap.xml e llms.txt conservam seus protocolos. As demais páginas existentes continuam servindo HTML. Respostas Markdown usam `private, no-store` para não preencher entradas de cache destinadas ao HTML. A variante negociada de uma página canônica não recebe `noindex`; esse cabeçalho fica restrito às páginas inexistentes e aos recursos excluídos da indexação. O acesso direto à rota auxiliar `/conteudo-markdown` retorna HTTP 404, inclusive quando alguém envia o cabeçalho interno manualmente. O Proxy remove esse marcador antes de encaminhar requisições diretas.
 
 O JSON-LD de MedicalOrganization conserva o PostalAddress e inclui ContactPoint com telefone de agendamento, e-mail público, idioma e link para `/contato`. A página e as orientações reutilizam as informações profissionais e de contato existentes; não acrescentam dados de pacientes, preços, disponibilidade ou promessas de resultado.
+
+
+## Canônicos, links e recursos não indexáveis
+
+Cada resposta Markdown válida inclui `Link: <endereço-canônico>; rel="canonical"`, sempre a partir do domínio e dos slugs publicados, sem usar o Host enviado pelo cliente. Erros não recebem um canônico fictício. Links, imagens e definições de referência dos artigos são resolvidos para URLs absolutas por uma árvore Markdown/GFM; exemplos em código não são alterados e os arquivos originais continuam com caminhos relativos.
+
+`/design` continua desativado em produção (404). `/design`, `/design-system` e `/politica-privacidade` recebem `X-Robots-Tag: noindex, nofollow`; a política também mantém seu meta robots. O mesmo cabeçalho protege acessos diretos ao helper e endpoints de imagens sociais `opengraph-image`/`twitter-image`, inclusive aninhados; esses endpoints binários também ficam fora da negociação de documentos. O site atualmente usa `/images/og.png` como preview: esse arquivo e sua versão em `/_next/image?url=/images/og.png` recebem noindex, mas continuam respondendo com imagem para preservar os previews sociais. As imagens dos artigos não recebem esse bloqueio.
+
+Esses recursos não entram no sitemap. A política permanece no llms.txt para consultas de privacidade, sem passar a ser indexável. Não se adiciona Disallow para impedir que os robôs leiam os cabeçalhos noindex. Essa política de indexação não é um mecanismo de autenticação.
+
+## Instrumentação
+
+Os testes isolados do AnalyticsProvider verificam que nenhum provedor é inicializado antes do consentimento ou após uma escolha inicial de recusa; verificam também o carregamento após o consentimento e o trabalho adiado, a seleção GA/GTM e os sinais Vercel. Os SDKs são substituídos nos testes e nenhum evento real é enviado. Os handlers Markdown não renderizam o layout React nem inicializam analytics de navegador.
+
+Essa verificação de inicialização não comprova configurações externas de GA/GTM, o conteúdo de containers, nem interrompe SDKs que já foram carregados antes de uma revogação; uma revisão dessas condições exige evidência específica. Nenhum novo provedor ou evento é introduzido nesta PR. O prompt reutilizável para revisão dos outros projetos está em `docs/agent-readiness-review-prompt.md`.
 
 ## Compatibilidade do Vary no Next.js
 

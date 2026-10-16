@@ -51,6 +51,25 @@ const nextConfig: NextConfig = {
   ],
   // Security headers
   headers: async () => [
+    // Keep utility pages and social-preview resources accessible to clients,
+    // while telling crawlers not to index them as public content.
+    ...[
+      '/politica-privacidade',
+      '/design',
+      '/design-system',
+      '/conteudo-markdown/:path*',
+      '/:path*/opengraph-image',
+      '/:path*/twitter-image',
+      '/images/og.png',
+    ].map((source) => ({
+      source,
+      headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+    })),
+    {
+      source: '/_next/image',
+      has: [{ type: 'query', key: 'url', value: '/images/og\\.png' }],
+      headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+    },
     {
       source: '/(.*)',
       headers: [
