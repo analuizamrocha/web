@@ -183,10 +183,25 @@ describe('business discovery', () => {
     expect(organization.address).toMatchObject({ '@type': 'PostalAddress', addressLocality: 'Curitiba', addressCountry: 'BR' })
   })
 
+  it('gives every top-level Organization node both a ContactPoint and a PostalAddress', () => {
+    const organizations = structuredData['@graph'].filter((item) => ['MedicalOrganization', 'LocalBusiness'].includes(item['@type']))
+    expect(organizations).toHaveLength(2)
+    for (const organization of organizations) {
+      expect(organization.contactPoint, organization['@type']).toMatchObject({
+        '@type': 'ContactPoint',
+        telephone: `+${WPP_NUMBER_SECRETARY}`,
+        email: CONTACT_EMAIL,
+        contactType: 'appointment scheduling',
+      })
+      expect(organization.address, organization['@type']).toMatchObject({ '@type': 'PostalAddress' })
+    }
+  })
+
   it('publishes linked when-to-use guidance and canonical contact discovery', () => {
     const llms = fs.readFileSync('public/llms.txt', 'utf8')
-    expect(llms).toContain('## Quando usar este site')
-    expect(llms).not.toMatch(/Official website|When to use|Use when|Patient education/)
+    expect(llms).toContain('## Quando usar este site (When to use this site)\n')
+    // Only the heading carries an English label for agents; the guidance stays pt-BR.
+    expect(llms.replace('(When to use this site)', '')).not.toMatch(/Official website|When to use|Use when|Patient education/)
     expect(llms).toContain('Accept: text/markdown')
     expect(llms).not.toContain('### ')
     // Every H2 section follows the llms.txt file-list format.
