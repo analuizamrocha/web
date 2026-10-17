@@ -96,6 +96,10 @@ const nextConfig: NextConfig = {
       destination: '/blog/cisto-pilonidal-cirurgia-laser-quando-operar',
       permanent: true,
     },
+    // Conventional English trust-page paths that agents probe; pages stay pt-BR.
+    { source: '/about', destination: '/sobre', permanent: true },
+    { source: '/contact', destination: '/contato', permanent: true },
+    { source: '/privacy', destination: '/politica-privacidade', permanent: true },
     // Preserve Next.js default slash removal after exact legacy mappings.
     {
       source: '/:path+/',

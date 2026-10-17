@@ -19,6 +19,16 @@ import {
   HOSPITAL_CLINIC_BARCELONA,
 } from './constants'
 
+// Shared by every Organization node so agents find the same scheduling contact.
+const schedulingContactPoint = {
+  '@type': 'ContactPoint',
+  telephone: `+${WPP_NUMBER_SECRETARY}`,
+  email: CONTACT_EMAIL,
+  contactType: 'appointment scheduling',
+  availableLanguage: ['pt-BR'],
+  url: `${WEBSITE_URL}/contato`,
+}
+
 export const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,14 +54,7 @@ export const structuredData = {
         longitude: CLINICA_NASSIF.coordinates.longitude,
       },
       telephone: WPP_NUMBER_SECRETARY_FORMATTED,
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: `+${WPP_NUMBER_SECRETARY}`,
-        email: CONTACT_EMAIL,
-        contactType: 'appointment scheduling',
-        availableLanguage: ['pt-BR'],
-        url: `${WEBSITE_URL}/contato`,
-      },
+      contactPoint: schedulingContactPoint,
       priceRange: '$$',
       openingHours: CLINICA_NASSIF.openingHours,
       areaServed: {
@@ -224,6 +227,7 @@ export const structuredData = {
         longitude: CLINICA_NASSIF.coordinates.longitude,
       },
       telephone: WPP_NUMBER_SECRETARY_FORMATTED,
+      contactPoint: schedulingContactPoint,
       url: WEBSITE_URL,
       image: `${WEBSITE_URL}/images/og.png`,
       priceRange: '$$',

@@ -145,13 +145,24 @@ test('trust pages expose substantive content, canonical URLs, and real contacts'
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Contato e agendamento')
 })
 
-test('unpublished English aliases remain absent from routes and discovery', async ({ request }) => {
-  for (const path of ['/about', '/contact', '/privacy']) {
+test('English trust-page paths redirect permanently to the Portuguese canonical pages', async ({ request }) => {
+  for (const [path, destination] of [['/about', '/sobre'], ['/contact', '/contato'], ['/privacy', '/politica-privacidade']]) {
     for (const accept of ['text/html', 'text/markdown']) {
-      const response = await request.get(path, { headers: { Accept: accept } })
-      expect(response.status(), path).toBe(404)
-      expect(response.headers()['content-type']).toContain(accept)
+      const response = await request.get(path, { headers: { Accept: accept }, maxRedirects: 0 })
+      expect(response.status(), path).toBe(308)
+      expect(new URL(response.headers().location, response.url()).pathname).toBe(destination)
+
+      const target = await request.get(path, { headers: { Accept: accept } })
+      expect(target.status(), path).toBe(200)
+      expect(target.headers()['content-type']).toContain(accept)
     }
+  }
+  // Aliases are redirects only; discovery files keep listing the canonical pages.
+  const llms = await (await request.get('/llms.txt')).text()
+  const sitemap = await (await request.get('/sitemap.xml')).text()
+  for (const path of ['/about', '/contact', '/privacy']) {
+    expect(llms).not.toContain(`analuizarocha.com.br${path}`)
+    expect(sitemap).not.toContain(`analuizarocha.com.br${path}<`)
   }
 })
 
@@ -167,8 +178,8 @@ test('all sitemap URLs and llms links resolve, and discovery files keep their fo
   expect(llms.status()).toBe(200)
   expect(llms.headers()['content-type']).toContain('text/plain')
   const guide = await llms.text()
-  expect(guide).toContain('## Quando usar este site')
-  expect(guide).not.toMatch(/Official website|When to use|Use when/)
+  expect(guide).toContain('## Quando usar este site (When to use this site)\n')
+  expect(guide.replace('(When to use this site)', '')).not.toMatch(/Official website|When to use|Use when/)
   expect(guide).not.toMatch(/https:\/\/www\.analuizarocha\.com\.br\/(about|contact|privacy)(?:\)|\/|$)/m)
   for (const excluded of ['/politica-privacidade', '/design', '/design-system', '/conteudo-markdown', '/images/og.png', '/opengraph-image', '/twitter-image']) {
     expect(xml).not.toContain(`<loc>https://www.analuizarocha.com.br${excluded}</loc>`)
