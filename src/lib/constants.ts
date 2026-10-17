@@ -131,11 +131,36 @@ export const WHATSAPP_MSG_TEXT_SECRETARY_ENCODED = encodeURIComponent(
 export const buildWhatsAppHref = (phone: string, encodedMessage: string) =>
   `https://wa.me/${phone.replace(/\D/g, '')}?text=${encodedMessage}`
 
-/** Ready-to-use wa.me href for scheduling a consultation with the secretary */
-export const WHATSAPP_HREF_SECRETARY = buildWhatsAppHref(
-  WPP_NUMBER_SECRETARY,
-  WHATSAPP_MSG_TEXT_SECRETARY_ENCODED
+/**
+ * Optional MDX Studio tracking link (`https://go.mdxstudio.com.br/c/<code>`).
+ * When set, the scheduling CTAs use it instead of wa.me, so each WhatsApp
+ * conversation records the ad or page it came from. The link itself opens
+ * the same secretary number with the same message. Unset keeps plain wa.me.
+ */
+export const WHATSAPP_TRACKING_URL =
+  process.env.NEXT_PUBLIC_WHATSAPP_TRACKING_URL?.trim() ?? ''
+
+/**
+ * Script that carries the visit's Google Ads / UTM parameters onto the
+ * tracking link. Served by the same host as the link; empty when unset.
+ */
+export const trackingScriptSrc = (trackingUrl: string) => {
+  if (!trackingUrl) return ''
+  try {
+    return `${new URL(trackingUrl).origin}/s.js`
+  } catch {
+    return ''
+  }
+}
+
+export const WHATSAPP_TRACKING_SCRIPT_SRC = trackingScriptSrc(
+  WHATSAPP_TRACKING_URL
 )
+
+/** Ready-to-use href for scheduling a consultation with the secretary */
+export const WHATSAPP_HREF_SECRETARY =
+  (WHATSAPP_TRACKING_SCRIPT_SRC && WHATSAPP_TRACKING_URL) ||
+  buildWhatsAppHref(WPP_NUMBER_SECRETARY, WHATSAPP_MSG_TEXT_SECRETARY_ENCODED)
 
 // =============================================================================
 // Clínica Nassif Information
