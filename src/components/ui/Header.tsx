@@ -207,8 +207,8 @@ export function Header() {
         >
           <div className="flex flex-col h-full">
             {/* Clean navigation links — scrollable independently */}
-            <div className="flex-1 px-6 py-8 overflow-y-auto overscroll-contain touch-auto">
-              <nav className="space-y-2">
+            <div className="min-h-0 flex-1 px-4 py-3 overflow-y-auto overscroll-contain touch-auto">
+              <nav aria-label="Navegação móvel" className="space-y-0.5 [@media(max-height:500px)_and_(min-width:480px)]:grid [@media(max-height:500px)_and_(min-width:480px)]:grid-cols-2 [@media(max-height:500px)_and_(min-width:480px)]:gap-x-3 [@media(max-height:500px)_and_(min-width:480px)]:space-y-0">
                 {isRootPage ? (
                   // Homepage: sections + divider + routes
                   <>
@@ -218,7 +218,7 @@ export function Header() {
                         key={item.name}
                         onClick={(e) => handleMobileNavClick(e, item.href)}
                         className={cn(
-                          'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
+                          'flex min-h-11 w-full items-center text-left text-base leading-6 font-medium transition-colors duration-200 py-2 px-3 rounded-md focus:outline-none cursor-pointer',
                           activeSection === item.id
                             ? 'text-primary bg-primary/10'
                             : 'text-secondary hover:text-primary focus:text-primary hover:bg-primary/5'
@@ -229,7 +229,7 @@ export function Header() {
                     ))}
 
                     {/* Horizontal divider for mobile */}
-                    <div className="py-2">
+                    <div className="py-1 [@media(max-height:500px)_and_(min-width:480px)]:col-span-2">
                       <Divider orientation="horizontal" size="sm" />
                     </div>
 
@@ -240,7 +240,7 @@ export function Header() {
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={cn(
-                          'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
+                          'flex min-h-11 w-full items-center text-left text-base leading-6 font-medium transition-colors duration-200 py-2 px-3 rounded-md focus:outline-none cursor-pointer',
                           pathname.startsWith(item.href) && item.href !== '/'
                             ? 'text-primary bg-primary/10'
                             : 'text-secondary hover:text-primary focus:text-primary hover:bg-primary/5'
@@ -260,7 +260,7 @@ export function Header() {
                         onClick={() => setMobileMenuOpen(false)}
                         suppressHydrationWarning
                         className={cn(
-                          'block w-full text-left text-lg font-medium transition-colors duration-200 py-3 px-3 rounded-md focus:outline-none cursor-pointer',
+                          'flex min-h-11 w-full items-center text-left text-base leading-6 font-medium transition-colors duration-200 py-2 px-3 rounded-md focus:outline-none cursor-pointer',
                           isNavItemActive(item.href, pathname)
                             ? 'text-primary bg-primary/10'
                             : 'text-secondary hover:text-primary focus:text-primary hover:bg-primary/5'
@@ -275,11 +275,11 @@ export function Header() {
             </div>
 
             {/* Simple footer */}
-            <div className="px-6 py-6 border-t border-primary/10 bg-background/50">
-              <div className="space-y-3">
+            <div className="shrink-0 px-4 py-3 border-t border-primary/10 bg-background/50">
+              <div className="space-y-2 [@media(max-height:500px)_and_(min-width:480px)]:flex [@media(max-height:500px)_and_(min-width:480px)]:flex-wrap [@media(max-height:500px)_and_(min-width:480px)]:items-center [@media(max-height:500px)_and_(min-width:480px)]:gap-x-6 [@media(max-height:500px)_and_(min-width:480px)]:gap-y-1 [@media(max-height:500px)_and_(min-width:480px)]:space-y-0">
                 {/* Contact info - smaller and cleaner */}
-                <div>
-                  <p className="text-sm font-medium text-primary mb-1">WhatsApp</p>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <p className="text-xs font-medium text-primary mb-0">WhatsApp</p>
                   <Link
                     href={WHATSAPP_HREF_SECRETARY}
                     target="_blank"
@@ -307,8 +307,8 @@ export function Header() {
                 </div>
 
                 {/* CRM info */}
-                <div className="pt-1">
-                  <p className="text-xs text-secondary">{CRM_RQE_TEXT}</p>
+                <div>
+                  <p className="text-xs text-secondary mb-0">{CRM_RQE_TEXT}</p>
                 </div>
               </div>
             </div>
