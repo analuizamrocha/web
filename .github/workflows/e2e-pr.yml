@@ -46,7 +46,7 @@ jobs:
         env:
           CI: true
           PLAYWRIGHT_PRODUCTION: 'true'
-        run: bun run e2e -- tests/e2e/smoke.spec.ts tests/e2e/agent-readiness.spec.ts tests/e2e/seo-recovery.spec.ts tests/e2e/patient-faqs.spec.ts
+        run: bun run e2e -- tests/e2e/smoke.spec.ts tests/e2e/agent-readiness.spec.ts tests/e2e/seo-recovery.spec.ts tests/e2e/patient-faqs.spec.ts tests/e2e/mobile-menu-layout.spec.ts
 
       - name: Upload Playwright reports
         if: always()
