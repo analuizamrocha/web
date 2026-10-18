@@ -225,7 +225,13 @@ test('shared page content is present in both HTML and Markdown', async ({ page, 
   const normalize = (text: string) => text.normalize('NFKC').replace(/\s+/g, ' ').trim()
   for (const path of markdownPagePaths) {
     await page.goto(path)
-    const content = await page.locator('main h1, main h2, main h3, main h4, main p, main li, main summary').allTextContents()
+    // The Markdown renderer intentionally omits navigation, including topic
+    // indexes inside main. Compare article content rather than menu labels.
+    const content = await page
+      .locator('main h1, main h2, main h3, main h4, main p, main li, main summary')
+      .evaluateAll((elements) => elements
+        .filter((element) => !element.closest('nav'))
+        .map((element) => element.textContent ?? ''))
     const response = await request.get(path, { headers: markdownHeaders })
     expect(response.status(), path).toBe(200)
     const tree = remark().parse(await response.text())

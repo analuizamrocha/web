@@ -39,7 +39,7 @@ describe('shared page Markdown', () => {
 
   it('preserves semantic structure and escapes text while excluding navigation and scripts', () => {
     const markdown = renderPageMarkdown(<>
-      <nav>Menu sem conteúdo</nav>
+      <nav><ul><li>Menu sem conteúdo</li></ul></nav>
       <h1>Opções de cuidado</h1>
       <div><Badge>Clínico/Cirúrgico</Badge><Badge>Ambulatorial</Badge></div>
       <p>Texto com <strong>ênfase</strong> e caracteres [literais].</p>
