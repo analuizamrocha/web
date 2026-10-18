@@ -76,7 +76,7 @@ export function Header() {
             </div>
 
             {/* Desktop navigation */}
-            <div className="hidden lg:flex items-center gap-x-8 lg:gap-x-12">
+            <div className="hidden lg:flex items-center gap-x-5 xl:gap-x-8">
               {isRootPage ? (
                 // Homepage: sections + divider + routes
                 <>

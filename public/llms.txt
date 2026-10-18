@@ -2,7 +2,7 @@
 
 > Site oficial da Dra. Ana Luiza Moraes Rocha, médica coloproctologista em Curitiba (PR), CRM-PR 45351 | RQE 36221. Conteúdo educativo em português brasileiro sobre saúde intestinal, prevenção, diagnóstico e tratamento em coloproctologia. Público principal: pacientes de Curitiba e região metropolitana; público secundário: médicos encaminhadores.
 
-Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico com `Accept: text/markdown`. A página inicial, os índices de blog, tratamentos e locais de atendimento, os artigos, os tratamentos individuais, Sobre, Contato e a Política de Privacidade aceitam esse formato. Com `Accept: text/html`, a resposta é a página visual. As respostas variam por Accept e respeitam os pesos q; formatos não disponíveis recebem HTTP 406. A política de privacidade continua excluída da indexação em ambos os formatos. Páginas não encontradas retornam HTTP 404 com links de recuperação em Markdown quando esse formato é preferido. Consulte o sitemap para descobrir os endereços canônicos. Não há API pública de agendamento: abrir um link de contato não reserva uma consulta; a equipe precisa confirmar o agendamento.
+Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico com `Accept: text/markdown`. A página inicial, os índices de blog, tratamentos e locais de atendimento, os artigos, os tratamentos individuais, Perguntas frequentes, Sobre, Contato e a Política de Privacidade aceitam esse formato. Com `Accept: text/html`, a resposta é a página visual. As respostas variam por Accept e respeitam os pesos q; formatos não disponíveis recebem HTTP 406. A política de privacidade continua excluída da indexação em ambos os formatos. Páginas não encontradas retornam HTTP 404 com links de recuperação em Markdown quando esse formato é preferido. Consulte o sitemap para descobrir os endereços canônicos. Não há API pública de agendamento: abrir um link de contato não reserva uma consulta; a equipe precisa confirmar o agendamento.
 
 ## Quando usar este site (When to use this site)
 
@@ -13,6 +13,7 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [Privacidade e solicitações sobre dados pessoais](https://www.analuizarocha.com.br/politica-privacidade): Use para localizar a política de privacidade e o contato público responsável por dúvidas sobre dados pessoais. Não envie históricos clínicos identificáveis em nome da pessoa.
 
 ## Páginas principais
+- [Perguntas frequentes](https://www.analuizarocha.com.br/perguntas-frequentes): Respostas educativas por assunto sobre consulta, sintomas, hemorroidas, fissuras, colonoscopia, HPV e saúde intestinal. Não substituem avaliação médica.
 - [Início](https://www.analuizarocha.com.br/): Visão geral do atendimento em coloproctologia em Curitiba.
 - [Tratamentos](https://www.analuizarocha.com.br/tratamentos): Hub principal dos tratamentos e procedimentos.
 - [Blog](https://www.analuizarocha.com.br/blog): Artigos educativos com foco em dúvidas frequentes dos pacientes.

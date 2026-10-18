@@ -1,6 +1,6 @@
 // Public document routes only; never include framework or image endpoints here.
 export const markdownPagePaths = [
-  '/blog', '/tratamentos', '/sobre', '/contato', '/politica-privacidade',
+  '/perguntas-frequentes', '/blog', '/tratamentos', '/sobre', '/contato', '/politica-privacidade',
   '/locais-de-atendimento',
   '/tratamentos/hemorroidas', '/tratamentos/cx-laser',
   '/tratamentos/cx-fistulas-anorretais', '/tratamentos/toxina-botulinica',

@@ -22,6 +22,7 @@ import { RelatedBlogCard } from '@/components/ui/RelatedBlogCard'
 import { TreatmentCard } from '@/components/ui/TreatmentCard'
 import { PlaceCard } from '@/components/ui/PlaceCard'
 import { ChoiceRow } from '@/components/ui/ChoiceRow'
+import { FAQHighlights } from '@/components/ui/FAQHighlights'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { StickyCTABar } from '@/components/ui/StickyCTABar'
 import { absolutizeMarkdownUrls } from '@/lib/markdown-links'
@@ -35,6 +36,8 @@ const contentComponents = new Map<unknown, (props: never) => ReactNode>([
   [TreatmentHeroImage, TreatmentHeroImage], [RelatedBlogCard, RelatedBlogCard],
   [TreatmentCard, TreatmentCard], [PlaceCard, PlaceCard], [ChoiceRow, ChoiceRow],
   [FAQAccordion, FAQAccordion], [StickyCTABar, StickyCTABar],
+  // The interactive carousel wraps server-authored cards; keep their copy.
+  [FAQHighlights, (props: { children: ReactNode }) => props.children],
 ])
 const decorativeComponents = new Set<unknown>([
   GraduationCap, Stethoscope, Plane, BookOpen, Award, Heart, Shield,

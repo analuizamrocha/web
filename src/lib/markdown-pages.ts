@@ -1,6 +1,7 @@
 // Reuse the existing synchronous server pages without moving their source or
 // metadata. Load only the requested page; keep these imports out of the proxy.
 export const markdownPages = {
+  'perguntas-frequentes': () => import('@/app/perguntas-frequentes/page'),
   blog: () => import('@/app/blog/page'),
   tratamentos: () => import('@/app/tratamentos/page'),
   sobre: () => import('@/app/sobre/page'),
