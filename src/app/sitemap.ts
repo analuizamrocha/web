@@ -3,6 +3,7 @@ import { getAllPosts } from '@/lib/blog'
 import { WEBSITE_URL } from '@/lib/constants'
 
 const STATIC_ROUTE_LAST_MODIFIED: Record<string, string> = {
+  '/perguntas-frequentes': '2026-10-18',
   '/': '2026-04-01',
   '/blog': '2026-04-01',
   '/locais-de-atendimento': '2026-05-14',
@@ -58,6 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   return [
+    {
+      url: `${WEBSITE_URL}/perguntas-frequentes`,
+      lastModified: STATIC_ROUTE_LAST_MODIFIED['/perguntas-frequentes'],
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // Homepage - Highest priority
     {
       url: WEBSITE_URL,

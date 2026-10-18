@@ -34,6 +34,7 @@ const homepageSections: NavigationItem[] = [
  * External routes that navigate to different pages
  */
 const externalRoutes: NavigationItem[] = [
+  { name: 'Dúvidas', href: '/perguntas-frequentes', id: 'faq', type: 'route' },
   { name: 'Blog', href: '/blog', id: 'blog', type: 'route' },
 ]
 
@@ -42,6 +43,7 @@ const externalRoutes: NavigationItem[] = [
  */
 export const globalNavigation: NavigationItem[] = [
   { name: 'Início', href: '/', id: 'home', type: 'route' },
+  { name: 'Dúvidas', href: '/perguntas-frequentes', id: 'faq', type: 'route' },
   { name: 'Blog', href: '/blog', id: 'blog', type: 'route' },
   {
     name: 'Locais de atendimento',
