@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import { TrackingLinkScript } from '@/components/analytics/TrackingLinkScript'
 
 const CookieConsent = dynamic(() => import('@/components/layout/CookieConsent'), {
   ssr: false,
@@ -23,6 +24,7 @@ export function ClientProviders({
     <>
       <CookieConsent />
       <AnalyticsProvider enableVercelSignals={enableVercelSignals} />
+      <TrackingLinkScript />
     </>
   )
 }
