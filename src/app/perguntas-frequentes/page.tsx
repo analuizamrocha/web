@@ -60,10 +60,10 @@ export default function PatientFAQPage() {
           <span className="inline-flex rounded-full bg-card-bg px-4 py-2 text-xs font-semibold uppercase tracking-widest text-accent-strong">
             Perguntas frequentes · Coloproctologia
           </span>
-          <h1 className="mb-6 mt-5 text-4xl font-serif font-bold text-primary sm:text-5xl lg:text-6xl">
+          <h1 className="mb-6 mt-5 text-balance text-4xl font-serif font-bold leading-[1.1] tracking-tight text-primary sm:text-5xl lg:text-6xl">
             Suas dúvidas merecem uma conversa.
           </h1>
-          <p className="text-lg text-text-body">
+          <p className="text-lg leading-relaxed text-text-body sm:text-xl">
             Perguntas frequentes sobre coloproctologia: consulta, sintomas e cuidados com o
             intestino, reto e ânus. Uma orientação inicial para você se preparar para o atendimento
             em Curitiba.
@@ -79,7 +79,7 @@ export default function PatientFAQPage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-accent-strong">
                 Um ponto de partida
               </p>
-              <h2 id="highlights-heading" className="mt-2 text-3xl text-primary">
+              <h2 id="highlights-heading" className="mt-2 text-balance text-3xl font-serif font-bold text-primary sm:text-4xl">
                 Dúvidas em destaque
               </h2>
             </div>
@@ -102,8 +102,10 @@ export default function PatientFAQPage() {
                     <span className="text-xs font-semibold uppercase tracking-wider text-accent-strong">
                       {topic.label}
                     </span>
-                    <h3 className="mb-4 mt-5 text-2xl text-primary">{item.question}</h3>
-                    <p className="mb-6 text-sm leading-relaxed text-text-body">{item.answer}</p>
+                    <h3 className="mb-4 mt-5 text-balance text-xl font-serif font-bold leading-snug text-primary sm:text-2xl">
+                      {item.question}
+                    </h3>
+                    <p className="mb-6 text-[15px] leading-relaxed text-text-body">{item.answer}</p>
                     <a
                       href={`#faq-${topic.id}`}
                       className="mt-auto text-sm font-semibold text-primary underline underline-offset-4"
@@ -124,7 +126,7 @@ export default function PatientFAQPage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-background/80">
             Dúvidas organizadas por assunto
           </p>
-          <h2 id="faq-heading" className="mb-4 mt-3 text-3xl text-background sm:text-4xl">
+          <h2 id="faq-heading" className="mb-4 mt-3 text-balance text-3xl font-serif font-bold text-background sm:text-4xl">
             O que você gostaria de saber?
           </h2>
           <p className="text-background/90">
@@ -169,7 +171,7 @@ export default function PatientFAQPage() {
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <div>
-                  <h2 id={`heading-${topic.id}`} className="text-2xl text-primary">
+                  <h2 id={`heading-${topic.id}`} className="text-2xl font-serif font-bold text-primary">
                     {topic.label}
                   </h2>
                   <p className="mt-2 text-sm text-text-muted">{topic.description}</p>
@@ -190,7 +192,7 @@ export default function PatientFAQPage() {
           aria-label="Quando procurar atendimento imediato"
           className="my-10 rounded-2xl border border-border-subtle bg-card-bg p-6 text-text-body"
         >
-          <h2 className="mb-3 text-xl text-primary">Quando não esperar pela consulta</h2>
+          <h2 className="mb-3 text-xl font-serif font-bold text-primary">Quando não esperar pela consulta</h2>
           <p className="text-sm">
             Sangramento intenso, desmaio, dor forte com febre ou piora importante do estado geral
             precisam de atendimento imediato em um serviço de urgência. O WhatsApp de agendamento
@@ -205,7 +207,7 @@ export default function PatientFAQPage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-accent-strong">
             Atendimento em Curitiba
           </p>
-          <h2 id="contact-heading" className="mb-4 mt-3 text-3xl text-primary">
+          <h2 id="contact-heading" className="mb-4 mt-3 text-balance text-3xl font-serif font-bold text-primary sm:text-4xl">
             Sua dúvida pode ser o começo do cuidado.
           </h2>
           <p className="text-text-body">
