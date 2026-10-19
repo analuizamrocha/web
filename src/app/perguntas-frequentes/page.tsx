@@ -60,7 +60,7 @@ export default function PatientFAQPage() {
           <span className="inline-flex rounded-full bg-card-bg px-4 py-2 text-xs font-semibold uppercase tracking-widest text-accent-strong">
             Perguntas frequentes · Coloproctologia
           </span>
-          <h1 className="mb-6 mt-5 text-4xl font-serif text-primary sm:text-5xl lg:text-6xl">
+          <h1 className="mb-6 mt-5 text-4xl font-serif font-bold text-primary sm:text-5xl lg:text-6xl">
             Suas dúvidas merecem uma conversa.
           </h1>
           <p className="text-lg text-text-body">
@@ -74,7 +74,7 @@ export default function PatientFAQPage() {
         </div>
 
         <section aria-labelledby="highlights-heading" className="mb-14">
-          <div className="flex flex-wrap items-end justify-between gap-3">
+          <div className="flex flex-wrap items-end justify-between gap-3 pb-6">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-accent-strong">
                 Um ponto de partida
