@@ -1,5 +1,56 @@
 @import "tailwindcss";
 
+/* Keep native scrolling and system high-contrast scrollbars intact. */
+@media (forced-colors: none) {
+  html,
+  .faq-highlights-scrollbar {
+    scrollbar-color: var(--color-accent-strong) var(--color-card-bg);
+  }
+
+  @supports selector(::-webkit-scrollbar) {
+    html,
+    .faq-highlights-scrollbar {
+      scrollbar-color: auto;
+    }
+
+    html::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    .faq-highlights-scrollbar::-webkit-scrollbar {
+      height: 12px;
+    }
+
+    html::-webkit-scrollbar-track,
+    .faq-highlights-scrollbar::-webkit-scrollbar-track {
+      background: var(--color-card-bg);
+      border-radius: 999px;
+    }
+
+    html::-webkit-scrollbar-thumb,
+    .faq-highlights-scrollbar::-webkit-scrollbar-thumb {
+      border: 2px solid var(--color-card-bg);
+      border-radius: 999px;
+      background: var(--color-accent-strong);
+    }
+
+    html::-webkit-scrollbar-thumb {
+      min-height: 48px;
+    }
+
+    .faq-highlights-scrollbar::-webkit-scrollbar-thumb {
+      min-width: 48px;
+    }
+
+    html::-webkit-scrollbar-thumb:hover,
+    html::-webkit-scrollbar-thumb:active,
+    .faq-highlights-scrollbar::-webkit-scrollbar-thumb:hover,
+    .faq-highlights-scrollbar::-webkit-scrollbar-thumb:active {
+      background: var(--color-primary);
+    }
+  }
+}
+
 @theme {
   /* Page background */
   --color-background: #fffbf7;        /* Warm cream */
