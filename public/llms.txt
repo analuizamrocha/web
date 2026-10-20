@@ -66,6 +66,7 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [Hemorroida ou plicoma: como saber a diferença?](https://www.analuizarocha.com.br/blog/hemorroida-ou-plicoma-diferenca)
 
 ## Cisto pilonidal
+- [Cisto pilonidal voltou: o que muda na avaliação e no tratamento?](https://www.analuizarocha.com.br/blog/cisto-pilonidal-recidivado-tratamento)
 - [Cisto pilonidal: o que é e quando é a melhor hora de operar](https://www.analuizarocha.com.br/blog/cisto-pilonidal-cirurgia-laser-quando-operar)
 - [Cisto pilonidal: sempre precisa de cirurgia?](https://www.analuizarocha.com.br/blog/cisto-pilonidal-precisa-cirurgia)
 
@@ -86,6 +87,7 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [Coceira no ânus: causas e tratamento](https://www.analuizarocha.com.br/blog/coceira-anus-causas-tratamento)
 
 ## Constipação, diarreia e intestino
+- [Dissinergia evacuatória: biofeedback e o papel da toxina botulínica](https://www.analuizarocha.com.br/blog/dissinergia-evacuatoria-toxina-botulinica)
 - [Constipação intestinal crônica: causas e tratamento](https://www.analuizarocha.com.br/blog/constipacao-intestinal-cronica-causas-tratamento)
 - [Diarreia crônica: causas e tratamento](https://www.analuizarocha.com.br/blog/diarreia-cronica-tratamento)
 - [Intestino preso por muitos dias: é perigoso?](https://www.analuizarocha.com.br/blog/intestino-preso-muitos-dias-perigoso)
@@ -100,7 +102,12 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [Distúrbios do assoalho pélvico e funcionamento intestinal](https://www.analuizarocha.com.br/blog/disturbios-assoalho-pelvico-funcionamento-intestino)
 
 ## Saúde sexual
+- [Dor anal na relação sexual: causas e quando procurar avaliação](https://www.analuizarocha.com.br/blog/dor-anal-relacao-sexual)
 - [Saúde sexual: cuidado, informação e bem-estar](https://www.analuizarocha.com.br/blog/saude-sexual-cuidado-informacao-bem-estar)
+
+## Recuperação e tecnologias complementares
+- [Pós-operatório em casa: cuidados após cirurgia proctológica](https://www.analuizarocha.com.br/blog/pos-operatorio-cirurgia-proctologica-cuidados)
+- [Fotobiomodulação no pós-operatório: possibilidades e limites](https://www.analuizarocha.com.br/blog/fotobiomodulacao-pos-operatorio-proctologia)
 
 ## Proctologia e coloproctologia
 - [Proctologista e coloproctologista: entenda os termos](https://www.analuizarocha.com.br/blog/proctologista-e-coloproctologista-entenda-os-termos)
