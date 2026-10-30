@@ -1,0 +1,76 @@
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { startWhatsAppTracking } from '@/lib/whatsapp-tracking'
+
+const BASE = 'https://go.mdxstudio.com.br/c/test1234'
+let stop: (() => void) | undefined
+const link = () => document.querySelector('a')!
+function consent(value: string) {
+  window.localStorage.setItem('lgpd-cookie-consent', value)
+  window.dispatchEvent(new Event('lgpd-consent-updated'))
+}
+beforeEach(() => {
+  for (const key of ['localStorage', 'sessionStorage']) {
+    const values = new Map<string, string>()
+    vi.stubGlobal(key, { getItem: (k: string) => values.get(k) ?? null, setItem: (k: string, v: string) => values.set(k, v), removeItem: (k: string) => values.delete(k), clear: () => values.clear() })
+  }
+  window.localStorage.clear()
+  window.sessionStorage.clear()
+  window.history.replaceState({}, '', '/?utm_source=google&utm_campaign=teste-release&gclid=TESTE123&email=private')
+  document.body.innerHTML = `<a href="${BASE}">Agendar</a>`
+})
+afterEach(() => { stop?.(); document.body.innerHTML = ''; vi.unstubAllGlobals() })
+
+describe('campaign consent and navigation', () => {
+  it('collects nothing before acceptance or after rejection, then clears and restores on revocation', () => {
+    stop = startWhatsAppTracking()
+    expect(link().href).toBe(BASE)
+    expect(window.sessionStorage.getItem('mdx_tracking_params')).toBeNull()
+    consent('rejected')
+    expect(link().href).toBe(BASE)
+    consent('accepted')
+    expect(new URL(link().href).searchParams.get('gclid')).toBe('TESTE123')
+    expect(JSON.parse(window.sessionStorage.getItem('mdx_tracking_params')!)).toEqual({utm_source:'google',utm_campaign:'teste-release',gclid:'TESTE123'})
+    consent('rejected')
+    expect(link().href).toBe(BASE)
+    expect(window.sessionStorage.getItem('mdx_tracking_params')).toBeNull()
+    link().dispatchEvent(new MouseEvent('auxclick', { bubbles: true }))
+    expect(link().href).toBe(BASE)
+  })
+
+  it('retains campaign across page loads, and replaces stale fields on a new tagged landing', () => {
+    consent('accepted')
+    stop = startWhatsAppTracking()
+    stop()
+    window.history.replaceState({}, '', '/sobre')
+    stop = startWhatsAppTracking()
+    expect(new URL(link().href).searchParams.get('gclid')).toBe('TESTE123')
+    window.history.replaceState({}, '', '/?utm_source=instagram')
+    link().dispatchEvent(new MouseEvent('auxclick', { bubbles: true }))
+    expect(new URL(link().href).searchParams.get('utm_source')).toBe('instagram')
+    expect(new URL(link().href).searchParams.has('gclid')).toBe(false)
+    expect(new URL(link().href).searchParams.has('utm_campaign')).toBe(false)
+  })
+
+  it('decorates new anchors, preserves explicit values and leaves other destinations alone', async () => {
+    consent('accepted')
+    stop = startWhatsAppTracking()
+    document.body.innerHTML += `<a id="new" href="${BASE}?utm_content=topo">New</a><a id="other" href="https://wa.me/554133333333">Other</a>`
+    await new Promise(resolve => setTimeout(resolve, 0))
+    const added = document.querySelector<HTMLAnchorElement>('#new')!
+    expect(new URL(added.href).searchParams.get('gclid')).toBe('TESTE123')
+    expect(new URL(added.href).searchParams.get('utm_content')).toBe('topo')
+    expect(document.querySelector<HTMLAnchorElement>('#other')!.href).toBe('https://wa.me/554133333333')
+    stop()
+    expect(added.href).toBe(`${BASE}?utm_content=topo`)
+  })
+
+  it('does not restore a campaign collected before revocation when accepting again', () => {
+    consent('accepted')
+    stop = startWhatsAppTracking()
+    window.history.replaceState({}, '', '/sobre')
+    consent('rejected')
+    consent('accepted')
+    expect(link().href).toBe(BASE)
+    expect(window.sessionStorage.getItem('mdx_tracking_params')).toBeNull()
+  })
+})

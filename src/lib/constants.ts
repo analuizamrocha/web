@@ -1,3 +1,5 @@
+import { validateTrackingUrl } from './whatsapp-tracking'
+
 /**
  * Application Constants
  * Centralized configuration for doctor information, contact details, and clinic data
@@ -137,29 +139,12 @@ export const buildWhatsAppHref = (phone: string, encodedMessage: string) =>
  * conversation records the ad or page it came from. The link itself opens
  * the same secretary number with the same message. Unset keeps plain wa.me.
  */
-export const WHATSAPP_TRACKING_URL =
-  process.env.NEXT_PUBLIC_WHATSAPP_TRACKING_URL?.trim() ?? ''
-
-/**
- * Script that carries the visit's Google Ads / UTM parameters onto the
- * tracking link. Served by the same host as the link; empty when unset.
- */
-export const trackingScriptSrc = (trackingUrl: string) => {
-  if (!trackingUrl) return ''
-  try {
-    return `${new URL(trackingUrl).origin}/s.js`
-  } catch {
-    return ''
-  }
-}
-
-export const WHATSAPP_TRACKING_SCRIPT_SRC = trackingScriptSrc(
-  WHATSAPP_TRACKING_URL
+export const WHATSAPP_TRACKING_URL = validateTrackingUrl(
+  process.env.NEXT_PUBLIC_WHATSAPP_TRACKING_URL
 )
 
 /** Ready-to-use href for scheduling a consultation with the secretary */
-export const WHATSAPP_HREF_SECRETARY =
-  (WHATSAPP_TRACKING_SCRIPT_SRC && WHATSAPP_TRACKING_URL) ||
+export const WHATSAPP_HREF_SECRETARY = WHATSAPP_TRACKING_URL ||
   buildWhatsAppHref(WPP_NUMBER_SECRETARY, WHATSAPP_MSG_TEXT_SECRETARY_ENCODED)
 
 // =============================================================================

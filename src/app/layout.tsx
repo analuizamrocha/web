@@ -12,7 +12,9 @@ import {
   CLINICA_NASSIF,
   WEBSITE_URL,
   TAG_INSTAGRAM,
+  WHATSAPP_TRACKING_URL,
 } from '@/lib/constants'
+import { validateTrackingUrl } from '@/lib/whatsapp-tracking'
 import { getStructuredData } from '@/lib/structured-data'
 
 const montserrat = Montserrat({
@@ -191,7 +193,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
-        <ClientProviders enableVercelSignals={isVercelRuntime} />
+        <ClientProviders
+          enableVercelSignals={isVercelRuntime}
+          enableWhatsAppTracking={Boolean(WHATSAPP_TRACKING_URL || validateTrackingUrl(process.env.WHATSAPP_TEST_TRACKING_URL))}
+        />
       </body>
     </html>
   )

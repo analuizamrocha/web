@@ -1,2 +1,2 @@
 export { AnalyticsProvider } from './AnalyticsProvider'
-export { TrackingLinkScript } from './TrackingLinkScript'
+export { WhatsAppTracking } from './WhatsAppTracking'

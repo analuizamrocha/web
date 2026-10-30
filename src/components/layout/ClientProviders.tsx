@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { TrackingLinkScript } from '@/components/analytics/TrackingLinkScript'
+import { WhatsAppTracking } from '@/components/analytics/WhatsAppTracking'
 
 const CookieConsent = dynamic(() => import('@/components/layout/CookieConsent'), {
   ssr: false,
@@ -17,14 +17,16 @@ const AnalyticsProvider = dynamic(
 
 export function ClientProviders({
   enableVercelSignals = false,
+  enableWhatsAppTracking = false,
 }: {
   enableVercelSignals?: boolean
+  enableWhatsAppTracking?: boolean
 }) {
   return (
     <>
       <CookieConsent />
       <AnalyticsProvider enableVercelSignals={enableVercelSignals} />
-      <TrackingLinkScript />
+      {enableWhatsAppTracking ? <WhatsAppTracking /> : null}
     </>
   )
 }
