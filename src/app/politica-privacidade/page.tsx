@@ -179,6 +179,30 @@ export default function PoliticaPrivacidadePage() {
               ciente de que certas funcionalidades podem ser afetadas.
             </p>
 
+            <h3>Origem do contato por WhatsApp</h3>
+            <p>
+              Quando um botão de WhatsApp usa um link rastreável do MDX Studio,
+              aceitar os cookies permite guardar os parâmetros da campanha
+              (UTM e identificadores de clique de anúncios) no armazenamento da
+              sessão do navegador. Eles acompanham a visita entre páginas e são
+              enviados ao MDX Studio quando você abre esse link.
+            </p>
+            <p>
+              O MDX Studio registra o clique e abre o WhatsApp com um código de
+              referência no texto. Se você enviar a mensagem com esse código, a
+              clínica poderá relacionar a conversa à campanha. O redirecionamento
+              registra também o horário, o domínio de origem, o tipo de dispositivo
+              e uma representação protegida do endereço IP. Sem aceitar, os
+              parâmetros de campanha da visita não são guardados nem acrescentados
+              ao link; o clique ainda pode registrar a origem padrão do botão.
+            </p>
+            <p>
+              Para revogar sua permissão, use “Gerenciar preferências de cookies”
+              e escolha “Recusar”. Isso apaga os parâmetros desta sessão e impede
+              novos envios desses parâmetros pelos botões. Não apaga registros
+              já enviados; para solicitar sua exclusão, use o contato abaixo.
+            </p>
+
             <h2>7. Direitos do titular</h2>
             <p>
               Nos termos do art. 18 da LGPD, o titular dos dados tem direito a:
@@ -235,7 +259,7 @@ export default function PoliticaPrivacidadePage() {
             </p>
 
             <p className="text-sm text-secondary mt-8">
-              <strong>Última atualização:</strong> Outubro de 2025
+              <strong>Última atualização:</strong> 30 de outubro de 2026
             </p>
           </div>
         </div>

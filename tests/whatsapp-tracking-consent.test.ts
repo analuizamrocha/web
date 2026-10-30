@@ -73,4 +73,25 @@ describe('campaign consent and navigation', () => {
     expect(link().href).toBe(BASE)
     expect(window.sessionStorage.getItem('mdx_tracking_params')).toBeNull()
   })
+  it('keeps the current handoff usable when session storage is unavailable', () => {
+    consent('accepted')
+    vi.spyOn(window.sessionStorage, 'getItem').mockImplementation(() => { throw new Error('blocked') })
+    vi.spyOn(window.sessionStorage, 'setItem').mockImplementation(() => { throw new Error('blocked') })
+    vi.spyOn(window.sessionStorage, 'removeItem').mockImplementation(() => { throw new Error('blocked') })
+    stop = startWhatsAppTracking()
+    expect(new URL(link().href).searchParams.get('gclid')).toBe('TESTE123')
+    consent('rejected')
+    expect(link().href).toBe(BASE)
+  })
+
+  it('filters stored fields and caps campaign values', () => {
+    window.history.replaceState({}, '', '/sobre')
+    window.sessionStorage.setItem('mdx_tracking_params', JSON.stringify({gclid:'x'.repeat(300), email:'private', utm_source:42}))
+    consent('accepted')
+    stop = startWhatsAppTracking()
+    expect(new URL(link().href).searchParams.get('gclid')).toBe('x'.repeat(256))
+    expect(new URL(link().href).searchParams.has('email')).toBe(false)
+    expect(new URL(link().href).searchParams.has('utm_source')).toBe(false)
+  })
+
 })
