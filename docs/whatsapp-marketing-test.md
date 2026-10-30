@@ -21,7 +21,7 @@ The website implements the allow-listed query contract locally instead of execut
 | Created link | Bot HEAD `/c/eem9xz27` → 502 | **Blocked**, no tracking click recorded by HEAD |
 | Tenant | Ops shows active clinic, WhatsApp ready, connected number `554130739732`; dedicated link active with zero clicks | Confirmed |
 | Report screen | Tenant config shows `release-insights-manager-report` inheriting global disabled | Off; independent of recording attribution |
-| Website preview | Original PR Vercel status was Blocked; connected Vercel account lacks access to clinic team | Needs accessible updated preview |
+| Website preview | Original PR Vercel status was Blocked; updated commit `41b1b14` built successfully on Vercel. Connected Vercel account lacks direct access to clinic team | Build passed; latest head and browser access still need checking |
 | Real message | No controlled message sent | **Unproven** |
 
 ### Ingest configuration repair

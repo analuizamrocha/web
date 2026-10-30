@@ -94,4 +94,40 @@ describe('campaign consent and navigation', () => {
     expect(new URL(link().href).searchParams.has('utm_source')).toBe(false)
   })
 
+  it('preserves an explicit campaign value over the landing campaign', () => {
+    link().href = `${BASE}?utm_source=qr&utm_campaign=pinned`
+    consent('accepted')
+    stop = startWhatsAppTracking()
+    expect(new URL(link().href).searchParams.get('utm_source')).toBe('qr')
+    expect(new URL(link().href).searchParams.get('utm_campaign')).toBe('pinned')
+    expect(new URL(link().href).searchParams.get('gclid')).toBe('TESTE123')
+    consent('rejected')
+    expect(link().href).toBe(`${BASE}?utm_source=qr&utm_campaign=pinned`)
+  })
+
+  it('removes listeners and the observer so stopped tracking cannot restart', async () => {
+    consent('accepted')
+    stop = startWhatsAppTracking()
+    stop()
+    window.sessionStorage.clear()
+    window.history.replaceState({}, '', '/?utm_source=facebook&fbclid=NEW')
+    for (const event of ['lgpd-consent-updated', 'storage', 'popstate']) {
+      window.dispatchEvent(new Event(event))
+      expect(link().href).toBe(BASE)
+      expect(window.sessionStorage.getItem('mdx_tracking_params')).toBeNull()
+    }
+    for (const event of ['click', 'auxclick']) {
+      link().addEventListener(event, event => event.preventDefault())
+      link().dispatchEvent(new MouseEvent(event, {bubbles:true,cancelable:true}))
+      expect(link().href).toBe(BASE)
+      expect(window.sessionStorage.getItem('mdx_tracking_params')).toBeNull()
+    }
+    const added = document.createElement('a')
+    added.href = BASE
+    document.body.append(added)
+    await new Promise(resolve => setTimeout(resolve, 0))
+    expect(added.href).toBe(BASE)
+    expect(window.sessionStorage.getItem('mdx_tracking_params')).toBeNull()
+  })
+
 })
