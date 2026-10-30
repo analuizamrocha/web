@@ -195,7 +195,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <ClientProviders
           enableVercelSignals={isVercelRuntime}
-          enableWhatsAppTracking={Boolean(WHATSAPP_TRACKING_URL || validateTrackingUrl(process.env.WHATSAPP_TEST_TRACKING_URL))}
+          enableWhatsAppTracking={Boolean(WHATSAPP_TRACKING_URL || validateTrackingUrl(process.env.WHATSAPP_HOME_TRACKING_URL))}
         />
       </body>
     </html>

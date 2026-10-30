@@ -18,8 +18,8 @@ describe('scheduling WhatsApp link', () => {
     const constants = await loadConstants(TRACKING_URL)
     expect(constants.WHATSAPP_HREF_SECRETARY).toBe(TRACKING_URL)
   })
-  it('does not enable normal CTAs through the isolated test configuration', async () => {
-    vi.stubEnv('WHATSAPP_TEST_TRACKING_URL', TRACKING_URL)
+  it('does not enable shared CTAs through the home hero pilot configuration', async () => {
+    vi.stubEnv('WHATSAPP_HOME_TRACKING_URL', TRACKING_URL)
     const constants = await loadConstants()
     expect(constants.WHATSAPP_HREF_SECRETARY).toMatch(/^https:\/\/wa.me\/554130739732\?text=/)
   })

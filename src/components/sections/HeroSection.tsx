@@ -2,7 +2,8 @@ import Image from 'next/image'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { WHATSAPP_HREF_SECRETARY } from '@/lib/constants'
 
-export function HeroSection() {
+/** `ctaHref` lets the home page pilot a tracking link on this CTA alone. */
+export function HeroSection({ ctaHref = WHATSAPP_HREF_SECRETARY }: { ctaHref?: string }) {
   return (
     <section
       className="section relative isolate bg-background pt-16 md:pt-18"
@@ -42,7 +43,7 @@ export function HeroSection() {
             {/* Elegant CTA Section */}
             <div className="mt-8">
               <LinkButton
-                href={WHATSAPP_HREF_SECRETARY}
+                href={ctaHref}
                 external
                 newTab
                 variant="primary"
