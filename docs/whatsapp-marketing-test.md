@@ -4,12 +4,7 @@
 
 One CTA is tracked: **Agende sua consulta agora** in the home hero (`src/components/sections/HeroSection.tsx`). Every other scheduling CTA (header, mobile menu, services, about, footer, inner pages) and every clinic-location destination keeps its current direct link. Measure real clicks and conversations from this pilot before deciding on a wider rollout.
 
-| Variable (Vercel production) | Pilot value | Effect |
-| --- | --- | --- |
-| `WHATSAPP_HOME_TRACKING_URL` | `https://go.mdxstudio.com.br/c/bx4jrhtd` (pilot link below) | Server-only. Replaces the home hero href and enables the local campaign decorator. |
-| `NEXT_PUBLIC_WHATSAPP_TRACKING_URL` | **empty** | Would switch all shared scheduling CTAs. Reserved for a later full rollout. |
-
-Both variables accept only `https://go.mdxstudio.com.br/c/<4–32 alphanumeric>` with no credentials, query or fragment. An empty or invalid value leaves the hero on direct secretary WhatsApp. Values are read at build time, so changes need a rebuild/redeploy. The earlier unlisted `/teste-marketing` route and `WHATSAPP_TEST_TRACKING_URL` were removed so that only one pilot CTA can be active.
+Set `WHATSAPP_HOME_TRACKING_URL=https://go.mdxstudio.com.br/c/bx4jrhtd` in Vercel **Production** only, then rebuild/redeploy, since the value is read at build time. The server checks it: only `https://go.mdxstudio.com.br/c/<4–32 alphanumeric>` with no credentials, query or fragment is accepted. An empty or invalid value keeps the hero on direct WhatsApp.
 
 ## Campaign handling (consent-controlled)
 
@@ -70,7 +65,7 @@ Earlier on 2026-10-30, the unauthenticated ingest probe returned 503 (`TRACKING_
 
 ## Owner acceptance round trip (home pilot)
 
-1. After review and an explicit merge decision, set `WHATSAPP_HOME_TRACKING_URL` to the pilot link and redeploy. Keep `NEXT_PUBLIC_WHATSAPP_TRACKING_URL` empty.
+1. After review and an explicit merge decision, set `WHATSAPP_HOME_TRACKING_URL` to the pilot link and redeploy.
 2. On desktop and mobile, open `/?utm_source=google&utm_medium=cpc&utm_campaign=teste-home-piloto&gclid=TESTE123`. Confirm that the hero is the only `go.mdxstudio.com.br` link and that header, menu, services, about, footer and location buttons stay direct.
 3. Accept cookies, open **Sobre** (client navigation), return home and click **Agende sua consulta agora**. Confirm that the WhatsApp number is correct, the message is the pilot text and an eight-character `(ref …)` is present.
 4. In Ops → clinic → Links → **Ver cliques**, wait for the queued click to appear with campaign `teste-home-piloto` before sending. Then the owner sends the draft with the ref unchanged, and you refresh until **Com conversa** rises by one. Automated tests never send WhatsApp messages. Waiting makes this first test diagnostic; it does not certify recovery from every ingestion race.
@@ -80,7 +75,7 @@ Earlier on 2026-10-30, the unauthenticated ingest probe returned 503 (`TRACKING_
 
 ## Rollback
 
-Unset `WHATSAPP_HOME_TRACKING_URL` and rebuild/redeploy. The hero returns to direct WhatsApp and the campaign decorator stops loading. Keep `NEXT_PUBLIC_WHATSAPP_TRACKING_URL` empty. No service secret reset is needed. Disable the pilot link in Ops only after it has been removed from the site; cached settings can take about a minute to expire.
+Unset `WHATSAPP_HOME_TRACKING_URL` and rebuild/redeploy. The hero returns to direct WhatsApp and the campaign decorator stops loading. No service secret reset is needed. Disable the pilot link in Ops only after it has been removed from the site; cached settings can take about a minute to expire.
 
 ## Browser verification
 

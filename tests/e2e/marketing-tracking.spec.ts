@@ -14,7 +14,6 @@ test('home hero alone follows consent, navigation and the WhatsApp handoff contr
     await page.goto(LANDING)
     await expect(heroCta(page)).toHaveAttribute('href', DIRECT)
     await expect(tracked(page)).toHaveCount(0)
-    expect((await page.request.get('/teste-marketing')).status()).toBe(404)
     return
   }
 

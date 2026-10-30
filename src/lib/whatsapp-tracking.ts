@@ -1,12 +1,13 @@
 export const TRACKING_ORIGIN = 'https://go.mdxstudio.com.br'
 export const CAMPAIGN_STORE = 'mdx_tracking_params'
+const TRACKING_PATH = /^\/c\/[a-zA-Z0-9]{4,32}$/
 const FIELDS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'gbraid', 'wbraid', 'fbclid'] as const
 
 export function validateTrackingUrl(value: string | undefined): string {
   try {
     const url = new URL(value?.trim() ?? '')
     return url.origin === TRACKING_ORIGIN && !url.username && !url.password &&
-      /^\/c\/[a-zA-Z0-9]{4,32}$/.test(url.pathname) && !url.search && !url.hash
+      TRACKING_PATH.test(url.pathname) && !url.search && !url.hash
       ? url.href : ''
   } catch { return '' }
 }
@@ -62,7 +63,7 @@ export function startWhatsAppTracking() {
     const original = previous && anchor.href === previous.decorated ? previous.original : anchor.href
     let url: URL
     try { url = new URL(original) } catch { return }
-    if (url.origin !== TRACKING_ORIGIN || !/^\/c\/[a-zA-Z0-9]{4,32}$/.test(url.pathname)) return
+    if (url.origin !== TRACKING_ORIGIN || !TRACKING_PATH.test(url.pathname)) return
     for (const [key, value] of Object.entries(params)) {
       if (!url.searchParams.has(key)) url.searchParams.set(key, value)
     }
