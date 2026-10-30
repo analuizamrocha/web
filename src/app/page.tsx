@@ -8,8 +8,12 @@ import {
   AboutSection,
 } from '@/components/sections'
 import { getFAQSchema } from '@/lib/faq-schema'
+import { validateTrackingUrl } from '@/lib/whatsapp-tracking'
 
 export default function Home() {
+  // Server-only pilot: tracks the hero CTA alone; empty/invalid keeps direct WhatsApp.
+  const heroHref = validateTrackingUrl(process.env.WHATSAPP_HOME_TRACKING_URL) || undefined
+
   return (
     <>
       <script
@@ -19,7 +23,7 @@ export default function Home() {
         }}
       />
       <div className="min-h-screen">
-        <HeroSection />
+        <HeroSection ctaHref={heroHref} />
         <AboutSection />
         <MissionSection />
         <ServicesSection />

@@ -13,6 +13,7 @@ import {
   WEBSITE_URL,
   TAG_INSTAGRAM,
 } from '@/lib/constants'
+import { validateTrackingUrl } from '@/lib/whatsapp-tracking'
 import { getStructuredData } from '@/lib/structured-data'
 
 const montserrat = Montserrat({
@@ -191,7 +192,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
-        <ClientProviders enableVercelSignals={isVercelRuntime} />
+        <ClientProviders
+          enableVercelSignals={isVercelRuntime}
+          enableWhatsAppTracking={Boolean(validateTrackingUrl(process.env.WHATSAPP_HOME_TRACKING_URL))}
+        />
       </body>
     </html>
   )

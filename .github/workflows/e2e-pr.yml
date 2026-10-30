@@ -46,7 +46,20 @@ jobs:
         env:
           CI: true
           PLAYWRIGHT_PRODUCTION: 'true'
-        run: bun run e2e -- tests/e2e/smoke.spec.ts tests/e2e/agent-readiness.spec.ts tests/e2e/seo-recovery.spec.ts tests/e2e/patient-faqs.spec.ts tests/e2e/mobile-menu-layout.spec.ts
+        run: bun run e2e -- tests/e2e/smoke.spec.ts tests/e2e/agent-readiness.spec.ts tests/e2e/seo-recovery.spec.ts tests/e2e/patient-faqs.spec.ts tests/e2e/mobile-menu-layout.spec.ts tests/e2e/marketing-tracking.spec.ts
+
+      - name: Build home hero tracking pilot mode
+        env:
+          WHATSAPP_HOME_TRACKING_URL: https://go.mdxstudio.com.br/c/test1234
+        # A clean build keeps the default-mode output out of the pilot build.
+        run: rm -rf .next && bun run build
+
+      - name: Verify home hero tracking pilot mode
+        env:
+          CI: true
+          PLAYWRIGHT_PRODUCTION: 'true'
+          MARKETING_TEST_MODE: enabled
+        run: bun run e2e -- tests/e2e/marketing-tracking.spec.ts
 
       - name: Upload Playwright reports
         if: always()
