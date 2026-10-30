@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+/* Keep native scrolling and system high-contrast scrollbars intact. */
+@media (forced-colors: none) {
+  .faq-highlights-scrollbar {
+    scrollbar-color: var(--color-accent-strong) var(--color-card-bg);
+  }
+
+  @supports selector(::-webkit-scrollbar) {
+    .faq-highlights-scrollbar {
+      scrollbar-color: auto;
+    }
+
+    .faq-highlights-scrollbar::-webkit-scrollbar {
+      height: 12px;
+    }
+
+    .faq-highlights-scrollbar::-webkit-scrollbar-track {
+      background: var(--color-card-bg);
+      border-radius: 999px;
+    }
+
+    .faq-highlights-scrollbar::-webkit-scrollbar-thumb {
+      min-width: 48px;
+      border: 2px solid var(--color-card-bg);
+      border-radius: 999px;
+      background: var(--color-accent-strong);
+    }
+
+    .faq-highlights-scrollbar::-webkit-scrollbar-thumb:hover,
+    .faq-highlights-scrollbar::-webkit-scrollbar-thumb:active {
+      background: var(--color-primary);
+    }
+  }
+}
+
 @theme {
   /* Page background */
   --color-background: #fffbf7;        /* Warm cream */

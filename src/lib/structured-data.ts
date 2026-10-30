@@ -2,6 +2,8 @@ import {
   DR_NAME,
   CLINICA_NASSIF,
   WPP_NUMBER_SECRETARY_FORMATTED,
+  WPP_NUMBER_SECRETARY,
+  CONTACT_EMAIL,
   WEBSITE_URL,
   URL_INSTAGRAM,
   ORG_DESCRIPTION,
@@ -16,6 +18,16 @@ import {
   HOSPITAL_MACKENZIE,
   HOSPITAL_CLINIC_BARCELONA,
 } from './constants'
+
+// Shared by every Organization node so agents find the same scheduling contact.
+const schedulingContactPoint = {
+  '@type': 'ContactPoint',
+  telephone: `+${WPP_NUMBER_SECRETARY}`,
+  email: CONTACT_EMAIL,
+  contactType: 'appointment scheduling',
+  availableLanguage: ['pt-BR'],
+  url: `${WEBSITE_URL}/contato`,
+}
 
 export const structuredData = {
   '@context': 'https://schema.org',
@@ -42,6 +54,7 @@ export const structuredData = {
         longitude: CLINICA_NASSIF.coordinates.longitude,
       },
       telephone: WPP_NUMBER_SECRETARY_FORMATTED,
+      contactPoint: schedulingContactPoint,
       priceRange: '$$',
       openingHours: CLINICA_NASSIF.openingHours,
       areaServed: {
@@ -214,6 +227,7 @@ export const structuredData = {
         longitude: CLINICA_NASSIF.coordinates.longitude,
       },
       telephone: WPP_NUMBER_SECRETARY_FORMATTED,
+      contactPoint: schedulingContactPoint,
       url: WEBSITE_URL,
       image: `${WEBSITE_URL}/images/og.png`,
       priceRange: '$$',

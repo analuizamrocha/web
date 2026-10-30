@@ -3,7 +3,7 @@ title: 'Botox para fissura anal funciona mesmo?'
 metaDescription: 'Entenda como a toxina botulínica age na fissura anal crônica, quando pode ser indicada, suas limitações e quando a cirurgia é considerada.'
 slug: 'fissura-anal-toxina-botulinica-tratamento'
 publishDate: '2026-03-15'
-lastModified: '2026-07-21'
+lastModified: '2026-10-16'
 primaryKeyword: 'botox para fissura anal funciona'
 secondaryKeywords:
   - 'toxina botulínica fissura anal'
@@ -84,7 +84,7 @@ A aplicação costuma ser considerada principalmente quando há:
 - hipertonia ou espasmo do esfíncter na avaliação clínica
 - necessidade de evitar uma intervenção que corte o esfíncter, conforme o perfil do paciente
 
-Fissuras agudas frequentemente melhoram com [tratamento clínico e correção do hábito intestinal](/blog/fissura-anal-tratamento). Nem toda fissura precisa de botox, e a aplicação não deve ser feita sem avaliação coloproctológica.
+Fissuras agudas frequentemente melhoram com [tratamento clínico e correção do hábito intestinal](/blog/fissura-anal-tratamento). Nem toda fissura precisa de botox, e a aplicação não deve ser feita sem avaliação coloproctológica. A página sobre [toxina botulínica na proctologia](/tratamentos/toxina-botulinica) reúne informações sobre o procedimento e sua avaliação.
 
 ## O intestino continua sendo parte do tratamento
 

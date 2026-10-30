@@ -70,6 +70,9 @@ export const HOSPITAL_CLINIC_BARCELONA = 'Hospital Clinic Barcelona'
 /** Primary website URL */
 export const WEBSITE_URL = 'https://www.analuizarocha.com.br'
 
+/** Public email already listed in the site's privacy policy. */
+export const CONTACT_EMAIL = 'analuizarochaprocto@gmail.com'
+
 /** Instagram profile URL */
 export const URL_INSTAGRAM = 'https://www.instagram.com/analuiza.mrocha/'
 
