@@ -55,6 +55,7 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [A fissura anal pode cicatrizar sozinha? Entenda quando esperar e quando tratar](https://www.analuizarocha.com.br/blog/fissura-anal-pode-cicatrizar-sozinha)
 
 ## Fístula e plicoma
+- [Laser para fístula anal (FiLaC): indicações e limites](https://www.analuizarocha.com.br/blog/laser-fistula-anal-filac-indicacoes)
 - [Tratamento de fístulas anorretais](https://www.analuizarocha.com.br/blog/tratamento-fistulas-anorretais)
 - [Células mesenquimais para fístulas anorretais: uma nova perspectiva no tratamento](https://www.analuizarocha.com.br/blog/celulas-mesenquimais-fistulas-anorretais)
 - [Fístulas anorretais recidivadas: desafios no tratamento e perspectivas atuais](https://www.analuizarocha.com.br/blog/fistulas-anorretais-recidivadas-tratamento)
@@ -95,6 +96,8 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [Dor ao evacuar: causas e tratamento](https://www.analuizarocha.com.br/blog/dor-ao-evacuar-causas-tratamento)
 
 ## Doenças funcionais e inflamatórias
+- [Algo sai pelo ânus: é hemorroida ou prolapso retal?](https://www.analuizarocha.com.br/blog/hemorroida-ou-prolapso-retal)
+- [Intestino irritável ou doença inflamatória intestinal: como diferenciar?](https://www.analuizarocha.com.br/blog/intestino-irritavel-ou-doenca-inflamatoria)
 - [Síndrome do intestino irritável: sintomas, diagnóstico e tratamento](https://www.analuizarocha.com.br/blog/sindrome-intestino-irritavel-sintomas-diagnostico-tratamento)
 - [Doenças inflamatórias intestinais: acompanhamento clínico](https://www.analuizarocha.com.br/blog/doencas-inflamatorias-intestinais-acompanhamento)
 - [Distúrbios do assoalho pélvico e funcionamento intestinal](https://www.analuizarocha.com.br/blog/disturbios-assoalho-pelvico-funcionamento-intestino)
