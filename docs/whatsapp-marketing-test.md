@@ -6,7 +6,7 @@ One CTA is tracked: **Agende sua consulta agora** in the home hero (`src/compone
 
 | Variable (Vercel production) | Pilot value | Effect |
 | --- | --- | --- |
-| `WHATSAPP_HOME_TRACKING_URL` | the new pilot link created in Ops (below) | Server-only. Replaces the home hero href and enables the local campaign decorator. |
+| `WHATSAPP_HOME_TRACKING_URL` | `https://go.mdxstudio.com.br/c/bx4jrhtd` (pilot link below) | Server-only. Replaces the home hero href and enables the local campaign decorator. |
 | `NEXT_PUBLIC_WHATSAPP_TRACKING_URL` | **empty** | Would switch all shared scheduling CTAs. Reserved for a later full rollout. |
 
 Both variables accept only `https://go.mdxstudio.com.br/c/<4–32 alphanumeric>` with no credentials, query or fragment. An empty or invalid value leaves the hero on direct secretary WhatsApp. Values are read at build time, so changes need a rebuild/redeploy. The earlier unlisted `/teste-marketing` route and `WHATSAPP_TEST_TRACKING_URL` were removed so that only one pilot CTA can be active.
@@ -42,7 +42,7 @@ Create one clinic link, separate from the technical-test link, so pilot counts s
 
   The Worker/API appends ` (ref XXXXXXXX)` automatically. Never type a fixed token into Ops. The MDX matcher (`backend/libs/database/src/tracking-link.ts`) looks for the literal `(ref …)` token in the sent text. If a person deletes it, that message is not attributed and the click stays unclaimed. Do not infer the origin from timing or IP, and do not label missing attribution as organic. An origin already recorded for a conversation is not erased by a later untagged message. A `>` quote is only visual formatting; it neither hides the token nor protects it from deletion. Check the real draft on mobile and desktop and adjust the line spacing if needed.
 
-Use the generated URL as `WHATSAPP_HOME_TRACKING_URL`. Do not invent a short code.
+Created on 2026-10-30 as `https://go.mdxstudio.com.br/c/bx4jrhtd` (active, 0 clicks). A HEAD check returned 302 to `wa.me/554130739732` with the text above and, as intended, no ref. Use this URL as `WHATSAPP_HOME_TRACKING_URL`.
 
 ## Evidence
 
