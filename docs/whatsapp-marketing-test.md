@@ -4,7 +4,7 @@
 
 One CTA is tracked: **Agende sua consulta agora** in the home hero (`src/components/sections/HeroSection.tsx`). Every other scheduling CTA (header, mobile menu, services, about, footer, inner pages) and every clinic-location destination keeps its current direct link. Measure real clicks and conversations from this pilot before deciding on a wider rollout.
 
-Set `WHATSAPP_HOME_TRACKING_URL=https://go.mdxstudio.com.br/c/bx4jrhtd` in Vercel **Production** only, then rebuild/redeploy, since the value is read at build time. The server checks it: only `https://go.mdxstudio.com.br/c/<4–32 alphanumeric>` with no credentials, query or fragment is accepted. An empty or invalid value keeps the hero on direct WhatsApp.
+Set `WHATSAPP_HOME_TRACKING_URL=https://go.mdxstudio.com.br/c/69v4xyak` in Vercel **Production** only, then rebuild/redeploy, since the value is read at build time. The server checks it: only `https://go.mdxstudio.com.br/c/<4–32 alphanumeric>` with no credentials, query or fragment is accepted. An empty or invalid value keeps the hero on direct WhatsApp.
 
 ## Campaign handling (consent-controlled)
 
@@ -24,20 +24,20 @@ Do not also install the MDX script, GTM link decoration or another campaign coll
 Create one clinic link, separate from the technical-test link, so pilot counts stay clean. Do not disable or delete `eem9xz27` to reset counts: it keeps historical attribution, and drafts already sent with it remain usable.
 
 - Ops: clinic tenant `c36cd771-ab76-4316-848e-9a56d124989f` → Links.
-- Name: **Site Ana Luiza — home hero — piloto**.
+- Name: **Site Ana Luiza — home hero — piloto v2**.
 - Destination: select the existing connected number `554130739732`. Do not type another number.
 - Defaults: source `site`, medium `referral`, campaign `analuizarocha-piloto`, content `home-hero`, term empty. Tagged campaign query fields override the defaults.
 - Prefilled text:
 
   ```text
-  Olá! Gostaria de agendar uma consulta com a Dra. Ana Luiza Rocha.
-
-  Referência da visita ao site (para identificar a origem do contato):
+  Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Ana Luiza Rocha.
   ```
 
-  The Worker/API appends ` (ref XXXXXXXX)` automatically. Never type a fixed token into Ops. The MDX matcher (`backend/libs/database/src/tracking-link.ts`) looks for the literal `(ref …)` token in the sent text. If a person deletes it, that message is not attributed and the click stays unclaimed. Do not infer the origin from timing or IP, and do not label missing attribution as organic. An origin already recorded for a conversation is not erased by a later untagged message. A `>` quote is only visual formatting; it neither hides the token nor protects it from deletion. Check the real draft on mobile and desktop and adjust the line spacing if needed.
+  The Worker/API appends ` (ref XXXXXXXX)` automatically. Never type a fixed token into Ops. The MDX matcher (`backend/libs/database/src/tracking-link.ts`) looks for the literal `(ref …)` token in the sent text. If a person deletes it, that message is not attributed and the click stays unclaimed. Do not infer the origin from timing or IP, and do not label missing attribution as organic. An origin already recorded for a conversation is not erased by a later untagged message. A `>` quote is only visual formatting; it neither hides the token nor protects it from deletion. The draft ends the sentence with the code, so it reads like a booking reference. Do not explain tracking in the message; the privacy policy covers it. A `>` quote would put the code inside a quote block, so don't use one.
 
-Created on 2026-10-30 as `https://go.mdxstudio.com.br/c/bx4jrhtd` (active, 0 clicks). A HEAD check returned 302 to `wa.me/554130739732` with the text above and, as intended, no ref. Use this URL as `WHATSAPP_HOME_TRACKING_URL`.
+Created on 2026-10-30 as `https://go.mdxstudio.com.br/c/69v4xyak`. A HEAD check returned 302 to `wa.me/554130739732` with the text above and, as intended, no ref. Use this URL as `WHATSAPP_HOME_TRACKING_URL`.
+
+Ops cannot edit a link's text: the platform-ops API only changes its status. Changing the message therefore means creating a new link and pointing the variable at it. The first pilot link, `bx4jrhtd`, used a longer explanatory label: *"Olá! Gostaria de agendar uma consulta com a Dra. Ana Luiza Rocha. Referência da visita ao site (para identificar a origem do contato):"*. It holds the 2026-10-30 live acceptance click (google / cpc / teste-home-piloto, ref `8GVSXDTQ`, 1 Com conversa). Disable it in Ops only after production uses `69v4xyak`.
 
 ## Evidence
 
