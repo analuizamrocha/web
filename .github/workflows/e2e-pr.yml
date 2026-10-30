@@ -51,7 +51,8 @@ jobs:
       - name: Build home hero tracking pilot mode
         env:
           WHATSAPP_HOME_TRACKING_URL: https://go.mdxstudio.com.br/c/test1234
-        run: bun run build
+        # A clean build keeps the default-mode output out of the pilot build.
+        run: rm -rf .next && bun run build
 
       - name: Verify home hero tracking pilot mode
         env:
