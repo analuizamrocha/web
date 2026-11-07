@@ -3,7 +3,7 @@ title: "Algo sai pelo ânus: é hemorroida ou prolapso retal?"
 metaDescription: "Entenda diferenças entre hemorroida prolapsada e prolapso retal, como é feita a avaliação e quais sinais precisam de atendimento urgente."
 slug: "hemorroida-ou-prolapso-retal"
 publishDate: "2026-10-22"
-lastModified: "2026-10-22"
+lastModified: "2026-11-07"
 primaryKeyword: "hemorroida ou prolapso retal"
 secondaryKeywords:
   - "prolapso retal"
@@ -394,6 +394,8 @@ Por isso, antes de decidir entre pomada, ligadura, laser ou cirurgia, precisamos
 **O que sai pode provocar um incômodo parecido e ter uma origem completamente diferente. Por isso o exame vem antes do tratamento.**
 
 Se você percebe um volume durante a evacuação, precisa empurrá-lo de volta ou nota muco e alterações na continência, uma avaliação com coloproctologista pode diferenciar doença hemorroidária de prolapso retal e definir a estratégia adequada.
+
+Quando o exame confirma doença hemorroidária, as abordagens possíveis estão na página de [tratamento de hemorroidas](/tratamentos/hemorroidas).
 
 ## Fontes médicas
 

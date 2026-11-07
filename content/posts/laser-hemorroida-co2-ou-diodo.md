@@ -3,7 +3,7 @@ title: 'Laser para hemorroida: CO₂ ou diodo?'
 metaDescription: 'Laser de CO₂ ou de diodo para hemorroida? Entenda a diferença entre hemorroidoplastia e hemorroidectomia a laser e como a anatomia define a técnica.'
 slug: 'laser-hemorroida-co2-ou-diodo'
 publishDate: '2026-09-11'
-lastModified: '2026-09-11'
+lastModified: '2026-11-07'
 primaryKeyword: 'laser para hemorroida CO2 ou diodo'
 secondaryKeywords:
   - 'hemorroidoplastia laser diodo'
@@ -208,7 +208,7 @@ CO₂ ou diodo? Depende do que precisa ser tratado. Com anatomia favorável à p
 
 **Laser é ferramenta. Estratégia é o tratamento.** A escolha da técnica vem depois de entender a anatomia da doença, os sintomas que realmente incomodam e o que se espera alcançar com a cirurgia.
 
-Se você está considerando a [cirurgia a laser em proctologia](/tratamentos/cx-laser), uma avaliação com coloproctologista em Curitiba permite discutir qual abordagem faz sentido para o seu caso.
+Se você está considerando a [cirurgia a laser em proctologia](/tratamentos/cx-laser) ou quer ver essa opção junto com as demais técnicas da página de [tratamento de hemorroidas](/tratamentos/hemorroidas), uma avaliação com coloproctologista em Curitiba permite discutir qual abordagem faz sentido para o seu caso.
 
 ---
 
