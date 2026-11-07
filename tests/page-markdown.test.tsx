@@ -5,7 +5,7 @@ import { GET } from '@/app/conteudo-markdown/[[...path]]/route'
 import { markdownPages } from '@/lib/markdown-pages'
 import { markdownPagePaths } from '@/lib/markdown-page-paths'
 import { renderPageMarkdown } from '@/lib/page-markdown'
-import { WEBSITE_URL } from '@/lib/constants'
+import { WEBSITE_URL, WHATSAPP_HREF_SECRETARY, WPP_NUMBER_NASSIF, SPECTA_ENDOSCOPIA } from '@/lib/constants'
 import { getAllPosts } from '@/lib/blog'
 import { Badge } from '@/components/ui/Badge'
 
@@ -34,6 +34,21 @@ describe('shared page Markdown', () => {
       expect(body).toContain('## Perguntas frequentes')
       expect(body).toContain(`${WEBSITE_URL}/images/`)
       expect(body).toContain(`${WEBSITE_URL}/blog/`)
+    }
+    if (path === '/tratamentos/hemorroidas') {
+      expect(body).toContain(`](${WHATSAPP_HREF_SECRETARY})`)
+      expect(body).not.toContain('go.mdxstudio.com.br')
+      expect(body).not.toContain(WPP_NUMBER_NASSIF.replace(/\D/g, ''))
+      expect(body).not.toContain(SPECTA_ENDOSCOPIA.wppNumber)
+      for (const destination of [
+        '/blog/ligadura-elastica-ou-cirurgia-hemorroida',
+        '/blog/recuperacao-cirurgia-hemorroida-quanto-tempo',
+        '/blog/cirurgia-laser-hemorroida-quando-faz-sentido',
+        '/tratamentos/cx-laser',
+        '/blog/hemorroida-sempre-cirurgica-tratamento',
+      ]) {
+        expect(body).toContain(`${WEBSITE_URL}${destination}`)
+      }
     }
   })
 
