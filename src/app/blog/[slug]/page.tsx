@@ -22,6 +22,8 @@ import {
 import { LinkButton } from '@/components/ui/LinkButton'
 import { MdxImage } from '@/components/ui/MdxImage'
 import { RelatedPostsSection } from '@/components/ui/RelatedPostsSection'
+import { RelatedTreatmentCard } from '@/components/ui/RelatedTreatmentCard'
+import { getRelatedTreatmentForPost } from '@/lib/blog-related-treatment'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -216,6 +218,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 components={{ img: MdxImage }}
               />
             </div>
+            <RelatedTreatmentCard treatment={getRelatedTreatmentForPost(post.slug)} />
             <RelatedPostsSection posts={relatedPosts} />
           </div>
 
