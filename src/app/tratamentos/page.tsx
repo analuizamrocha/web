@@ -4,6 +4,7 @@ import { WHATSAPP_HREF_SECRETARY, WEBSITE_URL } from '@/lib/constants'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { TreatmentCard } from '@/components/ui/TreatmentCard'
 import { getTreatmentImageBySlug } from '@/lib/treatment-images'
+import { TREATMENTS as treatments } from '@/lib/treatments'
 import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/seo-schemas'
 
 const pageTitle = 'Tratamentos em Coloproctologia'
@@ -38,66 +39,6 @@ export const metadata: Metadata = {
   }),
 }
 
-const treatments = [
-  {
-    title: 'Cirurgias a Laser',
-    description:
-      'Procedimentos minimamente invasivos com tecnologia laser para tratamento de hemorroidas e fissuras anais.',
-    slug: 'cx-laser',
-    category: 'Cirúrgico',
-  },
-  {
-    title: 'Tratamento de Hemorroidas',
-    description:
-      'Ligadura elástica, escleroterapia e outros procedimentos para alívio dos sintomas das hemorroidas.',
-    slug: 'hemorroidas',
-    category: 'Clínico/Cirúrgico',
-  },
-  {
-    title: 'Cirurgias para Fístulas Anorretais',
-    description:
-      'Tratamento cirúrgico especializado para fístulas complexas com preservação da continência.',
-    slug: 'cx-fistulas-anorretais',
-    category: 'Cirúrgico',
-  },
-  {
-    title: 'Toxina Botulínica',
-    description:
-      'Aplicação de botox para tratamento de fissura anal e dores crônicas na região anorretal.',
-    slug: 'toxina-botulinica',
-    category: 'Clínico',
-  },
-  {
-    title: 'Rastreio do Câncer de Canal Anal',
-    description: 'Prevenção e detecção precoce de lesões pré-cancerosas e câncer anal.',
-    slug: 'rastreio-cancer-anal',
-    category: 'Preventivo',
-  },
-  {
-    title: 'Tratamento de HPV Anal',
-    description: 'Diagnóstico e tratamento de condilomas acuminados (verrugas) na região anal.',
-    slug: 'hpv-anal',
-    category: 'Clínico',
-  },
-  {
-    title: 'Cirurgia de Cisto Pilonidal',
-    description: 'Remoção cirúrgica de cistos pilonidais com técnicas modernas e indicação individualizada.',
-    slug: 'cx-cisto-pilonidal',
-    category: 'Cirúrgico',
-  },
-  {
-    title: 'Doenças Inflamatórias Intestinais',
-    description: 'Acompanhamento especializado de Doença de Crohn e Retocolite Ulcerativa.',
-    slug: 'doencas-inflamatorias-intestinais',
-    category: 'Clínico',
-  },
-  {
-    title: 'Síndrome do Intestino Irritável',
-    description: 'Diagnóstico e tratamento personalizado para controle dos sintomas intestinais.',
-    slug: 'sindrome-intestino-irritavel',
-    category: 'Clínico',
-  },
-]
 
 export default function ServicosPage() {
   return (
