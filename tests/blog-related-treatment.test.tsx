@@ -37,16 +37,35 @@ describe('related treatment on blog posts', () => {
     )
 
     expect(screen.getByRole('heading', { name: 'Tratamento de HPV Anal' })).toBeTruthy()
+    expect(screen.getByText(/condilomas acuminados/i)).toBeTruthy()
     const link = screen.getByRole('link', { name: 'Conhecer o tratamento' })
     expect(link.getAttribute('href')).toBe('/tratamentos/hpv-anal')
   })
 
-  it('renders nothing for posts without a one-to-one treatment', () => {
-    const { container } = render(
-      <RelatedTreatmentCard treatment={getRelatedTreatmentForPost('dor-ao-evacuar-causas-tratamento')} />
+  it('renders the pilonidal hub copy for the matching article', () => {
+    render(
+      <RelatedTreatmentCard treatment={getRelatedTreatmentForPost('cisto-pilonidal-precisa-cirurgia')} />
     )
 
-    expect(container.innerHTML).toBe('')
+    expect(screen.getByRole('heading', { name: 'Cirurgia de Cisto Pilonidal' })).toBeTruthy()
+    expect(screen.getByRole('link', { name: 'Conhecer o tratamento' }).getAttribute('href')).toBe(
+      '/tratamentos/cx-cisto-pilonidal'
+    )
+    expect(screen.getByText(/cistos pilonidais/i)).toBeTruthy()
+  })
+
+  it('renders nothing when the hub description would name another condition', () => {
+    for (const slug of [
+      'dor-ao-evacuar-causas-tratamento',
+      'plicoma-anal-cirurgia-laser',
+      'fissura-anal-pode-cicatrizar-sozinha',
+    ]) {
+      const { container } = render(
+        <RelatedTreatmentCard treatment={getRelatedTreatmentForPost(slug)} />
+      )
+      expect(container.innerHTML, slug).toBe('')
+      cleanup()
+    }
   })
 
   it('never points the block at WhatsApp or another external destination', () => {
