@@ -3,7 +3,7 @@ title: "Sangue nas fezes: quando se preocupar e buscar ajuda especializada"
 metaDescription: "Sangue nas fezes pode indicar desde hemorroidas até condições sérias. Descubra as causas, sinais de alerta e quando procurar um proctologista."
 slug: "sangue-nas-fezes-quando-procurar-coloproctologista"
 publishDate: "2025-10-21"
-lastModified: "2026-05-14"
+lastModified: "2026-11-07"
 primaryKeyword: "sangue nas fezes"
 secondaryKeywords:
   - "sangramento anal"
@@ -105,7 +105,7 @@ Esses exames permitem **identificar a causa do sangramento** e direcionar o trat
 
 O tratamento vai depender da causa identificada:
 
-**Hemorroidas e fissuras:** tratamento clínico com pomadas, banhos de assento e dieta rica em fibras. Em casos persistentes, pode ser indicado tratamento com **ligadura elástica** ou **cirurgia, sendo a cirurgia a laser uma opção mais moderna com benefícios quanto à recuperação**.
+**Hemorroidas e fissuras:** tratamento clínico com pomadas, banhos de assento e dieta rica em fibras. Em casos persistentes, pode ser indicado tratamento com **ligadura elástica** ou **cirurgia, sendo a cirurgia a laser uma opção mais moderna com benefícios quanto à recuperação**. As opções de [tratamento de hemorroidas](/tratamentos/hemorroidas) dependem da avaliação individual.
 
 **Pólipos:** são removidos durante a colonoscopia, evitando sua evolução para câncer.
 

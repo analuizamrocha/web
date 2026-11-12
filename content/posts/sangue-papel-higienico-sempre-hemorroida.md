@@ -3,7 +3,7 @@ title: 'Sangue no papel higiênico é sempre hemorroida?'
 metaDescription: 'Sangue no papel higiênico nem sempre é hemorroida. Conheça as causas de sangramento anal, quando investigar e quando procurar um coloproctologista em Curitiba.'
 slug: 'sangue-papel-higienico-sempre-hemorroida'
 publishDate: '2026-03-17'
-lastModified: '2026-03-17'
+lastModified: '2026-11-07'
 primaryKeyword: 'sangue no papel higiênico'
 secondaryKeywords:
   - 'sangramento anal causas'
@@ -37,7 +37,7 @@ Muitas pessoas acreditam que isso significa apenas hemorroida, mas nem sempre é
 
 ### Hemorroidas
 
-A causa mais frequente de sangramento vermelho vivo.
+A causa mais frequente de sangramento vermelho vivo. A página de [tratamento de hemorroidas](/tratamentos/hemorroidas) descreve as opções discutidas quando o exame confirma esse diagnóstico.
 
 ### Fissura anal
 

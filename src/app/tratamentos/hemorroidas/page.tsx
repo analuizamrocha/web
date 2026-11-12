@@ -82,6 +82,9 @@ const breadcrumbItems: BreadcrumbItem[] = [
   { label: 'Tratamento de Hemorroidas' },
 ]
 
+const contextualLinkClassName =
+  'cursor-pointer rounded-sm underline decoration-primary/40 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
+
 export default function TratamentoHemorroidasPage() {
   return (
     <>
@@ -192,6 +195,16 @@ export default function TratamentoHemorroidasPage() {
                   precoce às atividades.
                 </li>
               </ul>
+              <p>
+                A comparação entre a ligadura e a cirurgia está no artigo{' '}
+                <Link
+                  href="/blog/ligadura-elastica-ou-cirurgia-hemorroida"
+                  className={contextualLinkClassName}
+                >
+                  ligadura elástica ou cirurgia para hemorroida
+                </Link>
+                .
+              </p>
 
               <blockquote className="border-l-4 border-primary/30 pl-6 py-4 my-6 bg-primary/5 rounded-r-xl">
                 <p className="text-secondary italic mb-0">
@@ -253,11 +266,38 @@ export default function TratamentoHemorroidasPage() {
                   selecionados.
                 </p>
               </blockquote>
+              <p>
+                O tempo de recuperação depois da cirurgia é o tema de{' '}
+                <Link
+                  href="/blog/recuperacao-cirurgia-hemorroida-quanto-tempo"
+                  className={contextualLinkClassName}
+                >
+                  recuperação da cirurgia de hemorroida
+                </Link>
+                .
+              </p>
 
               <h2>Cirurgia a laser</h2>
               <p>
                 O laser é uma tecnologia que pode ser utilizada de diferentes
                 formas no tratamento das hemorroidas.
+              </p>
+              <p>
+                Leia também{' '}
+                <Link
+                  href="/blog/cirurgia-laser-hemorroida-quando-faz-sentido"
+                  className={contextualLinkClassName}
+                >
+                  quando a cirurgia a laser para hemorroida faz sentido
+                </Link>{' '}
+                e a página de{' '}
+                <Link
+                  href="/tratamentos/cx-laser"
+                  className={contextualLinkClassName}
+                >
+                  cirurgia a laser
+                </Link>
+                .
               </p>
 
               <h3>Hemorroidoplastia a laser</h3>
