@@ -278,28 +278,17 @@ Consent-based analytics loader using `@next/third-parties/google`.
 
 ### Adding New Blog Posts
 
-1. Create markdown file in `/content/posts/` with frontmatter:
+Follow `docs/blog-content-playbook.md` and the pre-publish checklist in `AGENTS.md`.
+They are the only source for the frontmatter contract, images, `llms.txt`, and the
+mandatory CFM compliance pass (`docs/cfm-compliance-guidelines.md`). Do not publish a
+post that has not gone through that compliance pass.
 
-    ```markdown
-    ---
-    title: "SEO-optimized title"
-    metaDescription: "Meta description under 160 chars"
-    slug: "url-friendly-slug"
-    publishDate: "2025-01-20"
-    lastModified: "2025-01-20"
-    primaryKeyword: "main target keyword"
-    secondaryKeywords: ["keyword1", "keyword2"]
-    targetAudience: "patients" | "referring-doctors" | "general-public"
-    intent: "awareness" | "consideration" | "decision"
-    featured: true
-    ---
-    ```
+Blog posts automatically:
 
-2. Blog posts automatically:
-   - Generate medical schema markup
-   - Include in sitemap
-   - Create SEO meta tags
-   - Support static generation
+- Generate medical schema markup
+- Include in sitemap
+- Create SEO meta tags
+- Support static generation
 
 ### Content Strategy for Brazilian Proctology
 
