@@ -23,7 +23,7 @@ export const TREATMENTS: TreatmentSummary[] = [
   {
     title: 'Tratamento de Hemorroidas',
     description:
-      'Ligadura elástica, escleroterapia e outros procedimentos para alívio dos sintomas das hemorroidas.',
+      'Avaliação de hemorroidas, opções ambulatoriais como ligadura elástica e cirurgia quando indicada.',
     slug: 'hemorroidas',
     category: 'Clínico/Cirúrgico',
   },

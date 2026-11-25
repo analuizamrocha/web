@@ -3,7 +3,7 @@ title: 'Laser de CO₂, laser de diodo e eletrocautério: qual é a diferença?'
 metaDescription: 'Qual a diferença entre laser de CO₂, laser de diodo e eletrocautério? Veja como cada tecnologia age no tecido e onde é usada na coloproctologia.'
 slug: 'laser-co2-diodo-eletrocauterio-diferenca'
 publishDate: '2026-09-11'
-lastModified: '2026-09-11'
+lastModified: '2026-11-25'
 primaryKeyword: 'diferença entre laser de CO2 e laser de diodo'
 secondaryKeywords:
   - 'laser CO2 ou eletrocautério'
@@ -87,7 +87,7 @@ O laser de diodo funciona de outra maneira. Em vez de ser usado principalmente c
 
 ### Onde o laser de diodo é usado
 
-Uma das aplicações mais conhecidas é a **hemorroidoplastia a laser**: a fibra é introduzida no tecido hemorroidário e a energia promove coagulação dos vasos e retração progressiva. A hemorroida é tratada por dentro, e não retirada como na hemorroidectomia.
+Uma das aplicações mais conhecidas é a **hemorroidoplastia a laser**: a fibra é introduzida no tecido hemorroidário e a energia promove coagulação dos vasos e retração progressiva. A hemorroida é tratada por dentro, e não retirada como na hemorroidectomia. A página de [tratamento de hemorroidas](/tratamentos/hemorroidas) reúne as opções discutidas na avaliação.
 
 O diodo também pode ser usado em alguns trajetos, como fístulas anais e cisto pilonidal, em que a fibra percorre o trajeto liberando energia ao longo da sua extensão.
 

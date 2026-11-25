@@ -1,6 +1,6 @@
 # Spec: SEO de páginas de serviço cirúrgicas
 
-**Status** · Proposta. O primeiro lançamento é a revisão de `/tratamentos/hemorroidas`, após registrar a linha de base e validar o conteúdo com a Dra. Ana Luiza.
+**Status** · O PR #81 inclui a proposta e a primeira implementação em `/tratamentos/hemorroidas`. A linha de base foi registrada em 25/11/2026. A revisão clínica precede a publicação.
 
 **Site:** Dra. Ana Luiza Moraes Rocha, coloproctologista, Curitiba — `https://www.analuizarocha.com.br`
 
@@ -48,7 +48,7 @@ Onze posts contêm a palavra “hemorroidectomia”:
 | --- | --- |
 | `hemorroida-grau-3-tratamento` | sim |
 | `hemorroida-ou-plicoma-diferenca` | sim, só para hemorroidas |
-| `hemorroida-sempre-precisa-cirurgia` | sim; a âncora é “melhor forma de tratamento” |
+| `hemorroida-sempre-precisa-cirurgia` | sim. A âncora anterior ao piloto é “tratamento definitivo” |
 | `laser-co2-diodo-eletrocauterio-diferenca` | não; aponta só para `/tratamentos/cx-laser` |
 | `laser-hemorroida-co2-ou-diodo` | sim, e também para o laser |
 | `ligadura-elastica-ou-cirurgia-hemorroida` | sim |
@@ -105,7 +105,7 @@ A meta de negócio é gerar consultas de pessoas avaliando tratamento ou cirurgi
 - Não estimar volume, não fixar meta numérica de posição e não tratar autocomplete como demanda.
 - Valores de consulta e de procedimentos são tratados no atendimento. Serviços oferecidos, cobertura e eventuais faixas de recuperação dependem da validação da seção 5.
 - O piloto de SEO usa o fluxo de WhatsApp atual. A instrumentação tem escopo próprio na seção 4.f.
-- Não reescrever os links que o #78 e o #79 já colocaram, exceto a âncora “melhor forma de tratamento”, que pode sugerir superioridade.
+- Não reescrever os links que o #78 e o #79 já colocaram, exceto a âncora “tratamento definitivo”, que pode sugerir garantia.
 - Fora do repositório, só listado: perfil Doctoralia com serviços cirúrgicos e Google Business Profile. Nenhuma tarefa de código cobre isso.
 
 ## 3. Tiers de palavra-chave
@@ -167,7 +167,7 @@ Nada desta seção é texto pronto para publicar. Frases clínicas saem do que e
 - meta de `/tratamentos/cx-laser`: “recuperação rápida e menos dor”;
 - hemorroidoplastia em `/tratamentos/hemorroidas`: “menos dor e recuperação rápida”;
 - título do artigo de ligadura: “qual é o melhor tratamento”;
-- âncora em `hemorroida-sempre-precisa-cirurgia`: “melhor forma de tratamento”;
+- âncora em `hemorroida-sempre-precisa-cirurgia`: “tratamento definitivo”;
 - `sangue-nas-fezes-quando-procurar-coloproctologista`: “opção mais moderna”, já deixada em aberto pelo PR #78. Não entra nesta leva, a menos que o parágrafo seja editado por outro motivo.
 
 ### 4.a Tratamento e cirurgia de hemorroidas em Curitiba
@@ -191,7 +191,7 @@ Seção de particular, convênio e reembolso: ver 4.e. Sem preço.
 
 Links a partir dos onze posts com “hemorroidectomia”:
 
-- Preservar os links existentes para a página e evitar duplicatas. Trocar só a âncora “melhor forma de tratamento” por uma âncora descritiva, por exemplo “tratamento de hemorroidas”.
+- Preservar os links existentes para a página e evitar duplicatas. Trocar a âncora “tratamento definitivo” por “tratamento de hemorroidas”.
 - Em `laser-co2-diodo-eletrocauterio-diferenca`, no parágrafo da hemorroidectomia e da hemorroidoplastia, acrescentar uma âncora descritiva para `/tratamentos/hemorroidas`. O link existente para `/tratamentos/cx-laser` fica.
 - Em `dor-anal-relacao-sexual`, não forçar link de serviço. A frase compara portes de cirurgia dentro de outro assunto. Ligar aqui sugeriria que dor na relação se resolve com hemorroidectomia.
 
@@ -348,7 +348,7 @@ Antes de publicar a página de hemorroidas, exportar o relatório de desempenho 
 
 ## 8. Fases e critérios de aceite
 
-A página de hemorroidas é o primeiro PR de implementação. As etapas posteriores dependem dos dados e das confirmações específicas para cada serviço.
+O PR #81 reúne o plano e a revisão da página de hemorroidas. As etapas posteriores dependem dos dados e das confirmações específicas para cada serviço.
 
 ### Fase 0 · Proposta
 
@@ -356,11 +356,11 @@ Aceite com o plano revisado neste PR de documentação.
 
 ### Fase 1 · Linha de base
 
-Aceite com a exportação do Search Console descrita na seção 7, incluindo o cruzamento de consultas e páginas do piloto. A revisão clínica pode avançar em paralelo.
+A linha de base do Search Console foi registrada fora do repositório com o cruzamento das duas páginas e das consultas visíveis. A revisão clínica pode avançar em paralelo.
 
 ### Fase 2 · Tratamento e cirurgia de hemorroidas
 
-Publicar o piloto após registrar a linha de base e validar a redação com a Dra. Ana Luiza. O escopo é a página existente e os links diretamente associados.
+O piloto está no PR #81 para validar a redação e a oferta de serviços com a Dra. Ana Luiza antes da publicação. A implementação usa como referência a oferta que o site já divulga e apresenta as técnicas específicas em caráter educativo. A associação no JSON-LD cobre ligadura elástica e cirurgia em termos gerais. O escopo é a página existente e os links diretamente associados.
 
 - Preservar URL e canonical de `/tratamentos/hemorroidas`. Incluir tratamento, cirurgia e Curitiba no título e no H1.
 - Indicar o que a avaliação inclui. Manter visíveis as opções ambulatoriais confirmadas e explicar quando se considera cirurgia.
