@@ -11,6 +11,7 @@ import {
   DR_NAME_ABBREVIATED,
   CLINICA_NASSIF,
   WEBSITE_URL,
+  LLMS_INDEX_PATH,
   TAG_INSTAGRAM,
 } from '@/lib/constants'
 import { validateTrackingUrl } from '@/lib/whatsapp-tracking'
@@ -162,7 +163,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR">
       <head>
         {/* LLM content index — machine-readable, invisible to users */}
-        <link rel="llms" href="/llms.txt" />
+        <link rel="llms" href={LLMS_INDEX_PATH} />
+        <link rel="describedby" href={LLMS_INDEX_PATH} />
         {/* Structured data for SEO */}
         <script
           type="application/ld+json"

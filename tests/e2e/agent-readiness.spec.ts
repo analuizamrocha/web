@@ -1,28 +1,33 @@
 import { expect, test } from '@playwright/test'
 import { markdownPagePaths } from '../../src/lib/markdown-page-paths'
+import { CLINICA_NASSIF, CONTACT_EMAIL, WEBSITE_URL, WPP_NUMBER_SECRETARY } from '../../src/lib/constants'
 import { remark } from 'remark'
 import { visit } from 'unist-util-visit'
 
 const markdownHeaders = { Accept: 'text/markdown' }
+const llmsDiscoveryLink = '</llms.txt>; rel="describedby"'
 
 test('homepage negotiates Markdown and HTML without crossing response variants', async ({ request }) => {
   for (const accept of ['text/markdown', 'text/html', '*/*', 'text/markdown;q=0, text/html', 'text/markdown']) {
     const response = await request.get('/', { headers: { Accept: accept } })
     expect(response.status()).toBe(200)
     expect(response.headers()['vary'].toLowerCase().split(/,\s*/)).toContain('accept')
+    const links = response.headers()['link'].split(/,\s*/)
+    expect(links.filter((link) => link === llmsDiscoveryLink)).toHaveLength(1)
     const body = await response.text()
     if (accept === 'text/markdown') {
       expect(response.headers()['content-type']).toContain('text/markdown')
       expect(response.headers()['cache-control']).toContain('no-store')
       expect(response.headers()['x-robots-tag']).toBeUndefined()
       expect(response.headers()['content-language']).toBe('pt-BR')
-      expect(response.headers()['link']).toBe('<https://www.analuizarocha.com.br>; rel="canonical"')
+      expect(links).toContain('<https://www.analuizarocha.com.br>; rel="canonical"')
       expect(body).toContain('# Dra. Ana Luiza')
       expect(body).toContain('/sitemap.xml')
       expect(body).not.toContain('<!DOCTYPE')
     } else {
       expect(response.headers()['content-type']).toContain('text/html')
       expect(body).toMatch(/<!doctype html>/i)
+      expect(body).toContain('<link rel="describedby" href="/llms.txt"')
       expect(body).toContain('Cada paciente uma história')
     }
   }
@@ -30,7 +35,13 @@ test('homepage negotiates Markdown and HTML without crossing response variants',
   expect(unsupported.status()).toBe(406)
   expect(await unsupported.text()).toContain('text/markdown')
 
+  const htmlHead = await request.head('/', { headers: { Accept: 'text/html' } })
+  expect(htmlHead.status()).toBe(200)
+  expect(htmlHead.headers()['link']).toContain(llmsDiscoveryLink)
+
   const head = await request.head('/', { headers: markdownHeaders })
+  expect(head.headers()['link']).toContain(llmsDiscoveryLink)
+  expect(head.headers()['link']).toContain('<https://www.analuizarocha.com.br>; rel="canonical"')
   expect(head.status()).toBe(200)
   expect(head.headers()['content-type']).toContain('text/markdown')
   expect(await head.text()).toBe('')
@@ -152,24 +163,75 @@ test('trust pages expose substantive content, canonical URLs, and real contacts'
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Contato e agendamento')
 })
 
-test('English trust-page paths redirect permanently to the Portuguese canonical pages', async ({ request }) => {
-  for (const [path, destination] of [['/about', '/sobre'], ['/contact', '/contato'], ['/privacy', '/politica-privacidade']]) {
-    for (const accept of ['text/html', 'text/markdown']) {
-      const response = await request.get(path, { headers: { Accept: accept }, maxRedirects: 0 })
-      expect(response.status(), path).toBe(308)
-      expect(new URL(response.headers().location, response.url()).pathname).toBe(destination)
-
-      const target = await request.get(path, { headers: { Accept: accept } })
-      expect(target.status(), path).toBe(200)
-      expect(target.headers()['content-type']).toContain(accept)
+for (const [alias, canonicalPath] of [['/about', '/sobre'], ['/contact', '/contato'], ['/privacy', '/politica-privacidade']]) {
+  test(alias + ' serves the full Portuguese trust page directly', async ({ page, request }) => {
+    const canonicalUrl = WEBSITE_URL + canonicalPath
+    await page.goto(canonicalPath)
+    const originalContent = await page.locator('main').innerText()
+    const response = await page.goto(alias)
+    expect(response?.status()).toBe(200)
+    expect(response?.request().redirectedFrom()).toBeNull()
+    await expect(page).toHaveURL(new RegExp(alias + '$'))
+    await expect(page.locator('html')).toHaveAttribute('lang', 'pt-BR')
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', canonicalUrl)
+    expect(await page.locator('main').innerText()).toBe(originalContent)
+    expect(originalContent.trim().length).toBeGreaterThanOrEqual(500)
+    if (alias === '/privacy') {
+      expect(response?.headers()['x-robots-tag']).toContain('noindex')
+      await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
+    } else {
+      expect(response?.headers()['x-robots-tag']).toBeUndefined()
     }
-  }
-  // Aliases are redirects only; discovery files keep listing the canonical pages.
-  const llms = await (await request.get('/llms.txt')).text()
-  const sitemap = await (await request.get('/sitemap.xml')).text()
-  for (const path of ['/about', '/contact', '/privacy']) {
-    expect(llms).not.toContain(`analuizarocha.com.br${path}`)
-    expect(sitemap).not.toContain(`analuizarocha.com.br${path}<`)
+
+    const markdown = await request.get(alias, { headers: markdownHeaders, maxRedirects: 0 })
+    expect(markdown.status()).toBe(200)
+    expect(markdown.headers()['content-type']).toContain('text/markdown')
+    expect(markdown.headers()['link']).toBe('<' + canonicalUrl + '>; rel="canonical"')
+    expect(markdown.headers()['x-robots-tag']).toBe(alias === '/privacy' ? 'noindex, nofollow' : undefined)
+    expect(markdown.headers()['vary'].toLowerCase()).toContain('accept')
+    const originalMarkdown = await request.get(canonicalPath, { headers: markdownHeaders })
+    expect(await markdown.text()).toBe(await originalMarkdown.text())
+
+    const head = await request.head(alias, { headers: markdownHeaders, maxRedirects: 0 })
+    expect(head.status()).toBe(200)
+    expect(head.headers()['content-type']).toContain('text/markdown')
+    expect(await head.text()).toBe('')
+
+    const unsupported = await request.get(alias, { headers: { Accept: 'application/json' }, maxRedirects: 0 })
+    expect(unsupported.status()).toBe(406)
+    expect(unsupported.headers()['vary'].toLowerCase()).toContain('accept')
+  })
+}
+
+test('practice Organization data is complete in every JSON-LD script on About', async ({ page }) => {
+  await page.goto('/about')
+  const organizations = await page.locator('script[type="application/ld+json"]').evaluateAll((scripts) =>
+    scripts.flatMap((script) => {
+      const json = JSON.parse(script.textContent ?? '{}')
+      return json['@graph'] ?? [json]
+    }).filter((node) => ['MedicalOrganization', 'LocalBusiness'].includes(node['@type']))
+  )
+  expect(organizations).toHaveLength(3)
+  for (const organization of organizations) {
+    expect(organization).toMatchObject({
+      email: CONTACT_EMAIL,
+      telephone: '+' + WPP_NUMBER_SECRETARY,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: CONTACT_EMAIL,
+        telephone: '+' + WPP_NUMBER_SECRETARY,
+        contactType: 'appointment scheduling',
+        url: WEBSITE_URL + '/contato',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: CLINICA_NASSIF.address,
+        addressLocality: CLINICA_NASSIF.city,
+        addressRegion: CLINICA_NASSIF.state,
+        postalCode: CLINICA_NASSIF.cep,
+        addressCountry: 'BR',
+      },
+    })
   }
 })
 
@@ -188,7 +250,7 @@ test('all sitemap URLs and llms links resolve, and discovery files keep their fo
   expect(guide).toContain('## Quando usar este site (When to use this site)\n')
   expect(guide.replace('(When to use this site)', '')).not.toMatch(/Official website|When to use|Use when/)
   expect(guide).not.toMatch(/https:\/\/www\.analuizarocha\.com\.br\/(about|contact|privacy)(?:\)|\/|$)/m)
-  for (const excluded of ['/politica-privacidade', '/design', '/design-system', '/conteudo-markdown', '/images/og.png', '/opengraph-image', '/twitter-image']) {
+  for (const excluded of ['/about', '/contact', '/privacy', '/politica-privacidade', '/design', '/design-system', '/conteudo-markdown', '/images/og.png', '/opengraph-image', '/twitter-image']) {
     expect(xml).not.toContain(`<loc>https://www.analuizarocha.com.br${excluded}</loc>`)
   }
 
@@ -212,7 +274,8 @@ test('all sitemap URLs and llms links resolve, and discovery files keep their fo
       expect(markdown.headers()['content-type'], path).toContain('text/markdown')
       if (path === '/politica-privacidade') expect(markdown.headers()['x-robots-tag'], path).toContain('noindex')
       else expect(markdown.headers()['x-robots-tag'], path).toBeUndefined()
-      expect(markdown.headers()['link'], path).toBe(`<https://www.analuizarocha.com.br${path === '/' ? '' : path}>; rel="canonical"`)
+      const links = markdown.headers()['link'].split(/,\s*/)
+      expect(links, path).toContain(`<https://www.analuizarocha.com.br${path === '/' ? '' : path}>; rel="canonical"`)
       expect(await markdown.text(), path).not.toMatch(/\]\(\s*\/(?!\/)/)
       expect((await markdown.text()).length, path).toBeGreaterThan(100)
       await markdown.dispose()

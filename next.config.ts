@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import bundleAnalyzer from '@next/bundle-analyzer'
+import { trustPageAliases } from './src/lib/trust-page-aliases'
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -24,7 +25,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   rewrites: async () => ({
     beforeFiles: [],
-    afterFiles: [],
+    // Serve the Portuguese trust pages directly at their conventional paths.
+    afterFiles: Array.from(trustPageAliases, ([source, destination]) => ({ source, destination })),
     // Only unresolved URLs reach this rewrite; existing HTML routes and public
     // files keep their normal behavior. Proxy normalizes the private header.
     fallback: [{
@@ -96,10 +98,6 @@ const nextConfig: NextConfig = {
       destination: '/blog/cisto-pilonidal-cirurgia-laser-quando-operar',
       permanent: true,
     },
-    // Conventional English trust-page paths that agents probe; pages stay pt-BR.
-    { source: '/about', destination: '/sobre', permanent: true },
-    { source: '/contact', destination: '/contato', permanent: true },
-    { source: '/privacy', destination: '/politica-privacidade', permanent: true },
     // Preserve Next.js default slash removal after exact legacy mappings.
     {
       source: '/:path+/',
@@ -113,6 +111,7 @@ const nextConfig: NextConfig = {
     // while telling crawlers not to index them as public content.
     ...[
       '/politica-privacidade',
+      '/privacy',
       '/design',
       '/design-system',
       '/conteudo-markdown/:path*',

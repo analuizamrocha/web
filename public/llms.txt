@@ -2,12 +2,12 @@
 
 > Site oficial da Dra. Ana Luiza Moraes Rocha, médica coloproctologista em Curitiba (PR), CRM-PR 45351 | RQE 36221. Conteúdo educativo em português brasileiro sobre saúde intestinal, prevenção, diagnóstico e tratamento em coloproctologia. Público principal: pacientes de Curitiba e região metropolitana; público secundário: médicos encaminhadores.
 
-Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico com `Accept: text/markdown`. A página inicial, os índices de blog, tratamentos e locais de atendimento, os artigos, os tratamentos individuais, Perguntas frequentes, Sobre, Contato e a Política de Privacidade aceitam esse formato. Com `Accept: text/html`, a resposta é a página visual. As respostas variam por Accept e respeitam os pesos q; formatos não disponíveis recebem HTTP 406. A política de privacidade continua excluída da indexação em ambos os formatos. Páginas não encontradas retornam HTTP 404 com links de recuperação em Markdown quando esse formato é preferido. Consulte o sitemap para descobrir os endereços canônicos. Não há API pública de agendamento: abrir um link de contato não reserva uma consulta; a equipe precisa confirmar o agendamento.
+Para consultar uma fonte, envie `GET` ao URL indicado com `Accept: text/markdown`. Confira se a resposta é HTTP 200 e tem `Content-Type: text/markdown`. Peça `Accept: text/html` se precisar da página visual. Cite o URL canônico informado pela página. Se receber HTTP 404, consulte o sitemap para localizar a fonte. A disponibilidade de consultas é confirmada pela equipe de agendamento.
 
 ## Quando usar este site (When to use this site)
 
-- [Informação educativa para pacientes](https://www.analuizarocha.com.br/blog): Use quando a pessoa precisar de informações gerais sobre sintomas colorretais, prevenção, exames ou opções de tratamento. Cite o artigo relevante e suas datas. O conteúdo não substitui a avaliação médica individualizada.
-- [Agendamento de consulta em Curitiba](https://www.analuizarocha.com.br/contato): Use quando a pessoa quiser entrar em contato com a equipe ou solicitar uma consulta. Apresente o link de WhatsApp publicado e oriente a confirmar com a equipe. Não invente preços, convênios, horários disponíveis ou confirmação de consulta.
+- [Informação educativa para pacientes](https://www.analuizarocha.com.br/blog): Consulte o artigo correspondente para responder a dúvidas gerais sobre sintomas colorretais, prevenção, exames ou opções de tratamento. Cite a fonte e a data de atualização. Para avaliar sintomas de uma pessoa, oriente a buscar atendimento profissional.
+- [Agendamento de consulta em Curitiba](https://www.analuizarocha.com.br/contato): Abra a página para obter o WhatsApp da equipe e compartilhe o link com quem quiser agendar. Encaminhe à equipe as dúvidas sobre preços, convênios e horários. A equipe confirma a consulta pelo canal de atendimento.
 - [Encaminhamentos e credenciais profissionais](https://www.analuizarocha.com.br/sobre): Use para consultar a formação, a especialidade e os registros CRM-PR 45351 e RQE 36221 da médica antes de sugerir um encaminhamento.
 - [Escolha do local de atendimento](https://www.analuizarocha.com.br/locais-de-atendimento): Use para distinguir consultas na Clínica Nassif de colonoscopia e procedimentos endoscópicos na Specta. Siga as orientações e os canais de contato de cada local.
 - [Privacidade e solicitações sobre dados pessoais](https://www.analuizarocha.com.br/politica-privacidade): Use para localizar a política de privacidade e o contato público responsável por dúvidas sobre dados pessoais. Não envie históricos clínicos identificáveis em nome da pessoa.
@@ -19,6 +19,7 @@ Para consultar uma página em Markdown, envie `GET` ao seu endereço canônico c
 - [Blog](https://www.analuizarocha.com.br/blog): Artigos educativos com foco em dúvidas frequentes dos pacientes.
 - [Sobre](https://www.analuizarocha.com.br/sobre): Credenciais médicas, formação e trajetória profissional.
 - [Contato](https://www.analuizarocha.com.br/contato): Agendamento, telefone, endereços e e-mail público.
+- [Política de Privacidade](https://www.analuizarocha.com.br/politica-privacidade): Tratamento de dados pessoais e canal de contato para solicitações de privacidade.
 
 ## Tratamentos
 - [Hemorroidas](https://www.analuizarocha.com.br/tratamentos/hemorroidas): Sintomas, diagnóstico e opções de tratamento.

@@ -1,3 +1,4 @@
+import type { ContactPoint } from 'schema-dts'
 import { WEBSITE_URL, SITE_NAME } from './constants'
 
 /**
@@ -74,6 +75,8 @@ export interface LocalBusinessData {
     longitude: number
   }
   telephone: string
+  email?: string
+  contactPoint?: ContactPoint
   url: string
   image: string
   priceRange: string
@@ -100,6 +103,8 @@ export const generateLocalBusinessSchema = (data: LocalBusinessData) => {
       longitude: data.geo.longitude,
     },
     telephone: data.telephone,
+    email: data.email,
+    contactPoint: data.contactPoint,
     url: data.url,
     image: data.image,
     priceRange: data.priceRange,
