@@ -10,7 +10,6 @@ import {
   WEBSITE_URL,
   CLINICA_NASSIF,
   DR_NAME,
-  WPP_NUMBER_SECRETARY_FORMATTED,
   URL_INSTAGRAM,
   CRM_NUMBER,
   RQE_NUMBER,
@@ -25,6 +24,7 @@ import {
   generateLocalBusinessSchema,
   type BreadcrumbItem,
 } from '@/lib/seo-schemas'
+import { schedulingContactPoint } from '@/lib/structured-data'
 import {
   GraduationCap,
   Stethoscope,
@@ -220,7 +220,9 @@ export default function SobrePage() {
                 latitude: CLINICA_NASSIF.coordinates.latitude,
                 longitude: CLINICA_NASSIF.coordinates.longitude,
               },
-              telephone: WPP_NUMBER_SECRETARY_FORMATTED,
+              telephone: schedulingContactPoint.telephone,
+              email: schedulingContactPoint.email,
+              contactPoint: schedulingContactPoint,
               url: WEBSITE_URL,
               image: `${WEBSITE_URL}/images/og.png`,
               priceRange: '$$',

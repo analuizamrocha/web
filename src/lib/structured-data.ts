@@ -19,9 +19,9 @@ import {
   HOSPITAL_CLINIC_BARCELONA,
 } from './constants'
 
-// Shared by every Organization node so agents find the same scheduling contact.
-const schedulingContactPoint = {
-  '@type': 'ContactPoint',
+// Shared by the practice's Organization nodes so agents find the same contact.
+export const schedulingContactPoint = {
+  '@type': 'ContactPoint' as const,
   telephone: `+${WPP_NUMBER_SECRETARY}`,
   email: CONTACT_EMAIL,
   contactType: 'appointment scheduling',
@@ -53,7 +53,8 @@ export const structuredData = {
         latitude: CLINICA_NASSIF.coordinates.latitude,
         longitude: CLINICA_NASSIF.coordinates.longitude,
       },
-      telephone: WPP_NUMBER_SECRETARY_FORMATTED,
+      telephone: schedulingContactPoint.telephone,
+      email: CONTACT_EMAIL,
       contactPoint: schedulingContactPoint,
       priceRange: '$$',
       openingHours: CLINICA_NASSIF.openingHours,
@@ -226,7 +227,8 @@ export const structuredData = {
         latitude: CLINICA_NASSIF.coordinates.latitude,
         longitude: CLINICA_NASSIF.coordinates.longitude,
       },
-      telephone: WPP_NUMBER_SECRETARY_FORMATTED,
+      telephone: schedulingContactPoint.telephone,
+      email: CONTACT_EMAIL,
       contactPoint: schedulingContactPoint,
       url: WEBSITE_URL,
       image: `${WEBSITE_URL}/images/og.png`,

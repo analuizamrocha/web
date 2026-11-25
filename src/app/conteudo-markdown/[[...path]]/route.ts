@@ -1,7 +1,7 @@
 import { getAllPostSlugs, getPostBySlug } from '@/lib/blog'
 import { getHomepageMarkdown, markdownNotFound } from '@/lib/agent-markdown'
 import { getLocationBySlug } from '@/lib/locations'
-import { WEBSITE_URL } from '@/lib/constants'
+import { LLMS_INDEX_LINK, WEBSITE_URL } from '@/lib/constants'
 import { absolutizeMarkdownUrls } from '@/lib/markdown-links'
 import { getMarkdownPage } from '@/lib/markdown-pages'
 import { renderPageMarkdown } from '@/lib/page-markdown'
@@ -46,6 +46,7 @@ export async function GET(request: Request, context: { params: Promise<{ path?: 
   })
   if (canonicalUrl) {
     headers.set('Link', `<${canonicalUrl}>; rel="canonical"`)
+    if (path.length === 0) headers.append('Link', LLMS_INDEX_LINK)
   }
   // A negotiated variant at an existing canonical URL must remain indexable.
   // Direct helper requests are real 404s, even when their path matches a page.

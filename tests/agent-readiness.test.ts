@@ -8,7 +8,7 @@ import { GET } from '@/app/conteudo-markdown/[[...path]]/route'
 import { getAllPosts } from '@/lib/blog'
 import { locationPages } from '@/lib/locations'
 import { structuredData } from '@/lib/structured-data'
-import { CONTACT_EMAIL, WEBSITE_URL, WPP_NUMBER_SECRETARY } from '@/lib/constants'
+import { CLINICA_NASSIF, CONTACT_EMAIL, WEBSITE_URL, WPP_NUMBER_SECRETARY } from '@/lib/constants'
 import sitemap from '@/app/sitemap'
 import { absolutizeMarkdownUrls } from '@/lib/markdown-links'
 
@@ -36,10 +36,27 @@ describe('page content negotiation', () => {
     expect(negotiatePage(accept)).toBe(expected)
   })
 
+  it('discovers the agent guide in the HTML homepage response', () => {
+    const homepage = proxy(new NextRequest(WEBSITE_URL, { headers: { accept: 'text/html' } }))
+    expect(homepage.headers.get('link')).toBe('</llms.txt>; rel="describedby"')
+    const otherPage = proxy(new NextRequest(WEBSITE_URL + '/contato', { headers: { accept: 'text/html' } }))
+    expect(otherPage.headers.has('link')).toBe(false)
+  })
+
   it('rewrites Markdown homepage requests without changing the public URL', () => {
     const response = proxy(new NextRequest(`${WEBSITE_URL}/?source=agent`, { headers: { accept: 'text/markdown' } }))
     expect(response.headers.get('x-middleware-rewrite')).toBe(`${WEBSITE_URL}/conteudo-markdown?source=agent`)
   })
+
+  it.each([['/about', '/sobre'], ['/contact', '/contato'], ['/privacy', '/politica-privacidade']])(
+    'negotiates Markdown at %s using the canonical content from %s',
+    (alias, canonicalPath) => {
+      const response = proxy(new NextRequest(WEBSITE_URL + alias + '?source=agent', {
+        headers: { accept: 'text/markdown' },
+      }))
+      expect(response.headers.get('x-middleware-rewrite')).toBe(WEBSITE_URL + '/conteudo-markdown' + canonicalPath + '?source=agent')
+    },
+  )
 
   it('removes a spoofed internal format header', () => {
     const response = proxy(new NextRequest(`${WEBSITE_URL}/missing`, { headers: { accept: 'text/html', 'x-agent-markdown': '1' } }))
@@ -80,7 +97,10 @@ describe('Markdown representations', () => {
     expect(response.headers.get('content-type')).toBe('text/markdown; charset=utf-8')
     expect(response.headers.get('vary')).toBe('Accept')
     expect(response.headers.get('cache-control')).toContain('no-store')
-    expect(response.headers.get('link')).toBe(`<${WEBSITE_URL}>; rel="canonical"`)
+    expect(response.headers.get('link')?.split(', ')).toEqual([
+      `<${WEBSITE_URL}>; rel="canonical"`,
+      '</llms.txt>; rel="describedby"',
+    ])
     const body = await response.text()
     for (const value of ['CRM-PR 45351', 'RQE 36221', 'Clínica Nassif', 'Specta', '/contato', '/llms.txt', '/sitemap.xml']) {
       expect(body).toContain(value)
@@ -187,13 +207,22 @@ describe('business discovery', () => {
     const organizations = structuredData['@graph'].filter((item) => ['MedicalOrganization', 'LocalBusiness'].includes(item['@type']))
     expect(organizations).toHaveLength(2)
     for (const organization of organizations) {
+      expect(organization.email, organization['@type']).toBe(CONTACT_EMAIL)
+      expect(organization.telephone, organization['@type']).toBe('+' + WPP_NUMBER_SECRETARY)
       expect(organization.contactPoint, organization['@type']).toMatchObject({
         '@type': 'ContactPoint',
         telephone: `+${WPP_NUMBER_SECRETARY}`,
         email: CONTACT_EMAIL,
         contactType: 'appointment scheduling',
       })
-      expect(organization.address, organization['@type']).toMatchObject({ '@type': 'PostalAddress' })
+      expect(organization.address, organization['@type']).toMatchObject({
+        '@type': 'PostalAddress',
+        streetAddress: CLINICA_NASSIF.address,
+        addressLocality: CLINICA_NASSIF.city,
+        addressRegion: CLINICA_NASSIF.state,
+        postalCode: CLINICA_NASSIF.cep,
+        addressCountry: 'BR',
+      })
     }
   })
 
@@ -203,10 +232,14 @@ describe('business discovery', () => {
     // Only the heading carries an English label for agents; the guidance stays pt-BR.
     expect(llms.replace('(When to use this site)', '')).not.toMatch(/Official website|When to use|Use when|Patient education/)
     expect(llms).toContain('Accept: text/markdown')
+    expect(llms).toContain('Content-Type: text/markdown')
+    expect(llms).toMatch(/^# [^\n]+\n\n> [^\n]+/)
     expect(llms).not.toContain('### ')
-    // Every H2 section follows the llms.txt file-list format.
+    // Every item under an H2 is a link followed by optional notes.
     for (const section of llms.split(/^## /m).slice(1)) {
-      expect(section).toMatch(/\n\s*- \[[^\]]+\]\(https:\/\/[^)]+\)/)
+      const items = section.split('\n').slice(1).filter((line) => line.trim())
+      expect(items.length).toBeGreaterThan(0)
+      for (const item of items) expect(item).toMatch(/^- \[[^\]]+\]\(https:\/\/[^)]+\)(?:: .+)?$/)
     }
     for (const route of ['/sobre', '/contato', '/politica-privacidade']) expect(llms).toContain(`${WEBSITE_URL}${route}`)
     expect(sitemap().some((item) => item.url === `${WEBSITE_URL}/contato`)).toBe(true)
