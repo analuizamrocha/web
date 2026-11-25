@@ -278,10 +278,11 @@ Consent-based analytics loader using `@next/third-parties/google`.
 
 ### Adding New Blog Posts
 
-Follow `docs/blog-content-playbook.md` and the pre-publish checklist in `AGENTS.md`.
-They are the only source for the frontmatter contract, images, `llms.txt`, and the
-mandatory CFM compliance pass (`docs/cfm-compliance-guidelines.md`). Do not publish a
-post that has not gone through that compliance pass.
+Use the [blog content playbook](./docs/blog-content-playbook.md) for the frontmatter,
+images, and `llms.txt` workflow. Complete the
+[pre-publish checklist in AGENTS.md](./AGENTS.md#pre-publish-checklist) before publishing
+any new or updated post. The checklist requires reviewing the post against the
+[CFM compliance guidelines](./docs/cfm-compliance-guidelines.md).
 
 Blog posts automatically:
 
