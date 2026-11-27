@@ -114,6 +114,53 @@ test('treatment heroes are preloaded without changing their layout', async ({ pa
   }
 })
 
+test('hemorrhoid treatment keeps its canonical URL and generic consultation link', async ({ page }) => {
+  const treatmentPath = '/tratamentos/hemorroidas'
+  const treatmentUrl = `${CANONICAL_WEBSITE_URL}${treatmentPath}`
+  const title = 'Tratamento e cirurgia de hemorroidas em Curitiba'
+
+  await page.goto(treatmentPath)
+  await expect(page.getByRole('heading', { level: 1, name: title })).toBeVisible()
+  await expect(page).toHaveTitle(`${title} | Dra. Ana Luiza M. Rocha`)
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', treatmentUrl)
+  await expect(page.getByRole('link', { name: 'Clínica Nassif, no Batel' })).toHaveAttribute(
+    'href',
+    '/locais-de-atendimento/clinica-nassif'
+  )
+
+  const cta = page.getByRole('link', { name: /Agendar consulta para tratamento de hemorroidas/ })
+  await expect(cta).toBeVisible()
+  const href = new URL((await cta.getAttribute('href'))!)
+  expect(href.origin + href.pathname).toBe('https://wa.me/554130739732')
+  expect([...href.searchParams]).toEqual([
+    ['text', 'Olá! Gostaria de agendar uma consulta com a Dra Ana Luiza Rocha '],
+  ])
+
+  const jsonLd = (await page.locator('script[type="application/ld+json"]').allTextContents())
+    .map((script) => JSON.parse(script))
+  const nodes = jsonLd.flatMap((schema) => schema['@graph'] ?? [schema])
+  const physicianId = `${CANONICAL_WEBSITE_URL}/#physician`
+  const serviceIds = [`${treatmentUrl}#ligadura-elastica`, `${treatmentUrl}#cirurgia`]
+  expect(nodes).toEqual(expect.arrayContaining([
+    expect.objectContaining({
+      '@id': physicianId,
+      availableService: serviceIds.map((id) => ({ '@id': id })),
+    }),
+    expect.objectContaining({ '@id': serviceIds[0], '@type': 'MedicalProcedure' }),
+    expect.objectContaining({ '@id': serviceIds[1], '@type': 'SurgicalProcedure' }),
+  ]))
+
+  const faq = nodes.find((node) => node['@type'] === 'FAQPage')
+  expect(faq.mainEntity).toHaveLength(7)
+  for (const item of faq.mainEntity) {
+    await expect(page.getByRole('heading', { level: 3, name: item.name, exact: true })).toBeVisible()
+    await expect(page.getByText(item.acceptedAnswer.text, { exact: true })).toBeVisible()
+  }
+
+  const sitemap = await page.request.get('/sitemap.xml')
+  expect(getXmlValues(await sitemap.text(), 'loc')).toContain(treatmentUrl)
+})
+
 test('framework caching keeps versioned assets fast and public images replaceable', async ({ page }) => {
   const homepageResponse = await page.request.get('/')
   expect(homepageResponse.ok()).toBeTruthy()

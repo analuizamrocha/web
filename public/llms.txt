@@ -22,7 +22,7 @@ Para consultar uma fonte, envie `GET` ao URL indicado com `Accept: text/markdown
 - [Política de Privacidade](https://www.analuizarocha.com.br/politica-privacidade): Tratamento de dados pessoais e canal de contato para solicitações de privacidade.
 
 ## Tratamentos
-- [Hemorroidas](https://www.analuizarocha.com.br/tratamentos/hemorroidas): Sintomas, diagnóstico e opções de tratamento.
+- [Hemorroidas](https://www.analuizarocha.com.br/tratamentos/hemorroidas): Avaliação em Curitiba, ligadura elástica, indicação de cirurgia e recuperação.
 - [Cirurgia a laser](https://www.analuizarocha.com.br/tratamentos/cx-laser): Procedimentos proctológicos com tecnologia a laser.
 - [Fístulas anorretais](https://www.analuizarocha.com.br/tratamentos/cx-fistulas-anorretais): Avaliação e manejo cirúrgico especializado.
 - [Cisto pilonidal](https://www.analuizarocha.com.br/tratamentos/cx-cisto-pilonidal): Abordagens terapêuticas e recuperação.

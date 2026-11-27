@@ -18,6 +18,8 @@ const CONTEXTUAL_PATHS = [
   '/blog/hemorroida-sempre-cirurgica-tratamento',
 ] as const
 const SUPPORTING_POSTS = [
+  'hemorroida-sempre-cirurgica-tratamento',
+  'laser-co2-diodo-eletrocauterio-diferenca',
   'hemorroida-ou-prolapso-retal',
   'laser-hemorroida-co2-ou-diodo',
   'sangue-papel-higienico-sempre-hemorroida',
